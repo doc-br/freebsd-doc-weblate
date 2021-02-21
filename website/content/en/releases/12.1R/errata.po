@@ -1,0 +1,298 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR The FreeBSD Project
+# This file is distributed under the same license as the FreeBSD Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FreeBSD Documentation VERSION\n"
+"POT-Creation-Date: 2021-02-21 18:57-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: YAML Front Matter: title
+#: website/content/en/releases/12.1R/errata.adoc:1
+#, no-wrap
+msgid "FreeBSD 12.1-RELEASE Errata"
+msgstr ""
+
+#. type: Title =
+#: website/content/en/releases/12.1R/errata.adoc:10
+#, no-wrap
+msgid "FreeBSD {release} Errata"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/12.1R/errata.adoc:12
+#, no-wrap
+msgid "Abstract"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.1R/errata.adoc:15
+msgid ""
+"This document lists errata items for FreeBSD {release}, containing "
+"significant information discovered after the release or too late in the "
+"release cycle to be otherwise included in the release documentation. This "
+"information includes security advisories, as well as news relating to the "
+"software or documentation that could affect its operation or usability. An "
+"up-to-date version of this document should always be consulted before "
+"installing this version of FreeBSD."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.1R/errata.adoc:17
+msgid ""
+"This errata document for FreeBSD {release} will be maintained until the "
+"release of FreeBSD {releaseNext}."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/12.1R/errata.adoc:18
+#, no-wrap
+msgid "Table of Contents"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.1R/errata.adoc:21
+msgid "<<intro,Introduction>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.1R/errata.adoc:22
+msgid "<<security,Security Advisories>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.1R/errata.adoc:23
+msgid "<<errata,Errata Notices>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.1R/errata.adoc:24
+msgid "<<open-issues,Open Issues>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.1R/errata.adoc:25
+msgid "<<late-news,Late-Breaking News>>"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/12.1R/errata.adoc:27
+#, no-wrap
+msgid "Introduction"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.1R/errata.adoc:30
+msgid ""
+"This errata document contains \"late-breaking news\" about FreeBSD {release} "
+"Before installing this version, it is important to consult this document to "
+"learn about any post-release discoveries or problems that may already have "
+"been found and fixed."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.1R/errata.adoc:32
+msgid ""
+"Any version of this errata document actually distributed with the release "
+"(for example, on a CDROM distribution) will be out of date by definition, "
+"but other copies are kept updated on the Internet and should be consulted as "
+"the \"current errata\" for this release. These other copies of the errata "
+"are located at https://www.FreeBSD.org/releases/, plus any sites which keep "
+"up-to-date mirrors of this location."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.1R/errata.adoc:34
+msgid ""
+"Source and binary snapshots of FreeBSD {releaseBranch} also contain "
+"up-to-date copies of this document (as of the time of the snapshot)."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.1R/errata.adoc:36
+msgid ""
+"For a list of all FreeBSD CERT security advisories, see "
+"https://www.FreeBSD.org/security/."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/12.1R/errata.adoc:38
+#, no-wrap
+msgid "Security Advisories"
+msgstr ""
+
+#. type: Table
+#: website/content/en/releases/12.1R/errata.adoc:81
+#, no-wrap
+msgid ""
+"|Advisory |Date |Topic\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-19:25.mcepsc.asc[FreeBSD-SA-19:25.mcepce] "
+"|12 November 2019 |Machine Check Exception on Page Size Change\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-19:26.mcu.asc[FreeBSD-SA-19:26.mcu] "
+"|12 November 2019 |Intel CPU Microcode Update\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:01.libfetch.asc[FreeBSD-SA-20:01.libfetch] "
+"|28 January 2020 |{{< manpage \"fetch\" \"3\">}} buffer overflow\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:03.thrmisc.asc[FreeBSD-SA-20:03.thrmisc] "
+"|28 January 2020 |Kernel stack data disclosure\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:04.tcp.asc[FreeBSD-SA-20:04.tcp] "
+"|18 March 2020 |TCP IPv6 SYN cache kernel information disclosure\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:05.if_oce_ioctl.asc[FreeBSD-SA-20:05.if_oce_ioctl] "
+"|18 March 2020 |Insufficient {{< manpage \"ioctl\" \"2\">}} privilege "
+"checking\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:06.if_ixl_ioctl.asc[FreeBSD-SA-20:06.if_ixl_ioctl] "
+"|18 March 2020 |Insufficient {{< manpage \"ioctl\" \"2\">}} privilege "
+"checking\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:07.epair.asc[FreeBSD-SA-20:07.epair] "
+"|18 March 2020 |Incorrect user-controlled pointer use\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:08.jail.asc[FreeBSD-SA-20:08.jail] "
+"|18 March 2020 |Kernel memory disclosure with nested jails\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:09.ntp.asc[FreeBSD-SA-20:09.ntp] "
+"|18 March 2020 |Multiple denial of service\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:10.ipfw.asc[FreeBSD-SA-20:10.ipfw] "
+"|21 April 2020 |Invalid {{< manpage \"mbuf\" \"9\">}} handling\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:11.openssl.asc[FreeBSD-SA-20:11.openssl] "
+"|21 April 2020 |Remote denial of service\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:12.libalias.asc[FreeBSD-SA-20:12.libalias] "
+"|12 May 2020 |Insufficient packet length validation\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:13.libalias.asc[FreeBSD-SA-20:13.libalias] "
+"|12 May 2020 |Memory disclosure vulnerability\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:15.cryptodev.asc[FreeBSD-SA-20:15.cryptodev] "
+"|12 May 2020 |Use-after-free condition\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:16.cryptodev.asc[FreeBSD-SA-20:16.cryptodev] "
+"|12 May 2020 |Insufficient MAC key length check\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:17.usb.asc[FreeBSD-SA-20:17.usb] "
+"|9 June 2020 |HID descriptor parsing error\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:19.unbound.asc[FreeBSD-SA-20:19.unbound] "
+"|8 July 2020 |Multiple vulnerabilities\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:20.ipv6.asc[FreeBSD-SA-20:20.ipv6] "
+"|8 July 2020 |Race condition and use-after-free\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:21.usb_net.asc[FreeBSD-SA-20:21.usb_net] "
+"|5 August 2020 |Memory corruption\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:22.sqlite.asc[FreeBSD-SA-20:22.sqlite] "
+"|5 August 2020 |Multiple vulnerabilities\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:23.sendmsg.asc[FreeBSD-SA-20:23.sendmsg] "
+"|5 August 2020 |Privilege escalation\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:25.sctp.asc[FreeBSD-SA-20:25.sctp] "
+"|2 September 2020 |Use-after-free bug\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:26.dhclient.asc[FreeBSD-SA-20:26.dhclient] "
+"|2 September 2020 |Heap overflow\n"
+"\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:27.ure.asc[FreeBSD-SA-20:27.ure] "
+"|15 September 2020 |Packet-in-packet attack\n"
+"\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:28.bhyve_vmcs.asc[FreeBSD-SA-20:28.bhyve_vmcs] "
+"|15 September 2020 |Privilege escalation via VMCS\n"
+"\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:29.bhyve_svm.asc[FreeBSD-SA-20:29.bhyve_svm] "
+"|15 September 2020 |SVM guest escape\n"
+"\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:30.ftpd.asc[FreeBSD-SA-20:30.ftpd] "
+"|15 September 2020 |Privilege escalation\n"
+"\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:31.icmp6.asc[FreeBSD-SA-20:31.icmp6] "
+"|1 December 2019 |Use-after-free in error message handling\n"
+"\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:32.rtsold.asc[FreeBSD-SA-20:32.rtsold] "
+"|1 December 2019 |Multiple vulnerabilities\n"
+"\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-SA-20:33.openssl.asc[FreeBSD-SA-20:33.openssl] "
+"|8 December 2019 |NULL pointer de-reference\n"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/12.1R/errata.adoc:84
+#, no-wrap
+msgid "Errata Notices"
+msgstr ""
+
+#. type: Table
+#: website/content/en/releases/12.1R/errata.adoc:108
+#, no-wrap
+msgid ""
+"|Errata |Date |Topic\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-EN-19:19.loader.asc[FreeBSD-EN-19:19.loader] "
+"|12 November 2019 |UEFI Loader Memory Fragmentation\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-EN-20:01.ssp.asc[FreeBSD-EN-20:01.ssp] "
+"|28 January 2020 |Imprecise orderring of canary initialization\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-EN-20:03.sshd.asc[FreeBSD-EN-20:03.sshd] "
+"|18 March 2020 |Misleading log messages upon successful login\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-EN-20:05.mlx5en.asc[FreeBSD-EN-20:05.mlx5en] "
+"|18 March 2020 |Fix packet forwarding performance\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-EN-20:06.ipv6.asc[FreeBSD-EN-20:06.ipv6] "
+"|18 March 2020 |Incorrect checksum calculations\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-EN-20:07.quotad.asc[FreeBSD-EN-20:07.quotad] "
+"|21 April 2020 |Regression with certain NFS servers\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-EN-20:08.tzdata.asc[FreeBSD-EN-20:08.tzdata] "
+"|12 May 2020 |Timezone database update\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-EN-20:09.igb.asc[FreeBSD-EN-20:09.igb] "
+"|12 May 2020 |Fix failure to switch to inactive state\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-EN-20:10.build.asc[FreeBSD-EN-20:10.build] "
+"|12 May 2020 |Incorrect build host clang version detection\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-EN-20:11.ena.asc[FreeBSD-EN-20:11.ena] "
+"|9 June 2020 |Stability issues in {{< manpage \"ena\" \"4\">}}\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-EN-20:12.iflib.asc[FreeBSD-EN-20:10.build] "
+"|9 June 2020 |Watchdog timeout resetting idle queues\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-EN-20:13.bhyve.asc[FreeBSD-EN-20:13.bhyve] "
+"|8 July 2020 |Crash with PCI device passthrough\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-EN-20:14.linuxkpi.asc[FreeBSD-EN-20:14.linuxkpi] "
+"|8 July 2020 |Kernel panic\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-EN-20:15.mps.asc[FreeBSD-EN-20:15.mps] "
+"|8 July 2020 |Kernel panic\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-EN-20:16.vmx.asc[FreeBSD-EN-20:16.vmx] "
+"|5 August 2020 |Packet loss and degraded performance\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-EN-20:17.linuxthread.asc[FreeBSD-EN-20:17.linuxthread] "
+"|2 September 2020 |Kernel panic\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-EN-20:19.audit.asc[FreeBSD-EN-20:19.audit] "
+"|1 December 2020 |execve/fexecve system call auditing\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-EN-20:20.tzdata.asc[FreeBSD-EN-20:20.tzdata] "
+"|1 December 2020 |Timezone database information update\n"
+"|link:https://www.freebsd.org/security/advisories/FreeBSD-EN-20:22.callout.asc[FreeBSD-EN-20:20.tzdata] "
+"|1 December 2020 |Race condition in callout CPU migration\n"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/12.1R/errata.adoc:111
+#, no-wrap
+msgid "Open Issues"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.1R/errata.adoc:114
+msgid ""
+"[2019-11-04] A late issue was discovered where systems using the "
+"graphics/drm-kmod port built on FreeBSD 12.0-RELEASE will crash during "
+"boot. It is advised to remove the port prior to upgrading, and build the "
+"port instead of using the upstream binary package."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/12.1R/errata.adoc:116
+#, no-wrap
+msgid "Late-Breaking News"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.1R/errata.adoc:119
+msgid ""
+"[2019-11-22] The FreeBSD 12.1-RELEASE announcement includes mention of "
+"FreeBSD/amd64 Amazon(R) EC2(TM) AMIs (Amazon Machine Images). Though it also "
+"included mention of FreeBSD/aarch64 being available in various regions, it "
+"had not passed third-party validation for inclusion in the Amazon(R) "
+"Marketplace."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.1R/errata.adoc:120
+msgid ""
+"FreeBSD 12.1-RELEASE aarch64 Amazon(R) EC2(TM) AMIs are now available in the "
+"Marketplace https://aws.amazon.com/marketplace/pp/B081NF7BY7[here]."
+msgstr ""

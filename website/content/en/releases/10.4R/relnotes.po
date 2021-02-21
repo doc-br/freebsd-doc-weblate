@@ -1,0 +1,1243 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR The FreeBSD Project
+# This file is distributed under the same license as the FreeBSD Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FreeBSD Documentation VERSION\n"
+"POT-Creation-Date: 2021-02-21 18:57-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Title =
+#: website/content/en/releases/10.4R/relnotes.adoc:1
+#: website/content/en/releases/10.4R/relnotes.adoc:6
+#, no-wrap
+msgid "FreeBSD 10.4-RELEASE Release Notes"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:8
+#, no-wrap
+msgid "Abstract"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:11
+msgid ""
+"The release notes for FreeBSD 10.4-RELEASE contain a summary of the changes "
+"made to the FreeBSD base system on the 10.4-STABLE development line. This "
+"document lists applicable security advisories that were issued since the "
+"last release, as well as significant changes to the FreeBSD kernel and "
+"userland. Some brief remarks on upgrading are also presented."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:12
+#, no-wrap
+msgid "Table of Contents"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:15
+msgid "<<intro,Introduction>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:16
+msgid "<<upgrade,Upgrading from Previous Releases of FreeBSD>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:17
+msgid "<<security-errata,Security and Errata>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:18
+msgid "<<security,Security Advisories>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:19
+msgid "<<errata,Errata Notices>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:20
+msgid "<<userland,Userland>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:21
+msgid "<<userland-config,Userland Configuration Changes>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:22
+msgid "<<userland-programs,Userland Application Changes>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:23
+msgid "<<userland-contrib,Contributed Software>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:24
+msgid "<<userland-installer,Installation and Configuration Tools>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:25
+msgid "<<userland-libraries,Runtime Libraries and API>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:26
+msgid "<<userland-abi,ABI Compatibility>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:27
+msgid "<<userland-debug, Userland Debugging>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:28
+msgid "<<kernel,Kernel>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:29
+msgid "<<kernel-misc,Miscellaneous Kernel Changes>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:30
+msgid "<<kernel-bugfix,Kernel Bug Fixes>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:31
+msgid "<<kernel-sysctl,System Tuning and Controls>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:32
+msgid "<<drivers,Devices and Drivers>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:33
+msgid "<<drivers-device, Device Drivers>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:34
+msgid "<<drivers-storage,Storage Drivers>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:35
+msgid "<<drivers-network,Network Drivers>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:36
+msgid "<<hardware,Hardware Support>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:37
+msgid "<<hardware-virtualization,Virtualization Support>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:38
+msgid "<<storage,Storage>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:39
+msgid "<<storage-net,Networked Storage>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:40
+msgid "<<network,Networking>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:41
+msgid "<<network-general, General Networking Changes>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:42
+msgid "<<network-protocols,Network Protocols>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:43
+msgid "<<ports,Ports Collection and Package Infrastructure>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:44
+msgid "<<ports-packages,Packaging Changes>>"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:46
+#, no-wrap
+msgid "Introduction"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:49
+msgid ""
+"This document contains the release notes for FreeBSD 10.4-RELEASE. It "
+"describes recently added, changed, or deleted features of FreeBSD. It also "
+"provides some notes on upgrading from previous versions of FreeBSD."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:51
+msgid ""
+"The snapshot distribution to which these release notes apply represents a "
+"point along the 10.4-STABLE development branch between 10.3-RELEASE and the "
+"future 10.4-STABLE. Information regarding pre-built, binary snapshot "
+"distributions along this branch can be found at "
+"`https://www.FreeBSD.org/releases/`."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:53
+msgid ""
+"All users are encouraged to consult the release errata before installing "
+"FreeBSD. The errata document is updated with \"late-breaking\" information "
+"discovered late in the release cycle or after the release. Typically, it "
+"contains information on known bugs, security advisories, and corrections to "
+"documentation. An up-to-date copy of the errata for FreeBSD 10.3-RELEASE can "
+"be found on the FreeBSD Web site."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:55
+msgid ""
+"This document describes the most user-visible new or changed features in "
+"FreeBSD since 10.3-RELEASE."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:57
+msgid ""
+"Typical release note items document recent security advisories issued after "
+"10.3-RELEASE, new drivers or hardware support, new commands or options, "
+"major bug fixes, or contributed software upgrades. They may also list "
+"changes to major ports/packages or release engineering practices. Clearly "
+"the release notes cannot list every single change made to FreeBSD between "
+"releases; this document focuses primarily on security advisories, "
+"user-visible changes, and major architectural improvements."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:59
+#, no-wrap
+msgid "Upgrading from Previous Releases of FreeBSD"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:62
+msgid ""
+"[amd64,i386] Binary upgrades between RELEASE versions (and snapshots of the "
+"various security branches) are supported using the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8[freebsd-update(8)] "
+"utility. The binary upgrade procedure will update unmodified userland "
+"utilities, as well as unmodified `GENERIC` kernel distributed as a part of "
+"an official FreeBSD release. The "
+"http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8[freebsd-update(8)] "
+"utility requires that the host being upgraded have Internet connectivity."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:64
+msgid ""
+"Source-based upgrades (those based on recompiling the FreeBSD base system "
+"from source code) from previous versions are supported, according to the "
+"instructions in [.filename]`/usr/src/UPDATING`."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:68
+#, no-wrap
+msgid ""
+"*Important*: +\n"
+"Upgrading FreeBSD should only be attempted after backing up _all_ data and "
+"configuration files.\n"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:70
+#, no-wrap
+msgid "Security and Errata"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:73
+msgid ""
+"This section lists the various Security Advisories and Errata Notices since "
+"10.3-RELEASE."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:75
+#, no-wrap
+msgid "Security Advisories"
+msgstr ""
+
+#. type: Table
+#: website/content/en/releases/10.4R/relnotes.adoc:106
+#, no-wrap
+msgid ""
+"|Advisory |Date |Topic\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:09.ntp.asc[FreeBSD-SA-16:09.ntp] "
+"|29 April 2016 |Multiple ntp vulnerabilities.\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:17.openssl.asc[FreeBSD-SA-16:17.openssl] "
+"|29 April 2016 |Multiple OpenSSL vulnerabilities.\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:18.atkbd.asc[FreeBSD-SA-16:18.atkbd] "
+"|17 May 2016 |Keyboard driver buffer overflow\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:19.sendmsg.asc[FreeBSD-SA-16:19.sendmsg] "
+"|17 May 2016 |Incorrect argument handling in "
+"https://www.FreeBSD.org/cgi/man.cgi?query=sendmsg&sektion=2&manpath=freebsd-release-ports[sendmsg(2)]\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:20.linux.asc[FreeBSD-SA-16:20.linux] "
+"|31 May 2016 |Kernel stack disclosure in Linux compatibility layer\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:21.43bsd.asc[FreeBSD-SA-16:21.43bsd] "
+"|31 May 2016 |Kernel stack disclosure in 4.3BSD compatibility layer\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:22.libarchive.asc[FreeBSD-SA-16:22.libarchive] "
+"|31 May 2016 |Absolute path traversal vulnerability\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:23.libarchive.asc[FreeBSD-SA-16:23.libarchive] "
+"|31 May 2016 |Absolute path traversal vulnerability\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:24.ntp.asc[FreeBSD-SA-16:24.ntp] "
+"|3 June 2016 |Multiple ntp vulnerabilties\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:25.bspatch.asc[FreeBSD-SA-16:25.bspatch] "
+"|25 July 2016 |heap overflow vulnerability\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:26.openssl.asc[FreeBSD-SA-16:26.openssl] "
+"|23 September 2016 |Multiple vulnerabilities\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:27.openssl.asc[FreeBSD-SA-16:27.openssl] "
+"|26 September 2016 |Regression in OpenSSL suite\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:29.bspatch.asc[FreeBSD-SA-16:29.bspatch] "
+"|10 October 2016 |Heap overflow vulnerability\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:30.portsnap.asc[FreeBSD-SA-16:30.portsnap] "
+"|10 October 2016 |Multiple vulnerabilities\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:31.libarchive.asc[FreeBSD-SA-16:31.libarchive] "
+"|10 October 2016 |Multiple vulnerabilities\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:33.openssh.asc[FreeBSD-SA-16:33.openssh] "
+"|2 November 2016 |Remote Denial of Service vulnerability\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:35.openssl.asc[FreeBSD-SA-16:35.openssl] "
+"|2 November 2016 |Remote Denial of Service vulnerability\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:36.telnetd.asc[FreeBSD-SA-16:36.telnetd] "
+"|6 December 2016 |Possible "
+"https://www.FreeBSD.org/cgi/man.cgi?query=login&sektion=1&manpath=freebsd-release-ports[login(1)] "
+"argument injection\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:37.libc.asc[FreeBSD-SA-16:37.libc] "
+"|6 December 2016 "
+"|https://www.FreeBSD.org/cgi/man.cgi?query=link_ntoa&sektion=3&manpath=freebsd-release-ports[link_ntoa(3)] "
+"buffer overflow\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:38.bhyve.asc[FreeBSD-SA-16:38.bhyve] "
+"|6 December 2016 |Possible escape from "
+"https://www.FreeBSD.org/cgi/man.cgi?query=bhyve&sektion=8&manpath=freebsd-release-ports[bhyve(8)] "
+"virtual machine\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:39.ntp.asc[FreeBSD-SA-16:39.ntp] "
+"|22 December 2016 |Multiple vulnerabilities\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-17:01.openssh.asc[FreeBSD-SA-17:01.openssh] "
+"|10 January 2017 |Multiple vulnerabilities\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-17:02.openssl.asc[FreeBSD-SA-17:02.openssl] "
+"|23 February 2017 |Fix OpenSSL RC4_MD5 cipher vulnerability\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-17:03.ntp.asc[FreeBSD-SA-17:03.ntp] "
+"|12 April 2017 |Multiple vulnerabilities\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-17:04.ipfilter.asc[FreeBSD-SA-17:04.ipfilter] "
+"|27 April 2017 |Fix fragment handling panic\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-17:05.heimdal.asc[FreeBSD-SA-17:05.heimdal] "
+"|12 July 2017 |Fix KDC-REP service name validation vulnerability\n"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:109
+#, no-wrap
+msgid "Errata Notices"
+msgstr ""
+
+#. type: Table
+#: website/content/en/releases/10.4R/relnotes.adoc:130
+#, no-wrap
+msgid ""
+"|Errata |Date |Topic\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-16:06.libc.asc[FreeBSD-EN-16:06.libc] "
+"|4 May 2016 |Performance regression in libc "
+"https://www.FreeBSD.org/cgi/man.cgi?query=hash&sektion=3&manpath=freebsd-release-ports[hash(3)]\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-16:07.ipi.asc[FreeBSD-EN-16:07.ipi] "
+"|4 May 2016 |Excessive latency in x86 IPI delivery\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-16:08.zfs.asc[FreeBSD-EN-16:08.zfs] "
+"|4 May 2016 |Memory leak in ZFS\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-16:09.freebsd-update.asc[FreeBSD-EN-16:09.freebsd-update] "
+"|25 July 2016 |Fix "
+"https://www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8&manpath=freebsd-release-ports[freebsd-update(8)] "
+"support of FreeBSD 11.0-RELEASE\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-16:10.dhclient.asc[FreeBSD-EN-16:10.dhclient] "
+"|11 August 2016 |Better handle unknown options received from aDHCP server\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-16:11.vmbus.asc[FreeBSD-EN-16:11.vmbus] "
+"|11 August 2016 |Avoid using spin locks for channel message locks\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-16:12.hv_storvsc.asc[FreeBSD-EN-16:12.hv_storvsc] "
+"|11 August 2016 |Enable INQUIRY result check only on Windows 10 host "
+"systems\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-16:13.vmbus.asc[FreeBSD-EN-16:13.vmbus] "
+"|11 August 2016 |Register time counter early enough for TSC freq "
+"calibration\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-16:14.hv_storvsc.asc[FreeBSD-EN-16:14.hv_storvsc] "
+"|11 August 2016 |Disable incorrect callout in "
+"https://www.FreeBSD.org/cgi/man.cgi?query=hv_storvsc&sektion=4&manpath=freebsd-release-ports[hv_storvsc(4)]\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-16:15.vmbus.asc[FreeBSD-EN-16:15.vmbus] "
+"|11 August 2016 |Better handle the GPADL setup failure in Hyper-V\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-16:16.hv_storvsc.asc[FreeBSD-EN-16:16.hv_storvsc] "
+"|11 August 2016 |Fix SCSI INQUIRY checks and error handling\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-16:17.vm.asc[FreeBSD-EN-16:17.vm] "
+"|25 October 2016 |Several virtual memory issues\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-16:19.tzcode.asc[FreeBSD-EN-16:19.tzcode] "
+"|6 December 2016 |Fix warnings about invalid timezone abbreviations\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-16:20.tzdata.asc[FreeBSD-EN-16:20.tzdata] "
+"|6 December 2016 |Update timezone database information\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-17:05.xen.asc[FreeBSD-EN-17:05.xen] "
+"|23 February 2017 |Xen migration enhancements\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-17:06.hyperv.asc[FreeBSD-EN-17:06.hyperv] "
+"|12 July 2017 |Boot compatibility improvements with Azure virtual machines\n"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:133
+#, no-wrap
+msgid "Userland"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:136
+msgid ""
+"This section covers changes and additions to userland applications, "
+"contributed software, and system utilities."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:138
+#, no-wrap
+msgid "Userland Configuration Changes"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:141
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=inetd&sektion=8&manpath=freebsd-release-ports[inetd(8)] "
+"utility is now built without `libwrap` support when `WITHOUT_TCP_WRAPPERS` "
+"is set in "
+"https://www.FreeBSD.org/cgi/man.cgi?query=src.conf&sektion=5&manpath=freebsd-release-ports[src.conf(5)]. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=313206[(r313206)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:143
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=libthr&sektion=3&manpath=freebsd-release-ports[libthr(3)] "
+"library and related files are now evaluated and removed by the "
+"`delete-old-libs` target when upgrading the system if `WITHOUT_LIBTHR` is "
+"set in "
+"https://www.FreeBSD.org/cgi/man.cgi?query=src.conf&sektion=5&manpath=freebsd-release-ports[src.conf(5)]. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=316046[(r316046)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:145
+msgid ""
+"The `WITH_RPCBIND_WARMSTART_SUPPORT` "
+"https://www.FreeBSD.org/cgi/man.cgi?query=src.conf&sektion=5&manpath=freebsd-release-ports[src.conf(5)] "
+"knob has been added, which when enabled allows building "
+"https://www.FreeBSD.org/cgi/man.cgi?query=rpcbind&sektion=8&manpath=freebsd-release-ports[rpcbind(8)] "
+"with `warmstart` "
+"support. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=319243[(r319243)]"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:147
+#, no-wrap
+msgid "Userland Application Changes"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:150
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=truss&sektion=1&manpath=freebsd-release-ports[truss(1)] "
+"utility has been updated to include the `-H` flag, which logs the thread ID "
+"of a thread invoking a system "
+"call. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=298427[(r298427)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:152
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=zfsbootcfg&sektion=8&manpath=freebsd-release-ports[zfsbootcfg(8)] "
+"utility has been added, providing one-time "
+"https://www.FreeBSD.org/cgi/man.cgi?query=boot.config&sektion=5&manpath=freebsd-release-ports[boot.config(5)]-style "
+"options for "
+"https://www.FreeBSD.org/cgi/man.cgi?query=zfsboot&sektion=8&manpath=freebsd-release-ports[zfsboot(8)]. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=308915[(r308915)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:154
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=pw&sektion=8&manpath=freebsd-release-ports[pw(8)] "
+"utility has been updated to properly respect "
+"https://www.FreeBSD.org/cgi/man.cgi?query=pw.conf&sektion=5&manpath=freebsd-release-ports[pw.conf(5)], "
+"if "
+"present. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=316348[(r316348)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:156
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=cxgbetool&sektion=8&manpath=freebsd-release-ports[cxgbetool(8)] "
+"utility has been added, providing command-line access to features and "
+"debugging facilities of "
+"https://www.FreeBSD.org/cgi/man.cgi?query=cxgbe&sektion=4&manpath=freebsd-release-ports[cxgbe(4)] "
+"devices. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=319390[(r319390)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:158
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=ifconfig&sektion=8&manpath=freebsd-release-ports[ifconfig(8)] "
+"utility has been updated to show MAC addresses persistently stored by "
+"network drivers. This provides a mechanism through which the original MAC "
+"address can be retrieved if, for example, an interface is added to a "
+"https://www.FreeBSD.org/cgi/man.cgi?query=lagg&sektion=4&manpath=freebsd-release-ports[lagg(4)] "
+"and the `MAC` is overridden in "
+"https://www.FreeBSD.org/cgi/man.cgi?query=rc.conf&sektion=5&manpath=freebsd-release-ports[rc.conf(5)]. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=318430[(r318430)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:160
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=rcp&sektion=1&manpath=freebsd-release-ports[rcp(1)], "
+"https://www.FreeBSD.org/cgi/man.cgi?query=rlogin&sektion=1&manpath=freebsd-release-ports[rlogin(1)], "
+"https://www.FreeBSD.org/cgi/man.cgi?query=rsh&sektion=1&manpath=freebsd-release-ports[rsh(1)], "
+"https://www.FreeBSD.org/cgi/man.cgi?query=rlogind&sektion=8&manpath=freebsd-release-ports[rlogind(8)], "
+"and "
+"https://www.FreeBSD.org/cgi/man.cgi?query=rshd&sektion=8&manpath=freebsd-release-ports[rshd(8)] "
+"utilities have been marked as deprecated, and planned for removal in FreeBSD "
+"12.0-RELEASE. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=320646[(r320646)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:162
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=syslogd&sektion=8&manpath=freebsd-release-ports[syslogd(8)] "
+"utility has been updated to restart logging a subprocess that had restarted "
+"unexpectedly. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=320772[(r320772)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:164
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=gdb&sektion=1&manpath=freebsd-release-ports[gdb(1)] "
+"and "
+"https://www.FreeBSD.org/cgi/man.cgi?query=kgdb&sektion=1&manpath=freebsd-release-ports[kgdb(1)] "
+"utilities have been marked as deprecated, and planned for removal from the "
+"base system in the future. A newer version is available in the `devel/gdb` "
+"port. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=320824[(r320824)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:166
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=cron&sektion=8&manpath=freebsd-release-ports[cron(8)] "
+"utility has been updated to add support for including files within "
+"`/etc/cron.d` and `/usr/local/etc/cron.d` by "
+"default. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=321242[(r321242)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:168
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=syslogd&sektion=8&manpath=freebsd-release-ports[syslogd(8)] "
+"utility has been updated to add the `include` keyword which allows "
+"specifying a directory containing configuration files to be included in "
+"addition to "
+"https://www.FreeBSD.org/cgi/man.cgi?query=syslog.conf&sektion=5&manpath=freebsd-release-ports[syslog.conf(5)]. "
+"The default "
+"https://www.FreeBSD.org/cgi/man.cgi?query=syslog.conf&sektion=5&manpath=freebsd-release-ports[syslog.conf(5)] "
+"has been updated to include `/etc/syslog.d` and `/usr/local/etc/syslog.d` by "
+"default. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=321234[(r321234)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:170
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=newsyslog&sektion=8&manpath=freebsd-release-ports[newsyslog(8)] "
+"utility has been updated to support logging to "
+"https://www.FreeBSD.org/cgi/man.cgi?query=syslogd&sektion=8&manpath=freebsd-release-ports[syslogd(8)] "
+"in a format compliant with RFC5424. For more details, see the description "
+"for the `T` flag in "
+"https://www.FreeBSD.org/cgi/man.cgi?query=newsyslog.conf&sektion=5&manpath=freebsd-release-ports[newsyslog.conf(5)]. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=321263[(r321263)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:172
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=pw&sektion=8&manpath=freebsd-release-ports[pw(8)] "
+"utility has been updated to support empty secondary groups being passed with "
+"the `-G` flag, ensuring the target user does not have any secondary group "
+"memberships. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=323333[(r323333)]"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:174
+#, no-wrap
+msgid "Contributed Software"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:177
+msgid ""
+"Subversion has been updated to version "
+"1.9.5. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=309512[(r309512)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:179
+msgid ""
+"https://www.FreeBSD.org/cgi/man.cgi?query=file&sektion=1&manpath=freebsd-release-ports[file(1)] "
+"has been updated to version "
+"5.29. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=309848[(r309848)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:181
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=amd&sektion=8&manpath=freebsd-release-ports[amd(8)] "
+"utility has been updated to version "
+"6.2. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=310490[(r310490)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:183
+msgid ""
+"https://www.FreeBSD.org/cgi/man.cgi?query=xz&sektion=1&manpath=freebsd-release-ports[xz(1)] "
+"has been updated to version "
+"5.2.3. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=312516[(r312516)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:185
+msgid ""
+"https://www.FreeBSD.org/cgi/man.cgi?query=zlib&sektion=3&manpath=freebsd-release-ports[zlib(3)] "
+"has been updated to version "
+"1.2.11. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=313796[(r313796)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:187
+msgid ""
+"https://www.FreeBSD.org/cgi/man.cgi?query=ntpd&sektion=8&manpath=freebsd-release-ports[ntpd(8)] "
+"has been updated to version "
+"4.2.8p10. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=316069[(r316069)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:189
+msgid ""
+"Timezone data files have been updated to version "
+"2017b. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=316350[(r316350)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:191
+msgid ""
+"https://www.FreeBSD.org/cgi/man.cgi?query=tcsh&sektion=1&manpath=freebsd-release-ports[tcsh(1)] "
+"has been updated to version "
+"6.20.00. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=316958[(r316958)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:193
+msgid ""
+"https://www.FreeBSD.org/cgi/man.cgi?query=libarchive&sektion=3&manpath=freebsd-release-ports[libarchive(3)] "
+"has been updated to version "
+"3.3.2. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=321304[(r321304)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:195
+msgid ""
+"bmake has been updated to version "
+"20170720. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=321964[(r321964)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:197
+msgid ""
+"`pci_vendors` has been updated to version "
+"2017.07.27. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=322244[(r322244)]"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:199
+#, no-wrap
+msgid "Installation and Configuration Tools"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:202
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=bsdinstall&sektion=8&manpath=freebsd-release-ports[bsdinstall(8)] "
+"utility has been updated to ensure newly-created partitions are properly "
+"aligned at 4096 byte "
+"boundaries. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=313433[(r313433)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:204
+msgid ""
+"The default EFI partition created by "
+"https://www.FreeBSD.org/cgi/man.cgi?query=bsdinstall&sektion=8&manpath=freebsd-release-ports[bsdinstall(8)] "
+"has been increased from 800KB to "
+"200MB. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=321202[(r321202)] "
+"[.contrib]#(Sponsored by The FreeBSD Foundation)#"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:206
+#, no-wrap
+msgid "Runtime Libraries and API"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:209
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=kvm_close&sektion=3&manpath=freebsd-release-ports[kvm_close(3)] "
+"function has been updated to return the accumulated error from previous "
+"https://www.FreeBSD.org/cgi/man.cgi?query=close&sektion=2&manpath=freebsd-release-ports[close(2)] "
+"calls. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=316040[(r316040)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:211
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=syslog&sektion=3&manpath=freebsd-release-ports[syslog(3)] "
+"function has been updated to be more resilent to thread cancellation "
+"occurring in supported deferred mode, eliminating possible lockups in "
+"multi-threaded applications that often create and cancel threads using the "
+"function, such as "
+"`net/mpd5`. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=320312[(r320312)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:213
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=stdio&sektion=3&manpath=freebsd-release-ports[stdio(3)] "
+"function has been updated to be deferred cancel-safe, eliminating possible "
+"lockups in multi-threaded applications using functions such as "
+"https://www.FreeBSD.org/cgi/man.cgi?query=funopen&sektion=3&manpath=freebsd-release-ports[funopen(3)], "
+"https://www.FreeBSD.org/cgi/man.cgi?query=fropen&sektion=3&manpath=freebsd-release-ports[fropen(3)], "
+"and "
+"https://www.FreeBSD.org/cgi/man.cgi?query=fwopen&sektion=3&manpath=freebsd-release-ports[fwopen(3)]. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=321074[(r321074)]"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:215
+#, no-wrap
+msgid "ABI Compatibility"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:218
+msgid ""
+"The type `max_align_t` is now defined for C11 "
+"compliance. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=309258[(r309258)]"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:220
+#, no-wrap
+msgid "Userland Debugging"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:223
+msgid ""
+"https://www.FreeBSD.org/cgi/man.cgi?query=ptrace&sektion=2&manpath=freebsd-release-ports[ptrace(2)] "
+"now supports events for thread creation and destruction, permitting more "
+"reliable debugging of threaded "
+"processes. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=304017[(r304017)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:225
+msgid ""
+"https://www.FreeBSD.org/cgi/man.cgi?query=ptrace&sektion=2&manpath=freebsd-release-ports[ptrace(2)] "
+"now supports events for "
+"https://www.FreeBSD.org/cgi/man.cgi?query=vfork&sektion=2&manpath=freebsd-release-ports[vfork(2)], "
+"permitting reliable debugging across "
+"https://www.FreeBSD.org/cgi/man.cgi?query=vfork&sektion=2&manpath=freebsd-release-ports[vfork(2)] "
+"invocations. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=304499[(r304499)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:227
+msgid ""
+"Process core dumps now include the process ID (PID) and command line "
+"arguments. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=306786[(r306786)]"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:229
+#, no-wrap
+msgid "Kernel"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:232
+msgid ""
+"This section covers changes to kernel configurations, system tuning, and "
+"system control parameters that are not otherwise categorized."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:234
+#, no-wrap
+msgid "Miscellaneous Kernel Changes"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:237
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=vt&sektion=4&manpath=freebsd-release-ports[vt(4)] "
+"driver has been updated, increasing the maximum framebuffer "
+"size. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=321198[(r321198)]"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:239
+#, no-wrap
+msgid "Kernel Bug Fixes"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:242
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=ipf&sektion=4&manpath=freebsd-release-ports[ipf(4)] "
+"packet filter has been updated to prevent `keep state` from incorrectly "
+"implying `keep frags`, matching the behavior documented in "
+"https://www.FreeBSD.org/cgi/man.cgi?query=ipf&sektion=5&manpath=freebsd-release-ports[ipf(5)]. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=317434[(r317434)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:244
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=geom&sektion=4&manpath=freebsd-release-ports[geom(4)] "
+"`JOURNAL` class has been updated to fix `flush_queue` "
+"handling. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=322793[(r322793)]"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:246
+#, no-wrap
+msgid "System Tuning and Controls"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:249
+msgid ""
+"The `kern.features.linux` and `kern.features.linux64` flags have been added "
+"to the `kern.features` "
+"https://www.FreeBSD.org/cgi/man.cgi?query=sysctl&sektion=8&manpath=freebsd-release-ports[sysctl(8)], "
+"which when set to `1`, indicate the kernel is configured with compatibility "
+"for 32-bit and/or 64-bit linux binaries, "
+"respectively. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=321024[(r321024)]"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:251
+#, no-wrap
+msgid "Devices and Drivers"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:254
+msgid ""
+"This section covers changes and additions to devices and device drivers "
+"since 10.3-RELEASE."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:256
+#, no-wrap
+msgid "Device Drivers"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:259
+msgid ""
+"https://www.FreeBSD.org/cgi/man.cgi?query=devctl&sektion=8&manpath=freebsd-release-ports[devctl(8)] "
+"now supports a \"clear driver\" command as a complement to \"set "
+"driver\". "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=306533[(r306533)] "
+"[.contrib]#(Sponsored by Chelsio)#"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:261
+#, no-wrap
+msgid "Storage Drivers"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:264
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=mpr&sektion=4&manpath=freebsd-release-ports[mpr(4)] "
+"driver has been updated to support tri-mode (SAS/SATA/PCIe) Broadcom storage "
+"adapters. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=319436[(r319436)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:266
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=arcmsr&sektion=4&manpath=freebsd-release-ports[arcmsr(4)] "
+"driver has been updated to version 1.40.00.00, adding support for ARC-1884 "
+"SATA "
+"controllers. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=321067[(r321067)]"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:268
+#, no-wrap
+msgid "Network Drivers"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:271
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=cxgbev&sektion=4&manpath=freebsd-release-ports[cxgbev(4)] "
+"driver has been added, providing support for Virtual Function devices (VFs) "
+"on Chelsio T4 and T5 "
+"adapters. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=309447[(r309447)] "
+"[.contrib]#(Sponsored by Chelsio)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:273
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=cxgbe&sektion=4&manpath=freebsd-release-ports[cxgbe(4)] "
+"driver has been updated to provide support for Virtual Function devices "
+"(VFs) on Chelsio T6 "
+"adapters. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=309560[(r309560)] "
+"[.contrib]#(Sponsored by Chelsio)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:275
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=cxgbe&sektion=4&manpath=freebsd-release-ports[cxgbe(4)] "
+"driver now supports devices using T6-based adapters which support 10, 25, "
+"40, and 100 "
+"Gbps. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=309560[(r309560)] "
+"[.contrib]#(Sponsored by Chelsio)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:277
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=alc&sektion=4&manpath=freebsd-release-ports[alc(4)] "
+"driver has been updated to provide support for Atheros Killer E2400™ Gigabit "
+"ethernet "
+"cards. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=312359[(r312359)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:279
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=alc&sektion=4&manpath=freebsd-release-ports[alc(4)] "
+"driver has been updated to provide support for Atheros Killer E2500™ Gigabit "
+"ethernet "
+"cards. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=314019[(r314019)] "
+"[.contrib]#(Sponsored by Microsoft)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:281
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=qlnxe&sektion=4&manpath=freebsd-release-ports[qlnxe(4)] "
+"driver has been added, providing support for Cavium Qlogic™ 45000 Series "
+"adapters. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=316485[(r316485)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:283
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=cxgbe&sektion=4&manpath=freebsd-release-ports[cxgbe(4)] "
+"driver has been updated to firmware version 1.16.45.0 for T4, T5, and T6 "
+"cards. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=319270[(r319270)] "
+"[.contrib]#(Sponsored by Chelsio)#"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:285
+#, no-wrap
+msgid "Hardware Support"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:288
+msgid ""
+"This section covers general hardware support for physical machines, "
+"hypervisors, and virtualization environments, as well as hardware changes "
+"and updates that do not otherwise fit in other sections of this document."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:290
+#, no-wrap
+msgid "Virtualization Support"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:293
+msgid ""
+"PCI passthrough with "
+"https://www.FreeBSD.org/cgi/man.cgi?query=bhyve&sektion=4&manpath=freebsd-release-ports[bhyve(4)] "
+"resets functions via FLR when a virtual machine is started and "
+"stopped. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=306520[(r306520)] "
+"[.contrib]#(Sponsored by Chelsio)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:295
+msgid ""
+"PCI passthrough with "
+"https://www.FreeBSD.org/cgi/man.cgi?query=bhyve&sektion=4&manpath=freebsd-release-ports[bhyve(4)] "
+"supports more dynamic configurations permitting devices to be marked for "
+"passthrough or host use at "
+"runtime. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=306472[(r306472)] "
+"[.contrib]#(Sponsored by Chelsio)#"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:297
+#, no-wrap
+msgid "Storage"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:300
+msgid ""
+"This section covers changes and additions to file systems and other storage "
+"subsystems, both local and networked."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:302
+#, no-wrap
+msgid "Networked Storage"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:305
+msgid ""
+"The NFS client now properly handles `NFS4ERR_BAD_SESSION` errors received "
+"from an NFS server. Additionally, the kernel RPC client has been updated to "
+"prevent creating new TCP connections when `ERESTART` is received from "
+"https://www.FreeBSD.org/cgi/man.cgi?query=sosend&sektion=9&manpath=freebsd-release-ports[sosend(9)]. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=318675[(r318675)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:307
+msgid ""
+"The NFS client has been updated to support pNFS `commit` through the "
+"`DS`. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=321031[(r321031)]"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:309
+#, no-wrap
+msgid "Networking"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:312
+msgid "This section describes changes that affect networking in FreeBSD."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:314
+#, no-wrap
+msgid "General Networking Changes"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:317
+msgid ""
+"The network stack has been modified to fix incorrect or invalid IP addresses "
+"if multiple threads emit a UDP `log_in_vain` message "
+"concurrently. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=313558[(r313558)] "
+"[.contrib]#(Sponsored by Dell EMC)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:319
+msgid ""
+"The TCP stack has been changed to use the estimated RTT instead of "
+"timestamps for receive buffer auto "
+"resizing. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=317375[(r317375)] "
+"[.contrib]#(Sponsored by Multiplay)#"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:321
+#, no-wrap
+msgid "Network Protocols"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:324
+msgid ""
+"Dummynet AQM, an independent implementation of CoDel and FQ-CoDel for "
+"ipfw/dummynet has been imported to the base "
+"system. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=301772[(r301772]]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:326
+msgid ""
+"Support for GARP (gratuitous ARP) retransmit has been added. A new "
+"https://www.FreeBSD.org/cgi/man.cgi?query=sysctl&sektion=8&manpath=freebsd-release-ports[sysctl(8)], "
+"`net.link.ether.inet.garp_rexmit_count`, has been added, which sets the "
+"maximum number of retransmissions when set to a non-zero "
+"value. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=309340[(r309340]] "
+"[.contrib]#(Sponsored by Dell EMC)#"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:328
+#, no-wrap
+msgid "Ports Collection and Package Infrastructure"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:331
+msgid ""
+"This section covers changes to the FreeBSD Ports Collection, package "
+"infrastructure, and package maintenance and installation tools."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.4R/relnotes.adoc:333
+#, no-wrap
+msgid "Packaging Changes"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.4R/relnotes.adoc:335
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=pkg&sektion=8&manpath=freebsd-release-ports[pkg(8)] "
+"utility has been updated to version 1.10.1."
+msgstr ""

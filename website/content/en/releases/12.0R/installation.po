@@ -1,0 +1,214 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR The FreeBSD Project
+# This file is distributed under the same license as the FreeBSD Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FreeBSD Documentation VERSION\n"
+"POT-Creation-Date: 2021-02-21 18:57-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: YAML Front Matter: title
+#: website/content/en/releases/12.0R/installation.adoc:1
+#, no-wrap
+msgid "FreeBSD 12.0-RELEASE Installation Instructions"
+msgstr ""
+
+#. type: Title =
+#: website/content/en/releases/12.0R/installation.adoc:9
+#, no-wrap
+msgid "FreeBSD {localRel}-RELEASE Installation Instructions"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.0R/installation.adoc:12
+msgid "FreeBSD {releaseCurrent} Installation Instructions"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/12.0R/installation.adoc:13
+#, no-wrap
+msgid "Abstract"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.0R/installation.adoc:16
+msgid ""
+"This article gives some brief instructions on installing FreeBSD "
+"{releaseCurrent} and upgrading the systems running earlier releases."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/12.0R/installation.adoc:17
+#, no-wrap
+msgid "Table of Contents"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.0R/installation.adoc:20
+msgid "<<install,Installing FreeBSD>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.0R/installation.adoc:21
+msgid "<<upgrade,Upgrading FreeBSD>>"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/12.0R/installation.adoc:23
+#, no-wrap
+msgid "Installing FreeBSD"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.0R/installation.adoc:26
+msgid ""
+"The Installing FreeBSD chapter of the FreeBSD Handbook provides more "
+"in-depth information about the installation program itself, including a "
+"guided walk-through with screenshots."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/12.0R/installation.adoc:28
+#, no-wrap
+msgid "Upgrading FreeBSD"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.0R/installation.adoc:31
+msgid ""
+"If you are upgrading from a previous release of FreeBSD, please read "
+"upgrading section in the Release Notes for notable incompatibilities "
+"carefully."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/12.0R/installation.adoc:33
+#, no-wrap
+msgid "Upgrading from Source"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.0R/installation.adoc:36
+msgid ""
+"The procedure for doing a source code based update is described in Updating "
+"FreeBSD from Source."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.0R/installation.adoc:38
+msgid ""
+"For SVN use the releng/{localRel} branch which will be where any upcoming "
+"Security Advisories or Errata Notices will be applied."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/12.0R/installation.adoc:40
+#, no-wrap
+msgid "Upgrading Using \"FreeBSD Update\""
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.0R/installation.adoc:43
+msgid ""
+"The {{< manpage \"freebsd-update\" \"8\">}} utility supports binary upgrades "
+"of i386 and amd64 systems running earlier FreeBSD releases. Systems running "
+"11.2-RELEASE can upgrade as follows:"
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/12.0R/installation.adoc:48
+#, no-wrap
+msgid ""
+"# freebsd-update fetch\n"
+"# freebsd-update install\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.0R/installation.adoc:51
+msgid ""
+"Now the {{< manpage \"freebsd-update\" \"8\">}} utility can fetch bits "
+"belonging to {releaseCurrent}. During this process {{< manpage "
+"\"freebsd-update\" \"8\">}} will ask for help in merging configuration "
+"files."
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/12.0R/installation.adoc:56
+#, no-wrap
+msgid ""
+"# freebsd-update upgrade -r {localRel}-RELEASE\n"
+"# freebsd-update install\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.0R/installation.adoc:59
+msgid ""
+"The system must now be rebooted with the newly installed kernel before the "
+"non-kernel components are updated."
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/12.0R/installation.adoc:63
+#: website/content/en/releases/12.0R/installation.adoc:86
+#, no-wrap
+msgid "# shutdown -r now\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.0R/installation.adoc:66
+msgid ""
+"After rebooting, {{< manpage \"freebsd-update\" \"8\">}} needs to be run "
+"again to install the new userland components:"
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/12.0R/installation.adoc:70
+#: website/content/en/releases/12.0R/installation.adoc:79
+#, no-wrap
+msgid "# freebsd-update install\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.0R/installation.adoc:73
+msgid ""
+"At this point, users of systems being upgraded from earlier FreeBSD releases "
+"will be prompted by {{< manpage \"freebsd-update\" \"8\">}} to rebuild all "
+"third-party applications (e.g., ports installed from the ports tree) due to "
+"updates in system libraries."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.0R/installation.adoc:75
+msgid ""
+"After updating installed third-party applications (and again, only if {{< "
+"manpage \"freebsd-update\" \"8\">}} printed a message indicating that this "
+"was necessary), run {{< manpage \"freebsd-update\" \"8\">}} again so that it "
+"can delete the old (no longer used) system libraries:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.0R/installation.adoc:82
+msgid "Finally, reboot into {releaseCurrent}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.0R/installation.adoc:89
+msgid ""
+"After rebooting, it is recommended to regenerate the pkg binary tool to "
+"prevent future issues when installing some applications using the pkg tool."
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/12.0R/installation.adoc:93
+#, no-wrap
+msgid "# pkg-static install -f pkg\n"
+msgstr ""

@@ -1,0 +1,986 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR The FreeBSD Project
+# This file is distributed under the same license as the FreeBSD Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FreeBSD Documentation VERSION\n"
+"POT-Creation-Date: 2021-02-21 18:54-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: YAML Front Matter: title
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:1
+#, no-wrap
+msgid "Chapter 5. Source Tree Guidelines and Policies"
+msgstr ""
+
+#. type: Title =
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:11
+#, no-wrap
+msgid "Source Tree Guidelines and Policies"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:36
+msgid ""
+"This chapter documents various guidelines and policies in force for the "
+"FreeBSD source tree."
+msgstr ""
+
+#. type: Title ==
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:38
+#, no-wrap
+msgid "Style Guidelines"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:41
+msgid ""
+"Consistent coding style is extremely important, particularly with large "
+"projects like FreeBSD. Code should follow the FreeBSD coding styles "
+"described in man:style[9] and man:style.Makefile[5]."
+msgstr ""
+
+#. type: Title ==
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:43
+#, no-wrap
+msgid "`MAINTAINER` on Makefiles"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:46
+msgid ""
+"If a particular portion of the FreeBSD [.filename]#src/# distribution is "
+"being maintained by a person or group of persons, this is communicated "
+"through an entry in [.filename]#src/MAINTAINERS#. Maintainers of ports "
+"within the Ports Collection express their maintainership to the world by "
+"adding a `MAINTAINER` line to the [.filename]#Makefile# of the port in "
+"question:"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:50
+#, no-wrap
+msgid "MAINTAINER= email-addresses\n"
+msgstr ""
+
+#. type: delimited block = 4
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:56
+msgid ""
+"For other parts of the repository, or for sections not listed as having a "
+"maintainer, or when you are unsure who the active maintainer is, try looking "
+"at the recent commit history of the relevant parts of the source tree. It is "
+"quite often the case that a maintainer is not explicitly named, but the "
+"people who are actively working in a part of the source tree for, say, the "
+"last couple of years are interested in reviewing changes. Even if this is "
+"not specifically mentioned in the documentation or the source itself, asking "
+"for a review as a form of courtesy is a very reasonable thing to do."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:59
+msgid "The role of the maintainer is as follows:"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:61
+msgid ""
+"The maintainer owns and is responsible for that code. This means that he or "
+"she is responsible for fixing bugs and answering problem reports pertaining "
+"to that piece of the code, and in the case of contributed software, for "
+"tracking new versions, as appropriate."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:62
+msgid ""
+"Changes to directories which have a maintainer defined shall be sent to the "
+"maintainer for review before being committed. Only if the maintainer does "
+"not respond for an unacceptable period of time, to several emails, will it "
+"be acceptable to commit changes without review by the maintainer. However, "
+"it is suggested that you try to have the changes reviewed by someone else if "
+"at all possible."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:63
+msgid ""
+"It is of course not acceptable to add a person or group as maintainer unless "
+"they agree to assume this duty. On the other hand it does not have to be a "
+"committer and it can easily be a group of people."
+msgstr ""
+
+#. type: Title ==
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:65
+#, no-wrap
+msgid "Contributed Software"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:68
+msgid ""
+"Some parts of the FreeBSD distribution consist of software that is actively "
+"being maintained outside the FreeBSD project. For historical reasons, we "
+"call this _contributed_ software. Some examples are sendmail, gcc and patch."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:70
+msgid ""
+"Over the last couple of years, various methods have been used in dealing "
+"with this type of software and all have some number of advantages and "
+"drawbacks. No clear winner has emerged."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:72
+msgid ""
+"Since this is the case, after some debate one of these methods has been "
+"selected as the \"official\" method and will be required for future imports "
+"of software of this kind. Furthermore, it is strongly suggested that "
+"existing contributed software converge on this model over time, as it has "
+"significant advantages over the old method, including the ability to easily "
+"obtain diffs relative to the \"official\" versions of the source by everyone "
+"(even without direct repository access). This will make it significantly "
+"easier to return changes to the primary developers of the contributed "
+"software."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:74
+msgid ""
+"Ultimately, however, it comes down to the people actually doing the work. If "
+"using this model is particularly unsuited to the package being dealt with, "
+"exceptions to these rules may be granted only with the approval of the "
+"link:https://www.FreeBSD.org/administration/#t-core[Core Team] and with the "
+"general consensus of the other developers. The ability to maintain the "
+"package in the future will be a key issue in the decisions."
+msgstr ""
+
+#. type: delimited block = 4
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:78
+msgid ""
+"Because it makes it harder to import future versions minor, trivial and/or "
+"cosmetic changes are _strongly discouraged_ on files that are still tracking "
+"the vendor branch."
+msgstr ""
+
+#. type: Title ===
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:81
+#, no-wrap
+msgid "Vendor Imports with Git"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:84
+msgid "This section describes the vendor import procedure with Git in detail."
+msgstr ""
+
+#. type: Title ====
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:85
+#, no-wrap
+msgid "Branch naming convention"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:88
+msgid ""
+"All vendor branches and tags start with `vendor/`. These branches and tags "
+"are visible by default."
+msgstr ""
+
+#. type: delimited block = 4
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:92
+msgid ""
+"This chapter follows the convention that the `freebsd` origin is the source "
+"of truth. If you use a different convention, replace `freebsd` with your "
+"name as appopriate."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:97
+msgid ""
+"We'll explore an example for updating NetBSD's mtree that's in our tree. The "
+"vendor branch for this is `vendor/NetBSD/mtree`."
+msgstr ""
+
+#. type: Title ====
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:98
+#, no-wrap
+msgid "Updating an old vendor import"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:103
+msgid ""
+"Since the trees we have in vendor branches are usually a tiny subset of the "
+"FreeBSD, it's best to do them with work trees since the process is quite "
+"fast. Make sure that whatever directory you choose (the `../mtree`) argument "
+"is empty and doesn't conflict."
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:106
+#, no-wrap
+msgid "% git worktree add ../mtree vendor/NetBSD/mtree\n"
+msgstr ""
+
+#. type: Title ====
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:107
+#, no-wrap
+msgid "Update the Sources in the Vendor Branch"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:110
+msgid ""
+"Prepare a full, clean tree of the vendor sources. Import everything but "
+"merge only what is needed."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:115
+msgid ""
+"I have my copy of NetBSD checked out from their GitHub mirror in "
+"`~/git/NetBSD`, so I'll update from there: Note that \"upstream\" might have "
+"added or removed files, so we want to make sure deletions are propagated as "
+"well. rsync(1) is commonly installed, so I'll use that."
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:128
+#, no-wrap
+msgid ""
+"% cd ../mtree\n"
+"% rsync -va --del --exclude=\".git\" ~/git/NetBSD/usr.sbin/mtree/ .\n"
+"% git add -A\n"
+"% git status\n"
+"...\n"
+"% git diff --staged\n"
+"...\n"
+"% git commit -m\"Vendor import of NetBSD's mtree at 2020-12-11\"\n"
+"[vendor/NetBSD/mtree 8e7aa25fcf1] Vendor import of NetBSD's mtree at "
+"2020-12-11\n"
+" 7 files changed, 114 insertions(+), 82 deletions(-)\n"
+"% git tag -a vendor/NetBSD/mtree/20201211\n"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:133
+msgid ""
+"Note: I run the `git diff` and `git status` commands to make sure nothing "
+"weird was present. Also I used `-m` to illustrate, but you should compose a "
+"proper message in an editor (using a commit message template)."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:139
+msgid ""
+"It's also important to create an annotated tag, otherwise the push will be "
+"rejected. Only annotated tags are allowed to be pushed. The annoated tag "
+"gives you a chance to enter a commit message. Enter the version you are "
+"importing, along with any salient new features or fixes in that version."
+msgstr ""
+
+#. type: Title ====
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:140
+#, no-wrap
+msgid "Updating the FreeBSD Copy"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:142
+msgid "At this point you can push the import to vendor into our repo."
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:145
+#, no-wrap
+msgid "% git push --follow-tags freebsd vendor/NetBSD/mtree\n"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:148
+msgid ""
+"`--follow-tags` tells `git push` to also push tags associated with the "
+"locally committed revision."
+msgstr ""
+
+#. type: Title ====
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:148
+#, no-wrap
+msgid "Updating the FreeBSD source tree"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:151
+msgid ""
+"Now you need to update the mtree in FreeBSD. The sources live in "
+"`contrib/mtree` since it is upstream software."
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:155
+#, no-wrap
+msgid ""
+"% cd ../src\n"
+"% git subtree merge -P contrib/mtree vendor/NetBSD/mtree\n"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:157
+msgid ""
+"This would generate a subtree merge commit of `contrib/mtree` against the "
+"local `vendor/NetBSD/mtree` branch. If there were conflicts, you would need "
+"to fix them before committing."
+msgstr ""
+
+#. type: Title ====
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:158
+#, no-wrap
+msgid "Rebasing your change against latest FreeBSD source tree"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:161
+msgid ""
+"Because the current policy recommends against using merges, if the upstream "
+"FreeBSD `main` moved forward before you get a chance to push, you would have "
+"to redo the merge."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:164
+msgid ""
+"Regular `git rebase` or `git pull --rebase` doesn't know how to rebase a "
+"merge commit **as a merge commit**, so instead of that you would have to "
+"recreate the commit."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:166
+msgid ""
+"The easiest way to do this would be to create a side branch with the "
+"**contents** of the merged tree:"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:173
+#, no-wrap
+msgid ""
+"% cd ../src\n"
+"% git fetch freebsd\n"
+"% git checkout -b merge_result\n"
+"% git merge freebsd/main\n"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:178
+msgid ""
+"Typically, there would be no merge conflicts here (because developers tends "
+"to work on different components).  In the worst case scenario, you would "
+"still have to resolve merge conflicts, if there was any, but this should be "
+"really rare."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:180
+msgid "Now, checkout `freebsd/main` again as `new_merge`, and redo the merge:"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:184
+#, no-wrap
+msgid ""
+"% git checkout -b new_merge freebsd/main\n"
+"% git subtree merge -P contrib/mtree vendor/NetBSD/mtree\n"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:186
+msgid "Instead of resolving the conflicts, perform this instead:"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:189
+#, no-wrap
+msgid "% git checkout merge_result .\n"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:191
+msgid ""
+"Which will overwrite the files with conflicts with the version found in "
+"`merge_result`."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:193
+msgid ""
+"Examine the tree against `merge_result` to make sure that you haven't missed "
+"deleted files:"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:196
+#, no-wrap
+msgid "% git diff merge_result\n"
+msgstr ""
+
+#. type: Title ====
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:197
+#, no-wrap
+msgid "Pushing the changes"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:201
+msgid ""
+"Once you are sure that you have a set of deltas you think is good, you can "
+"push it to a fork off github or gitlab for others to review. Once nice thin "
+"about Git is that it allows you to publish rough drafts of your work for "
+"others to review."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:203
+msgid ""
+"After review, when you are sure it is a good change, you can push it to the "
+"FreeBSD repo:"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:206
+#, no-wrap
+msgid "% git push freebsd main\n"
+msgstr ""
+
+#. type: Title ===
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:208
+#, no-wrap
+msgid "Creating a new vendor branch"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:214
+msgid ""
+"There's a number of ways to create a new vendor branch. The recommended way "
+"is to create a new repository and then merge that with FreeBSD. Let's say "
+"we're importing `glorbnitz` into the FreeBSD tree, release 3.1415. For the "
+"sake of simplicity, we'll not trim this release. It's a user command that "
+"puts the nitz device into different magical glorb states."
+msgstr ""
+
+#. type: Title ====
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:215
+#, no-wrap
+msgid "Create the repo"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:223
+#, no-wrap
+msgid ""
+"% cd /some/where\n"
+"% mkdir glorbnitz\n"
+"% cd glorbnitz\n"
+"% git init\n"
+"% git checkout -b vendor/glorbnitz\n"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:226
+msgid ""
+"At this point, you have a new repo, where all new commits will go on the "
+"`vendor/glorbnitz` branch."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:230
+msgid ""
+"(Git professionals can also do this right in their FreeBSD clone, if they "
+"know how to create a new root commit that's not attached to anything, e.g.  "
+"`git checkout --orphan vendor/glorbnitz`)"
+msgstr ""
+
+#. type: Title ====
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:231
+#, no-wrap
+msgid "Copy the sources in"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:234
+msgid ""
+"Since this is a new import, you can just cp the sources in, or use tar or "
+"even rsync as shown above. And we'll add everything, assuming no dot files."
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:238
+#, no-wrap
+msgid ""
+"% cp -r ~/glorbnitz/* .\n"
+"% git add *\n"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:241
+msgid "At this point, you should have a pristine copy of glorbnitz ready to commit."
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:245
+#, no-wrap
+msgid "% git commit -m\"Import GlorbNitz frobnosticator revision 3.1415\"\n"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:249
+msgid ""
+"As above, I used `-m` for simplicity, but you should likely create a commit "
+"message that explains what a Glorb is and why you'd use a Nitz to get "
+"it. Not everybody will know."
+msgstr ""
+
+#. type: Title ====
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:250
+#, no-wrap
+msgid "Now import it into our repository"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:252
+msgid "Now you need to import the branch into our repository."
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:257
+#, no-wrap
+msgid ""
+"% cd /path/to/freebsd/repo/src\n"
+"% git remote add glorbnitz /some/where/glorbnitz\n"
+"% git fetch glorbnitz vendor/glorbnitz\n"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:261
+msgid ""
+"Note the vendor/glorbnitz branch is in the repo. At this point the "
+"`/some/where/glorbnitz` can be deleted, if you like. It was only a means to "
+"an end."
+msgstr ""
+
+#. type: Title ====
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:262
+#, no-wrap
+msgid "Tag and push"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:266
+msgid ""
+"Steps from here on out are much the same as they are in the case of updating "
+"a vendor branch, though w/o the updating the vendor branch step."
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:273
+#, no-wrap
+msgid ""
+"% git worktree add ../glorbnitz vendor/glorbnitz\n"
+"% cd ../glorbnitz\n"
+"% git tag --annotate vendor/glorbnitz/3.1415\n"
+"# Make sure it's good\n"
+"% git push --follow-tags freebsd vendor/glorbnitz\n"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:275
+msgid "By 'good' we mean:"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:277
+msgid "All the right files are present"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:278
+msgid "None of the wrong files are present"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:279
+msgid "The vendor branch points at something sensible"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:280
+msgid "The tag looks good, and is annotated."
+msgstr ""
+
+#. type: Title ====
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:281
+#, no-wrap
+msgid "Time to finally merge it into the base tree*"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:288
+#, no-wrap
+msgid ""
+"% cd ../src\n"
+"% git subtree add -P contrib/glorbnitz vendor/glorbnitz\n"
+"# Make sure it's good\n"
+"% git push freebsd\n"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:290
+msgid "Here 'good' means:"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:292
+msgid ""
+"All the right files, and none of the wrong ones, were merged into "
+"contrib/glorbnitz."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:293
+msgid "No other changes are in the tree"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:294
+msgid "The commit messages look good."
+msgstr ""
+
+#. type: delimited block = 4
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:298
+msgid ""
+"This hasn't connected `glorbnitz` to the build yet. How so do that is "
+"specific to the software being imported."
+msgstr ""
+
+#. type: Title ==
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:300
+#, no-wrap
+msgid "Encumbered Files"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:303
+msgid ""
+"It might occasionally be necessary to include an encumbered file in the "
+"FreeBSD source tree. For example, if a device requires a small piece of "
+"binary code to be loaded to it before the device will operate, and we do not "
+"have the source to that code, then the binary file is said to be "
+"encumbered. The following policies apply to including encumbered files in "
+"the FreeBSD source tree."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:305
+msgid ""
+"Any file which is interpreted or executed by the system CPU(s) and not in "
+"source format is encumbered."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:306
+msgid "Any file with a license more restrictive than BSD or GNU is encumbered."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:307
+msgid ""
+"A file which contains downloadable binary data for use by the hardware is "
+"not encumbered, unless (1) or (2) apply to it. It must be stored in an "
+"architecture neutral ASCII format (file2c or uuencoding is recommended)."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:308
+msgid ""
+"Any encumbered file requires specific approval from the "
+"link:https://www.FreeBSD.org/administration/#t-core[Core Team] before it is "
+"added to the repository."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:309
+msgid ""
+"Encumbered files go in [.filename]#src/contrib# or "
+"[.filename]#src/sys/contrib#."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:310
+msgid ""
+"The entire module should be kept together. There is no point in splitting "
+"it, unless there is code-sharing with non-encumbered code."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:311
+msgid "Object files are named [.filename]#arch/filename.o.uu#."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:312
+msgid "Firmware files are named [.filename]#filename.fw.uu#."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:313
+msgid "Kernel files:"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:314
+msgid ""
+"Should always be referenced in [.filename]#conf/files.*# (for build "
+"simplicity)."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:315
+msgid ""
+"Should always be in [.filename]#LINT#, but when the consensus isn't clear "
+"the link:https://www.FreeBSD.org/administration/#t-core[Core Team] decides "
+"if it should be commented out or not."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:316
+msgid ""
+"The link:https://www.FreeBSD.org/administration/#t-re[Release Engineering] "
+"team decides whether or not it goes into the release."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:318
+msgid "User-land files:"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:319
+msgid ""
+"The link:https://www.FreeBSD.org/administration/#t-core[Core team] decides "
+"if the code should be part of `make world` by default if there is no clear "
+"consensus."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:320
+msgid ""
+"The link:https://www.FreeBSD.org/administration/#t-re[Release Engineering] "
+"team decides if it goes into the release."
+msgstr ""
+
+#. type: Title ==
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:322
+#, no-wrap
+msgid "Shared Libraries"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:325
+msgid ""
+"If you are adding shared library support to a port or other piece of "
+"software that does not have one, the version numbers should follow these "
+"rules. Generally, the resulting numbers will have nothing to do with the "
+"release version of the software."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:327
+msgid ""
+"FreeBSD tries to maintain ABI stability. Most libraries in the system use "
+"symbol versioning to remain compatible with old versions of the "
+"library. When updating libraries with versioned symbols:"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:329
+msgid "Create new symbols in the symbol map for otherwise incompatible changes."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:330
+msgid ""
+"When deleting old functions, only remove visibility of symbols from newer "
+"versions (that is, do not delete functions)."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:331
+msgid ""
+"Avoid gratuitous rearrangement of structures. This will keep compatibility "
+"symbols to a minimum."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:332
+msgid ""
+"If changes require a version bump, re-evaluate whether they are needed at "
+"all."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:334
+msgid ""
+"For project-maintained libraries, please try to follow the following "
+"guidelines for major version numbers:"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:336
+msgid "New libraries"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:337
+msgid ""
+"Should start with major version 1, though third-party libraries may start at "
+"a different number if warranted"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:338
+msgid ""
+"All new libraries should either be symvers or private unless there's some "
+"compelling reason to deviate."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:339
+msgid "For non-symvers libraries, avoid changes that would require a version bump."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:340
+msgid ""
+"When making a change that requires one, seriously consider adopting symbol "
+"versions at the same time"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:341
+msgid "For symvers libraries, generally, avoid version bumps"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:342
+msgid ""
+"Changes to structures can be worked around by providing the old structure "
+"and old functions to access it (if the layout of the structure is embedded "
+"in its clients)."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:343
+msgid ""
+"Changes to function signatures can be implemented by creating compatibility "
+"versions of the function (often calling the new version of the function in a "
+"specific way)."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:344
+msgid ""
+"If the benefits of a version bump outweight the costs to do it, follow up to "
+"ensure compat packages are built, etc"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:345
+msgid ""
+"Carefully consider the impact of a major version bump. When a major version "
+"change cannot be avoided, add a version map to avoid future bumps."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:346
+msgid ""
+"For libraries where the ABI cannot be guaranteed, make them FreeBSD private "
+"where possible. Third party libraries that have poor ABI guarantees are "
+"generally made private, though there are a few exceptions for historical "
+"reasons."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:347
+msgid ""
+"It is strong policy not to change the ABI of dynamicly linked libararies in "
+"an non-backwards compatible way"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:348
+msgid ""
+"Every reasonable effort should be made to make the changes in a binary "
+"compatible manner using tools like symbol versioning"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:349
+msgid ""
+"When major version changes cannot be avoided, the policy is to change only "
+"between major releases."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:350
+msgid "Minimize the number of major version bumps where possible"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:351
+msgid "Multiple bumps are allowed between releases where necessary"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:352
+msgid ""
+"Where possible, batch multiple changes that each would require a major bump "
+"together"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:353
+msgid "Ensure that the compatibility ports / packages are updated as appropriate"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:354
+msgid ""
+"Request an exp-run of ports to understand the full impact of the change to "
+"the base system"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:355
+msgid ""
+"Any changes to major libraries must still allow build from source upgrades "
+"to succeed"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/developers-handbook/policies/chapter.adoc:356
+msgid ""
+"Changing the ABI is allowed, otherwise FreeBSD cannot evolve. However, the "
+"project has generally chosen to pay the added cost of retaining ABI "
+"backward-compatibility."
+msgstr ""

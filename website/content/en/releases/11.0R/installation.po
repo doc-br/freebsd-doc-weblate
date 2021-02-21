@@ -1,0 +1,206 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR The FreeBSD Project
+# This file is distributed under the same license as the FreeBSD Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FreeBSD Documentation VERSION\n"
+"POT-Creation-Date: 2021-02-21 18:57-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Title =
+#: website/content/en/releases/11.0R/installation.adoc:1
+#: website/content/en/releases/11.0R/installation.adoc:6
+#, no-wrap
+msgid "FreeBSD 11.0-RELEASE Installation Instructions"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/11.0R/installation.adoc:8
+#, no-wrap
+msgid "Abstract"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.0R/installation.adoc:11
+msgid ""
+"This article gives some brief instructions on installing FreeBSD "
+"11.0-RELEASE and upgrading the systems running earlier releases."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/11.0R/installation.adoc:12
+#, no-wrap
+msgid "Table of Contents"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.0R/installation.adoc:15
+msgid "<<install,Installing FreeBSD>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.0R/installation.adoc:16
+msgid "<<upgrade,Upgrading FreeBSD>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.0R/installation.adoc:17
+msgid "<<upgrade-source,Upgrading from Source>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.0R/installation.adoc:18
+msgid "<<upgrade-binary,Upgrading Using \"FreeBSD Update\">>"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/11.0R/installation.adoc:20
+#, no-wrap
+msgid "Installing FreeBSD"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.0R/installation.adoc:23
+msgid ""
+"The `Installing FreeBSD` chapter of the `FreeBSD Handbook` provides more "
+"in-depth information about the installation program itself, including a "
+"guided walk-through with screenshots."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/11.0R/installation.adoc:25
+#, no-wrap
+msgid "Upgrading FreeBSD"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.0R/installation.adoc:28
+msgid ""
+"If you are upgrading from a previous release of FreeBSD, please read "
+"`upgrading section in the Release Notes` for notable incompatibilities "
+"carefully."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/11.0R/installation.adoc:30
+#, no-wrap
+msgid "upgrade-source"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.0R/installation.adoc:33
+msgid ""
+"The procedure for doing a source code based update is described in "
+"`Synchronizing Source` and `Rebuilding world`."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.0R/installation.adoc:35
+msgid ""
+"For SVN use the `releng/11.0` branch which will be where any upcoming "
+"Security Advisories or Errata Notices will be applied."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/11.0R/installation.adoc:37
+#, no-wrap
+msgid "Upgrading Using \"FreeBSD Update\""
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.0R/installation.adoc:40
+msgid ""
+"The "
+"https://www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8&manpath=freebsd-release-ports[freebsd-update(8)] "
+"utility supports binary upgrades of i386 and amd64 systems running earlier "
+"FreeBSD releases. Systems running `9.3-RELEASE`, `10.1-RELEASE`, "
+"`10.2-RELEASE`, `10.3-RELEASE`, `11.0-RC[123]` can upgrade as follows:"
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/11.0R/installation.adoc:45
+#, no-wrap
+msgid ""
+"# freebsd-update fetch\n"
+"# freebsd-update install\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.0R/installation.adoc:48
+msgid ""
+"Now the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8[freebsd-update(8)] "
+"utility can fetch bits belonging to 11.0-RELEASE. During this process "
+"http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8[freebsd-update(8)] "
+"will ask for help in merging configuration files."
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/11.0R/installation.adoc:52
+#, no-wrap
+msgid "# freebsd-update upgrade -r 11.0-RELEASE\n"
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/11.0R/installation.adoc:57
+#: website/content/en/releases/11.0R/installation.adoc:71
+#: website/content/en/releases/11.0R/installation.adoc:80
+#, no-wrap
+msgid "# freebsd-update install\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.0R/installation.adoc:60
+msgid ""
+"The system must now be rebooted with the newly installed kernel before the "
+"non-kernel components are updated."
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/11.0R/installation.adoc:64
+#: website/content/en/releases/11.0R/installation.adoc:87
+#, no-wrap
+msgid "# shutdown -r now\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.0R/installation.adoc:67
+msgid ""
+"After rebooting, "
+"http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8&manpath=freebsd-release-ports[freebsd-update(8)] "
+"needs to be run again to install the new userland components:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.0R/installation.adoc:74
+msgid ""
+"At this point, users of systems being upgraded from earlier FreeBSD releases "
+"will be prompted by "
+"http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8&manpath=freebsd-release-ports[freebsd-update(8)] "
+"to rebuild all third-party applications (e.g., ports installed from the "
+"ports tree) due to updates in system libraries."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.0R/installation.adoc:76
+msgid ""
+"After updating installed third-party applications (and again, only if "
+"http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8&manpath=freebsd-release-ports[freebsd-update(8)] "
+"printed a message indicating that this was necessary), run "
+"http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8&manpath=freebsd-release-ports[freebsd-update(8)] "
+"again so that it can delete the old (no longer used) system libraries:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.0R/installation.adoc:83
+msgid "Finally, reboot into 11.0-RELEASE"
+msgstr ""

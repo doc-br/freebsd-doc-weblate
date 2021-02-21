@@ -1,0 +1,230 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR The FreeBSD Project
+# This file is distributed under the same license as the FreeBSD Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FreeBSD Documentation VERSION\n"
+"POT-Creation-Date: 2021-02-21 18:57-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Title =
+#: website/content/en/releases/11.4R/errata.adoc:1
+#: website/content/en/releases/11.4R/errata.adoc:6
+#, no-wrap
+msgid "FreeBSD 11.4-RELEASE Errata"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/11.4R/errata.adoc:8
+#, no-wrap
+msgid "Abstract"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.4R/errata.adoc:11
+msgid ""
+"This document lists errata items for FreeBSD 11.4-RELEASE, containing "
+"significant information discovered after the release or too late in the "
+"release cycle to be otherwise included in the release documentation. This "
+"information includes security advisories, as well as news relating to the "
+"software or documentation that could affect its operation or usability. An "
+"up-to-date version of this document should always be consulted before "
+"installing this version of FreeBSD."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.4R/errata.adoc:13
+msgid ""
+"This errata document for FreeBSD 11.4-RELEASE will be maintained until "
+"FreeBSD 11.4-RELEASE reaches end-of-life."
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/11.4R/errata.adoc:14
+#, no-wrap
+msgid "Table of Contents"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.4R/errata.adoc:17
+msgid "<<intro,Introduction>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.4R/errata.adoc:18
+msgid "<<security,Security Advisories>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.4R/errata.adoc:19
+msgid "<<errata,Errata Notices>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.4R/errata.adoc:20
+msgid "<<open-issues,Open Issues>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.4R/errata.adoc:21
+msgid "<<late-news,Late-Breaking News>>"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/11.4R/errata.adoc:23
+#, no-wrap
+msgid "Introduction"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.4R/errata.adoc:26
+msgid ""
+"This errata document contains \"late-breaking news\" about FreeBSD "
+"11.4-RELEASE. Before installing this version, it is important to consult "
+"this document to learn about any post-release discoveries or problems that "
+"may already have been found and fixed."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.4R/errata.adoc:28
+msgid ""
+"Any version of this errata document actually distributed with the release "
+"(for example, on a CDROM distribution) will be out of date by definition, "
+"but other copies are kept updated on the Internet and should be consulted as "
+"the \"current errata\" for this release. These other copies of the errata "
+"are located at https://www.FreeBSD.org/releases/, plus any sites which keep "
+"up-to-date mirrors of this location."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.4R/errata.adoc:30
+msgid ""
+"Source and binary snapshots of FreeBSD 11.4-STABLE also contain up-to-date "
+"copies of this document (as of the time of the snapshot)."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.4R/errata.adoc:32
+msgid ""
+"For a list of all FreeBSD CERT security advisories, see "
+"https://www.FreeBSD.org/security/."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/11.4R/errata.adoc:34
+#, no-wrap
+msgid "Security Advisories"
+msgstr ""
+
+#. type: Table
+#: website/content/en/releases/11.4R/errata.adoc:54
+#, no-wrap
+msgid ""
+"|Advisory |Date |Topic\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-20:18.posix_spawnp.asc[FreeBSD-SA-20:18.posix_spawnp] "
+"|8 July 2020 |Buffer overflow\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-20:19.unbound.asc[FreeBSD-SA-20:19.unbound] "
+"|8 July 2020 |Multiple vulnerabilities\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-20:20.ipv6.asc[FreeBSD-SA-20:20.ipv6] "
+"|8 July 2020 |Race condition and use-after-free\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-20:21.usb_net.asc[FreeBSD-SA-20:21.usb_net] "
+"|5 August 2020 |Memory corruption\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-20:22.sqlite.asc[FreeBSD-SA-20:22.sqlite] "
+"|5 August 2020 |Multiple vulnerabilities\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-20:23.sendmsg.asc[FreeBSD-SA-20:23.sendmsg] "
+"|5 August 2020 |Privilege escalation\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-20:24.ipv6.asc[FreeBSD-SA-20:24.ipv6] "
+"|2 September 2020 |Use-after-free bug\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-20:25.sctp.asc[FreeBSD-SA-20:25.sctp] "
+"|2 September 2020 |Use-after-free bug\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-20:26.dhclient.asc[FreeBSD-SA-20:26.dhclient] "
+"|2 September 2020 |Heap overflow\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-20:27.ure.asc[FreeBSD-SA-20:27.ure] "
+"|15 September 2020 |Packet-in-packet attack\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-20:28.bhyve_vmcs.asc[FreeBSD-SA-20:28.bhyve_vmcs] "
+"|15 September 2020 |Privilege escalation via VMCS\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-20:29.bhyve_svm.asc[FreeBSD-SA-20:29.bhyve_svm] "
+"|15 September 2020 |SVM guest escape\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-20:30.ftpd.asc[FreeBSD-SA-20:30.ftpd] "
+"|15 September 2020 |Privilege escalation\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-20:31.icmp6.asc[FreeBSD-SA-20:31.icmp6] "
+"|1 December 2019 |Use-after-free in error message handling\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-20:32.rtsold.asc[FreeBSD-SA-20:32.rtsold] "
+"|1 December 2019 |Multiple vulnerabilities\n"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/11.4R/errata.adoc:57
+#, no-wrap
+msgid "Errata Notices"
+msgstr ""
+
+#. type: Table
+#: website/content/en/releases/11.4R/errata.adoc:66
+#, no-wrap
+msgid ""
+"|Errata |Date |Topic\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-20:15.mps.asc[FreeBSD-EN-20:15.mps] "
+"|8 July 2020 |Kernel panic\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-20:17.linuxthread.asc[FreeBSD-EN-20:17.linuxthread] "
+"|2 September 2020 |Kernel panic\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-20:18.getfsstat.asc[FreeBSD-EN-20:18.getfsstat] "
+"|2 September 2020 |Kernel panic\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-20:20.tzdata.asc[FreeBSD-EN-20:20.tzdata] "
+"|1 December 2020 |Timezone database information update\n"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/11.4R/errata.adoc:69
+#, no-wrap
+msgid "Open Issues"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.4R/errata.adoc:72
+msgid ""
+"[2020-06-11] Source-based upgrades from FreeBSD 11.2 on the i386 "
+"architecture may fail to compile clang due to the amount of RAM consumed."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.4R/errata.adoc:74
+msgid ""
+"Adding `CFLAGS+=-O1` to `/etc/make.con+` or `/etc/src.conf` has been "
+"observed to work around the compile-time RAM exhaustion."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.4R/errata.adoc:76
+msgid ""
+"See https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=246274[PR 246274] for "
+"additional details."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.4R/errata.adoc:77
+msgid ""
+"[2020-06-16] The FreeBSD 11.4 release notes erroneously state the KDE "
+"desktop environment has been updated to version 5.8.4.1.19.12.3. The correct "
+"version is 5.18.4.1.19.12.3."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/11.4R/errata.adoc:79
+#, no-wrap
+msgid "Late-Breaking News"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.4R/errata.adoc:81
+msgid "No late-breaking news."
+msgstr ""

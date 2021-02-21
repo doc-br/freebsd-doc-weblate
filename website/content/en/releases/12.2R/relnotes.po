@@ -1,0 +1,1061 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR The FreeBSD Project
+# This file is distributed under the same license as the FreeBSD Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FreeBSD Documentation VERSION\n"
+"POT-Creation-Date: 2021-02-21 18:56-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: YAML Front Matter: title
+#: website/content/en/releases/12.2R/relnotes.adoc:1
+#, no-wrap
+msgid "FreeBSD 12.2-RELEASE Release Notes"
+msgstr ""
+
+#. type: Title =
+#: website/content/en/releases/12.2R/relnotes.adoc:6
+#, no-wrap
+msgid "FreeBSD {releaseCurrent} Release Notes"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/12.2R/relnotes.adoc:19
+#, no-wrap
+msgid "Abstract"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:23
+msgid ""
+"The release notes for FreeBSD {releaseCurrent} contain a summary of the "
+"changes made to the FreeBSD base system on the {releaseBranch} development "
+"line. This document lists applicable security advisories that were issued "
+"since the last release, as well as significant changes to the FreeBSD kernel "
+"and userland. Some brief remarks on upgrading are also presented."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/12.2R/relnotes.adoc:25
+#, no-wrap
+msgid "Introduction"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:28
+msgid ""
+"This document contains the release notes for FreeBSD {releaseCurrent}. It "
+"describes recently added, changed, or deleted features of FreeBSD. It also "
+"provides some notes on upgrading from previous versions of FreeBSD."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:30
+msgid ""
+"The {releaseType} distribution to which these release notes apply represents "
+"the latest point along the {releaseBranch} development branch since "
+"{releaseBranch} was created. Information regarding pre-built, binary "
+"{releaseType} distributions along this branch can be found at "
+"https://www.FreeBSD.org/releases/[https://www.FreeBSD.org/releases/]."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:32
+msgid ""
+"The {releaseType} distribution to which these release notes apply represents "
+"a point along the {releaseBranch} development branch between {releasePrev} "
+"and the future {releaseNext}. Information regarding pre-built, binary "
+"{releaseType} distributions along this branch can be found at "
+"https://www.FreeBSD.org/releases/[https://www.FreeBSD.org/releases/]."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:34
+msgid ""
+"This distribution of FreeBSD {releaseCurrent} is a {releaseType} "
+"distribution. It can be found at "
+"https://www.FreeBSD.org/releases/[https://www.FreeBSD.org/releases/] or any "
+"of its mirrors. More information on obtaining this (or other) {releaseType} "
+"distributions of FreeBSD can be found in the "
+"link:{handbook}/mirrors[Obtaining FreeBSD appendix] to the "
+"link:{handbook}/[FreeBSD Handbook]."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:36
+msgid ""
+"All users are encouraged to consult the release errata before installing "
+"FreeBSD. The errata document is updated with \"late-breaking\" information "
+"discovered late in the release cycle or after the release. Typically, it "
+"contains information on known bugs, security advisories, and corrections to "
+"documentation. An up-to-date copy of the errata for FreeBSD {releaseCurrent} "
+"can be found on the FreeBSD Web site."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:38
+msgid ""
+"This document describes the most user-visible new or changed features in "
+"FreeBSD since {releasePrev}. In general, changes described here are unique "
+"to the {releaseBranch} branch unless specifically marked as MERGED features."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:40
+msgid ""
+"Typical release note items document recent security advisories issued after "
+"{releasePrev}, new drivers or hardware support, new commands or options, "
+"major bug fixes, or contributed software upgrades. They may also list "
+"changes to major ports/packages or release engineering practices. Clearly "
+"the release notes cannot list every single change made to FreeBSD between "
+"releases; this document focuses primarily on security advisories, "
+"user-visible changes, and major architectural improvements."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/12.2R/relnotes.adoc:42
+#, no-wrap
+msgid "Upgrading from Previous Releases of FreeBSD"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:45
+msgid ""
+"Binary upgrades between RELEASE versions (and snapshots of the various "
+"security branches) are supported using the man:freebsd-update[8] "
+"utility. The binary upgrade procedure will update unmodified userland "
+"utilities, as well as unmodified GENERIC kernels distributed as a part of an "
+"official FreeBSD release. The man:freebsd-update[8] utility requires that "
+"the host being upgraded have Internet connectivity."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:47
+msgid ""
+"Source-based upgrades (those based on recompiling the FreeBSD base system "
+"from source code) from previous versions are supported, according to the "
+"instructions in [.filename]#/usr/src/UPDATING#."
+msgstr ""
+
+#. type: delimited block = 4
+#: website/content/en/releases/12.2R/relnotes.adoc:51
+msgid ""
+"Upgrading FreeBSD should only be attempted after backing up _all_ data and "
+"configuration files."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/12.2R/relnotes.adoc:54
+#, no-wrap
+msgid "Security and Errata"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:57
+msgid ""
+"This section lists the various Security Advisories and Errata Notices since "
+"{releasePrev}."
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/12.2R/relnotes.adoc:59
+#, no-wrap
+msgid "Security Advisories"
+msgstr ""
+
+#. type: Table
+#: website/content/en/releases/12.2R/relnotes.adoc:180
+#, no-wrap
+msgid ""
+"| Advisory\n"
+"| Date\n"
+"| Topic\n"
+"\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-19:25.mcepsc.asc[FreeBSD-SA-19:25.mcepce]\n"
+"|12 November 2019\n"
+"|Machine Check Exception on Page Size Change\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-19:26.mcu.asc[FreeBSD-SA-19:26.mcu]\n"
+"|12 November 2019\n"
+"|Intel CPU Microcode Update\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:01.libfetch.asc[FreeBSD-SA-20:01.libfetch]\n"
+"|28 January 2020\n"
+"|man:fetch[3] buffer overflow\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:03.thrmisc.asc[FreeBSD-SA-20:03.thrmisc]\n"
+"|28 January 2020\n"
+"|Kernel stack data disclosure\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:04.tcp.asc[FreeBSD-SA-20:04.tcp]\n"
+"|18 March 2020\n"
+"|TCP IPv6 SYN cache kernel information disclosure\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:05.if_oce_ioctl.asc[FreeBSD-SA-20:05.if_oce_ioctl]\n"
+"|18 March 2020\n"
+"|Insufficient man:ioctl[2] privilege checking\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:06.if_ixl_ioctl.asc[FreeBSD-SA-20:06.if_ixl_ioctl]\n"
+"|18 March 2020\n"
+"|Insufficient man:ioctl[2] privilege checking\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:07.epair.asc[FreeBSD-SA-20:07.epair]\n"
+"|18 March 2020\n"
+"|Incorrect user-controlled pointer use\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:08.jail.asc[FreeBSD-SA-20:08.jail]\n"
+"|18 March 2020\n"
+"|Kernel memory disclosure with nested jails\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:09.ntp.asc[FreeBSD-SA-20:09.ntp]\n"
+"|18 March 2020\n"
+"|Multiple denial of service\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:10.ipfw.asc[FreeBSD-SA-20:10.ipfw]\n"
+"|21 April 2020\n"
+"|Invalid man:mbuf[9] handling\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:11.openssl.asc[FreeBSD-SA-20:11.openssl]\n"
+"|21 April 2020\n"
+"|Remote denial of service\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:12.libalias.asc[FreeBSD-SA-20:12.libalias]\n"
+"|12 May 2020\n"
+"|Insufficient packet length validation\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:13.libalias.asc[FreeBSD-SA-20:13.libalias]\n"
+"|12 May 2020\n"
+"|Memory disclosure vulnerability\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:15.cryptodev.asc[FreeBSD-SA-20:15.cryptodev]\n"
+"|12 May 2020\n"
+"|Use-after-free condition\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:16.cryptodev.asc[FreeBSD-SA-20:16.cryptodev]\n"
+"|12 May 2020\n"
+"|Insufficient MAC key length check\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:17.usb.asc[FreeBSD-SA-20:17.usb]\n"
+"|9 June 2020\n"
+"|HID descriptor parsing error\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:19.unbound.asc[FreeBSD-SA-20:19.unbound]\n"
+"|8 July 2020\n"
+"|Multiple vulnerabilities\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:20.ipv6.asc[FreeBSD-SA-20:20.ipv6]\n"
+"|8 July 2020\n"
+"|Race condition and use-after-free\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:21.usb_net.asc[FreeBSD-SA-20:21.usb_net]\n"
+"|5 August 2020\n"
+"|Memory corruption\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:22.sqlite.asc[FreeBSD-SA-20:22.sqlite]\n"
+"|5 August 2020\n"
+"|Multiple vulnerabilities\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:23.sendmsg.asc[FreeBSD-SA-20:23.sendmsg]\n"
+"|5 August 2020\n"
+"|Privilege escalation\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:25.sctp.asc[FreeBSD-SA-20:25.sctp]\n"
+"|2 September 2020\n"
+"|Use-after-free bug\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:26.dhclient.asc[FreeBSD-SA-20:26.dhclient]\n"
+"|2 September 2020\n"
+"|Heap overflow\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:27.ure.asc[FreeBSD-SA-20:27.ure]\n"
+"|15 September 2020\n"
+"|Packet-in-packet attack\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:28.bhyve_vmcs.asc[FreeBSD-SA-20:28.bhyve_vmcs]\n"
+"|15 September 2020\n"
+"|Privilege escalation via VMCS\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:29.bhyve_svm.asc[FreeBSD-SA-20:29.bhyve_svm]\n"
+"|15 September 2020\n"
+"|SVM guest escape\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-SA-20:30.ftpd.asc[FreeBSD-SA-20:30.ftpd]\n"
+"|15 September 2020\n"
+"|Privilege escalation\n"
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/12.2R/relnotes.adoc:183
+#, no-wrap
+msgid "Errata Notices"
+msgstr ""
+
+#. type: Table
+#: website/content/en/releases/12.2R/relnotes.adoc:257
+#, no-wrap
+msgid ""
+"| Errata\n"
+"| Date\n"
+"| Topic\n"
+"\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-EN-19:19.loader.asc[FreeBSD-EN-19:19.loader]\n"
+"|12 November 2019\n"
+"|UEFI Loader Memory Fragmentation\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-EN-20:01.ssp.asc[FreeBSD-EN-20:01.ssp]\n"
+"|28 January 2020\n"
+"|Imprecise orderring of canary initialization\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-EN-20:03.sshd.asc[FreeBSD-EN-20:03.sshd]\n"
+"|18 March 2020\n"
+"|Misleading log messages upon successful login\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-EN-20:05.mlx5en.asc[FreeBSD-EN-20:05.mlx5en]\n"
+"|18 March 2020\n"
+"|Fix packet forwarding performance\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-EN-20:06.ipv6.asc[FreeBSD-EN-20:06.ipv6]\n"
+"|18 March 2020\n"
+"|Incorrect checksum calculations\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-EN-20:07.quotad.asc[FreeBSD-EN-20:07.quotad]\n"
+"|21 April 2020\n"
+"|Regression with certain NFS servers\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-EN-20:08.tzdata.asc[FreeBSD-EN-20:08.tzdata]\n"
+"|12 May 2020\n"
+"|Timezone database update\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-EN-20:09.igb.asc[FreeBSD-EN-20:09.igb]\n"
+"|12 May 2020\n"
+"|Fix failure to switch to inactive state\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-EN-20:10.build.asc[FreeBSD-EN-20:10.build]\n"
+"|12 May 2020\n"
+"|Incorrect build host clang version detection\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-EN-20:11.ena.asc[FreeBSD-EN-20:11.ena]\n"
+"|9 June 2020\n"
+"|Stability issues in man:ena[4]\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-EN-20:12.iflib.asc[FreeBSD-EN-20:12.iflib]\n"
+"|9 June 2020\n"
+"|Watchdog timeout resetting idle queues\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-EN-20:13.bhyve.asc[FreeBSD-EN-20:13.bhyve]\n"
+"|8 July 2020\n"
+"|Crash with PCI device passthrough\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-EN-20:14.linuxkpi.asc[FreeBSD-EN-20:14.linuxkpi]\n"
+"|8 July 2020\n"
+"|Kernel panic\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-EN-20:15.mps.asc[FreeBSD-EN-20:15.mps]\n"
+"|8 July 2020\n"
+"|Kernel panic\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-EN-20:16.vmx.asc[FreeBSD-EN-20:16.vmx]\n"
+"|5 August 2020\n"
+"|Packet loss and degraded performance\n"
+"\n"
+"|https://www.freebsd.org/security/advisories/FreeBSD-EN-20:17.linuxthread.asc[FreeBSD-EN-20:17.linuxthread]\n"
+"|2 September 2020\n"
+"|Kernel panic\n"
+"\n"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/12.2R/relnotes.adoc:260
+#, no-wrap
+msgid "Userland"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:263
+msgid ""
+"This section covers changes and additions to userland applications, "
+"contributed software, and system utilities."
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/12.2R/relnotes.adoc:265
+#, no-wrap
+msgid "Userland Configuration Changes"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:268
+msgid ""
+"A new man:rc.conf[5] variable has been added, `linux_mounts_enable`, which "
+"controls if Linux(R)-specific filesystems are mounted in "
+"[.filename]#/compat/linux# if `linux_enable` is set to `YES`. {{< revision "
+"\"364883\" >}} (Sponsored by The FreeBSD Foundation)"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:270
+msgid ""
+"The man:devd[8] utility has been updated to change the default "
+"man:syslogd[8] notification for resume from `kern` to `kernel`. {{< revision "
+"\"365540\" >}}"
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/12.2R/relnotes.adoc:272
+#, no-wrap
+msgid "Userland Application Changes"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:275
+msgid ""
+"The man:cron[8] utility has been updated to support two new flags in "
+"man:crontab[5], `-n` and `-q`, which suppress mail on successful runs and "
+"suppress logging of command execution, respectively. {{< revision \"353134\" "
+">}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:277
+msgid ""
+"The man:dd[1] utility has been updated to include new operands: {{< revision "
+"\"355520\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:279
+msgid "`conv=fsync`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:280
+msgid "`conf=fdatasync`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:281
+msgid "`oflag=fsync`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:282
+msgid "`oflag=sync`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:283
+msgid "`iflag=fullblock`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:285
+msgid "See man:dd[1] for usage details."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:287
+msgid ""
+"The man:fsck_msdosfs[8] utility has been updated to include a variety of "
+"enhancements, including reducing the memory footprint, a new flag, `-M`, "
+"which disables the use of man:mmap[2], and others. {{< revision \"357568\" "
+">}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:289
+msgid ""
+"The man:showmount[8] utility has been updated to implement support for long "
+"options. {{< revision \"357078\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:291
+msgid "The man:certctl.8; utility has been added. {{< revision \"357082\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:293
+msgid ""
+"The man:syslogd[8] utility has been updated to add property-based "
+"filters. {{< revision \"359739\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:295
+msgid ""
+"The man:mountd[8] utility has been updated to fix incorrect group listing "
+"under certain conditions when `-maproot` or `-mapall` is used for "
+"exports. {{< revision \"362602\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:297
+msgid ""
+"The man:sed[1] utility has been updated to read commands from man:stdin[4] "
+"when \"`-f -`\" is specified. {{< revision \"362687\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:299
+msgid ""
+"The man:hostapd[8] and man:wpa_supplicant[8] utilities have been updated to "
+"support 802.11n, 802.11w, 802.11ac, and 802.11ax. {{< revision \"363441\" "
+">}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:301
+msgid ""
+"The man:sesutil[8] utility has been updated to include a `show` subcommand "
+"to print output in a user-friendly way. {{< revision \"364115\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:303
+msgid ""
+"The man:bhyve[8] utility has been updated to support setting additional AHCI "
+"controller parameters. {{< revision \"364334\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:305
+msgid ""
+"The man:jail[8] utility has been updated to allow running Linux(R) in a "
+"jailed environment."
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/12.2R/relnotes.adoc:307
+#, no-wrap
+msgid "Contributed Software"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:310
+msgid ""
+"The man:tcsh[1] utility has been updated to version 6.21.00. {{< revision "
+"\"354191\" >}} (Sponsored by DARPA, AFRL)"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:312
+msgid ""
+"The man:less[1] utility has been updated to version v551. {{< revision "
+"\"355503\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:314
+msgid ""
+"The man:libbsdxml[3] library has been updated to version 2.2.9. {{< revision "
+"\"355603\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:316
+msgid ""
+"The man:resolvconf[8] utility has been updated to version 3.9.2. {{< "
+"revision \"355745\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:318
+msgid ""
+"The man:pcap[3] library has been updated to version 1.9.1. {{< revision "
+"\"356340\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:320
+msgid ""
+"The man:tcpdump[1] utility has been updated to version 4.9.3. {{< revision "
+"\"356340\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:322
+msgid ""
+"The man:mtree[8] utility has been updated to address an issue with `-f` not "
+"considering type changes, fix username logic with `-c` when man:getlogin[2] "
+"fails, and to fix `-O` not descending when a hash collision occurs. {{< "
+"revision \"356532\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:324
+msgid ""
+"The Elf Tool Chain has been updated to upstream revision r3769. {{< revision "
+"\"358779\" >}} (Sponsored by The FreeBSD Foundation)"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:326
+msgid ""
+"The man:xz[1] utility has been updated to version 5.2.5. {{< revision "
+"\"359635\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:328
+msgid ""
+"OpenSSH has been updated to version 7.9p1. {{< revision \"360313\" >}} "
+"(Sponsored by The FreeBSD Foundation)"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:330
+msgid ""
+"The timezone database files have been updated to version 2020a. {{< revision "
+"\"360361\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:332
+msgid ""
+"The man:unbound[8] utility has been updated to version 1.10.1. {{< revision "
+"\"361435\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:334
+msgid ""
+"The man:libarchive[3] library has been updated to version 3.4.3. {{< "
+"revision \"362132\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:336
+msgid ""
+"The private apr library has been updated to version 1.7.0. {{< revision "
+"\"362180\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:338
+msgid ""
+"The svn{,lite} utility has been updated to version 1.14.0 LTS. {{< revision "
+"\"362180\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:340
+msgid ""
+"The man:ntpd[8] suite of utilities have been updated to version "
+"4.2.8p15. {{< revision \"362716\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:342
+msgid ""
+"The man:file[1] utility has been updated to version 5.39. {{< revision "
+"\"362842\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:344
+msgid ""
+"The man:bc[1] utility has been updated to version 3.1.1. {{< revision "
+"\"362987\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:346
+msgid ""
+"The private sqlite3 utility has been updated to version 3.32.3. {{< revision "
+"\"363179\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:348
+msgid ""
+"The BSD man:make[1] utility has been updated to version 20200719. {{< "
+"revision \"363352\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:350
+msgid ""
+"The Sendmail utility has been updated to version 8.16.1. {{< revision "
+"\"363465\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:352
+msgid ""
+"The man:nc[1] utility has been updated to include a new `--sctp` flag. {{< "
+"revision \"363474\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:354
+msgid ""
+"The clang, llvm, lld, lldb, compiler-rt utilities and libc++ have been "
+"updated to version 10.0.1. {{< revision \"363494\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:356
+msgid "OpenSSL has been updated to version 1.1.1h. {{< revision \"366177\" >}}"
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/12.2R/relnotes.adoc:358
+#, no-wrap
+msgid "Deprecated Applications"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:361
+msgid ""
+"The man:amd[8] utility has been marked as deprecated, and targeted for "
+"removal in FreeBSD 13.0. {{< revision \"355075\" >}}"
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/12.2R/relnotes.adoc:363
+#, no-wrap
+msgid "Runtime Libraries and API"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:366
+msgid ""
+"The `ifconfig` library has been updated to report the status of a "
+"man:bridge[4] interface, similarly to man:lagg[4]. {{< revision \"363037\" "
+">}}"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/12.2R/relnotes.adoc:368
+#, no-wrap
+msgid "Kernel"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:371
+msgid ""
+"This section covers changes to kernel configurations, system tuning, and "
+"system control parameters that are not otherwise categorized."
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/12.2R/relnotes.adoc:373
+#, no-wrap
+msgid "General Kernel Changes"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:376
+msgid ""
+"The man:read[2] system call has been changed to disable `read()` calls on "
+"directories by default. A new man:sysctl[8] has been added, "
+"`security.bsd.allow_read_dir`, which when set to `1` will restore the "
+"previous behavior. {{< revision \"363017\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:378
+msgid ""
+"The man:ixl[4] driver has now been enabled by default for "
+"FreeBSD/powerpc64. {{< revision \"363712\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:380
+msgid ""
+"The `machdep.kdb_on_nmi` man:sysctl[8] has been removed. The "
+"`machdep.panic_on_nmi` man:sysctl[8] tunable has changed to directly enter "
+"the debugger. {{< revision \"364002\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:382
+msgid ""
+"Support for APEI (ACPI Platform Error Interfaces) has been added. {{< "
+"revision \"364003\" >}} (Sponsored by iXsystems)"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/12.2R/relnotes.adoc:384
+#, no-wrap
+msgid "Devices and Drivers"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:387
+msgid ""
+"This section covers changes and additions to devices and device drivers "
+"since {releasePrev}."
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/12.2R/relnotes.adoc:389
+#, no-wrap
+msgid "Device Drivers"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:392
+msgid ""
+"The man:ubsec[4] driver has been marked as deprecated, and will be removed "
+"in FreeBSD 13.0. {{< revision \"361044\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:394
+msgid ""
+"The man:ufm[4] driver has been marked as deprecated, and will be removed in "
+"FreeBSD 13.0. {{< revision \"364431\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:396
+msgid ""
+"The man:apm[4] driver has been marked as deprecated, and will be removed in "
+"FreeBSD 13.0. {{< revision \"365542\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:398
+msgid ""
+"The man:ctau[4] and man:cx[4] drivers have been marked as deprecated, and "
+"will be removed in FreeBSD 13.0. {{< revision \"365542\" >}} (Sponsored by "
+"The FreeBSD Foundation)"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/12.2R/relnotes.adoc:400
+#, no-wrap
+msgid "Storage"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:403
+msgid ""
+"This section covers changes and additions to file systems and other storage "
+"subsystems, both local and networked."
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/12.2R/relnotes.adoc:405
+#, no-wrap
+msgid "General Storage"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:408
+msgid ""
+"The man:mps[4] driver has been removed from the 32-bit [.filename]#GENERIC# "
+"kernel configuration. {{< revision \"352741\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:410
+msgid ""
+"The man:virtio_blk[4] driver has been updated to support TRIM. {{< revision "
+"\"365702\" >}} (Sponsored by Klara Systems)"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:412
+msgid ""
+"The ZFS file system has been updated to include read/write `kstat` output "
+"per dataset. {{< revision \"365917\" >}} (Sponsored by Klara Systems)"
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/12.2R/relnotes.adoc:414
+#: website/content/en/releases/12.2R/relnotes.adoc:419
+#, no-wrap
+msgid "Boot Loader Changes"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:417
+msgid ""
+"This section covers the boot loader, boot menu, and other boot-related "
+"changes."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:422
+msgid ""
+"The console is now displayed within the boot loader, allowing to toggle "
+"between available console devices. {{< revision \"366691\" >}}"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/12.2R/relnotes.adoc:424
+#, no-wrap
+msgid "Networking"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:427
+msgid "This section describes changes that affect networking in FreeBSD."
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/12.2R/relnotes.adoc:429
+#, no-wrap
+msgid "General Network"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:432
+msgid ""
+"The man:tap[4] and man:tun[4] devices have been updated to create "
+"[.filename]#/dev# aliases when they are renamed. {{< revision \"354060\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:434
+msgid ""
+"The man:ipfw[4] driver has been updated to support RFC6598/Carrier Grade NAT "
+"subnets. {{< revision \"359694\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:436
+msgid ""
+"The man:ng_nat[4] driver has been updated to allow attaching to an ethernet "
+"interface. {{< revision \"359697\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:438
+msgid ""
+"The man:ixl[4] driver has been updated to version 1.11.29. {{< revision "
+"\"363876\" >}} (Sponsored by Intel Corporation)"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:440
+msgid ""
+"The man:ena[4] driver has been updated to version 2.2.0. {{< revision "
+"\"365381\" >}} (Sponsored by Amazon, Inc.)"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:442
+msgid ""
+"Updates to the wireless networking stack and various drivers have been "
+"introduced to provide better 802.11n and 802.11ac support. {{< revision "
+"\"365670\" >}} (Sponsored by Rubicon Communications, LLC (Netgate))"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:444
+msgid ""
+"The `ice(4)` driver has been added, supporting Intel(R) 100Gb ethernet "
+"cards. {{< revision \"365733\" >}} (Sponsored by Intel Corporation)"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:446
+msgid ""
+"The man:cxgbe[4] driver has been updated to version 1.25.0.0. {{< revision "
+"\"365961\" >}} (Sponsored by Chelsio Communications)"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/12.2R/relnotes.adoc:448
+#, no-wrap
+msgid "Ports Collection and Package Infrastructure"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:451
+msgid ""
+"This section covers changes to the FreeBSD Ports Collection, package "
+"infrastructure, and package maintenance and installation tools."
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/12.2R/relnotes.adoc:453
+#, no-wrap
+msgid "Packaging Changes"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:456
+msgid "The man:pkg[8] utility has been updated to version 1.15.10."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/12.2R/relnotes.adoc:458
+#, no-wrap
+msgid "General Notes Regarding Future FreeBSD Releases"
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/12.2R/relnotes.adoc:461
+#, no-wrap
+msgid "Default `CPUTYPE` Change"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:464
+msgid ""
+"Starting with FreeBSD-13.0, the default `CPUTYPE` for the i386 architecture "
+"will change from `486` to `686`."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:466
+msgid ""
+"This means that, by default, binaries produced will require a 686-class CPU, "
+"including but not limited to binaries provided by the FreeBSD Release "
+"Engineering team. FreeBSD 13.0 will continue to support older CPUs, however "
+"users needing this functionality will need to build their own releases for "
+"official support."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:468
+msgid ""
+"As the primary use for i486 and i586 CPUs is generally in the embedded "
+"market, the general end-user impact is expected to be minimal, as new "
+"hardware with these CPU types has long faded, and much of the deployed base "
+"of such systems is nearing retirement age, statistically."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:470
+msgid ""
+"There were several factors taken into account for this change. For example, "
+"i486 does not have 64-bit atomics, and while they can be emulated in the "
+"kernel, they cannot be emulated in the userland. Additionally, the 32-bit "
+"amd64 libraries have been i686 since their inception."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:472
+msgid ""
+"As the majority of 32-bit testing is done by developers using the lib32 "
+"libraries on 64-bit hardware with the `COMPAT_FREEBSD32` option in the "
+"kernel, this change ensures better coverage and user experience. This also "
+"aligns with what the majority of Linux(R) distributions have been doing for "
+"quite some time."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/12.2R/relnotes.adoc:474
+msgid "This is expected to be the final bump of the default `CPUTYPE` in i386."
+msgstr ""
+
+#. type: delimited block = 4
+#: website/content/en/releases/12.2R/relnotes.adoc:478
+msgid "This change does not affect the FreeBSD 12.x or 11.x series of releases."
+msgstr ""

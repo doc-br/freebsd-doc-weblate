@@ -1,0 +1,411 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR The FreeBSD Project
+# This file is distributed under the same license as the FreeBSD Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FreeBSD Documentation VERSION\n"
+"POT-Creation-Date: 2021-02-21 18:57-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Title =
+#: website/content/en/releases/11.1R/errata.adoc:1
+#: website/content/en/releases/11.1R/errata.adoc:6
+#, no-wrap
+msgid "FreeBSD 11.1-RELEASE Errata"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/11.1R/errata.adoc:8
+#, no-wrap
+msgid "Abstract"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:11
+msgid ""
+"This document lists errata items for FreeBSD 11.1-RELEASE, containing "
+"significant information discovered after the release or too late in the "
+"release cycle to be otherwise included in the release documentation. This "
+"information includes security advisories, as well as news relating to the "
+"software or documentation that could affect its operation or usability. An "
+"up-to-date version of this document should always be consulted before "
+"installing this version of FreeBSD."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:13
+msgid ""
+"This errata document for FreeBSD 11.1-RELEASE will be maintained until the "
+"release of FreeBSD 11.1-RELEASE."
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/11.1R/errata.adoc:14
+#, no-wrap
+msgid "Table of Contents"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:17
+msgid "<<intro,Introduction>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:18
+msgid "<<security,Security Advisories>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:19
+msgid "<<errata,Errata Notices>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:20
+msgid "<<open-issues,Open Issues>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:21
+msgid "<<late-news,Late-Breaking News>>"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/11.1R/errata.adoc:23
+#, no-wrap
+msgid "Introduction"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:26
+msgid ""
+"This errata document contains \"late-breaking news\" about FreeBSD "
+"11.1-RELEASE Before installing this version, it is important to consult this "
+"document to learn about any post-release discoveries or problems that may "
+"already have been found and fixed."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:28
+msgid ""
+"Any version of this errata document actually distributed with the release "
+"(for example, on a CDROM distribution) will be out of date by definition, "
+"but other copies are kept updated on the Internet and should be consulted as "
+"the \"current errata\" for this release. These other copies of the errata "
+"are located at https://www.FreeBSD.org/releases/, plus any sites which keep "
+"up-to-date mirrors of this location."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:30
+msgid ""
+"Source and binary snapshots of FreeBSD 11.1-STABLE also contain up-to-date "
+"copies of this document (as of the time of the snapshot)."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:32
+msgid ""
+"For a list of all FreeBSD CERT security advisories, see "
+"https://www.FreeBSD.org/security/."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/11.1R/errata.adoc:34
+#, no-wrap
+msgid "Security Advisories"
+msgstr ""
+
+#. type: Table
+#: website/content/en/releases/11.1R/errata.adoc:53
+#, no-wrap
+msgid ""
+"|Advisory |Date |Topic\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-17:06.openssh.asc[FreeBSD-SA-17:06.openssh] "
+"|10 August 2017 |Denial of Service vulnerability\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-17:07.wpa.asc[FreeBSD-SA-17:07.wpa] "
+"|16 October 2017 |WPA2 protocol vulnerability\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-17:08.ptrace.asc[FreeBSD-SA-17:08.ptrace] "
+"|15 November 2017 |Kernel data leak via `ptrace(PT_LWPINFO)`\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-17:10.kldstat.asc[FreeBSD-SA-17:10.kldstat] "
+"|15 November 2017 |Information leak\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-17:11.openssl.asc[FreeBSD-SA-17:11.openssl] "
+"|29 November 2017 |Multiple vulnerabilities\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-17:12.openssl.asc[FreeBSD-SA-17:12.openssl] "
+"|09 December 2017 |Multiple vulnerabilities\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-18:01.ipsec.asc[FreeBSD-SA-18:01.ipsec] "
+"|07 March 2018 |Fix IPSEC validation and use-after-free\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-18:02.ntp.asc[FreeBSD-SA-18:02.ntp] "
+"|07 March 2018 |Multiple vulnerabilities\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-18:03.speculative_execution.asc[FreeBSD-SA-18:03.speculative_execution] "
+"|14 March 2018 a|\n"
+"Speculative Execution Vulnerabilities\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-18:04.vt.asc[FreeBSD-SA-18:04.vt] "
+"|04 April 2018 |Fix "
+"https://www.FreeBSD.org/cgi/man.cgi?query=vt&sektion=4&manpath=freebsd-release-ports[vt(4)] "
+"console memory disclosure\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-18:05.ipsec.asc[FreeBSD-SA-18:05.ipsec] "
+"|04 April 2018 |Fix denial of service\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-18:06.debugreg.asc[FreeBSD-SA-18:06.debugreg] "
+"|08 May 2018 |Mishandling of x86 debug exceptions\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-18:07.lazyfpu.asc[FreeBSD-SA-18:07.lazyfpu] "
+"|21 June 2018 |Fix Lazy FPU information disclosure\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:59
+#, no-wrap
+msgid ""
+"*Note*: +\n"
+"This advisory addresses the most significant issues for FreeBSD 11.1 on "
+"amd64 CPUs. We expect to update this advisory to include 10.x for amd64 "
+"CPUs. Future FreeBSD releases will address this issue on i386 and other "
+"CPUs.\n"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/11.1R/errata.adoc:61
+#, no-wrap
+msgid "Errata Notices"
+msgstr ""
+
+#. type: Table
+#: website/content/en/releases/11.1R/errata.adoc:76
+#, no-wrap
+msgid ""
+"|Errata |Date |Topic\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-17:07.vnet.asc[FreeBSD-EN-17:07.vnet] "
+"|10 August 2017 |VNET kernel panic with asynchronous I/O\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-17:08.pf.asc[FreeBSD-EN-17:08.pf] "
+"|10 August 2017 "
+"|https://www.FreeBSD.org/cgi/man.cgi?query=pf&sektion=4&manpath=freebsd-release-ports[pf(4)] "
+"housekeeping thread causes kernel panic\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-17:09.tzdata.asc[FreeBSD-EN-17:09.tzdata] "
+"|2 November 2017 |Timezone database information update\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-18:01.tzdata.asc[FreeBSD-EN-18:01.tzdata] "
+"|07 March 2018 |Timezone database information update\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-18:02.file.asc[FreeBSD-EN-18:02.file] "
+"|07 March 2018 |Stack-based buffer overflow\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-18:03.tzdata.asc[FreeBSD-EN-18:03.tzdata] "
+"|04 April 2018 |Update timezone database information\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-18:04.mem.asc[FreeBSD-EN-18:04.mem] "
+"|04 April 2018 |Multiple small kernel memory disclosures\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-18:05.mem.asc[FreeBSD-EN-18:05.mem] "
+"|08 May 2018 |Multiple small kernel memory disclosures\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-18:06.tzdata.asc[FreeBSD-EN-18:06.tzdata] "
+"|08 May 2018 |Update timezone database information\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-18:07.pmap.asc[FreeBSD-EN-18:07.pmap] "
+"|21 June 2018 |Fix TLB for Xen guests\n"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/11.1R/errata.adoc:79
+#, no-wrap
+msgid "Open Issues"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:82
+msgid ""
+"FreeBSD/i386 installed on ZFS may crash during boot when the ZFS pool mount "
+"is attempted while booting an unmodified `GENERIC` kernel."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:84
+msgid ""
+"A system tunable has been added as of revision `r286584` to make the "
+"`kern.kstack_pages` tunable configurable without recompiling the kernel."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:86
+msgid ""
+"To mitigate system crashes with such configurations, choose `Escape to "
+"loader prompt` in the boot menu and enter the following lines from "
+"https://www.FreeBSD.org/cgi/man.cgi?query=loader&sektion=8&manpath=freebsd-release-ports[loader(8)] "
+"prompt, after an `OK`:"
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/11.1R/errata.adoc:91
+#, no-wrap
+msgid ""
+"set kern.kstack_pages=4\n"
+"boot\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:94
+msgid ""
+"Add this line to `/boot/loader.conf` for the change to persist across "
+"reboots:"
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/11.1R/errata.adoc:98
+#, no-wrap
+msgid "kern.kstack_pages=4\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:100
+msgid ""
+"[2017-07-21] Due to a bug in earlier versions of "
+"https://www.FreeBSD.org/cgi/man.cgi?query=clang&sektion=1&manpath=freebsd-release-ports[clang(1)] "
+"that is difficult to work around in the upgrade process, to upgrade the "
+"system from sources via buildworld to -CURRENT or 11.1-RELEASE, it is "
+"necessary to upgrade machines running 9.x to at least revision r286035, or "
+"machines running 10.x to revision r286033. Source-based upgrades from "
+"10.3-RELEASE are not affected. This differs from the historical situation "
+"where one could generally upgrade from anywhere on earlier stable branches, "
+"so caution should be exercised."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:101
+msgid ""
+"[2017-07-25] FreeBSD/arm64 currently lacks EFI real-time clock (RTC) "
+"support, which may cause the system to boot with the wrong time set."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:103
+msgid ""
+"As a workaround, either enable "
+"https://www.FreeBSD.org/cgi/man.cgi?query=ntpdate&sektion=8&manpath=freebsd-release-ports[ntpdate(8)] "
+"or include `ntpd_sync_on_start=\"YES\"` in "
+"https://www.FreeBSD.org/cgi/man.cgi?query=rc.conf&sektion=5&manpath=freebsd-release-ports[rc.conf(5)]."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:104
+msgid ""
+"[2017-07-25] A late issue was discovered with FreeBSD/arm64 and \"root on "
+"ZFS\" installations where the root ZFS pool would fail to be located."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:106
+msgid "There currently is no workaround."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:107
+msgid "[2017-07-26] Note for those upgrading from 11.1-RC2 in VirtualBox:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:109
+msgid ""
+"If system panics were experienced when upgrading from 11.1-RC1 to 11.1-RC2, "
+"and the `emulators/virtualbox-ose-additions{,-nox11}` port was built locally "
+"as a resolution, the port will either need to be rebuilt when upgrading from "
+"11.1-RC2 to 11.1-RELEASE, or reinstall the package from the pkg(8) mirrors "
+"using either:"
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/11.1R/errata.adoc:113
+#, no-wrap
+msgid " # pkg install -f virtualbox-ose-additions\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:116
+msgid "or"
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/11.1R/errata.adoc:120
+#, no-wrap
+msgid " # pkg install -f virtualbox-ose-additions-nox11\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:123
+msgid ""
+"To ensure the system does not panic after rebooting into the updated kernel, "
+"it is recommended to disable the `vboxguest` service in "
+"https://www.FreeBSD.org/cgi/man.cgi?query=rc.conf&sektion=5&manpath=freebsd-release-ports[rc.conf(5)] "
+"prior to rebooting the system if possible, or use "
+"https://www.FreeBSD.org/cgi/man.cgi?query=pkg&sektion=8&manpath=freebsd-release-ports[pkg(8)] "
+"to forcefully reinstall the package."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:125
+msgid ""
+"Systems being upgraded from 11.1-RC1 and earlier and 11.1-RC3 to "
+"11.1-RELEASE should be unaffected."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:126
+msgid ""
+"[2017-07-27] The release notes erroneously state revision `r315330` was "
+"sponsored by Rubicon Communications, LLC (Netgate), when in fact this work "
+"was done by Hiroki Mori independently."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:127
+msgid ""
+"[2017-08-09] The release notes stated the "
+"https://www.FreeBSD.org/cgi/man.cgi?query=ruptime&sektion=1&manpath=freebsd-release-ports[ruptime(1)], "
+"https://www.FreeBSD.org/cgi/man.cgi?query=rwho&sektion=1&manpath=freebsd-release-ports[rwho(1)], "
+"and "
+"https://www.FreeBSD.org/cgi/man.cgi?query=rwhod&sektion=8&manpath=freebsd-release-ports[rwhod(8)] "
+"utilities have been marked \"deprecated\", however this change was reversed "
+"in 12.0-CURRENT."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:129
+msgid ""
+"The other utilities mentioned in the entry in the release notes, however, "
+"are unchanged."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:130
+msgid ""
+"[2017-11-06] An issue with FreeBSD virtual machines with vagrant was "
+"discovered that affects the VirtualBox where the virtual machine will not "
+"start on the initial boot invoked with `vagrant up`."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:132
+msgid ""
+"The issue is due to the virtual machine MAC being unset, as FreeBSD does not "
+"provide a default `Vagrantfile`."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:134
+msgid ""
+"It has been observed, however, that a subsequent invocation of `vagrant up` "
+"will allow the virtual machine to successfully boot, allowing access via "
+"`vagrant ssh`."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/11.1R/errata.adoc:136
+#, no-wrap
+msgid "Late-Breaking News"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/11.1R/errata.adoc:138
+msgid "No news."
+msgstr ""

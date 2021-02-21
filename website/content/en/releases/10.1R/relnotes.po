@@ -1,0 +1,2743 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR The FreeBSD Project
+# This file is distributed under the same license as the FreeBSD Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FreeBSD Documentation VERSION\n"
+"POT-Creation-Date: 2021-02-21 18:57-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Title =
+#: website/content/en/releases/10.1R/relnotes.adoc:1
+#: website/content/en/releases/10.1R/relnotes.adoc:8
+#, no-wrap
+msgid "FreeBSD 10.1-RELEASE Release Notes"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.1R/relnotes.adoc:10
+#, no-wrap
+msgid "Abstract"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:13
+msgid ""
+"The release notes for FreeBSD 10.1-RELEASE contain a summary of the changes "
+"made to the FreeBSD base system on the 10.1-STABLE development line. This "
+"document lists applicable security advisories that were issued since the "
+"last release, as well as significant changes to the FreeBSD kernel and "
+"userland. Some brief remarks on upgrading are also presented."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.1R/relnotes.adoc:14
+#, no-wrap
+msgid "Table of Contents"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:17
+msgid "<<intro,Introduction>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:18
+msgid "<<new,What's New>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:19
+msgid "<<upgrade,Upgrading from previous releases of FreeBSD>>"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.1R/relnotes.adoc:21
+#, no-wrap
+msgid "Introduction"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:24
+msgid ""
+"This document contains the release notes for FreeBSD 10.1-RELEASE. It "
+"describes recently added, changed, or deleted features of FreeBSD. It also "
+"provides some notes on upgrading from previous versions of FreeBSD."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:26
+msgid ""
+"This distribution of FreeBSD 10.1-RELEASE is a release distribution. It can "
+"be found at `http://www.FreeBSD.org/releases/` or any of its mirrors. More "
+"information on obtaining this (or other) release distributions of FreeBSD "
+"can be found in the link:{handbook}#mirrors[Obtaining FreeBSD' appendix] to "
+"the link:{handbook}[FreeBSD Handbook]."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:28
+msgid ""
+"All users are encouraged to consult the release errata before installing "
+"FreeBSD. The errata document is updated with \"late-breaking\" information "
+"discovered late in the release cycle or after the release. Typically, it "
+"contains information on known bugs, security advisories, and corrections to "
+"documentation. An up-to-date copy of the errata for FreeBSD 10.1-RELEASE can "
+"be found on the FreeBSD Web site."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.1R/relnotes.adoc:30
+#, no-wrap
+msgid "What's New"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:33
+msgid ""
+"This section describes the most user-visible new or changed features in "
+"FreeBSD since 10.0-RELEASE."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:35
+msgid ""
+"Typical release note items document recent security advisories issued after "
+"10.0-RELEASE, new drivers or hardware support, new commands or options, "
+"major bug fixes, or contributed software upgrades. They may also list "
+"changes to major ports/packages or release engineering practices. Clearly "
+"the release notes cannot list every single change made to FreeBSD between "
+"releases; this document focuses primarily on security advisories, "
+"user-visible changes, and major architectural improvements."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.1R/relnotes.adoc:37
+#, no-wrap
+msgid "Security Advisories"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:40
+msgid ""
+"The following security advisories have been issued since FreeBSD "
+"10.0-RELEASE:"
+msgstr ""
+
+#. type: Table
+#: website/content/en/releases/10.1R/relnotes.adoc:69
+#, no-wrap
+msgid ""
+"|Advisory |Date |Topic\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-13:14.openssh.asc[SA-13:14.openssh] "
+"|19 November 2013 |OpenSSH AES-GCM memory corruption vulnerability\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-14:01.bsnmpd.asc[SA-14:01.bsnmpd] "
+"|14 January 2014 |bsnmpd remote denial of service vulnerability\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-14:02.ntpd.asc[SA-14:02.ntpd] "
+"|14 January 2014 |ntpd distributed reflection Denial of Service "
+"vulnerability\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-14:03.openssl.asc[SA-14:03.openssl] "
+"|14 January 2014 |OpenSSL multiple vulnerabilities\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-14:04.bind.asc[SA-14:04.bind] "
+"|14 January 2014 |BIND remote denial of service vulnerability\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-14:05.nfsserver.asc[SA-14:05.nfsserver] "
+"|8 April 2014 |Deadlock in the NFS server\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-14:06.openssl.asc[SA-14:06.openssl] "
+"|8 April 2014 |OpenSSL multiple vulnerabilities\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-14:07.devfs.asc[SA-14:07.devfs] "
+"|30 April 2014 |Fix devfs rules not applied by default for jails\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-14:08.tcp.asc[SA-14:08.tcp] "
+"|30 April 2014 |Fix TCP reassembly vulnerability\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-14:09.openssl.asc[SA-14:09.openssl] "
+"|30 April 2014 |Fix OpenSSL use-after-free vulnerability\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-14:10.openssl.asc[SA-14:10.openssl] "
+"|15 May 2014 |Fix OpenSSL NULL pointer deference vulnerability\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-14:11.sendmail.asc[SA-14:11.sendmail] "
+"|3 June 2014 |Fix sendmail improper close-on-exec flag handling\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-14:13.pam.asc[SA-14:13.pam] "
+"|3 June 2014 |Fix incorrect error handling in PAM policy parser\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-14:14.openssl.asc[SA-14:14.openssl] "
+"|5 June 2014 |Multiple vulnerabilities\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-14:15.iconv.asc[SA-14:15.iconv] "
+"|24 June 2014 |NULL pointer dereference and out-of-bounds array access\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-14:16.file.asc[SA-14:16.file] "
+"|24 June 2014 |Multiple vulnerabilities\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-14:17.kmem.asc[SA-14:17.kmem] "
+"|8 July 2014 |Kernel memory disclosure in control messages and SCTP "
+"notifications\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-14:18.openssl.asc[SA-14:18.openssl] "
+"|9 September 2014 |Multiple vulnerabilities\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-14:19.tcp.asc[SA-14:19.tcp] "
+"|16 September 2014 |Denial of Service in TCP packet processing.\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-14:20.rtsold.asc[SA-14:20.rtsold] "
+"|21 October 2014 |Remote buffer overflow vulnerability.\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-14:21.routed.asc[SA-14:21.routed] "
+"|21 October 2014 |Remote denial of service vulnerability.\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-14:22.namei.asc[SA-14:22.namei] "
+"|21 October 2014 |Memory leak in sandboxed namei lookup.\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-14:23.openssl.asc[SA-14:23.openssl] "
+"|21 October 2014 |Multiple vulerabilities.\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-14:25.setlogin.asc[SA-14:25.setlogin] "
+"|04 November 2014 |Kernel stack disclosure.\n"
+"|http://www.freebsd.org/security/advisories/FreeBSD-SA-14:26.ftp.asc[SA-14:26.ftp] "
+"|04 November 2014 |Remote code execution.\n"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.1R/relnotes.adoc:72
+#, no-wrap
+msgid "Kernel Changes"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:75
+msgid ""
+"A new http://www.FreeBSD.org/cgi/man.cgi?query=sysctl&sektion=8[sysctl(8)], "
+"`kern.panic_reboot_wait_time`, has been added, which allows controlling how "
+"long the system will wait after "
+"http://www.FreeBSD.org/cgi/man.cgi?query=panic&sektion=9[panic(9)] before "
+"rebooting. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=260431[(r260431)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:77
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=vt&sektion=4[vt(4)] driver has "
+"been merged from FreeBSD-CURRENT. To enable "
+"http://www.FreeBSD.org/cgi/man.cgi?query=vt&sektion=4[vt(4)], enter `set "
+"kern.vty=vt` at the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=loader&sektion=8[loader(8)] prompt "
+"during boot, or add `kern.vty=vt` to "
+"http://www.FreeBSD.org/cgi/man.cgi?query=loader.conf&sektion=5[loader.conf(5)] "
+"and reboot the "
+"system. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=262861[(r262861)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:79
+msgid ""
+"Support for "
+"http://www.FreeBSD.org/cgi/man.cgi?query=hwpmc&sektion=4[hwpmc(4)] has been "
+"added for PowerPC(R) 970 class "
+"processors. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=263122[(r263122)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:81
+msgid ""
+"Support for ADT7460 and ADT7467 fan controllers found in newer PowerBooks™ "
+"and iBooks™ has been added to the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=iicbus&sektion=4[iicbus(4)] "
+"driver. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=263197[(r263197)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:83
+msgid ""
+"A panic triggered by removing a "
+"http://www.FreeBSD.org/cgi/man.cgi?query=urtwn&sektion=4[urtwn(4)] device "
+"has been "
+"fixed. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=263256[(r263256)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:85
+msgid ""
+"A potential deadlock in the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=usb&sektion=4[usb(4)] stack "
+"triggered by detaching USB devices that create character devices has been "
+"fixed. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=263799[(r263799)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:87
+msgid ""
+"Support for AMD(R) Family 16h sensor devices has been added to "
+"http://www.FreeBSD.org/cgi/man.cgi?query=amdtemp&sektion=4[amdtemp(4)]. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=263869[(r263869)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:89
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=uslcom&sektion=4[uslcom(4)] "
+"driver has been updated to support 26 new "
+"devices. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=265610[(r265610)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:91
+msgid ""
+"A kernel bug that inhibited proper functionality of the `dev.cpu.0.freq` "
+"http://www.FreeBSD.org/cgi/man.cgi?query=sysctl&sektion=8[sysctl(8)] on "
+"Intel(R) processors with Turbo Boost™ enabled has been "
+"fixed. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266165[(r266165)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:93
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=uart&sektion=4[uart(4)] driver "
+"has been updated to include support for the Intel(R) Lynx Point KT AMT "
+"serial "
+"port. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266436[(r266436)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:95
+msgid ""
+"The `radeonkms(4)` driver has been updated to include 32-bit "
+"http://www.FreeBSD.org/cgi/man.cgi?query=ioctl&sektion=2[ioctl(2)] support, "
+"allowing 32-bit applications to run on a 64-bit "
+"system. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266594[(r266594)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:97
+msgid ""
+"A bug that would prevent a "
+"http://www.FreeBSD.org/cgi/man.cgi?query=jail&sektion=8[jail(8)] from "
+"setting the correct IPv4 source address with some operations that required "
+"`security.jail.allow_raw_sockets` has been "
+"fixed. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266718[(r266718)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:99
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=hwpmc&sektion=4[hwpmc(4)] "
+"driver has been updated to support core events from the Atom™ Silvermont "
+"architecture. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266911[(r266911)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:101
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=oce&sektion=4[oce(4)] driver "
+"has been updated with vendor-supplied fixes for big endian support, and "
+"20GB/s and 25GB/s link "
+"speeds. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=268046[(r268046)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:103
+msgid ""
+"The FreeBSD virtual memory subsystem has been updated to implement \"fast "
+"path\" for the page fault "
+"handler. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=270630[(r270630)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:105
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=asmc&sektion=4[asmc(4)] driver "
+"has been updated to support the Apple(R) Mac Mini "
+"3,1. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=271069[(r271069)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:107
+msgid ""
+"The FreeBSD/powerpc64 default kernel configuration, [.filename]`GENERIC64`, "
+"has been updated to enable the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=vt&sektion=4[vt(4)] console driver "
+"for the Sony Playstation 3™ "
+"platform. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=271111[(r271111)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:109
+msgid ""
+"The FreeBSD/powerpc `ofwfb` driver, used to provide a graphics console when "
+"the http://www.FreeBSD.org/cgi/man.cgi?query=vt&sektion=4[vt(4)] console "
+"driver is used, has been modified to work with the "
+"[.filename]`x11-drivers/xf86-video-scfb` "
+"port. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=271116[(r271116)] "
+"[.contrib]#(Sponsored by The FreeBSD Foundation)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:113
+#, no-wrap
+msgid ""
+"*Note*: +\n"
+"If using an ATI graphics card with the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=vt&sektion=4[vt(4)] driver, the "
+"[.filename]`x11-servers/xorg-server` package must be updated to version "
+"1.12.4_8 or newer.\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:115
+msgid ""
+"Several performance enchancements to the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=vt&sektion=4[vt(4)] driver have "
+"been merged from "
+"FreeBSD-CURRENT. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=271128[(r271128)] "
+"[.contrib]#(Sponsored by The FreeBSD Foundation)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:117
+msgid ""
+"The default stack size (`KSTACK_PAGES`) has been increased from `4` to `8` "
+"for the powerpc64 "
+"architecture. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=271153[(r271153)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:119
+msgid ""
+"The FreeBSD/powerpc ATI driver has been updated to support enabling and "
+"disabling the Radeon 9700 backlight, found in the Apple(R) PowerBook(TM) "
+"G4. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=271205[(r271205)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:121
+msgid ""
+"Hardware context support has been added to the `drm/i915` driver, adding "
+"support for Mesa 9.2 and "
+"later. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=271816[(r271816)]"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.1R/relnotes.adoc:123
+#, no-wrap
+msgid "Virtualization support"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:126
+msgid ""
+"Support for Microsoft(R) Hyper-V has been added to FreeBSD/i386 as loadable "
+"modules, however not available in the `GENERIC` kernel "
+"configuration. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=259450[(r259450)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:128
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=bhyve&sektion=4[bhyve(4)] "
+"hypervisor now supports soft power-off functionality via the ACPI S5 "
+"state. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=261090[(r261090)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:130
+msgid ""
+"Support for FreeBSD/i386 guests has been added to "
+"http://www.FreeBSD.org/cgi/man.cgi?query=bhyve&sektion=4[bhyve(4)]. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=267399[(r267399)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:132
+msgid ""
+"Support for virtualized `XSAVE` has been added to "
+"http://www.FreeBSD.org/cgi/man.cgi?query=bhyve&sektion=4[bhyve(4)], allowing "
+"guest operating systems to use `XSAVE` and `XSAVE`-enabled features, such as "
+"AVX. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=267427[(r267427)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:134
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=bhyve&sektion=4[bhyve(4)] "
+"hypervisor now supports booting from a "
+"http://www.FreeBSD.org/cgi/man.cgi?query=zfs&sektion=8[zfs(8)] "
+"filesystem. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=268932[(r268932)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:136
+msgid ""
+"A new driver, "
+"http://www.FreeBSD.org/cgi/man.cgi?query=virtio_random&sektion=4[virtio_random(4)], "
+"has been added, which allows FreeBSD virtual machines to harvest entropy "
+"from the "
+"hypervisor. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=268933[(r268933)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:138
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=bhyve&sektion=4[bhyve(4)] "
+"hypervisor has been synced with the version in "
+"FreeBSD-CURRENT. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=270159[(r270159)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:140
+msgid "A number of enhancements have been added, and several bug fixes, including:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:142
+msgid ""
+"Post-mortem debugging has been added when a guest virtual machine exits with "
+"an \"EPT Misconfiguration\" error."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:143
+msgid ""
+"The hypervisor "
+"http://www.FreeBSD.org/cgi/man.cgi?query=virtio&sektion=4[virtio(4)] API has "
+"been expanded from 32- to 64-bit."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:144
+msgid "Support for identifying capabilities of the virtual CPU has been added."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:145
+msgid "Support for emulating legacy x86 task switching has been added."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:146
+msgid ""
+"Support to list the VT-x features in base kernel "
+"http://www.FreeBSD.org/cgi/man.cgi?query=dmesg&sektion=8[dmesg(8)] has been "
+"added."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:147
+msgid "Support for extended PCI configuration space has been added."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.1R/relnotes.adoc:149
+#, no-wrap
+msgid "ARM support"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:152
+msgid ""
+"The [.filename]`WANDBOARD` kernel configuration file has been "
+"added. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=259355[(r259355)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:154
+msgid ""
+"Boot devices may now be specified by setting a u-boot environment "
+"variable. If a boot device is not specified, the probe mechanism will be "
+"used. To specify the boot device, set the `loaderdev=device` u-boot "
+"environment "
+"variable. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=265067[(r265067)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:156
+msgid ""
+"The `nexus(4)` driver has been updated to include \"Flattened Device Tree\" "
+"support, replacing the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=fdtbus&sektion=4[fdtbus(4)] driver "
+"in most "
+"cases. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266000[(r266000)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:158
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=gpioiic&sektion=4[gpioiic(4)] "
+"and http://www.FreeBSD.org/cgi/man.cgi?query=gpioled&sektion=4[gpioled(4)] "
+"have been merged from "
+"FreeBSD-CURRENT. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266105[(r266105)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:160
+msgid ""
+"Support for hardware floating point was added to the kernel, and enabled by "
+"default in the configuration files for all platforms that contain the "
+"required hardware."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:162
+msgid "C++ exception handling now works with GCC."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:164
+msgid ""
+"Support for SMP was added to the kernel, and enabled by default in the "
+"configuration files for all platforms that contain multi-core CPUs."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:166
+msgid "Support was added for:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:168
+msgid "CHROMEBOOK (Samsung Exynos 5250)"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:169
+msgid "COLIBRI (Freescale Vybrid)"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:170
+msgid "COSMIC (Freescale Vybrid)"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:171
+msgid "IMX53-QSB (Freescale i.MX53)"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:172
+msgid "QUARTZ (Freescale Vybrid)"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:173
+msgid "RADXA (Rockchip rk30xx)"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:174
+msgid "WANDBOARD (Freescale i.MX6)"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:176
+msgid "An I2C driver was added for the RaspberryPi."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:178
+msgid ""
+"Drivers have been added to support TI platforms, such as BEAGLEBONE and "
+"PANDABOARD:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:180
+msgid "PRUSS (Programmable Realtime Unit Subsystem)"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:181
+msgid "MBOX (Mailbox hardware)"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:182
+msgid "SDHCI (new faster driver for MMC/SD storage)"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:183
+msgid "PPS (Pulse Per Second input on a GPIO/timer pin)"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:184
+msgid "PWM (Pulse Width Modulation output)"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:185
+msgid "ADC (Analog to Digital converter)"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.1R/relnotes.adoc:187
+#, no-wrap
+msgid "Boot Loader Changes"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:190
+msgid ""
+"A kernel selection menu has been added to "
+"http://www.FreeBSD.org/cgi/man.cgi?query=loader&sektion=8[loader(8)]. If the "
+"\"beastie menu\" is enabled, the kernel to boot may be selected from the "
+"kernel selection menu. Additional kernels may be listed in "
+"http://www.FreeBSD.org/cgi/man.cgi?query=loader.conf&sektion=5[loader.conf(5)] "
+"as a comma- or space-separated list. By default, `kernel` and `kernel.old` "
+"are "
+"listed. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=262701[(r262701)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:192
+msgid ""
+"The [.filename]`sys/boot/` sources have been rearranged, moving "
+"http://www.FreeBSD.org/cgi/man.cgi?query=libstand&sektion=3[libstand(3)] to "
+"a directory indicating the library is built as "
+"32-bit. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=271130[(r271130)] "
+"[.contrib]#(Sponsored by The FreeBSD Foundation)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:194
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=libstand&sektion=3[libstand(3)] "
+"library has been updated to produce a 64-bit shared library for the "
+"FreeBSD/amd64 and FreeBSD/powerpc64 "
+"architectures. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=271135[(r271135)] "
+"[.contrib]#(Sponsored by The FreeBSD Foundation)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:196
+msgid ""
+"Initial support for UEFI boot has been "
+"added. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=271135[(r271135)] "
+"[.contrib]#(Sponsored by The FreeBSD Foundation)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:198
+msgid ""
+"Three new files are installed to `/boot`, supporting UEFI boot: "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=271136[(r271136)] "
+"[.contrib]#(Sponsored by The FreeBSD Foundation)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:200
+msgid "[.filename]`boot1.efi`: The UEFI first stage bootstrap file."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:201
+msgid ""
+"[.filename]`boot1.efifat`: A FAT filesystem image containing an EFI system "
+"partition."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:202
+msgid "[.filename]`loader.efi`: The third stage bootstrap file."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:204
+msgid ""
+"Serial console and null console support has been added to the UEFI boot "
+"loader. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=271880[(r271880)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:206
+msgid ""
+"Support has been added to cache "
+"http://www.FreeBSD.org/cgi/man.cgi?query=geli&sektion=8[geli(8)] passphrases "
+"during system boot. When a system is configured with multiple `GEOM_ELI` "
+"providers all using the same passphrase, the passphrase that is cached after "
+"the first entry is used for the subsequent `GEOM_ELI` provider. If the "
+"passphrase in the cache is incorrect, then a prompt for the passphrase for "
+"the next provider is "
+"displayed. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=272006[(r272006)]"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.1R/relnotes.adoc:208
+#, no-wrap
+msgid "Hardware Support"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.1R/relnotes.adoc:211
+#, no-wrap
+msgid "Network Interface Support"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:214
+msgid ""
+"Support for Ralink RT5370 and RT5372 chipsets has been added to the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=run&sektion=4[run(4)] "
+"driver. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=259453[(r259453)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:216
+msgid ""
+"Firmware for the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=run&sektion=4[run(4)] driver has "
+"been updated to version "
+"0.33. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=260120[(r260120)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:218
+msgid ""
+"Support for the Ralink RT3593 chipset has been added to the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=run&sektion=4[run(4)] "
+"driver. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=261868[(r261868)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:220
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=nve&sektion=4[nve(4)] driver is "
+"now deprecated, and the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=nfe&sektion=4[nfe(4)] driver should "
+"be used "
+"instead. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=261972[(r261972)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:222
+msgid ""
+"Support for the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=axge&sektion=4[axge(4)] driver has "
+"been added. This driver supports the ASIX AX88178A and AX88179 USB ethernet "
+"adapters. The AX88178A supports USB 2.0, and the AX88179 supports USB 2.0 "
+"and "
+"3.0. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=262137[(r262137)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:224
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=urndis&sektion=4[urndis(4)] "
+"driver has been imported from "
+"OpenBSD. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=262363[(r262363)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:226
+msgid ""
+"Support for multiple transmitter/receiver queues has been added to the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=vmx&sektion=4[vmx(4)] "
+"driver. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=264866[(r264866)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:230
+#, no-wrap
+msgid ""
+"*Note*: +\n"
+"The FreeBSD guest operating system must have MSIX enabled as a prerequisite "
+"for multiple queues.\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:232
+msgid ""
+"Support for the ASUS USB-N10 Nano wireless card has been added to the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=urtwn&sektion=4[urtwn(4)] "
+"driver. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=265345[(r265345)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:234
+msgid ""
+"Transmission checksum offloading has been disabled for the RTL8168C and "
+"RTL8168CP chipsets in the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=re&sektion=4[re(4)] driver for TCP "
+"and UDP frames. This is due to a report of UDP datagrams with IP options "
+"generating corrupt "
+"frames. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266212[(r266212)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:236
+msgid ""
+"Preliminary support has been added to the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=urtwn&sektion=4[urtwn(4)] driver "
+"for the Realtek RTL8188EUS and RTL8188ETV "
+"chipsets. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266578[(r266578)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:238
+msgid ""
+"A bug in the fast receiver buffer recycle path has been fixed in the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=cxgbe&sektion=4[cxgbe(4)] "
+"driver. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=267694[(r267694)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:240
+msgid ""
+"The bundled "
+"http://www.FreeBSD.org/cgi/man.cgi?query=cxgbe&sektion=4[cxgbe(4)] firmware "
+"for T4 and T5 cards has been updated to version "
+"1.11.27.0. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=267849[(r267849)] "
+"[.contrib]#(Contributed / provided by Chelsio)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:242
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=em&sektion=4[em(4)] driver has "
+"been updated to version "
+"7.4.2. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=269196[(r269196)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:244
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=ixgbe&sektion=4[ixgbe(4)] "
+"tunables have been renamed to match their "
+"http://www.FreeBSD.org/cgi/man.cgi?query=sysctl&sektion=8[sysctl(8)] "
+"counterparts: "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=269975[(r269975)]"
+msgstr ""
+
+#. type: Table
+#: website/content/en/releases/10.1R/relnotes.adoc:257
+#, no-wrap
+msgid ""
+"|Old Name |New Name\n"
+"|`hw.ixgbe.enable_aim` |`hw.ix.enable_aim`\n"
+"|`hw.ixgbe.max_interrupt_rate` |`hw.ix.max_interrupt_rate`\n"
+"|`hw.ixgbe.rx_process_limit` |`hw.ix.rx_process_limit`\n"
+"|`hw.ixgbe.tx_process_limit` |`hw.ix.tx_process_limit`\n"
+"|`hw.ixgbe.enable_msix` |`hw.ix.enable_msix`\n"
+"|`hw.ixgbe.num_queues` |`hw.ix.num_queues`\n"
+"|`hw.ixgbe.txd` |`hw.ix.txd`\n"
+"|`hw.ixgbe.rxd` |`hw.ix.rxd`\n"
+"|`hw.ixgbe.unsupported_sfp` |`hw.ix.unsupported_sfp`\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:260
+msgid ""
+"Be sure to update "
+"http://www.FreeBSD.org/cgi/man.cgi?query=loader.conf&sektion=5[loader.conf(5)] "
+"if using the old tunables before upgrading to FreeBSD 10.1-RELEASE."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:262
+msgid ""
+"The "
+"http://www.FreeBSD.org/cgi/man.cgi?query=if_nf10bmac&sektion=4[if_nf10bmac(4)] "
+"driver has been merged from FreeBSD-CURRENT to support the NetFPGA-10G "
+"Embedded CPU Ethernet "
+"Core. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=270061[(r270061)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:264
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=cxgbe&sektion=4[cxgbe(4)] "
+"driver has been updated to support "
+"http://www.FreeBSD.org/cgi/man.cgi?query=netmap&sektion=4[netmap(4)] for the "
+"T5 10G/40G "
+"cards. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=270297[(r270297)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:266
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=vtnet&sektion=4[vtnet(4)] "
+"driver has been updated to support "
+"http://www.FreeBSD.org/cgi/man.cgi?query=netmap&sektion=4[netmap(4)]. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=270509[(r270509)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:268
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=urtwn&sektion=4[urtwn(4)] "
+"driver has been updated to support the ASUS USB-AC51 wireless "
+"card. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=270514[(r270514)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:270
+msgid ""
+"The Intel(R)  XL710 ethernet controller driver, `ixlv(4)`, has been merged "
+"from "
+"FreeBSD-CURRENT. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=270631[(r270631)]"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.1R/relnotes.adoc:272
+#, no-wrap
+msgid "Network Protocols"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:275
+msgid ""
+"Support for the UDP-Lite protocol (RFC 3828) has been added to the IPv4 and "
+"IPv6 "
+"stacks. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=265946[(r265946)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:277
+msgid ""
+"A bug in http://www.FreeBSD.org/cgi/man.cgi?query=sctp&sektion=4[sctp(4)] "
+"that would allow two listening sockets bound to the same port has been "
+"fixed. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=267771[(r267771)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:279
+msgid ""
+"Kernel RPC code, which is a base of NFS server took multiple optimizations, "
+"that significantly improved its performance and SMP "
+"scalability. [.contrib]#(Sponsored by iXsystems)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:281
+msgid ""
+"The iSCSI initiator has been updated to support redirection handling when an "
+"iSCSI device is configured with multiple IP addresses across different "
+"network interfaces. Previously, clients connecting to such iSCSI devices "
+"could require additional client-side "
+"configuration. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=269065[(r269065)] "
+"[.contrib]#(Sponsored by The FreeBSD Foundation)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:283
+msgid ""
+"A new http://www.FreeBSD.org/cgi/man.cgi?query=sysctl&sektion=8[sysctl(8)], "
+"`kern.iscsi.fail_on_disconnection`, has been added, which allows iSCSI "
+"clients to remove the attached disk device when the connection to the target "
+"is dropped, where previously I/O would stop until the connection is "
+"restored. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=265523[(r265523)] "
+"[.contrib]#(Sponsored by The FreeBSD Foundation)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:285
+msgid ""
+"The iSCSI transmit code has been optimized to coalesce PDUs and avoid lock "
+"contention. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=265524[(r265524)] "
+"[.contrib]#(Sponsored by The FreeBSD Foundation)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:287
+msgid ""
+"Several performance optimizations have been made to the iSCSI subsystem, "
+"including deferring wakeup until enough data has been received to read or "
+"write a file, reducing CPU usage and throughput performance with large I/O "
+"workloads. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=265524[(r265524)] "
+"[.contrib]#(Sponsored by iXsystems)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:289
+msgid ""
+"Support for hostname- and IP-based access restriction has been added to the "
+"iSCSI http://www.FreeBSD.org/cgi/man.cgi?query=ctld&sektion=8[ctld(8)] "
+"daemon. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=263720[(r263720)] "
+"[.contrib]#(Sponsored by The FreeBSD Foundation)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:291
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=ctld&sektion=8[ctld(8)] daemon "
+"has been updated to allow overriding the \"default\" `portal-group` "
+"configuration. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=263725[(r263725)] "
+"[.contrib]#(Sponsored by The FreeBSD Foundation)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:293
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=ctld&sektion=8[ctld(8)] daemon "
+"now includes a new `auth-group`, \"default\", defaulting to `deny`, which is "
+"possible to "
+"override. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=263726[(r263726)] "
+"[.contrib]#(Sponsored by The FreeBSD Foundation)#"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.1R/relnotes.adoc:295
+#, no-wrap
+msgid "Disks and Storage"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:298
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=geom&sektion=4[geom(4)] "
+"subsystem has been updated to support I/O direct dispatch. When safety "
+"requirements are met, it enables avoiding passing I/O requests to GEOM "
+"`g_up`/`g_down` thread, executing them directly in the caller context, "
+"avoiding CPU bottlenecks in `g_up`/`g_down` threads, plus avoid several "
+"context switches per "
+"I/O. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=260385[(r260385)] "
+"[.contrib]#(Sponsored by iXsystems)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:300
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=geom&sektion=4[geom(4)] RAID "
+"driver has been updated to support unmapped "
+"I/O. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=260385[(r260385)] "
+"[.contrib]#(Sponsored by iXsystems)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:302
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=cam&sektion=4[cam(4)] subsystem "
+"has been updated to support finer-grained locking, direct dispatch and "
+"multi-queue, which combined with "
+"http://www.FreeBSD.org/cgi/man.cgi?query=geom&sektion=4[geom(4)] direct "
+"dispatch, reduces lock congestion and improves SMP scalability of the "
+"SCSI/ATA "
+"stack. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=260387[(r260387)] "
+"[.contrib]#(Sponsored by iXsystems)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:304
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=geom&sektion=8[geom(8)] "
+"`GEOM_MULTIPATH` class has been updated to support automatic live partition "
+"resizing. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=260478[(r260478)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:306
+msgid ""
+"The "
+"http://www.FreeBSD.org/cgi/man.cgi?query=virtio_blk&sektion=4[virtio_blk(4)] "
+"driver has been updated to support unmapped "
+"I/O. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=260857[(r260857)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:308
+msgid ""
+"The "
+"http://www.FreeBSD.org/cgi/man.cgi?query=virtio_scsi&sektion=4[virtio_scsi(4)] "
+"driver has been updated to support unmapped "
+"I/O. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=260858[(r260858)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:310
+msgid ""
+"Support for LUN-based CD changers has been removed from the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=cd&sektion=4[cd(4)] "
+"driver. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=264522[(r264522)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:312
+msgid ""
+"Support for `BIO_DELETE` has been added to "
+"http://www.FreeBSD.org/cgi/man.cgi?query=zfs&sektion=8[zfs(8)] `zvol` "
+"volumes. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=264732[(r264732)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:314
+msgid ""
+"Support for 9th generation HP host bus adapter cards has been added to "
+"http://www.FreeBSD.org/cgi/man.cgi?query=ciss&sektion=4[ciss(4)]. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=264734[(r264734)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:316
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=mpr&sektion=4[mpr(4)] device "
+"has been added, providing support for LSI Fusion-MPT 3 12Gb SCSI/SATA "
+"controllers. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=265388[(r265388)] "
+"[.contrib]#(Sponsored by LSI)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:318
+msgid ""
+"A new `zvol` property `volmode` and "
+"http://www.FreeBSD.org/cgi/man.cgi?query=sysctl&sektion=8[sysctl(8)] "
+"`vfs.zfs.vol.mode` has been added to allow switching `zvol` between three "
+"different ways of exposing it to a user: `geom`, `dev` and "
+"`none`. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=265678[(r265678)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:320
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=mrsas&sektion=4[mrsas(4)] "
+"driver has been added, providing support for LSI MegaRAID SAS "
+"controllers. The "
+"http://www.FreeBSD.org/cgi/man.cgi?query=mfi&sektion=4[mfi(4)] driver will "
+"attach to the controller, by default. To enable "
+"http://www.FreeBSD.org/cgi/man.cgi?query=mrsas&sektion=4[mrsas(4)] add "
+"`hw.mfi.mrsas_enable=1` to [.filename]`/boot/loader.conf`, which turns off "
+"http://www.FreeBSD.org/cgi/man.cgi?query=mfi&sektion=4[mfi(4)] device "
+"probing. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=265922[(r265922)] "
+"[.contrib]#(Sponsored by LSI)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:324
+#, no-wrap
+msgid ""
+"*Note*: +\n"
+"At this time, the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=mfiutil&sektion=8[mfiutil(8)] "
+"utility and the FreeBSD version of MegaCLI and StorCli do not work with "
+"http://www.FreeBSD.org/cgi/man.cgi?query=mrsas&sektion=4[mrsas(4)].\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:326
+msgid ""
+"Fixed accounting of `BIO_FLUSH` operation in "
+"http://www.FreeBSD.org/cgi/man.cgi?query=geom&sektion=8[geom(8)] `GEOM_DISK` "
+"class "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266608[(r266608)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:328
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=gstat&sektion=8[gstat(8)] "
+"utility now has an `-o` option, to display \"other\" operations, such as "
+"`BIO_FLUSH`. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266610[(r266610)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:330
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=mfi&sektion=4[mfi(4)] driver "
+"has been updated to include support for unmapped "
+"I/O. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=267084[(r267084)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:332
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=hpt27xx&sektion=4[hpt27xx(4)] "
+"driver has been updated with various vendor-supplied bug "
+"fixes. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=267457[(r267457)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:334
+msgid ""
+"Support for unmapped I/O has been added to the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=xen&sektion=4[xen(4)] `blkfront` "
+"driver. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=270130[(r270130)] "
+"[.contrib]#(Sponsored by Citrix Systems R&D)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:336
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=geom&sektion=8[geom(8)] `label` "
+"class is now aware of resized partitions. This corrects an issue where `geom "
+"resize` would resize the partition, but the label provider in "
+"[.filename]`/dev/gptid/` would not be "
+"resized. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=259328[(r259328)] "
+"[.contrib]#(Sponsored by The FreeBSD Foundation)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:338
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=gmirror&sektion=8[gmirror(8)] "
+"utility now has a `resize` command, making it easier to resize the size of a "
+"mirror when all of its components have been "
+"replaced. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=260502[(r260502)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:340
+msgid ""
+"Support for MegaRAID Fury cards has been added to the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=mfi&sektion=4[mfi(4)] "
+"driver. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=262967[(r262967)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:342
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=aacraid&sektion=4[aacraid(4)] "
+"driver has been updated to version "
+"3.2.5. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=263024[(r263024)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:344
+msgid ""
+"The `GEOM_VINUM` option is now able to be built both directly into the "
+"kernel or as a "
+"http://www.FreeBSD.org/cgi/man.cgi?query=kldload&sektion=8[kldload(8)] "
+"loadable "
+"module. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=265536[(r265536)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:346
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=geom&sektion=8[geom(8)] "
+"`GEOM_PART` class has been updated to support automatic partition "
+"resizing. Changes to the partition size are not saved to disk until `gpart "
+"commit` is run, and prior to saving, can be reverted with `gpart "
+"undo`. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=265912[(r265912)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:348
+msgid ""
+"The "
+"http://www.FreeBSD.org/cgi/man.cgi?query=geom_uncompress&sektion=4[geom_uncompress(4)] "
+"module is built by default which, similar to "
+"http://www.FreeBSD.org/cgi/man.cgi?query=geom_uzip&sektion=4[geom_uzip(4)], "
+"provides support for compressed, read-only disk "
+"images. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266220[(r266220)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:350
+msgid ""
+"Support for the `disklabel64` partitioning scheme has been added to "
+"http://www.FreeBSD.org/cgi/man.cgi?query=gpart&sektion=8[gpart(8)]. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=268091[(r268091)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:352
+msgid ""
+"A new http://www.FreeBSD.org/cgi/man.cgi?query=sysctl&sektion=8[sysctl(8)] "
+"and http://www.FreeBSD.org/cgi/man.cgi?query=loader&sektion=8[loader(8)] "
+"tunable, `kern.geom.part.mbr.enforce_chs` has been added to the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=geom&sektion=8[geom(8)] `MBR` "
+"partition class. When set to a non-zero value, `GEOM_PART_MBR` will "
+"automatically recalculate the user-specified offset and size for alignment "
+"with the disk "
+"geometry. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=270552[(r270552)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:354
+msgid ""
+"Many improvements to the CAM Target Layer (CTL): [.contrib]#(Sponsored by "
+"iXsystems)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:356
+msgid ""
+"Support for `UNMAP`, `WRITE SAME`, `COMPARE AND WRITE`, `XCOPY` and some "
+"other SCSI commands was added to support VMWare VAAI and Microsoft ODX "
+"storage acceleration."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:357
+msgid ""
+"The `READ`/`WRITE` size limitations were removed by supporting multiple data "
+"moves per "
+"command. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=265642[(r265642)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:358
+msgid ""
+"Finer-grained per-LUN locking and multiple worker threads for better SMP "
+"scapability. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=268556[(r268556)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:359
+msgid ""
+"Memory consumption reduced by several times by disabling some never used "
+"functionality. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=269297[(r269297)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:360
+msgid ""
+"The maximum number of SCSI ports increased from 32 to "
+"128. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=269298[(r269298)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:361
+msgid ""
+"Improved `zvol` integration for better "
+"performance. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=269429[(r269429)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:363
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=hptnr&sektion=4[hptnr(4)] "
+"driver has been updated to version "
+"1.0.1. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=270810[(r270810)] "
+"[.contrib]#(Contributed / provided by HighPoint)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:365
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=mrsas&sektion=4[mrsas(4)] "
+"driver has been added to the [.filename]`GENERIC` kernel configuration on "
+"amd64 and i386 "
+"architectures. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=271234[(r271234)]"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.1R/relnotes.adoc:367
+#, no-wrap
+msgid "File Systems"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:370
+msgid ""
+"The `vfs.zfs.zio.use_uma` "
+"http://www.FreeBSD.org/cgi/man.cgi?query=sysctl&sektion=8[sysctl(8)] has "
+"been re-enabled. On multi-CPU machines with enough RAM, this can easily "
+"double http://www.FreeBSD.org/cgi/man.cgi?query=zfs&sektion=8[zfs(8)] "
+"performance or reduce CPU usage in half. It was originally disabled due to "
+"memory and KVA exhaustion problem reports, which should be resolved due to "
+"several changes in the VM "
+"subsystem. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=260338[(r260338)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:372
+msgid ""
+"A new flag, `-R`, has been added to the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=fsck_ffs&sektion=8[fsck_ffs(8)] "
+"utility. When used, "
+"http://www.FreeBSD.org/cgi/man.cgi?query=fsck_ffs&sektion=8[fsck_ffs(8)] "
+"will restart itself when too many critical errors have been "
+"detected. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=260178[(r260178)] "
+"[.contrib]#(Contributed / provided by Netflix)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:374
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=zfs&sektion=8[zfs(8)] "
+"filesystem has been updated to implement \"bookmarks\". See "
+"http://www.FreeBSD.org/cgi/man.cgi?query=zfs&sektion=8[zfs(8)] for further "
+"details. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=263407[(r263407)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:376
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=zfs&sektion=8[zfs(8)] "
+"filesystem has been updated to allow tuning the minimum \"ashift\" value "
+"when creating new top-level virtual devices (vdevs). To set the minimum "
+"ashift value, for example when creating a "
+"http://www.FreeBSD.org/cgi/man.cgi?query=zpool&sektion=8[zpool(8)] on "
+"\"Advanced Format\" drives, set the `vfs.zfs.min_auto_ashift` "
+"http://www.FreeBSD.org/cgi/man.cgi?query=sysctl&sektion=8[sysctl(8)] "
+"accordingly. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266122[(r266122)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:378
+msgid ""
+"The `libzfs` thread pool API has been imported from OpenSolaris, and adapted "
+"for FreeBSD. This change allows parallel disk scanning, which can reduce "
+"http://www.FreeBSD.org/cgi/man.cgi?query=zpool&sektion=8[zpool(8)] overall "
+"import time in some "
+"workloads. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266612[(r266612)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:380
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=restore&sektion=8[restore(8)] "
+"utility has been updated to prevent assertion failures when restoring a UFS "
+"filesystem dump to a ZFS filesystem by writing restored files in block sizes "
+"that are a multiple of "
+"1024. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=269651[(r269651)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:382
+msgid ""
+"Two http://www.FreeBSD.org/cgi/man.cgi?query=sysctl&sektion=8[sysctl(8)]s "
+"have been added to the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=zfs&sektion=8[zfs(8)] filesystem: "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=269774[(r269774)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:384
+msgid ""
+"`vfs.zfs.mg_fragmentation_threshold`: The percentage of the metaslab group "
+"size that should be considered eligible for allocation, unless all metaslab "
+"groups within the metaslab class have also crossed this threshold."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:385
+msgid ""
+"`vfs.zfs.metaslab.fragmentation_threshold`: The maximum percentage of "
+"metaslab fragmentation level to keep their active state"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:387
+msgid ""
+"The default http://www.FreeBSD.org/cgi/man.cgi?query=zfs&sektion=8[zfs(8)] "
+"ARC hash table size has been increased, and a new "
+"http://www.FreeBSD.org/cgi/man.cgi?query=loader&sektion=8[loader(8)] "
+"tunable, `vfs.zfs.arc_average_blocksize`, has been added. Previously, the "
+"hash table could be too small, which would lead to long hash chains and "
+"limit performance for cached reads. The `vfs.zfs.arc_average_blocksize` "
+"tunable allows overriding the default block size. The previous default was "
+"65536, and default of the new "
+"http://www.FreeBSD.org/cgi/man.cgi?query=loader&sektion=8[loader(8)] tunable "
+"is "
+"8192. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=269846[(r269846)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:389
+msgid ""
+"The Fast File System (FFS) has been updated to support multi-threaded soft "
+"updates. Previously, soft updates were handled by a single thread, and as of "
+"this change, now have one thread per FFS "
+"mountpoint. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=270157[(r270157)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:391
+msgid ""
+"The new filesystem automount facility, "
+"http://www.FreeBSD.org/cgi/man.cgi?query=autofs&sektion=5[autofs(5)], has "
+"been merged from FreeBSD-CURRENT. The new "
+"http://www.FreeBSD.org/cgi/man.cgi?query=autofs&sektion=5[autofs(5)] "
+"facility is similar to that found in other UNIX(R) -like operating systems, "
+"such as OS X(TM) and Solaris(TM). The "
+"http://www.FreeBSD.org/cgi/man.cgi?query=autofs&sektion=5[autofs(5)] "
+"facility uses a Sun(TM)-compatible "
+"http://www.FreeBSD.org/cgi/man.cgi?query=auto_master&sektion=5[auto_master(5)] "
+"configuration file, and is administered with the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=automount&sektion=8[automount(8)] "
+"userland utility, and the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=automountd&sektion=8[automountd(8)] "
+"and "
+"http://www.FreeBSD.org/cgi/man.cgi?query=autounmountd&sektion=8[autounmountd(8)] "
+"daemons. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=270892[(r270892)] "
+"[.contrib]#(Sponsored by The FreeBSD Foundation)#"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.1R/relnotes.adoc:393
+#, no-wrap
+msgid "Userland Changes"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:396
+msgid ""
+"A new flag is added to "
+"http://www.FreeBSD.org/cgi/man.cgi?query=camcontrol&sektion=8[camcontrol(8)], "
+"`-b`, which outputs the existing buses and their "
+"parents. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=260177[(r260177)] "
+"[.contrib]#(Sponsored by Netflix)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:398
+msgid ""
+"The "
+"http://www.FreeBSD.org/cgi/man.cgi?query=newsyslog&sektion=8[newsyslog(8)] "
+"utility has been updated to rotate files based on the actual file size "
+"instead of the blocks on disk. This matches the behavior documented in "
+"http://www.FreeBSD.org/cgi/man.cgi?query=newsyslog.conf&sektion=5[newsyslog.conf(5)]. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=262075[(r262075)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:400
+msgid ""
+"The location of the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=rctl&sektion=8[rctl(8)] "
+"configuration file can now be overridden in "
+"http://www.FreeBSD.org/cgi/man.cgi?query=rc.conf&sektion=5[rc.conf(5)]. To "
+"use a non-default location, set `rctl_rules` in "
+"http://www.FreeBSD.org/cgi/man.cgi?query=rc.conf&sektion=5[rc.conf(5)] to "
+"the location of the "
+"file. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=262384[(r262384)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:402
+msgid ""
+"The [.application]#ATF# test suite has been updated to version 0.20. The "
+"test suite is disabled by default in FreeBSD 10.1, and can be enabled by "
+"adding `WITH_TESTS=yes` to "
+"http://www.FreeBSD.org/cgi/man.cgi?query=src.conf&sektion=5[src.conf(5)]. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=262855[(r262855)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:404
+msgid ""
+"The `libucl` library (Unified Configuration Library) has been merged from "
+"FreeBSD-CURRENT. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=263019[(r263019)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:406
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=pkg&sektion=7[pkg(7)] "
+"bootstrapping utility has been synced with the version in "
+"FreeBSD-CURRENT. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=263020[(r263020)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:408
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=zfs&sektion=8[zfs(8)] userland "
+"utility has been updated to include aliases for `snapshot`, which allows use "
+"of `zfs list -t snap` and `zfs "
+"snap`. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=263403[(r263403)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:410
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=zfs&sektion=8[zfs(8)] userland "
+"utility has been updated to include a new flag to `zfs list`, `-p`, which "
+"when specified, prints the output in a parsable "
+"format. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=263405[(r263405)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:412
+msgid ""
+"The Blowfish password format implementation has been updated. Support for "
+"$2b$ has been added, allowing use of passwords greater than 256 characters "
+"long. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=263783[(r263783)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:414
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=iconv&sektion=3[iconv(3)] "
+"library has been updated to match NetBSD, providing several bug "
+"fixes. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=264497[(r264497)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:416
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=date&sektion=1[date(1)] utility "
+"has been updated to include a new flag, `-R`, which prints the date and time "
+"output as specified in RFC "
+"2822. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=265265[(r265265)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:418
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=bc&sektion=1[bc(1)] utility has "
+"been updated to version 1.1, in sync with the version in "
+"OpenBSD. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=265533[(r265533)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:420
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=pmcstat&sektion=8[pmcstat(8)] "
+"utility has been updated to include a new flag, `-a`, which when specified, "
+"produces a full stack track on the sampled "
+"points. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=265604[(r265604)] "
+"[.contrib]#(Contributed / provided by Netflix)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:422
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=netstat&sektion=8[netstat(8)] "
+"and http://www.FreeBSD.org/cgi/man.cgi?query=route&sektion=8[route(8)] "
+"utilities have been updated to include a shorthand equivalent to the `-f "
+"inet` and `-f inet6` address specifiers, `-4` and `-6`, "
+"respectively. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=265701[(r265701)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:424
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=crypt&sektion=3[crypt(3)] "
+"library now defaults to SHA512 for password "
+"hashing. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=265879[(r265879)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:426
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=gvinum&sektion=8[gvinum(8)] "
+"utility has been updated to allow forceful configuration reset with the `-f` "
+"flag. Additionally, a bug that would prevent `-f` from properly creating a "
+"http://www.FreeBSD.org/cgi/man.cgi?query=gvinum&sektion=8[gvinum(8)] "
+"configuration has been "
+"fixed. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266014[(r266014)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:428
+msgid ""
+"The "
+"http://www.FreeBSD.org/cgi/man.cgi?query=login.conf&sektion=5[login.conf(5)] "
+"file now takes precedence over the shell-specific environment files. In "
+"particular, the `PATH`, `BLOCKSIZE` variables are commented from "
+"[.filename]`/usr/share/skel/dot.profile`, and the `path`, `BLOCKSIZE`, and "
+"`umask` variables have been commented from "
+"[.filename]`/usr/share/skel/dot.cshrc`. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266029[(r266029)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:430
+msgid ""
+"The "
+"http://www.FreeBSD.org/cgi/man.cgi?query=binmiscctl&sektion=8[binmiscctl(8)] "
+"userland utility and related image activator features have been merged from "
+"FreeBSD-CURRENT. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266272[(r266272)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:432
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=ps&sektion=1[ps(1)] utility has "
+"been updated to include the `-J` flag, used to filter output by matching "
+"http://www.FreeBSD.org/cgi/man.cgi?query=jail&sektion=8[jail(8)] IDs and "
+"names. Additionally, argument `0` can be used to `-J` to only list processes "
+"running on the host "
+"system. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266279[(r266279)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:434
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=top&sektion=1[top(1)] utility "
+"has been updated to filter by "
+"http://www.FreeBSD.org/cgi/man.cgi?query=jail&sektion=8[jail(8)] ID or name, "
+"in followup to the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=ps&sektion=1[ps(1)] change in "
+"`r265229`. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266280[(r266280)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:436
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=gstat&sektion=8[gstat(8)] "
+"utility has been updated to include a new flag, `-o`. When set, "
+"http://www.FreeBSD.org/cgi/man.cgi?query=gstat&sektion=8[gstat(8)] will "
+"display statistics for operations such as "
+"`BIO_FLUSH`. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266610[(r266610)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:438
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=fetch&sektion=3[fetch(3)] "
+"library has been updated to look for root SSL certificates in "
+"[.filename]`/usr/local/etc/ssl/` before "
+"[.filename]`/etc/ssl/`. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266632[(r266632)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:440
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=clang&sektion=1[clang(1)]/llvm "
+"suite has been updated to version "
+"3.4.1. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266715[(r266715)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:442
+msgid ""
+"The Blowfish password format has been changed to $2b$ by "
+"default. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266816[(r266816)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:444
+msgid ""
+"The amount of data collected for "
+"http://www.FreeBSD.org/cgi/man.cgi?query=hwpmc&sektion=4[hwpmc(4)] has been "
+"updated to work with modern processors and larger amounts of available "
+"memory. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266888[(r266888)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:446
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=pmcstat&sektion=8[pmcstat(8)] "
+"utility has been updated to include a new flag, `-l`, which ends event "
+"collection after the specified number of "
+"seconds. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266890[(r266890)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:448
+msgid ""
+"The "
+"http://www.FreeBSD.org/cgi/man.cgi?query=mergemaster&sektion=8[mergemaster(8)] "
+"utility has been updated to avoid printing \"/var/tmp/temproot disappeared\" "
+"if there is nothing to "
+"compare. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266953[(r266953)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:450
+msgid ""
+"The FreeBSD installer, "
+"http://www.FreeBSD.org/cgi/man.cgi?query=bsdinstall&sektion=8[bsdinstall(8)], "
+"has been updated to include optional "
+"http://www.FreeBSD.org/cgi/man.cgi?query=geli&sektion=8[geli(8)]-encrypted "
+"or "
+"http://www.FreeBSD.org/cgi/man.cgi?query=gmirror&sektion=8[gmirror(8)]-mirrored "
+"swap devices when installing onto a full "
+"http://www.FreeBSD.org/cgi/man.cgi?query=zfs&sektion=8[zfs(8)] "
+"filesystem. Additionally, the parent "
+"http://www.FreeBSD.org/cgi/man.cgi?query=zfs&sektion=8[zfs(8)] dataset is "
+"now configured with `lz4` compression "
+"enabled. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=267056[(r267056)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:452
+msgid ""
+"The default "
+"http://www.FreeBSD.org/cgi/man.cgi?query=newsyslog.conf&sektion=5[newsyslog.conf(5)] "
+"now includes files in the [.filename]`/etc/newsyslog.conf.d/` and "
+"[.filename]`/usr/local/etc/newsyslog.conf.d/` directories by default for "
+"http://www.FreeBSD.org/cgi/man.cgi?query=newsyslog&sektion=8[newsyslog(8)]. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=267113[(r267113)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:454
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=realpath&sektion=1[realpath(1)] "
+"utility has been updated to return `ENOTDIR` on paths components \".\" and "
+"\"..\" that are not directories, such as [.filename]`/dev/null/.` or "
+"[.filename]`/dev/null/..`. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=267161[(r267161)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:456
+msgid ""
+"A new flag, \"onifconsole\" has been added to `/etc/ttys`. This allows the "
+"system to provide a login prompt via serial console if the device is an "
+"active kernel console, otherwise it is equivalent to "
+"`off`. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=267236[(r267236)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:458
+msgid ""
+"Support for legacy PCI devices has been removed from "
+"http://www.FreeBSD.org/cgi/man.cgi?query=bhyve&sektion=8[bhyve(8)]. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=267341[(r267341)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:460
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=bhyve&sektion=8[bhyve(8)] "
+"userland utility has been updated to include SMBIOS support. A new flag has "
+"been added, `-U`, which allows specifying the UUID of the guest in the "
+"System Information "
+"structure. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=267450[(r267450)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:462
+msgid ""
+"The FreeBSD Project has migrated from the GNATS bug tracking system to "
+"Bugzilla. The "
+"http://www.FreeBSD.org/cgi/man.cgi?query=send-pr&sektion=1[send-pr(1)] "
+"utility used for submitting problem reports has been replaced with a stub "
+"shell script that instructs to use the Bugzilla web "
+"interface. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=267734[(r267734)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:464
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=patch&sektion=1[patch(1)] "
+"utility has been updated to include a `--dry-run` flag, which is equivalent "
+"to `--check` and "
+"`-C`. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=267747[(r267747)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:466
+msgid ""
+"A bug in "
+"http://www.FreeBSD.org/cgi/man.cgi?query=bsdgrep&sektion=1[bsdgrep(1)] that "
+"would prevent patterns from being matched under certain conditions has been "
+"fixed. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=267878[(r267878)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:468
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=procstat&sektion=1[procstat(1)] "
+"utility has been updated to include two new flags, `-r` and `-H`. When `-r` "
+"is specified, "
+"http://www.FreeBSD.org/cgi/man.cgi?query=procstat&sektion=1[procstat(1)] "
+"will print current resource usage about the process(es). When `-H` is "
+"specified, "
+"http://www.FreeBSD.org/cgi/man.cgi?query=procstat&sektion=1[procstat(1)] "
+"will print information about threads rather than the "
+"process(es). "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=267979[(r267979)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:472
+#, no-wrap
+msgid ""
+"*Note*: +\n"
+"The `-H` flag is currently only used with `-r` to display resource usage for "
+"individual threads, rather than the entire process.\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:474
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=sed&sektion=1[sed(1)] utility "
+"has been updated to include a new flag, `-u`, which enables unbuffered "
+"output when "
+"specified. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=268019[(r268019)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:476
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=mkimg&sektion=1[mkimg(1)] "
+"utility has been merged from "
+"FreeBSD-CURRENT. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=268161[(r268161)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:478
+msgid ""
+"The "
+"http://www.FreeBSD.org/cgi/man.cgi?query=camcontrol&sektion=8[camcontrol(8)] "
+"has been updated to include a new `persist` command, which allows issuing "
+"`SCSI PERSISTENT RESERVE IN` and `SCSI PERSISTENT RESERVE "
+"OUT`. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=268700[(r268700)] "
+"[.contrib]#(Sponsored by Spectra Logic)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:480
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=gstat&sektion=8[gstat(8)] "
+"utility has been updated to include a new flag, `-p`, which displays only "
+"physical providers when "
+"specified. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=268791[(r268791)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:482
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=kldstat&sektion=8[kldstat(8)] "
+"utility has been updated to allow `-q` to be specified when also specifying "
+"`-n "
+"module.ko`. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=268903[(r268903)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:484
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=mkimg&sektion=1[mkimg(1)] "
+"utility has been updated to include support for both fixed- and "
+"dynamically-allocated images for the VHD and VMDK "
+"formats. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=269177[(r269177)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:486
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=random&sektion=4[random(4)] "
+"entropy collection script, [.filename]`/usr/libexec/save-entropy`, no longer "
+"runs within http://www.FreeBSD.org/cgi/man.cgi?query=jail&sektion=8[jail(8)] "
+"environments. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=269220[(r269220)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:488
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=bhyve&sektion=8[bhyve(8)] "
+"wrapper script, [.filename]`/usr/share/examples/bhyve/vmrun.sh`, has been "
+"synced with "
+"FreeBSD-CURRENT. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=269397[(r269397)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:490
+msgid "This update includes:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:492
+msgid ""
+"A new flag, `-e`, has been added, which is used to set "
+"http://www.FreeBSD.org/cgi/man.cgi?query=loader&sektion=8[loader(8)] "
+"environment variables."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:493
+msgid ""
+"A new flag, `-C`, has been added, which is used to specify the guest console "
+"device."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:494
+msgid ""
+"A new flag, `-H`, has been added, which is used to pass the host path to "
+"http://www.FreeBSD.org/cgi/man.cgi?query=bhyveload&sektion=8[bhyveload(8)]."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:495
+msgid ""
+"Support for multiple disk and "
+"http://www.FreeBSD.org/cgi/man.cgi?query=tap&sektion=4[tap(4)] devices has "
+"been added."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:496
+msgid "The `-I` flag has been removed."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:498
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=nfsd&sektion=8[nfsd(8)] server "
+"update to 4.1, adding support for RFC5661, has merged from "
+"FreeBSD-CURRENT. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=269398[(r269398)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:502
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=ping6&sektion=8[ping6(8)] "
+"utility has been updated to reset `itimer` when the maximum number of "
+"packets to send have been reached. This prevents "
+"http://www.FreeBSD.org/cgi/man.cgi?query=ping6&sektion=8[ping6(8)] from "
+"exiting when the interval in set to a small value and a low number of "
+"packets to send has been "
+"specified. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=269800[(r269800)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:504
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=jail&sektion=8[jail(8)] utility "
+"has been updated to support extra "
+"http://www.FreeBSD.org/cgi/man.cgi?query=ifconfig&sektion=8[ifconfig(8)] "
+"arguments for the `ip4.addr` and `ip6.addr` parameters. This change allows "
+"http://www.FreeBSD.org/cgi/man.cgi?query=carp&sektion=4[carp(4)] interfaces "
+"to be used within the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=jail&sektion=8[jail(8)]. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=269805[(r269805)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:506
+msgid ""
+"Support for generating and compiling USDT DTrace probes has been "
+"improved. DTrace USDT files are now handled similar to "
+"http://www.FreeBSD.org/cgi/man.cgi?query=lex&sektion=1[lex(1)] and "
+"http://www.FreeBSD.org/cgi/man.cgi?query=yacc&sektion=1[yacc(1)] files, "
+"meaning support for handling D files as part of the build process is built "
+"into the `SRCS` "
+"http://www.FreeBSD.org/cgi/man.cgi?query=make&sektion=1[make(1)] environment "
+"variable. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=269946[(r269946)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:508
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=iscsictl&sektion=8[iscsictl(8)] "
+"utility has been updated to include a new flag, `-M`, which allows modifying "
+"the iSCSI session parameters without requiring the session to be removed and "
+"added "
+"back. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=269968[(r269968)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:510
+msgid ""
+"The "
+"http://www.FreeBSD.org/cgi/man.cgi?query=mount_nfs&sektion=8[mount_nfs(8)] "
+"utility has been updated to support specifying the NFS version as a "
+"`key=value` pair argument to the `-o` flag. For example, to specify NFS "
+"version 4, the syntax to use is `-o "
+"vers=4`. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=270043[(r270043)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:512
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=devd&sektion=8[devd(8)] client "
+"socket type has been changed to `SOCK_SEQPACKET`, providing sequential "
+"packet "
+"support. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=270242[(r270242)] "
+"[.contrib]#(Sponsored by Spectra Logic)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:514
+msgid ""
+"Support for the \"account\" facility has been added to the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=pam_group&sektion=8[pam_group(8)] "
+"module. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=270401[(r270401)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:516
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=pathchk&sektion=1[pathchk(1)] "
+"utility has been updated to ensure bytes greater than or equal to 128 are "
+"considered "
+"non-portable. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=270890[(r270890)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:518
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=zdb&sektion=8[zdb(8)] utility "
+"is now included in the set of applications installed in the "
+"[.filename]`/rescue` environment, making it possible to examine "
+"http://www.FreeBSD.org/cgi/man.cgi?query=zfs&sektion=8[zfs(8)] filesystems "
+"when [.filename]`/usr` is "
+"unavailable. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=270997[(r270997)] "
+"[.contrib]#(Contributed / provided by FreeNAS)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:520
+msgid ""
+"Several `libc` improvements have been merged from illumos™ and Apple(R), "
+"providing better internationalization support and POSIX(R) compliance."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:522
+msgid ""
+"Support for adding empty partitions has been added to the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=mkimg&sektion=1[mkimg(1)] "
+"utility. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=271967[(r271967)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:524
+msgid ""
+"Support for QCOW and QCOW2 disk image formats has been added to the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=mkimg&sektion=1[mkimg(1)] "
+"utility. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=272819[(r272819)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:526
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=mkimg&sektion=1[mkimg(1)] "
+"utility has been updated to include three options used to print information "
+"about http://www.FreeBSD.org/cgi/man.cgi?query=mkimg&sektion=1[mkimg(1)] "
+"itself: "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=273098[(r273098)]"
+msgstr ""
+
+#. type: Table
+#: website/content/en/releases/10.1R/relnotes.adoc:533
+#, no-wrap
+msgid ""
+"|Option |Output\n"
+"|`--version` |The current version of the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=mkimg&sektion=1[mkimg(1)] utility\n"
+"|`--formats` |The disk image file formats supported by "
+"http://www.FreeBSD.org/cgi/man.cgi?query=mkimg&sektion=1[mkimg(1)]\n"
+"|`--schemes` |The partition schemes supported by "
+"http://www.FreeBSD.org/cgi/man.cgi?query=mkimg&sektion=1[mkimg(1)]\n"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.1R/relnotes.adoc:536
+#, no-wrap
+msgid "[.filename]`/etc/rc.d` Scripts"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:539
+msgid ""
+"The [.filename]`network.subr` "
+"http://www.FreeBSD.org/cgi/man.cgi?query=rc&sektion=8[rc(8)] script has been "
+"updated to loosen the requirement of listing network aliases in numeric "
+"order. Previously, a network alias of `_alias2` would not be created if "
+"`_alias1` was not "
+"defined. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=264438[(r264438)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:541
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=service&sektion=8[service(8)] "
+"utility has been updated to check that the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=rc.d&sektion=8[rc.d(8)] directory "
+"exists before traversing the "
+"directory. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=268098[(r268098)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:543
+msgid ""
+"A regression introduced in FreeBSD 10.0-RELEASE that would prevent proper "
+"IPv6 allocation via the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=jail&sektion=8[jail(8)] "
+"http://www.FreeBSD.org/cgi/man.cgi?query=rc&sektion=8[rc(8)] startup script "
+"has been "
+"fixed. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=259141[(r259141)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:545
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=rc&sektion=8[rc(8)] restriction "
+"requiring "
+"http://www.FreeBSD.org/cgi/man.cgi?query=mdconfig&sektion=8[mdconfig(8)] "
+"devices defined in "
+"http://www.FreeBSD.org/cgi/man.cgi?query=rc.conf&sektion=5[rc.conf(5)] to be "
+"listed sequentially has been "
+"removed. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=264438[(r264438)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:547
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=sshd&sektion=8[sshd(8)] "
+"http://www.FreeBSD.org/cgi/man.cgi?query=rc.d&sektion=8[rc.d(8)] startup "
+"script now generates `ED25519` "
+"http://www.FreeBSD.org/cgi/man.cgi?query=sshd&sektion=8[sshd(8)] host keys "
+"if keys do not already exist when `ssh_keygen_alg()` is "
+"invoked. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=262566[(r262566)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:549
+msgid ""
+"Support for http://www.FreeBSD.org/cgi/man.cgi?query=vt&sektion=4[vt(4)] "
+"keyboard maps has been added to the `syscons` "
+"http://www.FreeBSD.org/cgi/man.cgi?query=rc.d&sektion=8[rc.d(8)] startup "
+"script. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=271095[(r271095)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:551
+msgid ""
+"Support for subdirectories within [.filename]`/etc/rc.conf.d/service`/ has "
+"been added the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=rc.d&sektion=8[rc.d(8)]. This "
+"allows creating separate configuration files for services such as "
+"[.filename]`netif`, for example, where each network interface can have a "
+"separate configuration "
+"file. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=271260[(r271260)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:553
+msgid ""
+"The default "
+"http://www.FreeBSD.org/cgi/man.cgi?query=rc.conf&sektion=5[rc.conf(5)], "
+"[.filename]`/etc/defaults/rc.conf`, has been updated to include "
+"[.filename]`/usr/lib32/compat` in the default [.filename]`ld-elf32.so.1` "
+"search "
+"path. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=272078[(r272078)]"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.1R/relnotes.adoc:555
+#, no-wrap
+msgid "[.filename]`/etc/periodic` Scripts"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:558
+msgid ""
+"The daily "
+"http://www.FreeBSD.org/cgi/man.cgi?query=periodic&sektion=8[periodic(8)] "
+"script [.filename]`110.clean-tmps` has been updated to avoid crossing "
+"filesystem mount boundaries when cleaning files in "
+"[.filename]`/tmp`. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=272430[(r272430)]"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.1R/relnotes.adoc:560
+#, no-wrap
+msgid "Contributed Software"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:563
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=xz&sektion=1[xz(1)] utility has "
+"been updated to a post-5.0.5 "
+"snapshot. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=263285[(r263285)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:565
+msgid ""
+"OpenSSH has been updated to version "
+"6.6p1. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=264377[(r264377)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:567
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=nc&sektion=1[nc(1)] utility has "
+"been updated to match the version in OpenBSD "
+"5.5. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=264911[(r264911)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:569
+msgid ""
+"Sendmail has been updated to "
+"8.14.9. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=266692[(r266692)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:571
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=file&sektion=1[file(1)] utility "
+"and http://www.FreeBSD.org/cgi/man.cgi?query=libmagic&sektion=3[libmagic(3)] "
+"library have been updated to "
+"5.19. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=268515[(r268515)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:573
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=byacc&sektion=1[byacc(1)] "
+"parser has been updated to version "
+"20140422. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=268899[(r268899)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:575
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=lldb&sektion=1[lldb(1)] "
+"debugging library has been updated to the r202189 "
+"snapshot. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=269024[(r269024)] "
+"[.contrib]#(Sponsored by DARPA, AFRL)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:577
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=unbound&sektion=8[unbound(8)] "
+"caching resolver and `ldns` have been updated to version "
+"1.4.22. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=269257[(r269257)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:579
+msgid ""
+"The \"lite\" version of Subversion included in the FreeBSD base system and "
+"its dependencies have been updated: "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=269847[(r269847)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:581
+msgid "apr has been updated to version 1.5.1."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:582
+msgid "apr-util has been updated to version 1.5.3."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:583
+msgid "serf has been updated to version 1.3.7."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:584
+msgid "svnlite has been updated to version 1.8.10."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:586
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=nvi&sektion=1[nvi(1)] editor "
+"has been update to version "
+"2.1.2-c80f493b038. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=270026[(r270026)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:588
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=fparseln&sektion=3[fparseln(3)] "
+"library has been updated to version "
+"1.7. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=270031[(r270031)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:590
+msgid ""
+"The lukemftpd FTP server has been removed from the FreeBSD base "
+"system. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=270415[(r270415)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:592
+msgid ""
+"The timezone database has been updated to version "
+"tzdata2014f. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=270817[(r270817)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:594
+msgid ""
+"OpenPAM has been updated to Ourouparia "
+"(20140912). "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=271947[(r271947)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:596
+msgid ""
+"OpenSSL has been updated to version "
+"1.0.1j. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=273399[(r273399)]"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.1R/relnotes.adoc:598
+#, no-wrap
+msgid "Ports/Packages Collection Infrastructure"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:601
+msgid ""
+"The http://www.FreeBSD.org/cgi/man.cgi?query=pkg&sektion=8[pkg(8)] package "
+"management utility has been updated to version 1.3.8."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.1R/relnotes.adoc:603
+#, no-wrap
+msgid "Release Engineering and Integration"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:606
+msgid ""
+"The "
+"http://www.FreeBSD.org/cgi/man.cgi?query=services.mkdb&sektion=8[services.mkdb(8)] "
+"utility has been updated to include endianness awareness, allowing the "
+"[.filename]`services.db` database to be created as part of the release "
+"build, regardless of native- or cross-built "
+"releases. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=263028[(r263028)]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:608
+msgid ""
+"The `release/` scripts have been updated to produce UEFI-capable and "
+"BIOS-capable CD-ROM ISOs as well as memory stick images for the "
+"FreeBSD/amd64 "
+"architecture. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=271470[(r271470)] "
+"[.contrib]#(Sponsored by The FreeBSD Foundation)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:610
+msgid ""
+"The [.filename]`release/scripts/pkg-stage.sh` script has been updated to "
+"include a symlink to the on-disc version of "
+"http://www.FreeBSD.org/cgi/man.cgi?query=pkg&sektion=8[pkg(8)] in the "
+"[.filename]`packages/` structure on the DVD installer. This allows the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=pkg&sektion=7[pkg(7)] bootstrap "
+"utility to properly locate the [.filename]`Latest/pkg.txz` package on the "
+"DVD when `REPOS_DIR` is set to [.filename]`/dist/packages/repos`, "
+"eliminating the need for a network connection or explicitly providing the "
+"path to the version included on the DVD installation "
+"medium. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=271943[(r271943)] "
+"[.contrib]#(Sponsored by The FreeBSD Foundation)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:612
+msgid ""
+"The FreeBSD Release Engineering build tools have been updated to provide "
+"support for building virtual machine disk images as part of the release "
+"build process using "
+"http://www.FreeBSD.org/cgi/man.cgi?query=mkimg&sektion=1[mkimg(1)]. The disk "
+"image formats currently supported include QCOW2, VHD, VMDK, and raw "
+"formats. See "
+"http://www.FreeBSD.org/cgi/man.cgi?query=release&sektion=7[release(7)] for "
+"additional "
+"information. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=273101[(r273101)] "
+"[.contrib]#(Sponsored by The FreeBSD Foundation)#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:614
+msgid ""
+"The FreeBSD Release Engineering build tools have been updated to provide "
+"support for building FreeBSD virtual machine disk images for the "
+"Microsoft(R) Azure cloud hosting platform. This functionality is not "
+"connected directly to the default `release` "
+"http://www.FreeBSD.org/cgi/man.cgi?query=make&sektion=1[make(1)] target, "
+"however can be invoked by specifying the `vm-azure` target "
+"directly. "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=273199[(r273199)] "
+"[.contrib]##(Sponsored by The FreeBSD Foundation)#"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.1R/relnotes.adoc:616
+#, no-wrap
+msgid "Upgrading from previous releases of FreeBSD"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:619
+msgid ""
+"[amd64,i386] Binary upgrades between RELEASE versions (and snapshots of the "
+"various security branches) are supported using the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8[freebsd-update(8)] "
+"utility. The binary upgrade procedure will update unmodified userland "
+"utilities, as well as unmodified `GENERIC` kernel distributed as a part of "
+"an official FreeBSD release. The "
+"http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8[freebsd-update(8)] "
+"utility requires that the host being upgraded have Internet connectivity."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:621
+msgid ""
+"Source-based upgrades (those based on recompiling the FreeBSD base system "
+"from source code) from previous versions are supported, according to the "
+"instructions in [.filename]`/usr/src/UPDATING`."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.1R/relnotes.adoc:624
+#, no-wrap
+msgid ""
+"*Important:* +\n"
+"Upgrading FreeBSD should only be attempted after backing up _all_ data and "
+"configuration files.\n"
+msgstr ""

@@ -1,0 +1,218 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR The FreeBSD Project
+# This file is distributed under the same license as the FreeBSD Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FreeBSD Documentation VERSION\n"
+"POT-Creation-Date: 2021-02-21 18:57-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Title =
+#: website/content/en/releases/9.1R/installation.adoc:1
+#: website/content/en/releases/9.1R/installation.adoc:6
+#, no-wrap
+msgid "FreeBSD 9.1-RELEASE Installation Instructions"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/installation.adoc:10
+msgid ""
+"''''' This article gives some brief instructions on installing FreeBSD "
+"9.1-RELEASE and upgrading the systems running earlier releases."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/installation.adoc:12
+#: website/content/en/releases/9.1R/installation.adoc:19
+#: website/content/en/releases/9.1R/installation.adoc:26
+#: website/content/en/releases/9.1R/installation.adoc:34
+msgid "'''''"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/9.1R/installation.adoc:14
+#, no-wrap
+msgid "Installing FreeBSD"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/installation.adoc:17
+msgid ""
+"The link:{handbook}#bsdinstall[“Installing FreeBSD”] chapter of the "
+"link:{handbook}[FreeBSD Handbook] provides more in-depth information about "
+"the installation program itself, including a guided walk-through with "
+"screenshots."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/9.1R/installation.adoc:21
+#, no-wrap
+msgid "Upgrading FreeBSD"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/installation.adoc:24
+msgid ""
+"If you are upgrading from a previous release of FreeBSD, please read "
+"http://www.FreeBSD.org/releases/9.1R/relnotes-detailed/#upgrade[upgrading "
+"section in the Release Notes] for notable incompatibilities carefully."
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/9.1R/installation.adoc:27
+#, no-wrap
+msgid "Upgrading from Source"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/installation.adoc:30
+msgid ""
+"The procedure for doing a source code based update is described in "
+"link:{handbook}#synching[https://doc.FreeBSD.org/en/books/handbook/book/#synching] "
+"and "
+"link:{handbook}#makeworld[https://doc.FreeBSD.org/en/books/handbook/book/#makeworld]."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/installation.adoc:32
+msgid ""
+"For SVN use the `releng/9.1` branch which will be where any upcoming "
+"Security Advisories or Errata Notices will be applied. The branch tag to use "
+"for updating the source is `RELENG_9_1` for CVS."
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/9.1R/installation.adoc:35
+#, no-wrap
+msgid "Upgrading Using \"FreeBSD Update\""
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/installation.adoc:38
+msgid ""
+"The man:freebsd-update[8] utility supports binary upgrades of i386 and amd64 "
+"systems running earlier FreeBSD releases. Systems running `7.[34]-RELEASE`, "
+"`8.[12]-RELEASE`, `9.0-RELEASE`, `9.1-BETA1`, or `9.1-RC[123]` can upgrade "
+"as follows:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/installation.adoc:40
+msgid ""
+"First, ensure that your current system is up to date; a change was recently "
+"made to man:freebsd-update[8] (Errata Notice "
+"http://security.FreeBSD.org/advisories/FreeBSD-EN-12:01.freebsd-update.asc[FreeBSD-EN-12:01.freebsd-update]) "
+"which is needed in order to upgrade to FreeBSD 9.1-RELEASE."
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/9.1R/installation.adoc:45
+#, no-wrap
+msgid ""
+"# freebsd-update fetch\n"
+"# freebsd-update install\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/installation.adoc:48
+msgid ""
+"Now the man:freebsd-update[8] utility can fetch bits belonging to "
+"9.1-RELEASE. During this process man:freebsd-update[8] will ask for help in "
+"merging configuration files."
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/9.1R/installation.adoc:52
+#, no-wrap
+msgid "# freebsd-update upgrade -r 9.1-RELEASE\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/installation.adoc:55
+msgid ""
+"Due to changes in the way that FreeBSD is packaged on the release media, two "
+"complications may arise in this process if upgrading from FreeBSD 7.x or "
+"8.x:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/installation.adoc:58
+msgid ""
+"The FreeBSD, which previously could appear in either `/boot/kernel` or "
+"`/boot/GENERIC`, now only appears as `/boot/kernel`. As a result, any kernel "
+"appearing in `/boot/GENERIC` will be deleted. Please carefully read the "
+"output printed by man:freebsd-update[8] and confirm that an updated kernel "
+"will be placed into `/boot/kernel` before proceeding beyond this point."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/installation.adoc:59
+msgid ""
+"The FreeBSD source tree in `/usr/src` (if present) will be "
+"deleted. (Normally the man:freebsd-update[8] utility will update a source "
+"tree, but in this case the changes in release packaging result in the "
+"man:freebsd-update[8] utility not recognizing that the source tree from the "
+"old release and the source tree from the new release correspond to the same "
+"part of FreeBSD.)"
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/9.1R/installation.adoc:63
+#: website/content/en/releases/9.1R/installation.adoc:77
+#: website/content/en/releases/9.1R/installation.adoc:86
+#, no-wrap
+msgid "# freebsd-update install\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/installation.adoc:66
+msgid ""
+"The system must now be rebooted with the newly installed kernel before the "
+"non-kernel components are updated."
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/9.1R/installation.adoc:70
+#: website/content/en/releases/9.1R/installation.adoc:93
+#, no-wrap
+msgid "# shutdown -r now\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/installation.adoc:73
+msgid ""
+"After rebooting, man:freebsd-update[8] needs to be run again to install the "
+"new userland components:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/installation.adoc:80
+msgid ""
+"At this point, users of systems being upgraded from FreeBSD 8.2-RELEASE or "
+"earlier will be prompted by man:freebsd-update[8] to rebuild all third-party "
+"applications (e.g., ports installed from the ports tree) due to updates in "
+"system libraries."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/installation.adoc:82
+msgid ""
+"After updating installed third-party applications (and again, only if "
+"man:freebsd-update[8] printed a message indicating that this was necessary), "
+"run man:freebsd-update[8] again so that it can delete the old (no longer "
+"used) system libraries:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/installation.adoc:89
+msgid "Finally, reboot into 9.1-RELEASE"
+msgstr ""

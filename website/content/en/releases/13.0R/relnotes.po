@@ -1,0 +1,1026 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR The FreeBSD Project
+# This file is distributed under the same license as the FreeBSD Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FreeBSD Documentation VERSION\n"
+"POT-Creation-Date: 2021-02-21 18:57-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: YAML Front Matter: title
+#: website/content/en/releases/13.0R/relnotes.adoc:1
+#, no-wrap
+msgid "FreeBSD 13.0-RELEASE Release Notes"
+msgstr ""
+
+#. type: Title =
+#: website/content/en/releases/13.0R/relnotes.adoc:6
+#, no-wrap
+msgid "FreeBSD {releaseCurrent} Release Notes"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/13.0R/relnotes.adoc:19
+#, no-wrap
+msgid "Abstract"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:23
+msgid ""
+"The release notes for FreeBSD {releaseCurrent} contain a summary of the "
+"changes made to the FreeBSD base system on the {releaseBranch} development "
+"line. This document lists applicable security advisories that were issued "
+"since the last release, as well as significant changes to the FreeBSD kernel "
+"and userland. Some brief remarks on upgrading are also presented."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/13.0R/relnotes.adoc:25
+#, no-wrap
+msgid "Introduction"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:28
+msgid ""
+"This document contains the release notes for FreeBSD {releaseCurrent}. It "
+"describes recently added, changed, or deleted features of FreeBSD. It also "
+"provides some notes on upgrading from previous versions of FreeBSD."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:30
+msgid ""
+"The {releaseType} distribution to which these release notes apply represents "
+"the latest point along the {releaseBranch} development branch since "
+"{releaseBranch} was created. Information regarding pre-built, binary "
+"{releaseType} distributions along this branch can be found at "
+"https://www.FreeBSD.org/releases/[https://www.FreeBSD.org/releases/]."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:32
+msgid ""
+"The {releaseType} distribution to which these release notes apply represents "
+"a point along the {releaseBranch} development branch between {releasePrev} "
+"and the future {releaseNext}. Information regarding pre-built, binary "
+"{releaseType} distributions along this branch can be found at "
+"https://www.FreeBSD.org/releases/[https://www.FreeBSD.org/releases/]."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:34
+msgid ""
+"This distribution of FreeBSD {releaseCurrent} is a {releaseType} "
+"distribution. It can be found at "
+"https://www.FreeBSD.org/releases/[https://www.FreeBSD.org/releases/] or any "
+"of its mirrors. More information on obtaining this (or other) {releaseType} "
+"distributions of FreeBSD can be found in the "
+"link:{handbook}/mirrors[Obtaining FreeBSD appendix] to the "
+"link:{handbook}/[FreeBSD Handbook]."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:36
+msgid ""
+"All users are encouraged to consult the release errata before installing "
+"FreeBSD. The errata document is updated with \"late-breaking\" information "
+"discovered late in the release cycle or after the release. Typically, it "
+"contains information on known bugs, security advisories, and corrections to "
+"documentation. An up-to-date copy of the errata for FreeBSD {releaseCurrent} "
+"can be found on the FreeBSD Web site."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:38
+msgid ""
+"This document describes the most user-visible new or changed features in "
+"FreeBSD since {releasePrev}. In general, changes described here are unique "
+"to the {releaseBranch} branch unless specifically marked as MERGED features."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:40
+msgid ""
+"Typical release note items document recent security advisories issued after "
+"{releasePrev}, new drivers or hardware support, new commands or options, "
+"major bug fixes, or contributed software upgrades. They may also list "
+"changes to major ports/packages or release engineering practices. Clearly "
+"the release notes cannot list every single change made to FreeBSD between "
+"releases; this document focuses primarily on security advisories, "
+"user-visible changes, and major architectural improvements."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/13.0R/relnotes.adoc:42
+#, no-wrap
+msgid "Upgrading from Previous Releases of FreeBSD"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:45
+msgid ""
+"Binary upgrades between RELEASE versions (and snapshots of the various "
+"security branches) are supported using the man:freebsd-update[8] "
+"utility. The binary upgrade procedure will update unmodified userland "
+"utilities, as well as unmodified GENERIC kernels distributed as a part of an "
+"official FreeBSD release. The man:freebsd-update[8] utility requires that "
+"the host being upgraded have Internet connectivity."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:47
+msgid ""
+"Source-based upgrades (those based on recompiling the FreeBSD base system "
+"from source code) from previous versions are supported, according to the "
+"instructions in [.filename]#/usr/src/UPDATING#."
+msgstr ""
+
+#. type: delimited block = 4
+#: website/content/en/releases/13.0R/relnotes.adoc:51
+msgid ""
+"Upgrading FreeBSD should only be attempted after backing up _all_ data and "
+"configuration files."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/13.0R/relnotes.adoc:54
+#, no-wrap
+msgid "Security and Errata"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:57
+msgid ""
+"This section lists the various Security Advisories and Errata Notices since "
+"{releasePrev}."
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/13.0R/relnotes.adoc:59
+#, no-wrap
+msgid "Security Advisories"
+msgstr ""
+
+#. type: Table
+#: website/content/en/releases/13.0R/relnotes.adoc:72
+#, no-wrap
+msgid ""
+"| Advisory\n"
+"| Date\n"
+"| Topic\n"
+"\n"
+"|No advisories.\n"
+"|\n"
+"|\n"
+"\n"
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/13.0R/relnotes.adoc:75
+#, no-wrap
+msgid "Errata Notices"
+msgstr ""
+
+#. type: Table
+#: website/content/en/releases/13.0R/relnotes.adoc:89
+#, no-wrap
+msgid ""
+"| Errata\n"
+"| Date\n"
+"| Topic\n"
+"\n"
+"|No notices.\n"
+"|\n"
+"|\n"
+"\n"
+"\n"
+msgstr ""
+
+#.  Sample release notes entry.
+#. The man:fsck_msdosfs[8] utility has been updated to include a variety of enhancements, including reducing the memory footprint, a new flag, `-M`, which disables the use of man:mmap[2], and others. gitref:9708ba9f29[repository=src]
+#. type: Title ==
+#: website/content/en/releases/13.0R/relnotes.adoc:95
+#, no-wrap
+msgid "Userland"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:98
+msgid ""
+"This section covers changes and additions to userland applications, "
+"contributed software, and system utilities."
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/13.0R/relnotes.adoc:100
+#, no-wrap
+msgid "Userland Configuration Changes"
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/13.0R/relnotes.adoc:104
+#, no-wrap
+msgid "Userland Application Changes"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:107
+msgid ""
+"The {{< manpage \"daemon\" \"8\" >}} utility now supports the `-H` flag, "
+"which causes it to catch SIGHUP and re-open the syslog file received, so log "
+"rotation from {{< manpage \"newsyslog\" \"8\">}} works "
+"properly. gitref:4cd407ec933[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:109
+msgid ""
+"The {{< manpage \"daemon\" \"8\" >}} utility no longer blocks SIGTERM during "
+"the restart delay. gitref:09a3675d961[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:111
+msgid ""
+"The {{< manpage \"diskinfo\" \"8\" >}} utility now reports the physical "
+"device name GEOM attribute when "
+"available. gitref:b5961be1ab7[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:113
+msgid ""
+"The {{< manpage \"freebsd-update\" \"8\" >}} utility now displays progress "
+"for the \"Fetching files...\" stage. gitref:d6e1e31a0e6[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:115
+msgid ""
+"The {{< manpage \"freebsd-update\" \"8\" >}} utility now supports the -p "
+"flag, which ensures password db changes are included in "
+"[.filename]#/etc/passwd# via {{< manpage \"pwd_mkdb\" "
+"\"8\">}}. gitref:9b6591109e8[repository=src] {{< sponsored \"The FreeBSD "
+"Foundation\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:117
+msgid ""
+"The {{< manpage \"freebsd-update\" \"8\" >}} utility now supports the "
+"`updatesready` and `showconfig` arguments to check for updates and check the "
+"configuration respectively. gitref:8cfda118cbd[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:119
+msgid ""
+"The {{< manpage \"freebsd-update\" \"8\" >}} utility includes support for "
+"the `PAGER` environment variable, which has now been "
+"documented. gitref:32f4592764d[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:121
+msgid ""
+"The {{< manpage \"gstat\" \"8\" >}} utility now documents the use of "
+"interactive keyboard commands to increase and decrease update interval as "
+"well as regular expression filters. gitref:cfaa2958dc4[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:123
+msgid ""
+"The manual page for the {{< manpage \"inetd\" \"8\" >}} utility now includes "
+"an example of how to use netcat as a HTTP "
+"proxy. gitref:a58fc861516[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:125
+msgid ""
+"The {{< manpage \"inetd\" \"8\" >}} utility now includes comments for all "
+"examples. gitref:26a4a61a285[repository=src]"
+msgstr ""
+
+#. type: Title ====
+#: website/content/en/releases/13.0R/relnotes.adoc:126
+#, no-wrap
+msgid "calendar: Restore calendar file condition parsing"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:130
+msgid ""
+"The calendar program used to invoke the traditional C pre-processor to "
+"process include files and conditional sections of the data files.  This had "
+"to be changed when the traditional C pre-processor was removed from FreeBSD, "
+"and a simple pre-processor was implemented within the calendar program "
+"itself."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:132
+msgid ""
+"The calendar program in FreeBSD-13 restores the condition and comment "
+"processing to the level provided by the C pre-processor and offers the the "
+"following features:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:134
+msgid "Support #undef to cancel a prior #define"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:135
+msgid "#ifdef, #ifndef, #else, and #endif are supported and can be nested"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:136
+msgid ""
+"#include is now processed using the calendar owner's home directory (not the "
+"invoking user's home directory, fixes \"calendar -a\")"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:137
+msgid "Support for C and C++ style comments"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:140
+msgid ""
+"Dates are now always displayed according to the locale of the invoking user, "
+"not the (optional) locales specified in the calendar files.  This prevents "
+"printing mixed date formats depending on the locales specified in each of "
+"the data files."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:142
+msgid ""
+"The calendar data files that used to be distributed with earlier version of "
+"FreeBSD have been moved to the deskutils/calendar-data port respectively the "
+"calendar-data package, with the exception of the FreeBSD committer data "
+"file, which has been kept."
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/13.0R/relnotes.adoc:144
+#, no-wrap
+msgid "Contributed Software"
+msgstr ""
+
+#. type: Title ====
+#: website/content/en/releases/13.0R/relnotes.adoc:146
+#, no-wrap
+msgid "contrib/bc: New implementation of the bc and dc programs"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:149
+msgid ""
+"This implementation of the bc and dc programs offers a number of advantages "
+"over the previous versions in the FreeBSD base system:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:151
+msgid ""
+"They do not depend on external large number functions (i.e. no dependency on "
+"OpenSSL or any other large number library)."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:152
+msgid ""
+"They implements all features found in GNU bc/dc (with the exception of the "
+"forking of sub-processes, which the author of this version considers as a "
+"security issue)."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:153
+msgid ""
+"They are significantly faster than the current code in base (more than 2 "
+"orders of magnitude in some of my tests, e.g. for 12345^100000)."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:154
+msgid ""
+"They should be fully compatible with all features and the behavior of the "
+"current implementations in FreeBSD."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:155
+msgid ""
+"They support POSIX message catalogs and come with localized messages in "
+"Chinese, Dutch, English, French, German, Japanese, Polish, Portugueze, and "
+"Russian."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:156
+msgid ""
+"They offer very detailed man-pages that provide far more information than "
+"the current ones."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:158
+msgid ""
+"The previous implementation is still available in FreeBSD-13 and can be "
+"selected instead of the new one by the build option WITHOUT_GH_BC."
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/13.0R/relnotes.adoc:160
+#, no-wrap
+msgid "Deprecated Applications"
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/13.0R/relnotes.adoc:164
+#, no-wrap
+msgid "Runtime Libraries and API"
+msgstr ""
+
+#. type: Title ====
+#: website/content/en/releases/13.0R/relnotes.adoc:166
+#, no-wrap
+msgid "getlocalbase() function"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:169
+msgid ""
+"A function has been added to libutil to provide applications with a standard "
+"way to determine the path prefix for files installed by ports and packages."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:172
+msgid ""
+"This function will return the value of the environment variable LOCALBASE if "
+"it has been defined.  Else the value of the sysctl variable "
+"\"user.localbase\" is returned, which has a default value of "
+"__PATH_LOCALBASE (\"/usr/local\", unless changed in paths.h)."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:174
+msgid ""
+"Shell scripts can directly use the environment variable LOCALBASE or "
+"\"sysctl user.localbase\" for this purpose."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/13.0R/relnotes.adoc:176
+#, no-wrap
+msgid "Kernel"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:179
+msgid ""
+"This section covers changes to kernel configurations, system tuning, and "
+"system control parameters that are not otherwise categorized."
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/13.0R/relnotes.adoc:181
+#, no-wrap
+msgid "General Kernel Changes"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/13.0R/relnotes.adoc:185
+#, no-wrap
+msgid "Devices and Drivers"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:188
+msgid ""
+"This section covers changes and additions to devices and device drivers "
+"since {releasePrev}."
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/13.0R/relnotes.adoc:190
+#, no-wrap
+msgid "Device Drivers"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/13.0R/relnotes.adoc:194
+#, no-wrap
+msgid "Storage"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:197
+msgid ""
+"This section covers changes and additions to file systems and other storage "
+"subsystems, both local and networked."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:199
+msgid ""
+"For {{< manpage \"iscsi\" \"4\" >}} and {{< manpage \"ctld\" \"8\" >}}, "
+"support for specifying network QoS in the form of DiffServ Codepoints (DSCP) "
+"and Ethernet Priority Code Point (PCP) was "
+"added. gitref:ddf1072aac49[repository=src] {{< sponsored \"NetApp\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:201
+msgid ""
+"The {{< manpage \"ctld\" \"8\" >}} utility now supports the -f flag, which "
+"tests the configuration file validity. gitref:7fcbecd004f[repository=src]"
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/13.0R/relnotes.adoc:203
+#, no-wrap
+msgid "General Storage"
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/13.0R/relnotes.adoc:207
+#: website/content/en/releases/13.0R/relnotes.adoc:218
+#, no-wrap
+msgid "Boot Loader Changes"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:210
+msgid ""
+"This section covers the boot loader, boot menu, and other boot-related "
+"changes."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:212
+msgid ""
+"The {{< manpage \"efibootmgr\" \"8\" >}} utility now supports the -b flag, "
+"which lets users specify by bootnum as an "
+"index. gitref:a2581e80212[repository=src] {{< sponsored \"Netflix\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:214
+msgid ""
+"The {{< manpage \"efibootmgr\" \"8\" >}} utility now supports the -E flag, "
+"which lets users query which EFI System Partition was used to boot the "
+"system. gitref:1cdb8eb8fe1[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:216
+msgid ""
+"The {{< manpage \"efibootmgr\" \"8\" >}} utility now supports the -f and -F "
+"flags, which lets users tell the system to boot to the UEFI user interface "
+"or not. gitref:83c4237258d[repository=src] {{< sponsored \"Ampere Computing, "
+"Inc.\" >}}"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/13.0R/relnotes.adoc:222
+#, no-wrap
+msgid "Networking"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:225
+msgid "This section describes changes that affect networking in FreeBSD."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:233
+msgid ""
+"For {{< manpage \"tcp\" \"4\">}}, Proportional Rate Reduction, as described "
+"by RFC6937, to improve SACK loss recovery during burst loss and ACK thinning "
+"scenarios, was implemented and is enabled by default.  A new {{< manpage "
+"\"sysctl\" \"8\" >}} has been added, `net.inet.tcp.do_prr`, which when set "
+"to `0` will restore the prior behavior.  It is expected that PRR generally "
+"helps improve loss recovery performance and prevent numerous preventable RTO "
+"stalls.  This surpasses the prior behavior, but a strictly packet conserving "
+"variant can be enabled.  When misconfigured token bucket traffic policer can "
+"cause persistent loss even during loss recovery, activating the conservative "
+"PRR variant may prevent some retransmission timeouts (RTO) and associated "
+"session stalls for a few milliseconds while behaving less optimal in the "
+"general case.  For this, a new {{< manpage \"sysctl\" \"8\">}} was added, "
+"`net.inet.tcp.do_prr_conservative`.  Setting this variable to `1` will "
+"enable strictly packet conserving behavior (at most 1 segment for each ACK "
+"received), while the normal variant may send up to 2 segments per received "
+"ACK - helping in cases of ACK thinning or significant burst loss events.  "
+"gitref:0e1d7c25c5ab[repository=src] {{< sponsored \"NetApp\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:235
+msgid ""
+"The {{< manpage \"cc_cubic\" \"4\">}} has been improved to address various "
+"corner cases and align more closely with the standard in "
+"RFC8312. gitref:40f9078ff9d9[repository=src] {{< sponsored \"NetApp\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:237
+msgid ""
+"The {{< manpage \"ping\" \"8\" >}} and {{< manpage \"ping6\" \"8\" >}} "
+"utilities both support setting network QoS, with IP DSCP "
+"gitref:6034024daddb[repository=src] and Ethernet PCP "
+"gitref:81a6f4c7ae69[repository=src] {{< sponsored \"NetApp\" >}}"
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/13.0R/relnotes.adoc:239
+#, no-wrap
+msgid "General Network"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/13.0R/relnotes.adoc:242
+#, no-wrap
+msgid "Hardware Support"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:245
+msgid ""
+"This section covers general hardware support for physical machines, "
+"hypervisors, and virtualizatio n environments, as well as hardware changes "
+"and updates that do not otherwise fit in other sections of this document."
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/13.0R/relnotes.adoc:247
+#, no-wrap
+msgid "Virtualization Support"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:250
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility has been updated to support COM3 "
+"and COM4 serial ports. gitref:eed1cc6cdfa[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:252
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility has been updated to remove "
+"bvmconsole and bvmdebug now that UART support is "
+"in. gitref:c4df8cbfde5[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:254
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now supports VNC version 3.3, has "
+"increased framebuffer poll frequency and doesn't send updates if there are "
+"no framebuffer updates. gitref:2bb4be0f865[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:256
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now suspends I/O on ahci-cd "
+"devices during a snapshot. gitref:1b9c78611d9[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:258
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now permits suspend/resume of a "
+"XHCI device model that has not been attached to by a driver in a guest "
+"OS. gitref:57b0a3aacad[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:260
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now honors the disabled setting "
+"for MSI-X interrupts for passthrough "
+"devices. gitref:1925586e03b[repository=src] {{< sponsored \"Chelsio "
+"Communications\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:262
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now reports version 13.0 in the "
+"SMBIOS table. gitref:a2fe464c81d[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:264
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now has increased the allowed "
+"size for 64bit BAR allocation below 4G from 32 to 128 "
+"MB. gitref:670b364b76d[repository=src] {{< sponsored \"The FreeBSD "
+"Foundation\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:266
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now avoids allocating BARs above "
+"the end of supported physical addresses. gitref:9922872ba29[repository=src] "
+"{{< sponsored \"The FreeBSD Foundation\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:268
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now no longer prints "
+"non-printable characters in the smbios.chassis.maker and smbios.system.maker "
+"OIDs. gitref:c4fd0cc9ee2[repository=src] {{< sponsored \"Netflix\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:270
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now supports TRIM via the VirtIO "
+"block device. gitref:22769bbe30b[repository=src] {{< sponsored \"Klara "
+"Inc.\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:272
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now supports TRIM alignment "
+"requirements through VirtIO. gitref:cc3568c1d06[repository=src] {{< "
+"sponsored \"vStack.com\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:274
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now supports virtio-9p (aka "
+"VirtFS) filesystem sharing. gitref:100353cfbf8[repository=src] {{< sponsored "
+"\"Conclusive Engineering (development), vStack.com (funding)\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:276
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now reports nominal health values "
+"for NVMe. gitref:c4a86c1fc0d[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:278
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now supports LA57 guest "
+"mode. gitref:f3eb12e4a6d[repository=src] {{< sponsored \"The FreeBSD "
+"Foundation\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:280
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now supports setting additional "
+"AHCI controller parameters like serial number, firmware revision, model "
+"number and NMRR. gitref:9af3bcd7c97[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:282
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now advertises 64-bit "
+"physical-address capability. gitref:fb5f5a17ef0[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:284
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility no longer sends ACPI RTC "
+"errors/warnings in some guests. gitref:6a7ff0600bb[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:286
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now supports NVMe Feature "
+"Interrupt Vector Config, Firmware Commit, Asyncronous Event Requests, SMART "
+"data I/O statistics, NVMe Format NVM commands, NVMe Namespace Identification "
+"Descriptor, the NVMe deallocate command and the NVMe Flush command in a "
+"series of commits."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:288
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now allows for automatic "
+"destruction on power-off. gitref:0a1016f9e8a[repository=src] {{< sponsored "
+"\"Mysterious Code Ltd.\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:290
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now exposes kernel-emulated "
+"special devices like LAPIC, IOAPIC, and HPET devices to "
+"userspace. gitref:8a68ae80f67[repository=src] >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:292
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now supports a new bhyve network "
+"backend that allow connecting the VM to the {{< manpage \"netgraph\" "
+"\"4\">}} network. gitref:2cd7735d920[repository=src] {{< sponsored "
+"\"vStack.com\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:294
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now has initial support for bhyve "
+"save and restore. gitref:483d953a86a[repository=src] {{< sponsored "
+"\"University Politehnica of Bucharest, Matthew Grooms (student "
+"scholarships), iXsystems\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:296
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now supports the VM Generation "
+"Counter ACPI device. gitref:9cb339cc7b8[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:298
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility has had multiple changes done to "
+"the VirtIO network device, like adjustable MTU, mergeable rx buffers, rx "
+"backpressure and enabling/disabling VirtIO network device in a series of "
+"commits."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:300
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now supports the Hygon Dhyana x86 "
+"CPU. gitref:5a6d45d0150[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:302
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now supports software breakpoints "
+"in the debug server on Intel CPUs. gitref:cbd03a9df2c[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:304
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now PCI HDAudio "
+"device. gitref:7e3c7420615[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:306
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now supports the PCIe Integrated "
+"Endpoint capability. gitref:129f93c5a76[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:308
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility is now SMBIOS table topology "
+"aware. gitref:3facfc75607[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:310
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now supports CTL device "
+"specification via the VirtIO SCSI device. gitref:49f8782283d[repository=src] "
+"{{< sponsored \"iXsystems, Inc.\" >}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:312
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now supports PS/2 scancodes for "
+"NumLock, ScrollLock and numerical keypad "
+"keys. gitref:6f2d76643e6[repository=src] {{< sponsored \"iXsystems Inc.\" "
+">}}"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:314
+msgid ""
+"The {{< manpage \"bhyve\" \"8\">}} utility now supports the VNC server to "
+"listen on IPv6 for incoming connections. gitref:8883128b8e9[repository=src]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:316
+msgid ""
+"In addition to all of these, bhyve received an amount of minor changes, "
+"which are too numerous to mention, and which fixes a number of outstanding "
+"issues."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/13.0R/relnotes.adoc:318
+#, no-wrap
+msgid "Ports Collection and Package Infrastructure"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:321
+msgid ""
+"This section covers changes to the FreeBSD Ports Collection, package "
+"infrastructure, and package maintenance and installation tools."
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/13.0R/relnotes.adoc:323
+#, no-wrap
+msgid "Packaging Changes"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/13.0R/relnotes.adoc:327
+#, no-wrap
+msgid "General Notes Regarding Future FreeBSD Releases"
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/13.0R/relnotes.adoc:330
+#, no-wrap
+msgid "Default `CPUTYPE` Change"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:333
+msgid ""
+"Starting with FreeBSD-13.0, the default `CPUTYPE` for the i386 architecture "
+"will change from `486` to `686`."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:335
+msgid ""
+"This means that, by default, binaries produced will require a 686-class CPU, "
+"including but not limited to binaries provided by the FreeBSD Release "
+"Engineering team. FreeBSD 13.0 will continue to support older CPUs, however "
+"users needing this functionality will need to build their own releases for "
+"official support."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:337
+msgid ""
+"As the primary use for i486 and i586 CPUs is generally in the embedded "
+"market, the general end-user impact is expected to be minimal, as new "
+"hardware with these CPU types has long faded, and much of the deployed base "
+"of such systems is nearing retirement age, statistically."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:339
+msgid ""
+"There were several factors taken into account for this change. For example, "
+"i486 does not have 64-bit atomics, and while they can be emulated in the "
+"kernel, they cannot be emulated in the userland. Additionally, the 32-bit "
+"amd64 libraries have been i686 since their inception."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:341
+msgid ""
+"As the majority of 32-bit testing is done by developers using the lib32 "
+"libraries on 64-bit hardware with the `COMPAT_FREEBSD32` option in the "
+"kernel, this change ensures better coverage and user experience. This also "
+"aligns with what the majority of Linux(R) distributions have been doing for "
+"quite some time."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/13.0R/relnotes.adoc:342
+msgid "This is expected to be the final bump of the default `CPUTYPE` in i386."
+msgstr ""

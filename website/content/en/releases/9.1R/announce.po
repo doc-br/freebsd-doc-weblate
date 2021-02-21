@@ -1,0 +1,632 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR The FreeBSD Project
+# This file is distributed under the same license as the FreeBSD Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FreeBSD Documentation VERSION\n"
+"POT-Creation-Date: 2021-02-21 18:57-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Title =
+#: website/content/en/releases/9.1R/announce.adoc:1
+#: website/content/en/releases/9.1R/announce.adoc:6
+#, no-wrap
+msgid "FreeBSD 9.1-RELEASE Announcement"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:11
+msgid ""
+"The FreeBSD Release Engineering Team is pleased to announce the availability "
+"of FreeBSD 9.1-RELEASE. This is the second release from the stable/9 branch, "
+"which improves on the stability of FreeBSD 9.0 and introduces some new "
+"features. Some of the highlights:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:13
+msgid "New Intel GPU driver with GEM/KMS support"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:14
+msgid "netmap(4) fast userspace packet I/O framework"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:15
+msgid "ZFS improvements from illumos project"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:16
+msgid "CAM Target Layer, a disk and processor device emulation subsystem"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:17
+msgid "Optional new {cpp}11 stack including LLVM libc++ and libcxxrt"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:18
+msgid "Jail devfs, nullfs, zfs mounting and configuration file support"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:19
+msgid ""
+"POSIX2008 extended locale support, including compatibility with Darwin "
+"extensions"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:20
+msgid "oce(4) driver for Emulex OneConnect 10Gbit Ethernet card"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:21
+msgid ""
+"sfxge(4) driver for 10Gb Ethernet adapters based on Solarflare SFC9000 "
+"controller"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:22
+msgid "Xen Paravirtualized Backend Ethernet Driver (netback) improvement"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:23
+msgid "hpt27xx(4) driver for HighPoint RocketRAID 27xx-based SAS 6Gb/s HBA"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:24
+msgid "GEOM multipath class improvement"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:25
+msgid ""
+"GEOM raid class is enabled by default supporting software RAID by deprecated "
+"ataraid(8)"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:26
+msgid "kernel support for the AVX FPU extension"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:27
+msgid "Numerous improvements in IPv6 hardware offload support"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:29
+#, no-wrap
+msgid ""
+"*Please note that precompiled third-party packages are not available for "
+"9.1-RELEASE at the time of release. See the link:#availability[Availability "
+"section] below for further details.*\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:31
+msgid ""
+"For a complete list of new features and known problems, please see the "
+"online release notes and errata list available at:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:33
+msgid "`http://www.FreeBSD.org/releases/9.1R/relnotes/`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:34
+msgid "`http://www.FreeBSD.org/releases/9.1R/errata/`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:36
+msgid ""
+"For more information about FreeBSD release engineering activities please "
+"see:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:38
+msgid "`http://www.FreeBSD.org/releng/`"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/9.1R/announce.adoc:39
+#, no-wrap
+msgid "Availability"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:42
+msgid ""
+"FreeBSD 9.1-RELEASE is now available for the amd64, i386, powerpc64, and "
+"sparc64 architectures."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:44
+msgid ""
+"FreeBSD 9.1 can be installed from bootable ISO images or over the "
+"network. Some architectures also support installing from a USB memory "
+"stick. The required files can be downloaded via FTP or BitTorrent as "
+"described in the sections below. While some of the smaller FTP mirrors may "
+"not carry all architectures, they will all generally contain the more common "
+"ones such as amd64 and i386."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:46
+msgid ""
+"MD5 and SHA256 hashes for the release ISO images are included at the bottom "
+"of this message."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:48
+msgid "The purpose of the images provided as part of the release are as follows:"
+msgstr ""
+
+#. type: Labeled list
+#: website/content/en/releases/9.1R/announce.adoc:49
+#, no-wrap
+msgid "dvd1"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:51
+msgid ""
+"This contains everything necessary to install the base FreeBSD operating "
+"system, a collection of pre-built packages aimed at getting a graphical "
+"workstation up and running. It also supports booting into a \"livefs\" based "
+"rescue mode. This should be all you need if you can burn and use DVD-sized "
+"media."
+msgstr ""
+
+#. type: Labeled list
+#: website/content/en/releases/9.1R/announce.adoc:51
+#, no-wrap
+msgid "disc1"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:53
+msgid ""
+"This contains the base FreeBSD operating system. It also supports booting "
+"into a \"livefs\" based rescue mode. There are no pre-built packages."
+msgstr ""
+
+#. type: Labeled list
+#: website/content/en/releases/9.1R/announce.adoc:53
+#, no-wrap
+msgid "bootonly"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:55
+msgid ""
+"This supports booting a machine using the CDROM drive but does not contain "
+"the support for installing FreeBSD from the CD itself. You would need to "
+"perform a network based install (e.g. from an FTP server) after booting from "
+"the CD."
+msgstr ""
+
+#. type: Labeled list
+#: website/content/en/releases/9.1R/announce.adoc:55
+#, no-wrap
+msgid "memstick"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:57
+msgid ""
+"This can be written to an USB memory stick (flash drive) and used to do an "
+"install on machines capable of booting off USB drives. It also supports "
+"booting into a \"livefs\" based rescue mode. There are no pre-built "
+"packages."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:59
+msgid ""
+"As one example of how to use the memstick image, assuming the USB drive "
+"appears as /dev/da0 on your machine something like this should work:"
+msgstr ""
+
+#. type: delimited block . 4
+#: website/content/en/releases/9.1R/announce.adoc:62
+#, no-wrap
+msgid ""
+"# dd if=FreeBSD-9.1-RELEASE-amd64-memstick.img of=/dev/da0 bs=10240 "
+"conv=sync\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:65
+msgid "Be careful to make sure you get the target (of=) correct."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:67
+msgid "Due to the security incident reported here:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:69
+msgid "http://www.FreeBSD.org/news/2012-compromise/"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:71
+msgid ""
+"only the small third-party package set on the DVD image is available at this "
+"time for users who require pre-built packages (just GNOME and KDE windowing "
+"systems). The FreeBSD Project's package building infrastructure is "
+"undergoing a complete review and redesign. At this time we can not commit to "
+"a date the full release package set will become available. A separate "
+"announcement will be made when that becomes available. If you wish to "
+"install 9.1-RELEASE now you can build your own packages using portsnap(8) to "
+"obtain an up to date ports tree and then build the packages. If you require "
+"pre-built packages you should wait for the announcement of the full release "
+"package set becoming available."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:73
+msgid ""
+"FreeBSD 9.1-RELEASE can also be purchased on CD-ROM or DVD from several "
+"vendors. One of the vendors that will be offering FreeBSD 9.1-based products "
+"is:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:75
+msgid "FreeBSD Mall, Inc. `http://www.freebsdmall.com/`"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/9.1R/announce.adoc:76
+#, no-wrap
+msgid "FTP"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:79
+msgid ""
+"At the time of this announcement the following FTP sites have FreeBSD "
+"9.1-RELEASE available."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:81
+msgid "`ftp://ftp.freebsd.org/pub/FreeBSD/releases/ISO-IMAGES/9.1/`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:82
+msgid "`ftp://ftp5.freebsd.org/pub/FreeBSD/releases/ISO-IMAGES/9.1/`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:83
+msgid "`ftp://ftp7.freebsd.org/pub/FreeBSD/releases/ISO-IMAGES/9.1/`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:84
+msgid "`ftp://ftp8.freebsd.org/pub/FreeBSD/releases/ISO-IMAGES/9.1/`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:85
+msgid "`ftp://ftp.au.freebsd.org/pub/FreeBSD/releases/ISO-IMAGES/9.1/`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:86
+msgid "`ftp://ftp.cn.freebsd.org/pub/FreeBSD/releases/ISO-IMAGES/9.1/`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:87
+msgid "`ftp://ftp.cz.freebsd.org/pub/FreeBSD/releases/ISO-IMAGES/9.1/`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:88
+msgid "`ftp://ftp.dk.freebsd.org/pub/FreeBSD/releases/ISO-IMAGES/9.1/`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:89
+msgid "`ftp://ftp.fr.freebsd.org/pub/FreeBSD/releases/ISO-IMAGES/9.1/`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:90
+msgid "`ftp://ftp.jp.freebsd.org/pub/FreeBSD/releases/ISO-IMAGES/9.1/`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:91
+msgid "`ftp://ftp.ru.freebsd.org/pub/FreeBSD/releases/ISO-IMAGES/9.1/`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:92
+msgid "`ftp://ftp.tw.freebsd.org/pub/FreeBSD/releases/ISO-IMAGES/9.1/`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:93
+msgid "`ftp://ftp.uk.freebsd.org/pub/FreeBSD/releases/ISO-IMAGES/9.1/`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:94
+msgid "`ftp://ftp2.us.freebsd.org/pub/FreeBSD/releases/ISO-IMAGES/9.1/`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:95
+msgid "`ftp://ftp10.us.freebsd.org/pub/FreeBSD/releases/ISO-IMAGES/9.1/`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:96
+msgid "`ftp://ftp.za.freebsd.org/pub/FreeBSD/releases/ISO-IMAGES/9.1/`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:98
+msgid ""
+"However before trying these sites please check your regional mirror(s) first "
+"by going to:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:100
+msgid "`ftp://ftp.<yourdomain>.FreeBSD.org/pub/FreeBSD`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:102
+msgid "Any additional mirror sites will be labeled *ftp2*, *ftp3* and so on."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:104
+msgid "More information about FreeBSD mirror sites can be found at:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:106
+msgid "`http://www.FreeBSD.org/doc/en_US.ISO8859-1/books/handbook/mirrors-ftp.html`"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:108
+msgid ""
+"For instructions on installing FreeBSD or updating an existing machine to "
+"9.1-RELEASE please see:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:110
+msgid "`http://www.FreeBSD.org/releases/9.1R/installation.html`"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/9.1R/announce.adoc:111
+#, no-wrap
+msgid "Support"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:114
+msgid ""
+"9.1-RELEASE is an extended support releases and will be supported by the "
+"FreeBSD Security Team until it's End-of-Life (EoL) date of December 31st "
+"2014. As 9.1-RELEASE got delayed, the EoL of 9.0-RELEASE has been pushed to "
+"March 31st 2013 to allow people sufficient time to upgrade. As always all "
+"EoL dates can be found at http://security.FreeBSD.org/."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:116
+msgid "`http://www.FreeBSD.org/security/`"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/9.1R/announce.adoc:117
+#, no-wrap
+msgid "Other Projects Based on FreeBSD"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:120
+msgid ""
+"There are many \"third party\" Projects based on FreeBSD. The Projects range "
+"from re-packaging FreeBSD into a more \"novice friendly\" distribution to "
+"making FreeBSD available on Amazon's EC2 infrastructure. For more "
+"information about these Third Party Projects see:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:122
+msgid "`http://wiki.FreeBSD.org/3rdPartyProjects`"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/9.1R/announce.adoc:123
+#, no-wrap
+msgid "Acknowledgments"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:126
+msgid ""
+"Many companies donated equipment, network access, or man-hours to support "
+"the release engineering activities for FreeBSD 9.1 including The FreeBSD "
+"Foundation, Yahoo!, NetApp, Internet Systems Consortium, Sentex "
+"Communications, New York Internet, Juniper Networks, and iXsystems."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:128
+msgid "The release engineering team for 9.1-RELEASE includes:"
+msgstr ""
+
+#. type: Table
+#: website/content/en/releases/9.1R/announce.adoc:141
+#, no-wrap
+msgid ""
+"|Ken Smith <kensmith@FreeBSD.org> |Release Engineering, amd64, i386, sparc64 "
+"Release Building, Mirror Site Coordination\n"
+"|Robert Watson <rwatson@FreeBSD.org> |Release Engineering, Security\n"
+"|Konstantin Belousov <kib@FreeBSD.org> |Release Engineering\n"
+"|Marc Fonvieille <blackend@FreeBSD.org> |Release Engineering, "
+"Documentation\n"
+"|Josh Paetzel <jpaetzel@FreeBSD.org> |Release Engineering\n"
+"|Hiroki Sato <hrs@FreeBSD.org> |Release Engineering, Documentation\n"
+"|Bjoern Zeeb <bz@FreeBSD.org> |Release Engineering, Package Building\n"
+"|Marcel Moolenaar <marcel@FreeBSD.org> |ia64, powerpc Release Building\n"
+"|Nathan Whitehorn <nwhitehorn@FreeBSD.org> |powerpc64 Release Building\n"
+"|Simon Nielsen <simon@FreeBSD.org> |Security Officer\n"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/9.1R/announce.adoc:143
+#, no-wrap
+msgid "Trademark"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/announce.adoc:146
+msgid "FreeBSD is a registered trademark of The FreeBSD Foundation."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/9.1R/announce.adoc:147
+#, no-wrap
+msgid "ISO Image Checksums"
+msgstr ""
+
+#. type: delimited block . 4
+#: website/content/en/releases/9.1R/announce.adoc:154
+#, no-wrap
+msgid ""
+"MD5 (FreeBSD-9.1-RELEASE-amd64-bootonly.iso) = "
+"03ec0d36578a5b2092c75ac8e3eb1979\n"
+"MD5 (FreeBSD-9.1-RELEASE-amd64-disc1.iso) = "
+"f0a320fd52383c42649d48ea545915a9\n"
+"MD5 (FreeBSD-9.1-RELEASE-amd64-dvd1.iso) = "
+"5da132138da8360491eb0efa24760859\n"
+"MD5 (FreeBSD-9.1-RELEASE-amd64-memstick.img) = "
+"9fb2d4ad338df42f5d86cd1ae3a427c4\n"
+msgstr ""
+
+#. type: delimited block . 4
+#: website/content/en/releases/9.1R/announce.adoc:161
+#, no-wrap
+msgid ""
+"MD5 (FreeBSD-9.1-RELEASE-i386-bootonly.iso) = "
+"0c2338e03b9249c9806b8c2b10f36dec\n"
+"MD5 (FreeBSD-9.1-RELEASE-i386-disc1.iso) = "
+"e37d86ce83908bf4b667fdae7298bca5\n"
+"MD5 (FreeBSD-9.1-RELEASE-i386-dvd1.iso) = dd07dc30035806cabd136f99ccab7eac\n"
+"MD5 (FreeBSD-9.1-RELEASE-i386-memstick.img) = "
+"149b98037944300927a21341aa9a455a\n"
+msgstr ""
+
+#. type: delimited block . 4
+#: website/content/en/releases/9.1R/announce.adoc:167
+#, no-wrap
+msgid ""
+"MD5 (FreeBSD-9.1-RELEASE-powerpc64-bootonly.iso) = "
+"f65cb227e049c48bbc369d79a72e2916\n"
+"MD5 (FreeBSD-9.1-RELEASE-powerpc64-memstick) = "
+"4febdf7210882e8a9f8eee35315722ce\n"
+"MD5 (FreeBSD-9.1-RELEASE-powerpc64-release.iso) = "
+"a26c7c24a0497980ffc67e1f199a5bba\n"
+msgstr ""
+
+#. type: delimited block . 4
+#: website/content/en/releases/9.1R/announce.adoc:172
+#, no-wrap
+msgid ""
+"MD5 (FreeBSD-9.1-RELEASE-sparc64-bootonly.iso) = "
+"3fb02e9998e6341fea7fa75073dcf5ea\n"
+"MD5 (FreeBSD-9.1-RELEASE-sparc64-disc1.iso) = "
+"7fdec91c78799263d88f3918b71e219f\n"
+msgstr ""
+
+#. type: delimited block . 4
+#: website/content/en/releases/9.1R/announce.adoc:179
+#, no-wrap
+msgid ""
+"SHA256 (FreeBSD-9.1-RELEASE-amd64-bootonly.iso) = "
+"a7e429071a409232f36024df2fc92eed15dc795445030b305fa242c88d6f4596\n"
+"SHA256 (FreeBSD-9.1-RELEASE-amd64-disc1.iso) = "
+"776ba34df5ffb8b5f04b823aacea32210104204b5d3d1547334a22c86cf7090e\n"
+"SHA256 (FreeBSD-9.1-RELEASE-amd64-dvd1.iso) = "
+"7955f97e25985915013c1568319752c4006e722539c65723685923e343c3b5dc\n"
+"SHA256 (FreeBSD-9.1-RELEASE-amd64-memstick.img) = "
+"d085657fc039f579a69598163de39cd0d5d09b3f5ba79ea93bb508e7958cdef4\n"
+msgstr ""
+
+#. type: delimited block . 4
+#: website/content/en/releases/9.1R/announce.adoc:186
+#, no-wrap
+msgid ""
+"SHA256 (FreeBSD-9.1-RELEASE-i386-bootonly.iso) = "
+"73361f5947a71465797979a99e9fdee40797c3fc5ebc9dd4d3d31262f4940985\n"
+"SHA256 (FreeBSD-9.1-RELEASE-i386-disc1.iso) = "
+"211f9562e0c122598e03aa3fdb38dd8a5c79197a9d09e6ad32f9ee9ba4eb6e0e\n"
+"SHA256 (FreeBSD-9.1-RELEASE-i386-dvd1.iso) = "
+"46a53f57e21a7a1c2d1c014bf2cfafae3848c749174777f3a04543f1da25b678\n"
+"SHA256 (FreeBSD-9.1-RELEASE-i386-memstick.img) = "
+"9d037fbf6ac62350bf5d39be820f843c215befac94f8668a5d9935f6bec8e37d\n"
+msgstr ""
+
+#. type: delimited block . 4
+#: website/content/en/releases/9.1R/announce.adoc:192
+#, no-wrap
+msgid ""
+"SHA256 (FreeBSD-9.1-RELEASE-powerpc64-bootonly.iso) = "
+"a2cd9f2d58571d3e9fbb5fadd13237622d4bf1a732d61acbe649e29153a16801\n"
+"SHA256 (FreeBSD-9.1-RELEASE-powerpc64-memstick) = "
+"02d0bb7236335c6154683800a17c84eb810fbf7950da8c818a519bc09b7ef84e\n"
+"SHA256 (FreeBSD-9.1-RELEASE-powerpc64-release.iso) = "
+"b04fb13eab306424319bb8ecd280a655ca6df51dc1ff5dcd6adb6eaa3ff88dba\n"
+msgstr ""
+
+#. type: delimited block . 4
+#: website/content/en/releases/9.1R/announce.adoc:197
+#, no-wrap
+msgid ""
+"SHA256 (FreeBSD-9.1-RELEASE-sparc64-bootonly.iso) = "
+"be55f9950e70e4da13c29c90bae0c2110e176939085d72b77e18e23307bbfaea\n"
+"SHA256 (FreeBSD-9.1-RELEASE-sparc64-disc1.iso) = "
+"aa57a02b2d7e46ad8ccca1adcef0ae9aad86b2f4fb5ee9d42e21a95ae2c29f47\n"
+msgstr ""

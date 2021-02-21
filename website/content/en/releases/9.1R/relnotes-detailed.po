@@ -1,0 +1,1828 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR The FreeBSD Project
+# This file is distributed under the same license as the FreeBSD Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FreeBSD Documentation VERSION\n"
+"POT-Creation-Date: 2021-02-21 18:57-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Title =
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:1
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:8
+#, no-wrap
+msgid "FreeBSD 9.1-RELEASE Release Notes"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:11
+msgid ""
+"The release notes for FreeBSD 9.1-RELEASE contain a summary of the changes "
+"made to the FreeBSD base system on the 9.1-STABLE development line. This "
+"document lists applicable security advisories that were issued since the "
+"last release, as well as significant changes to the FreeBSD kernel and "
+"userland. Some brief remarks on upgrading are also presented."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:13
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:44
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:53
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:74
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:107
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:140
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:179
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:192
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:254
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:290
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:364
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:407
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:474
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:483
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:492
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:525
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:533
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:550
+msgid "'''''"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:15
+#, no-wrap
+msgid "*Table of Contents*\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:17
+msgid "<<intro,Introduction>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:18
+msgid "<<new,What's New>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:19
+msgid "<<security,Security Advisories>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:20
+msgid "<<kernel,Kernel Changes>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:21
+msgid "<<boot,Boot Loader Changes>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:22
+msgid "<<proc,Hardware Support>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:23
+msgid "<<net-proto,Network Protocols>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:24
+msgid "<<disks,Disks and Storage>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:25
+msgid "<<fs,File Systems>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:26
+msgid "<<userland,Userland Changes>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:27
+msgid "<<periodic-scripts,man:periodic[8] Scripts>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:28
+msgid "<<rc-scripts,man:rc[8] Scripts>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:29
+msgid "<<contrib,Contributed Software>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:30
+msgid "<<releng,Release Engineering and Integration>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:31
+msgid "<<upgrade,Upgrading from previous releases of FreeBSD>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:32
+msgid ""
+"<<AEN1113,Upgrading using man:freebsd-update[8] or a source-based "
+"procedure>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:33
+msgid "<<AEN1133,User-visible incompatibilities>>"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:35
+#, no-wrap
+msgid "Introduction"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:38
+msgid ""
+"This document contains the release notes for FreeBSD 9.1-RELEASE. It "
+"describes recently added, changed, or deleted features of FreeBSD. It also "
+"provides some notes on upgrading from previous versions of FreeBSD."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:40
+msgid ""
+"This distribution of FreeBSD 9.1-RELEASE is a release distribution. It can "
+"be found at http://www.FreeBSD.org/releases/ or any of its mirrors. More "
+"information on obtaining this (or other) release distributions of FreeBSD "
+"can be found in the link:{handbook}#mirrors/[\"Obtaining FreeBSD\" appendix] "
+"to the link:{handbook}[FreeBSD Handbook]."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:42
+msgid ""
+"All users are encouraged to consult the release errata before installing "
+"FreeBSD. The errata document is updated with “late-breaking” information "
+"discovered late in the release cycle or after the release. Typically, it "
+"contains information on known bugs, security advisories, and corrections to "
+"documentation. An up-to-date copy of the errata for FreeBSD 9.1-RELEASE can "
+"be found on the FreeBSD Web site."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:46
+#, no-wrap
+msgid "What's New"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:49
+msgid ""
+"This section describes the most user-visible new or changed features in "
+"FreeBSD since 9.0-RELEASE."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:51
+msgid ""
+"Typical release note items document recent security advisories issued after "
+"9.0-RELEASE, new drivers or hardware support, new commands or options, major "
+"bug fixes, or contributed software upgrades. They may also list changes to "
+"major ports/packages or release engineering practices. Clearly the release "
+"notes cannot list every single change made to FreeBSD between releases; this "
+"document focuses primarily on security advisories, user-visible changes, and "
+"major architectural improvements."
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:55
+#, no-wrap
+msgid "Security Advisories"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:58
+msgid ""
+"Problems described in the following security advisories have been fixed. For "
+"more information, consult the individual advisories available from "
+"http://security.FreeBSD.org/."
+msgstr ""
+
+#. type: Table
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:71
+#, no-wrap
+msgid ""
+"|Advisory |Date |Topic\n"
+"|http://security.freebsd.org/advisories/FreeBSD-SA-12:01.openssl.asc[SA-12:01.openssl] "
+"|3 May 2012 |OpenSSL multiple vulnerabilities\n"
+"|http://security.freebsd.org/advisories/FreeBSD-SA-12:02.crypt.asc[SA-12:02.crypt] "
+"|30 May 2012 |Incorrect `crypt()` hashing\n"
+"|http://security.freebsd.org/advisories/FreeBSD-SA-12:03.bind.asc[SA-12:03.bind] "
+"|12 June 2012 |Incorrect handling of zero-length RDATA fields in "
+"man:named[8]\n"
+"|http://security.freebsd.org/advisories/FreeBSD-SA-12:04.sysret.asc[SA-12:04.sysret] "
+"|12 June 2012 |Privilege escalation when returning from kernel\n"
+"|http://security.freebsd.org/advisories/FreeBSD-SA-12:05.bind.asc[SA-12:05.bind] "
+"|6 August 2012 |man:named[8] DNSSEC validation Denial of Service\n"
+"|http://security.freebsd.org/advisories/FreeBSD-SA-12:06.bind.asc[SA-12:06.bind] "
+"|22 November 2012 |Multiple Denial of Service vulnerabilities with "
+"man:named[8]\n"
+"|http://security.freebsd.org/advisories/FreeBSD-SA-12:07.hostapd.asc[SA-12:07.hostapd] "
+"|22 November 2012 |Insufficient message length validation for EAP-TLS "
+"messages\n"
+"|http://security.freebsd.org/advisories/FreeBSD-SA-12:08.linux.asc[SA-12:08.linux] "
+"|22 November 2012 |Linux compatibility layer input validation error\n"
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:76
+#, no-wrap
+msgid "Kernel Changes"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:79
+msgid ""
+"The FreeBSD Jail subsystem now supports mounting man:devfs[5], "
+"man:nullfs[5], and ZFS filesystem inside a jail. New man:jail[8] parameters "
+"`allow.mount.devfs`, `allow.mount.nullfs`, and `allow.mount.zfs` to control "
+"the per-jail capabilities have been added. All of them are disabled by "
+"default.[http://svn.freebsd.org/viewvc/base?view=revision&revision=232728[r232728]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:81
+msgid ""
+"A new man:loader[8] tunable `kern.eventtimer.activetick` has been "
+"added. This tunable specifies whether each hardclock tick should be run on "
+"every active CPU or only one. By setting it to `0`, the total number of "
+"interrupts can be reduced on SMP machines. The default value is "
+"`1`.[http://svn.freebsd.org/viewvc/base?view=revision&revision=234167[r234167]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:83
+msgid ""
+"The man:posix_fadvise[2] system call has been implemented. This is a "
+"function similar to man:madvise[2] except that it operates on a file "
+"descriptor instead of a memory "
+"region.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229723[r229723]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:85
+msgid ""
+"The man:filemon[4] pseudo-device has been added. This allows a process to "
+"collect file operations data of its "
+"children.[http://svn.freebsd.org/viewvc/base?view=revision&revision=237795[r237795]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:87
+msgid ""
+"The man:sysctl[8] variable `kern.stop_scheduler_on_panic` is now set to `1` "
+"by "
+"default.[http://svn.freebsd.org/viewvc/base?view=revision&revision=235413[r235413]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:91
+msgid ""
+"The FreeBSD Linux ABI compatibility layer now supports the "
+"`linux_fadvise64()` and `linux_fadvise64_64()` system "
+"calls.[http://svn.freebsd.org/viewvc/base?view=revision&revision=231145[r231145]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:93
+msgid ""
+"The default value of the man:loader[8] tunable `hw.memtest.tests` is now "
+"automatically set to `0` when FreeBSD is running on a virtual "
+"machine.[http://svn.freebsd.org/viewvc/base?view=revision&revision=230266[r230266]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:95
+msgid ""
+"A new man:loader[8] tunable `kern.msgbuf_show_timestamp` has been "
+"added. When it is enabled, a timestamp is added to each line of the system "
+"message buffer. The default value is `0` "
+"(disabled).[http://svn.freebsd.org/viewvc/base?view=revision&revision=234075[r234075]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:97
+msgid ""
+"The man:null[4] and man:zero[4] pseudo device driver now supports "
+"non-blocking mode via the man:fcntl[2] system "
+"call.[http://svn.freebsd.org/viewvc/base?view=revision&revision=230320[r230320]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:99
+msgid ""
+"The FreeBSD man:sched_ule[4] scheduler has been improved for CPU load "
+"balancing on SMT (Simultaneous MultiThreading) CPUs. It gives a 10-15% "
+"performance improvement when the number of threads is lesser than the number "
+"of logical "
+"CPUs.[http://svn.freebsd.org/viewvc/base?view=revision&revision=233599[r233599]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:103
+msgid ""
+"A new man:sysctl[8] variable `security.bsd.unprivileged_idprio` has been "
+"added. This variable controls whether non-root users can set an idle "
+"priority or not. This is disabled by "
+"default.[http://svn.freebsd.org/viewvc/base?view=revision&revision=230039[r230039]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:105
+msgid ""
+"The man:splash[4] screen interface now supports ASCII art in *TheDraw* "
+"format.[http://svn.freebsd.org/viewvc/base?view=revision&revision=228445[r228445]"
+msgstr ""
+
+#. type: Title ====
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:109
+#, no-wrap
+msgid "Boot Loader Changes"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:112
+msgid ""
+"The man:boot0cfg[8] utility now supports configuration of PXE boot via the "
+"`boot0` boot block temporarily on the next boot. The slice number `6` or a "
+"keyword `PXE` can be specified to enable PXE boot using the `-s` "
+"option.[http://svn.freebsd.org/viewvc/base?view=revision&revision=230065[r230065]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:114
+msgid ""
+"The FreeBSD man:boot[8] block now supports `/boot/config` in addition to "
+"`/boot.config` as the boot block parameter file. When both of them exist, "
+"the former will be "
+"used.[http://svn.freebsd.org/viewvc/base?view=revision&revision=231287[r231287]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:116
+msgid ""
+"The `gptboot` boot block now reads the backup GPT header from the last LBA "
+"only when the primary GPT header and tables are invalid. This mitigates "
+"interoperability issues with some man:geom[4] providers like `MIRROR` which "
+"use the last LBA for the "
+"metadata.[http://svn.freebsd.org/viewvc/base?view=revision&revision=234693[r234693]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:118
+msgid ""
+"The `zfsboot` boot block and `zfsloader` support filesystems within a ZFS "
+"storage pool. In `zfsloader`, the ZFS device name format is now "
+"`zfs:pool`/`fs` and the fully qualified file path format is "
+"`zfs:pool`/`fs`:/`path/to/file`. The `zfsboot` boot block accepts the "
+"kernel/loader name in the format `pool`:`fs`:`path/to/file` or, as before, "
+"`pool`:`path/to/file`. In the latter case a default filesystem is used (the "
+"pool root or a filesystem with the `bootfs` property). The `zfsboot` boot "
+"block passes the GUIDs of the selected storage pool and dataset to "
+"`zfsloader` to be used as its "
+"defaults.[http://svn.freebsd.org/viewvc/base?view=revision&revision=237766[r237766]"
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:137
+#, no-wrap
+msgid ""
+"# gpart create -s vtoc8 da0\n"
+"# gpart add -t freebsd-zfs -s 10g da0\n"
+"# gpart add -t freebsd-swap -s 10g da0\n"
+"# gpart add -t freebsd-zfs -s 10g da0\n"
+"# zpool create rpool mirror da0a da0b\n"
+"# zpool set bootfs=rpool rpool\n"
+"# zpool export rpool\n"
+"# gpart bootcode -p /boot/zfsboot da0\n"
+"# sysctl kern.geom.debugflags=0x10\n"
+"# dd if=/boot/zfsloader of=/dev/da0a bs=512 oseek=1024 conv=notrunc\n"
+"# dd if=/boot/zfsloader of=/dev/da0b bs=512 oseek=1024 conv=notrunc\n"
+"# zpool import rpool\n"
+"# cp -p /boot/zfs/zpool.cache /rpool/boot/zfs/zpool.cache\n"
+"# zfs set mountpoint=/ rpool\n"
+msgstr ""
+
+#. type: Title ====
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:142
+#, no-wrap
+msgid "Hardware Support"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:151
+msgid ""
+"The man:acpi_wmi[4] driver now supports attaching multiple "
+"instances.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229858[r229858]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:161
+msgid ""
+"The man:hwpmc[4] driver now supports software events. Simultaneous usage of "
+"software PMC and hardware PMC is "
+"allowed.[http://svn.freebsd.org/viewvc/base?view=revision&revision=236238[r236238]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:163
+msgid ""
+"The pcf8563(4) driver for the NXP (Philips) PCF8563 RTC has been "
+"added.[http://svn.freebsd.org/viewvc/base?view=revision&revision=236078[r236078]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:169
+msgid ""
+"The following man:sysctl[8] variables have been added: `kern.proc.env` for "
+"environment strings, `kern.proc.auxv` for ELF auxiliary vectors from a "
+"process's stack, `kern.proc.groups` for process groups, `kern.proc.rlimit` "
+"for process resource limits, `kern.proc.ps_strings` for the ps_strings "
+"location, and `kern.proc.osrel` for the osreldate of the process's "
+"binary.[http://svn.freebsd.org/viewvc/base?view=revision&revision=230754[r230754], "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=233950[r233950]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:171
+msgid ""
+"The man:usb[4] driver now handles suspend and resume correctly with no need "
+"to reload the kernel "
+"module.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229100[r229100], "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=229369[r229369]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:173
+msgid ""
+"A bug in the man:xhci[4] (USB 3.0) driver has been fixed. It did not work "
+"with USB 3.0 "
+"hubs.[http://svn.freebsd.org/viewvc/base?view=revision&revision=230302[r230302]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:175
+msgid ""
+"The man:viawd[4] driver, which supports the watchdog timer found in VIA "
+"south bridges (VT8251, CX700, VX800, VX855, VX900), has been "
+"added.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229927[r229927]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:177
+msgid ""
+"The man:wbwd[4] driver, which supports the watchdog timer found in Winbond "
+"Super I/O chips, has been "
+"added.[http://svn.freebsd.org/viewvc/base?view=revision&revision=235926[r235926]"
+msgstr ""
+
+#. type: Title =====
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:181
+#, no-wrap
+msgid "Multimedia Support"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:184
+msgid ""
+"The drm2(4) Intel GPU driver, which supports GEM and KMS and works with new "
+"generations of GPUs such as IronLake, SandyBridge, and IvyBridge, has been "
+"added. The man:agp[4] driver now supports SandyBridge and IvyBridge CPU "
+"northbridges.[http://svn.freebsd.org/viewvc/base?view=revision&revision=236926[r236926], "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=236927[r236927], "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=239965[r239965]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:186
+msgid ""
+"The man:snd_hda[4] driver has been updated. It now supports and provides "
+"HDMI, new volume control, automatic recording source selection, runtime "
+"reconfiguration, more then 4 PCM devices on a controller, multichannel "
+"recording, additional playback/record streams, higher bandwidth, and more "
+"informative device "
+"names.[http://svn.freebsd.org/viewvc/base?view=revision&revision=232798[r232798]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:188
+msgid ""
+"The man:snd_hdspe[4] driver has been added. This supports RME HDSPe AIO and "
+"RayDAT sound "
+"cards.[http://svn.freebsd.org/viewvc/base?view=revision&revision=233165[r233165]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:190
+msgid ""
+"GPL-licensed headers in the man:snd_emu10kx[4], man:snd_maestro3[4], and "
+"man:snd_csa[4] drivers have been replaced with BSD-licensed one. These "
+"drivers are now fully BSD-licensed and included in the `GENERIC` kernel on "
+"FreeBSD/amd64 and "
+"FreeBSD/i386.[http://svn.freebsd.org/viewvc/base?view=revision&revision=230964[r230964], "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=230985[r230985], "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=231047[r231047], "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=235769[r235769]"
+msgstr ""
+
+#. type: Title =====
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:194
+#, no-wrap
+msgid "Network Interface Support"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:197
+msgid ""
+"A bug in the man:ae[4] driver which could prevent it from working under "
+"certain conditions has been "
+"fixed.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229520[r229520]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:199
+msgid ""
+"The man:axe[4] driver now supports TX/RX checksum offloading support for the "
+"ASIX AX88772B "
+"controller.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229106[r229106]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:201
+msgid "The man:bce[4] driver has been improved:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:203
+msgid ""
+"Unnecessary link up/down has been "
+"eliminated.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229864[r229864]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:204
+msgid ""
+"A bug has been fixed which could prevent IPMI from working when the "
+"interface was marked as "
+"down.[http://svn.freebsd.org/viewvc/base?view=revision&revision=236216[r236216]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:205
+msgid ""
+"It now supports remote PHYs, which allow the controller to perform MDIO type "
+"accesses to a remote transceiver by using message pages defined through MRBE "
+"(MultiRate Backplane Ethernet). This is found on machines such as the Dell "
+"PowerEdge M610 "
+"Blade.[http://svn.freebsd.org/viewvc/base?view=revision&revision=235818[r235818]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:207
+msgid "The man:bge[4] and brgphy(4) drivers have been improved:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:209
+msgid ""
+"A bug which could prevent DMA functionality from working correctly has been "
+"fixed.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229350[r229350]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:210
+msgid ""
+"It now works with a PCI-X BCM 5704 controller that is connected to AMD-8131 "
+"PCI-X "
+"bridge.[http://svn.freebsd.org/viewvc/base?view=revision&revision=233495[r233495]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:211
+msgid ""
+"It now supports the BCM 5720 and BCM 5720C PHY, and the BCM 57780 1000BASE-T "
+"media "
+"interface.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229357[r229357], "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=229867[r229867], "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=232134[r232134]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:212
+msgid ""
+"It now supports a man:loader[8] tunable `dev.bge.N.msi` to control the use "
+"of MSI. The default value is `1` "
+"(enabled).[http://svn.freebsd.org/viewvc/base?view=revision&revision=231734[r231734]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:214
+msgid ""
+"The man:cxgbe[4] and man:cxgb[4] drivers have been updated to firmware "
+"version 1.5.2.0. They now support device configuration via a plain text "
+"configuration file, IPv6 hardware checksumming, IPv6 TSO and LRO, a `loadfw` "
+"command in the cxgbetool(8) utility which allows installing a firmware to "
+"the card, and man:sysctl[8] variables under `dev.t4nex.N.misc` for various "
+"information.[http://svn.freebsd.org/viewvc/base?view=revision&revision=231093[r231093], "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=237925[r237925]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:216
+msgid ""
+"The man:dc[4] driver now supports NVIDIA (ULi) M5261/M5263 PCI FastEthernet "
+"controllers, which are found on the ULi M1563 South Bridge and M1689 "
+"Bridge.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229334[r229334]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:218
+msgid ""
+"The man:et[4] driver now works on all platforms. A bug which could prevent "
+"man:altq[4] support from working has been fixed. A new man:sysctl[8] "
+"variable under `dev.et.N.stats` has been added for hardware MAC "
+"statistics.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229711[r229711], "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=229717[r229717], "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=229720[r229720]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:220
+msgid ""
+"The man:igb[4] driver has been updated to version 2.3.4. It now supports "
+"newer i210/i211 "
+"devices.[http://svn.freebsd.org/viewvc/base?view=revision&revision=238262[r238262]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:222
+msgid ""
+"The man:iwn[4] driver now supports Intel Centrino Wireless-N + WiMAX 6150 "
+"and Wireless-N 100/130 "
+"series.[http://svn.freebsd.org/viewvc/base?view=revision&revision=233838[r233838], "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=235843[r235843]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:224
+msgid ""
+"The man:miibus[4] bus driver now supports device hints "
+"`hint.miibus.N.phymask` for PHY addresses being probed. This is useful to "
+"manually probe PHYs which do not implement basic the register set of IEEE "
+"802.3. Also, the man:miibus[4] driver has been changed to a hinted bus, "
+"allowing to add child devices via hints and to set their attach arguments in "
+"addition to automatically-probed "
+"PHYs.[http://svn.freebsd.org/viewvc/base?view=revision&revision=230709[r230709]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:226
+msgid ""
+"The man:msk[4] driver now uses 64-bit DMA addressing on 64-bit "
+"platforms.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229524[r229524]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:228
+msgid ""
+"The man:mxge[4] driver has been updated to firmware version 1.4.55 from "
+"Myricom.[http://svn.freebsd.org/viewvc/base?view=revision&revision=236413[r236413]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:230
+msgid ""
+"The nsphyter(4) driver now supports National "
+"DP83849.[http://svn.freebsd.org/viewvc/base?view=revision&revision=232137[r232137]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:232
+msgid ""
+"The man:oce[4] driver, which supports Emulex OneConnect 10Gbit Ethernet "
+"cards, has been "
+"added.[http://svn.freebsd.org/viewvc/base?view=revision&revision=231663[r231663]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:234
+msgid ""
+"The man:ral[4] driver now supports Ralink RT2800 and RT3000 "
+"chipsets.[http://svn.freebsd.org/viewvc/base?view=revision&revision=236004[r236004]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:236
+msgid ""
+"The man:re[4] driver now supports the RTL8411 PCIe Gigabit Ethernet "
+"controller. A bug which could prevent WoL (Wake-on-LAN) from working on "
+"RTL8168E has been "
+"fixed.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229529[r229529], "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=231731[r231731]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:238
+msgid ""
+"The man:runfw[4] firmware has been updated to version "
+"0.236.[http://svn.freebsd.org/viewvc/base?view=revision&revision=234028[r234028]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:240
+msgid ""
+"The man:sfxge[4] driver, which supports 10Gb Ethernet adapters based on "
+"Solarflare SFC9000 family controllers, has been "
+"added.[http://svn.freebsd.org/viewvc/base?view=revision&revision=228100[r228100]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:242
+msgid ""
+"The smcphy(4) driver now supports the Seeq Technology 80220 PHY. This is "
+"found on Adaptec AIC-6915 Starfire Ethernet controllers supported by the "
+"man:sf[4] "
+"driver.[http://svn.freebsd.org/viewvc/base?view=revision&revision=233485[r233485]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:244
+msgid ""
+"The man:ti[4] driver now supports the man:altq[4] framework, reporting "
+"link-state changes, and man:sysctl[8] variables under `dev.ti.N` for "
+"interrupt moderation "
+"parameters.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229417[r229417], "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=229438[r229438]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:246
+msgid ""
+"A bug in the man:ti[4] driver which could prevent it from working correctly "
+"with the `PAE` kernel option has been "
+"fixed.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229441[r229441]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:248
+msgid ""
+"The man:vge[4] driver has been updated to improve its link establishment and "
+"link-state "
+"detection.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229540[r229540]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:250
+msgid ""
+"The man:vr[4] driver now enables flow control capability in the PHY "
+"drivers.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229641[r229641]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:252
+msgid ""
+"The man:xnb[4] Xen Paravirtualized Backend Ethernet Driver (netback) has "
+"been updated. This is attached via the newbus framework and works properly "
+"in both HVM and PVM "
+"mode.[http://svn.freebsd.org/viewvc/base?view=revision&revision=231697[r231697]"
+msgstr ""
+
+#. type: Title ====
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:256
+#, no-wrap
+msgid "Network Protocols"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:259
+msgid ""
+"The man:if_bridge[4] pseudo-interface now supports reporting link-state "
+"changes depending on the status of the member "
+"interfaces.[http://svn.freebsd.org/viewvc/base?view=revision&revision=236051[r236051]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:261
+msgid ""
+"The `table` argument in the man:ipfw[4] packet filter rule syntax now "
+"supports IP address, interface name, port number, and jail ID. The following "
+"syntax is "
+"valid:[http://svn.freebsd.org/viewvc/base?view=revision&revision=234597[r234597]"
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:265
+#, no-wrap
+msgid "skipto tablearg ip from any to any via table(42) in\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:268
+msgid ""
+"The FreeBSD man:ip6[4] protocol stack has been improved in terms of its "
+"performance. Benchmarking can be found at "
+"http://people.freebsd.org/~bz/bench/."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:270
+msgid ""
+"The FreeBSD man:ip6[4] protocol stack now supports multiple "
+"FIBs.[http://svn.freebsd.org/viewvc/base?view=revision&revision=232292[r232292]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:272
+msgid ""
+"An IPv6 default route configured via Router Advertisement messages is now "
+"reinstalled correctly when the default route is manually removed and then "
+"another RA message is received for the same "
+"route.[http://svn.freebsd.org/viewvc/base?view=revision&revision=230604[r230604]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:274
+msgid ""
+"A bug which could return an incorrect value for the `IPV6_MULTICASE_HOPS` "
+"socket option has been "
+"fixed.[http://svn.freebsd.org/viewvc/base?view=revision&revision=227885[r227885]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:276
+msgid ""
+"A new man:sysctl[3] name `NET_RT_IFLISTL` has been added. This queries the "
+"address list and works on extended and extensible structures `if_msghdrl` "
+"and `ifa_msghdrl` without breaking the "
+"ABI.[http://svn.freebsd.org/viewvc/base?view=revision&revision=231768[r231768]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:278
+msgid ""
+"The man:netmap[4] fast packet I/O framework has been added. The man:em[4], "
+"man:lem(4), man:igb[4], and man:re[4] drivers now support this "
+"framework. The technical details can be found at "
+"http://info.iet.unipi.it/~luigi/netmap/.[http://svn.freebsd.org/viewvc/base?view=revision&revision=231650[r231650], "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=235527[r235527]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:280
+msgid ""
+"The FreeBSD man:sctp[4] protocol stack now supports a new man:sysctl[8] "
+"variable `net.inet.sctp.blackhole`. If this is set to `1`, no `ABORT` is "
+"sent back in response to an incoming `INIT`. If this is set to `2`, no "
+"`ABORT` is sent back in response to an out-of-the-blue packet. If set to `0` "
+"(the default), `ABORT`s are "
+"sent.[http://svn.freebsd.org/viewvc/base?view=revision&revision=231045[r231045]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:282
+msgid ""
+"A bug which could cause a system panic when `SCTP_RECVINFO` or "
+"`SCTP_NXTINFO` is specified to the man:getsockopt[2] system call has been "
+"fixed.[http://svn.freebsd.org/viewvc/base?view=revision&revision=231049[r231049]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:284
+msgid ""
+"The FreeBSD man:sctp[4] protocol stack now supports the "
+"`SCTP_REMOTE_UDP_ENCAPS_PORT` socket "
+"option.[http://svn.freebsd.org/viewvc/base?view=revision&revision=231070[r231070], "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=231140[r231140]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:286
+msgid ""
+"The `SO_PROTOCOL` and `SO_PROTOTYPE` socket options have been added. These "
+"return the socket protocol "
+"number.[http://svn.freebsd.org/viewvc/base?view=revision&revision=232805[r232805]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:288
+msgid ""
+"The `TCP_KEEPINIT`, `TCP_KEEPIDLE`, `TCP_KEEPINTVL`, and `TCP_KEEPCNT` "
+"socket options have been added. These allow controlling initial timeout, "
+"idle time, idle resend interval, and idle send count on a per-socket "
+"basis.[http://svn.freebsd.org/viewvc/base?view=revision&revision=232945[r232945]"
+msgstr ""
+
+#. type: Title ====
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:292
+#, no-wrap
+msgid "Disks and Storage"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:295
+msgid ""
+"The man:arcmsr[4] driver has been updated to version "
+"1.20.00.25.[http://svn.freebsd.org/viewvc/base?view=revision&revision=240758[r240758]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:297
+msgid ""
+"The man:ahci[4] driver now supports a new man:loader[8] tunable "
+"`hw.ahci.force`. This controls whether it attempts to attach an AHCI-capable "
+"device even if it is configured to use legacy emulation. This is enabled by "
+"default.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229291[r229291]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:299
+msgid ""
+"The new man:cam[4]-based man:ata[4] driver now supports old man:loader[8] "
+"tunables `hw.ata.ata_dma` and `hw.ata.atapi_dma`, for backward "
+"compatibility.[http://svn.freebsd.org/viewvc/base?view=revision&revision=231251[r231251]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:301
+msgid ""
+"The man:cam[4] driver now supports SEMB (SATA Enclosure Management Bridge) "
+"devices, which are equivalent to the SCSI SES/SAF-TE "
+"devices.[http://svn.freebsd.org/viewvc/base?view=revision&revision=236778[r236778]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:303
+msgid ""
+"A new man:sysctl[8] variable `kern.cam.pmp.hide_special` has been "
+"added. This controls whether special PMP ports such as PMP (Port MultiPlier) "
+"configuration or SEMB (SATA Enclosure Management Bridge) will be exposed or "
+"hidden. The default value is `1` "
+"(hidden).[http://svn.freebsd.org/viewvc/base?view=revision&revision=236765[r236765]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:305
+msgid ""
+"The ctl(4) driver, which supports man:cam[4] Target Layer and man:ctladm[8], "
+"a userland control utility, have been added. ctl(4) is a disk and processor "
+"device emulation subsystem supporting tagged queuing, SCSI task attribute, "
+"SCSI implicit command ordering, full task management, multiple ports, "
+"multiple simultaneous initiators, multiple simultaneous backing stores, mode "
+"sense/select, and error injection "
+"support.[http://svn.freebsd.org/viewvc/base?view=revision&revision=231772[r231772]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:307
+msgid ""
+"The man:cd[4] driver now supports Audio CDs in the same way as man:acd[4] "
+"did. It will report a 2352-byte sector size to the man:geom[4] subsystem and "
+"use the `READ CD` command for reading the data. This fixes an "
+"interoperability issue with "
+"http://svnweb.FreeBSD.org/ports/head/multimedia/vlc/pkg-descr?revision=HEAD[`multimedia/vlc`].[http://svn.freebsd.org/viewvc/base?view=revision&revision=230014[r230014]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:309
+msgid ""
+"The man:da[4] driver now supports `BIO_DELETE`. To select the method, a new "
+"man:sysctl[8] variable `kern.cam.da.N.delete_method` has been added for each "
+"device instance. The following values are "
+"supported:[http://svn.freebsd.org/viewvc/base?view=revision&revision=236677[r236677]"
+msgstr ""
+
+#. type: Table
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:320
+#, no-wrap
+msgid ""
+"|Value |Method\n"
+"|NONE |no provisioning support reported by the device\n"
+"|DISABLE |provisioning support was disabled because of errors\n"
+"|ZERO |WRITE SAME (10) command to write zeroes\n"
+"|WS10 |WRITE SAME (10) command with UNMAP bit set\n"
+"|WS16 |use WRITE SAME (16) command with UNMAP bit set\n"
+"|UNMAP |use UNMAP command (equivalent of the ATA DSM TRIM command)\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:323
+msgid ""
+"When it was `NONE`, the device did not report logical block provisioning "
+"support via respective VPD pages. One can set a specific method for testing "
+"and it will be disabled automatically when not supported on the device."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:325
+msgid ""
+"The *MIRROR* man:geom[4] class now supports `BIO_DELETE`. This means the "
+"`TRIM` command will be issued on supported devices when deleting "
+"data.[http://svn.freebsd.org/viewvc/base?view=revision&revision=238500[r238500]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:327
+msgid ""
+"The *MULTIPATH* man:geom[4] class has been updated. It now supports "
+"Active/Active mode, Active/Read mode as hybrid of Active/Active and "
+"Active/Passive, keeping a failed path without removing the geom provider, "
+"manual configuration without on-disk metadata, and `add`, `remove`, `fail`, "
+"`restore`, `configure` subcommands in the man:gmultipath[8] utility to "
+"manage the configured "
+"paths.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229303[r229303], "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=234916[r234916]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:329
+msgid ""
+"The *PART_LDM* man:geom[4] class has been added. This partition scheme has "
+"support for Logical Disk Manager, which is also known as dynamic volumes in "
+"Microsoft Windows NT. Note that JBOD, RAID0, and RAID5 volumes are not "
+"supported "
+"yet.[http://svn.freebsd.org/viewvc/base?view=revision&revision=234406[r234406]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:331
+msgid ""
+"The *PART_MBR* man:geom[4] class now allows a primary or extended Linux swap "
+"partition to be used as the system dump "
+"device.[http://svn.freebsd.org/viewvc/base?view=revision&revision=230763[r230763]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:335
+msgid ""
+"The *RAID* man:geom[4] class now supports disks with over 2TB capacity for "
+"the Intel metadata "
+"format.[http://svn.freebsd.org/viewvc/base?view=revision&revision=230244[r230244]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:337
+msgid ""
+"The *RAID* man:geom[4] class now supports the DDF metadata format, which is "
+"defined in the SNIA Common RAID Disk Data Format Specification "
+"v2.0.[http://svn.freebsd.org/viewvc/base?view=revision&revision=235874[r235874]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:339
+msgid ""
+"The *UNCOMPRESS* man:geom[4] class and the man:mkulzma[8] utility have been "
+"added. This class supports lzma compressed images like the *UZIP* "
+"man:geom[4] class and the man:mkuzip[8] "
+"utility.[http://svn.freebsd.org/viewvc/base?view=revision&revision=235483[r235483]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:345
+msgid ""
+"Bugs in man:isp[4] target mode have been "
+"fixed.[http://svn.freebsd.org/viewvc/base?view=revision&revision=230019[r230019]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:347
+msgid ""
+"The man:ixgbe[4] driver now supports the Intel X540 "
+"adapter.[http://svn.freebsd.org/viewvc/base?view=revision&revision=230775[r230775]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:349
+msgid ""
+"A bug in the man:mfi[4] driver has been fixed. It could cause some "
+"inconsistencies due to missed interrupt acknowledgements and output the "
+"following log "
+"message:[http://svn.freebsd.org/viewvc/base?view=revision&revision=227533[r227533]"
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:353
+#, no-wrap
+msgid "mfi0: COMMAND 0xffffffXXXXXXXXXX TIMEOUT AFTER XX SECONDS\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:356
+msgid ""
+"The man:mfi[4] driver now supports single-message MSI, and Drake Skinny and "
+"Thunderbolt cards. The man:loader[8] tunable `hw.mfi.msi` has been added and "
+"it is enabled by "
+"default.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229611[r229611], "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=234429[r234429]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:358
+msgid ""
+"The man:mps[4] driver has been updated to version 14.00.00.01-fbsd. This now "
+"supports Integrated RAID, WarpDrive controllers, WRITE12 and READ12 for "
+"direct I/O, SCSI protection information (EEDP), Transport Level Retries "
+"(TLR) for tape drives, and LSI's userland "
+"utility.[http://svn.freebsd.org/viewvc/base?view=revision&revision=230920[r230920], "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=231679[r231679], "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=237876[r237876]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:360
+msgid ""
+"A bug in the man:mpt[4] driver has been fixed. It could attempt to attach "
+"MegaRAID cards which should be handled by the man:mfi[4] "
+"driver.[http://svn.freebsd.org/viewvc/base?view=revision&revision=232562[r232562]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:362
+msgid ""
+"The man:usb[4] storage device driver now enables power save mode by "
+"default.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229107[r229107]"
+msgstr ""
+
+#. type: Title ====
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:366
+#, no-wrap
+msgid "File Systems"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:369
+msgid "The FreeBSD NFS filesystem has been improved:"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:371
+msgid ""
+"It now supports a timeout on positive name cache entries on the client "
+"side. A new mount option `nametimeo` has been added and set to `60` (in "
+"seconds) by "
+"default.[http://svn.freebsd.org/viewvc/base?view=revision&revision=233326[r233326]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:372
+msgid ""
+"A memory leak when a ZFS volume is exported via the FreeBSD NFS server has "
+"been "
+"fixed.[http://svn.freebsd.org/viewvc/base?view=revision&revision=234740[r234740]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:373
+msgid ""
+"A bug has been fixed. When a process writes to an mmap-backed file on an NFS "
+"filesystem, flushing changes to the data could fail under some circumstances "
+"such as errors due to permission mismatch, and this failure could not be "
+"detected as an error. A new man:sysctl[8] variable "
+"`vfs.nfs.nfs_keep_dirty_on_error` has been added to control the behavior on "
+"the client side related to this issue. When this is set to `1`, the pages "
+"where a write operation failed are kept dirty. The default value is set to "
+"`0`.[http://svn.freebsd.org/viewvc/base?view=revision&revision=233730[r233730]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:374
+msgid ""
+"The man:nfsv4[4] filesystem now supports a man:sysctl[8] variable "
+"`vfs.nfsd.disable_checkutf8`. This disables the check for UTF-8 compliance "
+"in filenames. This is disabled by default. Note that enabling this may help "
+"wht some interoperability issues but results in an NFSv4 server that is not "
+"RFC 3530 "
+"compliant.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229799[r229799]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:376
+msgid ""
+"The man:tmpfs[5] filesystem is not an experimental implementation "
+"anymore.[http://svn.freebsd.org/viewvc/base?view=revision&revision=234511[r234511]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:378
+msgid ""
+"The man:tmpfs[5] filesystem now supports a man:sysctl[8] variable "
+"`vfs.tmpfs.memory_reserved` to set the amount of required free pages when "
+"man:tmpfs[5] attempts to allocate a new "
+"node.[http://svn.freebsd.org/viewvc/base?view=revision&revision=234849[r234849]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:380
+msgid ""
+"FreeBSD's ZFS filesystem has been updated by merging improvements from the "
+"illumos project. The following changes are "
+"made:[http://svn.freebsd.org/viewvc/base?view=revision&revision=229578[r229578], "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=232328[r232328]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:382
+msgid "New properties, `clones` and `written`, have been added."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:383
+msgid "The man:zfs[8] `send` command now reports an estimated size of the stream."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:384
+msgid ""
+"The man:zfs[8] `destroy` command now reports an estimate of the space which "
+"would be reclaimed, when `-n` is specified."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:385
+msgid ""
+"The man:zfs[8] `get` command now supports the `-t type` flag to specify the "
+"data type."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:387
+msgid ""
+"A simple script `zfsboottest.sh` has been added to the source tree. This "
+"checks if the system is configured correctly when using ZFS as the root "
+"filesystem. The script is located at `/usr/src/tools/tools/zfsboottest.sh` "
+"and it uses the `zfsboottest` binary program in the same "
+"directory.[http://svn.freebsd.org/viewvc/base?view=revision&revision=227705[r227705]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:389
+msgid "The binary program can be built and installed by the following command:"
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:395
+#, no-wrap
+msgid ""
+"# cd /usr/src/tools/tools/zfsboottest\n"
+"# make\n"
+"# make install\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:398
+msgid ""
+"After that, the following command can be used to check the "
+"system. `poolname` is the ZFS storage pool name to boot:"
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:402
+#, no-wrap
+msgid "# sh /usr/src/tools/tools/zfsboottest/zfsboottest.sh poolname\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:405
+msgid ""
+"The man:sysctl[8] variable `vfs.zfs.txg.timeout` has been changed from "
+"read-only to writable."
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:409
+#, no-wrap
+msgid "Userland Changes"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:412
+msgid ""
+"man:auth.conf[5] has been removed because it was deprecated years "
+"ago.[http://svn.freebsd.org/viewvc/base?view=revision&revision=238481[r238481]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:414
+msgid ""
+"The man:camcontrol[8] utility now supports a `fwdownload` subcommand for "
+"firmware update on SCSI devices from Hitachi, HP, IBM, Plextor, Quantum, and "
+"Seagate. This subcommand will reprogram the firmware on devices connected "
+"over an ATA/SATA "
+"transport.[http://svn.freebsd.org/viewvc/base?view=revision&revision=237740[r237740]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:416
+msgid ""
+"The man:dhclient[8] utility now supports `domain-search` (option number 119, "
+"described in RFC 3397). This allows a DHCP server to publish a list of "
+"implicit domain suffixes used during name lookup. If this option is "
+"specified, a `search` keyword will be added to "
+"`/etc/resolv.conf`.[http://svn.freebsd.org/viewvc/base?view=revision&revision=230597[r230597]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:418
+msgid ""
+"The man:dump[8] utility now uses 53 characters for the device names in "
+"`/etc/dumpdates`. This was previously limited to 32 "
+"characters.[http://svn.freebsd.org/viewvc/base?view=revision&revision=230047[r230047]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:420
+msgid ""
+"The man:fetch[1] utility now correctly supports a percent-encoded user and "
+"password part in a "
+"URL.[http://svn.freebsd.org/viewvc/base?view=revision&revision=235253[r235253]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:422
+msgid ""
+"The man:fdlopen[3] function has been implemented. This is an interface for "
+"man:rtld[1] to load a shared object by file "
+"descriptor.[http://svn.freebsd.org/viewvc/base?view=revision&revision=230410[r230410]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:424
+msgid ""
+"The man:fopen[3] function now supports the `x` (an exclusive create-and-open "
+"mode) option in the ISO/IEC 9899:2011 and C11 "
+"standards.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229845[r229845]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:426
+msgid ""
+"A bug in the man:gcc[1] compiler has been fixed. It could lead to incorrect "
+"calculations when `-ffast-math` is "
+"specified.[http://svn.freebsd.org/viewvc/base?view=revision&revision=234023[r234023]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:428
+msgid ""
+"The man:hastd[8] daemon now supports specifying the filename of its process "
+"ID file in "
+"man:hast.conf[5].[http://svn.freebsd.org/viewvc/base?view=revision&revision=229509[r229509]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:430
+msgid ""
+"The man:ifconfig[8] utility now supports a `vlanhwcsum` parameter to set or "
+"reset checksum offloading capability on "
+"VLANs.[http://svn.freebsd.org/viewvc/base?view=revision&revision=231221[r231221]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:432
+msgid ""
+"A bug in the man:ifconfig[8] utility which could display an error message in "
+"a jail with no IPv6 support has been "
+"fixed.[http://svn.freebsd.org/viewvc/base?view=revision&revision=238872[r238872]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:434
+msgid ""
+"The man:ifconfig[8] utility now supports a `carp state state` parameter to "
+"set the state to `backup` or `master` "
+"forcibly.[http://svn.freebsd.org/viewvc/base?view=revision&revision=232486[r232486]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:436
+msgid ""
+"The man:jail[8] utility now supports a configuration file (man:jail.conf[5]) "
+"for complex "
+"configurations.[http://svn.freebsd.org/viewvc/base?view=revision&revision=235839[r235839]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:438
+msgid ""
+"The man:kdump[1] utility now supports a `-p pid` option to accept either a "
+"process ID or a thread "
+"ID.[http://svn.freebsd.org/viewvc/base?view=revision&revision=237789[r237789]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:440
+msgid ""
+"The man:kenv[1] utility now supports a `-v` flag to display an entry in "
+"`name=value` format, and a `-N` flag to display only the "
+"name.[http://svn.freebsd.org/viewvc/base?view=revision&revision=236118[r236118]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:442
+msgid ""
+"The man:kldload[8] utility now supports a `-n` flag to ignore the error "
+"status when the specified module is already "
+"loaded.[http://svn.freebsd.org/viewvc/base?view=revision&revision=233560[r233560]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:444
+#, no-wrap
+msgid ""
+"*libedit* has been updated to a NetBSD snapshot as of 28 December, "
+"2009.[http://svn.freebsd.org/viewvc/base?view=revision&revision=237738[r237738]\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:446
+msgid ""
+"man:libmap.conf[5] now supports `include` and `includedir` directives. They "
+"allow to include specified files for the "
+"configuration.[http://svn.freebsd.org/viewvc/base?view=revision&revision=236523[r236523]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:448
+msgid ""
+"Lock handling performance in the *libthr* pthread library has been "
+"improved. It now works 10 times faster especially under the condition that a "
+"mutex is heavily "
+"contested.[http://svn.freebsd.org/viewvc/base?view=revision&revision=234372[r234372]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:450
+msgid ""
+"A new {cpp} stack has been imported. This consists of *libcxxrt*, originally "
+"developed by a FreeBSD developer under contract by PathScale and open "
+"sourced by the FreeBSD and NetBSD foundations, and *libc++* from the LLVM "
+"project. *libcxxrt* is a drop-in replacement for GNU *libsupc++*, which "
+"implements the {cpp} runtime support for features such as run-time type "
+"information, dynamic casting, thread-safe static initializer, and "
+"exceptions. *libc++* implements the {cpp}11 standard library, and will "
+"replace GNU *libstdc++* in a future release. In 9.1-RELEASE, *libstdc++* is "
+"still installed as standard and now dynamically links against "
+"*libsupc++*. This allows libraries linking *libstdc++* and *libc++* to both "
+"be used in the same program, to aid "
+"migration.[http://svn.freebsd.org/viewvc/base?view=revision&revision=235798[r235798]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:452
+msgid ""
+"The man:limits[1] utility now supports a `-P pid` option to control limits "
+"for the specified "
+"process.[http://svn.freebsd.org/viewvc/base?view=revision&revision=230919[r230919]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:454
+msgid ""
+"The man:pciconf[8] utility now supports a `-e` flag to display PCI error "
+"details in listing mode. When this is specified, the status of any error "
+"bits in the PCI status register and PCI-express device status register will "
+"be displayed. It also lists any errors indicated by version 1 of PCI-express "
+"Advanced Error Reporting "
+"(AER).[http://svn.freebsd.org/viewvc/base?view=revision&revision=237731[r237731]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:456
+msgid ""
+"The man:procstat[1] utility now shows the superpage mapping flag when "
+"displaying process virtual memory "
+"mappings.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229710[r229710]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:458
+msgid ""
+"The man:procstat[1] utility now supports an `-e` flag to display process "
+"environment variables, an `-x` flag to display ELF auxiliary vectors, and an "
+"`-l` flag to display resource "
+"limits.[http://svn.freebsd.org/viewvc/base?view=revision&revision=230917[r230917], "
+"http://svn.freebsd.org/viewvc/base?view=revision&revision=230918[r230918]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:460
+msgid ""
+"A bug in the man:remquo[3] functions where the quotient did not always have "
+"the correct sign when the remainder was `0`, and another bug that the "
+"remainder and quotient were both off by a bit in certain cases involving "
+"subnormal remainders, have been fixed. Note that these bugs affected all "
+"platforms except amd64 and "
+"i386.[http://svn.freebsd.org/viewvc/base?view=revision&revision=234535[r234535]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:462
+msgid ""
+"The man:rtld[1] run-time linker now supports GCC's RELRO (RElocation "
+"Read-Only). This prevents the GOT (Global Offset Table) from being "
+"overwritten.[http://svn.freebsd.org/viewvc/base?view=revision&revision=231579[r231579]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:464
+msgid ""
+"The man:rtld[1] run-time linker now supports a GNU hash section "
+"(`DT_GNU_HASH`), which is a replacement of optional ELF hash "
+"section.[http://svn.freebsd.org/viewvc/base?view=revision&revision=235396[r235396]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:466
+msgid ""
+"The man:setbuf[1] utility and *libstdbuf* library have been added. This "
+"controls the default buffering behavior of standard stdio "
+"streams.[http://svn.freebsd.org/viewvc/base?view=revision&revision=235139[r235139]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:468
+msgid ""
+"The man:top[1] utility now correctly supports per-thread I/O statistics of "
+"ZFS in the `-m \tio` "
+"option.[http://svn.freebsd.org/viewvc/base?view=revision&revision=227702[r227702]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:470
+msgid ""
+"The man:unzip[1] utility now supports a `-Z` option for "
+"zipinfo.[http://svn.freebsd.org/viewvc/base?view=revision&revision=234330[r234330]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:472
+msgid ""
+"The man:xlocale[3] API has been implemented. This consists of `_l`-suffixed "
+"versions of various standard library functions that use the global locale, "
+"making them take an explicit locale parameter and allowing thread-safe "
+"extended locale support. Most of these APIs are required for IEEE Std "
+"1003.1-2008 (POSIX.1-2008 or ISO/IEC 9945:2009) compatibility, and are "
+"required by *libc++* and recent versions of *GNOME*. This implementation "
+"also supports several extensions for compatibility with Apple "
+"*Darwin*.[http://svn.freebsd.org/viewvc/base?view=revision&revision=235785[r235785]"
+msgstr ""
+
+#. type: Title ====
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:476
+#, no-wrap
+msgid "man:periodic[8] Scripts"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:479
+msgid ""
+"A new variable `daily_status_zfs_zpool_list_enable` has been added. It "
+"controls whether or not to list all of the ZFS pools in "
+"`periodic/daily/404.status-zfs`. The default value is "
+"`YES`.[http://svn.freebsd.org/viewvc/base?view=revision&revision=231721[r231721]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:481
+msgid ""
+"The default value of `daily_scrub_zfs_default_threshold` used in "
+"`periodic/daily/800.scrub-zfs` is now set to 35 "
+"days.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229381[r229381]"
+msgstr ""
+
+#. type: Title ====
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:485
+#, no-wrap
+msgid "man:rc[8] Scripts"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:488
+msgid ""
+"The `rc.d/nfsd` script now sets the `vfs.nfsd.server_max_nfsvers` "
+"man:sysctl[8] variable to `4` when `nfsv4_server_enable` is set to "
+"`YES`.[http://svn.freebsd.org/viewvc/base?view=revision&revision=227607[r227607]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:490
+msgid ""
+"A backwards compatibility issue when both `ipv6_enable=YES` and "
+"`ipv6_gateway_enable=YES` are defined at the same time has been "
+"fixed.[http://svn.freebsd.org/viewvc/base?view=revision&revision=242189[r242189]"
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:494
+#, no-wrap
+msgid "Contributed Software"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:497
+#, no-wrap
+msgid ""
+"*ISC BIND* has been updated to version "
+"9.8.3-P4.[http://svn.freebsd.org/viewvc/base?view=revision&revision=241417[r241417]\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:499
+msgid ""
+"The *compiler-rt* library, which provides low-level target-specific "
+"interfaces such as functions in *libgcc*, has been updated to revision "
+"147467.[http://svn.freebsd.org/viewvc/base?view=revision&revision=236018[r236018]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:501
+#, no-wrap
+msgid ""
+"*file* ( man:file[1]) has been updated to version "
+"5.11.[http://svn.freebsd.org/viewvc/base?view=revision&revision=237983[r237983]\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:503
+msgid ""
+"GNU man:gperf[1] has been updated to version 3.0.3 (the latest "
+"GPLv2-licensed "
+"version).[http://svn.freebsd.org/viewvc/base?view=revision&revision=230237[r230237]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:505
+#, no-wrap
+msgid ""
+"*libarchive*, man:bsdtar[1], and man:cpio[1] have been updated to version "
+"2.8.5.[http://svn.freebsd.org/viewvc/base?view=revision&revision=229588[r229588]\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:507
+msgid ""
+"The *libpcap* library has been updated to "
+"1.2.1.[http://svn.freebsd.org/viewvc/base?view=revision&revision=236167[r236167]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:509
+#, no-wrap
+msgid ""
+"*libstdc++* has been updated to revision 135556 of the `gcc-4_2-branch` (the "
+"last LGPLv2-licensed "
+"version).[http://svn.freebsd.org/viewvc/base?view=revision&revision=229551[r229551]\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:511
+msgid ""
+"The *LLVM* compiler infrastructure and *clang*, a C language family "
+"front-end, version 3.1 have been imported. Note that it is not used for "
+"building the FreeBSD base system by "
+"default.[http://svn.freebsd.org/viewvc/base?view=revision&revision=236144[r236144]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:513
+msgid ""
+"The `netcat` utility has been updated to version "
+"5.1.[http://svn.freebsd.org/viewvc/base?view=revision&revision=235971[r235971]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:515
+#, no-wrap
+msgid ""
+"*OpenSSL* has been updated to version "
+"0.9.8x.[http://svn.freebsd.org/viewvc/base?view=revision&revision=237998[r237998]\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:517
+msgid ""
+"The *tcpdump* (man:tcpdump[1]) utility has been updated to version "
+"4.2.1.[http://svn.freebsd.org/viewvc/base?view=revision&revision=236192[r236192]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:519
+msgid ""
+"The *TENEX C shell* (man:tcsh[1]) has been updated to version "
+"6.18.01.[http://svn.freebsd.org/viewvc/base?view=revision&revision=232633[r232633]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:521
+msgid ""
+"The *timezone* database has been updated to the *tzdata2012a* "
+"release.[http://svn.freebsd.org/viewvc/base?view=revision&revision=233447[r233447]"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:523
+msgid ""
+"The *zlib* library has been updated to version "
+"1.2.7.[http://svn.freebsd.org/viewvc/base?view=revision&revision=237691[r237691]"
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:526
+#, no-wrap
+msgid "[#releng]#2.5 Release Engineering and Integration#"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:529
+msgid ""
+"The supported version of the *KDE* desktop environment "
+"(http://svnweb.FreeBSD.org/ports/head/x11/kde4/pkg-descr?revision=HEAD[`x11/kde4`]) "
+"has been updated to 4.8.4."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:535
+#, no-wrap
+msgid "Upgrading from previous releases of FreeBSD"
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:538
+#, no-wrap
+msgid "Upgrading using man:freebsd-update[8] or a source-based procedure"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:541
+msgid ""
+"[amd64, i386] Beginning with FreeBSD 6.2-RELEASE, binary upgrades between "
+"RELEASE versions (and snapshots of the various security branches) are "
+"supported using the man:freebsd-update[8] utility. The binary upgrade "
+"procedure will update unmodified userland utilities, as well as an "
+"unmodified `GENERIC` kernel, distributed as a part of an official FreeBSD "
+"release. The man:freebsd-update[8] utility requires that the host being "
+"upgraded have Internet connectivity."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:543
+msgid ""
+"Source-based upgrades (those based on recompiling the FreeBSD base system "
+"from source code) from previous versions are supported using to the "
+"instructions in `/usr/src/UPDATING`."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:545
+msgid ""
+"For more specific information about upgrading instructions, see "
+"http://www.FreeBSD.org/releases/9.1R/installation/."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:548
+#, no-wrap
+msgid ""
+"*Important:* Upgrading FreeBSD should, of course, only be attempted after "
+"backing up _all_ data and configuration files.\n"
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:552
+#, no-wrap
+msgid "User-visible incompatibilities"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/relnotes-detailed.adoc:554
+msgid ""
+"FreeBSD 9.0 and later have several incompatibilities in system configuration "
+"which you might want to know before upgrading your system. _Please read this "
+"section and the "
+"http://www.freebsd.org/releases/9.0R/relnotes-detailed/#UPGRADE[Upgrading "
+"Section in 9.0-RELEASE Release Notes] carefully before submitting a problem "
+"report and/or posting a question to the FreeBSD mailing lists._"
+msgstr ""

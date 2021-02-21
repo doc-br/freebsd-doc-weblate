@@ -1,0 +1,171 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR The FreeBSD Project
+# This file is distributed under the same license as the FreeBSD Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FreeBSD Documentation VERSION\n"
+"POT-Creation-Date: 2021-02-21 18:57-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Title =
+#: website/content/en/releases/9.1R/errata.adoc:1
+#: website/content/en/releases/9.1R/errata.adoc:6
+#, no-wrap
+msgid "FreeBSD 9.1-RELEASE Errata"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/errata.adoc:10
+msgid ""
+"''''' This document lists errata items for FreeBSD 9.1-RELEASE, containing "
+"significant information discovered after the release or too late in the "
+"release cycle to be otherwise included in the release documentation. This "
+"information includes security advisories, as well as news relating to the "
+"software or documentation that could affect its operation or usability. An "
+"up-to-date version of this document should always be consulted before "
+"installing this version of FreeBSD."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/errata.adoc:12
+msgid ""
+"This errata document for FreeBSD 9.1-RELEASE will be maintained until the "
+"release of FreeBSD 9.2-RELEASE."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/errata.adoc:14
+#: website/content/en/releases/9.1R/errata.adoc:27
+#: website/content/en/releases/9.1R/errata.adoc:47
+msgid "'''''"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/9.1R/errata.adoc:16
+#, no-wrap
+msgid "Introduction"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/errata.adoc:19
+msgid ""
+"This errata document contains “late-breaking news” about FreeBSD "
+"9.1-RELEASE. Before installing this version, it is important to consult this "
+"document to learn about any post-release discoveries or problems that may "
+"already have been found and fixed."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/errata.adoc:21
+msgid ""
+"Any version of this errata document actually distributed with the release "
+"(for example, on a CDROM distribution) will be out of date by definition, "
+"but other copies are kept updated on the Internet and should be consulted as "
+"the “current errata” for this release. These other copies of the errata are "
+"located at http://www.FreeBSD.org/releases/, plus any sites which keep "
+"up-to-date mirrors of this location."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/errata.adoc:23
+msgid ""
+"Source and binary snapshots of FreeBSD 9.1-STABLE also contain up-to-date "
+"copies of this document (as of the time of the snapshot)."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/errata.adoc:25
+msgid ""
+"For a list of all FreeBSD CERT security advisories, see "
+"http://www.FreeBSD.org/security/ or ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/9.1R/errata.adoc:29
+#, no-wrap
+msgid "Security Advisories"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/errata.adoc:32
+msgid ""
+"Problems described in the following security advisories have been fixed in "
+"9.1-RELEASE. For more information, consult the individual advisories "
+"available from http://security.FreeBSD.org/."
+msgstr ""
+
+#. type: Table
+#: website/content/en/releases/9.1R/errata.adoc:44
+#, no-wrap
+msgid ""
+"|Advisory |Date |Topic\n"
+"|http://security.freebsd.org/advisories/FreeBSD-SA-12:01.openssl.asc[SA-12:01.openssl] "
+"|3 May 2012 |OpenSSL multiple vulnerabilities\n"
+"|http://security.freebsd.org/advisories/FreeBSD-SA-12:02.crypt.asc[SA-12:02.crypt] "
+"|30 May 2012 |Incorrect `crypt()` hashing\n"
+"|http://security.freebsd.org/advisories/FreeBSD-SA-12:03.bind.asc[SA-12:03.bind] "
+"|12 June 2012 |Incorrect handling of zero-length RDATA fields in "
+"man:named[8]\n"
+"|http://security.freebsd.org/advisories/FreeBSD-SA-12:04.sysret.asc[SA-12:04.sysret] "
+"|12 June 2012 |Privilege escalation when returning from kernel\n"
+"|http://security.freebsd.org/advisories/FreeBSD-SA-12:05.bind.asc[SA-12:05.bind] "
+"|6 August 2012 |man:named[8] DNSSEC validation Denial of Service\n"
+"|http://security.freebsd.org/advisories/FreeBSD-SA-12:06.bind.asc[SA-12:06.bind] "
+"|22 November 2012 |Multiple Denial of Service vulnerabilities with "
+"man:named[8]\n"
+"|http://security.freebsd.org/advisories/FreeBSD-SA-12:07.hostapd.asc[SA-12:07.hostapd] "
+"|22 November 2012 |Insufficient message length validation for EAP-TLS "
+"messages\n"
+"|http://security.freebsd.org/advisories/FreeBSD-SA-12:08.linux.asc[SA-12:08.linux] "
+"|22 November 2012 |Linux compatibility layer input validation error\n"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/9.1R/errata.adoc:49
+#, no-wrap
+msgid "Late-Breaking News"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/errata.adoc:52
+msgid ""
+"[November 2, 2012] The current man:mfi[4] driver has an overflow bug when "
+"handling disks larger than 2^32 sectors in SYSPD volumes, also known as "
+"JBODs, which will cause data corruption. This bug has been fixed on this "
+"FreeBSD-CURRENT but was too late for inclusion in this release. An Errata "
+"Notice for 9.1-RELEASE is planned."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/errata.adoc:54
+msgid ""
+"[December 25, 2012] The Installtion Instructions had the following wrong "
+"information about upgrading procedure. All of them have been fixed in the "
+"online version."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/errata.adoc:56
+msgid ""
+"The link URL of “upgrading section in the Release Notes”, branch names where "
+"upcoming Security Advisories or Errata Notices will be applied, and a "
+"command line argument of man:freebsd-update[8] were ones for 9.0-RELEASE, "
+"not for 9.1-RELEASE."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/9.1R/errata.adoc:56
+msgid ""
+"The list of releases supported by man:freebsd-update[8] utility were "
+"incorrect. For 9.X, The following versions are supported: `9.0-RELEASE`, "
+"`9.1-BETA1`, and `9.1-RC[123]`."
+msgstr ""

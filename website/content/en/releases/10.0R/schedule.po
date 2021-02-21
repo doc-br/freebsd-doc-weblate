@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR The FreeBSD Project
+# This file is distributed under the same license as the FreeBSD Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FreeBSD Documentation VERSION\n"
+"POT-Creation-Date: 2021-02-21 18:57-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Title =
+#: website/content/en/releases/10.0R/schedule.adoc:1
+#: website/content/en/releases/10.0R/schedule.adoc:12
+#, no-wrap
+msgid "FreeBSD 10.0 Release Process"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.0R/schedule.adoc:14
+#, no-wrap
+msgid "Introduction"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.0R/schedule.adoc:17
+msgid ""
+"This is the release schedule for FreeBSD {{< param localRel >}}. For more "
+"information about the release engineering process, please see the "
+"link:../../../releng/[Release Engineering] section of the web site."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.0R/schedule.adoc:19
+msgid ""
+"General discussions about the pending release and known issues should be "
+"sent to the public mailto:FreeBSD-stable@FreeBSD.org[freebsd-stable] mailing "
+"list. link:{handbook}#mfc-glossary[MFC] requests should be sent to "
+"re@FreeBSD.org."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.0R/schedule.adoc:20
+#, no-wrap
+msgid "Schedule"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.0R/schedule.adoc:23
+msgid ""
+"During the {{< param localBranchHead >}} freeze, the Release Engineering "
+"Team may create ALPHA snapshots to publish for testing purposes. As the "
+"frequency and total number of the ALPHA snapshots will depend on the length "
+"of time the {{< param localBranchHead >}} branch is frozen, no official "
+"schedule is provided."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.0R/schedule.adoc:25
+msgid ""
+"Announcements regarding the availability of the ALPHA snapshots will be sent "
+"to the mailto:freebsd-current@FreeBSD.org[freebsd-current] and "
+"mailto:freebsd-snapshots@FreeBSD.org[freebsd-snapshots] mailing lists."
+msgstr ""
+
+#. type: Table
+#: website/content/en/releases/10.0R/schedule.adoc:59
+#, no-wrap
+msgid ""
+"|Action |Expected |Actual |Description\n"
+"|Initial release schedule announcement |- |13 August 2013 |Release Engineers "
+"send announcement email to developers with a rough schedule.\n"
+"|Release schedule reminder |19 August 2013 |19 August 2013 |Release "
+"Engineers send reminder announcement e-mail to developers with updated "
+"schedule.\n"
+"|Code slush begins |24 August 2013 |24 August 2013 |Release Engineers "
+"announce that all further commits to the  {{< param localBranchStable >}} "
+"branch will not require explicit approval, however new features should be "
+"avoided.\n"
+"|Code freeze begins |7 September 2013 |7 September 2013 |Release Engineers "
+"announce that all further commits to the  {{< param localBranchHead >}} "
+"branch will require explicit approval. Certain blanket approvals will be "
+"granted for narrow areas of development, documentation improvements, etc.\n"
+"|KBI freeze begins |21 September 2013 |29 September 2013 |Release Engineers "
+"announce that all further commits to the  {{< param localBranchHead >}} "
+"branch will require explicit approval. Additionally, there can be no changes "
+"to the KBI until  {{< param localBranchHead >}} is branched to  {{< param "
+"localBranchStable >}}.\n"
+"| {{< param localBranchStable >}} branch |10 October 2013 |10 October 2013 "
+"|Subversion branch created; release engineering continues on this branch.\n"
+"|BETA1 builds begin |12 October 2013 |12 October 2013 |First beta test "
+"snapshot.\n"
+"|BETA2 builds begin |18 October 2013 |26 October 2013 |Second beta test "
+"snapshot.\n"
+"|BETA3 builds begin |- |3 November 2013 |Third beta test snapshot.\n"
+"|BETA4 builds begin |24 November 2013 |30 November 2013 |Fourth beta test "
+"snapshot.\n"
+"| {{< param localBranchReleng >}} branch |[.line-through]#25 October 2013# "
+"+\n"
+"7 December 2013 |7 December 2013 |Subversion branch created; future release "
+"engineering proceeds on this branch.\n"
+"|RC1 builds begin |[.line-through]#25 October 2013# +\n"
+"7 December 2013 |7 December 2013 |First release candidate.\n"
+"|RC2 builds begin |[.line-through]#2 November 2013# +\n"
+"14 December 2013 |15 December 2013 |Second release candidate.\n"
+"|RC3 builds begin |[.line-through]#10 November 2013# +\n"
+"21 December 2013 |23 December 2013 |Third release candidate.\n"
+"|RC4 builds begin |31 December 2013 |31 December 2013 |Fourth release "
+"candidate.\n"
+"|RC5 builds begin |8 January 2014 |8 January 2014 |Fifth release "
+"candidate.\n"
+"|RELEASE builds begin |[.line-through]#18 November 2013# +\n"
+"[.line-through]#28 December 2013# +\n"
+"[.line-through]#7 January 2014# +\n"
+"15 January 2014 |15 January 2014 |10.0-RELEASE build.\n"
+"|RELEASE announcement |[.line-through]#24 November 2013# +\n"
+"[.line-through]#2 January 2014# +\n"
+"[.line-through]#14 January 2014# +\n"
+"20 January 2014 |20 January 2014 |10.0-RELEASE press release.\n"
+"|Turn over to the secteam |- |- | {{< param localBranchReleng >}} branch is "
+"handed over to the FreeBSD Security Officer Team in one or two weeks after "
+"the announcement.\n"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.0R/schedule.adoc:61
+#, no-wrap
+msgid "Additional Information"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.0R/schedule.adoc:63
+msgid "link:../../[FreeBSD Release Engineering website]"
+msgstr ""

@@ -1,0 +1,553 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR The FreeBSD Project
+# This file is distributed under the same license as the FreeBSD Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FreeBSD Documentation VERSION\n"
+"POT-Creation-Date: 2021-02-21 18:57-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Title =
+#: website/content/en/releases/10.2R/errata.adoc:1
+#: website/content/en/releases/10.2R/errata.adoc:6
+#, no-wrap
+msgid "FreeBSD 10.2-RELEASE Errata"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.2R/errata.adoc:8
+#, no-wrap
+msgid "Abstract"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:11
+msgid ""
+"This document lists errata items for FreeBSD 10.2-RELEASE, containing "
+"significant information discovered after the release or too late in the "
+"release cycle to be otherwise included in the release documentation. This "
+"information includes security advisories, as well as news relating to the "
+"software or documentation that could affect its operation or usability. An "
+"up-to-date version of this document should always be consulted before "
+"installing this version of FreeBSD."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:13
+msgid ""
+"This errata document for FreeBSD 10.2-RELEASE will be maintained until the "
+"release of FreeBSD 10.3-RELEASE."
+msgstr ""
+
+#. type: Title ===
+#: website/content/en/releases/10.2R/errata.adoc:14
+#, no-wrap
+msgid "Table of Contents"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:17
+msgid "<<intro,Introduction>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:18
+msgid "<<security,Security Advisories>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:19
+msgid "<<errata,Errata Notices>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:20
+msgid "<<open-issues,Open Issues>>"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:21
+msgid "<<late-news,Late-Breaking News>>"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.2R/errata.adoc:23
+#, no-wrap
+msgid "Introduction"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:26
+msgid ""
+"This errata document contains \"late-breaking news\" about FreeBSD "
+"10.2-RELEASE Before installing this version, it is important to consult this "
+"document to learn about any post-release discoveries or problems that may "
+"already have been found and fixed."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:28
+msgid ""
+"Any version of this errata document actually distributed with the release "
+"(for example, on a CDROM distribution) will be out of date by definition, "
+"but other copies are kept updated on the Internet and should be consulted as "
+"the \"current errata\" for this release. These other copies of the errata "
+"are located at https://www.FreeBSD.org/releases/, plus any sites which keep "
+"up-to-date mirrors of this location."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:30
+msgid ""
+"Source and binary snapshots of FreeBSD 10.2-STABLE also contain up-to-date "
+"copies of this document (as of the time of the snapshot)."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:32
+msgid ""
+"For a list of all FreeBSD CERT security advisories, see "
+"https://www.FreeBSD.org/security/."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.2R/errata.adoc:34
+#, no-wrap
+msgid "Security Advisories"
+msgstr ""
+
+#. type: Table
+#: website/content/en/releases/10.2R/errata.adoc:54
+#, no-wrap
+msgid ""
+"|Advisory |Date |Topic\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-15:20.expat.asc[FreeBSD-SA-15:20.expat] "
+"|18 August 2015 |Fix multiple integer overflows in "
+"http://www.FreeBSD.org/cgi/man.cgi?query=libbsdxml&sektion=3[libbsdxml(3)].\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-15:22.openssh.asc[FreeBSD-SA-15:22.openssh] "
+"|25 August 2015 |Multiple vulnerabilities\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-15:24.rpcbind.asc[FreeBSD-SA-15:24.rpcbind] "
+"|29 September 2015 |Remote denial of service\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-15:25.ntp.asc[FreeBSD-SA-15:25.ntp] "
+"|26 October 2015 |Multiple vulnerabilities\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-15:26.openssl.asc[FreeBSD-SA-15:26.openssl] "
+"|5 December 2015 |Multiple vulnerabilities\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:01.sctp.asc[FreeBSD-SA-16:01.sctp] "
+"|14 January 2016 |ICMPv6 error message vulnerability\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:02.ntp.asc[FreeBSD-SA-16:02.ntp] "
+"|14 January 2016 |Panic threshold bypass vulnerability\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:03.linux.asc[FreeBSD-SA-16:03.linux] "
+"|14 January 2016 |Incorrect `futex` handling\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:04.linux.asc[FreeBSD-SA-16:04.linux] "
+"|14 January 2016 "
+"|http://www.FreeBSD.org/cgi/man.cgi?query=setgroups&sektion=2[setgroups(2)] "
+"system call vulnerability\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:05.tcp.asc[FreeBSD-SA-16:05.tcp] "
+"|14 January 2016 |MD5 signature denial of service\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:06.bsnmpd.asc[FreeBSD-SA-16:06.bsnmpd] "
+"|14 January 2016 |Insecure default configuration file permissions\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:07.openssh.asc[FreeBSD-SA-16:07.openssh] "
+"|14 January 2016 |[.application]#OpenSSH# client information leak\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:09.ntp.asc[FreeBSD-SA-16:09.ntp] "
+"|27 January 2016 |Multiple vulnerabilities.\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:10.linux.asc[FreeBSD-SA-16:10.linux] "
+"|27 January 2016 "
+"|http://www.FreeBSD.org/cgi/man.cgi?query=issetugid&sektion=2[issetugid(2)] "
+"system call vulnerability.\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-SA-16:11.openssl.asc[FreeBSD-SA-16:11.openssl] "
+"|30 January 2016 |SSLv2 cipher suite downgrade vulnerability.\n"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.2R/errata.adoc:57
+#, no-wrap
+msgid "Errata Notices"
+msgstr ""
+
+#. type: Table
+#: website/content/en/releases/10.2R/errata.adoc:74
+#, no-wrap
+msgid ""
+"|Errata |Date |Topic\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-15:11.toolchain.asc[FreeBSD-EN-15:11.toolchain] "
+"|18 August 2015 |Fix "
+"http://www.FreeBSD.org/cgi/man.cgi?query=make&sektion=1[make(1)] syntax "
+"errors when upgrading from FreeBSD 9.x and earlier.\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-15:12.netstat.asc[FreeBSD-EN-15:12.netstat] "
+"|18 August 2015 |Fix incorrect "
+"http://www.FreeBSD.org/cgi/man.cgi?query=netstat&sektion=1[netstat(1)] data "
+"handling on 32-bit systems.\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-15:13.vidcontrol.asc[FreeBSD-EN-15:13.vidcontrol] "
+"|18 August 2015 |Allow size argument to "
+"http://www.FreeBSD.org/cgi/man.cgi?query=vidcontrol&sektion=1[vidcontrol(1)] "
+"for "
+"http://www.FreeBSD.org/cgi/man.cgi?query=syscons&sektion=4[syscons(4)].\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-15:15.pkg.asc[FreeBSD-EN-15:15.pkg] "
+"|25 August 2015 |Insufficient check of supported "
+"http://www.FreeBSD.org/cgi/man.cgi?query=pkg&sektion=7[pkg(7)] signature "
+"methods.\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-15:16.pw.asc[FreeBSD-EN-15:16.pw] "
+"|16 September 2015 |Fix "
+"http://www.FreeBSD.org/cgi/man.cgi?query=pw&sektion=8[pw(8)] regression when "
+"creating numeric users or groups.\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-15:17.libc.asc[FreeBSD-EN-15:17.libc] "
+"|16 September 2015 |Fix libc handling of signals for multi-threaded "
+"processes.\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-15:18.pkg.asc[FreeBSD-EN-15:18.pkg] "
+"|16 September 2015 |Implement `pubkey` support for "
+"http://www.FreeBSD.org/cgi/man.cgi?query=pkg&sektion=7[pkg(7)] bootstrap.\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-15:19.kqueue.asc[FreeBSD-EN-15:19.kqueue] "
+"|4 November 2015 "
+"|http://www.FreeBSD.org/cgi/man.cgi?query=kqueue&sektion=2[kqueue(2)] write "
+"events never fire for files larger than 2GB.\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-15:20.vm.asc[FreeBSD-EN-15:20.vm] "
+"|4 November 2015 |Applications exiting due to segmentation violation on a "
+"correct memory address.\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-16:01.filemon.asc[FreeBSD-EN-16:01.filemon] "
+"|14 January 2016 |bmake and "
+"http://www.FreeBSD.org/cgi/man.cgi?query=filemon&sektion=4[filemon(4)] "
+"stability issues.\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-16:02.pf.asc[FreeBSD-EN-16:02.pf] "
+"|14 January 2016 |Invalid TCP checksum issue.\n"
+"|https://www.FreeBSD.org/security/advisories/FreeBSD-EN-16:03.yplib.asc[FreeBSD-EN-16:03.yplib] "
+"|14 January 2016 |YP/NIS library bug.\n"
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.2R/errata.adoc:77
+#, no-wrap
+msgid "Open Issues"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:80
+msgid ""
+"FreeBSD/i386 10.2-RELEASE running as a guest operating system on VirtualBox# "
+"can have a problem with disk I/O access. It depends on some specific "
+"hardware configuration and does not depend on a specific version of "
+"VirtualBox or host operating system."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:82
+msgid ""
+"It has been reported that instability may be present on virtual machines "
+"running on other hypervisors, such as Xen or KVM."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:84
+msgid ""
+"It causes various errors and makes FreeBSD quite unstable. Although the "
+"cause is still unclear, disabling unmapped I/O works as a workaround. To "
+"disable it, choose `Escape to loader prompt` in the boot menu and enter the "
+"following lines from "
+"http://www.FreeBSD.org/cgi/man.cgi?query=loader&sektion=8[loader(8)] prompt, "
+"after an `OK`:"
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/10.2R/errata.adoc:89
+#, no-wrap
+msgid ""
+"set vfs.unmapped_buf_allowed=0\n"
+"boot\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:92
+msgid ""
+"Note that the following line has to be added to `/boot/loader.conf` after a "
+"boot. It disables unmapped I/O at every boot:"
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/10.2R/errata.adoc:96
+#, no-wrap
+msgid "vfs.unmapped_buf_allowed=0\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:98
+msgid ""
+"FreeBSD/i386 10.2-RELEASE installed on ZFS may crash during boot when the "
+"ZFS pool mount is attempted while booting an unmodified `GENERIC` kernel."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:100
+msgid ""
+"As described in `/usr/src/UPDATING` entry `20121223`, rebuilding the kernel "
+"with `options KSTACK_PAGES=4` has been observed to resolve the boot-time "
+"crash. This, however, is not an ideal solution for inclusion in the "
+"`GENERIC` kernel configuration, as increasing `KSTACK_PAGES` implicitly "
+"decreases available usermode threads in an environment that is already "
+"resource-starved."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:102
+msgid ""
+"Taking into account the heavy resource requirements of ZFS, in addition to "
+"the i386-specific tuning requirements for general workloads, using ZFS with "
+"the FreeBSD/i386 `GENERIC` kernel is strongly discouraged."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:104
+msgid ""
+"If installing FreeBSD/i386 on ZFS, it is possible to configure the system "
+"after installation to increase the `KSTACK_PAGES`."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:106
+msgid ""
+"When prompted by "
+"http://www.FreeBSD.org/cgi/man.cgi?query=bsdinstall&sektion=8[bsdinstall(8)] "
+"to perform additional post-installation configuration to the system, select "
+"[.guibutton]#[ YES ]#."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:108
+msgid ""
+"This procedure requires the system sources available locally. If the `System "
+"source code` distribution was not selected during installation, it can be "
+"obtained using svnlite:"
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/10.2R/errata.adoc:113
+#, no-wrap
+msgid ""
+"# mkdir -p /usr/src\n"
+"# svnlite co svn://svn.freebsd.org/base/releng/10.2 /usr/src\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:116
+msgid "Build the `kernel-toolchain` required to rebuild the kernel:"
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/10.2R/errata.adoc:120
+#, no-wrap
+msgid "# make -C /usr/src kernel-toolchain\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:123
+msgid ""
+"Next, create a kernel configuration file to increase the `KSTACK_PAGES` "
+"option:"
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/10.2R/errata.adoc:127
+#, no-wrap
+msgid ""
+"# printf \"include GENERIC\\noptions KSTACK_PAGES=4\\n\" > "
+"/usr/src/sys/i386/conf/ZFS\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:130
+msgid "Then build and install the _`ZFS`_ kernel:"
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/10.2R/errata.adoc:135
+#, no-wrap
+msgid ""
+"# make -C /usr/src buildkernel KERNCONF=ZFS\n"
+"# make -C /usr/src installkernel KERNCONF=ZFS\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:141
+#, no-wrap
+msgid ""
+"*Warning*: +\n"
+"It is extremely important to take note that, by default, "
+"http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8[freebsd-update(8)] "
+"will install the `GENERIC` kernel configuration, and as such, "
+"http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8[freebsd-update(8)] "
+"consumers are strongly encouraged to avoid FreeBSD-provided kernel binary "
+"upgrades with such configurations.\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:143
+msgid ""
+"Due to an incompatibility between "
+"http://www.FreeBSD.org/cgi/man.cgi?query=bsdconfig&sektion=8[bsdconfig(8)] "
+"and http://www.FreeBSD.org/cgi/man.cgi?query=pkg&sektion=8[pkg(8)], packages "
+"included on the FreeBSD dvd installer will not be recognized by "
+"http://www.FreeBSD.org/cgi/man.cgi?query=bsdconfig&sektion=8[bsdconfig(8)]."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:145
+msgid ""
+"To install packages from the `dvd1.iso` installer, create the `/dist` target "
+"directory, and manually mount the `dvd1.iso` ISO:"
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/10.2R/errata.adoc:150
+#, no-wrap
+msgid ""
+"# mkdir -p /dist\n"
+"# mount -t cd9660 /dev/cd0 /dist\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:155
+#, no-wrap
+msgid ""
+"*Note*: +\n"
+"Be sure to use the correct `/dev` device path for the `dvd1.iso` ISO "
+"installer.\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:157
+msgid ""
+"Next, set `REPOS_DIR` to the path of the `repos/` directory within the "
+"installer so http://www.FreeBSD.org/cgi/man.cgi?query=pkg&sektion=8[pkg(8)] "
+"will use the correct repository metadata."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:159
+msgid "If using http://www.FreeBSD.org/cgi/man.cgi?query=sh&sektion=1[sh(1)]:"
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/10.2R/errata.adoc:163
+#, no-wrap
+msgid "# export REPOS_DIR=/dist/packages/repos\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:166
+msgid "If using http://www.FreeBSD.org/cgi/man.cgi?query=csh&sektion=1[csh(1)]:"
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/10.2R/errata.adoc:170
+#, no-wrap
+msgid "# setenv REPOS_DIR /dist/packages/repos\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:175
+#, no-wrap
+msgid ""
+"*Note*: +\n"
+"Keep in mind that `REPOS_DIR` will need to be set again after the current "
+"shell session is terminated, if continuing to use the packages provided on "
+"the `dvd1.iso` installer.\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:177
+msgid ""
+"Finally, bootstrap "
+"http://www.FreeBSD.org/cgi/man.cgi?query=pkg&sektion=8[pkg(8)] from the ISO, "
+"and install required packages:"
+msgstr ""
+
+#. type: delimited block - 4
+#: website/content/en/releases/10.2R/errata.adoc:182
+#, no-wrap
+msgid ""
+"# pkg bootstrap\n"
+"# pkg install xorg-server xorg gnome3 [...]\n"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:184
+msgid ""
+"An issue was discovered where the "
+"http://www.FreeBSD.org/cgi/man.cgi?query=netstat&sektion=1[netstat(1)] `-s` "
+"option will cause a segmentation fault on systems with `IPSEC` compiled into "
+"the kernel. The issue was resolved in the `stable/10` branch, and an Errata "
+"Notice is planned after 10.2-RELEASE is released."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:186
+msgid "[2015-08-19] Resolved as FreeBSD-EN-15:12."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:187
+msgid ""
+"An issue was discovered that causes "
+"http://www.FreeBSD.org/cgi/man.cgi?query=make&sektion=1[make(1)] to generate "
+"noisy output when doing source-based upgrades from FreeBSD 9.3 and "
+"earlier. The issue was reported in PR 202277, and after investigation and "
+"determining the issue does not cause source-based upgrades to fail, a "
+"post-release Errata Notice is planned."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:189
+msgid "[2015-08-19] Resolved as FreeBSD-EN-15:11."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:190
+msgid ""
+"An issue with FreeBSD virtual machines with vagrant was discovered that "
+"affects the VirtualBox where the virtual machine will not start on the "
+"initial boot invoked with `vagrant up`."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:192
+msgid ""
+"The issue is due to the virtual machine MAC being unset, as FreeBSD does not "
+"provide a default `Vagrantfile`."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:194
+msgid ""
+"It has been observed, however, that a subsequent invocation of `vagrant up` "
+"will allow the virtual machine to successfully boot, allowing access via "
+"`vagrant ssh`."
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:195
+msgid ""
+"[2015-08-16] An error was discovered in the release notes for FreeBSD "
+"10.2-RELEASE regarding the `drm` device driver. The entry for r282199 states "
+"the driver was updated to match the version Linux(R) 3.8.13 version, however "
+"the entry should have noted the change affects device-independent code, and "
+"does not bring the `drm` driver fully in line with the stated Linux(R) "
+"version."
+msgstr ""
+
+#. type: Title ==
+#: website/content/en/releases/10.2R/errata.adoc:197
+#, no-wrap
+msgid "Late-Breaking News"
+msgstr ""
+
+#. type: Plain text
+#: website/content/en/releases/10.2R/errata.adoc:199
+msgid "No news."
+msgstr ""
