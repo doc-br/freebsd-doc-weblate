@@ -1,0 +1,430 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR The FreeBSD Project
+# This file is distributed under the same license as the FreeBSD Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: FreeBSD Documentation VERSION\n"
+"POT-Creation-Date: 2021-02-21 18:54-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: YAML Front Matter: title
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:1
+#, no-wrap
+msgid "Chapter 5. The FreeBSD Documentation Build Process"
+msgstr ""
+
+#. type: Title =
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:8
+#, no-wrap
+msgid "The FreeBSD Documentation Build Process"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:24
+msgid "toc::[]"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:26
+msgid ""
+"This chapter covers organization of the documentation build process and how "
+"man:make[1] is used to control it."
+msgstr ""
+
+#. type: Title ==
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:28
+#, no-wrap
+msgid "Rendering AsciiDoc into Output"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:31
+msgid ""
+"Different types of output can be produced from a single AsciiDoc source "
+"file."
+msgstr ""
+
+#. type: Table
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:49
+#, no-wrap
+msgid ""
+"| Formats\n"
+"| File Type\n"
+"| Description\n"
+"\n"
+"|`html`\n"
+"|HTML\n"
+"|An `article` or `book` chapter.\n"
+"\n"
+"|`pdf`\n"
+"|PDF\n"
+"|Portable Document Format.\n"
+"\n"
+"|`epub`\n"
+"|EPUB\n"
+"|Electronic Publication. ePub file format.\n"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:52
+msgid ""
+"To render the documentation and the website use one of the following "
+"examples."
+msgstr ""
+
+#. type: Block title
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:54
+#, no-wrap
+msgid "Build the documentation"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:61
+#, no-wrap
+msgid ""
+"% cd ~/doc/documentation\n"
+"% make\n"
+msgstr ""
+
+#. type: Block title
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:65
+#, no-wrap
+msgid "Build the website"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:72
+#, no-wrap
+msgid ""
+"% cd ~/doc/website\n"
+"% make\n"
+msgstr ""
+
+#. type: Block title
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:76
+#, no-wrap
+msgid "Build the entire documentation project"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:83
+#, no-wrap
+msgid ""
+"% cd ~/doc\n"
+"% make -j2\n"
+msgstr ""
+
+#. type: Title ==
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:87
+#, no-wrap
+msgid "The FreeBSD Documentation Build Toolset"
+msgstr ""
+
+#. type: delimited block = 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:90
+msgid "These are the tools used to build and install the FDP documentation."
+msgstr ""
+
+#. type: delimited block = 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:92
+msgid "The primary build tool is man:make[1], specifically Berkeley Make."
+msgstr ""
+
+#. type: delimited block = 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:93
+msgid "Python is used to generate the Table of Contents and other related Tables."
+msgstr ""
+
+#. type: delimited block = 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:94
+msgid "Hugo"
+msgstr ""
+
+#. type: delimited block = 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:95
+msgid "AsciiDoctor"
+msgstr ""
+
+#. type: delimited block = 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:96
+msgid "Git"
+msgstr ""
+
+#. type: Title ==
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:98
+#, no-wrap
+msgid "Understanding the Makefile in the Documentation Tree"
+msgstr ""
+
+#. type: delimited block = 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:101
+msgid ""
+"There are three [.filename]#Makefile# files for building some or all of the "
+"documentation project."
+msgstr ""
+
+#. type: delimited block = 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:103
+msgid ""
+"The [.filename]#Makefile# in the [.filename]#documentation# directory will "
+"build only the documentation."
+msgstr ""
+
+#. type: delimited block = 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:104
+msgid ""
+"The [.filename]#Makefile# in the [.filename]#website# directory will build "
+"only the website."
+msgstr ""
+
+#. type: delimited block = 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:105
+msgid ""
+"The [.filename]#Makefile# at the top of the tree will build both the "
+"documentation and the website."
+msgstr ""
+
+#. type: delimited block = 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:107
+msgid ""
+"The [.filename]#Makefile# appearing in subdirectories also support `make "
+"run` to serve built content with Hugo's internal webserver. This webserver "
+"runs on port 1313 by default."
+msgstr ""
+
+#. type: Title ===
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:109
+#, no-wrap
+msgid "Documentation Makefile"
+msgstr ""
+
+#. type: delimited block = 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:112
+msgid "This [.filename]#Makefile# takes the following form:"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:129
+#, no-wrap
+msgid ""
+"# Generate the FreeBSD documentation\n"
+"#\n"
+"# Copyright (c) 2020-2021, The FreeBSD Documentation Project\n"
+"# Copyright (c) 2020-2021, Sergio Carlavilla <carlavilla@FreeBSD.org>\n"
+"#\n"
+"# Targets intended for use on the command line\n"
+"#\n"
+"# all (default)\t-\tgenerate the books TOC and compile all the "
+"documentation\n"
+"# run\t-\t\t\tserves the built documentation site for local browsing\n"
+"#\n"
+"# The run target uses hugo's built-in webserver to make the documentation "
+"site\n"
+"# available for local browsing.  The documentation should have been built "
+"prior\n"
+"# to attempting to use the `run` target.  By default, hugo will start its\n"
+"# webserver on port 1313.\n"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:131
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:197
+#, no-wrap
+msgid "MAINTAINER=carlavilla@FreeBSD.org <.>\n"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:135
+#, no-wrap
+msgid ""
+"PYTHON_CMD =\t/usr/local/bin/python3 <.>\n"
+"HUGO_CMD =\t/usr/local/bin/hugo <.>\n"
+"LANGUAGES =\ten,es,pt_BR,de,ja,zh_CN,zh_TW,ru,el,hu,it,mn,nl,pl,fr <.>\n"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:137
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:202
+#, no-wrap
+msgid ".ORDER: all run<.>\n"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:141
+#, no-wrap
+msgid ""
+".ORDER: starting-message generate-books-toc\n"
+".ORDER: starting-message build\n"
+".ORDER: generate-books-toc build\n"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:143
+#, no-wrap
+msgid "all: starting-message generate-books-toc build <.>\n"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:148
+#, no-wrap
+msgid ""
+"starting-message: .PHONY <.>\n"
+"\t@echo ---------------------------------------------------------------\n"
+"\t@echo                   Building the documentation\n"
+"\t@echo ---------------------------------------------------------------\n"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:155
+#, no-wrap
+msgid ""
+"generate-books-toc: .PHONY <.>\n"
+"\t${PYTHON_CMD} ./tools/books-toc-parts-creator.py -l ${LANGUAGES}\n"
+"\t${PYTHON_CMD} ./tools/books-toc-creator.py -l ${LANGUAGES}\n"
+"\t${PYTHON_CMD} ./tools/books-toc-figures-creator.py -l ${LANGUAGES}\n"
+"\t${PYTHON_CMD} ./tools/books-toc-tables-creator.py -l ${LANGUAGES}\n"
+"\t${PYTHON_CMD} ./tools/books-toc-examples-creator.py -l ${LANGUAGES}\n"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:158
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:219
+#, no-wrap
+msgid ""
+"run: .PHONY <.>\n"
+"\t${HUGO_CMD} server -D\n"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:161
+#, no-wrap
+msgid ""
+"build: .PHONY <.>\n"
+"\t${HUGO_CMD} --minify\n"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:173
+msgid ""
+"<.> The `MAINTAINER` flag specifies who is the maintainer of this Makefile.  "
+"<.> `PYTHON_CMD` flag specifies the location of the Python binary.  <.> "
+"`HUGO_CMD` flag specifies the location of the Hugo binary.  <.> `LANGUAGES` "
+"flag specifies in which languages the table of contents has to be "
+"generated.  <.> `.ORDER` directives are used to ensure multiple make jobs "
+"may run without problem.  <.> `all` target generates the books' tables of "
+"contents (\"TOCs\"), builds the documentation and puts the result in "
+"[.filename]#~/doc/documentation/public#.  <.> `starting-message` shows a "
+"message in the CLI to show the user that the process is running.  <.> "
+"`generate-books-toc` calls the scripts to generate the books TOCs.  <.> "
+"`run` runs hugo webserver on port 1313, or a random free port if that is "
+"already in use.  <.> `build` builds the documentation and puts the result in "
+"the [.filename]#~/doc/documentation/public#."
+msgstr ""
+
+#. type: Title ===
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:175
+#, no-wrap
+msgid "Website Makefile"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:178
+msgid "This [.filename]#Makefile# takes the form of:"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:195
+#, no-wrap
+msgid ""
+"# Generate the FreeBSD website\n"
+"#\n"
+"# Copyright (c) 2020-2021, The FreeBSD Documentation Project\n"
+"# Copyright (c) 2020-2021, Sergio Carlavilla <carlavilla@FreeBSD.org>\n"
+"#\n"
+"# Targets intended for use on the command line\n"
+"#\n"
+"# all (default)\t-\tgenerate the releases.toml and compile all the website\n"
+"# run\t-\t\t\tserves the built documentation site for local browsing\n"
+"#\n"
+"# The run target uses hugo's built-in webserver to make the documentation "
+"site\n"
+"# available for local browsing.  The documentation should have been built "
+"prior\n"
+"# to attempting to use the `run` target.  By default, hugo will start its\n"
+"# webserver on port 1313.\n"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:200
+#, no-wrap
+msgid ""
+"PYTHON_CMD =\t/usr/local/bin/python3 <.>\n"
+"HUGO_CMD =\t/usr/local/bin/hugo <.>\n"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:206
+#, no-wrap
+msgid ""
+".ORDER: starting-message generate-releases\n"
+".ORDER: starting-message build\n"
+".ORDER: generate-releases build\n"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:208
+#, no-wrap
+msgid "all: starting-message generate-releases run <.>\n"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:213
+#, no-wrap
+msgid ""
+"starting-message: .PHONY <.>\n"
+"\t@echo ---------------------------------------------------------------\n"
+"\t@echo                   Building the website\n"
+"\t@echo ---------------------------------------------------------------\n"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:216
+#, no-wrap
+msgid ""
+"generate-releases: .PHONY <.>\n"
+"\t${PYTHON_CMD} ./tools/releases-toml.py -p ./shared/releases.adoc\n"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:222
+#, no-wrap
+msgid ""
+"build: .PHONY <.>\n"
+"\t${HUGO_CMD}\n"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:232
+msgid ""
+"<.> The `MAINTAINER` flag specifies who is the maintainer of this Makefile.  "
+"<.> `PYTHON_CMD` flag specifies the location of the Python binary.  <.> "
+"`HUGO_CMD` flag specifies the location of the Hugo binary.  <.> `.ORDER` "
+"directives are used to ensure multiple make jobs may run without problem.  "
+"<.> `all` target builds the website and puts the result in "
+"[.filename]#~/doc/website/public#.  <.> `starting-message` shows a message "
+"in the CLI to show the user that the process is running.  <.> "
+"`generate-releases` calls the script used to convert from AsciiDoc variables "
+"to TOML variables. With this conversion, the releases variables can be used "
+"in AsciiDoc and in the Hugo custom templates.  <.> `run` runs hugo webserver "
+"on port 1313, or a random free port if that is already in use.  <.> `build` "
+"builds the website and puts the result in the "
+"[.filename]#~/doc/website/public#."
+msgstr ""
