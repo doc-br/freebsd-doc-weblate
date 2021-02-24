@@ -158,8 +158,8 @@ msgstr ""
 msgid ""
 "Ultimately, however, it comes down to the people actually doing the work. If "
 "using this model is particularly unsuited to the package being dealt with, "
-"exceptions to these rules may be granted only with the approval of the "
-"link:https://www.FreeBSD.org/administration/#t-core[Core Team] and with the "
+"exceptions to these rules may be granted only with the approval of the link:"
+"https://www.FreeBSD.org/administration/#t-core[Core Team] and with the "
 "general consensus of the other developers. The ability to maintain the "
 "package in the future will be a key issue in the decisions."
 msgstr ""
@@ -248,10 +248,10 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/policies/chapter.adoc:115
 msgid ""
-"I have my copy of NetBSD checked out from their GitHub mirror in "
-"`~/git/NetBSD`, so I'll update from there: Note that \"upstream\" might have "
-"added or removed files, so we want to make sure deletions are propagated as "
-"well. rsync(1) is commonly installed, so I'll use that."
+"I have my copy of NetBSD checked out from their GitHub mirror in `~/git/"
+"NetBSD`, so I'll update from there: Note that \"upstream\" might have added "
+"or removed files, so we want to make sure deletions are propagated as well. "
+"rsync(1) is commonly installed, so I'll use that."
 msgstr ""
 
 #. type: delimited block . 4
@@ -266,8 +266,7 @@ msgid ""
 "% git diff --staged\n"
 "...\n"
 "% git commit -m\"Vendor import of NetBSD's mtree at 2020-12-11\"\n"
-"[vendor/NetBSD/mtree 8e7aa25fcf1] Vendor import of NetBSD's mtree at "
-"2020-12-11\n"
+"[vendor/NetBSD/mtree 8e7aa25fcf1] Vendor import of NetBSD's mtree at 2020-12-11\n"
 " 7 files changed, 114 insertions(+), 82 deletions(-)\n"
 "% git tag -a vendor/NetBSD/mtree/20201211\n"
 msgstr ""
@@ -322,8 +321,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/policies/chapter.adoc:151
 msgid ""
-"Now you need to update the mtree in FreeBSD. The sources live in "
-"`contrib/mtree` since it is upstream software."
+"Now you need to update the mtree in FreeBSD. The sources live in `contrib/"
+"mtree` since it is upstream software."
 msgstr ""
 
 #. type: delimited block . 4
@@ -533,7 +532,8 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/policies/chapter.adoc:241
-msgid "At this point, you should have a pristine copy of glorbnitz ready to commit."
+msgid ""
+"At this point, you should have a pristine copy of glorbnitz ready to commit."
 msgstr ""
 
 #. type: delimited block . 4
@@ -546,8 +546,8 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/policies/chapter.adoc:249
 msgid ""
 "As above, I used `-m` for simplicity, but you should likely create a commit "
-"message that explains what a Glorb is and why you'd use a Nitz to get "
-"it. Not everybody will know."
+"message that explains what a Glorb is and why you'd use a Nitz to get it. "
+"Not everybody will know."
 msgstr ""
 
 #. type: Title ====
@@ -573,9 +573,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/policies/chapter.adoc:261
 msgid ""
-"Note the vendor/glorbnitz branch is in the repo. At this point the "
-"`/some/where/glorbnitz` can be deleted, if you like. It was only a means to "
-"an end."
+"Note the vendor/glorbnitz branch is in the repo. At this point the `/some/"
+"where/glorbnitz` can be deleted, if you like. It was only a means to an end."
 msgstr ""
 
 #. type: Title ====
@@ -651,8 +650,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/policies/chapter.adoc:292
 msgid ""
-"All the right files, and none of the wrong ones, were merged into "
-"contrib/glorbnitz."
+"All the right files, and none of the wrong ones, were merged into contrib/"
+"glorbnitz."
 msgstr ""
 
 #. type: Plain text
@@ -684,9 +683,9 @@ msgid ""
 "It might occasionally be necessary to include an encumbered file in the "
 "FreeBSD source tree. For example, if a device requires a small piece of "
 "binary code to be loaded to it before the device will operate, and we do not "
-"have the source to that code, then the binary file is said to be "
-"encumbered. The following policies apply to including encumbered files in "
-"the FreeBSD source tree."
+"have the source to that code, then the binary file is said to be encumbered. "
+"The following policies apply to including encumbered files in the FreeBSD "
+"source tree."
 msgstr ""
 
 #. type: Plain text
@@ -712,16 +711,16 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/policies/chapter.adoc:308
 msgid ""
-"Any encumbered file requires specific approval from the "
-"link:https://www.FreeBSD.org/administration/#t-core[Core Team] before it is "
-"added to the repository."
+"Any encumbered file requires specific approval from the link:https://www."
+"FreeBSD.org/administration/#t-core[Core Team] before it is added to the "
+"repository."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/policies/chapter.adoc:309
 msgid ""
-"Encumbered files go in [.filename]#src/contrib# or "
-"[.filename]#src/sys/contrib#."
+"Encumbered files go in [.filename]#src/contrib# or [.filename]#src/sys/"
+"contrib#."
 msgstr ""
 
 #. type: Plain text
@@ -807,13 +806,14 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/policies/chapter.adoc:327
 msgid ""
 "FreeBSD tries to maintain ABI stability. Most libraries in the system use "
-"symbol versioning to remain compatible with old versions of the "
-"library. When updating libraries with versioned symbols:"
+"symbol versioning to remain compatible with old versions of the library. "
+"When updating libraries with versioned symbols:"
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/policies/chapter.adoc:329
-msgid "Create new symbols in the symbol map for otherwise incompatible changes."
+msgid ""
+"Create new symbols in the symbol map for otherwise incompatible changes."
 msgstr ""
 
 #. type: Plain text
@@ -865,7 +865,8 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/policies/chapter.adoc:339
-msgid "For non-symvers libraries, avoid changes that would require a version bump."
+msgid ""
+"For non-symvers libraries, avoid changes that would require a version bump."
 msgstr ""
 
 #. type: Plain text
@@ -959,7 +960,8 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/policies/chapter.adoc:353
-msgid "Ensure that the compatibility ports / packages are updated as appropriate"
+msgid ""
+"Ensure that the compatibility ports / packages are updated as appropriate"
 msgstr ""
 
 #. type: Plain text
@@ -980,6 +982,6 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/policies/chapter.adoc:356
 msgid ""
 "Changing the ABI is allowed, otherwise FreeBSD cannot evolve. However, the "
-"project has generally chosen to pay the added cost of retaining ABI "
-"backward-compatibility."
+"project has generally chosen to pay the added cost of retaining ABI backward-"
+"compatibility."
 msgstr ""
