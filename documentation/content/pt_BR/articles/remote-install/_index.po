@@ -63,8 +63,7 @@ msgid ""
 "In some cases, these companies will install your preferred Linux(R) "
 "distribution if you request it. Using this option, we will attempt to "
 "install FreeBSD. In other cases, they may offer a rescue system which would "
-"be used in an emergency. It is possible to use this for our purposes as "
-"well."
+"be used in an emergency. It is possible to use this for our purposes as well."
 msgstr ""
 
 #. type: Plain text
@@ -209,8 +208,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:87
 msgid ""
-"Before booting mfsBSD, a few important configuration options have to be "
-"set. The most important that we have to get right is, naturally, the network "
+"Before booting mfsBSD, a few important configuration options have to be set. "
+"The most important that we have to get right is, naturally, the network "
 "setup. The most suitable method to configure networking options depends on "
 "whether we know beforehand the type of the network interface we will use, "
 "and the network interface driver to be loaded for our hardware. We will see "
@@ -251,8 +250,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:102
 msgid ""
-"Do not forget to add the `defaultrouter` information to "
-"[.filename]#conf/rc.conf#:"
+"Do not forget to add the `defaultrouter` information to [.filename]#conf/rc."
+"conf#:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -270,8 +269,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:111
 msgid ""
-"When the network interface driver is known, it is more convenient to use "
-"[.filename]#conf/rc.conf# for networking options. The syntax of this file is "
+"When the network interface driver is known, it is more convenient to use [."
+"filename]#conf/rc.conf# for networking options. The syntax of this file is "
 "the same as the one used in the standard man:rc.conf[5] file of FreeBSD."
 msgstr ""
 
@@ -306,9 +305,9 @@ msgstr ""
 msgid ""
 "The first step is to mount the FreeBSD installation CD, or the installation "
 "ISO image to [.filename]#/cdrom#. For the sake of example, in this article "
-"we will assume that you have downloaded the FreeBSD 10.1-RELEASE "
-"ISO. Mounting this ISO image to the [.filename]#/cdrom# directory is easy "
-"with the man:mdconfig[8] utility:"
+"we will assume that you have downloaded the FreeBSD 10.1-RELEASE ISO. "
+"Mounting this ISO image to the [.filename]#/cdrom# directory is easy with "
+"the man:mdconfig[8] utility:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -446,17 +445,17 @@ msgstr ""
 msgid ""
 "Next, create slices and label them with your preferred tool. While it is "
 "considered easier to use `sysinstall`, a powerful and also probably less "
-"buggy method will be to use standard text-based UNIX(R) tools, such as "
-"man:fdisk[8] and man:bsdlabel[8], which will also be covered in this "
-"section. The former option is well documented in the "
-"link:{handbook}#install-steps[Installing FreeBSD] chapter of the FreeBSD "
-"Handbook. As it was mentioned in the introduction, this article will present "
-"how to set up a system with RAID-1 and ZFS capabilities. Our set up will "
-"consist of a small man:gmirror[8] mirrored [.filename]#/# (root), "
-"[.filename]#/usr# and [.filename]#/var# dataset, and the rest of the disk "
-"space will be allocated for a man:zpool[8] mirrored ZFS file system. Please "
-"note, that the ZFS file system will be configured after the FreeBSD "
-"operating system is successfully installed and booted."
+"buggy method will be to use standard text-based UNIX(R) tools, such as man:"
+"fdisk[8] and man:bsdlabel[8], which will also be covered in this section. "
+"The former option is well documented in the link:{handbook}#install-"
+"steps[Installing FreeBSD] chapter of the FreeBSD Handbook. As it was "
+"mentioned in the introduction, this article will present how to set up a "
+"system with RAID-1 and ZFS capabilities. Our set up will consist of a small "
+"man:gmirror[8] mirrored [.filename]#/# (root), [.filename]#/usr# and [."
+"filename]#/var# dataset, and the rest of the disk space will be allocated "
+"for a man:zpool[8] mirrored ZFS file system. Please note, that the ZFS file "
+"system will be configured after the FreeBSD operating system is successfully "
+"installed and booted."
 msgstr ""
 
 #. type: Plain text
@@ -476,8 +475,7 @@ msgid ""
 "# bsdlabel -wB /dev/ad0s1 <.>\n"
 "# bsdlabel -wB /dev/ad1s1\n"
 "# bsdlabel -e /dev/ad0s1 <.>\n"
-"# bsdlabel /dev/ad0s1 > /tmp/bsdlabel.txt && bsdlabel -R /dev/ad1s1 "
-"/tmp/bsdlabel.txt <.>\n"
+"# bsdlabel /dev/ad0s1 > /tmp/bsdlabel.txt && bsdlabel -R /dev/ad1s1 /tmp/bsdlabel.txt <.>\n"
 "# gmirror label root /dev/ad[01]s1a <.>\n"
 "# gmirror label var /dev/ad[01]s1d\n"
 "# gmirror label usr /dev/ad[01]s1e\n"
@@ -503,11 +501,11 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:214
 msgid ""
-"<.> Now, manually edit the label of the given disk. Refer to the "
-"man:bsdlabel[8] manual page in order to find out how to create "
-"partitions. Create partitions `a` for [.filename]#/# (root) file system, `b` "
-"for swap, `d` for [.filename]#/var#, `e` for [.filename]#/usr# and finally "
-"`f` which will later be used for ZFS."
+"<.> Now, manually edit the label of the given disk. Refer to the man:"
+"bsdlabel[8] manual page in order to find out how to create partitions. "
+"Create partitions `a` for [.filename]#/# (root) file system, `b` for swap, "
+"`d` for [.filename]#/var#, `e` for [.filename]#/usr# and finally `f` which "
+"will later be used for ZFS."
 msgstr ""
 
 #. type: Plain text
@@ -525,9 +523,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:220
 msgid ""
-"<.> Note that `-F` is used for the swap partition. This instructs "
-"man:gmirror[8] to assume that the device is in the consistent state after "
-"the power/system failure."
+"<.> Note that `-F` is used for the swap partition. This instructs man:"
+"gmirror[8] to assume that the device is in the consistent state after the "
+"power/system failure."
 msgstr ""
 
 #. type: Plain text
@@ -564,9 +562,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:236
 msgid ""
-"When you are done, start man:sysinstall[8]. Select the "
-"[.guimenuitem]#Custom# installation from the main menu. Select "
-"[.guimenuitem]#Options# and press kbd:[Enter]. With the help of arrow keys, "
+"When you are done, start man:sysinstall[8]. Select the [."
+"guimenuitem]#Custom# installation from the main menu. Select [."
+"guimenuitem]#Options# and press kbd:[Enter]. With the help of arrow keys, "
 "move the cursor on the `Install Root` item, press kbd:[Space] and change it "
 "to [.filename]#/mnt#. Press kbd:[Enter] to submit your changes and exit the "
 "[.guimenuitem]#Options# menu by pressing kbd:[q]."
@@ -606,8 +604,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:253
 msgid ""
-"Finally, perform the system installation by selecting the last option, "
-"[.guimenuitem]#Commit#. Exit `sysinstall` when it finishes the installation."
+"Finally, perform the system installation by selecting the last option, [."
+"guimenuitem]#Commit#. Exit `sysinstall` when it finishes the installation."
 msgstr ""
 
 #. type: Title ===
@@ -657,8 +655,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:275
 msgid ""
-"Create the [.filename]#/etc/rc.conf#, [.filename]#/etc/resolv.conf# and "
-"[.filename]#/etc/fstab# files. Do not forget to properly set the network "
+"Create the [.filename]#/etc/rc.conf#, [.filename]#/etc/resolv.conf# and [."
+"filename]#/etc/fstab# files. Do not forget to properly set the network "
 "information and to enable sshd in [.filename]#/etc/rc.conf#. The contents of "
 "[.filename]#/etc/fstab# will be similar to the following:"
 msgstr ""
@@ -667,8 +665,7 @@ msgstr ""
 #: documentation/content/en/articles/remote-install/_index.adoc:284
 #, no-wrap
 msgid ""
-"# Device                Mountpoint      FStype  Options         Dump    "
-"Pass#\n"
+"# Device                Mountpoint      FStype  Options         Dump    Pass#\n"
 "/dev/mirror/swap        none            swap    sw              0       0\n"
 "/dev/mirror/root        /               ufs     rw              1       1\n"
 "/dev/mirror/usr         /usr            ufs     rw              2       2\n"
@@ -731,17 +728,17 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:308
 msgid ""
-"If your system survived the reboot, it should now be possible to log "
-"in. Welcome to the fresh FreeBSD installation, performed remotely without "
-"the use of a remote console!"
+"If your system survived the reboot, it should now be possible to log in. "
+"Welcome to the fresh FreeBSD installation, performed remotely without the "
+"use of a remote console!"
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:310
 msgid ""
-"The only remaining step is to configure man:zpool[8] and create some "
-"man:zfs[8] file systems. Creating and administering ZFS is very "
-"straightforward. First, create a mirrored pool:"
+"The only remaining step is to configure man:zpool[8] and create some man:"
+"zfs[8] file systems. Creating and administering ZFS is very straightforward. "
+"First, create a mirrored pool:"
 msgstr ""
 
 #. type: delimited block . 4
