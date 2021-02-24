@@ -54,8 +54,8 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/quick-porting/chapter.adoc:44
 msgid ""
-"It is recommended to set the `DEVELOPER` man:make[1] variable in "
-"[.filename]#/etc/make.conf# before getting into porting."
+"It is recommended to set the `DEVELOPER` man:make[1] variable in [."
+"filename]#/etc/make.conf# before getting into porting."
 msgstr ""
 
 #. type: delimited block . 4
@@ -140,9 +140,8 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/quick-porting/chapter.adoc:84
 msgid ""
 "There are two description files that are required for any port, whether they "
-"actually package or not. They are [.filename]#pkg-descr# and "
-"[.filename]#pkg-plist#. Their [.filename]#pkg-# prefix distinguishes them "
-"from other files."
+"actually package or not. They are [.filename]#pkg-descr# and [.filename]#pkg-"
+"plist#. Their [.filename]#pkg-# prefix distinguishes them from other files."
 msgstr ""
 
 #. type: Title ===
@@ -260,7 +259,8 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/quick-porting/chapter.adoc:136
-msgid "Refer to the man:pkg-create[8] manual page for details on the packing list."
+msgid ""
+"Refer to the man:pkg-create[8] manual page for details on the packing list."
 msgstr ""
 
 #. type: delimited block = 4
@@ -285,8 +285,8 @@ msgid ""
 "There is only one case when [.filename]#pkg-plist# can be omitted from a "
 "port. If the port installs just a handful of files, list them in "
 "`PLIST_FILES`, within the port's [.filename]#Makefile#. For instance, we "
-"could get along without [.filename]#pkg-plist# in the above "
-"[.filename]#oneko# port by adding these lines to the [.filename]#Makefile#:"
+"could get along without [.filename]#pkg-plist# in the above [."
+"filename]#oneko# port by adding these lines to the [.filename]#Makefile#:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -306,16 +306,16 @@ msgstr ""
 msgid ""
 "Usage of `PLIST_FILES` should not be abused. When looking for the origin of "
 "a file, people usually try to grep through the [.filename]#pkg-plist# files "
-"in the ports tree. Listing files in `PLIST_FILES` in the "
-"[.filename]#Makefile# makes that search more difficult."
+"in the ports tree. Listing files in `PLIST_FILES` in the [."
+"filename]#Makefile# makes that search more difficult."
 msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/quick-porting/chapter.adoc:168
 msgid ""
 "If a port needs to create an empty directory, or creates directories outside "
-"of [.filename]#${PREFIX}# during installation, refer to "
-"<<plist-dir-cleaning,Cleaning Up Empty Directories>> for more information."
+"of [.filename]#${PREFIX}# during installation, refer to <<plist-dir-cleaning,"
+"Cleaning Up Empty Directories>> for more information."
 msgstr ""
 
 #. type: delimited block = 4
@@ -349,8 +349,8 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/quick-porting/chapter.adoc:186
 msgid ""
-"Just type `make makesum`. The ports framework will automatically generate "
-"[.filename]#distinfo#. Do not try to generate the file manually."
+"Just type `make makesum`. The ports framework will automatically generate [."
+"filename]#distinfo#. Do not try to generate the file manually."
 msgstr ""
 
 #. type: Title ==
@@ -368,12 +368,14 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/quick-porting/chapter.adoc:193
-msgid "[.filename]#pkg-plist# does not contain anything not installed by the port."
+msgid ""
+"[.filename]#pkg-plist# does not contain anything not installed by the port."
 msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/quick-porting/chapter.adoc:194
-msgid "[.filename]#pkg-plist# contains everything that is installed by the port."
+msgid ""
+"[.filename]#pkg-plist# contains everything that is installed by the port."
 msgstr ""
 
 #. type: delimited block = 4
@@ -394,16 +396,16 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/quick-porting/chapter.adoc:197
 msgid ""
 "The port only has access to network resources during the `fetch` target "
-"phase. This is important for package builders, such as "
-"package:ports-mgmt/poudriere[]."
+"phase. This is important for package builders, such as package:ports-mgmt/"
+"poudriere[]."
 msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/quick-porting/chapter.adoc:198
 msgid ""
 "Make sure that `make package` can be run as a normal user (that is, not as "
-"`root`). If that fails, the software may need to be patched. See also "
-"<<uses-fakeroot,`fakeroot`>> and <<uses-uidfix,`uidfix`>>."
+"`root`). If that fails, the software may need to be patched. See also <<uses-"
+"fakeroot,`fakeroot`>> and <<uses-uidfix,`uidfix`>>."
 msgstr ""
 
 #. type: Block title
@@ -501,8 +503,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/quick-porting/chapter.adoc:232
 msgid ""
-"We do not need the [.filename]#work# directory or the "
-"[.filename]#pkgname.txz# package, so delete them now."
+"We do not need the [.filename]#work# directory or the [.filename]#pkgname."
+"txz# package, so delete them now."
 msgstr ""
 
 #. type: delimited block = 4
@@ -568,8 +570,8 @@ msgstr ""
 msgid ""
 "After submitting the port, please be patient. The time needed to include a "
 "new port in FreeBSD can vary from a few days to a few months. A simple "
-"search form of the Problem Report database can be searched at "
-"https://bugs.freebsd.org/bugzilla/query.cgi[]."
+"search form of the Problem Report database can be searched at https://bugs."
+"freebsd.org/bugzilla/query.cgi[]."
 msgstr ""
 
 #. type: delimited block = 4
@@ -583,9 +585,9 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/quick-porting/chapter.adoc:268
 msgid ""
 "After looking at the new port, we will reply if necessary, and commit it to "
-"the tree. The submitter's name will also be added to the list of "
-"link:{contributors}#contrib-additional[Additional FreeBSD Contributors] and "
-"other files."
+"the tree. The submitter's name will also be added to the list of link:"
+"{contributors}#contrib-additional[Additional FreeBSD Contributors] and other "
+"files."
 msgstr ""
 
 #. type: delimited block = 4
@@ -619,6 +621,6 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/quick-porting/chapter.adoc:284
 msgid ""
-"[.filename]#oneko.shar# can then be submitted in the same way as "
-"[.filename]#oneko.diff# above."
+"[.filename]#oneko.shar# can then be submitted in the same way as [."
+"filename]#oneko.diff# above."
 msgstr ""
