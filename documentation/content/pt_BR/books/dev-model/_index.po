@@ -79,8 +79,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:74
 msgid ""
-"Ingvil Hovig "
-"mailto:ingvil.hovig@skatteetaten.no[ingvil.hovig@skatteetaten.no]"
+"Ingvil Hovig mailto:ingvil.hovig@skatteetaten.no[ingvil.hovig@skatteetaten."
+"no]"
 msgstr ""
 
 #. type: Plain text
@@ -346,9 +346,8 @@ msgstr ""
 msgid ""
 "The project can be grouped into four distinct separate parts, and most "
 "developers will focus their involvement in one part of FreeBSD.  The four "
-"parts are kernel development, userland development, ports and "
-"documentation. When referring to the base system, both kernel and userland "
-"is meant."
+"parts are kernel development, userland development, ports and documentation. "
+"When referring to the base system, both kernel and userland is meant."
 msgstr ""
 
 #. type: Plain text
@@ -463,8 +462,8 @@ msgid ""
 "entries in the file fetched by portsdb by April 1st, 2005. portsdb is a part "
 "of the port sysutils/portupgrade.] , ranging from web servers to games, "
 "programming languages and most of the application types that are in use on "
-"modern computers. Ports will be discussed further in the section "
-"<<sub-project-ports>>."
+"modern computers. Ports will be discussed further in the section <<sub-"
+"project-ports>>."
 msgstr ""
 
 #. type: Title ==
@@ -563,10 +562,10 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:257
 msgid ""
 "As each commit represents an increment, this is a massively incremental "
-"model. The commits are in fact so frequent that during one year "
-"footnote:[The period from January 1st, 2004 to December 31st, 2004 was "
-"examined to find this number.] , 85427 commits were made, making a daily "
-"average of 233 commits."
+"model. The commits are in fact so frequent that during one year footnote:"
+"[The period from January 1st, 2004 to December 31st, 2004 was examined to "
+"find this number.] , 85427 commits were made, making a daily average of 233 "
+"commits."
 msgstr ""
 
 #. type: Plain text
@@ -587,11 +586,11 @@ msgid ""
 "brackets can be seen as further verification and system integration. This "
 "system integration is also important to see if a change is accepted by the "
 "community. Up until the code is committed, the developer is free to choose "
-"how much to communicate about it to the rest of the project. In order for "
-"-CURRENT to work as a buffer (so that bright ideas that had some "
-"undiscovered drawbacks can be backed out) the minimum time a commit should "
-"be in -CURRENT before merging it to -STABLE is 3 days. Such a merge is "
-"referred to as an MFC (Merge From Current)."
+"how much to communicate about it to the rest of the project. In order for -"
+"CURRENT to work as a buffer (so that bright ideas that had some undiscovered "
+"drawbacks can be backed out) the minimum time a commit should be in -CURRENT "
+"before merging it to -STABLE is 3 days. Such a merge is referred to as an "
+"MFC (Merge From Current)."
 msgstr ""
 
 #. type: Plain text
@@ -628,21 +627,21 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:269
 msgid ""
 "There is no standards to how design should be done, nor is design collected "
-"in a centralised repository. The main design is that of "
-"4.4BSD. footnote:[According to Kirk McKusick, after 20 years of developing "
-"UNIX operating systems, the interfaces are for the most part figured "
-"out. There is therefore no need for much design. However, new applications "
-"of the system and new hardware leads to some implementations being more "
-"beneficial than those that used to be preferred. One example is the "
-"introduction of web browsing that made the normal TCP/IP connection a short "
-"burst of data rather than a steady stream over a longer period of time.] As "
-"design is a part of the \"Code\" bracket in Jørgenssen's model, it is up to "
-"every developer or sub-project how this should be done. Even if the design "
-"should be stored in a central repository, the output from the design stages "
-"would be of limited use as the differences of methodologies would make them "
-"poorly if at all interoperable. For the overall design of the project, the "
-"project relies on the sub-projects to negotiate fit interfaces between each "
-"other rather than to dictate interfacing."
+"in a centralised repository. The main design is that of 4.4BSD. footnote:"
+"[According to Kirk McKusick, after 20 years of developing UNIX operating "
+"systems, the interfaces are for the most part figured out. There is "
+"therefore no need for much design. However, new applications of the system "
+"and new hardware leads to some implementations being more beneficial than "
+"those that used to be preferred. One example is the introduction of web "
+"browsing that made the normal TCP/IP connection a short burst of data rather "
+"than a steady stream over a longer period of time.] As design is a part of "
+"the \"Code\" bracket in Jørgenssen's model, it is up to every developer or "
+"sub-project how this should be done. Even if the design should be stored in "
+"a central repository, the output from the design stages would be of limited "
+"use as the differences of methodologies would make them poorly if at all "
+"interoperable. For the overall design of the project, the project relies on "
+"the sub-projects to negotiate fit interfaces between each other rather than "
+"to dictate interfacing."
 msgstr ""
 
 #. type: Title ===
@@ -665,12 +664,12 @@ msgid ""
 "In the following release tree, arrows that follow one-another in a "
 "particular direction represent a branch. Boxes with full lines and diamonds "
 "represent official releases. Boxes with dotted lines represent the "
-"development branch at that time. Security branches are represented by "
-"ovals. Diamonds differ from boxes in that they represent a fork, meaning a "
-"place where a branch splits into two branches where one of the branches "
-"becomes a sub-branch. For example, at 4.0-RELEASE the 4.0-CURRENT branch "
-"split into 4-STABLE and 5.0-CURRENT. At 4.5-RELEASE, the branch forked off a "
-"security branch called RELENG_4_5."
+"development branch at that time. Security branches are represented by ovals. "
+"Diamonds differ from boxes in that they represent a fork, meaning a place "
+"where a branch splits into two branches where one of the branches becomes a "
+"sub-branch. For example, at 4.0-RELEASE the 4.0-CURRENT branch split into 4-"
+"STABLE and 5.0-CURRENT. At 4.5-RELEASE, the branch forked off a security "
+"branch called RELENG_4_5."
 msgstr ""
 
 #. type: Block title
@@ -705,19 +704,15 @@ msgid ""
 "\n"
 "|3.0 Current (development branch)\n"
 "|\n"
-"|Releng 3 branches: 3.0 Release to 3.5 Release, leading to 3.5.1 Release and "
-"the subsequent 3 Stable branch \n"
+"|Releng 3 branches: 3.0 Release to 3.5 Release, leading to 3.5.1 Release and the subsequent 3 Stable branch \n"
 "\n"
 "|4.0 Current (development branch)\n"
 "|3.1 Release\n"
-"|Releng 4 branches: 4.1 Release to 4.6 Release (and 4.6.2 Release), then 4.7 "
-"Release to 4.11 Release (all starting at 4.3 Release also leading to a "
-"Releng_4_n branch), and the subsequent 4 Release branch \n"
+"|Releng 4 branches: 4.1 Release to 4.6 Release (and 4.6.2 Release), then 4.7 Release to 4.11 Release (all starting at 4.3 Release also leading to a Releng_4_n branch), and the subsequent 4 Release branch \n"
 "\n"
 "|5.0 Current (development branch)\n"
 "|4.0 Release\n"
-"|Releng 5 branches: 5.0 Release to 5.4 Release (all except 5.0 and 5.3 also "
-"leading to a Releng_5_n branch), and the subsequent 5 Release branch \n"
+"|Releng 5 branches: 5.0 Release to 5.4 Release (all except 5.0 and 5.3 also leading to a Releng_5_n branch), and the subsequent 5 Release branch \n"
 "\n"
 "|6.0 Current (development branch)\n"
 "|5.3 Release\n"
@@ -733,22 +728,22 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:314
 msgid ""
 "The latest -CURRENT version is always referred to as -CURRENT, while the "
-"latest -STABLE release is always referred to as -STABLE. In this figure, "
-"-STABLE refers to 4-STABLE while -CURRENT refers to 5.0-CURRENT following "
-"5.0-RELEASE. [<<freebsd-releng, FreeBSD, 2002E>>]"
+"latest -STABLE release is always referred to as -STABLE. In this figure, -"
+"STABLE refers to 4-STABLE while -CURRENT refers to 5.0-CURRENT following 5.0-"
+"RELEASE. [<<freebsd-releng, FreeBSD, 2002E>>]"
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:316
 msgid ""
-"A \"major release\" is always made from the -CURRENT branch. However, the "
-"-CURRENT branch does not need to fork at that point in time, but can focus "
-"on stabilising. An example of this is that following 3.0-RELEASE, "
-"3.1-RELEASE was also a continuation of the -CURRENT-branch, and -CURRENT did "
-"not become a true development branch until this version was released and the "
-"3-STABLE branch was forked. When -CURRENT returns to becoming a development "
-"branch, it can only be followed by a major release. 5-STABLE is predicted to "
-"be forked off 5.0-CURRENT at around 5.3-RELEASE. It is not until 5-STABLE is "
+"A \"major release\" is always made from the -CURRENT branch. However, the -"
+"CURRENT branch does not need to fork at that point in time, but can focus on "
+"stabilising. An example of this is that following 3.0-RELEASE, 3.1-RELEASE "
+"was also a continuation of the -CURRENT-branch, and -CURRENT did not become "
+"a true development branch until this version was released and the 3-STABLE "
+"branch was forked. When -CURRENT returns to becoming a development branch, "
+"it can only be followed by a major release. 5-STABLE is predicted to be "
+"forked off 5.0-CURRENT at around 5.3-RELEASE. It is not until 5-STABLE is "
 "forked that the development branch will be branded 6.0-CURRENT."
 msgstr ""
 
@@ -768,12 +763,12 @@ msgid ""
 "has been made, it becomes a \"security branch\". This is meant for "
 "organisations that do not want to follow the -STABLE branch and the "
 "potential new/changed features it offers, but instead require an absolutely "
-"stable environment, only updating to implement security "
-"updates. footnote:[There is a terminology overlap with respect to the word "
-"\"stable\", which leads to some confusion. The -STABLE branch is still a "
-"development branch, whose goal is to be useful for most people. If it is "
-"never acceptable for a system to get changes that are not announced at the "
-"time it is deployed, that system should run a security branch.]"
+"stable environment, only updating to implement security updates. footnote:"
+"[There is a terminology overlap with respect to the word \"stable\", which "
+"leads to some confusion. The -STABLE branch is still a development branch, "
+"whose goal is to be useful for most people. If it is never acceptable for a "
+"system to get changes that are not announced at the time it is deployed, "
+"that system should run a security branch.]"
 msgstr ""
 
 #. type: Plain text
@@ -841,8 +836,8 @@ msgid ""
 "Clouds of development efforts hang over the project where developers use the "
 "development models they see fit. The product of their work is then "
 "integrated into -CURRENT where it undergoes parallel debugging and is "
-"finally merged from -CURRENT into -STABLE. Security fixes are merged from "
-"-STABLE to the security branches."
+"finally merged from -CURRENT into -STABLE. Security fixes are merged from -"
+"STABLE to the security branches."
 msgstr ""
 
 #. type: Plain text
@@ -905,10 +900,9 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:356
 msgid ""
 "A person who has the required privileges to add their code or documentation "
-"to the repository.  A committer has made a commit within the past 12 "
-"months. [<<freebsd-developer-handbook, FreeBSD, 2000A>>] An active committer "
-"is a committer who has made an average of one commit per month during that "
-"time."
+"to the repository.  A committer has made a commit within the past 12 months. "
+"[<<freebsd-developer-handbook, FreeBSD, 2000A>>] An active committer is a "
+"committer who has made an average of one commit per month during that time."
 msgstr ""
 
 #. type: Plain text
@@ -1014,9 +1008,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:386
 msgid ""
-"Hat held by: The DocEng team "
-"mailto:doceng@FreeBSD.org[doceng@FreeBSD.org]. The "
-"https://www.freebsd.org/internal/doceng/[ DocEng Charter]."
+"Hat held by: The DocEng team mailto:doceng@FreeBSD.org[doceng@FreeBSD.org]. "
+"The https://www.freebsd.org/internal/doceng/[ DocEng Charter]."
 msgstr ""
 
 #. type: Title ====
@@ -1037,8 +1030,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:393
 msgid ""
-"Hat currently held by: the Postmaster Team "
-"mailto:postmaster@FreeBSD.org[postmaster@FreeBSD.org]."
+"Hat currently held by: the Postmaster Team mailto:postmaster@FreeBSD."
+"org[postmaster@FreeBSD.org]."
 msgstr ""
 
 #. type: Title ====
@@ -1054,7 +1047,8 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:400
-msgid "Setting, publishing and following a release schedule for official releases"
+msgid ""
+"Setting, publishing and following a release schedule for official releases"
 msgstr ""
 
 #. type: Plain text
@@ -1091,9 +1085,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:409
 msgid ""
-"Hat held by: the Release Engineering team "
-"mailto:re@FreeBSD.org[re@FreeBSD.org]. The "
-"https://www.freebsd.org/releng/charter/[ Release Engineering Charter]."
+"Hat held by: the Release Engineering team mailto:re@FreeBSD.org[re@FreeBSD."
+"org]. The https://www.freebsd.org/releng/charter/[ Release Engineering "
+"Charter]."
 msgstr ""
 
 #. type: Title ====
@@ -1148,10 +1142,10 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:426
 msgid ""
 "The Security Officer's main responsibility is to coordinate information "
-"exchange with others in the security community and in the FreeBSD "
-"project. The Security Officer is also responsible for taking action when "
-"security problems are reported and promoting proactive development behavior "
-"when it comes to security."
+"exchange with others in the security community and in the FreeBSD project. "
+"The Security Officer is also responsible for taking action when security "
+"problems are reported and promoting proactive development behavior when it "
+"comes to security."
 msgstr ""
 
 #. type: Plain text
@@ -1161,9 +1155,8 @@ msgid ""
 "people with malicious intent before a patch is available, only the Security "
 "Officer, consisting of an officer, a deputy and two <<role-core>> members, "
 "receive sensitive information about security issues. However, to create or "
-"implement a patch, the Security Officer has the Security Officer Team "
-"mailto:security-team@FreeBSD.org[security-team@FreeBSD.org] to help do the "
-"work."
+"implement a patch, the Security Officer has the Security Officer Team mailto:"
+"security-team@FreeBSD.org[security-team@FreeBSD.org] to help do the work."
 msgstr ""
 
 #. type: Title ====
@@ -1186,8 +1179,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:435
 msgid ""
-"Hat held by: the Source Repository Manager "
-"mailto:clusteradm@FreeBSD.org[clusteradm@FreeBSD.org]."
+"Hat held by: the Source Repository Manager mailto:clusteradm@FreeBSD."
+"org[clusteradm@FreeBSD.org]."
 msgstr ""
 
 #. type: Title ====
@@ -1229,7 +1222,8 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:449
-msgid "Hat held by: the FreeBSD Webmasters mailto:www@FreeBSD.org[www@FreeBSD.org]."
+msgid ""
+"Hat held by: the FreeBSD Webmasters mailto:www@FreeBSD.org[www@FreeBSD.org]."
 msgstr ""
 
 #. type: Title ====
@@ -1249,9 +1243,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:456
 msgid ""
-"Hat held by: the Ports Management Team "
-"mailto:portmgr@FreeBSD.org[portmgr@FreeBSD.org]. The "
-"https://www.freebsd.org/portmgr/charter/[Portmgr charter]."
+"Hat held by: the Ports Management Team mailto:portmgr@FreeBSD."
+"org[portmgr@FreeBSD.org]. The https://www.freebsd.org/portmgr/charter/"
+"[Portmgr charter]."
 msgstr ""
 
 #. type: Title ====
@@ -1273,8 +1267,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:463
 msgid ""
-"Hat currently held by: Garrett Wollman "
-"mailto:wollman@FreeBSD.org[wollman@FreeBSD.org]."
+"Hat currently held by: Garrett Wollman mailto:wollman@FreeBSD."
+"org[wollman@FreeBSD.org]."
 msgstr ""
 
 #. type: Title ====
@@ -1313,8 +1307,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:477
 msgid ""
-"Hat currently held by: the Bugmeister Team "
-"mailto:bugmeister@FreeBSD.org[bugmeister@FreeBSD.org]."
+"Hat currently held by: the Bugmeister Team mailto:bugmeister@FreeBSD."
+"org[bugmeister@FreeBSD.org]."
 msgstr ""
 
 #. type: Title ====
@@ -1333,9 +1327,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:484
 msgid ""
-"Hat held by: the Donations Liaison Office "
-"mailto:donations@FreeBSD.org[donations@FreeBSD.org]. The "
-"https://www.freebsd.org/donations/[ Donations Liaison Charter]."
+"Hat held by: the Donations Liaison Office mailto:donations@FreeBSD."
+"org[donations@FreeBSD.org]. The https://www.freebsd.org/donations/"
+"[ Donations Liaison Charter]."
 msgstr ""
 
 #. type: Title ====
@@ -1360,7 +1354,8 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:493
-msgid "Hat held by: the Admin team mailto:admin@FreeBSD.org[admin@FreeBSD.org]."
+msgid ""
+"Hat held by: the Admin team mailto:admin@FreeBSD.org[admin@FreeBSD.org]."
 msgstr ""
 
 #. type: Title ===
@@ -1483,9 +1478,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:537
 msgid ""
-"When a contributor is given committer status, they are assigned a "
-"mentor. The committer who recommended the new committer will, in the general "
-"case, take it upon themselves to be the new committers mentor."
+"When a contributor is given committer status, they are assigned a mentor. "
+"The committer who recommended the new committer will, in the general case, "
+"take it upon themselves to be the new committers mentor."
 msgstr ""
 
 #. type: Plain text
@@ -1540,9 +1535,9 @@ msgstr ""
 msgid ""
 "Recall that a committer is considered to be someone who has committed code "
 "during the past 12 months. However, it is not until after 18 months of "
-"inactivity have passed that commit privileges are eligible to be "
-"revoked. [<<freebsd-expiration-policy, FreeBSD, 2002H>>] There are, however, "
-"no automatic procedures for doing this. For reactions concerning commit "
+"inactivity have passed that commit privileges are eligible to be revoked. "
+"[<<freebsd-expiration-policy, FreeBSD, 2002H>>] There are, however, no "
+"automatic procedures for doing this. For reactions concerning commit "
 "privileges not triggered by time, see <<process-reactions,section 1.5.8>>."
 msgstr ""
 
@@ -1742,7 +1737,8 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:595
-msgid "[<<freebsd-committer, FreeBSD, 2001>>] [<<jorgensen2001, Jørgensen, 2001>>]"
+msgid ""
+"[<<freebsd-committer, FreeBSD, 2001>>] [<<jorgensen2001, Jørgensen, 2001>>]"
 msgstr ""
 
 #. type: Title ===
@@ -1773,10 +1769,10 @@ msgstr ""
 msgid ""
 "Only committers can be elected into core. The candidates need to submit "
 "their candidacy at least one week before the election starts, but can refine "
-"their statements until the voting starts. They are presented in the "
-"http://election.uk.freebsd.org/candidates.html[candidates list]. When "
-"writing their election statements, the candidates must answer a few standard "
-"questions submitted by the election manager."
+"their statements until the voting starts. They are presented in the http://"
+"election.uk.freebsd.org/candidates.html[candidates list]. When writing their "
+"election statements, the candidates must answer a few standard questions "
+"submitted by the election manager."
 msgstr ""
 
 #. type: Plain text
@@ -1790,10 +1786,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:608
 msgid ""
-"When voting, the committer may vote once in support of up to nine "
-"nominees. The voting is done over a period of four weeks with reminders "
-"being posted on \"developers\" mailing list that is available to all "
-"committers."
+"When voting, the committer may vote once in support of up to nine nominees. "
+"The voting is done over a period of four weeks with reminders being posted "
+"on \"developers\" mailing list that is available to all committers."
 msgstr ""
 
 #. type: Plain text
@@ -1864,13 +1859,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:632
 msgid ""
-"Within the project there are sub-projects that are working on new "
-"features. These projects are generally done by one person [<<jorgensen2001, "
-"Jørgensen, 2001>>]. Every project is free to organise development as it sees "
-"fit. However, when the project is merged to the -CURRENT branch it must "
-"follow the project guidelines. When the code has been well tested in the "
-"-CURRENT branch and deemed stable enough and relevant to the -STABLE branch, "
-"it is merged to the -STABLE branch."
+"Within the project there are sub-projects that are working on new features. "
+"These projects are generally done by one person [<<jorgensen2001, Jørgensen, "
+"2001>>]. Every project is free to organise development as it sees fit. "
+"However, when the project is merged to the -CURRENT branch it must follow "
+"the project guidelines. When the code has been well tested in the -CURRENT "
+"branch and deemed stable enough and relevant to the -STABLE branch, it is "
+"merged to the -STABLE branch."
 msgstr ""
 
 #. type: Plain text
@@ -1892,12 +1887,12 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:636
 msgid ""
 "Requirements analysis happens in two ways. The requests that come in are "
-"discussed on mailing lists, both within the main project and in the "
-"sub-project that the request belongs to or is spawned by the "
-"request. Furthermore, individual developers on the sub-project will evaluate "
-"the feasibility of the requests and determine the prioritisation between "
-"them. Other than archives of the discussions that have taken place, no "
-"outcome is created by this phase that is merged into the main project."
+"discussed on mailing lists, both within the main project and in the sub-"
+"project that the request belongs to or is spawned by the request. "
+"Furthermore, individual developers on the sub-project will evaluate the "
+"feasibility of the requests and determine the prioritisation between them. "
+"Other than archives of the discussions that have taken place, no outcome is "
+"created by this phase that is merged into the main project."
 msgstr ""
 
 #. type: Plain text
@@ -1953,9 +1948,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:647
 msgid ""
-"The main bulk of work that is put into the FreeBSD project is "
-"maintenance. [<<jorgensen2001, Jørgensen, 2001>>] has made a figure showing "
-"the life cycle of changes."
+"The main bulk of work that is put into the FreeBSD project is maintenance. "
+"[<<jorgensen2001, Jørgensen, 2001>>] has made a figure showing the life "
+"cycle of changes."
 msgstr ""
 
 #. type: Plain text
@@ -1964,9 +1959,9 @@ msgid ""
 "Here \"development release\" refers to the -CURRENT branch while "
 "\"production release\" refers to the -STABLE branch. The \"pre-commit test\" "
 "is the functional testing by peer developers when asked to do so or trying "
-"out the code to determine the status of the sub-project. \"Parallel "
-"debugging\" is the functional testing that can trigger more review, and "
-"debugging when the code is included in the -CURRENT branch."
+"out the code to determine the status of the sub-project. \"Parallel debugging"
+"\" is the functional testing that can trigger more review, and debugging "
+"when the code is included in the -CURRENT branch."
 msgstr ""
 
 #. type: Plain text
@@ -2001,12 +1996,12 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:692
 msgid ""
-"Before FreeBSD 10, FreeBSD included a problem reporting tool called "
-"`send-pr`. Problems include bug reports, feature requests, feature "
-"enhancements and notices of new versions of external software that are "
-"included in the project. Although `send-pr` is available, users and "
-"developers are encouraged to submit issues using our "
-"https://bugs.freebsd.org/submit/[ problem report form]."
+"Before FreeBSD 10, FreeBSD included a problem reporting tool called `send-"
+"pr`. Problems include bug reports, feature requests, feature enhancements "
+"and notices of new versions of external software that are included in the "
+"project. Although `send-pr` is available, users and developers are "
+"encouraged to submit issues using our https://bugs.freebsd.org/submit/"
+"[ problem report form]."
 msgstr ""
 
 #. type: Plain text
@@ -2014,19 +2009,19 @@ msgstr ""
 msgid ""
 "Problem reports are sent to an email address where it is inserted into the "
 "Problem Reports maintenance database. A <<role-bugbuster>> classifies the "
-"problem and sends it to the correct group or maintainer within the "
-"project. After someone has taken responsibility for the report, the report "
-"is being analysed. This analysis includes verifying the problem and thinking "
-"out a solution for the problem. Often feedback is required from the report "
+"problem and sends it to the correct group or maintainer within the project. "
+"After someone has taken responsibility for the report, the report is being "
+"analysed. This analysis includes verifying the problem and thinking out a "
+"solution for the problem. Often feedback is required from the report "
 "originator or even from the FreeBSD community. Once a patch for the problem "
 "is made, the originator may be asked to try it out. Finally, the working "
 "patch is integrated into the project, and documented if applicable. It there "
-"goes through the regular maintenance cycle as described in section "
-"<<model-maintenance>>. These are the states a problem report can be in: "
-"open, analyzed, feedback, patched, suspended and closed. The suspended state "
-"is for when further progress is not possible due to the lack of information "
-"or for when the task would require so much work that nobody is working on it "
-"at the moment."
+"goes through the regular maintenance cycle as described in section <<model-"
+"maintenance>>. These are the states a problem report can be in: open, "
+"analyzed, feedback, patched, suspended and closed. The suspended state is "
+"for when further progress is not possible due to the lack of information or "
+"for when the task would require so much work that nobody is working on it at "
+"the moment."
 msgstr ""
 
 #. type: Block title
@@ -2126,8 +2121,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:723
 msgid ""
-"It is important that you cannot be suspended for making technical "
-"errors. All penalties come from breaking social etiquette."
+"It is important that you cannot be suspended for making technical errors. "
+"All penalties come from breaking social etiquette."
 msgstr ""
 
 #. type: Plain text
@@ -2146,14 +2141,13 @@ msgstr ""
 msgid ""
 "The FreeBSD project has a Release Engineering team with a principal release "
 "engineer that is responsible for creating releases of FreeBSD that can be "
-"brought out to the user community via the net or sold in retail "
-"outlets. Since FreeBSD is available on multiple platforms and releases for "
-"the different architectures are made available at the same time, the team "
-"has one person in charge of each architecture. Also, there are roles in the "
-"team responsible for coordinating quality assurance efforts, building a "
-"package set and for having an updated set of documents. When referring to "
-"the release engineer, a representative for the release engineering team is "
-"meant."
+"brought out to the user community via the net or sold in retail outlets. "
+"Since FreeBSD is available on multiple platforms and releases for the "
+"different architectures are made available at the same time, the team has "
+"one person in charge of each architecture. Also, there are roles in the team "
+"responsible for coordinating quality assurance efforts, building a package "
+"set and for having an updated set of documents. When referring to the "
+"release engineer, a representative for the release engineering team is meant."
 msgstr ""
 
 #. type: Plain text
@@ -2165,11 +2159,10 @@ msgid ""
 "features are allowed to be committed to the branch without the release "
 "engineers' explicit consent. Code-freeze means no changes to the code (like "
 "bugs-fixes) are allowed to be committed without the release engineers' "
-"explicit consent. This feature- and code-freeze is known as "
-"stabilising. During the release process, the release engineer has the full "
-"authority to revert to older versions of code and thus \"back out\" changes "
-"should they find that the changes are not suitable to be included in the "
-"release."
+"explicit consent. This feature- and code-freeze is known as stabilising. "
+"During the release process, the release engineer has the full authority to "
+"revert to older versions of code and thus \"back out\" changes should they "
+"find that the changes are not suitable to be included in the release."
 msgstr ""
 
 #. type: Plain text
@@ -2209,20 +2202,20 @@ msgid ""
 "days, the developers merge what changes they have had in -CURRENT that they "
 "want to have in the release to the release branch. When this period is over, "
 "the code enters a 15 day code freeze in which only bug fixes, documentation "
-"updates, security-related fixes and minor device driver changes are "
-"allowed. These changes must be approved by the release engineer in "
-"advance. At the beginning of the last 15 day period a release candidate is "
-"created for widespread testing. Updates are less likely to be allowed during "
-"this period, except for important bug fixes and security updates. In this "
-"final period, all releases are considered release candidates. At the end of "
-"the release process, a release is created with the new version number, "
-"including binary distributions on web sites and the creation of CD-ROM "
-"images. However, the release is not considered \"really released\" until a "
-"<<tool-pgp>>-signed message stating exactly that, is sent to the mailing "
-"list freebsd-announce; anything labelled as a \"release\" before that may "
-"well be in-process and subject to change before the PGP-signed message is "
-"sent. footnote:[Many commercial vendors use these images to create CD-ROMs "
-"that are sold in retail outlets.]."
+"updates, security-related fixes and minor device driver changes are allowed. "
+"These changes must be approved by the release engineer in advance. At the "
+"beginning of the last 15 day period a release candidate is created for "
+"widespread testing. Updates are less likely to be allowed during this "
+"period, except for important bug fixes and security updates. In this final "
+"period, all releases are considered release candidates. At the end of the "
+"release process, a release is created with the new version number, including "
+"binary distributions on web sites and the creation of CD-ROM images. "
+"However, the release is not considered \"really released\" until a <<tool-"
+"pgp>>-signed message stating exactly that, is sent to the mailing list "
+"freebsd-announce; anything labelled as a \"release\" before that may well be "
+"in-process and subject to change before the PGP-signed message is sent. "
+"footnote:[Many commercial vendors use these images to create CD-ROMs that "
+"are sold in retail outlets.]."
 msgstr ""
 
 #. type: Plain text
@@ -2235,8 +2228,8 @@ msgid ""
 "performance tweaks should be kept to a minimum. Four weeks prior to the "
 "release, an official beta version is made available. Two weeks prior to "
 "release, the code is officially branched into a new version. This version is "
-"given release candidate status, and as with the release engineering of "
-"-STABLE, the code freeze of the release candidate is hardened. However, "
+"given release candidate status, and as with the release engineering of -"
+"STABLE, the code freeze of the release candidate is hardened. However, "
 "development on the main development branch can continue. Other than these "
 "differences, the release engineering processes are alike."
 msgstr ""
@@ -2244,13 +2237,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:747
 #, no-wrap
-msgid ""
-"*.0 releases go into their own branch and are aimed mainly at early "
-"adopters. The branch then goes through a period of stabilisation, and it is "
-"not until the <<role-releng, Release Engineering Team>> decides the demands "
-"to stability have been satisfied that the branch becomes -STABLE and "
-"-CURRENT targets the next major version. While this for the majority has "
-"been with *.1 versions, this is not a demand. \n"
+msgid "*.0 releases go into their own branch and are aimed mainly at early adopters. The branch then goes through a period of stabilisation, and it is not until the <<role-releng, Release Engineering Team>> decides the demands to stability have been satisfied that the branch becomes -STABLE and -CURRENT targets the next major version. While this for the majority has been with *.1 versions, this is not a demand. \n"
 msgstr ""
 
 #. type: Plain text
@@ -2377,9 +2364,9 @@ msgid ""
 "mailing lists set up and used by other people and projects in the FreeBSD "
 "community. General lists are lists for the general public, technical lists "
 "are mainly for the development of specific areas of interest, and closed "
-"lists are for internal communication not intended for the general "
-"public. The majority of all the communication in the project goes through "
-"these 85 lists [<<ref-bsd-handbook, FreeBSD, 2003A>>, Appendix C]."
+"lists are for internal communication not intended for the general public. "
+"The majority of all the communication in the project goes through these 85 "
+"lists [<<ref-bsd-handbook, FreeBSD, 2003A>>, Appendix C]."
 msgstr ""
 
 #. type: Title ===
@@ -2412,12 +2399,12 @@ msgstr ""
 msgid ""
 "Secure Shell is a standard for securely logging into a remote system and for "
 "executing commands on the remote system. It allows other connections, called "
-"tunnels, to be established and protected between the two involved "
-"systems. This standard exists in two primary versions, and only version two "
-"is used for the FreeBSD Project. The most common implementation of the "
-"standard is OpenSSH that is a part of the project's main distribution. Since "
-"its source is updated more often than FreeBSD releases, the latest version "
-"is also available in the ports tree."
+"tunnels, to be established and protected between the two involved systems. "
+"This standard exists in two primary versions, and only version two is used "
+"for the FreeBSD Project. The most common implementation of the standard is "
+"OpenSSH that is a part of the project's main distribution. Since its source "
+"is updated more often than FreeBSD releases, the latest version is also "
+"available in the ports tree."
 msgstr ""
 
 #. type: Title ==
@@ -2603,8 +2590,8 @@ msgid ""
 "As the external software described by the port often is under continued "
 "development, the amount of work required to maintain the ports is already "
 "large, and increasing. This has led to the ports part of the FreeBSD project "
-"gaining a more empowered structure, and is more and more becoming a "
-"sub-project of the FreeBSD project."
+"gaining a more empowered structure, and is more and more becoming a sub-"
+"project of the FreeBSD project."
 msgstr ""
 
 #. type: Plain text
@@ -2687,8 +2674,8 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:939
 msgid ""
 "Like the ports sub-project, the Documentation project can appoint "
-"documentation committers without FreeBSD Core's "
-"approval. [<<freebsd-doceng-charter, FreeBSD, 2003B>>]."
+"documentation committers without FreeBSD Core's approval. [<<freebsd-doceng-"
+"charter, FreeBSD, 2003B>>]."
 msgstr ""
 
 #. type: Plain text
@@ -2717,16 +2704,16 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:953
 msgid ""
 "[Saers, 2003] Niklas Saers. Copyright © 2003. A project model for the "
-"FreeBSD Project. Candidatus Scientiarum "
-"thesis. http://niklas.saers.com/thesis."
+"FreeBSD Project. Candidatus Scientiarum thesis. http://niklas.saers.com/"
+"thesis."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:956
 msgid ""
 "[Jørgensen, 2001] Niels Jørgensen. Copyright © 2001. Putting it All in the "
-"Trunk. Incremental Software Development in the FreeBSD Open Source "
-"Project. http://www.dat.ruc.dk/~nielsj/research/papers/freebsd.pdf."
+"Trunk. Incremental Software Development in the FreeBSD Open Source Project. "
+"http://www.dat.ruc.dk/~nielsj/research/papers/freebsd.pdf."
 msgstr ""
 
 #. type: Plain text
@@ -2741,8 +2728,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:962
 msgid ""
-"[FreeBSD, 2000A] Copyright © 2002 The FreeBSD Project. Core "
-"Bylaws. https://www.freebsd.org/internal/bylaws/."
+"[FreeBSD, 2000A] Copyright © 2002 The FreeBSD Project. Core Bylaws. https://"
+"www.freebsd.org/internal/bylaws/."
 msgstr ""
 
 #. type: Plain text
@@ -2780,54 +2767,54 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:977
 msgid ""
 "[FreeBSD, 2001] Copyright © 2001 The FreeBSD Documentation Project. The "
-"FreeBSD Documentation Project. Committers "
-"Guide. link:{committers-guide}[Committer's Guide]."
+"FreeBSD Documentation Project. Committers Guide. link:{committers-guide}"
+"[Committer's Guide]."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:980
 msgid ""
 "[FreeBSD, 2002E] Murray Stokely. Copyright © 2002 The FreeBSD Documentation "
-"Project. The FreeBSD Documentation Project. FreeBSD Release "
-"Engineering. https://link:{releng}[FreeBSD Release Engineering]."
+"Project. The FreeBSD Documentation Project. FreeBSD Release Engineering. "
+"https://link:{releng}[FreeBSD Release Engineering]."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:983
 msgid ""
-"[FreeBSD, 2003A] The FreeBSD Documentation Project. FreeBSD "
-"Handbook. link:{handbook}[FreeBSD Handbook]."
+"[FreeBSD, 2003A] The FreeBSD Documentation Project. FreeBSD Handbook. link:"
+"{handbook}[FreeBSD Handbook]."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:986
 msgid ""
 "[FreeBSD, 2002F] Copyright © 2002 The FreeBSD Documentation Project. The "
-"FreeBSD Documentation Project. Contributors to "
-"FreeBSD. link:{contributors}[Contributors to FreeBSD]."
+"FreeBSD Documentation Project. Contributors to FreeBSD. link:{contributors}"
+"[Contributors to FreeBSD]."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:989
 msgid ""
-"[FreeBSD, 2002G] Copyright © 2002 The FreeBSD Project. The FreeBSD "
-"Project. Core team elections 2002. http://election.uk.freebsd.org."
+"[FreeBSD, 2002G] Copyright © 2002 The FreeBSD Project. The FreeBSD Project. "
+"Core team elections 2002. http://election.uk.freebsd.org."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:992
 msgid ""
-"[FreeBSD, 2002H] Copyright © 2002 The FreeBSD Project. The FreeBSD "
-"Project. Commit Bit Expiration Policy. 2002/04/06 "
-"15:35:30. https://www.freebsd.org/internal/expire-bits/."
+"[FreeBSD, 2002H] Copyright © 2002 The FreeBSD Project. The FreeBSD Project. "
+"Commit Bit Expiration Policy. 2002/04/06 15:35:30. https://www.freebsd.org/"
+"internal/expire-bits/."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:995
 msgid ""
-"[FreeBSD, 2002I] Copyright © 2002 The FreeBSD Project. The FreeBSD "
-"Project. New Account Creation Procedure. 2002/08/19 "
-"17:11:27. https://www.freebsd.org/internal/new-account/."
+"[FreeBSD, 2002I] Copyright © 2002 The FreeBSD Project. The FreeBSD Project. "
+"New Account Creation Procedure. 2002/08/19 17:11:27. https://www.freebsd.org/"
+"internal/new-account/."
 msgstr ""
 
 #. type: Plain text
@@ -2842,6 +2829,6 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:1000
 msgid ""
 "[Lehey, 2002] Greg Lehey. Copyright © 2002 Greg Lehey. Greg Lehey. Two years "
-"in the trenches. The evolution of a software "
-"project. http://www.lemis.com/grog/In-the-trenches.pdf."
+"in the trenches. The evolution of a software project. http://www.lemis.com/"
+"grog/In-the-trenches.pdf."
 msgstr ""
