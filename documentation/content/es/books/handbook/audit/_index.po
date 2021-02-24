@@ -42,9 +42,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:48
 msgid ""
-"The FreeBSD operating system includes support for security event "
-"auditing. Event auditing supports reliable, fine-grained, and configurable "
-"logging of a variety of security-relevant system events, including logins, "
+"The FreeBSD operating system includes support for security event auditing. "
+"Event auditing supports reliable, fine-grained, and configurable logging of "
+"a variety of security-relevant system events, including logins, "
 "configuration changes, and file and network access. These log records can be "
 "invaluable for live system monitoring, intrusion detection, and postmortem "
 "analysis. FreeBSD implements Sun(TM)'s published Basic Security Module (BSM) "
@@ -77,7 +77,8 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:56
-msgid "How to review the audit trail using the audit reduction and review tools."
+msgid ""
+"How to review the audit trail using the audit reduction and review tools."
 msgstr ""
 
 #. type: Plain text
@@ -95,15 +96,15 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:61
 msgid ""
-"Be familiar with the basics of kernel configuration/compilation "
-"(crossref:kernelconfig[kernelconfig,Configuring the FreeBSD Kernel])."
+"Be familiar with the basics of kernel configuration/compilation (crossref:"
+"kernelconfig[kernelconfig,Configuring the FreeBSD Kernel])."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:62
 msgid ""
-"Have some familiarity with security and how it pertains to FreeBSD "
-"(crossref:security[security,Security])."
+"Have some familiarity with security and how it pertains to FreeBSD (crossref:"
+"security[security,Security])."
 msgstr ""
 
 #. type: delimited block = 4
@@ -216,8 +217,8 @@ msgstr ""
 #: documentation/content/en/books/handbook/audit/_index.adoc:88
 msgid ""
 "User space support for event auditing is installed as part of the base "
-"FreeBSD operating system. Kernel support is available in the "
-"[.filename]#GENERIC# kernel by default, and man:auditd[8] can be enabled by "
+"FreeBSD operating system. Kernel support is available in the [."
+"filename]#GENERIC# kernel by default, and man:auditd[8] can be enabled by "
 "adding the following line to [.filename]#/etc/rc.conf#:"
 msgstr ""
 
@@ -308,14 +309,11 @@ msgid ""
 "\n"
 "|ex\n"
 "|exec\n"
-"|Audit program execution. Auditing of command line arguments and "
-"environmental variables is controlled via man:audit_control[5] using the "
-"`argv` and `envv` parameters to the `policy` setting.\n"
+"|Audit program execution. Auditing of command line arguments and environmental variables is controlled via man:audit_control[5] using the `argv` and `envv` parameters to the `policy` setting.\n"
 "\n"
 "|fa\n"
 "|file attribute access\n"
-"|Audit the access of object attributes such as man:stat[1] and "
-"man:pathconf[2].\n"
+"|Audit the access of object attributes such as man:stat[1] and man:pathconf[2].\n"
 "\n"
 "|fc\n"
 "|file create\n"
@@ -327,8 +325,7 @@ msgid ""
 "\n"
 "|fm\n"
 "|file attribute modify\n"
-"|Audit events where file attribute modification occurs, such as by "
-"man:chown[8], man:chflags[1], and man:flock[2].\n"
+"|Audit events where file attribute modification occurs, such as by man:chown[8], man:chflags[1], and man:flock[2].\n"
 "\n"
 "|fr\n"
 "|file read\n"
@@ -344,8 +341,7 @@ msgid ""
 "\n"
 "|ip\n"
 "|ipc\n"
-"|Audit various forms of Inter-Process Communication, including POSIX pipes "
-"and System V IPC operations.\n"
+"|Audit various forms of Inter-Process Communication, including POSIX pipes and System V IPC operations.\n"
 "\n"
 "|lo\n"
 "|login_logout\n"
@@ -361,8 +357,7 @@ msgid ""
 "\n"
 "|nt\n"
 "|network\n"
-"|Audit events related to network actions such as man:connect[2] and "
-"man:accept[2].\n"
+"|Audit events related to network actions such as man:connect[2] and man:accept[2].\n"
 "\n"
 "|ot\n"
 "|other\n"
@@ -376,8 +371,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:204
 msgid ""
-"These audit event classes may be customized by modifying the "
-"[.filename]#audit_class# and [.filename]#audit_event# configuration files."
+"These audit event classes may be customized by modifying the [."
+"filename]#audit_class# and [.filename]#audit_event# configuration files."
 msgstr ""
 
 #. type: Plain text
@@ -447,13 +442,14 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:242
 msgid ""
-"The following configuration files for security event auditing are found in "
-"[.filename]#/etc/security#:"
+"The following configuration files for security event auditing are found in [."
+"filename]#/etc/security#:"
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:244
-msgid "[.filename]#audit_class#: contains the definitions of the audit classes."
+msgid ""
+"[.filename]#audit_class#: contains the definitions of the audit classes."
 msgstr ""
 
 #. type: Plain text
@@ -497,8 +493,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:256
 msgid ""
-"In most cases, administrators will only need to modify "
-"[.filename]#audit_control# and [.filename]#audit_user#. The first file "
+"In most cases, administrators will only need to modify [."
+"filename]#audit_control# and [.filename]#audit_user#. The first file "
 "controls system-wide audit properties and policies and the second file may "
 "be used to fine-tune auditing by user."
 msgstr ""
@@ -512,8 +508,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:261
 msgid ""
-"A number of defaults for the audit subsystem are specified in "
-"[.filename]#audit_control#:"
+"A number of defaults for the audit subsystem are specified in [."
+"filename]#audit_control#:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -551,9 +547,9 @@ msgstr ""
 #: documentation/content/en/books/handbook/audit/_index.adoc:279
 msgid ""
 "The `flags` field sets the system-wide default preselection mask for "
-"attributable events. In the example above, successful and failed "
-"login/logout events as well as authentication and authorization are audited "
-"for all users."
+"attributable events. In the example above, successful and failed login/"
+"logout events as well as authentication and authorization are audited for "
+"all users."
 msgstr ""
 
 #. type: Plain text
@@ -643,10 +639,10 @@ msgid ""
 "Since audit trails are stored in the BSM binary format, several built-in "
 "tools are available to modify or convert these trails to text. To convert "
 "trail files to a simple text format, use `praudit`. To reduce the audit "
-"trail file for analysis, archiving, or printing purposes, use "
-"`auditreduce`. This utility supports a variety of selection parameters, "
-"including event type, event class, user, date or time of the event, and the "
-"file path or object acted on."
+"trail file for analysis, archiving, or printing purposes, use `auditreduce`. "
+"This utility supports a variety of selection parameters, including event "
+"type, event class, user, date or time of the event, and the file path or "
+"object acted on."
 msgstr ""
 
 #. type: Plain text
@@ -707,7 +703,8 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:333
-msgid "XML output format is also supported and can be selected by including `-x`."
+msgid ""
+"XML output format is also supported and can be selected by including `-x`."
 msgstr ""
 
 #. type: Plain text
@@ -727,8 +724,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:342
 msgid ""
-"Members of the `audit` group have permission to read audit trails in "
-"[.filename]#/var/audit#. By default, this group is empty, so only the `root` "
+"Members of the `audit` group have permission to read audit trails in [."
+"filename]#/var/audit#. By default, this group is empty, so only the `root` "
 "user can read audit trails. Users may be added to the `audit` group in order "
 "to delegate audit review rights. As the ability to track audit log contents "
 "provides significant insight into the behavior of users and processes, it is "
@@ -763,9 +760,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:353
 msgid ""
-"By default, audit pipe device nodes are accessible only to the `root` "
-"user. To make them accessible to the members of the `audit` group, add a "
-"`devfs` rule to [.filename]#/etc/devfs.rules#:"
+"By default, audit pipe device nodes are accessible only to the `root` user. "
+"To make them accessible to the members of the `audit` group, add a `devfs` "
+"rule to [.filename]#/etc/devfs.rules#:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -803,13 +800,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/audit/_index.adoc:370
 msgid ""
 "Audit trails are written to by the kernel and managed by the audit daemon, "
-"man:auditd[8]. Administrators should not attempt to use "
-"man:newsyslog.conf[5] or other tools to directly rotate audit logs. Instead, "
-"`audit` should be used to shut down auditing, reconfigure the audit system, "
-"and perform log rotation. The following command causes the audit daemon to "
-"create a new audit log and signal the kernel to switch to using the new "
-"log. The old log will be terminated and renamed, at which point it may then "
-"be manipulated by the administrator:"
+"man:auditd[8]. Administrators should not attempt to use man:newsyslog."
+"conf[5] or other tools to directly rotate audit logs. Instead, `audit` "
+"should be used to shut down auditing, reconfigure the audit system, and "
+"perform log rotation. The following command causes the audit daemon to "
+"create a new audit log and signal the kernel to switch to using the new log. "
+"The old log will be terminated and renamed, at which point it may then be "
+"manipulated by the administrator:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -847,8 +844,8 @@ msgstr ""
 #: documentation/content/en/books/handbook/audit/_index.adoc:388
 msgid ""
 "Automatic rotation of the audit trail file based on file size is possible "
-"using `filesz` in [.filename]#audit_control# as described in "
-"<<audit-auditcontrol>>."
+"using `filesz` in [.filename]#audit_control# as described in <<audit-"
+"auditcontrol>>."
 msgstr ""
 
 #. type: Plain text
