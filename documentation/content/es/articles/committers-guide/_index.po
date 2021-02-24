@@ -77,33 +77,22 @@ msgid ""
 "|`smtp.FreeBSD.org:587` (see also <<smtp-setup>>).\n"
 "\n"
 "|`_src/_` Git Repository\n"
-"|`ssh://git@gitrepo.FreeBSD.org/src.git` (see also "
-"<<git-getting-started-base-layout>>).\n"
+"|`ssh://git@gitrepo.FreeBSD.org/src.git` (see also <<git-getting-started-base-layout>>).\n"
 "\n"
 "|`_doc/_` Git Repository\n"
-"|`ssh://git@gitrepo.FreeBSD.org/doc.git` (see also "
-"<<git-getting-started-doc-layout>>).\n"
+"|`ssh://git@gitrepo.FreeBSD.org/doc.git` (see also <<git-getting-started-doc-layout>>).\n"
 "\n"
 "|`_ports/_` Subversion Root\n"
-"|`svn+ssh://repo.FreeBSD.org/ports` (see also "
-"<<svn-getting-started-ports-layout>>).\n"
+"|`svn+ssh://repo.FreeBSD.org/ports` (see also <<svn-getting-started-ports-layout>>).\n"
 "\n"
 "|_Internal Mailing Lists_\n"
-"|developers (technically called all-developers), doc-developers, "
-"doc-committers, ports-developers, ports-committers, src-developers, "
-"src-committers. (Each project repository has its own -developers and "
-"-committers mailing lists. Archives for these lists can be found in the "
-"files [.filename]#/local/mail/repository-name-developers-archive# and "
-"[.filename]#/local/mail/repository-name-committers-archive# on the "
-"`FreeBSD.org` cluster.)\n"
+"|developers (technically called all-developers), doc-developers, doc-committers, ports-developers, ports-committers, src-developers, src-committers. (Each project repository has its own -developers and -committers mailing lists. Archives for these lists can be found in the files [.filename]#/local/mail/repository-name-developers-archive# and [.filename]#/local/mail/repository-name-committers-archive# on the `FreeBSD.org` cluster.)\n"
 "\n"
 "|_Core Team monthly reports_\n"
-"|[.filename]#/home/core/public/monthly-reports# on the `FreeBSD.org` "
-"cluster.\n"
+"|[.filename]#/home/core/public/monthly-reports# on the `FreeBSD.org` cluster.\n"
 "\n"
 "|_Ports Management Team monthly reports_\n"
-"|[.filename]#/home/portmgr/public/monthly-reports# on the `FreeBSD.org` "
-"cluster.\n"
+"|[.filename]#/home/portmgr/public/monthly-reports# on the `FreeBSD.org` cluster.\n"
 "\n"
 "|_Noteworthy `src/` SVN Branches:_\n"
 "|`stable/n` (`n`-STABLE), `head` (-CURRENT)\n"
@@ -148,12 +137,12 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:88
 msgid ""
 "Cryptographic keys conforming to the OpenPGP (__Pretty Good Privacy__) "
-"standard are used by the FreeBSD project to authenticate "
-"committers. Messages carrying important information like public SSH keys can "
-"be signed with the OpenPGP key to prove that they are really from the "
-"committer. See http://www.nostarch.com/pgp_ml.htm[PGP & GPG: Email for the "
-"Practical Paranoid by Michael Lucas] and "
-"http://en.wikipedia.org/wiki/Pretty_Good_Privacy[] for more information."
+"standard are used by the FreeBSD project to authenticate committers. "
+"Messages carrying important information like public SSH keys can be signed "
+"with the OpenPGP key to prove that they are really from the committer. See "
+"http://www.nostarch.com/pgp_ml.htm[PGP & GPG: Email for the Practical "
+"Paranoid by Michael Lucas] and http://en.wikipedia.org/wiki/"
+"Pretty_Good_Privacy[] for more information."
 msgstr ""
 
 #. type: Title ===
@@ -165,8 +154,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:93
 msgid ""
-"Existing keys can be used, but should be checked with "
-"[.filename]#documentation/tools/checkkey.sh# first. In this case, make sure "
+"Existing keys can be used, but should be checked with [."
+"filename]#documentation/tools/checkkey.sh# first. In this case, make sure "
 "the key has a FreeBSD user ID."
 msgstr ""
 
@@ -180,8 +169,8 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:100
 msgid ""
-"Install [.filename]#security/gnupg#. Enter these lines in "
-"[.filename]#~/.gnupg/gpg.conf# to set minimum acceptable defaults:"
+"Install [.filename]#security/gnupg#. Enter these lines in [.filename]#~/."
+"gnupg/gpg.conf# to set minimum acceptable defaults:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -191,8 +180,7 @@ msgid ""
 "fixed-list-mode\n"
 "keyid-format 0xlong\n"
 "personal-digest-preferences SHA512 SHA384 SHA256 SHA224\n"
-"default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 "
-"BZIP2 ZLIB ZIP Uncompressed\n"
+"default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 BZIP2 ZLIB ZIP Uncompressed\n"
 "use-agent\n"
 "verify-options show-uid-validity\n"
 "list-options show-uid-validity\n"
@@ -264,9 +252,8 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:154
 msgid ""
 "<.> 2048-bit keys with a three-year expiration provide adequate protection "
-"at present "
-"(2013-12). http://danielpocock.com/rsa-key-sizes-2048-or-4096-bits[] "
-"describes the situation in more detail."
+"at present (2013-12). http://danielpocock.com/rsa-key-sizes-2048-or-4096-"
+"bits[] describes the situation in more detail."
 msgstr ""
 
 #. type: Plain text
@@ -279,10 +266,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:158
 msgid ""
-"<.> Use your real name here, preferably matching that shown on "
-"government-issued ID to make it easier for others to verify your "
-"identity. Text that may help others identify you can be entered in the "
-"`Comment` section."
+"<.> Use your real name here, preferably matching that shown on government-"
+"issued ID to make it easier for others to verify your identity. Text that "
+"may help others identify you can be entered in the `Comment` section."
 msgstr ""
 
 #. type: Plain text
@@ -290,18 +276,18 @@ msgstr ""
 msgid ""
 "  After the email address is entered, a passphrase is requested. Methods of "
 "creating a secure passphrase are contentious. Rather than suggest a single "
-"way, here are some links to sites that describe various methods: "
-"http://world.std.com/~reinhold/diceware.html[], "
-"http://www.iusmentis.com/security/passphrasefaq/[], http://xkcd.com/936/[], "
-"http://en.wikipedia.org/wiki/Passphrase[]."
+"way, here are some links to sites that describe various methods: http://"
+"world.std.com/~reinhold/diceware.html[], http://www.iusmentis.com/security/"
+"passphrasefaq/[], http://xkcd.com/936/[], http://en.wikipedia.org/wiki/"
+"Passphrase[]."
 msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:163
 msgid ""
 "Protect the private key and passphrase. If either the private key or "
-"passphrase may have been compromised or disclosed, immediately notify "
-"mailto:accounts@FreeBSD.org[accounts@FreeBSD.org] and revoke the key."
+"passphrase may have been compromised or disclosed, immediately notify mailto:"
+"accounts@FreeBSD.org[accounts@FreeBSD.org] and revoke the key."
 msgstr ""
 
 #. type: delimited block = 4
@@ -320,10 +306,10 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:170
 msgid ""
-"The FreeBSD cluster requires a Kerberos password to access certain "
-"services. The Kerberos password also serves as the LDAP web password, since "
-"LDAP is proxying to Kerberos in the cluster. Some of the services which "
-"require this include:"
+"The FreeBSD cluster requires a Kerberos password to access certain services. "
+"The Kerberos password also serves as the LDAP web password, since LDAP is "
+"proxying to Kerberos in the cluster. Some of the services which require this "
+"include:"
 msgstr ""
 
 #. type: delimited block = 4
@@ -357,8 +343,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:187
 msgid ""
-"A Kerberos password can also be set manually by logging into "
-"`freefall.FreeBSD.org` and running:"
+"A Kerberos password can also be set manually by logging into `freefall."
+"FreeBSD.org` and running:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -448,10 +434,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:231
 msgid ""
-"All committers may modify "
-"[.filename]#base/head/shared/misc/committers-*.dot#, "
-"[.filename]#base/head/usr.bin/calendar/calendars/calendar.freebsd#, and "
-"[.filename]#ports/head/astro/xearth/files#."
+"All committers may modify [.filename]#base/head/shared/misc/committers-*."
+"dot#, [.filename]#base/head/usr.bin/calendar/calendars/calendar.freebsd#, "
+"and [.filename]#ports/head/astro/xearth/files#."
 msgstr ""
 
 #. type: Plain text
@@ -474,18 +459,17 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:234
 msgid ""
 "Committers can acquire an additional bit by the usual process of finding a "
-"mentor who will propose them to core, doceng, or portmgr, as "
-"appropriate. When approved, they will be added to 'access' and the normal "
-"mentoring period will ensue, which will involve a continuing of \"Approved "
-"by\" for some period."
+"mentor who will propose them to core, doceng, or portmgr, as appropriate. "
+"When approved, they will be added to 'access' and the normal mentoring "
+"period will ensue, which will involve a continuing of \"Approved by\" for "
+"some period."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:235
 msgid ""
 "\"Approved by\" is only acceptable from non-mentored src committers -- "
-"mentored committers can provide a \"Reviewed by\" but not an \"Approved "
-"by\"."
+"mentored committers can provide a \"Reviewed by\" but not an \"Approved by\"."
 msgstr ""
 
 #. type: Title ==
@@ -498,8 +482,8 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:240
 msgid ""
 "New committers are assumed to already be familiar with the basic operation "
-"of Subversion. If not, start by reading the "
-"http://svnbook.red-bean.com/[Subversion Book]."
+"of Subversion. If not, start by reading the http://svnbook.red-bean.com/"
+"[Subversion Book]."
 msgstr ""
 
 #. type: Plain text
@@ -565,8 +549,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:263
 msgid ""
-"There are a few ways to obtain a working copy of the tree from "
-"Subversion. This section will explain them."
+"There are a few ways to obtain a working copy of the tree from Subversion. "
+"This section will explain them."
 msgstr ""
 
 #. type: Title ====
@@ -623,10 +607,10 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:294
 msgid ""
-"The above command will check out a `CURRENT` source tree as "
-"[.filename]#/usr/src/#, which can be any target directory on the local "
-"filesystem. Omitting the final argument of that command causes the working "
-"copy, in this case, to be named \"head\", but that can be renamed safely."
+"The above command will check out a `CURRENT` source tree as [.filename]#/usr/"
+"src/#, which can be any target directory on the local filesystem. Omitting "
+"the final argument of that command causes the working copy, in this case, to "
+"be named \"head\", but that can be renamed safely."
 msgstr ""
 
 #. type: Plain text
@@ -641,9 +625,9 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:298
 msgid ""
 "If your FreeBSD login name is different from the login name used on the "
-"local machine, either include it in the URL (for example "
-"`svn+ssh://jarjar@repo.freebsd.org/base/head`), or add an entry to "
-"[.filename]#~/.ssh/config# in the form:"
+"local machine, either include it in the URL (for example `svn+ssh://"
+"jarjar@repo.freebsd.org/base/head`), or add an entry to [.filename]#~/.ssh/"
+"config# in the form:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -678,18 +662,18 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:316
 msgid ""
-"In `ssh://gitrepo.freebsd.org/src.git`, _src_ refers to the source "
-"tree. Similarly, _ports_ refers to the ports tree, and so on. These are "
-"separate repositories with their own change number sequences, access "
-"controls and commit mail."
+"In `ssh://gitrepo.freebsd.org/src.git`, _src_ refers to the source tree. "
+"Similarly, _ports_ refers to the ports tree, and so on. These are separate "
+"repositories with their own change number sequences, access controls and "
+"commit mail."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:318
 msgid ""
-"For the src repository, `main` refers to the -CURRENT tree. For example, "
-"[.filename]#head/bin/ls# is what would go into [.filename]#/usr/src/bin/ls# "
-"in a release. Some key branches are:"
+"For the src repository, `main` refers to the -CURRENT tree. For example, [."
+"filename]#head/bin/ls# is what would go into [.filename]#/usr/src/bin/ls# in "
+"a release. Some key branches are:"
 msgstr ""
 
 #. type: Plain text
@@ -800,9 +784,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:349
 msgid ""
-"In general, most FreeBSD port work will be done within the "
-"[.filename]#head/# branch of the ports tree which is the actual ports tree "
-"used to install software. Some other key locations are:"
+"In general, most FreeBSD port work will be done within the [.filename]#head/"
+"# branch of the ports tree which is the actual ports tree used to install "
+"software. Some other key locations are:"
 msgstr ""
 
 #. type: Plain text
@@ -859,8 +843,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:370
 msgid ""
-"Additional information can be found in the "
-"http://svnbook.red-bean.com/[Subversion Book]."
+"Additional information can be found in the http://svnbook.red-bean.com/"
+"[Subversion Book]."
 msgstr ""
 
 #. type: Title ====
@@ -983,8 +967,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:430
 msgid ""
-"More details on using Subversion this way can be found in "
-"link:{handbook}#svn[Using Subversion]."
+"More details on using Subversion this way can be found in link:{handbook}"
+"#svn[Using Subversion]."
 msgstr ""
 
 #. type: Title ====
@@ -1061,8 +1045,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:472
 msgid ""
-"To commit all changes in, for example, [.filename]#lib/libfetch/# and "
-"[.filename]#usr/bin/fetch/# in a single operation:"
+"To commit all changes in, for example, [.filename]#lib/libfetch/# and [."
+"filename]#usr/bin/fetch/# in a single operation:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -1093,14 +1077,14 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:491
 msgid ""
-"Before adding files, get a copy of "
-"https://people.FreeBSD.org/~peter/auto-props.txt[auto-props.txt] (there is "
-"also a https://people.FreeBSD.org/~beat/cvs2svn/auto-props.txt[ports tree "
-"specific version]) and add it to [.filename]#~/.subversion/config# according "
-"to the instructions in the file. If you added something before reading this, "
-"use `svn rm --keep-local` for just added files, fix your config file and "
-"re-add them again. The initial config file is created when you first run a "
-"svn command, even something as simple as `svn help`."
+"Before adding files, get a copy of https://people.FreeBSD.org/~peter/auto-"
+"props.txt[auto-props.txt] (there is also a https://people.FreeBSD.org/~beat/"
+"cvs2svn/auto-props.txt[ports tree specific version]) and add it to [."
+"filename]#~/.subversion/config# according to the instructions in the file. "
+"If you added something before reading this, use `svn rm --keep-local` for "
+"just added files, fix your config file and re-add them again. The initial "
+"config file is created when you first run a svn command, even something as "
+"simple as `svn help`."
 msgstr ""
 
 #. type: Plain text
@@ -1122,8 +1106,8 @@ msgid ""
 "Most new source files should include a `$FreeBSD$` string near the start of "
 "the file. On commit, `svn` will expand the `$FreeBSD$` string, adding the "
 "file path, revision number, date and time of commit, and the username of the "
-"committer. Files which cannot be modified may be committed without the "
-"`$FreeBSD$` string."
+"committer. Files which cannot be modified may be committed without the `"
+"$FreeBSD$` string."
 msgstr ""
 
 #. type: Plain text
@@ -1193,8 +1177,8 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:540
 msgid ""
 "This command creates a copy of [.filename]#foo.c# named [.filename]#bar.c#, "
-"with the new file also under version control and with the full history of "
-"[.filename]#foo.c#:"
+"with the new file also under version control and with the full history of [."
+"filename]#foo.c#:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -1378,8 +1362,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:616
 msgid ""
-"SVN allows __sparse__, or partial checkouts of a directory by adding "
-"`--depth` to a `svn checkout`."
+"SVN allows __sparse__, or partial checkouts of a directory by adding `--"
+"depth` to a `svn checkout`."
 msgstr ""
 
 #. type: Plain text
@@ -1435,8 +1419,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:635
 msgid ""
-"The above command will populate the working copy in _~/freebsd_ with "
-"[.filename]#ROADMAP.txt# and empty subdirectories, and nothing will happen "
+"The above command will populate the working copy in _~/freebsd_ with [."
+"filename]#ROADMAP.txt# and empty subdirectories, and nothing will happen "
 "when `svn update` is executed on the subdirectories. However, this command "
 "will set the depth for _head_ (in this case) to infinity, and fully populate "
 "it:"
@@ -1489,15 +1473,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:653
-msgid "Branching is very fast. This command would be used to branch `RELENG_8`:"
+msgid ""
+"Branching is very fast. This command would be used to branch `RELENG_8`:"
 msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:657
 #, no-wrap
-msgid ""
-"% svn copy svn+ssh://repo.freebsd.org/base/head "
-"svn+ssh://repo.freebsd.org/base/stable/8\n"
+msgid "% svn copy svn+ssh://repo.freebsd.org/base/head svn+ssh://repo.freebsd.org/base/stable/8\n"
 msgstr ""
 
 #. type: Plain text
@@ -1559,11 +1542,10 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:685
 msgid ""
 "It is _not_ inherited. For instance, [.filename]#stable/6/contrib/openpam/# "
-"does not implicitly inherit mergeinfo from [.filename]#stable/6/#, or "
-"[.filename]#stable/6/contrib/#. Doing so would make partial checkouts very "
-"hard to manage. Instead, mergeinfo is explicitly propagated down the "
-"tree. For merging something into [.filename]#branch/foo/bar/#, these rules "
-"apply:"
+"does not implicitly inherit mergeinfo from [.filename]#stable/6/#, or [."
+"filename]#stable/6/contrib/#. Doing so would make partial checkouts very "
+"hard to manage. Instead, mergeinfo is explicitly propagated down the tree. "
+"For merging something into [.filename]#branch/foo/bar/#, these rules apply:"
 msgstr ""
 
 #. type: Plain text
@@ -1585,21 +1567,20 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:689
 msgid ""
-"If a direct descendant of [.filename]#branch/foo/bar/# (for instance, "
-"[.filename]#branch/foo/bar/baz/#) already has a mergeinfo record, "
-"information about the current merge will be propagated down to it."
+"If a direct descendant of [.filename]#branch/foo/bar/# (for instance, [."
+"filename]#branch/foo/bar/baz/#) already has a mergeinfo record, information "
+"about the current merge will be propagated down to it."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:691
 msgid ""
 "If you consider the case where a revision changes several separate parts of "
-"the tree (for example, [.filename]#branch/foo/bar/# and "
-"[.filename]#branch/foo/quux/#), but you only want to merge some of it (for "
-"example, [.filename]#branch/foo/bar/#), you will see that these rules make "
-"sense. If mergeinfo was propagated up, it would seem like that revision had "
-"also been merged to [.filename]#branch/foo/quux/#, when in fact it had not "
-"been."
+"the tree (for example, [.filename]#branch/foo/bar/# and [.filename]#branch/"
+"foo/quux/#), but you only want to merge some of it (for example, [."
+"filename]#branch/foo/bar/#), you will see that these rules make sense. If "
+"mergeinfo was propagated up, it would seem like that revision had also been "
+"merged to [.filename]#branch/foo/quux/#, when in fact it had not been."
 msgstr ""
 
 #. type: Title =====
@@ -1610,7 +1591,8 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:696
-msgid "Merging to `stable/` branches should originate from `head/`. For example:"
+msgid ""
+"Merging to `stable/` branches should originate from `head/`. For example:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -1833,13 +1815,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:798
 msgid ""
-"As a practical example, consider this scenario. The changes to "
-"[.filename]#netmap.4# in r238987 are to be merged from CURRENT to "
-"9-STABLE. The file resides in [.filename]#head/shared/man/man4#. According "
-"to <<svn-advanced-use-merging>>, this is also where to do the merge. Note "
-"that in this example all paths are relative to the top of the svn "
-"repository. For more information on the directory layout, see "
-"<<svn-getting-started-base-layout>>."
+"As a practical example, consider this scenario. The changes to [."
+"filename]#netmap.4# in r238987 are to be merged from CURRENT to 9-STABLE. "
+"The file resides in [.filename]#head/shared/man/man4#. According to <<svn-"
+"advanced-use-merging>>, this is also where to do the merge. Note that in "
+"this example all paths are relative to the top of the svn repository. For "
+"more information on the directory layout, see <<svn-getting-started-base-"
+"layout>>."
 msgstr ""
 
 #. type: Plain text
@@ -1864,8 +1846,7 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:816
 #, no-wrap
 msgid ""
-"% svn merge -c r238987 svn+ssh://repo.freebsd.org/base/head/shared/man/man4 "
-"stable/9/shared/man/man4\n"
+"% svn merge -c r238987 svn+ssh://repo.freebsd.org/base/head/shared/man/man4 stable/9/shared/man/man4\n"
 "--- Merging r238987 into 'stable/9/shared/man/man4':\n"
 "U    stable/9/shared/man/man4/netmap.4\n"
 "--- Recording mergeinfo for merge of r238987 into\n"
@@ -2033,9 +2014,9 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:882
 msgid ""
 "The `propdel` bit is necessary because starting with 1.5, Subversion will "
-"automatically add `svn:mergeinfo` to any directory that is copied or "
-"moved. In this case, as nothing is being merged from the deleted tree, they "
-"just get in the way."
+"automatically add `svn:mergeinfo` to any directory that is copied or moved. "
+"In this case, as nothing is being merged from the deleted tree, they just "
+"get in the way."
 msgstr ""
 
 #. type: Plain text
@@ -2088,8 +2069,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "% cd head/contrib/pf\n"
-"% svn merge --record-only "
-"svn+ssh://repo.freebsd.org/base/vendor/pf/dist@180876 .\n"
+"% svn merge --record-only svn+ssh://repo.freebsd.org/base/vendor/pf/dist@180876 .\n"
 "% svn commit\n"
 msgstr ""
 
@@ -2182,11 +2162,11 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:942
 msgid ""
-"Check properties on any new files. All text files should have "
-"`svn:eol-style` set to `native`. All binary files should have "
-"`svn:mime-type` set to `application/octet-stream` unless there is a more "
-"appropriate media type. Executable files should have `svn:executable` set to "
-"`*`. No other properties should exist on any file in the tree."
+"Check properties on any new files. All text files should have `svn:eol-"
+"style` set to `native`. All binary files should have `svn:mime-type` set to "
+"`application/octet-stream` unless there is a more appropriate media type. "
+"Executable files should have `svn:executable` set to `*`. No other "
+"properties should exist on any file in the tree."
 msgstr ""
 
 #. type: Plain text
@@ -2211,9 +2191,7 @@ msgstr ""
 #. type: delimited block . 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:952
 #, no-wrap
-msgid ""
-"% svn cp svn+ssh://repo.freebsd.org/base/vendor/pf/dist "
-"svn+ssh://repo.freebsd.org/base/vendor/pf/4.3\n"
+msgid "% svn cp svn+ssh://repo.freebsd.org/base/vendor/pf/dist svn+ssh://repo.freebsd.org/base/vendor/pf/4.3\n"
 msgstr ""
 
 #. type: Plain text
@@ -2251,8 +2229,7 @@ msgstr ""
 msgid ""
 "% cd head/contrib/pf\n"
 "% svn up\n"
-"% svn merge --accept=postpone svn+ssh://repo.freebsd.org/base/vendor/pf/dist "
-".\n"
+"% svn merge --accept=postpone svn+ssh://repo.freebsd.org/base/vendor/pf/dist .\n"
 msgstr ""
 
 #. type: Plain text
@@ -2267,10 +2244,9 @@ msgstr ""
 msgid ""
 "The `cvs2svn` changeover occurred on June 3, 2008. When performing vendor "
 "merges for packages which were already present and converted by the "
-"`cvs2svn` process, the command used to merge "
-"[.filename]#/vendor/package_name/dist# to "
-"[.filename]#/head/package_location# (for example, "
-"[.filename]#head/contrib/sendmail#) must use `-c _REV_` to indicate the "
+"`cvs2svn` process, the command used to merge [.filename]#/vendor/"
+"package_name/dist# to [.filename]#/head/package_location# (for example, [."
+"filename]#head/contrib/sendmail#) must use `-c _REV_` to indicate the "
 "revision to merge from the [.filename]#/vendor# tree. For example:"
 msgstr ""
 
@@ -2309,9 +2285,7 @@ msgstr ""
 #. type: delimited block . 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:1003
 #, no-wrap
-msgid ""
-"% svn diff --no-diff-deleted "
-"--old=svn+ssh://repo.freebsd.org/base/vendor/pf/dist --new=.\n"
+msgid "% svn diff --no-diff-deleted --old=svn+ssh://repo.freebsd.org/base/vendor/pf/dist --new=.\n"
 msgstr ""
 
 #. type: Plain text
@@ -2327,10 +2301,10 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:1008
 msgid ""
 "Using CVS, once a file was off the vendor branch, it was not able to be put "
-"back. With Subversion, there is no concept of on or off the vendor "
-"branch. If a file that previously had local modifications, to make it not "
-"show up in diffs in the vendor tree, all that has to be done is remove any "
-"left-over cruft like FreeBSD version tags, which is much easier."
+"back. With Subversion, there is no concept of on or off the vendor branch. "
+"If a file that previously had local modifications, to make it not show up in "
+"diffs in the vendor tree, all that has to be done is remove any left-over "
+"cruft like FreeBSD version tags, which is much easier."
 msgstr ""
 
 #. type: Plain text
@@ -2363,8 +2337,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:1020
 msgid ""
-"This section is an example of importing and tagging byacc into "
-"[.filename]#head#."
+"This section is an example of importing and tagging byacc into [."
+"filename]#head#."
 msgstr ""
 
 #. type: Plain text
@@ -2394,9 +2368,7 @@ msgstr ""
 #. type: delimited block . 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:1036
 #, no-wrap
-msgid ""
-"% svn cp -m \"Tag byacc 20120115\" $FSVN/vendor/byacc/dist "
-"$FSVN/vendor/byacc/20120115\n"
+msgid "% svn cp -m \"Tag byacc 20120115\" $FSVN/vendor/byacc/dist $FSVN/vendor/byacc/20120115\n"
 msgstr ""
 
 #. type: Plain text
@@ -2412,9 +2384,7 @@ msgstr ""
 #. type: delimited block . 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:1045
 #, no-wrap
-msgid ""
-"% svn cp -m \"Import byacc to contrib\" $FSVN/vendor/byacc/dist "
-"$FSVN/head/contrib/byacc\n"
+msgid "% svn cp -m \"Import byacc to contrib\" $FSVN/vendor/byacc/dist $FSVN/head/contrib/byacc\n"
 msgstr ""
 
 #. type: Plain text
@@ -2498,9 +2468,7 @@ msgstr ""
 #. type: delimited block . 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:1093
 #, no-wrap
-msgid ""
-"% svn copy svn+ssh://repo.freebsd.org/base/ROADMAP.txt@179454 "
-"svn+ssh://repo.freebsd.org/base\n"
+msgid "% svn copy svn+ssh://repo.freebsd.org/base/ROADMAP.txt@179454 svn+ssh://repo.freebsd.org/base\n"
 msgstr ""
 
 #. type: Plain text
@@ -2526,7 +2494,8 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:1103
-msgid "Mistakes will happen but, they can generally be fixed without disruption."
+msgid ""
+"Mistakes will happen but, they can generally be fixed without disruption."
 msgstr ""
 
 #. type: Plain text
@@ -2587,20 +2556,19 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:1122
 msgid ""
-"Avoid setting up a svnsync mirror unless there is a very good reason for "
-"it. Most of the time a `git` mirror is a better alternative. Starting a "
-"fresh mirror from scratch takes a long time. Expect a minimum of 10 hours "
-"for high speed connectivity. If international links are involved, expect "
-"this to take four to ten times longer."
+"Avoid setting up a svnsync mirror unless there is a very good reason for it. "
+"Most of the time a `git` mirror is a better alternative. Starting a fresh "
+"mirror from scratch takes a long time. Expect a minimum of 10 hours for high "
+"speed connectivity. If international links are involved, expect this to take "
+"four to ten times longer."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:1124
 msgid ""
-"One way to limit the time required is to grab a "
-"https://download.freebsd.org/ftp/development/subversion/[seed file]. It is "
-"large (~1GB) but will consume less network traffic and take less time to "
-"fetch than svnsync will."
+"One way to limit the time required is to grab a https://download.freebsd.org/"
+"ftp/development/subversion/[seed file]. It is large (~1GB) but will consume "
+"less network traffic and take less time to fetch than svnsync will."
 msgstr ""
 
 #. type: Plain text
@@ -2627,8 +2595,8 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:1136
 msgid ""
 "The seed mirror is set to fetch from `svn://svn.freebsd.org/base`. The "
-"configuration for the mirror is stored in `revprop 0` on the local "
-"mirror. To see the configuration, try:"
+"configuration for the mirror is stored in `revprop 0` on the local mirror. "
+"To see the configuration, try:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -2679,8 +2647,8 @@ msgid ""
 "to develop a project then commit it back to head. In SVN, \"dolphin\" "
 "branching is used for this. A \"dolphin\" branch is one that diverges for a "
 "while and is finally committed back to the original branch. During "
-"development code migration in one direction (from head to the branch "
-"only). No code is committed back to head until the end. After the branch is "
+"development code migration in one direction (from head to the branch only). "
+"No code is committed back to head until the end. After the branch is "
 "committed back at the end, it is dead (although a new branch with the same "
 "name can be created after the dead one is deleted)."
 msgstr ""
@@ -2688,15 +2656,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:1160
 msgid ""
-"As per "
-"https://people.FreeBSD.org/\\~peter/svn_notes.txt[https://people.FreeBSD.org/~peter/svn_notes.txt], "
-"work that is intended to be merged back into HEAD should be in "
-"[.filename]#base/projects/#. If the work is beneficial to the FreeBSD "
-"community in some way but not intended to be merged directly back into HEAD "
-"then the proper location is "
-"[.filename]#base/user/username/#. "
-"https://svnweb.freebsd.org/base/projects/GUIDELINES.txt[This page] contains "
-"further details."
+"As per https://people.FreeBSD.org/\\~peter/svn_notes.txt[https://people."
+"FreeBSD.org/~peter/svn_notes.txt], work that is intended to be merged back "
+"into HEAD should be in [.filename]#base/projects/#. If the work is "
+"beneficial to the FreeBSD community in some way but not intended to be "
+"merged directly back into HEAD then the proper location is [.filename]#base/"
+"user/username/#. https://svnweb.freebsd.org/base/projects/GUIDELINES."
+"txt[This page] contains further details."
 msgstr ""
 
 #. type: Plain text
@@ -2707,9 +2673,7 @@ msgstr ""
 #. type: delimited block . 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:1166
 #, no-wrap
-msgid ""
-"% svn copy svn+ssh://repo.freebsd.org/base/head "
-"svn+ssh://repo.freebsd.org/base/projects/spif\n"
+msgid "% svn copy svn+ssh://repo.freebsd.org/base/head svn+ssh://repo.freebsd.org/base/projects/spif\n"
 msgstr ""
 
 #. type: Plain text
@@ -2740,15 +2704,14 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:1182
 msgid ""
-"In commit logs etc., \"rev 179872\" is spelled \"r179872\" as per "
-"convention."
+"In commit logs etc., \"rev 179872\" is spelled \"r179872\" as per convention."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:1184
 msgid ""
-"Speeding up svn is possible by adding these entries to "
-"[.filename]#~/.ssh/config#:"
+"Speeding up svn is possible by adding these entries to [.filename]#~/.ssh/"
+"config#:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -2775,10 +2738,10 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:1201
 msgid ""
-"Checking out a working copy with a stock Subversion client without "
-"FreeBSD-specific patches (`OPTIONS_SET=FREEBSD_TEMPLATE`) will mean that "
-"`$FreeBSD$` tags will not be expanded. Once the correct version has been "
-"installed, trick Subversion into expanding them like so:"
+"Checking out a working copy with a stock Subversion client without FreeBSD-"
+"specific patches (`OPTIONS_SET=FREEBSD_TEMPLATE`) will mean that `$FreeBSD$` "
+"tags will not be expanded. Once the correct version has been installed, "
+"trick Subversion into expanding them like so:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -2798,9 +2761,9 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:1211
 msgid ""
 "It is possible to automatically fill the \"Sponsored by\" and \"MFC after\" "
-"commit log fields by setting \"freebsd-sponsored-by\" and "
-"\"freebsd-mfc-after\" fields in the \"[miscellany]\" section of the "
-"[.filename]#~/.subversion/config# configuration file. For example:"
+"commit log fields by setting \"freebsd-sponsored-by\" and \"freebsd-mfc-after"
+"\" fields in the \"[miscellany]\" section of the [.filename]#~/.subversion/"
+"config# configuration file. For example:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -2847,8 +2810,8 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:1230
 msgid ""
 "The [.filename]#.ent# and [.filename]#.xml# files mentioned below exist in "
-"the FreeBSD Documentation Project SVN repository at "
-"`svn+ssh://repo.FreeBSD.org/doc/`."
+"the FreeBSD Documentation Project SVN repository at `svn+ssh://repo.FreeBSD."
+"org/doc/`."
 msgstr ""
 
 #. type: Plain text
@@ -2856,9 +2819,9 @@ msgstr ""
 msgid ""
 "New files that do not have the `FreeBSD=%H svn:keywords` property will be "
 "rejected when attempting to commit them to the repository. Be sure to read "
-"<<svn-daily-use-adding-and-removing>> regarding adding and removing "
-"files. Verify that [.filename]#~/.subversion/config# contains the necessary "
-"\"auto-props\" entries from [.filename]#auto-props.txt# mentioned there."
+"<<svn-daily-use-adding-and-removing>> regarding adding and removing files. "
+"Verify that [.filename]#~/.subversion/config# contains the necessary \"auto-"
+"props\" entries from [.filename]#auto-props.txt# mentioned there."
 msgstr ""
 
 #. type: Plain text
@@ -2885,9 +2848,9 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:1241
 msgid ""
 "  [.filename]#shared/authors.toml# - Add an author entity. Later steps "
-"depend on this entity, and missing this step will cause the "
-"[.filename]#doc/# build to fail. This is a relatively easy task, but remains "
-"a good first test of version control skills."
+"depend on this entity, and missing this step will cause the [.filename]#doc/"
+"# build to fail. This is a relatively easy task, but remains a good first "
+"test of version control skills."
 msgstr ""
 
 #. type: delimited block = 4
@@ -2899,9 +2862,8 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:1244
 msgid ""
 "  [.filename]#doc/en/articles/contributors/contrib-committers.adoc# - Add an "
-"entry to the \"Developers\" section of the "
-"link:{contributors}#staff-committers[Contributors List]. Entries are sorted "
-"by last name."
+"entry to the \"Developers\" section of the link:{contributors}#staff-"
+"committers[Contributors List]. Entries are sorted by last name."
 msgstr ""
 
 #. type: delimited block = 4
@@ -2922,8 +2884,8 @@ msgstr ""
 msgid ""
 "  [.filename]#website/data/en/news/news.toml# - Add an entry. Look for the "
 "other entries that announce new committers and follow the format. Use the "
-"date from the commit bit approval email from "
-"mailto:core@FreeBSD.org[core@FreeBSD.org]."
+"date from the commit bit approval email from mailto:core@FreeBSD."
+"org[core@FreeBSD.org]."
 msgstr ""
 
 #. type: delimited block = 4
@@ -2934,10 +2896,9 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:1252
 msgid ""
-"  `{des}` has written a shell script "
-"([.filename]#documentation/tools/addkey.sh#) to make this easier. See the "
-"http://svnweb.FreeBSD.org/doc/head/shared/pgpkeys/README[README] file for "
-"more information."
+"  `{des}` has written a shell script ([.filename]#documentation/tools/addkey."
+"sh#) to make this easier. See the http://svnweb.FreeBSD.org/doc/head/shared/"
+"pgpkeys/README[README] file for more information."
 msgstr ""
 
 #. type: delimited block = 4
@@ -2960,8 +2921,8 @@ msgid ""
 "It is very important to have a current PGP/GnuPG key in the repository. The "
 "key may be required for positive identification of a committer. For example, "
 "the `{admins}` might need it for account recovery. A complete keyring of "
-"`FreeBSD.org` users is available for download from "
-"link:https://www.FreeBSD.org/doc/pgpkeyring.txt[https://www.FreeBSD.org/doc/pgpkeyring.txt]."
+"`FreeBSD.org` users is available for download from link:https://www.FreeBSD."
+"org/doc/pgpkeyring.txt[https://www.FreeBSD.org/doc/pgpkeyring.txt]."
 msgstr ""
 
 #. type: Plain text
@@ -3021,8 +2982,8 @@ msgstr ""
 msgid ""
 "  Wiki Information - After gaining access to the wiki, some people add "
 "entries to the https://wiki.freebsd.org/HowWeGotHere[How We Got Here], "
-"https://wiki.freebsd.org/IRC/Nicknames[IRC Nicks], and "
-"https://wiki.freebsd.org/Community/Dogs[Dogs of FreeBSD] pages."
+"https://wiki.freebsd.org/IRC/Nicknames[IRC Nicks], and https://wiki.freebsd."
+"org/Community/Dogs[Dogs of FreeBSD] pages."
 msgstr ""
 
 #. type: Plain text
@@ -3033,10 +2994,10 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:1278
 msgid ""
-"  [.filename]#ports/astro/xearth/files/freebsd.committers.markers# and "
-"[.filename]#src/usr.bin/calendar/calendars/calendar.freebsd# - Some people "
-"add entries for themselves to these files to show where they are located or "
-"the date of their birthday."
+"  [.filename]#ports/astro/xearth/files/freebsd.committers.markers# and [."
+"filename]#src/usr.bin/calendar/calendars/calendar.freebsd# - Some people add "
+"entries for themselves to these files to show where they are located or the "
+"date of their birthday."
 msgstr ""
 
 #. type: Plain text
@@ -3065,8 +3026,7 @@ msgid ""
 "idea who you are or what you are working on. The introduction need not be a "
 "comprehensive biography, just write a paragraph or two about who you are, "
 "what you plan to be working on as a developer in FreeBSD, and who will be "
-"your mentor. Email this to the {developers-name} and you will be on your "
-"way!"
+"your mentor. Email this to the {developers-name} and you will be on your way!"
 msgstr ""
 
 #. type: Plain text
@@ -3085,8 +3045,8 @@ msgstr ""
 #. type: delimited block = 6
 #: documentation/content/en/articles/committers-guide/_index.adoc:1295
 msgid ""
-"If your e-mail system uses SPF with strict rules, you should whitelist "
-"`mx2.FreeBSD.org` from SPF checks."
+"If your e-mail system uses SPF with strict rules, you should whitelist `mx2."
+"FreeBSD.org` from SPF checks."
 msgstr ""
 
 #. type: Plain text
@@ -3097,8 +3057,8 @@ msgid ""
 "some basic checks and will drop some messages based on these checks. At the "
 "moment proper DNS information for the connecting host is the only check in "
 "place but that may change. Some people blame these checks for bouncing valid "
-"email. To have these checks turned off for your email, create a file named "
-"[.filename]#~/.spam_lover# on `freefall.FreeBSD.org`."
+"email. To have these checks turned off for your email, create a file named [."
+"filename]#~/.spam_lover# on `freefall.FreeBSD.org`."
 msgstr ""
 
 #. type: delimited block = 6
@@ -3172,7 +3132,8 @@ msgstr ""
 
 #. type: delimited block = 6
 #: documentation/content/en/articles/committers-guide/_index.adoc:1328
-msgid "Host has various rate limits in place to cut down on brute force attempts."
+msgid ""
+"Host has various rate limits in place to cut down on brute force attempts."
 msgstr ""
 
 #. type: Title =====
@@ -3197,17 +3158,16 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:1342
 msgid ""
-"To tell a local Postfix instance that anything from "
-"`_yourusername_@FreeBSD.org` should be forwarded to the FreeBSD.org servers, "
-"add this to your [.filename]#main.cf#:"
+"To tell a local Postfix instance that anything from `_yourusername_@FreeBSD."
+"org` should be forwarded to the FreeBSD.org servers, add this to your [."
+"filename]#main.cf#:"
 msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:1350
 #, no-wrap
 msgid ""
-"sender_dependent_relayhost_maps = "
-"hash:/usr/local/etc/postfix/relayhost_maps\n"
+"sender_dependent_relayhost_maps = hash:/usr/local/etc/postfix/relayhost_maps\n"
 "smtp_sasl_auth_enable = yes\n"
 "smtp_sasl_security_options = noanonymous\n"
 "smtp_sasl_password_maps = hash:/usr/local/etc/postfix/sasl_passwd\n"
@@ -3244,8 +3204,8 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:1367
 msgid ""
 "If the email server is used by other people, you may want to prevent them "
-"from sending e-mails from your address. To achieve this, add this to your "
-"[.filename]#main.cf#:"
+"from sending e-mails from your address. To achieve this, add this to your [."
+"filename]#main.cf#:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -3285,11 +3245,11 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:1388
 msgid ""
-"All new developers have a mentor assigned to them for the first few "
-"months. A mentor is responsible for teaching the mentee the rules and "
-"conventions of the project and guiding their first steps in the developer "
-"community. The mentor is also personally responsible for the mentee's "
-"actions during this initial period."
+"All new developers have a mentor assigned to them for the first few months. "
+"A mentor is responsible for teaching the mentee the rules and conventions of "
+"the project and guiding their first steps in the developer community. The "
+"mentor is also personally responsible for the mentee's actions during this "
+"initial period."
 msgstr ""
 
 #. type: delimited block = 4
@@ -3304,9 +3264,9 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:1392
 msgid ""
 "When the mentor decides that a mentee has learned the ropes and is ready to "
-"commit on their own, the mentor announces it with a commit to "
-"[.filename]#conf/mentors#. This file is in the [.filename]#svnadmin# branch "
-"of each repository:"
+"commit on their own, the mentor announces it with a commit to [."
+"filename]#conf/mentors#. This file is in the [.filename]#svnadmin# branch of "
+"each repository:"
 msgstr ""
 
 #. type: Table
@@ -3483,8 +3443,8 @@ msgstr ""
 msgid ""
 "FreeBSD has hundreds of active developers and hundreds of thousands of "
 "commits spanning decades of history. Over that time the developer community "
-"has learned how valuable good commit messages are; sometimes these are "
-"hard-learned lessons."
+"has learned how valuable good commit messages are; sometimes these are hard-"
+"learned lessons."
 msgstr ""
 
 #. type: Plain text
@@ -3519,8 +3479,8 @@ msgstr ""
 msgid ""
 "In a large project with a long history it may be difficult to find changes "
 "of interest when investigating an issue or change in behaviour. Verbose, "
-"detailed commit messages allow searches for changes that might be "
-"relevant. For example, `git log --since 1year --grep 'USB timeout'`."
+"detailed commit messages allow searches for changes that might be relevant. "
+"For example, `git log --since 1year --grep 'USB timeout'`."
 msgstr ""
 
 #. type: Plain text
@@ -3645,7 +3605,8 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:1521
-msgid "Some trivial commits do not require a body, and will have only a subject."
+msgid ""
+"Some trivial commits do not require a body, and will have only a subject."
 msgstr ""
 
 #. type: Plain text
@@ -3663,12 +3624,11 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:1532
 msgid ""
 "`git log` and `git format-patch` indent the commit message by four spaces.  "
-"Wrapping at 72 columns provides a matching margin on the right "
-"edge. Limiting messages to 72 characters also keeps the commit message in "
+"Wrapping at 72 columns provides a matching margin on the right edge. "
+"Limiting messages to 72 characters also keeps the commit message in "
 "formatted patches below RFC 2822's suggested email line length limit of 78 "
 "characters. This limit works well with a variety of tools that may render "
-"commit messages; line wrapping might be inconsistent with longer line "
-"length."
+"commit messages; line wrapping might be inconsistent with longer line length."
 msgstr ""
 
 #. type: Title ===
@@ -3683,8 +3643,7 @@ msgid ""
 "This facilitates short subject lines and provides consistency, including "
 "with automatically generated commit messages (e.g., as generated by git "
 "revert).  This is important when reading a list of commit subjects. Think of "
-"the subject as finishing the sentence \"when applied, this change will "
-"...\"."
+"the subject as finishing the sentence \"when applied, this change will ...\"."
 msgstr ""
 
 #. type: Plain text
@@ -3732,8 +3691,8 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:1561
 msgid ""
 "Sometimes while writing a commit message you may find yourself writing a "
-"sentence or two explaining some tricky or confusing aspect of the "
-"change. When this happens consider whether it would be valuable to have that "
+"sentence or two explaining some tricky or confusing aspect of the change. "
+"When this happens consider whether it would be valuable to have that "
 "explanation as a comment in the code itself."
 msgstr ""
 
@@ -3809,39 +3768,26 @@ msgstr ""
 #, no-wrap
 msgid ""
 "|`PR:`\n"
-"|The problem report (if any) which is affected (typically, by being closed) "
-"by this commit. Multiple PRs may be specified on one line, separated by "
-"commas or spaces.\n"
+"|The problem report (if any) which is affected (typically, by being closed) by this commit. Multiple PRs may be specified on one line, separated by commas or spaces.\n"
 "\n"
 "|`Submitted by:`\n"
 "|\n"
 "\n"
-"The name and e-mail address of the person that submitted the fix; for "
-"developers, just the username on the FreeBSD cluster.\n"
+"The name and e-mail address of the person that submitted the fix; for developers, just the username on the FreeBSD cluster.\n"
 "\n"
-"If the submitter is the maintainer of the port being committed, include "
-"\"(maintainer)\" after the email address.\n"
+"If the submitter is the maintainer of the port being committed, include \"(maintainer)\" after the email address.\n"
 "\n"
-"Avoid obfuscating the email address of the submitter as this adds additional "
-"work when searching logs.\n"
+"Avoid obfuscating the email address of the submitter as this adds additional work when searching logs.\n"
 "\n"
 "|`Reviewed by:`\n"
-"|The name and e-mail address of the person or people that reviewed the "
-"change; for developers, just the username on the FreeBSD cluster. If a patch "
-"was submitted to a mailing list for review, and the review was favorable, "
-"then just include the list name.\n"
+"|The name and e-mail address of the person or people that reviewed the change; for developers, just the username on the FreeBSD cluster. If a patch was submitted to a mailing list for review, and the review was favorable, then just include the list name.\n"
 "\n"
 "|`Approved by:`\n"
 "a|\n"
 "\n"
-"The name and e-mail address of the person or people that approved the "
-"change; for developers, just the username on the FreeBSD cluster. It is "
-"customary to get prior approval for a commit if it is to an area of the tree "
-"to which you do not usually commit. In addition, during the run up to a new "
-"release all commits _must_ be approved by the release engineering team.\n"
+"The name and e-mail address of the person or people that approved the change; for developers, just the username on the FreeBSD cluster. It is customary to get prior approval for a commit if it is to an area of the tree to which you do not usually commit. In addition, during the run up to a new release all commits _must_ be approved by the release engineering team.\n"
 "\n"
-"While under mentorship, get mentor approval before the commit. Enter the "
-"mentor's username in this field, and note that they are a mentor:\n"
+"While under mentorship, get mentor approval before the commit. Enter the mentor's username in this field, and note that they are a mentor:\n"
 "\n"
 msgstr ""
 
@@ -3872,20 +3818,20 @@ msgid ""
 "commit should be merged to a subset of stable branches, specify the branch "
 "names.  |`MFC with:` |If the commit should be merged together with a "
 "previous one in a single MFC commit (for example, where this commit corrects "
-"a bug in the previous change), specify the corresponding revision number.  "
-"|`Relnotes:` |If the change is a candidate for inclusion in the release "
-"notes for the next release from the branch, set to `yes`.  |`Security:` |If "
-"the change is related to a security vulnerability or security exposure, "
-"include one or more references or a description of the issue. If possible, "
-"include a VuXML URL or a CVE ID.  |`Event:` |The description for the event "
-"where this commit was made. If this is a recurring event, add the year or "
-"even the month to it. For example, this could be `FooBSDcon 2019`. The idea "
-"behind this line is to put recognition to conferences, gatherings, and other "
-"types of meetups and to show that these are useful to have. Please do not "
-"use the `Sponsored by:` line for this as that is meant for organizations "
-"sponsoring certain features or developers working on them.  |`Differential "
-"Revision:` |The full URL of the Phabricator review. This line __must be the "
-"last line__. For example: `https://reviews.freebsd.org/D1708`."
+"a bug in the previous change), specify the corresponding revision number.  |"
+"`Relnotes:` |If the change is a candidate for inclusion in the release notes "
+"for the next release from the branch, set to `yes`.  |`Security:` |If the "
+"change is related to a security vulnerability or security exposure, include "
+"one or more references or a description of the issue. If possible, include a "
+"VuXML URL or a CVE ID.  |`Event:` |The description for the event where this "
+"commit was made. If this is a recurring event, add the year or even the "
+"month to it. For example, this could be `FooBSDcon 2019`. The idea behind "
+"this line is to put recognition to conferences, gatherings, and other types "
+"of meetups and to show that these are useful to have. Please do not use the "
+"`Sponsored by:` line for this as that is meant for organizations sponsoring "
+"certain features or developers working on them.  |`Differential Revision:` |"
+"The full URL of the Phabricator review. This line __must be the last line__. "
+"For example: `https://reviews.freebsd.org/D1708`."
 msgstr ""
 
 #. type: Block title
@@ -3983,9 +3929,7 @@ msgstr ""
 #. type: Block title
 #: documentation/content/en/articles/committers-guide/_index.adoc:1719
 #, no-wrap
-msgid ""
-"Commit Log for a Change to FreeBSD-CURRENT with a Planned Commit to "
-"FreeBSD-STABLE to Follow at a Later Date."
+msgid "Commit Log for a Change to FreeBSD-CURRENT with a Planned Commit to FreeBSD-STABLE to Follow at a Later Date."
 msgstr ""
 
 #. type: Plain text
@@ -4026,7 +3970,8 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:1740
-msgid "The extra information to include in the commit would look something like"
+msgid ""
+"The extra information to include in the commit would look something like"
 msgstr ""
 
 #. type: Block title
@@ -4056,11 +4001,11 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:1761
 msgid ""
-"The FreeBSD Project's full license policy can be found at "
-"link:https://www.FreeBSD.org/internal/software-license/[https://www.FreeBSD.org/internal/software-license]. "
-"The rest of this section is intended to help you get started. As a rule, "
-"when in doubt, ask. It is much easier to give advice than to fix the source "
-"tree."
+"The FreeBSD Project's full license policy can be found at link:https://www."
+"FreeBSD.org/internal/software-license/[https://www.FreeBSD.org/internal/"
+"software-license]. The rest of this section is intended to help you get "
+"started. As a rule, when in doubt, ask. It is much easier to give advice "
+"than to fix the source tree."
 msgstr ""
 
 #. type: delimited block = 4
@@ -4090,17 +4035,13 @@ msgid ""
 " *\n"
 " * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n"
 " * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n"
-" * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR "
-"PURPOSE\n"
+" * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n"
 " * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n"
-" * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR "
-"CONSEQUENTIAL\n"
+" * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n"
 " * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n"
 " * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n"
-" * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, "
-"STRICT\n"
-" * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY "
-"WAY\n"
+" * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n"
+" * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n"
 " * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n"
 " * SUCH DAMAGE.\n"
 " *\n"
@@ -4111,8 +4052,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:1797
 msgid ""
-"The FreeBSD project strongly discourages the so-called \"advertising "
-"clause\" in new code. Due to the large number of contributors to the FreeBSD "
+"The FreeBSD project strongly discourages the so-called \"advertising clause"
+"\" in new code. Due to the large number of contributors to the FreeBSD "
 "project, complying with this clause for many commercial vendors has become "
 "difficult. If you have code in the tree with the advertising clause, please "
 "consider removing it. In fact, please consider using the above license for "
@@ -4162,8 +4103,8 @@ msgid ""
 "Various software or data exist in the repositories where the FreeBSD project "
 "has been granted a special licence to be able to use them. A case in point "
 "are the Terminus fonts for use with man:vt[4]. Here the author Dimitar "
-"Zhekov has allowed us to use the \"Terminus BSD Console\" font under a "
-"2-clause BSD license rather than the regular Open Font License he normally "
+"Zhekov has allowed us to use the \"Terminus BSD Console\" font under a 2-"
+"clause BSD license rather than the regular Open Font License he normally "
 "uses."
 msgstr ""
 
@@ -4179,7 +4120,8 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:1812
-msgid "Contact details for people or organizations granting the special license."
+msgid ""
+"Contact details for people or organizations granting the special license."
 msgstr ""
 
 #. type: Plain text
@@ -4230,8 +4172,8 @@ msgstr ""
 msgid ""
 "The license archive should contain only details of license grants; this is "
 "not the place for any discussions around licensing or other subjects. Access "
-"to data within the license archive will be available on request to the "
-"{core-email}."
+"to data within the license archive will be available on request to the {core-"
+"email}."
 msgstr ""
 
 #. type: Title ==
@@ -4260,8 +4202,8 @@ msgid ""
 "file at the root of the tree. If nobody is listed, scan the revision history "
 "to see who has committed changes in the past. An example script that lists "
 "each person who has committed to a given file along with the number of "
-"commits each person has made can be found at on `freefall` at "
-"[.filename]#~eadler/bin/whodid#. If queries go unanswered or the committer "
+"commits each person has made can be found at on `freefall` at [."
+"filename]#~eadler/bin/whodid#. If queries go unanswered or the committer "
 "otherwise indicates a lack of interest in the area affected, go ahead and "
 "commit it."
 msgstr ""
@@ -4382,10 +4324,10 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:1864
 msgid ""
-"The FreeBSD Project utilizes Bugzilla for tracking bugs and change "
-"requests. Be sure that if you commit a fix or suggestion found in the PR "
-"database to close it. It is also considered nice if you take time to close "
-"any PRs associated with your commits, if appropriate."
+"The FreeBSD Project utilizes Bugzilla for tracking bugs and change requests. "
+"Be sure that if you commit a fix or suggestion found in the PR database to "
+"close it. It is also considered nice if you take time to close any PRs "
+"associated with your commits, if appropriate."
 msgstr ""
 
 #. type: Plain text
@@ -4447,8 +4389,8 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:1884
 msgid ""
 "The FreeBSD Project utilizes https://reviews.freebsd.org[Phabricator] for "
-"code review requests. See the "
-"https://wiki.freebsd.org/CodeReview[CodeReview] wiki page for details."
+"code review requests. See the https://wiki.freebsd.org/"
+"CodeReview[CodeReview] wiki page for details."
 msgstr ""
 
 #. type: Plain text
@@ -4469,13 +4411,14 @@ msgid ""
 "Open new bug on our bug tracker using your `FreeBSD.org` account, see "
 "<<bugzilla>> for more information. Choose `Services` as the Product, and "
 "`Code Review` as the Component. In bug description request that your "
-"Phabricator account be renamed, and provide a link to your Phabricator "
-"user. For example, `https://reviews.freebsd.org/p/bob_example.com/`"
+"Phabricator account be renamed, and provide a link to your Phabricator user. "
+"For example, `https://reviews.freebsd.org/p/bob_example.com/`"
 msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:1896
-msgid "Phabricator accounts cannot be merged, please do not open a new account."
+msgid ""
+"Phabricator accounts cannot be merged, please do not open a new account."
 msgstr ""
 
 #. type: Title ==
@@ -4488,8 +4431,8 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:1902
 msgid ""
 "Besides the repository meisters, there are other FreeBSD project members and "
-"teams whom you will probably get to know in your role as a "
-"committer. Briefly, and by no means all-inclusively, these are:"
+"teams whom you will probably get to know in your role as a committer. "
+"Briefly, and by no means all-inclusively, these are:"
 msgstr ""
 
 #. type: Labeled list
@@ -4506,10 +4449,10 @@ msgid ""
 "website and documentation on the FTP site is up to date with respect to the "
 "subversion tree. It is not a conflict resolution body. The vast majority of "
 "documentation related discussion takes place on the {freebsd-doc}. More "
-"details regarding the doceng team can be found in its "
-"https://www.FreeBSD.org/internal/doceng/[charter]. Committers interested in "
-"contributing to the documentation should familiarize themselves with the "
-"link:{fdp-primer}[Documentation Project Primer]."
+"details regarding the doceng team can be found in its https://www.FreeBSD."
+"org/internal/doceng/[charter]. Committers interested in contributing to the "
+"documentation should familiarize themselves with the link:{fdp-primer}"
+"[Documentation Project Primer]."
 msgstr ""
 
 #. type: Labeled list
@@ -4620,8 +4563,8 @@ msgid ""
 "and you use keys to authenticate, man:ssh-agent[1] is there for your "
 "convenience. If you want to use man:ssh-agent[1], make sure that you run it "
 "before running other applications. X users, for example, usually do this "
-"from their [.filename]#.xsession# or [.filename]#.xinitrc#. See "
-"man:ssh-agent[1] for details."
+"from their [.filename]#.xsession# or [.filename]#.xinitrc#. See man:ssh-"
+"agent[1] for details."
 msgstr ""
 
 #. type: delimited block = 4
@@ -4639,11 +4582,10 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:1939
 msgid ""
-"Send your public key ([.filename]#$HOME/.ssh/id_ecdsa.pub#, "
-"[.filename]#$HOME/.ssh/id_ed25519.pub#, or "
-"[.filename]#$HOME/.ssh/id_rsa.pub#) to the person setting you up as a "
-"committer so it can be put into [.filename]#yourlogin# in "
-"[.filename]#/etc/ssh-keys/# on `freefall`."
+"Send your public key ([.filename]#$HOME/.ssh/id_ecdsa.pub#, [.filename]#"
+"$HOME/.ssh/id_ed25519.pub#, or [.filename]#$HOME/.ssh/id_rsa.pub#) to the "
+"person setting you up as a committer so it can be put into [."
+"filename]#yourlogin# in [.filename]#/etc/ssh-keys/# on `freefall`."
 msgstr ""
 
 #. type: delimited block = 4
@@ -4685,19 +4627,19 @@ msgstr ""
 msgid ""
 "All FreeBSD developers can obtain access to Coverity analysis results of all "
 "FreeBSD Project software. All who are interested in obtaining access to the "
-"analysis results of the automated Coverity runs, can sign up at "
-"http://scan.coverity.com/[Coverity Scan]."
+"analysis results of the automated Coverity runs, can sign up at http://scan."
+"coverity.com/[Coverity Scan]."
 msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:1955
 msgid ""
 "The FreeBSD wiki includes a mini-guide for developers who are interested in "
-"working with the Coverity(R) analysis reports: "
-"https://wiki.freebsd.org/CoverityPrevent[https://wiki.freebsd.org/CoverityPrevent]. "
-"Please note that this mini-guide is only readable by FreeBSD developers, so "
-"if you cannot access this page, you will have to ask someone to add you to "
-"the appropriate Wiki access list."
+"working with the Coverity(R) analysis reports: https://wiki.freebsd.org/"
+"CoverityPrevent[https://wiki.freebsd.org/CoverityPrevent]. Please note that "
+"this mini-guide is only readable by FreeBSD developers, so if you cannot "
+"access this page, you will have to ask someone to add you to the appropriate "
+"Wiki access list."
 msgstr ""
 
 #. type: delimited block = 4
@@ -4718,11 +4660,11 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:1962
 msgid ""
 "Everyone involved with the FreeBSD project is expected to abide by the _Code "
-"of Conduct_ available from "
-"link:https://www.FreeBSD.org/internal/code-of-conduct/[https://www.FreeBSD.org/internal/code-of-conduct]. "
-"As committers, you form the public face of the project, and how you behave "
-"has a vital impact on the public perception of it. This guide expands on the "
-"parts of the _Code of Conduct_ specific to committers."
+"of Conduct_ available from link:https://www.FreeBSD.org/internal/code-of-"
+"conduct/[https://www.FreeBSD.org/internal/code-of-conduct]. As committers, "
+"you form the public face of the project, and how you behave has a vital "
+"impact on the public perception of it. This guide expands on the parts of "
+"the _Code of Conduct_ specific to committers."
 msgstr ""
 
 #. type: delimited block = 4
@@ -4746,8 +4688,8 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:1967
 msgid ""
-"Respect existing maintainers (if listed in the `MAINTAINER` field in "
-"[.filename]#Makefile# or in [.filename]#MAINTAINER# in the top-level "
+"Respect existing maintainers (if listed in the `MAINTAINER` field in [."
+"filename]#Makefile# or in [.filename]#MAINTAINER# in the top-level "
 "directory)."
 msgstr ""
 
@@ -4899,15 +4841,14 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:1994
 msgid ""
-"  You were not always a committer. At one time you were a "
-"contributor. Remember that at all times. Remember what it was like trying to "
-"get help and attention. Do not forget that your work as a contributor was "
-"very important to you. Remember what it was like. Do not discourage, "
-"belittle, or demean contributors. Treat them with respect. They are our "
-"committers in waiting. They are every bit as important to the project as "
-"committers. Their contributions are as valid and as important as your "
-"own. After all, you made many contributions before you became a "
-"committer. Always remember that."
+"  You were not always a committer. At one time you were a contributor. "
+"Remember that at all times. Remember what it was like trying to get help and "
+"attention. Do not forget that your work as a contributor was very important "
+"to you. Remember what it was like. Do not discourage, belittle, or demean "
+"contributors. Treat them with respect. They are our committers in waiting. "
+"They are every bit as important to the project as committers. Their "
+"contributions are as valid and as important as your own. After all, you made "
+"many contributions before you became a committer. Always remember that."
 msgstr ""
 
 #. type: delimited block = 4
@@ -4926,8 +4867,8 @@ msgid ""
 "resembling consensus has been reached. This does not mean that permission is "
 "required before correcting every obvious syntax error or manual page "
 "misspelling, just that it is good to develop a feel for when a proposed "
-"change is not quite such a no-brainer and requires some feedback "
-"first. People really do not mind sweeping changes if the result is something "
+"change is not quite such a no-brainer and requires some feedback first. "
+"People really do not mind sweeping changes if the result is something "
 "clearly better than what they had before, they just do not like being "
 "_surprised_ by those changes. The very best way of making sure that things "
 "are on the right track is to have code reviewed by one or more other "
@@ -4951,8 +4892,8 @@ msgid ""
 "individual will jump up and yell if you commit a change to \"their\" area, "
 "but it still pays to check first. One convention we use is to put a "
 "maintainer line in the [.filename]#Makefile# for any package or subtree "
-"which is being actively maintained by one or more people; see "
-"link:{developers-handbook}#policies[Source Tree Guidelines and Policies] for "
+"which is being actively maintained by one or more people; see link:"
+"{developers-handbook}#policies[Source Tree Guidelines and Policies] for "
 "documentation on this. Where sections of code have several maintainers, "
 "commits to affected areas by one maintainer need to be reviewed by at least "
 "one other maintainer. In cases where the \"maintainer-ship\" of something is "
@@ -5000,12 +4941,12 @@ msgid ""
 "casual observer, but also bear in mind the fact that conservatism is "
 "supposed to be the hallmark of FreeBSD-STABLE and different rules apply "
 "there than in FreeBSD-CURRENT. There is also really no point in having "
-"FreeBSD-CURRENT be a testing ground if changes are merged over to "
-"FreeBSD-STABLE immediately. Changes need a chance to be tested by the "
-"FreeBSD-CURRENT developers, so allow some time to elapse before merging "
-"unless the FreeBSD-STABLE fix is critical, time sensitive or so obvious as "
-"to make further testing unnecessary (spelling fixes to manual pages, obvious "
-"bug/typo fixes, etc.) In other words, apply common sense."
+"FreeBSD-CURRENT be a testing ground if changes are merged over to FreeBSD-"
+"STABLE immediately. Changes need a chance to be tested by the FreeBSD-"
+"CURRENT developers, so allow some time to elapse before merging unless the "
+"FreeBSD-STABLE fix is critical, time sensitive or so obvious as to make "
+"further testing unnecessary (spelling fixes to manual pages, obvious bug/"
+"typo fixes, etc.) In other words, apply common sense."
 msgstr ""
 
 #. type: delimited block = 4
@@ -5021,24 +4962,24 @@ msgstr ""
 msgid ""
 "  This project has a public image to uphold and that image is very important "
 "to all of us, especially if we are to continue to attract new members. There "
-"will be occasions when, despite everyone's very best attempts at "
-"self-control, tempers are lost and angry words are exchanged. The best thing "
-"that can be done in such cases is to minimize the effects of this until "
-"everyone has cooled back down. Do not air angry words in public and do not "
-"forward private correspondence or other private communications to public "
-"mailing lists, mail aliases, instant messaging channels or social media "
-"sites. What people say one-to-one is often much less sugar-coated than what "
-"they would say in public, and such communications therefore have no place "
-"there - they only serve to inflame an already bad situation. If the person "
-"sending a flame-o-gram at least had the grace to send it privately, then "
-"have the grace to keep it private yourself. If you feel you are being "
-"unfairly treated by another developer, and it is causing you anguish, bring "
-"the matter up with core rather than taking it public. Core will do its best "
-"to play peace makers and get things back to sanity. In cases where the "
-"dispute involves a change to the codebase and the participants do not appear "
-"to be reaching an amicable agreement, core may appoint a mutually-agreeable "
-"third party to resolve the dispute. All parties involved must then agree to "
-"be bound by the decision reached by this third party."
+"will be occasions when, despite everyone's very best attempts at self-"
+"control, tempers are lost and angry words are exchanged. The best thing that "
+"can be done in such cases is to minimize the effects of this until everyone "
+"has cooled back down. Do not air angry words in public and do not forward "
+"private correspondence or other private communications to public mailing "
+"lists, mail aliases, instant messaging channels or social media sites. What "
+"people say one-to-one is often much less sugar-coated than what they would "
+"say in public, and such communications therefore have no place there - they "
+"only serve to inflame an already bad situation. If the person sending a "
+"flame-o-gram at least had the grace to send it privately, then have the "
+"grace to keep it private yourself. If you feel you are being unfairly "
+"treated by another developer, and it is causing you anguish, bring the "
+"matter up with core rather than taking it public. Core will do its best to "
+"play peace makers and get things back to sanity. In cases where the dispute "
+"involves a change to the codebase and the participants do not appear to be "
+"reaching an amicable agreement, core may appoint a mutually-agreeable third "
+"party to resolve the dispute. All parties involved must then agree to be "
+"bound by the decision reached by this third party."
 msgstr ""
 
 #. type: delimited block = 4
@@ -5077,21 +5018,21 @@ msgid ""
 "  This may sound obvious, but if it really were so obvious then we probably "
 "would not see so many cases of people clearly not doing this. If your "
 "changes are to the kernel, make sure you can still compile both GENERIC and "
-"LINT. If your changes are anywhere else, make sure you can still make "
-"world. If your changes are to a branch, make sure your testing occurs with a "
+"LINT. If your changes are anywhere else, make sure you can still make world. "
+"If your changes are to a branch, make sure your testing occurs with a "
 "machine which is running that code. If you have a change which also may "
-"break another architecture, be sure and test on all supported "
-"architectures. Please refer to the https://www.FreeBSD.org/internal/[FreeBSD "
-"Internal Page] for a list of available resources. As other architectures are "
-"added to the FreeBSD supported platforms list, the appropriate shared "
-"testing resources will be made available."
+"break another architecture, be sure and test on all supported architectures. "
+"Please refer to the https://www.FreeBSD.org/internal/[FreeBSD Internal Page] "
+"for a list of available resources. As other architectures are added to the "
+"FreeBSD supported platforms list, the appropriate shared testing resources "
+"will be made available."
 msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:2027
 msgid ""
-"  Contributed software is anything under the [.filename]#src/contrib#, "
-"[.filename]#src/crypto#, or [.filename]#src/sys/contrib# trees."
+"  Contributed software is anything under the [.filename]#src/contrib#, [."
+"filename]#src/crypto#, or [.filename]#src/sys/contrib# trees."
 msgstr ""
 
 #. type: delimited block = 4
@@ -5110,10 +5051,10 @@ msgid ""
 "  Reasons for modifying upstream software range from wanting strict control "
 "over a tightly coupled dependency to lack of portability in the canonical "
 "repository's distribution of their code. Regardless of the reason, effort to "
-"minimize the maintenance burden of fork is helpful to fellow "
-"maintainers. Avoid committing trivial or cosmetic changes to files since it "
-"makes every merge thereafter more difficult: such patches need to be "
-"manually re-verified every import."
+"minimize the maintenance burden of fork is helpful to fellow maintainers. "
+"Avoid committing trivial or cosmetic changes to files since it makes every "
+"merge thereafter more difficult: such patches need to be manually re-"
+"verified every import."
 msgstr ""
 
 #. type: delimited block = 4
@@ -5306,18 +5247,19 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:2075
-msgid "Communications with Core are kept confidential for as long as necessary."
+msgid ""
+"Communications with Core are kept confidential for as long as necessary."
 msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:2077
 msgid ""
-"  Communications to core will initially be treated as "
-"confidential. Eventually however, most of Core's business will be summarized "
-"into the monthly or quarterly core reports. Care will be taken to avoid "
-"publicising any sensitive details. Records of some particularly sensitive "
-"subjects may not be reported on at all and will be retained only in Core's "
-"private archives."
+"  Communications to core will initially be treated as confidential. "
+"Eventually however, most of Core's business will be summarized into the "
+"monthly or quarterly core reports. Care will be taken to avoid publicising "
+"any sensitive details. Records of some particularly sensitive subjects may "
+"not be reported on at all and will be retained only in Core's private "
+"archives."
 msgstr ""
 
 #. type: delimited block = 4
@@ -5432,10 +5374,10 @@ msgid ""
 "obligations by the Project and developers to fulfill those guarantees. These "
 "lists define the minimum guarantees for each tier. The Project and "
 "developers may provide additional levels of support beyond the minimum "
-"guarantees for a given tier, but such additional support is not "
-"guaranteed. Each platform target is assigned to a specific tier for each "
-"stable branch. As a result, a platform target might be assigned to different "
-"tiers on concurrent stable branches."
+"guarantees for a given tier, but such additional support is not guaranteed. "
+"Each platform target is assigned to a specific tier for each stable branch. "
+"As a result, a platform target might be assigned to different tiers on "
+"concurrent stable branches."
 msgstr ""
 
 #. type: Title ===
@@ -5496,10 +5438,10 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:2114
 msgid ""
 "Tier 1 platforms are the most mature FreeBSD platforms. They are supported "
-"by the security officer, release engineering, and port management "
-"teams. Tier 1 architectures are expected to be Production Quality with "
-"respect to all aspects of the FreeBSD operating system, including "
-"installation and development environments."
+"by the security officer, release engineering, and port management teams. "
+"Tier 1 architectures are expected to be Production Quality with respect to "
+"all aspects of the FreeBSD operating system, including installation and "
+"development environments."
 msgstr ""
 
 #. type: delimited block = 4
@@ -5659,10 +5601,10 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:2142
 msgid ""
-"Developers should be able to build packages on commonly available, "
-"non-embedded Tier 1 systems. This can mean either native builds if "
-"non-embedded systems are commonly available for the platform in question, or "
-"it can mean cross-builds hosted on some other Tier 1 architecture."
+"Developers should be able to build packages on commonly available, non-"
+"embedded Tier 1 systems. This can mean either native builds if non-embedded "
+"systems are commonly available for the platform in question, or it can mean "
+"cross-builds hosted on some other Tier 1 architecture."
 msgstr ""
 
 #. type: delimited block = 4
@@ -5701,8 +5643,8 @@ msgid ""
 "Tier 2 platforms may be Tier 1 platform candidates that are still under "
 "active development. Architectures reaching end of life may also be moved "
 "from Tier 1 status to Tier 2 status as the availability of resources to "
-"continue to maintain the system in a Production Quality state "
-"diminishes. Well-supported niche architectures may also be Tier 2."
+"continue to maintain the system in a Production Quality state diminishes. "
+"Well-supported niche architectures may also be Tier 2."
 msgstr ""
 
 #. type: delimited block = 4
@@ -5771,7 +5713,8 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:2167
-msgid "Tier 2 architectures must have an active ecosystem of users and developers."
+msgid ""
+"Tier 2 architectures must have an active ecosystem of users and developers."
 msgstr ""
 
 #. type: delimited block = 4
@@ -5883,13 +5826,13 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:2200
 msgid ""
-"The easiest way to add a new port is the `addport` script located in the "
-"[.filename]#ports/Tools/scripts# directory. It adds a port from the "
-"directory specified, determining the category automatically from the port "
-"[.filename]#Makefile#. It also adds an entry to the port's category "
-"[.filename]#Makefile#. It was written by `{mharo}`, `{will}`, and "
-"`{garga}`. When sending questions about this script to the {freebsd-ports}, "
-"please also CC `{crees}`, the current maintainer."
+"The easiest way to add a new port is the `addport` script located in the [."
+"filename]#ports/Tools/scripts# directory. It adds a port from the directory "
+"specified, determining the category automatically from the port [."
+"filename]#Makefile#. It also adds an entry to the port's category [."
+"filename]#Makefile#. It was written by `{mharo}`, `{will}`, and `{garga}`. "
+"When sending questions about this script to the {freebsd-ports}, please also "
+"CC `{crees}`, the current maintainer."
 msgstr ""
 
 #. type: Title ====
@@ -5901,8 +5844,8 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:2205
 msgid ""
-"Check the port, preferably to make sure it compiles and packages "
-"correctly. This is the recommended sequence:"
+"Check the port, preferably to make sure it compiles and packages correctly. "
+"This is the recommended sequence:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -5936,9 +5879,8 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:2222
 msgid ""
 "If the port came from a submitter who has not contributed to the Project "
-"before, add that person's name to the "
-"link:{contributors}#contrib-additional[Additional Contributors] section of "
-"the FreeBSD Contributors List."
+"before, add that person's name to the link:{contributors}#contrib-"
+"additional[Additional Contributors] section of the FreeBSD Contributors List."
 msgstr ""
 
 #. type: Plain text
@@ -5986,7 +5928,8 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:2240
-msgid "When using Git, consider using `git grep`, it is much faster than `grep -r`."
+msgid ""
+"When using Git, consider using `git grep`, it is much faster than `grep -r`."
 msgstr ""
 
 #. type: Plain text
@@ -6002,8 +5945,8 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:2248
 msgid ""
-"Remove the `SUBDIR` listing of the port in the parent directory "
-"[.filename]#Makefile#."
+"Remove the `SUBDIR` listing of the port in the parent directory [."
+"filename]#Makefile#."
 msgstr ""
 
 #. type: Plain text
@@ -6028,10 +5971,10 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:2254
 msgid ""
-"Alternatively, you can use the rmport script, from "
-"[.filename]#ports/Tools/scripts#. This script was written by {vd}. When "
-"sending questions about this script to the {freebsd-ports}, please also CC "
-"{crees}, the current maintainer."
+"Alternatively, you can use the rmport script, from [.filename]#ports/Tools/"
+"scripts#. This script was written by {vd}. When sending questions about this "
+"script to the {freebsd-ports}, please also CC {crees}, the current "
+"maintainer."
 msgstr ""
 
 #. type: Title ===
@@ -6061,10 +6004,10 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:2271
 msgid ""
-"Figure out when the port was removed. Use this "
-"link:https://people.freebsd.org/~crees/removed_ports/index.xml[list], or "
-"look for the port on link:http://www.freshports.org/[freshports], and then "
-"copy the last living revision of the port:"
+"Figure out when the port was removed. Use this link:https://people.freebsd."
+"org/~crees/removed_ports/index.xml[list], or look for the port on link:"
+"http://www.freshports.org/[freshports], and then copy the last living "
+"revision of the port:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -6072,8 +6015,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "% cd /usr/ports/category\n"
-"% svn cp 'svn+ssh://repo.freebsd.org/ports/head/category/portname/@XXXXXX' "
-"portname\n"
+"% svn cp 'svn+ssh://repo.freebsd.org/ports/head/category/portname/@XXXXXX' portname\n"
 msgstr ""
 
 #. type: Plain text
@@ -6095,9 +6037,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "% cd /usr/ports/category\n"
-"% svn cp "
-"'svn+ssh://repo.freebsd.org/ports/head/category/portname/@{YYYY-MM-DD}' "
-"portname\n"
+"% svn cp 'svn+ssh://repo.freebsd.org/ports/head/category/portname/@{YYYY-MM-DD}' portname\n"
 msgstr ""
 
 #. type: Plain text
@@ -6119,8 +6059,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:2291
 msgid ""
-"Restore the `SUBDIR` listing of the port in the parent directory "
-"[.filename]#Makefile#, keeping the entries sorted."
+"Restore the `SUBDIR` listing of the port in the parent directory [."
+"filename]#Makefile#, keeping the entries sorted."
 msgstr ""
 
 #. type: Plain text
@@ -6163,10 +6103,9 @@ msgstr ""
 msgid ""
 "When you want to add a port that is related to any port that is already in "
 "the tree in a separate directory, you have to do a repository copy. Here "
-"related means it is a different version or a slightly modified "
-"version. Examples are [.filename]#print/ghostscript*# (different versions) "
-"and [.filename]#x11-wm/windowmaker*# (English-only and internationalized "
-"version)."
+"related means it is a different version or a slightly modified version. "
+"Examples are [.filename]#print/ghostscript*# (different versions) and [."
+"filename]#x11-wm/windowmaker*# (English-only and internationalized version)."
 msgstr ""
 
 #. type: delimited block = 4
@@ -6220,29 +6159,30 @@ msgid ""
 "when it is really needed — for example, using an existing port as the base "
 "for a very similar program with a different name, or upgrading a port to a "
 "new upstream version which actually changes the distribution name, like the "
-"transition from [.filename]#textproc/libxml# to "
-"[.filename]#textproc/libxml2#. In most cases, adding or changing "
-"`PKGNAMEPREFIX` or `PKGNAMESUFFIX` suffices."
+"transition from [.filename]#textproc/libxml# to [.filename]#textproc/"
+"libxml2#. In most cases, adding or changing `PKGNAMEPREFIX` or "
+"`PKGNAMESUFFIX` suffices."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:2325
 msgid ""
-"Add the new subdirectory to the `SUBDIR` listing in the parent directory "
-"[.filename]#Makefile#. You can run make checksubdirs in the parent directory "
+"Add the new subdirectory to the `SUBDIR` listing in the parent directory [."
+"filename]#Makefile#. You can run make checksubdirs in the parent directory "
 "to check this."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:2326
 msgid ""
-"If the port changed categories, modify the CATEGORIES line of the port's "
-"[.filename]#Makefile# accordingly"
+"If the port changed categories, modify the CATEGORIES line of the port's [."
+"filename]#Makefile# accordingly"
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:2327
-msgid "Add an entry to [.filename]#ports/MOVED#, if you remove the original port."
+msgid ""
+"Add an entry to [.filename]#ports/MOVED#, if you remove the original port."
 msgstr ""
 
 #. type: Plain text
@@ -6259,9 +6199,9 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:2335
 msgid ""
 "Perform a thorough check of the ports collection for any dependencies on the "
-"old port location/name, and update them. Running `grep` on "
-"[.filename]#INDEX# is not enough because some ports have dependencies "
-"enabled by compile-time options. A full `grep -r` of the ports collection is "
+"old port location/name, and update them. Running `grep` on [."
+"filename]#INDEX# is not enough because some ports have dependencies enabled "
+"by compile-time options. A full `grep -r` of the ports collection is "
 "recommended."
 msgstr ""
 
@@ -6323,14 +6263,13 @@ msgstr ""
 #. type: Title ====
 #: documentation/content/en/articles/committers-guide/_index.adoc:2360
 #, no-wrap
-msgid ""
-"What is the procedure to request authorization for merging a commit to the "
-"quarterly branch?"
+msgid "What is the procedure to request authorization for merging a commit to the quarterly branch?"
 msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:2363
-msgid "When doing the commit, add the branch name to the `MFH:` line, for example:"
+msgid ""
+"When doing the commit, add the branch name to the `MFH:` line, for example:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -6408,8 +6347,8 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:2404
 msgid ""
-"Fixes that do not result in a change in contents of the resulting "
-"package. For example:"
+"Fixes that do not result in a change in contents of the resulting package. "
+"For example:"
 msgstr ""
 
 #. type: delimited block = 4
@@ -6469,8 +6408,8 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:2422
 msgid ""
-"A script is provided to automate merging a specific commit: "
-"[.filename]#ports/Tools/scripts/mfh#. It is used as follows:"
+"A script is provided to automate merging a specific commit: [."
+"filename]#ports/Tools/scripts/mfh#. It is used as follows:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -6496,8 +6435,7 @@ msgid ""
 " G   2015Q1/security\n"
 "--- Eliding mergeinfo from '2015Q1/security':\n"
 " U   2015Q1/security\n"
-"--- Recording mergeinfo for merge of r380362 into "
-"'2015Q1/security/rubygem-sshkit':\n"
+"--- Recording mergeinfo for merge of r380362 into '2015Q1/security/rubygem-sshkit':\n"
 " G   2015Q1/security/rubygem-sshkit\n"
 "--- Eliding mergeinfo from '2015Q1/security/rubygem-sshkit':\n"
 " U   2015Q1/security/rubygem-sshkit\n"
@@ -6532,11 +6470,9 @@ msgid ""
 "--- 2015Q1/security/rubygem-sshkit/distinfo     (revision 380443)\n"
 "+++ 2015Q1/security/rubygem-sshkit/distinfo     (working copy)\n"
 "@@ -1,2 +1,2 @@\n"
-"-SHA256 (rubygem/sshkit-1.6.1.gem) = "
-"8ca67e46bb4ea50fdb0553cda77552f3e41b17a5aa919877d93875dfa22c03a7\n"
+"-SHA256 (rubygem/sshkit-1.6.1.gem) = 8ca67e46bb4ea50fdb0553cda77552f3e41b17a5aa919877d93875dfa22c03a7\n"
 "-SIZE (rubygem/sshkit-1.6.1.gem) = 135680\n"
-"+SHA256 (rubygem/sshkit-1.7.0.gem) = "
-"90effd1813363bae7355f4a45ebc8335a8ca74acc8d0933ba6ee6d40f281a2cf\n"
+"+SHA256 (rubygem/sshkit-1.7.0.gem) = 90effd1813363bae7355f4a45ebc8335a8ca74acc8d0933ba6ee6d40f281a2cf\n"
 "+SIZE (rubygem/sshkit-1.7.0.gem) = 136192\n"
 "Index: 2015Q1\n"
 "===================================================================\n"
@@ -6594,9 +6530,7 @@ msgstr ""
 #. type: delimited block . 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:2502
 #, no-wrap
-msgid ""
-"% /usr/ports/Tools/scripts/mfh r407208 r407713 r407722 r408567 r408943 "
-"r410728\n"
+msgid "% /usr/ports/Tools/scripts/mfh r407208 r407713 r407722 r408567 r408943 r410728\n"
 msgstr ""
 
 #. type: Plain text
@@ -6613,8 +6547,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "% /usr/ports/Tools/scripts/mfh 2016Q1 r407208 r407713\n"
-"/!\\ The latest branch is 2016Q2, do you really want to commit to 2016Q1? "
-"[y/n]\n"
+"/!\\ The latest branch is 2016Q2, do you really want to commit to 2016Q1? [y/n]\n"
 msgstr ""
 
 #. type: Title ===
@@ -6646,8 +6579,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:2528
 msgid ""
-"Update the `VALID_CATEGORIES` definition in "
-"[.filename]#ports/Mk/bsd.port.mk#."
+"Update the `VALID_CATEGORIES` definition in [.filename]#ports/Mk/bsd.port."
+"mk#."
 msgstr ""
 
 #. type: Plain text
@@ -6693,8 +6626,8 @@ msgstr ""
 #. type: delimited block = 6
 #: documentation/content/en/articles/committers-guide/_index.adoc:2545
 msgid ""
-"If you want to be really thorough, now might be a good time to run "
-"man:portlint[1]."
+"If you want to be really thorough, now might be a good time to run man:"
+"portlint[1]."
 msgstr ""
 
 #. type: Plain text
@@ -6710,12 +6643,11 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:2550
 msgid ""
-"To do this, use the [.filename]#chkorigin.sh# tool: `env "
-"PORTSDIR=/path/to/ports sh -e "
-"/path/to/ports/Tools/scripts/chkorigin.sh`. This will check every port in "
-"the ports tree, even those not connected to the build, so you can run it "
-"directly after the move operation. Hint: do not forget to look at the "
-"``PKGORIGIN``s of any slave ports of the ports you just moved!"
+"To do this, use the [.filename]#chkorigin.sh# tool: `env PORTSDIR=/path/to/"
+"ports sh -e /path/to/ports/Tools/scripts/chkorigin.sh`. This will check "
+"every port in the ports tree, even those not connected to the build, so you "
+"can run it directly after the move operation. Hint: do not forget to look at "
+"the ``PKGORIGIN``s of any slave ports of the ports you just moved!"
 msgstr ""
 
 #. type: Plain text
@@ -6734,8 +6666,8 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:2552
 msgid ""
 "Once this is done, you can commit the updated [.filename]#ports/Makefile# to "
-"connect the new category to the build and also commit the "
-"[.filename]#Makefile# changes for the old category or categories."
+"connect the new category to the build and also commit the [."
+"filename]#Makefile# changes for the old category or categories."
 msgstr ""
 
 #. type: Plain text
@@ -6760,8 +6692,8 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:2556
 msgid ""
 "[.filename]#doc/en_US.ISO8859-1/htdocs/ports#. Note that these are now "
-"displayed by sub-groups, as specified in "
-"[.filename]#doc/en_US.ISO8859-1/htdocs/ports/categories.descriptions#."
+"displayed by sub-groups, as specified in [.filename]#doc/en_US.ISO8859-1/"
+"htdocs/ports/categories.descriptions#."
 msgstr ""
 
 #. type: Plain text
@@ -6782,11 +6714,10 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:2563
 msgid ""
-"It is not necessary to manually update the "
-"link:https://www.FreeBSD.org/ports/[ports web pages] to reflect the new "
-"category. This is done automatically via the change to "
-"[.filename]#en_US.ISO8859-1/htdocs/ports/categories# and the automated "
-"rebuild of INDEX."
+"It is not necessary to manually update the link:https://www.FreeBSD.org/"
+"ports/[ports web pages] to reflect the new category. This is done "
+"automatically via the change to [.filename]#en_US.ISO8859-1/htdocs/ports/"
+"categories# and the automated rebuild of INDEX."
 msgstr ""
 
 #. type: Title ====
@@ -6818,9 +6749,7 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:2575
 #: documentation/content/en/articles/committers-guide/_index.adoc:2680
 #, no-wrap
-msgid ""
-"Are there changes that can be committed without asking the maintainer for "
-"approval?"
+msgid "Are there changes that can be committed without asking the maintainer for approval?"
 msgstr ""
 
 #. type: delimited block = 4
@@ -6877,9 +6806,9 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:2594
 msgid ""
-"Reports for all the package builds (official, experimental, and "
-"non-regression) are aggregated at "
-"link:pkg-status.FreeBSD.org[pkg-status.FreeBSD.org]."
+"Reports for all the package builds (official, experimental, and non-"
+"regression) are aggregated at link:pkg-status.FreeBSD.org[pkg-status.FreeBSD."
+"org]."
 msgstr ""
 
 #. type: Title ====
@@ -6891,8 +6820,8 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:2599
 msgid ""
-"No. The file can either be generated by running `make index`, or a "
-"pre-generated version can be downloaded with `make fetchindex`."
+"No. The file can either be generated by running `make index`, or a pre-"
+"generated version can be downloaded with `make fetchindex`."
 msgstr ""
 
 #. type: Title ====
@@ -6905,18 +6834,16 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:2604
 msgid ""
 "Any file directly under [.filename]#ports/#, or any file under a "
-"subdirectory that starts with an uppercase letter ([.filename]#Mk/#, "
-"[.filename]#Tools/#, etc.). In particular, the {portmgr} is very protective "
-"of [.filename]#ports/Mk/bsd.port*.mk# so do not commit changes to those "
-"files unless you want to face their wrath."
+"subdirectory that starts with an uppercase letter ([.filename]#Mk/#, [."
+"filename]#Tools/#, etc.). In particular, the {portmgr} is very protective of "
+"[.filename]#ports/Mk/bsd.port*.mk# so do not commit changes to those files "
+"unless you want to face their wrath."
 msgstr ""
 
 #. type: Title ====
 #: documentation/content/en/articles/committers-guide/_index.adoc:2606
 #, no-wrap
-msgid ""
-"What is the proper procedure for updating the checksum for a port distfile "
-"when the file changes without a version change?"
+msgid "What is the proper procedure for updating the checksum for a port distfile when the file changes without a version change?"
 msgstr ""
 
 #. type: delimited block = 4
@@ -7047,9 +6974,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:2643
 msgid ""
-"Get your mentor to add you to the \"Additional Contributors\" "
-"([.filename]#doc/en_US.ISO8859-1/articles/contributors/contrib.additional.xml#), "
-"if you are not already listed there."
+"Get your mentor to add you to the \"Additional Contributors\" ([."
+"filename]#doc/en_US.ISO8859-1/articles/contributors/contrib.additional."
+"xml#), if you are not already listed there."
 msgstr ""
 
 #. type: delimited block = 4
@@ -7077,9 +7004,9 @@ msgstr ""
 #: documentation/content/en/articles/committers-guide/_index.adoc:2652
 msgid ""
 "As of December 12, 2012, Google Analytics was enabled on the FreeBSD Project "
-"website to collect anonymized usage statistics regarding usage of the "
-"site. The information collected is valuable to the FreeBSD Documentation "
-"Project, to identify various problems on the FreeBSD website."
+"website to collect anonymized usage statistics regarding usage of the site. "
+"The information collected is valuable to the FreeBSD Documentation Project, "
+"to identify various problems on the FreeBSD website."
 msgstr ""
 
 #. type: Title ===
@@ -7093,8 +7020,8 @@ msgstr ""
 msgid ""
 "The FreeBSD Project takes visitor privacy very seriously. As such, the "
 "FreeBSD Project website honors the \"Do Not Track\" header _before_ fetching "
-"the tracking code from Google. For more information, please see the "
-"https://www.FreeBSD.org/privacy/[FreeBSD Privacy Policy]."
+"the tracking code from Google. For more information, please see the https://"
+"www.FreeBSD.org/privacy/[FreeBSD Privacy Policy]."
 msgstr ""
 
 #. type: delimited block = 4
@@ -7181,18 +7108,16 @@ msgstr ""
 #. type: Title ===
 #: documentation/content/en/articles/committers-guide/_index.adoc:2692
 #, no-wrap
-msgid ""
-"How do I access people.FreeBSD.org to put up personal or project "
-"information?"
+msgid "How do I access people.FreeBSD.org to put up personal or project information?"
 msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:2695
 msgid ""
-"`people.FreeBSD.org` is the same as `freefall.FreeBSD.org`. Just create a "
-"[.filename]#public_html# directory. Anything you place in that directory "
-"will automatically be visible under "
-"https://people.FreeBSD.org/[https://people.FreeBSD.org/]."
+"`people.FreeBSD.org` is the same as `freefall.FreeBSD.org`. Just create a [."
+"filename]#public_html# directory. Anything you place in that directory will "
+"automatically be visible under https://people.FreeBSD.org/[https://people."
+"FreeBSD.org/]."
 msgstr ""
 
 #. type: Title ===
@@ -7204,8 +7129,8 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:2699
 msgid ""
-"The mailing lists are archived under [.filename]#/local/mail# on "
-"`freefall.FreeBSD.org`."
+"The mailing lists are archived under [.filename]#/local/mail# on `freefall."
+"FreeBSD.org`."
 msgstr ""
 
 #. type: Title ===
@@ -7236,9 +7161,9 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:2711
 msgid ""
-"Recognition as a competent software engineer is the longest lasting "
-"value. In addition, getting a chance to work with some of the best people "
-"that every engineer would dream of meeting is a great perk!"
+"Recognition as a competent software engineer is the longest lasting value. "
+"In addition, getting a chance to work with some of the best people that "
+"every engineer would dream of meeting is a great perk!"
 msgstr ""
 
 #. type: Title ===
@@ -7250,8 +7175,8 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/committers-guide/_index.adoc:2716
 msgid ""
-"FreeBSD committers can get a free 4-CD or DVD set at conferences from "
-"http://www.freebsdmall.com[FreeBSD Mall, Inc.]."
+"FreeBSD committers can get a free 4-CD or DVD set at conferences from http://"
+"www.freebsdmall.com[FreeBSD Mall, Inc.]."
 msgstr ""
 
 #. type: Title ===
