@@ -30,8 +30,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/hubs/_index.adoc:34
 msgid ""
-"An in-progress article on how to mirror FreeBSD, aimed at hub "
-"administrators."
+"An in-progress article on how to mirror FreeBSD, aimed at hub administrators."
 msgstr ""
 
 #. type: Plain text
@@ -53,9 +52,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/hubs/_index.adoc:48
 msgid ""
-"The Mirror System Coordinators can be reached through email at "
-"mailto:mirror-admin@FreeBSD.org[mirror-admin@FreeBSD.org]. There is also a "
-"{freebsd-hubs}."
+"The Mirror System Coordinators can be reached through email at mailto:mirror-"
+"admin@FreeBSD.org[mirror-admin@FreeBSD.org]. There is also a {freebsd-hubs}."
 msgstr ""
 
 #. type: Title ==
@@ -78,11 +76,10 @@ msgid ""
 "huge amount of disk space may be consumed. Also keep in mind that _official_ "
 "mirrors are probably required to be complete. The web pages should always be "
 "mirrored completely. Also note that the numbers stated here are reflecting "
-"the current state (at "
-"{rel120-current}-RELEASE/{rel113-current}-RELEASE). Further development and "
-"releases will only increase the required amount. Also make sure to keep some "
-"(ca. 10-20%) extra space around just to be sure. Here are some approximate "
-"figures:"
+"the current state (at {rel120-current}-RELEASE/{rel113-current}-RELEASE). "
+"Further development and releases will only increase the required amount. "
+"Also make sure to keep some (ca. 10-20%) extra space around just to be sure. "
+"Here are some approximate figures:"
 msgstr ""
 
 #. type: Plain text
@@ -103,8 +100,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/hubs/_index.adoc:62
 msgid ""
-"The current disk usage of FTP Distribution can be found at "
-"link:ftp://ftp.FreeBSD.org/pub/FreeBSD/dir.sizes[ftp://ftp.FreeBSD.org/pub/FreeBSD/dir.sizes]."
+"The current disk usage of FTP Distribution can be found at link:ftp://ftp."
+"FreeBSD.org/pub/FreeBSD/dir.sizes[ftp://ftp.FreeBSD.org/pub/FreeBSD/dir."
+"sizes]."
 msgstr ""
 
 #. type: Title ===
@@ -156,8 +154,8 @@ msgid ""
 "determined by the server's policy. It is also affected by the types of "
 "services you want to offer. Plain FTP or HTTP services may not require a "
 "huge amount of resources. Watch out if you provide rsync. This can have a "
-"huge impact on CPU and memory requirements as it is considered a memory "
-"hog. The following are just examples to give you a very rough hint."
+"huge impact on CPU and memory requirements as it is considered a memory hog. "
+"The following are just examples to give you a very rough hint."
 msgstr ""
 
 #. type: Plain text
@@ -213,8 +211,8 @@ msgid ""
 "offering public FTP distributions. FTP access must be anonymous, and no "
 "upload/download ratios are allowed (a ridiculous thing anyway). Upload "
 "capability is not required (and _must_ never be allowed for the FreeBSD file "
-"space). Also the FreeBSD archive should be available under the path "
-"[.filename]#/pub/FreeBSD#."
+"space). Also the FreeBSD archive should be available under the path [."
+"filename]#/pub/FreeBSD#."
 msgstr ""
 
 #. type: Plain text
@@ -227,8 +225,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/hubs/_index.adoc:96
 msgid ""
-"`/usr/libexec/ftpd`: FreeBSD's own ftpd can be used. Be sure to read "
-"man:ftpd[8]."
+"`/usr/libexec/ftpd`: FreeBSD's own ftpd can be used. Be sure to read man:"
+"ftpd[8]."
 msgstr ""
 
 #. type: Plain text
@@ -402,11 +400,10 @@ msgstr ""
 #: documentation/content/en/articles/hubs/_index.adoc:135
 msgid ""
 "The best way to mirror the FTP area is rsync. You can install the port "
-"package:net/rsync[] and then use rsync to sync with your upstream "
-"host. rsync is already mentioned in <<mirror-serv-rsync>>. Since rsync "
-"access is not required, your preferred upstream site may not allow it. You "
-"may need to hunt around a little bit to find a site that allows rsync "
-"access."
+"package:net/rsync[] and then use rsync to sync with your upstream host. "
+"rsync is already mentioned in <<mirror-serv-rsync>>. Since rsync access is "
+"not required, your preferred upstream site may not allow it. You may need to "
+"hunt around a little bit to find a site that allows rsync access."
 msgstr ""
 
 #. type: delimited block = 4
@@ -432,12 +429,12 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/hubs/_index.adoc:149
 msgid ""
-"Consult the documentation for rsync, which is also available at "
-"http://rsync.samba.org/[http://rsync.samba.org/], about the various options "
-"to be used with rsync. If you sync the whole module (unlike subdirectories), "
-"be aware that the module-directory (here \"FreeBSD\") will not be created, "
-"so you cannot omit the target directory. Also you might want to set up a "
-"script framework that calls such a command via man:cron[8]."
+"Consult the documentation for rsync, which is also available at http://rsync."
+"samba.org/[http://rsync.samba.org/], about the various options to be used "
+"with rsync. If you sync the whole module (unlike subdirectories), be aware "
+"that the module-directory (here \"FreeBSD\") will not be created, so you "
+"cannot omit the target directory. Also you might want to set up a script "
+"framework that calls such a command via man:cron[8]."
 msgstr ""
 
 #. type: Title ===
@@ -459,9 +456,7 @@ msgstr ""
 #. type: delimited block . 4
 #: documentation/content/en/articles/hubs/_index.adoc:160
 #, no-wrap
-msgid ""
-"% rsync -vaHz --delete rsync://bit0.us-west.freebsd.org/FreeBSD-www-data/ "
-"/usr/local/www/\n"
+msgid "% rsync -vaHz --delete rsync://bit0.us-west.freebsd.org/FreeBSD-www-data/ /usr/local/www/\n"
 msgstr ""
 
 #. type: Title ===
@@ -533,7 +528,8 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/hubs/_index.adoc:190
-msgid "Add some output redirections so diagnostic messages are logged to a file."
+msgid ""
+"Add some output redirections so diagnostic messages are logged to a file."
 msgstr ""
 
 #. type: delimited block = 4
@@ -544,12 +540,12 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/hubs/_index.adoc:192
 msgid ""
-"Use man:crontab[1] to add the script to the appropriate user's "
-"man:crontab[5]. This should be a different user than what your FTP daemon "
-"runs as so that if file permissions inside your FTP area are not "
-"world-readable those files cannot be accessed by anonymous FTP. This is used "
-"to \"stage\" releases - making sure all of the official mirror sites have "
-"all of the necessary release files on release day."
+"Use man:crontab[1] to add the script to the appropriate user's man:"
+"crontab[5]. This should be a different user than what your FTP daemon runs "
+"as so that if file permissions inside your FTP area are not world-readable "
+"those files cannot be accessed by anonymous FTP. This is used to \"stage\" "
+"releases - making sure all of the official mirror sites have all of the "
+"necessary release files on release day."
 msgstr ""
 
 #. type: Plain text
@@ -594,14 +590,13 @@ msgid ""
 "the form `ftpN.CC.FreeBSD.org`. _CC_ (i.e., country code) is the _top level "
 "domain_ (TLD) of the country where this mirror is located. _N_ is a number, "
 "telling that the host would be the _Nth_ mirror in that country. (Same "
-"applies to `wwwN.CC.FreeBSD.org`, etc.) There are mirrors with no _CC_ "
-"part. These are the mirror sites that are very well connected and allow a "
-"large number of concurrent users. `ftp.FreeBSD.org` is actually two "
-"machines, one currently located in Denmark and the other in the United "
-"States. It is _NOT_ a master site and should never be used to mirror "
-"from. Lots of online documentation leads \"interactive\"users to "
-"`ftp.FreeBSD.org` so automated mirroring systems should find a different "
-"machine to mirror from."
+"applies to `wwwN.CC.FreeBSD.org`, etc.) There are mirrors with no _CC_ part. "
+"These are the mirror sites that are very well connected and allow a large "
+"number of concurrent users. `ftp.FreeBSD.org` is actually two machines, one "
+"currently located in Denmark and the other in the United States. It is _NOT_ "
+"a master site and should never be used to mirror from. Lots of online "
+"documentation leads \"interactive\"users to `ftp.FreeBSD.org` so automated "
+"mirroring systems should find a different machine to mirror from."
 msgstr ""
 
 #. type: Plain text
@@ -610,12 +605,12 @@ msgid ""
 "Additionally there exists a hierarchy of mirrors, which is described in "
 "terms of __tiers__. The master sites are not referred to but can be "
 "described as __Tier-0__. Mirrors that mirror from these sites can be "
-"considered __Tier-1__, mirrors of __Tier-1__-mirrors, are __Tier-2__, "
-"etc. Official sites are encouraged to be of a low __tier__, but the lower "
-"the tier the higher the requirements in terms as described in "
-"<<mirror-requirements>>. Also access to low-tier-mirrors may be restricted, "
-"and access to master sites is definitely restricted. The __tier__-hierarchy "
-"is not reflected by DNS and generally not documented anywhere except for the "
+"considered __Tier-1__, mirrors of __Tier-1__-mirrors, are __Tier-2__, etc. "
+"Official sites are encouraged to be of a low __tier__, but the lower the "
+"tier the higher the requirements in terms as described in <<mirror-"
+"requirements>>. Also access to low-tier-mirrors may be restricted, and "
+"access to master sites is definitely restricted. The __tier__-hierarchy is "
+"not reflected by DNS and generally not documented anywhere except for the "
 "master sites. However, official mirrors with low numbers like 1-4, are "
 "usually _Tier-1_ (this is just a rough hint, and there is no rule)."
 msgstr ""
@@ -643,15 +638,15 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/hubs/_index.adoc:220
 msgid ""
-"If you have no special intentions or requirements, the statement in "
-"<<mirror-where-where>> applies. This means:"
+"If you have no special intentions or requirements, the statement in <<mirror-"
+"where-where>> applies. This means:"
 msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/hubs/_index.adoc:224
 msgid ""
-"Check for those which provide fastest access (number of hops, "
-"round-trip-times) and offer the services you intend to use (like rsync)."
+"Check for those which provide fastest access (number of hops, round-trip-"
+"times) and offer the services you intend to use (like rsync)."
 msgstr ""
 
 #. type: delimited block = 4
@@ -695,9 +690,8 @@ msgid ""
 "and there are special policies for access. If you are already an _official_ "
 "mirror, this certainly helps you getting access. In any other case make sure "
 "your country really needs another mirror. If it already has three or more, "
-"ask the \"zone administrator\" "
-"(mailto:hostmaster@CC.FreeBSD.org[hostmaster@CC.FreeBSD.org]) or "
-"{freebsd-hubs} first."
+"ask the \"zone administrator\" (mailto:hostmaster@CC.FreeBSD."
+"org[hostmaster@CC.FreeBSD.org]) or {freebsd-hubs} first."
 msgstr ""
 
 #. type: Plain text
@@ -705,9 +699,8 @@ msgstr ""
 msgid ""
 "Whoever helped you become, an _official_ should have helped you gain access "
 "to an appropriate upstream host, either one of the master sites or a "
-"suitable Tier-1 site. If not, you can send email to "
-"mailto:mirror-admin@FreeBSD.org[mirror-admin@FreeBSD.org] to request help "
-"with that."
+"suitable Tier-1 site. If not, you can send email to mailto:mirror-"
+"admin@FreeBSD.org[mirror-admin@FreeBSD.org] to request help with that."
 msgstr ""
 
 #. type: Plain text
@@ -809,8 +802,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/hubs/_index.adoc:273
 msgid ""
-"Furthermore, admins should be subscribed to the {freebsd-hubs}. See "
-"link:{handbook}#eresources-mail[this link] for details, how to subscribe."
+"Furthermore, admins should be subscribed to the {freebsd-hubs}. See link:"
+"{handbook}#eresources-mail[this link] for details, how to subscribe."
 msgstr ""
 
 #. type: delimited block = 4
@@ -826,8 +819,8 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/hubs/_index.adoc:279
 msgid ""
-"It is also important that hub administrators try to keep their mirrors as "
-"up-to-date as possible (again, even more crucial for Tier-1 mirrors). If "
+"It is also important that hub administrators try to keep their mirrors as up-"
+"to-date as possible (again, even more crucial for Tier-1 mirrors). If "
 "Mirror1 does not update for a while, lower tier mirrors will begin to mirror "
 "old data from Mirror1 and thus begins a downward spiral... Keep your mirrors "
 "up to date!"
@@ -866,18 +859,17 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/hubs/_index.adoc:295
 msgid ""
-"ftp.is.FreeBSD.org - "
-"mailto:hostmaster@is.FreeBSD.org[hostmaster@is.FreeBSD.org] - "
-"http://www.rhnet.is/status/draupnir/draupnir.html[ (Bandwidth)] "
-"http://www.rhnet.is/status/ftp/ftp-notendur.html[(FTP processes)] "
-"http://www.rhnet.is/status/ftp/http-notendur.html[(HTTP processes)]"
+"ftp.is.FreeBSD.org - mailto:hostmaster@is.FreeBSD.org[hostmaster@is.FreeBSD."
+"org] - http://www.rhnet.is/status/draupnir/draupnir.html[ (Bandwidth)] "
+"http://www.rhnet.is/status/ftp/ftp-notendur.html[(FTP processes)] http://www."
+"rhnet.is/status/ftp/http-notendur.html[(HTTP processes)]"
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/hubs/_index.adoc:295
 msgid ""
-"ftp2.ru.FreeBSD.org - mailto:mirror@macomnet.ru[mirror@macomnet.ru] - "
-"http://mirror.macomnet.net/mrtg/mirror.macomnet.net_195.128.64.25.html[(Bandwidth)] "
+"ftp2.ru.FreeBSD.org - mailto:mirror@macomnet.ru[mirror@macomnet.ru] - http://"
+"mirror.macomnet.net/mrtg/mirror.macomnet.net_195.128.64.25.html[(Bandwidth)] "
 "http://mirror.macomnet.net/mrtg/mirror.macomnet.net_proc.html[(HTTP and FTP "
 "users)]"
 msgstr ""
