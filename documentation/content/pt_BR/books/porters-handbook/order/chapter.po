@@ -57,16 +57,14 @@ msgstr ""
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/order/chapter.adoc:46
 #, no-wrap
-msgid ""
-"# $FreeBSD: head/ports-mgmt/pkg/Makefile 437007 2017-03-26 21:25:47Z bapt "
-"$\n"
+msgid "# $FreeBSD: head/ports-mgmt/pkg/Makefile 437007 2017-03-26 21:25:47Z bapt $\n"
 msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/order/chapter.adoc:51
 msgid ""
-"The sections and variables described here are mandatory in a ordinary "
-"port. In a slave port, many sections and variables can be skipped."
+"The sections and variables described here are mandatory in a ordinary port. "
+"In a slave port, many sections and variables can be skipped."
 msgstr ""
 
 #. type: delimited block = 4
@@ -245,8 +243,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/order/chapter.adoc:110
 msgid ""
-"This block is optional, although it is highly recommended. The variables "
-"are:"
+"This block is optional, although it is highly recommended. The variables are:"
 msgstr ""
 
 #. type: Plain text
@@ -373,9 +370,9 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/order/chapter.adoc:144
 msgid ""
 "If the port is marked BROKEN when some conditions are met, and such "
-"conditions can only be tested after including "
-"[.filename]#bsd.port.options.mk# or [.filename]#bsd.port.pre.mk#, then those "
-"variables should be set later, in <<porting-order-rest>>."
+"conditions can only be tested after including [.filename]#bsd.port.options."
+"mk# or [.filename]#bsd.port.pre.mk#, then those variables should be set "
+"later, in <<porting-order-rest>>."
 msgstr ""
 
 #. type: Title ==
@@ -458,9 +455,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/order/chapter.adoc:174
 msgid ""
-"Keep related variables close together. For example, if using "
-"<<makefile-master_sites-github,`USE_GITHUB`>>, always put the `GH_*` "
-"variables right after it."
+"Keep related variables close together. For example, if using <<makefile-"
+"master_sites-github,`USE_GITHUB`>>, always put the `GH_*` variables right "
+"after it."
 msgstr ""
 
 #. type: Title ==
@@ -472,9 +469,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/order/chapter.adoc:179
 msgid ""
-"This section block is for variables that can be defined in "
-"[.filename]#bsd.port.mk# that do not belong in any of the previous section "
-"blocks."
+"This section block is for variables that can be defined in [.filename]#bsd."
+"port.mk# that do not belong in any of the previous section blocks."
 msgstr ""
 
 #. type: Plain text
@@ -497,8 +493,8 @@ msgstr ""
 msgid ""
 "If the port uses the <<makefile-options,options framework>>, define "
 "`OPTIONS_DEFINE` and `OPTIONS_DEFAULT` first, then the other `OPTIONS_*` "
-"variables first, then the `*_DESC` descriptions, then the options "
-"helpers. Try and sort all of those alphabetically."
+"variables first, then the `*_DESC` descriptions, then the options helpers. "
+"Try and sort all of those alphabetically."
 msgstr ""
 
 #. type: Block title
@@ -511,11 +507,11 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/order/chapter.adoc:192
 msgid ""
 "The `FOO` and `BAR` options do not have a standard description, so one need "
-"to be written. The other options already have one in "
-"[.filename]#Mk/bsd.options.desc.mk# so writing one is not needed. The `DOCS` "
-"and `EXAMPLES` use target helpers to install their files, they are shown "
-"here for completeness, though they belong in <<porting-order-targets>>, so "
-"other variables and targets could be inserted before them."
+"to be written. The other options already have one in [.filename]#Mk/bsd."
+"options.desc.mk# so writing one is not needed. The `DOCS` and `EXAMPLES` use "
+"target helpers to install their files, they are shown here for completeness, "
+"though they belong in <<porting-order-targets>>, so other variables and "
+"targets could be inserted before them."
 msgstr ""
 
 #. type: delimited block . 4
