@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
-"POT-Creation-Date: 2021-02-21 18:54-0300\n"
+"POT-Creation-Date: 2021-02-23 22:14-0300\n"
 "PO-Revision-Date: 2021-02-24 00:32+0000\n"
 "Last-Translator: Danilo G. Baio <dbaio@FreeBSD.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
@@ -33,9 +33,9 @@ msgstr ""
 #: documentation/content/en/articles/fonts/_index.adoc:25
 msgid ""
 "This document contains a description of the various font files that may be "
-"used with FreeBSD and the syscons driver, X11, Ghostscript and "
-"Groff. Cookbook examples are provided for switching the syscons display to "
-"80x60 mode, and for using type 1 fonts with the above application programs."
+"used with FreeBSD and the syscons driver, X11, Ghostscript and Groff. "
+"Cookbook examples are provided for switching the syscons display to 80x60 "
+"mode, and for using type 1 fonts with the above application programs."
 msgstr ""
 
 #. type: Plain text
@@ -160,10 +160,10 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:64
 msgid ""
-"Which font file format is useful depends on the application being "
-"used. FreeBSD by itself uses no fonts. Application programs and/or drivers "
-"may make use of the font files. Here is a small cross reference of "
-"application/driver to the font type suffixes:"
+"Which font file format is useful depends on the application being used. "
+"FreeBSD by itself uses no fonts. Application programs and/or drivers may "
+"make use of the font files. Here is a small cross reference of application/"
+"driver to the font type suffixes:"
 msgstr ""
 
 #. type: Labeled list
@@ -242,9 +242,9 @@ msgid ""
 "application, more often than not they chose this suffix. Therefore, it is "
 "likely that files with this suffix are not all the same format; "
 "specifically, the [.filename]#.fnt# files used by syscons under FreeBSD may "
-"not be the same format as a [.filename]#.fnt# one encounters in the "
-"MS-DOS(R)/Windows(R) environment. I have not made any attempt at using other "
-"[.filename]#.fnt# files other than those provided with FreeBSD."
+"not be the same format as a [.filename]#.fnt# one encounters in the MS-"
+"DOS(R)/Windows(R) environment. I have not made any attempt at using other [."
+"filename]#.fnt# files other than those provided with FreeBSD."
 msgstr ""
 
 #. type: Title ==
@@ -264,9 +264,7 @@ msgstr ""
 #. type: delimited block . 4
 #: documentation/content/en/articles/fonts/_index.adoc:97
 #, no-wrap
-msgid ""
-"font8x8=\"iso-8x8\"\t\t# font 8x8 from /usr/shared/syscons/fonts/* (or "
-"NO).\n"
+msgid "font8x8=\"iso-8x8\"\t\t# font 8x8 from /usr/share/syscons/fonts/* (or NO).\n"
 msgstr ""
 
 #. type: Plain text
@@ -300,9 +298,7 @@ msgstr ""
 #. type: delimited block . 4
 #: documentation/content/en/articles/fonts/_index.adoc:113
 #, no-wrap
-msgid ""
-"allscreens_flags=\"VGA_80x60\"\t# Set this vidcontrol mode for all virtual "
-"screens\n"
+msgid "allscreens_flags=\"VGA_80x60\"\t# Set this vidcontrol mode for all virtual screens\n"
 msgstr ""
 
 #. type: Plain text
@@ -320,8 +316,8 @@ msgstr ""
 #: documentation/content/en/articles/fonts/_index.adoc:121
 msgid ""
 "X11 can use either the [.filename]#.pfa# or the [.filename]#.pfb# format "
-"fonts. The X11 fonts are located in various subdirectories under "
-"[.filename]#/usr/X11R6/lib/X11/fonts#. Each font file is cross referenced to "
+"fonts. The X11 fonts are located in various subdirectories under [."
+"filename]#/usr/X11R6/lib/X11/fonts#. Each font file is cross referenced to "
 "its X11 name by the contents of [.filename]#fonts.dir# in each directory."
 msgstr ""
 
@@ -387,8 +383,7 @@ msgstr ""
 msgid ""
 "-bitstream-charter-medium-r-normal-xxx-0-0-0-0-p-0-iso8859-1\n"
 "     |        |      |    |   |     |  | | | | | |    \\    \\\n"
-"     |        |      |    |   |     \\  \\ \\ \\ \\ \\ \\     +----+- "
-"character set\n"
+"     |        |      |    |   |     \\  \\ \\ \\ \\ \\ \\     +----+- character set\n"
 "     |        |      |    |   \\      \\  \\ \\ \\ \\ \\ +- average width\n"
 "     |        |      |    |    \\      \\  \\ \\ \\ \\ +- spacing\n"
 "     |        |      |    \\\t\\      \\  \\ \\ \\ +- vertical res.\n"
@@ -591,8 +586,7 @@ msgid ""
 "26\n"
 ".\n"
 ":$a\n"
-"showboat.pfb "
-"-type1-showboat-medium-r-normal-decorative-0-0-0-0-p-0-iso8859-1\n"
+"showboat.pfb -type1-showboat-medium-r-normal-decorative-0-0-0-0-p-0-iso8859-1\n"
 ".\n"
 ":wq\n"
 msgstr ""
@@ -639,8 +633,8 @@ msgstr ""
 msgid ""
 "Ghostscript references a font via its [.filename]#Fontmap#. This must be "
 "modified in a similar way to the X11 [.filename]#fonts.dir#. Ghostscript can "
-"use either the [.filename]#.pfa# or the [.filename]#.pfb# format "
-"fonts. Using the font from the previous example, here is how to use it with "
+"use either the [.filename]#.pfa# or the [.filename]#.pfb# format fonts. "
+"Using the font from the previous example, here is how to use it with "
 "Ghostscript:"
 msgstr ""
 
@@ -676,12 +670,10 @@ msgid ""
 "Copyright (C) 1996 Aladdin Enterprises, Menlo Park, CA.  All rights\n"
 "reserved.\n"
 "This software comes with NO WARRANTY: see the file PUBLIC for details.\n"
-"Loading Times-Roman font from "
-"/usr/local/shared/ghostscript/fonts/tir_____.pfb...\n"
+"Loading Times-Roman font from /usr/local/shared/ghostscript/fonts/tir_____.pfb...\n"
 " /1899520 581354 1300084 13826 0 done.\n"
 "GS>Showboat DoFont\n"
-"Loading Showboat font from "
-"/usr/local/shared/ghostscript/fonts/showboat.pfb...\n"
+"Loading Showboat font from /usr/local/shared/ghostscript/fonts/showboat.pfb...\n"
 " 1939688 565415 1300084 16901 0 done.\n"
 ">>showpage, press <return> to continue<<\n"
 ">>showpage, press <return> to continue<<\n"
@@ -705,12 +697,11 @@ msgstr ""
 msgid ""
 "Now that the new font can be used by both X11 and Ghostscript, how can one "
 "use the new font with groff? First of all, since we are dealing with type 1 "
-"PostScript(R) fonts, the groff device that is applicable is the _ps_ "
-"device. A font file must be created for each font that groff can use. A "
-"groff font name is just a file in "
-"[.filename]#/usr/shared/groff_font/devps#. With our example, the font file "
-"could be [.filename]#/usr/shared/groff_font/devps/SHOWBOAT#. The file must "
-"be created using tools provided by groff."
+"PostScript(R) fonts, the groff device that is applicable is the _ps_ device. "
+"A font file must be created for each font that groff can use. A groff font "
+"name is just a file in [.filename]#/usr/share/groff_font/devps#. With our "
+"example, the font file could be [.filename]#/usr/share/groff_font/devps/"
+"SHOWBOAT#. The file must be created using tools provided by groff."
 msgstr ""
 
 #. type: Plain text
@@ -736,8 +727,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:317
 msgid ""
-"This tool will create the groff font file from the metrics file "
-"([.filename]#.afm# suffix.) Continuing with our example:"
+"This tool will create the groff font file from the metrics file ([."
+"filename]#.afm# suffix.) Continuing with our example:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -756,9 +747,8 @@ msgstr ""
 #, no-wrap
 msgid ""
 "Now create the groff font file\n"
-"% cd /usr/shared/groff_font/devps\n"
-"% /tmp/afmtodit.pl -d DESC -e text.enc /tmp/showboat.afm generate/textmap "
-"SHOWBOAT\n"
+"% cd /usr/share/groff_font/devps\n"
+"% /tmp/afmtodit.pl -d DESC -e text.enc /tmp/showboat.afm generate/textmap SHOWBOAT\n"
 msgstr ""
 
 #. type: Plain text
@@ -775,8 +765,8 @@ msgid ""
 "used (unless the printer happens to have the showboat font built in or on an "
 "accessible font disk.) The final step is to create a downloadable font. The "
 "`pfbtops` tool is used to create the [.filename]#.pfa# format of the font, "
-"and [.filename]#download# is modified to reference the new font. The "
-"[.filename]#download# must reference the internal name of the font. This can "
+"and [.filename]#download# is modified to reference the new font. The [."
+"filename]#download# must reference the internal name of the font. This can "
 "easily be determined from the groff font file as illustrated:"
 msgstr ""
 
@@ -901,8 +891,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:407
 msgid ""
-"Currently available at "
-"http://sunsite.icm.edu.pl/pub/GUST/contrib/BachoTeX98/ttf2pf/[http://sunsite.icm.edu.pl/pub/GUST/contrib/BachoTeX98/ttf2pf/]. "
+"Currently available at http://sunsite.icm.edu.pl/pub/GUST/contrib/BachoTeX98/"
+"ttf2pf/[http://sunsite.icm.edu.pl/pub/GUST/contrib/BachoTeX98/ttf2pf/]. "
 "Note: These files are PostScript programs and must be downloaded to disk by "
 "holding down kbd:[Shift] when clicking on the link. Otherwise, your browser "
 "may try to launch ghostview to view them."
@@ -936,8 +926,8 @@ msgid ""
 "renaming must be consistent with this. (Actually, [.filename]#GS_TTF.PS# and "
 "[.filename]#PFS2AFM.PS# are supposedly part of the Ghostscript distribution, "
 "but it is just as easy to use these as an isolated utility. FreeBSD does not "
-"seem to include the latter.) You also may want to have these installed to "
-"[.filename]#/usr/local/shared/groff_font/devps#(?)."
+"seem to include the latter.) You also may want to have these installed to [."
+"filename]#/usr/local/shared/groff_font/devps#(?)."
 msgstr ""
 
 #. type: Labeled list
@@ -950,9 +940,8 @@ msgstr ""
 #: documentation/content/en/articles/fonts/_index.adoc:419
 msgid ""
 "Creates font files for use with groff from ascii font metrics file. This "
-"usually resides in the directory, "
-"[.filename]#/usr/src/contrib/groff/afmtodit#, and requires some work to get "
-"going."
+"usually resides in the directory, [.filename]#/usr/src/contrib/groff/"
+"afmtodit#, and requires some work to get going."
 msgstr ""
 
 #. type: delimited block = 4
@@ -976,10 +965,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:434
 msgid ""
-"You may also need to copy "
-"[.filename]#/usr/contrib/groff/devps/generate/textmap# to "
-"[.filename]#/usr/shared/groff_font/devps/generate# if it does not already "
-"exist."
+"You may also need to copy [.filename]#/usr/contrib/groff/devps/generate/"
+"textmap# to [.filename]#/usr/share/groff_font/devps/generate# if it does not "
+"already exist."
 msgstr ""
 
 #. type: Plain text
@@ -1002,10 +990,10 @@ msgstr ""
 #: documentation/content/en/articles/fonts/_index.adoc:445
 msgid ""
 "  Where, _TTF_name_ is your TrueType font file, _PS_font_name_ is the file "
-"name for [.filename]#.pfa#, _AFM_name_ is the name you wish for "
-"[.filename]#.afm#. If you do not specify output file names for the "
-"[.filename]#.pfa# or [.filename]#.afm# files, then default names will be "
-"generated from the TrueType font file name."
+"name for [.filename]#.pfa#, _AFM_name_ is the name you wish for [.filename]#."
+"afm#. If you do not specify output file names for the [.filename]#.pfa# or [."
+"filename]#.afm# files, then default names will be generated from the "
+"TrueType font file name."
 msgstr ""
 
 #. type: Plain text
@@ -1029,8 +1017,7 @@ msgstr ""
 msgid ""
 "% gs -dNODISPLAY -- ttf2pf.ps 3of9.ttf\n"
 "Aladdin Ghostscript 5.10 (1997-11-23)\n"
-"Copyright (C) 1997 Aladdin Enterprises, Menlo Park, CA.  All rights "
-"reserved.\n"
+"Copyright (C) 1997 Aladdin Enterprises, Menlo Park, CA.  All rights reserved.\n"
 "This software comes with NO WARRANTY: see the file PUBLIC for details.\n"
 "Converting 3of9.ttf to 3of9.pfa and 3of9.afm.\n"
 msgstr ""
@@ -1038,8 +1025,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:460
 msgid ""
-"  If you want the converted fonts to be stored in [.filename]#A.pfa# and "
-"[.filename]#B.afm#, then use this command:"
+"  If you want the converted fonts to be stored in [.filename]#A.pfa# and [."
+"filename]#B.afm#, then use this command:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -1048,8 +1035,7 @@ msgstr ""
 msgid ""
 "% gs -dNODISPLAY -- ttf2pf.ps 3of9.ttf A B\n"
 "Aladdin Ghostscript 5.10 (1997-11-23)\n"
-"Copyright (C) 1997 Aladdin Enterprises, Menlo Park, CA.  All rights "
-"reserved.\n"
+"Copyright (C) 1997 Aladdin Enterprises, Menlo Park, CA.  All rights reserved.\n"
 "This software comes with NO WARRANTY: see the file PUBLIC for details.\n"
 "Converting 3of9.ttf to A.pfa and B.afm.\n"
 msgstr ""
@@ -1062,11 +1048,11 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:473
 msgid ""
-"  Change directories to [.filename]#/usr/shared/groff_font/devps# so as to "
+"  Change directories to [.filename]#/usr/share/groff_font/devps# so as to "
 "make the following command easier to execute. You will probably need root "
 "privileges for this. (Or, if you are paranoid about working there, make sure "
-"you reference the files [.filename]#DESC#, [.filename]#text.enc# and "
-"[.filename]#generate/textmap# as being in this directory.)"
+"you reference the files [.filename]#DESC#, [.filename]#text.enc# and [."
+"filename]#generate/textmap# as being in this directory.)"
 msgstr ""
 
 #. type: delimited block . 4
@@ -1095,8 +1081,8 @@ msgstr ""
 #: documentation/content/en/articles/fonts/_index.adoc:487
 msgid ""
 "  Ensure that the resulting _PS_font_name_ file (e.g., [.filename]#3of9# in "
-"the example above) is located in the directory "
-"[.filename]#/usr/shared/groff_font/devps# by copying or moving it there."
+"the example above) is located in the directory [.filename]#/usr/share/"
+"groff_font/devps# by copying or moving it there."
 msgstr ""
 
 #. type: Plain text
@@ -1119,8 +1105,7 @@ msgstr ""
 #: documentation/content/en/articles/fonts/_index.adoc:494
 msgid ""
 "The TrueType font format is used by Windows, Windows 95, and Mac's. It is "
-"quite popular and there are a great number of fonts available in this "
-"format."
+"quite popular and there are a great number of fonts available in this format."
 msgstr ""
 
 #. type: Plain text
@@ -1137,9 +1122,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:498
 msgid ""
-"This rather dismal situation may soon change. The "
-"http://www.freetype.org/[FreeType Project] is currently developing a useful "
-"set of FreeType tools:"
+"This rather dismal situation may soon change. The http://www.freetype.org/"
+"[FreeType Project] is currently developing a useful set of FreeType tools:"
 msgstr ""
 
 #. type: Plain text
@@ -1156,8 +1140,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:501
 msgid ""
-"xfstt is another font server for X11, available under "
-"link:ftp://sunsite.unc.edu/pub/Linux/X11/fonts/[ftp://sunsite.unc.edu/pub/Linux/X11/fonts/]."
+"xfstt is another font server for X11, available under link:ftp://sunsite.unc."
+"edu/pub/Linux/X11/fonts/[ftp://sunsite.unc.edu/pub/Linux/X11/fonts/]."
 msgstr ""
 
 #. type: Plain text
@@ -1165,8 +1149,8 @@ msgstr ""
 msgid ""
 "A program called `ttf2bdf` can produce BDF files suitable for use in an X "
 "environment from TrueType files. Linux binaries are said to be available "
-"from "
-"link:ftp://crl.nmsu.edu/CLR/multiling/General/[ftp://crl.nmsu.edu/CLR/multiling/General/]."
+"from link:ftp://crl.nmsu.edu/CLR/multiling/General/[ftp://crl.nmsu.edu/CLR/"
+"multiling/General/]."
 msgstr ""
 
 #. type: Plain text
@@ -1184,8 +1168,8 @@ msgstr ""
 #: documentation/content/en/articles/fonts/_index.adoc:508
 msgid ""
 "Many fonts are available on the Internet. They are either entirely free, or "
-"are share-ware. In addition many fonts are available in the "
-"[.filename]#x11-fonts/# category in the ports collection"
+"are share-ware. In addition many fonts are available in the [.filename]#x11-"
+"fonts/# category in the ports collection"
 msgstr ""
 
 #. type: Title ==
@@ -1202,8 +1186,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:514
 msgid ""
-"Can one generate the [.filename]#.afm# from a [.filename]#.pfa# or "
-"[.filename]#.pfb#?"
+"Can one generate the [.filename]#.afm# from a [.filename]#.pfa# or [."
+"filename]#.pfb#?"
 msgstr ""
 
 #. type: Plain text
