@@ -50,9 +50,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/driverbasics/chapter.adoc:38
 msgid ""
-"Most devices in a UNIX(R)-like operating system are accessed through "
-"device-nodes, sometimes also called special files. These files are usually "
-"located under the directory [.filename]#/dev# in the filesystem hierarchy."
+"Most devices in a UNIX(R)-like operating system are accessed through device-"
+"nodes, sometimes also called special files. These files are usually located "
+"under the directory [.filename]#/dev# in the filesystem hierarchy."
 msgstr ""
 
 #. type: Plain text
@@ -193,7 +193,8 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/driverbasics/chapter.adoc:105
-msgid "FreeBSD provides a system makefile to simplify compiling a kernel module."
+msgid ""
+"FreeBSD provides a system makefile to simplify compiling a kernel module."
 msgstr ""
 
 #. type: delimited block . 4
@@ -213,8 +214,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/driverbasics/chapter.adoc:115
 msgid ""
-"Running `make` with this makefile will create a file "
-"[.filename]#skeleton.ko# that can be loaded into the kernel by typing:"
+"Running `make` with this makefile will create a file [.filename]#skeleton."
+"ko# that can be loaded into the kernel by typing:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -394,8 +395,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "static int\n"
-"echo_open(struct cdev *dev __unused, int oflags __unused, int devtype "
-"__unused,\n"
+"echo_open(struct cdev *dev __unused, int oflags __unused, int devtype __unused,\n"
 "    struct thread *td __unused)\n"
 "{\n"
 "\tint error = 0;\n"
@@ -415,8 +415,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "static int\n"
-"echo_close(struct cdev *dev __unused, int fflag __unused, int devtype "
-"__unused,\n"
+"echo_close(struct cdev *dev __unused, int fflag __unused, int devtype __unused,\n"
 "    struct thread *td __unused)\n"
 "{\n"
 msgstr ""
@@ -484,8 +483,7 @@ msgid ""
 " * to buf for later accessing.\n"
 " */\n"
 "static int\n"
-"echo_write(struct cdev *dev __unused, struct uio *uio, int ioflag "
-"__unused)\n"
+"echo_write(struct cdev *dev __unused, struct uio *uio, int ioflag __unused)\n"
 "{\n"
 "\tsize_t amt;\n"
 "\tint error;\n"
@@ -620,10 +618,10 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/driverbasics/chapter.adoc:327
 msgid ""
-"Drivers for network devices do not use device nodes in order to be "
-"accessed. Their selection is based on other decisions made inside the kernel "
-"and instead of calling open(), use of a network device is generally "
-"introduced by using the system call socket(2)."
+"Drivers for network devices do not use device nodes in order to be accessed. "
+"Their selection is based on other decisions made inside the kernel and "
+"instead of calling open(), use of a network device is generally introduced "
+"by using the system call socket(2)."
 msgstr ""
 
 #. type: Plain text
