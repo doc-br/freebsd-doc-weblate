@@ -48,10 +48,10 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/upgrading/chapter.adoc:37
 msgid ""
 "The next step is to see if there is an update already pending. To do this, "
-"there are two options. There is a searchable interface to the "
-"https://bugs.freebsd.org/search/[FreeBSD Problem Report (PR) or bug "
-"database]. Select `Ports & Packages` in the `Product` multiple select menu, "
-"and enter the name of the port in the `Summary` field."
+"there are two options. There is a searchable interface to the https://bugs."
+"freebsd.org/search/[FreeBSD Problem Report (PR) or bug database]. Select "
+"`Ports & Packages` in the `Product` multiple select menu, and enter the name "
+"of the port in the `Summary` field."
 msgstr ""
 
 #. type: Plain text
@@ -60,10 +60,10 @@ msgid ""
 "However, sometimes people forget to put the name of the port into the "
 "Summary field in an unambiguous fashion. In that case, try searching in the "
 "`Comment` field in the `Detailled Bug Information` section, or try the "
-"<<portsmon,FreeBSD Ports Monitoring System>> (also known as "
-"`portsmon`). This system attempts to classify port PRs by portname. To "
-"search for PRs about a particular port, use the "
-"http://portsmon.FreeBSD.org/portoverview.py[Overview of One Port]."
+"<<portsmon,FreeBSD Ports Monitoring System>> (also known as `portsmon`). "
+"This system attempts to classify port PRs by portname. To search for PRs "
+"about a particular port, use the http://portsmon.FreeBSD.org/portoverview."
+"py[Overview of One Port]."
 msgstr ""
 
 #. type: Plain text
@@ -82,16 +82,16 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/upgrading/chapter.adoc:43
 msgid ""
 "If the maintainer asks you to do the upgrade or there is no maintainer, then "
-"help out FreeBSD by preparing the update! Please do this by using the "
-"man:diff[1] command in the base system."
+"help out FreeBSD by preparing the update! Please do this by using the man:"
+"diff[1] command in the base system."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/upgrading/chapter.adoc:45
 msgid ""
 "To create a suitable `diff` for a single patch, copy the file that needs "
-"patching to [.filename]#something.orig#, save the changes to "
-"[.filename]#something# and then create the patch:"
+"patching to [.filename]#something.orig#, save the changes to [."
+"filename]#something# and then create the patch:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -111,10 +111,10 @@ msgid ""
 "result of `diff -ruN superedit.bak superedit`). Either unified or context "
 "diff is fine, but port committers generally prefer unified diffs. Note the "
 "use of the `-N` option-this is the accepted way to force diff to properly "
-"deal with the case of new files being added or old files being "
-"deleted. Before sending us the diff, please examine the output to make sure "
-"all the changes make sense. (In particular, make sure to first clean out the "
-"work directories with `make clean`)."
+"deal with the case of new files being added or old files being deleted. "
+"Before sending us the diff, please examine the output to make sure all the "
+"changes make sense. (In particular, make sure to first clean out the work "
+"directories with `make clean`)."
 msgstr ""
 
 #. type: delimited block = 4
@@ -129,9 +129,9 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/upgrading/chapter.adoc:59
 msgid ""
 "To simplify common operations with patch files, use `make makepatch` as "
-"described in <<slow-patch,Patching>>. Other tools exists, like "
-"[.filename]#/usr/ports/Tools/scripts/patchtool.py#. Before using it, please "
-"read [.filename]#/usr/ports/Tools/scripts/README.patchtool#."
+"described in <<slow-patch,Patching>>. Other tools exists, like [.filename]#/"
+"usr/ports/Tools/scripts/patchtool.py#. Before using it, please read [."
+"filename]#/usr/ports/Tools/scripts/README.patchtool#."
 msgstr ""
 
 #. type: Plain text
@@ -139,10 +139,10 @@ msgstr ""
 msgid ""
 "If the port is unmaintained, and you are actively using it, please consider "
 "volunteering to become its maintainer. FreeBSD has over 4000 ports without "
-"maintainers, and this is an area where more volunteers are always "
-"needed. (For a detailed description of the responsibilities of maintainers, "
-"refer to the section in the "
-"link:{developers-handbook}#POLICIES-MAINTAINER[Developer's Handbook].)"
+"maintainers, and this is an area where more volunteers are always needed. "
+"(For a detailed description of the responsibilities of maintainers, refer to "
+"the section in the link:{developers-handbook}#POLICIES-"
+"MAINTAINER[Developer's Handbook].)"
 msgstr ""
 
 #. type: Plain text
@@ -160,8 +160,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/upgrading/chapter.adoc:65
 msgid ""
-"Before submitting the bug, review the link:{problem-reports}#pr-writing/[ "
-"Writing the problem report] section in the Problem Reports article. It "
+"Before submitting the bug, review the link:{problem-reports}#pr-writing/"
+"[ Writing the problem report] section in the Problem Reports article. It "
 "contains far more information about how to write useful problem reports."
 msgstr ""
 
@@ -178,17 +178,16 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/upgrading/chapter.adoc:74
 msgid ""
-"Please use man:diff[1] or `svn diff` to create updates to existing "
-"ports. Other formats include the whole file and make it impossible to see "
-"just what has changed. When diffs are not included, the entire update might "
-"be ignored."
+"Please use man:diff[1] or `svn diff` to create updates to existing ports. "
+"Other formats include the whole file and make it impossible to see just what "
+"has changed. When diffs are not included, the entire update might be ignored."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/upgrading/chapter.adoc:77
 msgid ""
-"Now that all of that is done, read about how to keep up-to-date in "
-"<<keeping-up,Keeping Up>>."
+"Now that all of that is done, read about how to keep up-to-date in <<keeping-"
+"up,Keeping Up>>."
 msgstr ""
 
 #. type: Title ==
@@ -287,8 +286,7 @@ msgid ""
 "|The file was updated without problems.\n"
 "\n"
 "|G\n"
-"|The file was updated without problems (only when working against a remote "
-"repository).\n"
+"|The file was updated without problems (only when working against a remote repository).\n"
 "\n"
 "|M\n"
 "|The file had been modified, and was merged without conflicts.\n"
@@ -393,9 +391,7 @@ msgstr ""
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/upgrading/chapter.adoc:179
 #, no-wrap
-msgid ""
-"# pkg delete -g -f docbook-xml\\* docbook-sk\\* docbook\\[2345\\]\\?\\?-\\* "
-"docbook-4\\*\n"
+msgid "# pkg delete -g -f docbook-xml\\* docbook-sk\\* docbook\\[2345\\]\\?\\?-\\* docbook-4\\*\n"
 msgstr ""
 
 #. type: Plain text
