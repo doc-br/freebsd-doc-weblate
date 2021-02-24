@@ -236,10 +236,10 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:108
 msgid ""
-"The [.filename]#cert.crt#, [.filename]#cert.key#, and "
-"[.filename]#cacert.crt# files are necessary for clients to authenticate "
-"_you_ as the valid LDAP server. If you simply want a server that runs, you "
-"can create a self-signed certificate with OpenSSL:"
+"The [.filename]#cert.crt#, [.filename]#cert.key#, and [.filename]#cacert."
+"crt# files are necessary for clients to authenticate _you_ as the valid LDAP "
+"server. If you simply want a server that runs, you can create a self-signed "
+"certificate with OpenSSL:"
 msgstr ""
 
 #. type: Block title
@@ -301,11 +301,10 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:147
 msgid ""
 "This will create a self-signed certificate that can be used for the "
-"directives in [.filename]#slapd.conf#, where [.filename]#cert.crt# and "
-"[.filename]#cacert.crt# are the same file. If you are going to use many "
-"OpenLDAP servers (for replication via `slurpd`) you will want to see "
-"<<ssl-ca>> to generate a CA key and use it to sign individual server "
-"certificates."
+"directives in [.filename]#slapd.conf#, where [.filename]#cert.crt# and [."
+"filename]#cacert.crt# are the same file. If you are going to use many "
+"OpenLDAP servers (for replication via `slurpd`) you will want to see <<ssl-"
+"ca>> to generate a CA key and use it to sign individual server certificates."
 msgstr ""
 
 #. type: delimited block = 4
@@ -322,8 +321,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:156
 msgid ""
-"Then run `/usr/local/etc/rc.d/slapd start`. This should start "
-"OpenLDAP. Confirm that it is listening on 389 with"
+"Then run `/usr/local/etc/rc.d/slapd start`. This should start OpenLDAP. "
+"Confirm that it is listening on 389 with"
 msgstr ""
 
 #. type: delimited block . 4
@@ -343,18 +342,17 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:167
 msgid ""
-"Install the package:net/openldap24-client[] port for the OpenLDAP "
-"libraries. The client machines will always have OpenLDAP libraries since "
-"that is all package:security/pam_ldap[] and package:net/nss_ldap[] support, "
-"at least for the moment."
+"Install the package:net/openldap24-client[] port for the OpenLDAP libraries. "
+"The client machines will always have OpenLDAP libraries since that is all "
+"package:security/pam_ldap[] and package:net/nss_ldap[] support, at least for "
+"the moment."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:169
 msgid ""
-"The configuration file for the OpenLDAP libraries is "
-"[.filename]#/usr/local/etc/openldap/ldap.conf#. Edit this file to contain "
-"the following values:"
+"The configuration file for the OpenLDAP libraries is [.filename]#/usr/local/"
+"etc/openldap/ldap.conf#. Edit this file to contain the following values:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -378,9 +376,8 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:186
 msgid ""
 "There are two files called [.filename]#ldap.conf#. The first is this file, "
-"which is for the OpenLDAP libraries and defines how to talk to the "
-"server. The second is [.filename]#/usr/local/etc/ldap.conf#, and is for "
-"pam_ldap."
+"which is for the OpenLDAP libraries and defines how to talk to the server. "
+"The second is [.filename]#/usr/local/etc/ldap.conf#, and is for pam_ldap."
 msgstr ""
 
 #. type: Plain text
@@ -388,9 +385,9 @@ msgstr ""
 msgid ""
 "At this point you should be able to run `ldapsearch -Z` on the client "
 "machine; `-Z` means \"use TLS\". If you encounter an error, then something "
-"is configured wrong; most likely it is your certificates. Use "
-"man:openssl[1]'s `s_client` and `s_server` to ensure you have them "
-"configured and signed properly."
+"is configured wrong; most likely it is your certificates. Use man:"
+"openssl[1]'s `s_client` and `s_server` to ensure you have them configured "
+"and signed properly."
 msgstr ""
 
 #. type: Title ===
@@ -404,10 +401,10 @@ msgstr ""
 msgid ""
 "Authentication against an LDAP directory is generally accomplished by "
 "attempting to bind to the directory as the connecting user. This is done by "
-"establishing a \"simple\" bind on the directory with the user name "
-"supplied. If there is an entry with the `uid` equal to the user name and "
-"that entry's `userPassword` attribute matches the password supplied, then "
-"the bind is successful."
+"establishing a \"simple\" bind on the directory with the user name supplied. "
+"If there is an entry with the `uid` equal to the user name and that entry's "
+"`userPassword` attribute matches the password supplied, then the bind is "
+"successful."
 msgstr ""
 
 #. type: Plain text
@@ -421,9 +418,9 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:198
 msgid ""
 "The base entry for our database is `dc=example,dc=org`. The default location "
-"for users that most clients seem to expect is something like "
-"`ou=people,_base_`, so that is what will be used here. However keep in mind "
-"that this is configurable."
+"for users that most clients seem to expect is something like `ou=people,"
+"_base_`, so that is what will be used here. However keep in mind that this "
+"is configurable."
 msgstr ""
 
 #. type: Plain text
@@ -449,13 +446,12 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:212
 msgid ""
-"Some thought might be given to the object class your users will belong "
-"to. Most tools by default will use `people`, which is fine if you simply "
-"want to provide entries against which to authenticate. However, if you are "
-"going to store user information in the LDAP database as well, you will "
-"probably want to use `inetOrgPerson`, which has many useful attributes. In "
-"either case, the relevant schemas need to be loaded in "
-"[.filename]#slapd.conf#."
+"Some thought might be given to the object class your users will belong to. "
+"Most tools by default will use `people`, which is fine if you simply want to "
+"provide entries against which to authenticate. However, if you are going to "
+"store user information in the LDAP database as well, you will probably want "
+"to use `inetOrgPerson`, which has many useful attributes. In either case, "
+"the relevant schemas need to be loaded in [.filename]#slapd.conf#."
 msgstr ""
 
 #. type: Plain text
@@ -528,8 +524,8 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:251
 msgid ""
 "To enter these into your database, you can use `slapadd` or `ldapadd` on a "
-"file containing these entries. Alternatively, you can use "
-"package:sysutils/ldapvi[]."
+"file containing these entries. Alternatively, you can use package:sysutils/"
+"ldapvi[]."
 msgstr ""
 
 #. type: Plain text
@@ -549,9 +545,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:258
 msgid ""
-"The client should already have OpenLDAP libraries from "
-"<<ldap-connect-client>>, but if you are installing several client machines "
-"you will need to install package:net/openldap24-client[] on each of them."
+"The client should already have OpenLDAP libraries from <<ldap-connect-"
+"client>>, but if you are installing several client machines you will need to "
+"install package:net/openldap24-client[] on each of them."
 msgstr ""
 
 #. type: Plain text
@@ -570,8 +566,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:265
 msgid ""
-"package:security/pam_ldap[] is configured via "
-"[.filename]#/usr/local/etc/ldap.conf#."
+"package:security/pam_ldap[] is configured via [.filename]#/usr/local/etc/"
+"ldap.conf#."
 msgstr ""
 
 #. type: delimited block = 4
@@ -579,9 +575,9 @@ msgstr ""
 msgid ""
 "This is a _different file_ than the OpenLDAP library functions' "
 "configuration file, [.filename]#/usr/local/etc/openldap/ldap.conf#; however, "
-"it takes many of the same options; in fact it is a superset of that "
-"file. For the rest of this section, references to [.filename]#ldap.conf# "
-"will mean [.filename]#/usr/local/etc/ldap.conf#."
+"it takes many of the same options; in fact it is a superset of that file. "
+"For the rest of this section, references to [.filename]#ldap.conf# will mean "
+"[.filename]#/usr/local/etc/ldap.conf#."
 msgstr ""
 
 #. type: Plain text
@@ -597,8 +593,8 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:274
 msgid ""
 "We are identifying our users with the `uid` attribute. To configure this "
-"(though it is the default), set the `pam_login_attribute` directive in "
-"[.filename]#ldap.conf#:"
+"(though it is the default), set the `pam_login_attribute` directive in [."
+"filename]#ldap.conf#:"
 msgstr ""
 
 #. type: Block title
@@ -628,10 +624,10 @@ msgstr ""
 msgid ""
 "Users whose shell is not in [.filename]#/etc/shells# will not be able to log "
 "in. This is particularly important when Bash is set as the user shell on the "
-"LDAP server. Bash is not included with a default installation of "
-"FreeBSD. When installed from a package or port, it is located at "
-"[.filename]#/usr/local/bin/bash#. Verify that the path to the shell on the "
-"server is set correctly:"
+"LDAP server. Bash is not included with a default installation of FreeBSD. "
+"When installed from a package or port, it is located at [.filename]#/usr/"
+"local/bin/bash#. Verify that the path to the shell on the server is set "
+"correctly:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -643,10 +639,10 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:297
 msgid ""
-"There are two choices when the output shows `/bin/bash` in the last "
-"column. The first is to change the user's entry on the LDAP server to "
-"[.filename]#/usr/local/bin/bash#. The second option is to create a symlink "
-"on the LDAP client computer so Bash is found at the correct location:"
+"There are two choices when the output shows `/bin/bash` in the last column. "
+"The first is to change the user's entry on the LDAP server to [.filename]#/"
+"usr/local/bin/bash#. The second option is to create a symlink on the LDAP "
+"client computer so Bash is found at the correct location:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -658,9 +654,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:304
 msgid ""
-"Make sure that [.filename]#/etc/shells# contains entries for both "
-"`/usr/local/bin/bash` and `/bin/bash`. The user will then be able to log in "
-"to the system with Bash as their shell."
+"Make sure that [.filename]#/etc/shells# contains entries for both `/usr/"
+"local/bin/bash` and `/bin/bash`. The user will then be able to log in to the "
+"system with Bash as their shell."
 msgstr ""
 
 #. type: Title ====
@@ -681,8 +677,8 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:311
 msgid ""
 "Most of the time the appropriate PAM file is [.filename]#/etc/pam.d/sshd#, "
-"if you want to use SSH (remember to set the relevant options in "
-"[.filename]#/etc/ssh/sshd_config#, otherwise SSH will not use PAM)."
+"if you want to use SSH (remember to set the relevant options in [.filename]#/"
+"etc/ssh/sshd_config#, otherwise SSH will not use PAM)."
 msgstr ""
 
 #. type: Plain text
@@ -785,13 +781,10 @@ msgstr ""
 #, no-wrap
 msgid ""
 "auth            required        pam_nologin.so          no_warn\n"
-"auth            sufficient      pam_opie.so             no_warn "
-"no_fake_prompts\n"
-"auth            requisite       pam_opieaccess.so       no_warn "
-"allow_local\n"
+"auth            sufficient      pam_opie.so             no_warn no_fake_prompts\n"
+"auth            requisite       pam_opieaccess.so       no_warn allow_local\n"
 "auth            sufficient      /usr/local/lib/pam_ldap.so      no_warn\n"
-"auth            required        pam_unix.so             no_warn "
-"try_first_pass\n"
+"auth            required        pam_unix.so             no_warn try_first_pass\n"
 msgstr ""
 
 #. type: delimited block . 4
@@ -799,8 +792,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "account         required        pam_login_access.so\n"
-"account         required        /usr/local/lib/pam_ldap.so      no_warn "
-"ignore_authinfo_unavail ignore_unknown_user\n"
+"account         required        /usr/local/lib/pam_ldap.so      no_warn ignore_authinfo_unavail ignore_unknown_user\n"
 msgstr ""
 
 #. type: Plain text
@@ -808,8 +800,8 @@ msgstr ""
 msgid ""
 "Since we are adding these lines specifically to [.filename]#pam.d/sshd#, "
 "this will only have an effect on SSH sessions. LDAP users will be unable to "
-"log in at the console. To change this behavior, examine the other files in "
-"[.filename]#/etc/pam.d# and modify them accordingly."
+"log in at the console. To change this behavior, examine the other files in [."
+"filename]#/etc/pam.d# and modify them accordingly."
 msgstr ""
 
 #. type: Title ===
@@ -838,8 +830,8 @@ msgstr ""
 msgid ""
 "The package:net/nss_ldap[] port does this. It uses the same configuration "
 "file as package:security/pam_ldap[], and should not need any extra "
-"parameters once it is installed. Instead, what is left is simply to edit "
-"[.filename]#/etc/nsswitch.conf# to take advantage of the directory. Simply "
+"parameters once it is installed. Instead, what is left is simply to edit [."
+"filename]#/etc/nsswitch.conf# to take advantage of the directory. Simply "
 "replace the following lines:"
 msgstr ""
 
@@ -887,8 +879,7 @@ msgid ""
 "changing user passwords with man:passwd[1]. As a result of this, most "
 "administrators are left to implement a solution themselves. I provide some "
 "examples here. Note that if you write your own password change script, there "
-"are some security issues you should be made aware of; see "
-"<<security-passwd>>"
+"are some security issues you should be made aware of; see <<security-passwd>>"
 msgstr ""
 
 #. type: Block title
@@ -1005,8 +996,7 @@ msgstr ""
 msgid ""
 "  salt = rand.to_s.gsub(/0\\./, '')\n"
 "  pass = pwd1.to_s\n"
-"  hash = "
-"\"{SSHA}\"+Base64.encode64(Digest::SHA1.digest(\"#{pass}#{salt}\")+salt).chomp!\n"
+"  hash = \"{SSHA}\"+Base64.encode64(Digest::SHA1.digest(\"#{pass}#{salt}\")+salt).chomp!\n"
 "  return hash\n"
 "end\n"
 msgstr ""
@@ -1095,8 +1085,8 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:505
 msgid ""
 "To begin with, the `userPassword` attribute should not be world-readable. By "
-"default, anyone who can connect to the LDAP server can read this "
-"attribute. To disable this, put the following in [.filename]#slapd.conf#:"
+"default, anyone who can connect to the LDAP server can read this attribute. "
+"To disable this, put the following in [.filename]#slapd.conf#:"
 msgstr ""
 
 #. type: Block title
@@ -1199,8 +1189,8 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:566
 msgid ""
 "Say you want your IT department to be able to change home directories for "
-"users, but you do not want all of them to be able to add or remove "
-"users. The way to do this is to add a group for these admins:"
+"users, but you do not want all of them to be able to add or remove users. "
+"The way to do this is to add a group for these admins:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -1345,8 +1335,8 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:638
 msgid ""
 "The steps here are presented as they are with very little attempt at "
-"explaining what is going on-further explanation can be found in "
-"man:openssl[1] and its friends."
+"explaining what is going on-further explanation can be found in man:"
+"openssl[1] and its friends."
 msgstr ""
 
 #. type: delimited block = 4
@@ -1368,8 +1358,7 @@ msgstr ""
 msgid ""
 "% openssl genrsa -out root.key 1024\n"
 "% openssl req -new -key root.key -out root.csr\n"
-"% openssl x509 -req -days 1024 -in root.csr -signkey root.key -out "
-"root.crt\n"
+"% openssl x509 -req -days 1024 -in root.csr -signkey root.key -out root.crt\n"
 msgstr ""
 
 #. type: delimited block = 4
@@ -1383,11 +1372,10 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:658
 msgid ""
-"Next, using the first two steps above create a key "
-"[.filename]#ldap-server-one.key# and certificate signing request "
-"[.filename]#ldap-server-one.csr#. Once you sign the signing request with "
-"[.filename]#root.key#, you will be able to use "
-"[.filename]#ldap-server-one.*# on your LDAP servers."
+"Next, using the first two steps above create a key [.filename]#ldap-server-"
+"one.key# and certificate signing request [.filename]#ldap-server-one.csr#. "
+"Once you sign the signing request with [.filename]#root.key#, you will be "
+"able to use [.filename]#ldap-server-one.*# on your LDAP servers."
 msgstr ""
 
 #. type: Plain text
@@ -1428,8 +1416,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:682
 msgid ""
-"Finally, for clients to trust all your servers, distribute "
-"[.filename]#root.crt# (the __certificate__, not the key!) to each client, "
-"and specify it in the `TLSCACertificateFile` directive in "
-"[.filename]#ldap.conf#."
+"Finally, for clients to trust all your servers, distribute [.filename]#root."
+"crt# (the __certificate__, not the key!) to each client, and specify it in "
+"the `TLSCACertificateFile` directive in [.filename]#ldap.conf#."
 msgstr ""
