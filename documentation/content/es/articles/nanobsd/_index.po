@@ -48,11 +48,10 @@ msgstr ""
 #: documentation/content/en/articles/nanobsd/_index.adoc:35
 msgid ""
 "It can be used to build specialized install images, designed for easy "
-"installation and maintenance of systems commonly called \"computer "
-"appliances\". Computer appliances have their hardware and software bundled "
-"in the product, which means all applications are pre-installed. The "
-"appliance is plugged into an existing network and can begin working (almost) "
-"immediately."
+"installation and maintenance of systems commonly called \"computer appliances"
+"\". Computer appliances have their hardware and software bundled in the "
+"product, which means all applications are pre-installed. The appliance is "
+"plugged into an existing network and can begin working (almost) immediately."
 msgstr ""
 
 #. type: Plain text
@@ -79,9 +78,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:41
 msgid ""
-"Everything is read-only at run-time - It is safe to pull the "
-"power-plug. There is no necessity to run man:fsck[8] after a non-graceful "
-"shutdown of the system."
+"Everything is read-only at run-time - It is safe to pull the power-plug. "
+"There is no necessity to run man:fsck[8] after a non-graceful shutdown of "
+"the system."
 msgstr ""
 
 #. type: Plain text
@@ -119,8 +118,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:53
 msgid ""
-"The configuration file partition, which can be mounted under the "
-"[.filename]#/cfg# directory at run time."
+"The configuration file partition, which can be mounted under the [."
+"filename]#/cfg# directory at run time."
 msgstr ""
 
 #. type: Plain text
@@ -241,8 +240,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:107
 msgid ""
-"When building a NanoBSD image, several build options can be passed to "
-"[.filename]#nanobsd.sh# on the command line. These options can have a "
+"When building a NanoBSD image, several build options can be passed to [."
+"filename]#nanobsd.sh# on the command line. These options can have a "
 "significant impact on the build process."
 msgstr ""
 
@@ -422,10 +421,10 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:146
 msgid ""
-"`setup_nanobsd`: a special configuration directory layout is setup. The "
-"[.filename]#/usr/local/etc# gets moved to [.filename]#/etc/local# and a "
-"symbolic link is created back from [.filename]#/etc/local# to "
-"[.filename]#/usr/local/etc#."
+"`setup_nanobsd`: a special configuration directory layout is setup. The [."
+"filename]#/usr/local/etc# gets moved to [.filename]#/etc/local# and a "
+"symbolic link is created back from [.filename]#/etc/local# to [.filename]#/"
+"usr/local/etc#."
 msgstr ""
 
 #. type: Plain text
@@ -435,7 +434,8 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:148
-msgid "`run_late_customize`: the very last custom scripts can be run at this point."
+msgid ""
+"`run_late_customize`: the very last custom scripts can be run at this point."
 msgstr ""
 
 #. type: Plain text
@@ -464,9 +464,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:155
 msgid ""
-"This is probably the most important and most interesting feature of "
-"NanoBSD. This is also where you will be spending most of the time when "
-"developing with NanoBSD."
+"This is probably the most important and most interesting feature of NanoBSD. "
+"This is also where you will be spending most of the time when developing "
+"with NanoBSD."
 msgstr ""
 
 #. type: Plain text
@@ -545,7 +545,8 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:179
-msgid "`CONF_INSTALL` - Options passed to the `installworld` stage of the build."
+msgid ""
+"`CONF_INSTALL` - Options passed to the `installworld` stage of the build."
 msgstr ""
 
 #. type: Plain text
@@ -558,8 +559,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:181
 msgid ""
-"`FlashDevice` - Defines what type of media to use. Check "
-"[.filename]#FlashDevice.sub# for more details."
+"`FlashDevice` - Defines what type of media to use. Check [."
+"filename]#FlashDevice.sub# for more details."
 msgstr ""
 
 #. type: Plain text
@@ -630,8 +631,8 @@ msgstr ""
 msgid ""
 "The `NANO_LATE_CUSTOMIZE` variable is used just before the disk image is "
 "created, so it is the very last moment to change anything. Remember that the "
-"`setup_nanobsd` routine already executed and that the [.filename]#etc#, "
-"[.filename]#conf# and [.filename]#cfg#directories and subdirectories are "
+"`setup_nanobsd` routine already executed and that the [.filename]#etc#, [."
+"filename]#conf# and [.filename]#cfg#directories and subdirectories are "
 "already modified, so it is not time to change them at this point. Rather, it "
 "is possible to add or remove specific files."
 msgstr ""
@@ -645,9 +646,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:203
 msgid ""
-"There are also variables that can change the way the NanoBSD image "
-"boots. Two options are passed to man:boot0cfg[8] to initialize the boot "
-"sector of the disk image:"
+"There are also variables that can change the way the NanoBSD image boots. "
+"Two options are passed to man:boot0cfg[8] to initialize the boot sector of "
+"the disk image:"
 msgstr ""
 
 #. type: Plain text
@@ -676,12 +677,12 @@ msgstr ""
 msgid ""
 "With `NANO_BOOT0CFG`, the booting process can be tweaked, like selecting on "
 "which partition the NanoBSD image will actually boot. It is best to check "
-"the man:boot0cfg[8] page before changing the default value of this "
-"variable. One option that could be interesting to change is the timeout of "
-"the booting procedure. To do so, the `NANO_BOOT0CFG` variable can be changed "
-"to `\"-o packet -s 1 -m 3 -t 36\"`. That way the booting process would start "
-"after approximately 2 seconds; because it is rare that waiting 10 seconds "
-"before actually booting is desired."
+"the man:boot0cfg[8] page before changing the default value of this variable. "
+"One option that could be interesting to change is the timeout of the booting "
+"procedure. To do so, the `NANO_BOOT0CFG` variable can be changed to `\"-o "
+"packet -s 1 -m 3 -t 36\"`. That way the booting process would start after "
+"approximately 2 seconds; because it is rare that waiting 10 seconds before "
+"actually booting is desired."
 msgstr ""
 
 #. type: Plain text
@@ -719,10 +720,10 @@ msgstr ""
 #: documentation/content/en/articles/nanobsd/_index.adoc:220
 msgid ""
 "The `NANO_DRIVE` variable must be set to the drive name of the media at "
-"runtime. Usually, the default value `ada0`, which represents the first "
-"`IDE`/`ATA`/`SATA` device on the appliance is expected to be the correct "
-"one, but a different type of storage could also be used - like a USB key, in "
-"which case, it would rather be da0."
+"runtime. Usually, the default value `ada0`, which represents the first `IDE`/"
+"`ATA`/`SATA` device on the appliance is expected to be the correct one, but "
+"a different type of storage could also be used - like a USB key, in which "
+"case, it would rather be da0."
 msgstr ""
 
 #. type: Plain text
@@ -742,13 +743,12 @@ msgid ""
 "be tailored to suit the appliance needs. The `NANO_RAM_ETCSIZE` variable "
 "sets the size of the [.filename]#/etc#; and the `NANO_RAM_TMPVARSIZE` "
 "variable sets the size of both the [.filename]#/var# and [.filename]#/tmp# "
-"directory, as [.filename]#/tmp# is symbolically linked to "
-"[.filename]#/var/tmp#. By default, both malloc disks sizes are set at 20MB "
-"each. They can always be changed, but usually the [.filename]#/etc# does not "
-"grow too much in size, so 20MB is a good starting point, whereas the "
-"[.filename]#/var# and especially [.filename]#/tmp# can grow much larger if "
-"not careful about it. For memory constrained systems, smaller filesystem "
-"sizes may be chosen."
+"directory, as [.filename]#/tmp# is symbolically linked to [.filename]#/var/"
+"tmp#. By default, both malloc disks sizes are set at 20MB each. They can "
+"always be changed, but usually the [.filename]#/etc# does not grow too much "
+"in size, so 20MB is a good starting point, whereas the [.filename]#/var# and "
+"especially [.filename]#/tmp# can grow much larger if not careful about it. "
+"For memory constrained systems, smaller filesystem sizes may be chosen."
 msgstr ""
 
 #. type: Plain text
@@ -768,16 +768,15 @@ msgstr ""
 #: documentation/content/en/articles/nanobsd/_index.adoc:225
 msgid ""
 "The different partition sizes can be set through the use of `NANO_CODESIZE`, "
-"`NANO_CONFSIZE`, and `NANO_DATASIZE` as a multiple of 512 bytes "
-"sectors. `NANO_CODESIZE` defines the size of the first two image partitions: "
-"`code#1` and `code#2`. They have to be big enough to hold all the files that "
-"will be produced as a result of the `buildworld` and `buildkernel` "
-"processes. `NANO_CONFSIZE` defines the size of the configuration file "
-"partition, so it does not need to be very big; but do not make it so small "
-"that it will not hold all configuration files. Finally, `NANO_DATASIZE` "
-"defines the size of an optional partition, that can be used on the "
-"appliance. The last partition can be used, for example, to keep files "
-"created on the fly on disk."
+"`NANO_CONFSIZE`, and `NANO_DATASIZE` as a multiple of 512 bytes sectors. "
+"`NANO_CODESIZE` defines the size of the first two image partitions: `code#1` "
+"and `code#2`. They have to be big enough to hold all the files that will be "
+"produced as a result of the `buildworld` and `buildkernel` processes. "
+"`NANO_CONFSIZE` defines the size of the configuration file partition, so it "
+"does not need to be very big; but do not make it so small that it will not "
+"hold all configuration files. Finally, `NANO_DATASIZE` defines the size of "
+"an optional partition, that can be used on the appliance. The last partition "
+"can be used, for example, to keep files created on the fly on disk."
 msgstr ""
 
 #. type: Title ====
@@ -809,8 +808,7 @@ msgstr ""
 #: documentation/content/en/articles/nanobsd/_index.adoc:240
 msgid ""
 "A more useful example of a customization function is the following, which "
-"changes the default size of the [.filename]#/etc# directory from 5MB to "
-"30MB:"
+"changes the default size of the [.filename]#/etc# directory from 5MB to 30MB:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -826,14 +824,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:251
-msgid "There are a few default pre-defined customization functions ready for use:"
+msgid ""
+"There are a few default pre-defined customization functions ready for use:"
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:253
 msgid ""
-"`cust_comconsole` - Disables man:getty[8] on the VGA devices (the "
-"[.filename]#/dev/ttyv*# device nodes) and enables the use of the COM1 serial "
+"`cust_comconsole` - Disables man:getty[8] on the VGA devices (the [."
+"filename]#/dev/ttyv*# device nodes) and enables the use of the COM1 serial "
 "port as the system console."
 msgstr ""
 
@@ -877,27 +876,25 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:264
 msgid ""
-"Both methods achieve the same result: launching the `cust_pkgng` "
-"routine. This routine will go through `NANO_PACKAGE_DIR` directory to find "
-"either all packages or just the list of packages in the `NANO_PACKAGE_LIST` "
-"variable."
+"Both methods achieve the same result: launching the `cust_pkgng` routine. "
+"This routine will go through `NANO_PACKAGE_DIR` directory to find either all "
+"packages or just the list of packages in the `NANO_PACKAGE_LIST` variable."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:266
 msgid ""
 "It is common, when installing applications through pkg on a standard FreeBSD "
-"environment, that the install process puts configuration files, in the "
-"[.filename]#usr/local/etc# directory, and startup scripts in the "
-"[.filename]#/usr/local/etc/rc.d# directory. So, after the required packages "
-"have been installed, they need to be configured in order for them to start "
-"right out of the box. To do so, the necessary configuration files have to be "
-"installed in the correct directories. This can be achieved by writing "
-"dedicated routines or the generic `cust_install_files` routine can be used "
-"to lay out files properly from the "
-"[.filename]#/usr/src/tools/tools/nanobsd/Files# directory. Usually a "
-"statement, sometimes multiple statements, in the [.filename]#/etc/rc.conf# "
-"also needs to be added for each package."
+"environment, that the install process puts configuration files, in the [."
+"filename]#usr/local/etc# directory, and startup scripts in the [.filename]#/"
+"usr/local/etc/rc.d# directory. So, after the required packages have been "
+"installed, they need to be configured in order for them to start right out "
+"of the box. To do so, the necessary configuration files have to be installed "
+"in the correct directories. This can be achieved by writing dedicated "
+"routines or the generic `cust_install_files` routine can be used to lay out "
+"files properly from the [.filename]#/usr/src/tools/tools/nanobsd/Files# "
+"directory. Usually a statement, sometimes multiple statements, in the [."
+"filename]#/etc/rc.conf# also needs to be added for each package."
 msgstr ""
 
 #. type: Title ====
@@ -983,8 +980,7 @@ msgstr ""
 msgid ""
 "cust_nobeastie() (\n"
 "\ttouch ${NANO_WORLDDIR}/boot/loader.conf\n"
-"\techo \"beastie_disable=\\\"YES\\\"\" >> "
-"${NANO_WORLDDIR}/boot/loader.conf\n"
+"\techo \"beastie_disable=\\\"YES\\\"\" >> ${NANO_WORLDDIR}/boot/loader.conf\n"
 ")\n"
 msgstr ""
 
@@ -1001,10 +997,10 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:325
 msgid ""
-"All the build and install compilation options can be found in the "
-"man:src.conf[5] man page, but not all options can or should be used when "
-"building a NanoBSD image. The build and install options should be defined "
-"according to the needs of the image being built."
+"All the build and install compilation options can be found in the man:src."
+"conf[5] man page, but not all options can or should be used when building a "
+"NanoBSD image. The build and install options should be defined according to "
+"the needs of the image being built."
 msgstr ""
 
 #. type: Plain text
@@ -1046,8 +1042,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/nanobsd/_index.adoc:338
 msgid ""
-"Upload the new image into an unused partition of a running NanoBSD "
-"appliance."
+"Upload the new image into an unused partition of a running NanoBSD appliance."
 msgstr ""
 
 #. type: delimited block = 4
