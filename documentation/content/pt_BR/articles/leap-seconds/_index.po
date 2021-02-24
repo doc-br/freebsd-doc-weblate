@@ -54,17 +54,15 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:30
 msgid ""
-"Leap seconds are announced by http://datacenter.iers.org/[IERS] on "
-"http://datacenter.iers.org/web/guest/bulletins/-/somos/5Rgv/product/16[Bulletin "
-"C]."
+"Leap seconds are announced by http://datacenter.iers.org/[IERS] on http://"
+"datacenter.iers.org/web/guest/bulletins/-/somos/5Rgv/product/16[Bulletin C]."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:32
 msgid ""
-"Standard leap second behavior is described in "
-"https://tools.ietf.org/html/rfc7164#section-3[RFC 7164]. Also see "
-"man:time2posix[3]."
+"Standard leap second behavior is described in https://tools.ietf.org/html/"
+"rfc7164#section-3[RFC 7164]. Also see man:time2posix[3]."
 msgstr ""
 
 #. type: Title ==
@@ -77,19 +75,19 @@ msgstr ""
 #: documentation/content/en/articles/leap-seconds/_index.adoc:37
 msgid ""
 "The easiest way to handle leap seconds is with the POSIX time rules FreeBSD "
-"uses by default, combined with link:{handbook}#network-ntp[NTP]. When "
-"man:ntpd[8] is running and the time is synchronized with upstream NTP "
-"servers that handle leap seconds correctly, the leap second will cause the "
-"system time to automatically repeat the last second of the day. No other "
+"uses by default, combined with link:{handbook}#network-ntp[NTP]. When man:"
+"ntpd[8] is running and the time is synchronized with upstream NTP servers "
+"that handle leap seconds correctly, the leap second will cause the system "
+"time to automatically repeat the last second of the day. No other "
 "adjustments are necessary."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:39
 msgid ""
-"If the upstream NTP servers do not handle leap seconds correctly, "
-"man:ntpd[8] will step the time by one second after the errant upstream "
-"server has noticed and stepped itself."
+"If the upstream NTP servers do not handle leap seconds correctly, man:"
+"ntpd[8] will step the time by one second after the errant upstream server "
+"has noticed and stepped itself."
 msgstr ""
 
 #. type: Plain text
@@ -133,9 +131,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:52
 msgid ""
-"Other operating systems and other computers may or may not handle the "
-"leap-second the same way as FreeBSD, and systems without correct and stable "
-"NTP service will not know anything about leap seconds at all."
+"Other operating systems and other computers may or may not handle the leap-"
+"second the same way as FreeBSD, and systems without correct and stable NTP "
+"service will not know anything about leap seconds at all."
 msgstr ""
 
 #. type: Plain text
@@ -148,7 +146,8 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:56
-msgid "Please try to make sure nothing horrible happens because of the leap second."
+msgid ""
+"Please try to make sure nothing horrible happens because of the leap second."
 msgstr ""
 
 #. type: Title ==
