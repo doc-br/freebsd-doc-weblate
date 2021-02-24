@@ -75,8 +75,8 @@ msgstr ""
 msgid ""
 "The link:{arch-handbook}[FreeBSD Architecture Handbook] - also from the "
 "documentation project, contains descriptions of several low-level facilities "
-"and procedures. The most important chapter is 13, "
-"link:{arch-handbook}#driverbasics[Writing FreeBSD device drivers]."
+"and procedures. The most important chapter is 13, link:{arch-handbook}"
+"#driverbasics[Writing FreeBSD device drivers]."
 msgstr ""
 
 #. type: Plain text
@@ -89,8 +89,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:43
 msgid ""
-"The man pages in section 9 - for important documentation on kernel "
-"functions."
+"The man pages in section 9 - for important documentation on kernel functions."
 msgstr ""
 
 #. type: Plain text
@@ -103,8 +102,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:45
 msgid ""
-"Man pages man:g_bio[9], man:g_event[9], man:g_data[9], man:g_geom[9], "
-"man:g_provider[9], man:g_consumer[9], man:g_access[9] & others linked from "
+"Man pages man:g_bio[9], man:g_event[9], man:g_data[9], man:g_geom[9], man:"
+"g_provider[9], man:g_consumer[9], man:g_access[9] & others linked from "
 "those, for documentation on specific functionalities."
 msgstr ""
 
@@ -154,8 +153,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:58
 msgid ""
-"For any kernel programming a kernel with `INVARIANTS` enabled is a "
-"must-have. So enter these in your kernel configuration file:"
+"For any kernel programming a kernel with `INVARIANTS` enabled is a must-"
+"have. So enter these in your kernel configuration file:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -196,10 +195,9 @@ msgstr ""
 #: documentation/content/en/articles/geom-class/_index.adoc:81
 msgid ""
 "With the usual way of installing the kernel (`make installkernel`) the debug "
-"kernel will not be automatically installed. It is called "
-"[.filename]#kernel.debug# and located in "
-"[.filename]#/usr/obj/usr/src/sys/KERNELNAME/#. For convenience it should be "
-"copied to [.filename]#/boot/kernel/#."
+"kernel will not be automatically installed. It is called [.filename]#kernel."
+"debug# and located in [.filename]#/usr/obj/usr/src/sys/KERNELNAME/#. For "
+"convenience it should be copied to [.filename]#/boot/kernel/#."
 msgstr ""
 
 #. type: Plain text
@@ -222,8 +220,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:92
 msgid ""
-"For this to work you might need to set a sysctl (if it is not on by "
-"default):"
+"For this to work you might need to set a sysctl (if it is not on by default):"
 msgstr ""
 
 #. type: delimited block . 4
@@ -241,8 +238,8 @@ msgid ""
 "softupdates yields a great performance hit, and still does not guarantee "
 "data consistency. Mounting filesystem with the \"sync\" option is needed for "
 "that. For a compromise, the softupdates cache delays can be shortened. There "
-"are three sysctl's that are useful for this (best to be set in "
-"[.filename]#/etc/sysctl.conf#):"
+"are three sysctl's that are useful for this (best to be set in [.filename]#/"
+"etc/sysctl.conf#):"
 msgstr ""
 
 #. type: delimited block . 4
@@ -267,8 +264,8 @@ msgid ""
 "raw partition. Usually, this is the swap partition. This partition must be "
 "at least as large as the physical RAM in the machine. On the next boot, the "
 "dump is copied to a regular file. This happens after filesystems are checked "
-"and mounted, and before swap is enabled. This is controlled with two "
-"[.filename]#/etc/rc.conf# variables:"
+"and mounted, and before swap is enabled. This is controlled with two [."
+"filename]#/etc/rc.conf# variables:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -356,8 +353,8 @@ msgstr ""
 #: documentation/content/en/articles/geom-class/_index.adoc:146
 msgid ""
 "Creating the [.filename]#Makefile# is simple thanks to an extensive set of "
-"helper routines provided by the system. In short, here is how a minimal "
-"[.filename]#Makefile# looks for a kernel module:"
+"helper routines provided by the system. In short, here is how a minimal [."
+"filename]#Makefile# looks for a kernel module:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -413,16 +410,14 @@ msgstr ""
 #. type: delimited block . 4
 #: documentation/content/en/articles/geom-class/_index.adoc:170
 #, no-wrap
-msgid ""
-"  static MALLOC_DEFINE(M_GJOURNAL, \"gjournal data\", \"GEOM_JOURNAL "
-"Data\");\n"
+msgid "  static MALLOC_DEFINE(M_GJOURNAL, \"gjournal data\", \"GEOM_JOURNAL Data\");\n"
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:173
 msgid ""
-"To use this macro, [.filename]#sys/param.h#, [.filename]#sys/kernel.h# and "
-"[.filename]#sys/malloc.h# headers must be included."
+"To use this macro, [.filename]#sys/param.h#, [.filename]#sys/kernel.h# and [."
+"filename]#sys/malloc.h# headers must be included."
 msgstr ""
 
 #. type: Plain text
@@ -455,8 +450,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:182
 msgid ""
-"If data retrieval speed is very important, see man:tree[3] and "
-"man:hashinit[9]."
+"If data retrieval speed is very important, see man:tree[3] and man:"
+"hashinit[9]."
 msgstr ""
 
 #. type: Title ===
@@ -493,8 +488,8 @@ msgid ""
 "least it takes a while to get used to it). In some cases the helper routines "
 "`g_write_data`() and `g_read_data`() can be used, but __not always__. In "
 "particular, they cannot be used when a mutex is held; for example, the GEOM "
-"topology mutex or the internal mutex held during the `.start`() and "
-"`.stop`() functions."
+"topology mutex or the internal mutex held during the `.start`() and `."
+"stop`() functions."
 msgstr ""
 
 #. type: Title ==
@@ -568,7 +563,8 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:212
-msgid "`.ctlconf` is called when user requests reconfiguration of existing geom"
+msgid ""
+"`.ctlconf` is called when user requests reconfiguration of existing geom"
 msgstr ""
 
 #. type: Plain text
@@ -639,7 +635,8 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:234
-msgid "Format of metadata is more-or-less class-dependent, but MUST start with:"
+msgid ""
+"Format of metadata is more-or-less class-dependent, but MUST start with:"
 msgstr ""
 
 #. type: Plain text
@@ -693,8 +690,8 @@ msgstr ""
 #: documentation/content/en/articles/geom-class/_index.adoc:251
 msgid ""
 "the utility figures out which geom class it is supposed to handle and "
-"searches for [.filename]#geom_CLASSNAME.so# library (usually in "
-"[.filename]#/lib/geom#)."
+"searches for [.filename]#geom_CLASSNAME.so# library (usually in [.filename]#/"
+"lib/geom#)."
 msgstr ""
 
 #. type: Plain text
@@ -854,9 +851,9 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:299
 msgid ""
-"Of these, the most important function for doing actual useful work is the "
-"`.start`() function, which is called when a BIO request arrives for a "
-"provider managed by a instance of geom class."
+"Of these, the most important function for doing actual useful work is the `."
+"start`() function, which is called when a BIO request arrives for a provider "
+"managed by a instance of geom class."
 msgstr ""
 
 #. type: Title ===
@@ -880,8 +877,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:307
 msgid ""
-"`g_up` : Handles responses from device drivers to requests made by "
-"higher-level entities"
+"`g_up` : Handles responses from device drivers to requests made by higher-"
+"level entities"
 msgstr ""
 
 #. type: Plain text
@@ -920,8 +917,7 @@ msgid ""
 "that the request should be routed to a lower-level instance (for example the "
 "disk driver). It makes a copy of the bio request (bio requests _ALWAYS_ need "
 "to be copied between instances, with `g_clone_bio`()!), modifies the data "
-"offset and target provider fields and executes the copy with "
-"`g_io_request`()"
+"offset and target provider fields and executes the copy with `g_io_request`()"
 msgstr ""
 
 #. type: Plain text
@@ -935,11 +931,10 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:316
 msgid ""
-"Now, the notification of bio completion \"bubbles up\" in the `g_up` "
-"thread. First the partition slicer gets `.done`() called in the `g_up` "
-"thread, it uses information stored in the bio to free the cloned `bio` "
-"structure (with `g_destroy_bio`()) and calls `g_io_deliver`() on the "
-"original request."
+"Now, the notification of bio completion \"bubbles up\" in the `g_up` thread. "
+"First the partition slicer gets `.done`() called in the `g_up` thread, it "
+"uses information stored in the bio to free the cloned `bio` structure (with "
+"`g_destroy_bio`()) and calls `g_io_deliver`() on the original request."
 msgstr ""
 
 #. type: Plain text
@@ -995,11 +990,10 @@ msgstr ""
 msgid ""
 "This restriction is here to stop GEOM code clogging the I/O request path, "
 "since sleeping is usually not time-bound and there can be no guarantees on "
-"how long will it take (there are some other, more technical reasons "
-"also). It also means that there is not much that can be done in those "
-"threads; for example, almost any complex thing requires memory "
-"allocation. Fortunately, there is a way out: creating additional kernel "
-"threads."
+"how long will it take (there are some other, more technical reasons also). "
+"It also means that there is not much that can be done in those threads; for "
+"example, almost any complex thing requires memory allocation. Fortunately, "
+"there is a way out: creating additional kernel threads."
 msgstr ""
 
 #. type: Title ===
@@ -1051,8 +1045,8 @@ msgstr ""
 #: documentation/content/en/articles/geom-class/_index.adoc:341
 msgid ""
 "Mutexes in FreeBSD kernel (see man:mutex[9]) have one distinction from their "
-"more common userland cousins - the code cannot sleep while holding a "
-"mutex). If the code needs to sleep a lot, man:sx[9] locks may be more "
-"appropriate. On the other hand, if you do almost everything in a single "
-"thread, you may get away with no mutexes at all."
+"more common userland cousins - the code cannot sleep while holding a mutex). "
+"If the code needs to sleep a lot, man:sx[9] locks may be more appropriate. "
+"On the other hand, if you do almost everything in a single thread, you may "
+"get away with no mutexes at all."
 msgstr ""
