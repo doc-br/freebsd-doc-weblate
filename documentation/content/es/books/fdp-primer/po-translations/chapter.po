@@ -42,11 +42,11 @@ msgstr ""
 #: documentation/content/en/books/fdp-primer/po-translations/chapter.adoc:31
 msgid ""
 "The http://www.gnu.org/software/gettext/[GNU gettext] system offers "
-"translators an easy way to create and maintain translations of "
-"documents. Translatable strings are extracted from the original document "
-"into a PO (Portable Object) file. Translated versions of the strings are "
-"entered with a separate editor. The strings can be used directly or built "
-"into a complete translated version of the original document."
+"translators an easy way to create and maintain translations of documents. "
+"Translatable strings are extracted from the original document into a PO "
+"(Portable Object) file. Translated versions of the strings are entered with "
+"a separate editor. The strings can be used directly or built into a complete "
+"translated version of the original document."
 msgstr ""
 
 #. type: Title ==
@@ -66,8 +66,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/fdp-primer/po-translations/chapter.adoc:38
 msgid ""
-"This example shows the creation of a Spanish translation of the short "
-"link:{leap-seconds}[Leap Seconds] article."
+"This example shows the creation of a Spanish translation of the short link:"
+"{leap-seconds}[Leap Seconds] article."
 msgstr ""
 
 #. type: Block title
@@ -79,8 +79,8 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/fdp-primer/po-translations/chapter.adoc:45
 msgid ""
-"A PO editor is needed to edit translation files. This example uses "
-"package:editors/poedit[]."
+"A PO editor is needed to edit translation files. This example uses package:"
+"editors/poedit[]."
 msgstr ""
 
 #. type: delimited block . 4
@@ -161,16 +161,15 @@ msgstr ""
 #, no-wrap
 msgid ""
 "% cd ~/doc/es/articles/leap-seconds/\n"
-"% po4a-gettextize --format asciidoc --master _index.adoc --master-charset "
-"\"UTF-8\" >> es.pot\n"
+"% po4a-gettextize --format asciidoc --master _index.adoc --master-charset \"UTF-8\" >> es.pot\n"
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/fdp-primer/po-translations/chapter.adoc:92
 msgid ""
 "Use a PO editor to enter translations in the PO file. There are several "
-"different editors available. [.filename]#poedit# from "
-"package:editors/poedit[] is shown here."
+"different editors available. [.filename]#poedit# from package:editors/"
+"poedit[] is shown here."
 msgstr ""
 
 #. type: Plain text
@@ -202,8 +201,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "% cd ~/doc/es/articles/leap-seconds/\n"
-"% po4a-translate -f asciidoc -m document.po -l document.po --keep 0 -p es.po "
-"-M UTF-8\n"
+"% po4a-translate -f asciidoc -m document.po -l document.po --keep 0 -p es.po -M UTF-8\n"
 msgstr ""
 
 #. type: Plain text
@@ -356,10 +354,9 @@ msgstr ""
 #: documentation/content/en/books/fdp-primer/po-translations/chapter.adoc:234
 msgid ""
 "The translations are in subdirectories of the main documentation directory, "
-"here assumed to be [.filename]#~/doc/# as shown in "
-"<<overview-quick-start>>. For example, German translations are located in "
-"[.filename]#~/doc/de/#, and French translations are in "
-"[.filename]#~/doc/fr/#."
+"here assumed to be [.filename]#~/doc/# as shown in <<overview-quick-start>>. "
+"For example, German translations are located in [.filename]#~/doc/de/#, and "
+"French translations are in [.filename]#~/doc/fr/#."
 msgstr ""
 
 #. type: Plain text
@@ -373,9 +370,9 @@ msgstr ""
 #: documentation/content/en/books/fdp-primer/po-translations/chapter.adoc:238
 msgid ""
 "Combining these directory names gives the complete path to an article or "
-"book. For example, the French translation of the NanoBSD article is in "
-"[.filename]#~/doc/fr/articles/nanobsd/#, and the Mongolian translation of "
-"the Handbook is in [.filename]#~/doc/mn/books/handbook/#."
+"book. For example, the French translation of the NanoBSD article is in [."
+"filename]#~/doc/fr/articles/nanobsd/#, and the Mongolian translation of the "
+"Handbook is in [.filename]#~/doc/mn/books/handbook/#."
 msgstr ""
 
 #. type: Plain text
@@ -396,8 +393,8 @@ msgstr ""
 #: documentation/content/en/books/fdp-primer/po-translations/chapter.adoc:246
 msgid ""
 "Create a new Spanish translation of the link:{porters-handbook}[Porter's "
-"Handbook]. The original is a book in "
-"[.filename]#~/doc/en/books/porters-handbook/#."
+"Handbook]. The original is a book in [.filename]#~/doc/en/books/porters-"
+"handbook/#."
 msgstr ""
 
 #. type: delimited block = 6
@@ -463,8 +460,8 @@ msgid ""
 "A PO editor is used to edit the file. package:editors/poedit[] is shown in "
 "these examples because it is simple and has minimal requirements. Other PO "
 "editors offer features to make the job of translating easier. The Ports "
-"Collection offers several of these editors, including "
-"package:devel/gtranslator[]."
+"Collection offers several of these editors, including package:devel/"
+"gtranslator[]."
 msgstr ""
 
 #. type: delimited block = 4
@@ -488,9 +485,9 @@ msgstr ""
 #. type: delimited block = 6
 #: documentation/content/en/books/fdp-primer/po-translations/chapter.adoc:290
 msgid ""
-"Change to the Spanish Porter's Handbook directory and update the PO "
-"file. The generated PO file is called [.filename]#es_ES.po# as shown in "
-"<<po-translations-language-names>>."
+"Change to the Spanish Porter's Handbook directory and update the PO file. "
+"The generated PO file is called [.filename]#es_ES.po# as shown in <<po-"
+"translations-language-names>>."
 msgstr ""
 
 #. type: delimited block . 4
@@ -498,8 +495,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "% cd ~/doc/es/books/porters-handbook\n"
-"% po4a-gettextize --format asciidoc --master _index.adoc --master-charset "
-"\"UTF-8\" >> es.pot\n"
+"% po4a-gettextize --format asciidoc --master _index.adoc --master-charset \"UTF-8\" >> es.pot\n"
 msgstr ""
 
 #. type: Plain text
@@ -555,8 +551,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "msgid \"\"\n"
-"\"Este ejemplo muestra la creación de un artículo con poco contenido como el "
-"artículo \"\n"
+"\"Este ejemplo muestra la creación de un artículo con poco contenido como el artículo \"\n"
 "\"link:{leap-seconds}[Leap Seconds].\"\n"
 msgstr ""
 
@@ -638,12 +633,12 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/fdp-primer/po-translations/chapter.adoc:362
 msgid ""
-"A translated version of the original document can be created at any "
-"time. Any untranslated portions of the original will be included in English "
-"in the resulting document. Most PO editors have an indicator that shows how "
-"much of the translation has been completed. This makes it easy for the "
-"translator to see when enough strings have been translated to make building "
-"the final document worthwhile."
+"A translated version of the original document can be created at any time. "
+"Any untranslated portions of the original will be included in English in the "
+"resulting document. Most PO editors have an indicator that shows how much of "
+"the translation has been completed. This makes it easy for the translator to "
+"see when enough strings have been translated to make building the final "
+"document worthwhile."
 msgstr ""
 
 #. type: Title ==
@@ -663,9 +658,9 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/fdp-primer/po-translations/chapter.adoc:369
 msgid ""
-"The diff files created by these examples can be attached to a "
-"https://bugs.freebsd.org/bugzilla/enter_bug.cgi?product=Documentation[documentation "
-"bug report] or https://reviews.freebsd.org/[code review]."
+"The diff files created by these examples can be attached to a https://bugs."
+"freebsd.org/bugzilla/enter_bug.cgi?product=Documentation[documentation bug "
+"report] or https://reviews.freebsd.org/[code review]."
 msgstr ""
 
 #. type: Block title
