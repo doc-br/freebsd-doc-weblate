@@ -43,8 +43,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/pkg-files/chapter.adoc:38
 msgid ""
-"To display a message when the package is installed, place the message in "
-"[.filename]#pkg-message#. This capability is often useful to display "
+"To display a message when the package is installed, place the message in [."
+"filename]#pkg-message#. This capability is often useful to display "
 "additional installation steps to be taken after a `pkg install` or `pkg "
 "upgrade`."
 msgstr ""
@@ -110,7 +110,8 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/pkg-files/chapter.adoc:59
-msgid "Do not add an entry for [.filename]#pkg-message# in [.filename]#pkg-plist#."
+msgid ""
+"Do not add an entry for [.filename]#pkg-message# in [.filename]#pkg-plist#."
 msgstr ""
 
 #. type: Title ===
@@ -396,8 +397,8 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/pkg-files/chapter.adoc:210
 msgid ""
-"This script will be run twice by `pkg delete` The first time as `${SH} "
-"pkg-deinstall ${PKGNAME} DEINSTALL` before the port is de-installed and the "
+"This script will be run twice by `pkg delete` The first time as `${SH} pkg-"
+"deinstall ${PKGNAME} DEINSTALL` before the port is de-installed and the "
 "second time as `${SH} pkg-deinstall ${PKGNAME} POST-DEINSTALL` after the "
 "port has been de-installed. `$2` can be tested to determine which mode the "
 "script is being run in. The `PKG_PREFIX` environmental variable will be set "
@@ -467,14 +468,14 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/pkg-files/chapter.adoc:251
 msgid ""
-"`SUB_FILES` specifies a list of files to be automatically modified. Each "
-"[.filename]#file# in the `SUB_FILES` list must have a corresponding "
-"[.filename]#file.in# present in `FILESDIR`. A modified version will be "
-"created as [.filename]#${WRKDIR}/file#. Files defined as a value of "
-"`USE_RC_SUBR` are automatically added to `SUB_FILES`. For the files "
-"[.filename]#pkg-message#, [.filename]#pkg-install#, and "
-"[.filename]#pkg-deinstall#, the corresponding Makefile variable is "
-"automatically set to point to the processed version."
+"`SUB_FILES` specifies a list of files to be automatically modified. Each [."
+"filename]#file# in the `SUB_FILES` list must have a corresponding [."
+"filename]#file.in# present in `FILESDIR`. A modified version will be created "
+"as [.filename]#${WRKDIR}/file#. Files defined as a value of `USE_RC_SUBR` "
+"are automatically added to `SUB_FILES`. For the files [.filename]#pkg-"
+"message#, [.filename]#pkg-install#, and [.filename]#pkg-deinstall#, the "
+"corresponding Makefile variable is automatically set to point to the "
+"processed version."
 msgstr ""
 
 #. type: Plain text
@@ -491,8 +492,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/pkg-files/chapter.adoc:255
 msgid ""
-"This example replaces `%%ARCH%%` with the system architecture in a "
-"[.filename]#pkg-message#:"
+"This example replaces `%%ARCH%%` with the system architecture in a [."
+"filename]#pkg-message#:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -520,7 +521,6 @@ msgstr ""
 #, no-wrap
 msgid ""
 "Now it is time to configure this package.\n"
-"Copy %%PREFIX%%/shared/examples/putsy/%%ARCH%%.conf into your home "
-"directory\n"
+"Copy %%PREFIX%%/shared/examples/putsy/%%ARCH%%.conf into your home directory\n"
 "as .putsy.conf and edit it.\n"
 msgstr ""
