@@ -58,11 +58,11 @@ msgstr ""
 msgid ""
 "While professional servers are usually well protected from unforeseen "
 "shutdowns, the typical desktop is at the mercy of power failures, accidental "
-"resets, and other user related incidents that can lead to unclean "
-"shutdowns. Soft Updates usually protect the file system efficiently in such "
-"cases, although most of the times a lengthy background check is required. On "
-"rare occasions, file system corruption reaches a point where user "
-"intervention is required and data may be lost."
+"resets, and other user related incidents that can lead to unclean shutdowns. "
+"Soft Updates usually protect the file system efficiently in such cases, "
+"although most of the times a lengthy background check is required. On rare "
+"occasions, file system corruption reaches a point where user intervention is "
+"required and data may be lost."
 msgstr ""
 
 #. type: Plain text
@@ -91,7 +91,8 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:57
-msgid "How to reserve space for journaling during a new installation of FreeBSD."
+msgid ""
+"How to reserve space for journaling during a new installation of FreeBSD."
 msgstr ""
 
 #. type: Plain text
@@ -142,8 +143,7 @@ msgid ""
 "where no actual user data is stored on the disk yet. While it is possible to "
 "modify and extend this procedure for systems already in production, you "
 "should _backup_ all important data before doing so. Messing around with "
-"disks and partitions at a low level can lead to fatal mistakes and data "
-"loss."
+"disks and partitions at a low level can lead to fatal mistakes and data loss."
 msgstr ""
 
 #. type: Title ==
@@ -187,24 +187,23 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:83
 msgid ""
-"You wish to journal your [.filename]#/usr# file system, stored in "
-"[.filename]#/dev/ad0s1f# (which already contains data)."
+"You wish to journal your [.filename]#/usr# file system, stored in [."
+"filename]#/dev/ad0s1f# (which already contains data)."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:84
 msgid ""
-"You reserved some free disk space in a partition in "
-"[.filename]#/dev/ad0s1g#."
+"You reserved some free disk space in a partition in [.filename]#/dev/ad0s1g#."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:85
 msgid ""
 "Using `gjournal`, a new [.filename]#/dev/ad0s1f.journal# device is created "
-"where [.filename]#/dev/ad0s1f# is the data provider, and "
-"[.filename]#/dev/ad0s1g# is the journal provider. This new device is then "
-"used for all subsequent file operations."
+"where [.filename]#/dev/ad0s1f# is the data provider, and [.filename]#/dev/"
+"ad0s1g# is the journal provider. This new device is then used for all "
+"subsequent file operations."
 msgstr ""
 
 #. type: Plain text
@@ -234,8 +233,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:94
 msgid ""
-"For more information about journaling, please read the manual page of "
-"man:gjournal[8]."
+"For more information about journaling, please read the manual page of man:"
+"gjournal[8]."
 msgstr ""
 
 #. type: Title ==
@@ -289,8 +288,8 @@ msgstr ""
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:109
 msgid ""
 "If this is more or less what you need, it is very easy to adjust for "
-"journaling. Simply use the arrow keys to move the highlight to the "
-"[.filename]#/usr# partition and press kbd:[D] to delete it."
+"journaling. Simply use the arrow keys to move the highlight to the [."
+"filename]#/usr# partition and press kbd:[D] to delete it."
 msgstr ""
 
 #. type: Plain text
@@ -299,19 +298,19 @@ msgid ""
 "Now, move the highlight to the disk name at the top of the screen and press "
 "kbd:[C] to create a new partition for [.filename]#/usr#. This new partition "
 "should be smaller by 1 GB (if you intend to journal [.filename]#/usr# only), "
-"or 2 GB (if you intend to journal both [.filename]#/usr# and "
-"[.filename]#/var#). From the pop-up that appears, opt to create a file "
-"system, and type [.filename]#/usr# as the mount point."
+"or 2 GB (if you intend to journal both [.filename]#/usr# and [.filename]#/"
+"var#). From the pop-up that appears, opt to create a file system, and type [."
+"filename]#/usr# as the mount point."
 msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:115
 msgid ""
 "Should you journal the [.filename]#/var# partition? Normally, journaling "
-"makes sense on quite large partitions. You may decide not to journal "
-"[.filename]#/var#, although doing so on a typical desktop will cause no "
-"harm. If the file system is lightly used (quite probable for a desktop) you "
-"may wish to allocate less disk space for its journal."
+"makes sense on quite large partitions. You may decide not to journal [."
+"filename]#/var#, although doing so on a typical desktop will cause no harm. "
+"If the file system is lightly used (quite probable for a desktop) you may "
+"wish to allocate less disk space for its journal."
 msgstr ""
 
 #. type: delimited block = 4
@@ -410,16 +409,17 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:151
 msgid ""
-"Your system will come up normally, but you will need to edit "
-"[.filename]#/etc/fstab# and remove the extra swap partitions you created for "
-"the journals. Normally, the swap partition you will actually use is the one "
-"with the \"b\" suffix (i.e. ad0s1b in our example). Remove all other swap "
-"space entries and reboot so that FreeBSD will stop using them."
+"Your system will come up normally, but you will need to edit [.filename]#/"
+"etc/fstab# and remove the extra swap partitions you created for the "
+"journals. Normally, the swap partition you will actually use is the one with "
+"the \"b\" suffix (i.e. ad0s1b in our example). Remove all other swap space "
+"entries and reboot so that FreeBSD will stop using them."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:153
-msgid "When the system comes up again, we will be ready to configure journaling."
+msgid ""
+"When the system comes up again, we will be ready to configure journaling."
 msgstr ""
 
 #. type: Title ==
@@ -453,8 +453,8 @@ msgstr ""
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:168
 msgid ""
 "Press kbd:[Enter] to get the default shell. We will need to unmount the "
-"partitions that will be journaled, in our example [.filename]#/usr# and "
-"[.filename]#/var#:"
+"partitions that will be journaled, in our example [.filename]#/usr# and [."
+"filename]#/var#:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -481,8 +481,8 @@ msgstr ""
 msgid ""
 "Now, use your notes to determine which partition will be used for each "
 "journal. In our example, [.filename]#/usr# is [.filename]#ad0s1f# and its "
-"journal will be [.filename]#ad0s1g#, while [.filename]#/var# is "
-"[.filename]#ad0s1d# and will be journaled to [.filename]#ad0s1h#. The "
+"journal will be [.filename]#ad0s1g#, while [.filename]#/var# is [."
+"filename]#ad0s1d# and will be journaled to [.filename]#ad0s1h#. The "
 "following commands are required:"
 msgstr ""
 
@@ -528,11 +528,10 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:207
 msgid ""
-"At this point, two new devices are created, namely "
-"[.filename]#ad0s1d.journal# and [.filename]#ad0s1f.journal#. These represent "
-"the [.filename]#/var# and [.filename]#/usr# partitions we have to "
-"mount. Before mounting, we must however set the journal flag on them and "
-"clear the Soft Updates flag:"
+"At this point, two new devices are created, namely [.filename]#ad0s1d."
+"journal# and [.filename]#ad0s1f.journal#. These represent the [.filename]#/"
+"var# and [.filename]#/usr# partitions we have to mount. Before mounting, we "
+"must however set the journal flag on them and clear the Soft Updates flag:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -668,15 +667,16 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:281
 msgid ""
-"The journal size will be 1 GB by default. You may adjust it by using the "
-"`-s` option. The value can be given in bytes, or appended by `K`, `M` or `G` "
+"The journal size will be 1 GB by default. You may adjust it by using the `-"
+"s` option. The value can be given in bytes, or appended by `K`, `M` or `G` "
 "to denote Kilobytes, Megabytes or Gigabytes respectively. Note that "
 "`gjournal` will not allow you to create unsuitably small journal sizes."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:283
-msgid "For example, to create a 2 GB journal, you could use the following command:"
+msgid ""
+"For example, to create a 2 GB journal, you could use the following command:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -727,15 +727,15 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:309
 msgid ""
-"Rebuild and reinstall your kernel following the relevant "
-"link:{handbook}#kernelconfig[instructions in the FreeBSD Handbook.]"
+"Rebuild and reinstall your kernel following the relevant link:{handbook}"
+"#kernelconfig[instructions in the FreeBSD Handbook.]"
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:311
 msgid ""
-"Do not forget to remove the relevant \"load\" entry from "
-"[.filename]#/boot/loader.conf# if you have previously used it."
+"Do not forget to remove the relevant \"load\" entry from [.filename]#/boot/"
+"loader.conf# if you have previously used it."
 msgstr ""
 
 #. type: Title ==
@@ -754,9 +754,7 @@ msgstr ""
 #. type: Title ===
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:317
 #, no-wrap
-msgid ""
-"I am getting kernel panics during periods of high disk activity. How is this "
-"related to journaling?"
+msgid "I am getting kernel panics during periods of high disk activity. How is this related to journaling?"
 msgstr ""
 
 #. type: Plain text
@@ -772,19 +770,16 @@ msgstr ""
 #. type: Title ===
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:321
 #, no-wrap
-msgid ""
-"I made some mistake during configuration, and I cannot boot normally "
-"now. Can this be fixed some way?"
+msgid "I made some mistake during configuration, and I cannot boot normally now. Can this be fixed some way?"
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:324
 msgid ""
-"You either forgot (or misspelled) the entry in "
-"[.filename]#/boot/loader.conf#, or there are errors in your "
-"[.filename]#/etc/fstab# file. These are usually easy to fix. Press "
-"kbd:[Enter] to get to the default single user shell. Then locate the root of "
-"the problem:"
+"You either forgot (or misspelled) the entry in [.filename]#/boot/loader."
+"conf#, or there are errors in your [.filename]#/etc/fstab# file. These are "
+"usually easy to fix. Press kbd:[Enter] to get to the default single user "
+"shell. Then locate the root of the problem:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -825,18 +820,16 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:349
 msgid ""
-"If, on the other hand, this entry is correct, have a look at "
-"[.filename]#/etc/fstab#. You will probably find a misspelled or missing "
-"entry. In this case, mount all remaining partitions by hand and continue "
-"with the multi-user boot."
+"If, on the other hand, this entry is correct, have a look at [.filename]#/"
+"etc/fstab#. You will probably find a misspelled or missing entry. In this "
+"case, mount all remaining partitions by hand and continue with the multi-"
+"user boot."
 msgstr ""
 
 #. type: Title ===
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:350
 #, no-wrap
-msgid ""
-"Can I remove journaling and return to my standard file system with Soft "
-"Updates?"
+msgid "Can I remove journaling and return to my standard file system with Soft Updates?"
 msgstr ""
 
 #. type: Plain text
@@ -898,7 +891,8 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:394
-msgid "Clear the file system journaling flag, and restore the Soft Updates flag:"
+msgid ""
+"Clear the file system journaling flag, and restore the Soft Updates flag:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -976,15 +970,15 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:431
 msgid ""
-"https://lists.freebsd.org/pipermail/freebsd-current/2006-June/064043.html[This "
-"post] in {freebsd-current} by man:gjournal[8]'s developer, `{pjd}`."
+"https://lists.freebsd.org/pipermail/freebsd-current/2006-June/064043."
+"html[This post] in {freebsd-current} by man:gjournal[8]'s developer, `{pjd}`."
 msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:432
 msgid ""
-"https://lists.freebsd.org/pipermail/freebsd-questions/2008-April/173501.html[This "
-"post] in {freebsd-questions} by `{ivoras}`."
+"https://lists.freebsd.org/pipermail/freebsd-questions/2008-April/173501."
+"html[This post] in {freebsd-questions} by `{ivoras}`."
 msgstr ""
 
 #. type: Plain text
