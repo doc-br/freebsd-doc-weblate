@@ -31,8 +31,8 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/10.4R/installation.adoc:11
 msgid ""
-"This article gives some brief instructions on installing FreeBSD "
-"10.4-RELEASE and upgrading the systems running earlier releases."
+"This article gives some brief instructions on installing FreeBSD 10.4-"
+"RELEASE and upgrading the systems running earlier releases."
 msgstr ""
 
 #. type: Title ==
@@ -70,9 +70,9 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/10.4R/installation.adoc:23
 msgid ""
-"The `Installing FreeBSD` chapter of the `FreeBSD Handbook` provides more "
-"in-depth information about the installation program itself, including a "
-"guided walk-through with screenshots."
+"The `Installing FreeBSD` chapter of the `FreeBSD Handbook` provides more in-"
+"depth information about the installation program itself, including a guided "
+"walk-through with screenshots."
 msgstr ""
 
 #. type: Title ==
@@ -118,11 +118,11 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/10.4R/installation.adoc:40
 msgid ""
-"The "
-"https://www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8&manpath=freebsd-release-ports[freebsd-update(8)] "
-"utility supports binary upgrades of i386 and amd64 systems running earlier "
-"FreeBSD releases. Systems running `10.3-RELEASE`, `10.4-RC[12]` can upgrade "
-"as follows:"
+"The https://www.FreeBSD.org/cgi/man.cgi?query=freebsd-"
+"update&sektion=8&manpath=freebsd-release-ports[freebsd-update(8)] utility "
+"supports binary upgrades of i386 and amd64 systems running earlier FreeBSD "
+"releases. Systems running `10.3-RELEASE`, `10.4-RC[12]` can upgrade as "
+"follows:"
 msgstr ""
 
 #. type: delimited block - 4
@@ -136,11 +136,11 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/10.4R/installation.adoc:48
 msgid ""
-"Now the "
-"http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8[freebsd-update(8)] "
-"utility can fetch bits belonging to 10.4-RELEASE. During this process "
-"http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8[freebsd-update(8)] "
-"will ask for help in merging configuration files."
+"Now the http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-"
+"update&sektion=8[freebsd-update(8)] utility can fetch bits belonging to 10.4-"
+"RELEASE. During this process http://www.FreeBSD.org/cgi/man.cgi?"
+"query=freebsd-update&sektion=8[freebsd-update(8)] will ask for help in "
+"merging configuration files."
 msgstr ""
 
 #. type: delimited block - 4
@@ -159,24 +159,22 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/10.4R/installation.adoc:58
 msgid ""
-"The FreeBSD, which previously could appear in either `/boot/kernel` or "
-"`/boot/GENERIC`, now only appears as `/boot/kernel`. As a result, any kernel "
+"The FreeBSD, which previously could appear in either `/boot/kernel` or `/"
+"boot/GENERIC`, now only appears as `/boot/kernel`. As a result, any kernel "
 "appearing in `/boot/GENERIC` will be deleted. Please carefully read the "
-"output printed by "
-"http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8[freebsd-update(8)] "
-"and confirm that an updated kernel will be placed into `/boot/kernel` before "
-"proceeding beyond this point."
+"output printed by http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-"
+"update&sektion=8[freebsd-update(8)] and confirm that an updated kernel will "
+"be placed into `/boot/kernel` before proceeding beyond this point."
 msgstr ""
 
 #. type: Plain text
 #: website/content/en/releases/10.4R/installation.adoc:59
 msgid ""
-"The FreeBSD source tree in `/usr/src` (if present) will be "
-"deleted. (Normally the "
-"http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8[freebsd-update(8)] "
-"utility will update a source tree, but in this case the changes in release "
-"packaging result in the "
-"http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8[freebsd-update(8)] "
+"The FreeBSD source tree in `/usr/src` (if present) will be deleted. "
+"(Normally the http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-"
+"update&sektion=8[freebsd-update(8)] utility will update a source tree, but "
+"in this case the changes in release packaging result in the http://www."
+"FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8[freebsd-update(8)] "
 "utility not recognizing that the source tree from the old release and the "
 "source tree from the new release correspond to the same part of FreeBSD.)"
 msgstr ""
@@ -206,29 +204,30 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/10.4R/installation.adoc:73
 msgid ""
-"After rebooting, "
-"http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8[freebsd-update(8)] "
-"needs to be run again to install the new userland components:"
+"After rebooting, http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-"
+"update&sektion=8[freebsd-update(8)] needs to be run again to install the new "
+"userland components:"
 msgstr ""
 
 #. type: Plain text
 #: website/content/en/releases/10.4R/installation.adoc:80
 msgid ""
 "At this point, users of systems being upgraded from FreeBSD 9.3-RELEASE or "
-"earlier will be prompted by "
-"http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8[freebsd-update(8)] "
-"to rebuild all third-party applications (e.g., ports installed from the "
-"ports tree) due to updates in system libraries."
+"earlier will be prompted by http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-"
+"update&sektion=8[freebsd-update(8)] to rebuild all third-party applications "
+"(e.g., ports installed from the ports tree) due to updates in system "
+"libraries."
 msgstr ""
 
 #. type: Plain text
 #: website/content/en/releases/10.4R/installation.adoc:82
 msgid ""
-"After updating installed third-party applications (and again, only if "
-"http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8[freebsd-update(8)] "
-"printed a message indicating that this was necessary), run "
-"http://www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8[freebsd-update(8)] "
-"again so that it can delete the old (no longer used) system libraries:"
+"After updating installed third-party applications (and again, only if http://"
+"www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8[freebsd-"
+"update(8)] printed a message indicating that this was necessary), run http://"
+"www.FreeBSD.org/cgi/man.cgi?query=freebsd-update&sektion=8[freebsd-"
+"update(8)] again so that it can delete the old (no longer used) system "
+"libraries:"
 msgstr ""
 
 #. type: Plain text
