@@ -237,8 +237,7 @@ msgid ""
 "  has changed from IRQ 5 to IRQ 10.\n"
 "  The ed1 Ethernet device has been removed.  Use the Userconfig utility\n"
 "  to change ed0's values to match your network card's settings.\n"
-"  [MERGED: Both changes are in 2.2.6 and later releases on 2.2-STABLE "
-"branch]\n"
+"  [MERGED: Both changes are in 2.2.6 and later releases on 2.2-STABLE branch]\n"
 msgstr ""
 
 #. type: delimited block . 4
@@ -303,8 +302,7 @@ msgstr ""
 msgid ""
 "o Newly forked child processes return directly to user mode rather than\n"
 "  return up through the fork() syscall tree.  This eliminates the kernel\n"
-"  stack copy at fork time and simplifies certain other internal "
-"operations.\n"
+"  stack copy at fork time and simplifies certain other internal operations.\n"
 "  It is also needed to support the removal of the UPAGES.  (The idea for\n"
 "  this originally came from NetBSD, but we did it for different reasons.)\n"
 msgstr ""
@@ -326,8 +324,7 @@ msgstr ""
 #: website/content/en/releases/3.0R/notes.adoc:151
 #, no-wrap
 msgid ""
-"o With the contribution of Berkeley Software Design, Inc., Jonathan "
-"Lemmon,\n"
+"o With the contribution of Berkeley Software Design, Inc., Jonathan Lemmon,\n"
 "  Mike Smith, Sean Eric Fagan, and John Dyson, VM86 support has been added\n"
 "  to the kernel, and BSD/OS's contributed doscmd has been ported.\n"
 msgstr ""
@@ -371,8 +368,7 @@ msgstr ""
 #: website/content/en/releases/3.0R/notes.adoc:169
 #, no-wrap
 msgid ""
-"o Some other misc syscalls for compatability with other systems: "
-"getsid(2),\n"
+"o Some other misc syscalls for compatability with other systems: getsid(2),\n"
 "  setpgid(2), nanosleep(2).\n"
 msgstr ""
 
@@ -391,8 +387,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "o sleep(3) and usleep(3) are now implemented in terms of signanosleep(2)\n"
-"  and now have correct SIGALRM interaction semantics and sleep(3) "
-"correctly\n"
+"  and now have correct SIGALRM interaction semantics and sleep(3) correctly\n"
 "  returns the time remaining.\n"
 msgstr ""
 
@@ -400,8 +395,7 @@ msgstr ""
 #: website/content/en/releases/3.0R/notes.adoc:181
 #, no-wrap
 msgid ""
-"o An in-kernel linker is implemented and intended to replace the lkm "
-"system\n"
+"o An in-kernel linker is implemented and intended to replace the lkm system\n"
 "  and the bogosity that goes with it.\n"
 msgstr ""
 
@@ -444,9 +438,7 @@ msgstr ""
 #. type: delimited block . 4
 #: website/content/en/releases/3.0R/notes.adoc:205
 #, no-wrap
-msgid ""
-"o The VFS name cache has been reworked to be more accountable and "
-"efficient.\n"
+msgid "o The VFS name cache has been reworked to be more accountable and efficient.\n"
 msgstr ""
 
 #. type: delimited block . 4
@@ -497,10 +489,8 @@ msgstr ""
 #: website/content/en/releases/3.0R/notes.adoc:228
 #, no-wrap
 msgid ""
-"o Changes in driver buffer queuing to deal with ordered transactions.  "
-"This\n"
-"  is intended for sequencing data and metadata writes in the filesystem "
-"code\n"
+"o Changes in driver buffer queuing to deal with ordered transactions.  This\n"
+"  is intended for sequencing data and metadata writes in the filesystem code\n"
 "  once fully supported.\n"
 msgstr ""
 
@@ -971,10 +961,8 @@ msgstr ""
 #: website/content/en/releases/3.0R/notes.adoc:468
 #, no-wrap
 msgid ""
-"  The CAM SCSI tape driver doesn't yet handle older (and many times "
-"broken)\n"
-"  tape drives very well.  If you've got an older SCSI-1 tape drive, like "
-"an\n"
+"  The CAM SCSI tape driver doesn't yet handle older (and many times broken)\n"
+"  tape drives very well.  If you've got an older SCSI-1 tape drive, like an\n"
 "  Exabyte 8200 or older QIC-type tape drive, it may not work properly with\n"
 "  the CAM tape driver.  This is obviously a known problem, and we're\n"
 "  working on it.\n"
@@ -1110,8 +1098,7 @@ msgstr ""
 msgid ""
 "Texas Instruments ThunderLAN PCI NICs, including the following:\n"
 "  Compaq Netelligent 10, 10/100, 10/100 Proliant, 10/100 Dual-Port\n"
-"  Compaq Netelligent 10/100 TX Embedded UTP, 10 T PCI UTP/Coax, 10/100 TX "
-"UTP\n"
+"  Compaq Netelligent 10/100 TX Embedded UTP, 10 T PCI UTP/Coax, 10/100 TX UTP\n"
 "  Compaq NetFlex 3P, 3P Integrated, 3P w/ BNC\n"
 "  Olicom OC-2135/2138, OC-2325, OC-2326 10/100 TX UTP\n"
 msgstr ""
@@ -1122,8 +1109,7 @@ msgstr ""
 msgid ""
 "DEC EtherWORKS III NICs (DE203, DE204, and DE205)\n"
 "DEC EtherWORKS II NICs (DE200, DE201, DE202, and DE422)\n"
-"DEC DC21040, DC21041, or DC21140 based NICs (SMC Etherpower 8432T, DE245, "
-"etc)\n"
+"DEC DC21040, DC21041, or DC21140 based NICs (SMC Etherpower 8432T, DE245, etc)\n"
 "DEC FDDI (DEFPA/DEFEA) NICs\n"
 msgstr ""
 
@@ -1259,8 +1245,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "   o IETF \"Classical IP and ARP over ATM\" model\n"
-"        - RFC 1483, \"Multiprotocol Encapsulation over ATM Adaptation Layer "
-"5\"\n"
+"        - RFC 1483, \"Multiprotocol Encapsulation over ATM Adaptation Layer 5\"\n"
 "        - RFC 1577, \"Classical IP and ARP over ATM\"\n"
 "        - RFC 1626, \"Default IP MTU for use over ATM AAL5\"\n"
 "        - RFC 1755, \"ATM Signaling Support for IP over ATM\"\n"
@@ -1354,8 +1339,7 @@ msgstr ""
 #: website/content/en/releases/3.0R/notes.adoc:620
 #, no-wrap
 msgid ""
-"Most ISA audio codecs manufactured by Crystal Semiconductors, OPTi, "
-"Creative\n"
+"Most ISA audio codecs manufactured by Crystal Semiconductors, OPTi, Creative\n"
 "Labs, Avance, Yamaha and ENSONIQ. (pcm driver)\n"
 msgstr ""
 
@@ -1812,10 +1796,8 @@ msgstr ""
 #: website/content/en/releases/3.0R/notes.adoc:838
 #, no-wrap
 msgid ""
-"        And to the many thousands of FreeBSD users and testers all over "
-"the\n"
-"        world, without whom this release simply would not have been "
-"possible.\n"
+"        And to the many thousands of FreeBSD users and testers all over the\n"
+"        world, without whom this release simply would not have been possible.\n"
 msgstr ""
 
 #. type: delimited block . 4
