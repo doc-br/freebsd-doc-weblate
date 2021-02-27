@@ -49,14 +49,13 @@ msgid ""
 "There are thousands, if not tens of thousands, of user installations that "
 "track the ports tree on a daily basis, rather than relying on the packages "
 "that shipped with the most current FreeBSD release. Accordingly, any fatal "
-"error in the ports framework will immediately affect all of these "
-"sites. This is why commits to `bsd.port.mk` are only allowed with portmgr "
-"approval. Except in unusual cases, this approval is only granted after a "
-"regression test has been run on a dedicated area of the automated "
-"http://pointyhat.FreeBSD.org[ports building cluster]. Typically, a dozen or "
-"more proposed changes to the infrastructure are tested at the same time, and "
-"only after a build of the entire ports tree succeeds will portmgr commit the "
-"changes."
+"error in the ports framework will immediately affect all of these sites. "
+"This is why commits to `bsd.port.mk` are only allowed with portmgr approval. "
+"Except in unusual cases, this approval is only granted after a regression "
+"test has been run on a dedicated area of the automated http://pointyhat."
+"FreeBSD.org[ports building cluster]. Typically, a dozen or more proposed "
+"changes to the infrastructure are tested at the same time, and only after a "
+"build of the entire ports tree succeeds will portmgr commit the changes."
 msgstr ""
 
 #. type: Title ==
@@ -85,9 +84,8 @@ msgstr ""
 #: website/content/en/portmgr/implementation.adoc:23
 msgid ""
 "changes that change the \"accepted best practice\" for ports Makefiles, such "
-"as definitions or usage of common make variables (or "
-"`Makevar`s). (e.g. consolidation of various implementations of USE_*, "
-"WITH_*, and so forth)"
+"as definitions or usage of common make variables (or `Makevar`s). (e.g. "
+"consolidation of various implementations of USE_*, WITH_*, and so forth)"
 msgstr ""
 
 #. type: Plain text
@@ -174,8 +172,8 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/portmgr/implementation.adoc:44
 msgid ""
-"anything else that would normally require a "
-"link:#requires_regression_test[regression test]"
+"anything else that would normally require a link:"
+"#requires_regression_test[regression test]"
 msgstr ""
 
 #. type: Plain text
@@ -217,5 +215,6 @@ msgstr ""
 
 #. type: Plain text
 #: website/content/en/portmgr/implementation.adoc:54
-msgid "To summarize: the basic test is *will this change affect other packages?*."
+msgid ""
+"To summarize: the basic test is *will this change affect other packages?*."
 msgstr ""
