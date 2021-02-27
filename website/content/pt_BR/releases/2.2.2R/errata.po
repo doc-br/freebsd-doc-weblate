@@ -28,8 +28,7 @@ msgstr ""
 msgid ""
 "Last minute errata:\n"
 "-------------------\n"
-"o login as root produces \"login_getclass: unknown class 'root'\" on system "
-"console.\n"
+"o login as root produces \"login_getclass: unknown class 'root'\" on system console.\n"
 msgstr ""
 
 #. type: delimited block . 4
@@ -40,8 +39,7 @@ msgid ""
 "      cp /usr/src/etc/login.conf /etc\n"
 "      otherwise, get it from the FreeBSD FTP site using this URL:\n"
 "      ftp://ftp.FreeBSD.org/pub/FreeBSD/FreeBSD-current/src/etc/login.conf\n"
-"      instead.  Simply cd to /etc and then run fetch(1) with the provided "
-"URL.\n"
+"      instead.  Simply cd to /etc and then run fetch(1) with the provided URL.\n"
 msgstr ""
 
 #. type: delimited block . 4
@@ -86,8 +84,7 @@ msgid ""
 "      mysterious has happened to FreeBSD twixt 2.2.1 and 2.2.2 which makes\n"
 "      it fail with just that exact memory size.  Given the popularity of\n"
 "      16MB simms, it also explains why none of us have seen it since we\n"
-"      typically have either 16MB, 32MB or 64MB of memory in our "
-"systems. :)\n"
+"      typically have either 16MB, 32MB or 64MB of memory in our systems. :)\n"
 msgstr ""
 
 #. type: delimited block . 4
@@ -102,10 +99,8 @@ msgstr ""
 #: website/content/en/releases/2.2.2R/errata.adoc:48
 #, no-wrap
 msgid ""
-"      1. Boot the 2.2.2 boot floppy and when it comes to the first menu "
-"which\n"
-"         asks you whether or not you want to go into the kernel "
-"configuration\n"
+"      1. Boot the 2.2.2 boot floppy and when it comes to the first menu which\n"
+"         asks you whether or not you want to go into the kernel configuration\n"
 "         editor, choose the \"experts only\" CLI mode option.  Now type:\n"
 msgstr ""
 
@@ -128,10 +123,8 @@ msgstr ""
 #: website/content/en/releases/2.2.2R/errata.adoc:59
 #, no-wrap
 msgid ""
-"      2. If the above does not work, physically remove all but 32MB of "
-"memory\n"
-"         from your machine and then boot the boot floppy.  Unless your "
-"problem\n"
+"      2. If the above does not work, physically remove all but 32MB of memory\n"
+"         from your machine and then boot the boot floppy.  Unless your problem\n"
 "         is totally weird and something we've not seen at all before, you\n"
 "         should now be able to go on to step 3.\n"
 msgstr ""
@@ -143,8 +136,7 @@ msgid ""
 "      3. Complete the installation and then boot off your hard disk.  This\n"
 "         boot should work fine, since you are no longer using the memory\n"
 "         filesystem that the installation uses and which seems to interact\n"
-"         badly with these memory size issues to create the failure you "
-"saw.\n"
+"         badly with these memory size issues to create the failure you saw.\n"
 msgstr ""
 
 #. type: delimited block . 4
@@ -154,10 +146,8 @@ msgid ""
 "         You will also want to boot with the -c flag at some point and\n"
 "         say \"iosize npx0 0\" to get the full use of all your memory back\n"
 "         since the old value of 32768 will have been saved to disk during\n"
-"         the initial installation.  If you already plan on building a "
-"custom\n"
-"         kernel, you can skip this step since the value will be reset "
-"anyway.\n"
+"         the initial installation.  If you already plan on building a custom\n"
+"         kernel, you can skip this step since the value will be reset anyway.\n"
 msgstr ""
 
 #. type: Plain text
