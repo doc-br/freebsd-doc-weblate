@@ -269,8 +269,8 @@ msgid ""
 "The {releaseType} distribution to which these release notes apply represents "
 "the latest point along the {releaseBranch} development branch since "
 "{releaseBranch} was created. Information regarding pre-built, binary "
-"{releaseType} distributions along this branch can be found at "
-"https://www.FreeBSD.org/releases/."
+"{releaseType} distributions along this branch can be found at https://www."
+"FreeBSD.org/releases/."
 msgstr ""
 
 #. type: Plain text
@@ -279,8 +279,8 @@ msgid ""
 "The {releaseType} distribution to which these release notes apply represents "
 "a point along the {releaseBranch} development branch between {releasePrev} "
 "and the future {releaseNext}. Information regarding pre-built, binary "
-"{releaseType} distributions along this branch can be found at "
-"https://www.FreeBSD.org/releases/."
+"{releaseType} distributions along this branch can be found at https://www."
+"FreeBSD.org/releases/."
 msgstr ""
 
 #. type: Plain text
@@ -289,9 +289,9 @@ msgid ""
 "This distribution of FreeBSD {releaseCurrent} is a {releaseType} "
 "distribution. It can be found at https://www.FreeBSD.org/releases/ or any of "
 "its mirrors. More information on obtaining this (or other) {releaseType} "
-"distributions of FreeBSD can be found in the "
-"link:{handbook}#mirrors[Obtaining FreeBSD' appendix] to the "
-"link:{handbook}[FreeBSD Handbook]."
+"distributions of FreeBSD can be found in the link:{handbook}"
+"#mirrors[Obtaining FreeBSD' appendix] to the link:{handbook}[FreeBSD "
+"Handbook]."
 msgstr ""
 
 #. type: Plain text
@@ -321,8 +321,8 @@ msgid ""
 "major bug fixes, or contributed software upgrades. They may also list "
 "changes to major ports/packages or release engineering practices. Clearly "
 "the release notes cannot list every single change made to FreeBSD between "
-"releases; this document focuses primarily on security advisories, "
-"user-visible changes, and major architectural improvements."
+"releases; this document focuses primarily on security advisories, user-"
+"visible changes, and major architectural improvements."
 msgstr ""
 
 #. type: Title ==
@@ -335,9 +335,9 @@ msgstr ""
 #: website/content/en/releases/12.0R/relnotes.adoc:84
 msgid ""
 "[amd64,i386] Binary upgrades between RELEASE versions (and snapshots of the "
-"various security branches) are supported using the {{< manpage "
-"\"freebsd-update\" \"8\">}} utility. The binary upgrade procedure will "
-"update unmodified userland utilities, as well as unmodified GENERIC kernels "
+"various security branches) are supported using the {{< manpage \"freebsd-"
+"update\" \"8\">}} utility. The binary upgrade procedure will update "
+"unmodified userland utilities, as well as unmodified GENERIC kernels "
 "distributed as a part of an official FreeBSD release. The {{< manpage "
 "\"freebsd-update\" \"8\">}} utility requires that the host being upgraded "
 "have Internet connectivity."
@@ -604,8 +604,8 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/12.0R/relnotes.adoc:171
 msgid ""
-"The {{< manpage \"ls\" \"1\">}} utility has been updated to include a new "
-"`--color=when` flag, where when can be one of `always`, `auto` (default), or "
+"The {{< manpage \"ls\" \"1\">}} utility has been updated to include a new `--"
+"color=when` flag, where when can be one of `always`, `auto` (default), or "
 "`never`. {{< revision \"337956\" >}}"
 msgstr ""
 
@@ -671,8 +671,8 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/12.0R/relnotes.adoc:190
 msgid ""
-"The {{< manpage \"zstd\" \"1\">}} utility has been updated to version "
-"1.3.4. {{< revision \"331602\" >}} {{< sponsored \"Dell EMC Isilon\" >}}"
+"The {{< manpage \"zstd\" \"1\">}} utility has been updated to version 1.3.4. "
+"{{< revision \"331602\" >}} {{< sponsored \"Dell EMC Isilon\" >}}"
 msgstr ""
 
 #. type: Plain text
@@ -686,8 +686,8 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/12.0R/relnotes.adoc:194
 msgid ""
-"The {{< manpage \"xz\" \"1\">}} utility has been updated to version "
-"5.2.4. {{< revision \"333783\" >}}"
+"The {{< manpage \"xz\" \"1\">}} utility has been updated to version 5.2.4. "
+"{{< revision \"333783\" >}}"
 msgstr ""
 
 #. type: Plain text
@@ -723,10 +723,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "*Note*: +\n"
-"Source-based upgrades from FreeBSD 11.x and earlier require the `ntpd` UID "
-"(123) and GID (123) to exist before the `installworld` target is run. See "
-"the \"rebuild everything and install\" section of `UPDATING` for the "
-"documented procedure for source-based upgrades for more details.\n"
+"Source-based upgrades from FreeBSD 11.x and earlier require the `ntpd` UID (123) and GID (123) to exist before the `installworld` target is run. See the \"rebuild everything and install\" section of `UPDATING` for the documented procedure for source-based upgrades for more details.\n"
 msgstr ""
 
 #. type: Plain text
@@ -739,8 +736,8 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/12.0R/relnotes.adoc:210
 msgid ""
-"The {{< manpage \"file\" \"1\">}} utility has been updated to version "
-"5.34. {{< revision \"337442\" >}}"
+"The {{< manpage \"file\" \"1\">}} utility has been updated to version 5.34. "
+"{{< revision \"337442\" >}}"
 msgstr ""
 
 #. type: Plain text
@@ -790,7 +787,8 @@ msgstr ""
 
 #. type: Plain text
 #: website/content/en/releases/12.0R/relnotes.adoc:226
-msgid "ACPICA has been updated to version 20181003. {{< revision \"339262\" >}}"
+msgid ""
+"ACPICA has been updated to version 20181003. {{< revision \"339262\" >}}"
 msgstr ""
 
 #. type: Plain text
@@ -819,10 +817,9 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/12.0R/relnotes.adoc:237
 msgid ""
-"The {{< manpage \"bsdinstall\" \"8\">}} installer and {{< manpage "
-"\"zfsboot\" \"8\">}} boot code have been updated to allow an UEFI+GELI "
-"installation option. {{< revision \"338282\" >}} {{< sponsored \"\tKlara "
-"Systems\" >}}"
+"The {{< manpage \"bsdinstall\" \"8\">}} installer and {{< manpage \"zfsboot"
+"\" \"8\">}} boot code have been updated to allow an UEFI+GELI installation "
+"option. {{< revision \"338282\" >}} {{< sponsored \"\tKlara Systems\" >}}"
 msgstr ""
 
 #. type: Title ===
@@ -844,8 +841,8 @@ msgstr ""
 msgid ""
 "The {{< manpage \"geli\" \"8\">}} {{< manpage \"rc\" \"8\">}} script has "
 "been updated to include support for a new variable, `geli_groups`, which "
-"provides support to attach multiple providers when set in {{< manpage "
-"\"rc.conf\" \"5\" >}}. {{< revision \"335673\" >}}"
+"provides support to attach multiple providers when set in {{< manpage \"rc."
+"conf\" \"5\" >}}. {{< revision \"335673\" >}}"
 msgstr ""
 
 #. type: Plain text
@@ -908,8 +905,7 @@ msgstr ""
 #: website/content/en/releases/12.0R/relnotes.adoc:264
 msgid ""
 "The {{< manpage \"arc4random\" \"3\">}} library has been updated to remove "
-"`arc4random_stir()` and `arc4random_addrandom()`. {{< revision \"338331\" "
-">}}"
+"`arc4random_stir()` and `arc4random_addrandom()`. {{< revision \"338331\" >}}"
 msgstr ""
 
 #. type: Title ==
@@ -1004,8 +1000,8 @@ msgstr ""
 msgid ""
 "The {{< manpage \"dumpon\" \"8\">}} utility has been updated to add support "
 "for {{< manpage \"zstd\" \"1\">}}-compressed kernel crash dumps when the "
-"kernel configuration file includes the `ZSTDIO` option. See {{< manpage "
-"\"rc.conf\" \"5\">}} and {{< manpage \"dumpon\" \"8\">}} for additional "
+"kernel configuration file includes the `ZSTDIO` option. See {{< manpage \"rc."
+"conf\" \"5\">}} and {{< manpage \"dumpon\" \"8\">}} for additional "
 "information. {{< revision \"329240\" >}} {{< sponsored \"Dell EMC Isilon\" "
 ">}}"
 msgstr ""
@@ -1102,8 +1098,8 @@ msgid ""
 "The {{< manpage \"netdump\" \"4\">}} driver has been added, providing a "
 "facility through which kernel crash dumps can be transmitted to a remote "
 "host after a system panic. See {{< manpage \"netdump\" \"4\">}} and {{< "
-"manpage \"dumpon\" \"8\">}} for more information and configuration "
-"details. {{< revision \"333283\" >}} {{< sponsored \"Dell EMC Isilon\" >}}"
+"manpage \"dumpon\" \"8\">}} for more information and configuration details. "
+"{{< revision \"333283\" >}} {{< sponsored \"Dell EMC Isilon\" >}}"
 msgstr ""
 
 #. type: Plain text
@@ -1138,8 +1134,8 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/12.0R/relnotes.adoc:330
 msgid ""
-"The {{< manpage \"ixl\" \"4\">}} driver has been updated to version "
-"1.9.9-k. {{< revision \"333149\" >}} {{< sponsored \"Intel Corporation\" >}}"
+"The {{< manpage \"ixl\" \"4\">}} driver has been updated to version 1.9.9-k. "
+"{{< revision \"333149\" >}} {{< sponsored \"Intel Corporation\" >}}"
 msgstr ""
 
 #. type: Plain text
@@ -1200,8 +1196,8 @@ msgstr ""
 #: website/content/en/releases/12.0R/relnotes.adoc:347
 msgid ""
 "The {{< manpage \"jedec_ts\" \"4\">}} driver has been removed in "
-"{releaseCurrent}, and its functionality replaced by {{< manpage "
-"\"jedec_dimm\" \"4\">}}. {{< revision \"337033\" >}}"
+"{releaseCurrent}, and its functionality replaced by {{< manpage \"jedec_dimm"
+"\" \"4\">}}. {{< revision \"337033\" >}}"
 msgstr ""
 
 #. type: Plain text
@@ -1261,11 +1257,11 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/12.0R/relnotes.adoc:366
 msgid ""
-"FreeBSD has changed the way graphics drivers are handled on amd64 and "
-"i386. Graphics drivers for modern ATI/AMD(R) and Intel(R) graphics cards are "
-"now available in the Ports Collection. The base drivers are still available "
-"and will be installed by default, but they lack support for current "
-"generation laptop and desktop systems."
+"FreeBSD has changed the way graphics drivers are handled on amd64 and i386. "
+"Graphics drivers for modern ATI/AMD(R) and Intel(R) graphics cards are now "
+"available in the Ports Collection. The base drivers are still available and "
+"will be installed by default, but they lack support for current generation "
+"laptop and desktop systems."
 msgstr ""
 
 #. type: Plain text
@@ -1318,8 +1314,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "*Note*: +\n"
-"Users must be added to the `video` GID after installing `graphics/drm-kmod` "
-"in order for X to start properly.\n"
+"Users must be added to the `video` GID after installing `graphics/drm-kmod` in order for X to start properly.\n"
 msgstr ""
 
 #. type: Plain text
@@ -1327,9 +1322,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "*Note*: +\n"
-"There are known issues with the `xserver` driver provided by "
-"`x11-drivers/xf86-video-ati` when using graphics drivers from the base "
-"system; `x11-drivers/xf86-video-ati-legacy` should be used instead.\n"
+"There are known issues with the `xserver` driver provided by `x11-drivers/xf86-video-ati` when using graphics drivers from the base system; `x11-drivers/xf86-video-ati-legacy` should be used instead.\n"
 msgstr ""
 
 #. type: Plain text
@@ -1337,11 +1330,8 @@ msgstr ""
 #, no-wrap
 msgid ""
 "*Note*: +\n"
-"There is a known issue where booting with UEFI and using the ATI/AMD(R) "
-"graphics driver may cause the screen to be garbled before the appropriate "
-"driver is loaded.\n"
-"For additional information regarding graphics support on FreeBSD, please see "
-"the https://wiki.freebsd.org/Graphics[Graphics Wiki Page].\n"
+"There is a known issue where booting with UEFI and using the ATI/AMD(R) graphics driver may cause the screen to be garbled before the appropriate driver is loaded.\n"
+"For additional information regarding graphics support on FreeBSD, please see the https://wiki.freebsd.org/Graphics[Graphics Wiki Page].\n"
 msgstr ""
 
 #. type: Title ===
@@ -1406,8 +1396,7 @@ msgstr ""
 #: website/content/en/releases/12.0R/relnotes.adoc:422
 msgid ""
 "The {{< manpage \"bhyve\" \"8\">}} utility has been updated to add NVMe "
-"device emulation. {{< revision \"335974\" >}} {{< sponsored \"iXsystems\" "
-">}}"
+"device emulation. {{< revision \"335974\" >}} {{< sponsored \"iXsystems\" >}}"
 msgstr ""
 
 #. type: Plain text
@@ -1437,8 +1426,8 @@ msgstr ""
 #: website/content/en/releases/12.0R/relnotes.adoc:431
 msgid ""
 "Support for the USB OTG serial terminal has been enabled on arm systems by "
-"default. {{< revision \"335004\" >}} {{< sponsored \"The FreeBSD "
-"Foundation\" >}}"
+"default. {{< revision \"335004\" >}} {{< sponsored \"The FreeBSD Foundation"
+"\" >}}"
 msgstr ""
 
 #. type: Plain text
@@ -1485,9 +1474,9 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/12.0R/relnotes.adoc:447
 msgid ""
-"The UFS/FFS filesystem has been updated to support check hashes to "
-"cylinder-group maps. Support for check hashes is available only for "
-"UFS2. {{< revision \"323923\" >}}"
+"The UFS/FFS filesystem has been updated to support check hashes to cylinder-"
+"group maps. Support for check hashes is available only for UFS2. {{< "
+"revision \"323923\" >}}"
 msgstr ""
 
 #. type: Plain text
@@ -1520,9 +1509,9 @@ msgstr ""
 #: website/content/en/releases/12.0R/relnotes.adoc:455
 msgid ""
 "TRIM consolidation support has been enabled by default in the UFS/FFS "
-"filesystem. TRIM consolidation can be disabled by setting the "
-"`vfs.ffs.dotrimcons` {{< manpage \"sysctl\" \"8\">}} to `0`, or adding "
-"`vfs.ffs.dotrimcons=0` to {{< manpage \"sysctl.conf\" \"5\">}}. {{< revision "
+"filesystem. TRIM consolidation can be disabled by setting the `vfs.ffs."
+"dotrimcons` {{< manpage \"sysctl\" \"8\">}} to `0`, or adding `vfs.ffs."
+"dotrimcons=0` to {{< manpage \"sysctl.conf\" \"5\">}}. {{< revision "
 "\"338517\" >}} {{< sponsored \"Netflix\" >}}"
 msgstr ""
 
@@ -1551,8 +1540,8 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/12.0R/relnotes.adoc:464
 msgid ""
-"The NFS version 4.1 server has been updated to include pNFS server "
-"support. {{< revision \"335012\" >}}"
+"The NFS version 4.1 server has been updated to include pNFS server support. "
+"{{< revision \"335012\" >}}"
 msgstr ""
 
 #. type: Title ===
@@ -1564,9 +1553,9 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/12.0R/relnotes.adoc:469
 msgid ""
-"ZFS has been updated to include new {{< manpage \"sysctl\" \"8\">}}s, "
-"`vfs.zfs.arc_min_prefetch_ms` and `vfs.zfs.arc_min_prescient_prefetch_ms`, "
-"which improve performance of the {{< manpage \"zpool\" \"8\">}} `scrub` "
+"ZFS has been updated to include new {{< manpage \"sysctl\" \"8\">}}s, `vfs."
+"zfs.arc_min_prefetch_ms` and `vfs.zfs.arc_min_prescient_prefetch_ms`, which "
+"improve performance of the {{< manpage \"zpool\" \"8\">}} `scrub` "
 "subcommand. {{< revision \"334844\" >}}"
 msgstr ""
 
@@ -1623,8 +1612,8 @@ msgid ""
 "A new {{< manpage \"kenv\" \"1\">}} variable, `init_exec`, has been added to "
 "{{< manpage \"loader\" \"8\">}} which allows {{< manpage \"init\" \"8\">}} "
 "to execute a file after opening the console, replacing {{< manpage \"init\" "
-"\"8\">}} as PID `1`. {{< revision \"337740\" >}} {{< sponsored \"DARPA, "
-"AFRL\" >}}"
+"\"8\">}} as PID `1`. {{< revision \"337740\" >}} {{< sponsored \"DARPA, AFRL"
+"\" >}}"
 msgstr ""
 
 #. type: Plain text
@@ -1754,8 +1743,7 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/12.0R/relnotes.adoc:528
 msgid ""
-"The {{< manpage \"pkg\" \"8\">}} utility has been updated to verson "
-"1.10.5_5."
+"The {{< manpage \"pkg\" \"8\">}} utility has been updated to verson 1.10.5_5."
 msgstr ""
 
 #. type: Plain text
