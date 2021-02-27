@@ -86,37 +86,19 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/gnome/docs/develfaq.adoc:28
 #, no-wrap
-msgid ""
-"*STABLE* - The applications and libraries in the stable branch are "
-"considered \"release quality,\" and are the versions that appear in the "
-"FreeBSD ports tree. The current stable version is GNOME {gnomever}.\n"
+msgid "*STABLE* - The applications and libraries in the stable branch are considered \"release quality,\" and are the versions that appear in the FreeBSD ports tree. The current stable version is GNOME {gnomever}.\n"
 msgstr ""
 
 #. type: Plain text
 #: website/content/en/gnome/docs/develfaq.adoc:30
 #, no-wrap
-msgid ""
-"*DEVELOPMENT* - In between stable releases are development "
-"releases. Traditionally, GNOME development releases have odd minor numbers "
-"(e.g. 2.3, {gnomedevelver}, 3.(n*2)-1). Development releases will become "
-"stable releases, and move from alpha to beta quality during their "
-"lifecycle. The development releases need testing by FreeBSD users to "
-"minimize the number of surprises when the new stable versions are committed "
-"to the FreeBSD SVN tree. This document is about the development branch. At "
-"any time the development branch for FreeBSD might be based of a stable GNOME "
-"release. However it will be tagged \"development\" here if it is the version "
-"that is work in progress by the FreeBSD GNOME team. The current development "
-"branch for FreeBSD is GNOME {gnomedevelver}.\n"
+msgid "*DEVELOPMENT* - In between stable releases are development releases. Traditionally, GNOME development releases have odd minor numbers (e.g. 2.3, {gnomedevelver}, 3.(n*2)-1). Development releases will become stable releases, and move from alpha to beta quality during their lifecycle. The development releases need testing by FreeBSD users to minimize the number of surprises when the new stable versions are committed to the FreeBSD SVN tree. This document is about the development branch. At any time the development branch for FreeBSD might be based of a stable GNOME release. However it will be tagged \"development\" here if it is the version that is work in progress by the FreeBSD GNOME team. The current development branch for FreeBSD is GNOME {gnomedevelver}.\n"
 msgstr ""
 
 #. type: Plain text
 #: website/content/en/gnome/docs/develfaq.adoc:32
 #, no-wrap
-msgid ""
-"*GIT* - Often newer-than-new, the GIT master versions of GNOME applications "
-"and libraries are alpha quality, or often completely unbuildable. The "
-"FreeBSD GNOME project pays attention to, but does not track the alpha "
-"quality code.\n"
+msgid "*GIT* - Often newer-than-new, the GIT master versions of GNOME applications and libraries are alpha quality, or often completely unbuildable. The FreeBSD GNOME project pays attention to, but does not track the alpha quality code.\n"
 msgstr ""
 
 #. type: Plain text
@@ -144,11 +126,11 @@ msgstr ""
 #: website/content/en/gnome/docs/develfaq.adoc:42
 msgid ""
 "mailto:marcus@FreeBSD.org[Marcus] maintains a SVN repository where all the "
-"development versions of the GNOME components for FreeBSD are "
-"housed. Instructions for how to check out the development ports module and "
-"how to merge it into the FreeBSD ports tree reside on the entrance page to "
-"his SVN repository. Please read carefully the instructions at "
-"http://www.marcuscom.com/viewvc/viewvc.cgi/marcuscom/."
+"development versions of the GNOME components for FreeBSD are housed. "
+"Instructions for how to check out the development ports module and how to "
+"merge it into the FreeBSD ports tree reside on the entrance page to his SVN "
+"repository. Please read carefully the instructions at http://www.marcuscom."
+"com/viewvc/viewvc.cgi/marcuscom/."
 msgstr ""
 
 #. type: Plain text
@@ -156,18 +138,17 @@ msgstr ""
 msgid ""
 "During the development cycle, FreeBSD-specific caveats and other useful "
 "information will be sent to marcuscom-devel@marcuscom.com. If you are "
-"tracking the GNOME development branch, you *must* "
-"http://www.marcuscom.com/mailman/listinfo/marcuscom-devel[subscribe] to this "
-"list. You should also consider "
-"https://lists.freebsd.org/mailman/listinfo/freebsd-gnome[subscribing] to "
-"freebsd-gnome@FreeBSD.org."
+"tracking the GNOME development branch, you *must* http://www.marcuscom.com/"
+"mailman/listinfo/marcuscom-devel[subscribe] to this list. You should also "
+"consider https://lists.freebsd.org/mailman/listinfo/freebsd-"
+"gnome[subscribing] to freebsd-gnome@FreeBSD.org."
 msgstr ""
 
 #. type: Plain text
 #: website/content/en/gnome/docs/develfaq.adoc:46
 msgid ""
-"In order to help with bug reports, be sure to add the following to "
-"`/etc/make.conf` so that gdb back traces contain useful information:"
+"In order to help with bug reports, be sure to add the following to `/etc/"
+"make.conf` so that gdb back traces contain useful information:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -179,8 +160,8 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/gnome/docs/develfaq.adoc:52
 msgid ""
-"GNOME has an excellent guide for getting "
-"https://wiki.gnome.org/GettingTraces[useful back traces]."
+"GNOME has an excellent guide for getting https://wiki.gnome.org/"
+"GettingTraces[useful back traces]."
 msgstr ""
 
 #. type: Plain text
@@ -195,11 +176,10 @@ msgid ""
 "The short answer is that you need to use the `marcusmerge` script to merge "
 "the development tree with the FreeBSD ports tree. The `marcusmerge` script "
 "is available http://www.marcuscom.com/downloads/marcusmerge[here], and a man "
-"page on using the script is available "
-"http://www.marcuscom.com/marcusmerge.8.html[here]. This script will merge "
-"the development ports tree into your main ports tree. From there, you can "
-"use `portupgrade` or `portmaster` to upgrade from {gnomever} to "
-"{gnomedevelver} and stay up-to-date afterwards."
+"page on using the script is available http://www.marcuscom.com/marcusmerge.8."
+"html[here]. This script will merge the development ports tree into your main "
+"ports tree. From there, you can use `portupgrade` or `portmaster` to upgrade "
+"from {gnomever} to {gnomedevelver} and stay up-to-date afterwards."
 msgstr ""
 
 #. type: Plain text
@@ -208,10 +188,10 @@ msgid ""
 "The long answer is that keeping up-to-date with the GNOME development branch "
 "is complicated. Sometimes components change in a way that makes "
 "`portupgrade` or `portmaster` fail, or causes strange end results. If you "
-"plan to track the development branch, it is a good idea to join the "
-"http://lists.FreeBSD.org/mailman/listinfo/freebsd-gnome[freebsd-gnome] "
-"mailing list, as well as to join the _#freebsd-gnome_ IRC channel on "
-"FreeNode (`irc.freenode.net`)."
+"plan to track the development branch, it is a good idea to join the http://"
+"lists.FreeBSD.org/mailman/listinfo/freebsd-gnome[freebsd-gnome] mailing "
+"list, as well as to join the _#freebsd-gnome_ IRC channel on FreeNode (`irc."
+"freenode.net`)."
 msgstr ""
 
 #. type: Plain text
@@ -232,11 +212,10 @@ msgstr ""
 #: website/content/en/gnome/docs/develfaq.adoc:66
 msgid ""
 "It depends. If you think the problem is truly a bug with the GNOME "
-"component, you can report a bug using *bug-buddy* or the GNOME "
-"http://bugzilla.gnome.org[Bugzilla] interface. If you think the problem lies "
-"in a FreeBSD port, or is FreeBSD-specific, send email to "
-"freebsd-gnome@FreeBSD.org, or report the problem on the _#freebsd-gnome_ IRC "
-"channel on FreeNode."
+"component, you can report a bug using *bug-buddy* or the GNOME http://"
+"bugzilla.gnome.org[Bugzilla] interface. If you think the problem lies in a "
+"FreeBSD port, or is FreeBSD-specific, send email to freebsd-gnome@FreeBSD."
+"org, or report the problem on the _#freebsd-gnome_ IRC channel on FreeNode."
 msgstr ""
 
 #. type: Plain text
