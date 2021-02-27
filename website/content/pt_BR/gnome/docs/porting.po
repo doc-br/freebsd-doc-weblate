@@ -125,8 +125,8 @@ msgstr ""
 msgid ""
 "Once you have finished with your port, it is a good idea to verify that your "
 "port depends on the correct list of components. To see a list of what "
-"packages your port will actually require, use the command `make "
-"package-depends` from within your port's directory."
+"packages your port will actually require, use the command `make package-"
+"depends` from within your port's directory."
 msgstr ""
 
 #. type: Plain text
@@ -223,8 +223,8 @@ msgid ""
 "If your port can optionally use GNOME, you must set `WANT_GNOME= yes` in "
 "your Makefile, then check to see if `HAVE_GNOME` is set for each component "
 "from the list above that your port can use. Since this is a conditional "
-"evaluation, you need to stick it between `bsd.port.pre.mk` and "
-"`bsd.port.post.mk`. For example:"
+"evaluation, you need to stick it between `bsd.port.pre.mk` and `bsd.port."
+"post.mk`. For example:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -266,25 +266,23 @@ msgid ""
 "various GNOME components listed above. For each component found, its name is "
 "appended to `HAVE_GNOME`. Since this port can use `gnomepanel`, we check "
 "`HAVE_GNOME` to see if it contains `gnomepanel` (for more on the :M`pattern` "
-"make syntax, please refer to the "
-"link:https://www.freebsd.org/cgi/man.cgi?query=make&sektion=0&format=html[make(1)] "
-"manpage). If `gnomepanel` is found, then it is added the list of `USE_GNOME` "
-"dependencies, and the port-specific `--with-gnome` `CONFIGURE_ARG` is "
-"passed. In an old GNOME infrastructure, `PKGNAMESUFFIX` was automatically "
-"adjusted by the proper `USE_*` macro. Now it is up to the individual porter "
-"to do this. Our example port appends `-gnome` to the port name to indicate "
-"it has been built with GNOME support. The same is true for the `DATADIR` "
-"`PLIST_SUB`. The individual porter must decide when do the `DATADIR` "
-"substitution. A good rule of thumb is to add the `DATADIR` `PLIST_SUB` when "
-"using the `gnomeprefix` component."
+"make syntax, please refer to the link:https://www.freebsd.org/cgi/man.cgi?"
+"query=make&sektion=0&format=html[make(1)] manpage). If `gnomepanel` is "
+"found, then it is added the list of `USE_GNOME` dependencies, and the port-"
+"specific `--with-gnome` `CONFIGURE_ARG` is passed. In an old GNOME "
+"infrastructure, `PKGNAMESUFFIX` was automatically adjusted by the proper "
+"`USE_*` macro. Now it is up to the individual porter to do this. Our example "
+"port appends `-gnome` to the port name to indicate it has been built with "
+"GNOME support. The same is true for the `DATADIR` `PLIST_SUB`. The "
+"individual porter must decide when do the `DATADIR` substitution. A good "
+"rule of thumb is to add the `DATADIR` `PLIST_SUB` when using the "
+"`gnomeprefix` component."
 msgstr ""
 
 #. type: Plain text
 #: website/content/en/gnome/docs/porting.adoc:96
 #, no-wrap
-msgid ""
-"*Note:* You cannot add extra default `USE_GNOME` components after the "
-"`.include <bsd.port.pre.mk>`. That is, the following is *wrong* :\n"
+msgid "*Note:* You cannot add extra default `USE_GNOME` components after the `.include <bsd.port.pre.mk>`. That is, the following is *wrong* :\n"
 msgstr ""
 
 #. type: delimited block . 4
@@ -303,8 +301,8 @@ msgstr ""
 msgid ""
 "This will make the build system think that GNOME _is_ desired, and mark the "
 "`pkg-plist` accordingly, thus breaking package builds. If you need to add "
-"default `USE_GNOME` components, do so *above* the ` .include "
-"<bsd.port.pre.mk>` line."
+"default `USE_GNOME` components, do so *above* the ` .include <bsd.port.pre."
+"mk>` line."
 msgstr ""
 
 #. type: Plain text
@@ -379,11 +377,11 @@ msgid ""
 "GConf is the XML-based database that virtually all GNOME applications use "
 "for storing their settings. This database is defined by installed schema "
 "files that are used to generate `%gconf.xml` key files. Previously, these "
-"schema files and `%gconf.xml` key files were listed in the port's "
-"`pkg-plist`. Since this proved to be problematic, handling of GConf schemas "
-"was changed to something similar to that of link:{porters-handbook}[MANn] "
-"files. That is, for each schema file installed by your port, you must have "
-"the following listed in the `Makefile`:"
+"schema files and `%gconf.xml` key files were listed in the port's `pkg-"
+"plist`. Since this proved to be problematic, handling of GConf schemas was "
+"changed to something similar to that of link:{porters-handbook}[MANn] files. "
+"That is, for each schema file installed by your port, you must have the "
+"following listed in the `Makefile`:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -408,10 +406,10 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/gnome/docs/porting.adoc:143
 msgid ""
-"The schema files and `%gconf.xml` key files should not be in the "
-"`pkg-plist`. If you notice that the port doesn't has any `%gconf.xml` key "
-"files, but has schema files then you should not be use `GCONF_SCHEMAS`. It "
-"means, this port has broke either schema files or installation of GConf."
+"The schema files and `%gconf.xml` key files should not be in the `pkg-"
+"plist`. If you notice that the port doesn't has any `%gconf.xml` key files, "
+"but has schema files then you should not be use `GCONF_SCHEMAS`. It means, "
+"this port has broke either schema files or installation of GConf."
 msgstr ""
 
 #. type: Title ==
@@ -423,8 +421,8 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/gnome/docs/porting.adoc:147
 msgid ""
-"If your port install files like `application/x-portname.xml` in "
-"`share/mime`, you have to add these two lines at the end of the `pkg-plist`:"
+"If your port install files like `application/x-portname.xml` in `share/"
+"mime`, you have to add these two lines at the end of the `pkg-plist`:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -446,8 +444,8 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/gnome/docs/porting.adoc:156
 msgid ""
-"Example port to look at: "
-"https://svnweb.FreeBSD.org/ports/head/deskutils/drivel/[`deskutils/drivel`]"
+"Example port to look at: https://svnweb.FreeBSD.org/ports/head/deskutils/"
+"drivel/[`deskutils/drivel`]"
 msgstr ""
 
 #. type: Title ==
@@ -462,19 +460,17 @@ msgid ""
 "Some ports provide MIME definitions in their `.desktop` files. If your port "
 "install `.desktop` file into `share/applications` and there is a line "
 "starting with `MimeType` in it, you need to update desktop database after "
-"install and deinstall. This database is represented by "
-"`share/applications/mimeinfo.cache` file. Add dependency on GNOME component "
-"`desktopfileutils` and these lines to the end of `pkg-plist`:"
+"install and deinstall. This database is represented by `share/applications/"
+"mimeinfo.cache` file. Add dependency on GNOME component `desktopfileutils` "
+"and these lines to the end of `pkg-plist`:"
 msgstr ""
 
 #. type: delimited block . 4
 #: website/content/en/gnome/docs/porting.adoc:164
 #, no-wrap
 msgid ""
-"@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || "
-"/usr/bin/true\n"
-"@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || "
-"/usr/bin/true\n"
+"@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true\n"
+"@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true\n"
 msgstr ""
 
 #. type: Plain text
@@ -491,8 +487,8 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/gnome/docs/porting.adoc:173
 msgid ""
-"Example port to look at: "
-"https://svnweb.FreeBSD.org/ports/head/editors/leafpad/[`editors/leafpad`]"
+"Example port to look at: https://svnweb.FreeBSD.org/ports/head/editors/"
+"leafpad/[`editors/leafpad`]"
 msgstr ""
 
 #. type: Title ==
@@ -520,8 +516,8 @@ msgstr ""
 #: website/content/en/gnome/docs/porting.adoc:182
 msgid ""
 "To separate GNOME 2 distfiles from the GNOME 1 distfiles, and to keep the "
-"distfiles directory clean, GNOME 1 ports that download their distfiles from "
-"`${MASTER_SITE_GNOME}` must add the following to their Makefile:"
+"distfiles directory clean, GNOME 1 ports that download their distfiles from `"
+"${MASTER_SITE_GNOME}` must add the following to their Makefile:"
 msgstr ""
 
 #. type: delimited block . 4
