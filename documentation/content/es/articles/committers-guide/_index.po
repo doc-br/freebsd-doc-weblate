@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
-"POT-Creation-Date: 2021-02-21 18:54-0300\n"
+"POT-Creation-Date: 2021-02-27 11:44-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -3611,7 +3611,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/committers-guide/_index.adoc:1523
-msgid "✓ `ls: fix typo in usage text`"
+msgid "✓ `ls: Fix typo in usage text`"
 msgstr ""
 
 #. type: Title ===
@@ -3764,16 +3764,22 @@ msgid "The key words or phrases are:"
 msgstr ""
 
 #. type: Table
-#: documentation/content/en/articles/committers-guide/_index.adoc:1617
+#: documentation/content/en/articles/committers-guide/_index.adoc:1626
 #, no-wrap
 msgid ""
 "|`PR:`\n"
 "|The problem report (if any) which is affected (typically, by being closed) by this commit. Multiple PRs may be specified on one line, separated by commas or spaces.\n"
 "\n"
-"|`Submitted by:`\n"
-"|\n"
+"|`Reported by:`\n"
+"|The name and e-mail address of the person that reported the issue; for developers, just the username on the FreeBSD cluster.\n"
+"Typically used when there is no PR, for example if the issue was reported on\n"
+"a mailing list.\n"
 "\n"
-"The name and e-mail address of the person that submitted the fix; for developers, just the username on the FreeBSD cluster.\n"
+"|`Submitted by:`\n"
+"|The name and e-mail address of the person that submitted the fix; for developers, just the username on the FreeBSD cluster.\n"
+"\n"
+"Typically not used with git; in the src and doc trees submitted patches should\n"
+"have the author set by using `git commit --author`\n"
 "\n"
 "If the submitter is the maintainer of the port being committed, include \"(maintainer)\" after the email address.\n"
 "\n"
@@ -3782,17 +3788,48 @@ msgid ""
 "|`Reviewed by:`\n"
 "|The name and e-mail address of the person or people that reviewed the change; for developers, just the username on the FreeBSD cluster. If a patch was submitted to a mailing list for review, and the review was favorable, then just include the list name.\n"
 "\n"
+"|`Tested by:`\n"
+"|The name and e-mail address of the person or people that tested the change; for developers, just the username on the FreeBSD cluster.\n"
+"\n"
 "|`Approved by:`\n"
 "a|\n"
 "\n"
-"The name and e-mail address of the person or people that approved the change; for developers, just the username on the FreeBSD cluster. It is customary to get prior approval for a commit if it is to an area of the tree to which you do not usually commit. In addition, during the run up to a new release all commits _must_ be approved by the release engineering team.\n"
+"The name and e-mail address of the person or people that approved the change; for developers, just the username on the FreeBSD cluster.\n"
+"\n"
+"There are several cases where approval is customary:\n"
+"\n"
+msgstr ""
+
+#. type: Table
+#: documentation/content/en/articles/committers-guide/_index.adoc:1627
+#, no-wrap
+msgid "while a new committer is under mentorship\n"
+msgstr ""
+
+#. type: Table
+#: documentation/content/en/articles/committers-guide/_index.adoc:1628
+#, no-wrap
+msgid "commits to an area of the tree to which you do not usually commit\n"
+msgstr ""
+
+#. type: Table
+#: documentation/content/en/articles/committers-guide/_index.adoc:1629
+#, no-wrap
+msgid "during a relese cycle\n"
+msgstr ""
+
+#. type: Table
+#: documentation/content/en/articles/committers-guide/_index.adoc:1633
+#, no-wrap
+msgid ""
+"committing to a repo where you do not hold a commit bit (e.g. src committer committing to docs)\n"
 "\n"
 "While under mentorship, get mentor approval before the commit. Enter the mentor's username in this field, and note that they are a mentor:\n"
 "\n"
 msgstr ""
 
 #. type: Table
-#: documentation/content/en/articles/committers-guide/_index.adoc:1624
+#: documentation/content/en/articles/committers-guide/_index.adoc:1640
 msgid ""
 "....  Approved by: username-of-mentor (mentor)  ....  If a team approved "
 "these commits then include the team name followed by the username of the "
@@ -3800,11 +3837,31 @@ msgid ""
 msgstr ""
 
 #. type: Table
-#: documentation/content/en/articles/committers-guide/_index.adoc:1655
+#: documentation/content/en/articles/committers-guide/_index.adoc:1678
 msgid ""
 "....  Approved by: re (username)  ....  |`Obtained from:` |The name of the "
 "project (if any) from which the code was obtained. Do not use this line for "
-"the name of an individual person.  |`Sponsored by:` |Sponsoring "
+"the name of an individual person.  |`Fixes:` |The git short hash as returned "
+"by `git rev-parse --short` (or SVN revision number, for ports) and the title "
+"line of a commit that is fixed by this change.  |`MFC after:` |To receive an "
+"e-mail reminder to MFC at a later date, specify the number of days, weeks, "
+"or months after which an MFC is planned.  |`MFC to:` |If the commit should "
+"be merged to a subset of stable branches, specify the branch names.  |`MFC "
+"with:` |If the commit should be merged together with a previous one in a "
+"single MFC commit (for example, where this commit corrects a bug in the "
+"previous change), specify the corresponding revision number.  |`MFH:` |A "
+"ports quarterly branch name, to request approval for merge.  |`Relnotes:` |"
+"If the change is a candidate for inclusion in the release notes for the next "
+"release from the branch, set to `yes`.  |`Security:` |If the change is "
+"related to a security vulnerability or security exposure, include one or "
+"more references or a description of the issue. If possible, include a VuXML "
+"URL or a CVE ID.  |`Event:` |The description for the event where this commit "
+"was made. If this is a recurring event, add the year or even the month to "
+"it. For example, this could be `FooBSDcon 2019`. The idea behind this line "
+"is to put recognition to conferences, gatherings, and other types of meetups "
+"and to show that these are useful to have. Please do not use the `Sponsored "
+"by:` line for this as that is meant for organizations sponsoring certain "
+"features or developers working on them.  |`Sponsored by:` |Sponsoring "
 "organizations for this change, if any. Separate multiple organizations with "
 "commas. If only a portion of the work was sponsored, or different amounts of "
 "sponsorship were provided to different authors, please give appropriate "
@@ -3812,53 +3869,36 @@ msgid ""
 "(alice, code refactoring), Wormulon (bob), Momcorp (cindy)` shows that Alice "
 "was sponsored by Example.com to do code refactoring, while Wormulon "
 "sponsored Bob's work and Momcorp sponsored Cindy's work. Other authors were "
-"either not sponsored or chose not to list sponsorship.  |`MFC after:` |To "
-"receive an e-mail reminder to MFC at a later date, specify the number of "
-"days, weeks, or months after which an MFC is planned.  |`MFC to:` |If the "
-"commit should be merged to a subset of stable branches, specify the branch "
-"names.  |`MFC with:` |If the commit should be merged together with a "
-"previous one in a single MFC commit (for example, where this commit corrects "
-"a bug in the previous change), specify the corresponding revision number.  |"
-"`Relnotes:` |If the change is a candidate for inclusion in the release notes "
-"for the next release from the branch, set to `yes`.  |`Security:` |If the "
-"change is related to a security vulnerability or security exposure, include "
-"one or more references or a description of the issue. If possible, include a "
-"VuXML URL or a CVE ID.  |`Event:` |The description for the event where this "
-"commit was made. If this is a recurring event, add the year or even the "
-"month to it. For example, this could be `FooBSDcon 2019`. The idea behind "
-"this line is to put recognition to conferences, gatherings, and other types "
-"of meetups and to show that these are useful to have. Please do not use the "
-"`Sponsored by:` line for this as that is meant for organizations sponsoring "
-"certain features or developers working on them.  |`Differential Revision:` |"
-"The full URL of the Phabricator review. This line __must be the last line__. "
-"For example: `https://reviews.freebsd.org/D1708`."
+"either not sponsored or chose not to list sponsorship.  |`Differential "
+"Revision:` |The full URL of the Phabricator review. This line __must be the "
+"last line__. For example: `https://reviews.freebsd.org/D1708`."
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/articles/committers-guide/_index.adoc:1657
+#: documentation/content/en/articles/committers-guide/_index.adoc:1680
 #, no-wrap
 msgid "Commit Log for a Commit Based on a PR"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1662
+#: documentation/content/en/articles/committers-guide/_index.adoc:1685
 msgid ""
 "The commit is based on a patch from a PR submitted by John Smith. The commit "
 "message \"PR\" and \"Submitted by\" fields are filled.."
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1666
-#: documentation/content/en/articles/committers-guide/_index.adoc:1682
-#: documentation/content/en/articles/committers-guide/_index.adoc:1697
-#: documentation/content/en/articles/committers-guide/_index.adoc:1713
-#: documentation/content/en/articles/committers-guide/_index.adoc:1728
+#: documentation/content/en/articles/committers-guide/_index.adoc:1689
+#: documentation/content/en/articles/committers-guide/_index.adoc:1705
+#: documentation/content/en/articles/committers-guide/_index.adoc:1720
+#: documentation/content/en/articles/committers-guide/_index.adoc:1736
+#: documentation/content/en/articles/committers-guide/_index.adoc:1751
 #, no-wrap
 msgid "...\n"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1669
+#: documentation/content/en/articles/committers-guide/_index.adoc:1692
 #, no-wrap
 msgid ""
 "\t    PR:                    12345\n"
@@ -3866,13 +3906,13 @@ msgid ""
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/articles/committers-guide/_index.adoc:1673
+#: documentation/content/en/articles/committers-guide/_index.adoc:1696
 #, no-wrap
 msgid "Commit Log for a Commit Needing Review"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1678
+#: documentation/content/en/articles/committers-guide/_index.adoc:1701
 msgid ""
 "The virtual memory system is being changed. After posting patches to the "
 "appropriate mailing list (in this case, `freebsd-arch`) and the changes have "
@@ -3880,73 +3920,73 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1684
+#: documentation/content/en/articles/committers-guide/_index.adoc:1707
 #, no-wrap
 msgid "\t    Reviewed by:       -arch\n"
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/articles/committers-guide/_index.adoc:1688
+#: documentation/content/en/articles/committers-guide/_index.adoc:1711
 #, no-wrap
 msgid "Commit Log for a Commit Needing Approval"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1693
+#: documentation/content/en/articles/committers-guide/_index.adoc:1716
 msgid ""
 "Commit a port, after working with the listed MAINTAINER, who said to go "
 "ahead and commit."
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1699
+#: documentation/content/en/articles/committers-guide/_index.adoc:1722
 #, no-wrap
 msgid "\t    Approved by:\t    abc (maintainer)\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1702
+#: documentation/content/en/articles/committers-guide/_index.adoc:1725
 msgid "Where _abc_ is the account name of the person who approved."
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/articles/committers-guide/_index.adoc:1704
+#: documentation/content/en/articles/committers-guide/_index.adoc:1727
 #, no-wrap
 msgid "Commit Log for a Commit Bringing in Code from OpenBSD"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1709
+#: documentation/content/en/articles/committers-guide/_index.adoc:1732
 msgid "Committing some code based on work done in the OpenBSD project."
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1715
+#: documentation/content/en/articles/committers-guide/_index.adoc:1738
 #, no-wrap
 msgid "\t    Obtained from:      OpenBSD\n"
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/articles/committers-guide/_index.adoc:1719
+#: documentation/content/en/articles/committers-guide/_index.adoc:1742
 #, no-wrap
 msgid "Commit Log for a Change to FreeBSD-CURRENT with a Planned Commit to FreeBSD-STABLE to Follow at a Later Date."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1724
+#: documentation/content/en/articles/committers-guide/_index.adoc:1747
 msgid ""
 "Committing some code which will be merged from FreeBSD-CURRENT into the "
 "FreeBSD-STABLE branch after two weeks."
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1730
+#: documentation/content/en/articles/committers-guide/_index.adoc:1753
 #, no-wrap
 msgid "MFC after:      2 weeks\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1733
+#: documentation/content/en/articles/committers-guide/_index.adoc:1756
 msgid ""
 "Where _2_ is the number of days, weeks, or months after which an MFC is "
 "planned. The _weeks_ option may be `day`, `days`, `week`, `weeks`, `month`, "
@@ -3954,12 +3994,12 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1736
+#: documentation/content/en/articles/committers-guide/_index.adoc:1759
 msgid "It is often necessary to combine these."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1738
+#: documentation/content/en/articles/committers-guide/_index.adoc:1761
 msgid ""
 "Consider the situation where a user has submitted a PR containing code from "
 "the NetBSD project. Looking at the PR, the developer sees it is not an area "
@@ -3969,19 +4009,19 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1740
+#: documentation/content/en/articles/committers-guide/_index.adoc:1763
 msgid ""
 "The extra information to include in the commit would look something like"
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/articles/committers-guide/_index.adoc:1741
+#: documentation/content/en/articles/committers-guide/_index.adoc:1764
 #, no-wrap
 msgid "Example Combined Commit Log"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1753
+#: documentation/content/en/articles/committers-guide/_index.adoc:1776
 #, no-wrap
 msgid ""
 "PR:                 54321\n"
@@ -3993,13 +4033,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/articles/committers-guide/_index.adoc:1758
+#: documentation/content/en/articles/committers-guide/_index.adoc:1781
 #, no-wrap
 msgid "Preferred License for New Files"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1761
+#: documentation/content/en/articles/committers-guide/_index.adoc:1784
 msgid ""
 "The FreeBSD Project's full license policy can be found at link:https://www."
 "FreeBSD.org/internal/software-license/[https://www.FreeBSD.org/internal/"
@@ -4009,14 +4049,14 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1763
+#: documentation/content/en/articles/committers-guide/_index.adoc:1786
 msgid ""
 "The FreeBSD Project suggests and uses this text as the preferred license "
 "scheme:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1794
+#: documentation/content/en/articles/committers-guide/_index.adoc:1817
 #, no-wrap
 msgid ""
 "/*-\n"
@@ -4050,7 +4090,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1797
+#: documentation/content/en/articles/committers-guide/_index.adoc:1820
 msgid ""
 "The FreeBSD project strongly discourages the so-called \"advertising clause"
 "\" in new code. Due to the large number of contributors to the FreeBSD "
@@ -4061,7 +4101,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1799
+#: documentation/content/en/articles/committers-guide/_index.adoc:1822
 msgid ""
 "The FreeBSD project discourages completely new licenses and variations on "
 "the standard licenses. New licenses require the approval of the {core-email} "
@@ -4072,7 +4112,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1801
+#: documentation/content/en/articles/committers-guide/_index.adoc:1824
 msgid ""
 "Project policy dictates that code under some non-BSD licenses must be placed "
 "only in specific sections of the repository, and in some cases, compilation "
@@ -4083,7 +4123,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1803
+#: documentation/content/en/articles/committers-guide/_index.adoc:1826
 msgid ""
 "Developers are reminded that in open source, getting \"open\" right is just "
 "as important as getting \"source\" right, as improper handling of "
@@ -4092,13 +4132,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/articles/committers-guide/_index.adoc:1805
+#: documentation/content/en/articles/committers-guide/_index.adoc:1828
 #, no-wrap
 msgid "Keeping Track of Licenses Granted to the FreeBSD Project"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1808
+#: documentation/content/en/articles/committers-guide/_index.adoc:1831
 msgid ""
 "Various software or data exist in the repositories where the FreeBSD project "
 "has been granted a special licence to be able to use them. A case in point "
@@ -4109,7 +4149,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1810
+#: documentation/content/en/articles/committers-guide/_index.adoc:1833
 msgid ""
 "It is clearly sensible to keep a record of any such license grants. To that "
 "end, the {core-email} has decided to keep an archive of them. Whenever the "
@@ -4119,13 +4159,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1812
+#: documentation/content/en/articles/committers-guide/_index.adoc:1835
 msgid ""
 "Contact details for people or organizations granting the special license."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1813
+#: documentation/content/en/articles/committers-guide/_index.adoc:1836
 msgid ""
 "What files, directories etc. in the repositories are covered by the license "
 "grant including the revision numbers where any specially licensed material "
@@ -4133,7 +4173,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1814
+#: documentation/content/en/articles/committers-guide/_index.adoc:1837
 msgid ""
 "The date the license comes into effect from. Unless otherwise agreed, this "
 "will be the date the license was issued by the authors of the software in "
@@ -4141,24 +4181,24 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1815
+#: documentation/content/en/articles/committers-guide/_index.adoc:1838
 msgid "The license text."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1816
+#: documentation/content/en/articles/committers-guide/_index.adoc:1839
 msgid ""
 "A note of any restrictions, limitations or exceptions that apply "
 "specifically to FreeBSD's usage of the licensed material."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1817
+#: documentation/content/en/articles/committers-guide/_index.adoc:1840
 msgid "Any other relevant information."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1819
+#: documentation/content/en/articles/committers-guide/_index.adoc:1842
 msgid ""
 "Once the {core-email} is satisfied that all the necessary details have been "
 "gathered and are correct, the secretary will send a PGP-signed "
@@ -4168,7 +4208,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1821
+#: documentation/content/en/articles/committers-guide/_index.adoc:1844
 msgid ""
 "The license archive should contain only details of license grants; this is "
 "not the place for any discussions around licensing or other subjects. Access "
@@ -4177,13 +4217,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/articles/committers-guide/_index.adoc:1823
+#: documentation/content/en/articles/committers-guide/_index.adoc:1846
 #, no-wrap
 msgid "Developer Relations"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1826
+#: documentation/content/en/articles/committers-guide/_index.adoc:1849
 msgid ""
 "When working directly on your own code or on code which is already well "
 "established as your responsibility, then there is probably little need to "
@@ -4196,7 +4236,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1828
+#: documentation/content/en/articles/committers-guide/_index.adoc:1851
 msgid ""
 "To determine if an area of the tree is maintained, check the MAINTAINERS "
 "file at the root of the tree. If nobody is listed, scan the revision history "
@@ -4209,14 +4249,14 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1832
+#: documentation/content/en/articles/committers-guide/_index.adoc:1855
 msgid ""
 "Avoid sending private emails to maintainers. Other people might be "
 "interested in the conversation, not just the final output."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1835
+#: documentation/content/en/articles/committers-guide/_index.adoc:1858
 msgid ""
 "If there is any doubt about a commit for any reason at all, have it reviewed "
 "before committing. Better to have it flamed then and there rather than when "
@@ -4227,7 +4267,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1837
+#: documentation/content/en/articles/committers-guide/_index.adoc:1860
 msgid ""
 "Do not impugn the intentions of others. If they see a different solution to "
 "a problem, or even a different problem, it is probably not because they are "
@@ -4237,7 +4277,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1839
+#: documentation/content/en/articles/committers-guide/_index.adoc:1862
 msgid ""
 "Disagree honestly. Argue your position from its merits, be honest about any "
 "shortcomings it may have, and be open to seeing their solution, or even "
@@ -4245,7 +4285,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1841
+#: documentation/content/en/articles/committers-guide/_index.adoc:1864
 msgid ""
 "Accept correction. We are all fallible. When you have made a mistake, "
 "apologize and get on with life. Do not beat up yourself, and certainly do "
@@ -4254,7 +4294,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1843
+#: documentation/content/en/articles/committers-guide/_index.adoc:1866
 msgid ""
 "Ask for help. Seek out (and give) peer reviews. One of the ways open source "
 "software is supposed to excel is in the number of eyeballs applied to it; "
@@ -4262,20 +4302,20 @@ msgid ""
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/articles/committers-guide/_index.adoc:1845
+#: documentation/content/en/articles/committers-guide/_index.adoc:1868
 #, no-wrap
 msgid "If in Doubt..."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1848
+#: documentation/content/en/articles/committers-guide/_index.adoc:1871
 msgid ""
 "When unsure about something, whether it be a technical issue or a project "
 "convention be sure to ask. If you stay silent you will never make progress."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1850
+#: documentation/content/en/articles/committers-guide/_index.adoc:1873
 msgid ""
 "If it relates to a technical issue ask on the public mailing lists. Avoid "
 "the temptation to email the individual person that knows the answer. This "
@@ -4283,32 +4323,32 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1852
+#: documentation/content/en/articles/committers-guide/_index.adoc:1875
 msgid "For project specific or administrative questions ask, in order:"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1854
+#: documentation/content/en/articles/committers-guide/_index.adoc:1877
 msgid "Your mentor or former mentor."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1855
+#: documentation/content/en/articles/committers-guide/_index.adoc:1878
 msgid "An experienced committer on IRC, email, etc."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1856
+#: documentation/content/en/articles/committers-guide/_index.adoc:1879
 msgid "Any team with a \"hat\", as they can give you a definitive answer."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1857
+#: documentation/content/en/articles/committers-guide/_index.adoc:1880
 msgid "If still not sure, ask on {developers-name}."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1859
+#: documentation/content/en/articles/committers-guide/_index.adoc:1882
 msgid ""
 "Once your question is answered, if no one pointed you to documentation that "
 "spelled out the answer to your question, document it, as others will have "
@@ -4316,13 +4356,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/articles/committers-guide/_index.adoc:1861
+#: documentation/content/en/articles/committers-guide/_index.adoc:1884
 #, no-wrap
 msgid "Bugzilla"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1864
+#: documentation/content/en/articles/committers-guide/_index.adoc:1887
 msgid ""
 "The FreeBSD Project utilizes Bugzilla for tracking bugs and change requests. "
 "Be sure that if you commit a fix or suggestion found in the PR database to "
@@ -4331,26 +4371,26 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1866
+#: documentation/content/en/articles/committers-guide/_index.adoc:1889
 msgid ""
 "Committers with non-``FreeBSD.org`` Bugzilla accounts can have the old "
 "account merged with the `FreeBSD.org` account by following these steps:"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1870
+#: documentation/content/en/articles/committers-guide/_index.adoc:1893
 msgid "Log in using your old account."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1871
+#: documentation/content/en/articles/committers-guide/_index.adoc:1894
 msgid ""
 "Open new bug. Choose `Services` as the Product, and `Bug Tracker` as the "
 "Component. In bug description list accounts you wish to be merged."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1872
+#: documentation/content/en/articles/committers-guide/_index.adoc:1895
 msgid ""
 "Log in using `FreeBSD.org` account and post comment to newly opened bug to "
 "confirm ownership. See <<kerberos-ldap>> for more details on how to generate "
@@ -4358,35 +4398,35 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1873
+#: documentation/content/en/articles/committers-guide/_index.adoc:1896
 msgid ""
 "If there are more than two accounts to merge, post comments from each of "
 "them."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1876
+#: documentation/content/en/articles/committers-guide/_index.adoc:1899
 msgid "You can find out more about Bugzilla at:"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1878
+#: documentation/content/en/articles/committers-guide/_index.adoc:1901
 msgid "link:{pr-guidelines}[FreeBSD Problem Report Handling Guidelines]"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1879
+#: documentation/content/en/articles/committers-guide/_index.adoc:1902
 msgid "link:https://www.FreeBSD.org/support/[https://www.FreeBSD.org/support]"
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/articles/committers-guide/_index.adoc:1881
+#: documentation/content/en/articles/committers-guide/_index.adoc:1904
 #, no-wrap
 msgid "Phabricator"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1884
+#: documentation/content/en/articles/committers-guide/_index.adoc:1907
 msgid ""
 "The FreeBSD Project utilizes https://reviews.freebsd.org[Phabricator] for "
 "code review requests. See the https://wiki.freebsd.org/"
@@ -4394,19 +4434,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1886
+#: documentation/content/en/articles/committers-guide/_index.adoc:1909
 msgid ""
 "Committers with non-``FreeBSD.org`` Phabricator accounts can have the old "
 "account renamed to the ``FreeBSD.org`` account by following these steps:"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1890
+#: documentation/content/en/articles/committers-guide/_index.adoc:1913
 msgid "Change your Phabricator account email to your `FreeBSD.org` email."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1891
+#: documentation/content/en/articles/committers-guide/_index.adoc:1914
 msgid ""
 "Open new bug on our bug tracker using your `FreeBSD.org` account, see "
 "<<bugzilla>> for more information. Choose `Services` as the Product, and "
@@ -4416,19 +4456,19 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1896
+#: documentation/content/en/articles/committers-guide/_index.adoc:1919
 msgid ""
 "Phabricator accounts cannot be merged, please do not open a new account."
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/articles/committers-guide/_index.adoc:1899
+#: documentation/content/en/articles/committers-guide/_index.adoc:1922
 #, no-wrap
 msgid "Who's Who"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1902
+#: documentation/content/en/articles/committers-guide/_index.adoc:1925
 msgid ""
 "Besides the repository meisters, there are other FreeBSD project members and "
 "teams whom you will probably get to know in your role as a committer. "
@@ -4436,13 +4476,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: documentation/content/en/articles/committers-guide/_index.adoc:1903
+#: documentation/content/en/articles/committers-guide/_index.adoc:1926
 #, no-wrap
 msgid "`{doceng}`"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1905
+#: documentation/content/en/articles/committers-guide/_index.adoc:1928
 msgid ""
 "doceng is the group responsible for the documentation build infrastructure, "
 "approving new documentation committers, and ensuring that the FreeBSD "
@@ -4456,13 +4496,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: documentation/content/en/articles/committers-guide/_index.adoc:1906
+#: documentation/content/en/articles/committers-guide/_index.adoc:1929
 #, no-wrap
 msgid "`{re-members}`"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1908
+#: documentation/content/en/articles/committers-guide/_index.adoc:1931
 msgid ""
 "These are the members of the `{re}`. This team is responsible for setting "
 "release deadlines and controlling the release process. During code freezes, "
@@ -4473,26 +4513,26 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: documentation/content/en/articles/committers-guide/_index.adoc:1909
+#: documentation/content/en/articles/committers-guide/_index.adoc:1932
 #, no-wrap
 msgid "`{so}`"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1911
+#: documentation/content/en/articles/committers-guide/_index.adoc:1934
 msgid ""
 "`{so-name}` is the link:https://www.FreeBSD.org/security/[FreeBSD Security "
 "Officer] and oversees the `{security-officer}`."
 msgstr ""
 
 #. type: Labeled list
-#: documentation/content/en/articles/committers-guide/_index.adoc:1912
+#: documentation/content/en/articles/committers-guide/_index.adoc:1935
 #, no-wrap
 msgid "`{wollman}`"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1914
+#: documentation/content/en/articles/committers-guide/_index.adoc:1937
 msgid ""
 "If you need advice on obscure network internals or are not sure of some "
 "potential change to the networking subsystem you have in mind, Garrett is "
@@ -4501,7 +4541,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1917
+#: documentation/content/en/articles/committers-guide/_index.adoc:1940
 msgid ""
 "{committers-name}:: {svn-src-all}, {svn-ports-all} and {svn-doc-all} are the "
 "mailing lists that the version control system uses to send commit messages "
@@ -4510,7 +4550,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1920
+#: documentation/content/en/articles/committers-guide/_index.adoc:1943
 msgid ""
 "{developers-name}:: All committers are subscribed to -developers. This list "
 "was created to be a forum for the committers \"community\" issues. Examples "
@@ -4518,7 +4558,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1922
+#: documentation/content/en/articles/committers-guide/_index.adoc:1945
 msgid ""
 "The {developers-name} is for the exclusive use of FreeBSD committers. To "
 "develop FreeBSD, committers must have the ability to openly discuss matters "
@@ -4528,7 +4568,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1924
+#: documentation/content/en/articles/committers-guide/_index.adoc:1947
 msgid ""
 "All FreeBSD committers are expected not to not publish or forward messages "
 "from the {developers-name} outside the list membership without permission of "
@@ -4538,7 +4578,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1926
+#: documentation/content/en/articles/committers-guide/_index.adoc:1949
 msgid ""
 "This list is _not_ intended as a place for code reviews or for any technical "
 "discussion. In fact using it as such hurts the FreeBSD Project as it gives a "
@@ -4551,13 +4591,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/articles/committers-guide/_index.adoc:1927
+#: documentation/content/en/articles/committers-guide/_index.adoc:1950
 #, no-wrap
 msgid "SSH Quick-Start Guide"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1932
+#: documentation/content/en/articles/committers-guide/_index.adoc:1955
 msgid ""
 "If you do not wish to type your password in every time you use man:ssh[1], "
 "and you use keys to authenticate, man:ssh-agent[1] is there for your "
@@ -4568,19 +4608,19 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1933
+#: documentation/content/en/articles/committers-guide/_index.adoc:1956
 msgid ""
 "Generate a key pair using man:ssh-keygen[1]. The key pair will wind up in "
 "your [.filename]#$HOME/.ssh/# directory."
 msgstr ""
 
 #. type: delimited block = 6
-#: documentation/content/en/articles/committers-guide/_index.adoc:1937
+#: documentation/content/en/articles/committers-guide/_index.adoc:1960
 msgid "Only ECDSA, Ed25519 or RSA keys are supported."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:1939
+#: documentation/content/en/articles/committers-guide/_index.adoc:1962
 msgid ""
 "Send your public key ([.filename]#$HOME/.ssh/id_ecdsa.pub#, [.filename]#"
 "$HOME/.ssh/id_ed25519.pub#, or [.filename]#$HOME/.ssh/id_rsa.pub#) to the "
@@ -4589,7 +4629,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1942
+#: documentation/content/en/articles/committers-guide/_index.adoc:1965
 msgid ""
 "Now man:ssh-add[1] can be used for authentication once per session. It "
 "prompts for the private key's pass phrase, and then stores it in the "
@@ -4598,32 +4638,32 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1944
+#: documentation/content/en/articles/committers-guide/_index.adoc:1967
 msgid "Test with a simple remote command: `ssh freefall.FreeBSD.org ls /usr`."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1946
+#: documentation/content/en/articles/committers-guide/_index.adoc:1969
 msgid ""
 "For more information, see package:security/openssh-portable[], man:ssh[1], "
 "man:ssh-add[1], man:ssh-agent[1], man:ssh-keygen[1], and man:scp[1]."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1948
+#: documentation/content/en/articles/committers-guide/_index.adoc:1971
 msgid ""
 "For information on adding, changing, or removing man:ssh[1] keys, see "
 "https://wiki.freebsd.org/clusteradm/ssh-keys[this article]."
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/articles/committers-guide/_index.adoc:1950
+#: documentation/content/en/articles/committers-guide/_index.adoc:1973
 #, no-wrap
 msgid "Coverity(R) Availability for FreeBSD Committers"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1953
+#: documentation/content/en/articles/committers-guide/_index.adoc:1976
 msgid ""
 "All FreeBSD developers can obtain access to Coverity analysis results of all "
 "FreeBSD Project software. All who are interested in obtaining access to the "
@@ -4632,7 +4672,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1955
+#: documentation/content/en/articles/committers-guide/_index.adoc:1978
 msgid ""
 "The FreeBSD wiki includes a mini-guide for developers who are interested in "
 "working with the Coverity(R) analysis reports: https://wiki.freebsd.org/"
@@ -4643,7 +4683,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1957
+#: documentation/content/en/articles/committers-guide/_index.adoc:1980
 msgid ""
 "Finally, all FreeBSD developers who are going to use Coverity(R) are always "
 "encouraged to ask for more details and usage information, by posting any "
@@ -4651,13 +4691,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/articles/committers-guide/_index.adoc:1959
+#: documentation/content/en/articles/committers-guide/_index.adoc:1982
 #, no-wrap
 msgid "The FreeBSD Committers' Big List of Rules"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1962
+#: documentation/content/en/articles/committers-guide/_index.adoc:1985
 msgid ""
 "Everyone involved with the FreeBSD project is expected to abide by the _Code "
 "of Conduct_ available from link:https://www.FreeBSD.org/internal/code-of-"
@@ -4668,25 +4708,25 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1964
-#: documentation/content/en/articles/committers-guide/_index.adoc:1983
+#: documentation/content/en/articles/committers-guide/_index.adoc:1987
+#: documentation/content/en/articles/committers-guide/_index.adoc:2006
 msgid "Respect other committers."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1965
-#: documentation/content/en/articles/committers-guide/_index.adoc:1992
+#: documentation/content/en/articles/committers-guide/_index.adoc:1988
+#: documentation/content/en/articles/committers-guide/_index.adoc:2015
 msgid "Respect other contributors."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1966
-#: documentation/content/en/articles/committers-guide/_index.adoc:1997
+#: documentation/content/en/articles/committers-guide/_index.adoc:1989
+#: documentation/content/en/articles/committers-guide/_index.adoc:2020
 msgid "Discuss any significant change _before_ committing."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1967
+#: documentation/content/en/articles/committers-guide/_index.adoc:1990
 msgid ""
 "Respect existing maintainers (if listed in the `MAINTAINER` field in [."
 "filename]#Makefile# or in [.filename]#MAINTAINER# in the top-level "
@@ -4694,8 +4734,8 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1968
-#: documentation/content/en/articles/committers-guide/_index.adoc:2005
+#: documentation/content/en/articles/committers-guide/_index.adoc:1991
+#: documentation/content/en/articles/committers-guide/_index.adoc:2028
 msgid ""
 "Any disputed change must be backed out pending resolution of the dispute if "
 "requested by a maintainer. Security related changes may override a "
@@ -4703,7 +4743,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1969
+#: documentation/content/en/articles/committers-guide/_index.adoc:1992
 msgid ""
 "Changes go to FreeBSD-CURRENT before FreeBSD-STABLE unless specifically "
 "permitted by the release engineer or unless they are not applicable to "
@@ -4715,40 +4755,40 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1970
-#: documentation/content/en/articles/committers-guide/_index.adoc:2013
+#: documentation/content/en/articles/committers-guide/_index.adoc:1993
+#: documentation/content/en/articles/committers-guide/_index.adoc:2036
 msgid "Do not fight in public with other committers; it looks bad."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1971
+#: documentation/content/en/articles/committers-guide/_index.adoc:1994
 msgid ""
 "Respect all code freezes and read the `committers` and `developers` mailing "
 "lists in a timely manner so you know when a code freeze is in effect."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1972
-#: documentation/content/en/articles/committers-guide/_index.adoc:2019
+#: documentation/content/en/articles/committers-guide/_index.adoc:1995
+#: documentation/content/en/articles/committers-guide/_index.adoc:2042
 msgid "When in doubt on any procedure, ask first!"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1973
-#: documentation/content/en/articles/committers-guide/_index.adoc:2022
+#: documentation/content/en/articles/committers-guide/_index.adoc:1996
+#: documentation/content/en/articles/committers-guide/_index.adoc:2045
 msgid "Test your changes before committing them."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1974
-#: documentation/content/en/articles/committers-guide/_index.adoc:2025
+#: documentation/content/en/articles/committers-guide/_index.adoc:1997
+#: documentation/content/en/articles/committers-guide/_index.adoc:2048
 msgid ""
 "Do not commit to contributed software without _explicit_ approval from the "
 "respective maintainers."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1976
+#: documentation/content/en/articles/committers-guide/_index.adoc:1999
 msgid ""
 "As noted, breaking some of these rules can be grounds for suspension or, "
 "upon repeated offense, permanent removal of commit privileges. Individual "
@@ -4774,7 +4814,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1978
+#: documentation/content/en/articles/committers-guide/_index.adoc:2001
 msgid ""
 "In all other aspects of project operation, core is a subset of committers "
 "and is bound by the __same rules__. Just because someone is in core this "
@@ -4785,13 +4825,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:1979
+#: documentation/content/en/articles/committers-guide/_index.adoc:2002
 #, no-wrap
 msgid "Details"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1985
+#: documentation/content/en/articles/committers-guide/_index.adoc:2008
 msgid ""
 "  This means that you need to treat other committers as the peer-group "
 "developers that they are. Despite our occasional attempts to prove the "
@@ -4803,7 +4843,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1987
+#: documentation/content/en/articles/committers-guide/_index.adoc:2010
 msgid ""
 "  Being able to work together long term is this project's greatest asset, "
 "one far more important than any set of changes to the code, and turning "
@@ -4813,7 +4853,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1989
+#: documentation/content/en/articles/committers-guide/_index.adoc:2012
 msgid ""
 "  To comply with this rule, do not send email when you are angry or "
 "otherwise behave in a manner which is likely to strike others as needlessly "
@@ -4831,7 +4871,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1991
+#: documentation/content/en/articles/committers-guide/_index.adoc:2014
 msgid ""
 "  All of this is never an option which the project's leadership enjoys in "
 "the slightest, but unity comes first. No amount of code or good advice is "
@@ -4839,7 +4879,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1994
+#: documentation/content/en/articles/committers-guide/_index.adoc:2017
 msgid ""
 "  You were not always a committer. At one time you were a contributor. "
 "Remember that at all times. Remember what it was like trying to get help and "
@@ -4852,14 +4892,14 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1996
+#: documentation/content/en/articles/committers-guide/_index.adoc:2019
 msgid ""
 "  Consider the points raised under <<respect,Respect other committers>> and "
 "apply them also to contributors."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:1999
+#: documentation/content/en/articles/committers-guide/_index.adoc:2022
 msgid ""
 "  The repository is not where changes are initially submitted for "
 "correctness or argued over, that happens first in the mailing lists or by "
@@ -4876,17 +4916,17 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2001
+#: documentation/content/en/articles/committers-guide/_index.adoc:2024
 msgid "  When in doubt, ask for review!"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2002
+#: documentation/content/en/articles/committers-guide/_index.adoc:2025
 msgid "Respect existing maintainers if listed."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2004
+#: documentation/content/en/articles/committers-guide/_index.adoc:2027
 msgid ""
 "  Many parts of FreeBSD are not \"owned\" in the sense that any specific "
 "individual will jump up and yell if you commit a change to \"their\" area, "
@@ -4902,7 +4942,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2007
+#: documentation/content/en/articles/committers-guide/_index.adoc:2030
 msgid ""
 "  This may be hard to swallow in times of conflict (when each side is "
 "convinced that they are in the right, of course) but a version control "
@@ -4920,7 +4960,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2008
+#: documentation/content/en/articles/committers-guide/_index.adoc:2031
 msgid ""
 "Changes go to FreeBSD-CURRENT before FreeBSD-STABLE unless specifically "
 "permitted by the release engineer or unless they are not applicable to "
@@ -4931,7 +4971,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2010
+#: documentation/content/en/articles/committers-guide/_index.adoc:2033
 msgid ""
 "  This is another \"do not argue about it\" issue since it is the release "
 "engineer who is ultimately responsible (and gets beaten up) if a change "
@@ -4950,7 +4990,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2012
+#: documentation/content/en/articles/committers-guide/_index.adoc:2035
 msgid ""
 "  Changes to the security branches (for example, `releng/9.3`) must be "
 "approved by a member of the `{security-officer}`, or in some cases, by a "
@@ -4958,7 +4998,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2015
+#: documentation/content/en/articles/committers-guide/_index.adoc:2038
 msgid ""
 "  This project has a public image to uphold and that image is very important "
 "to all of us, especially if we are to continue to attract new members. There "
@@ -4983,14 +5023,14 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2016
+#: documentation/content/en/articles/committers-guide/_index.adoc:2039
 msgid ""
 "Respect all code freezes and read the `committers` and `developers` mailing "
 "list on a timely basis so you know when a code freeze is in effect."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2018
+#: documentation/content/en/articles/committers-guide/_index.adoc:2041
 msgid ""
 "  Committing unapproved changes during a code freeze is a really big mistake "
 "and committers are expected to keep up-to-date on what is going on before "
@@ -5001,7 +5041,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2021
+#: documentation/content/en/articles/committers-guide/_index.adoc:2044
 msgid ""
 "  Many mistakes are made because someone is in a hurry and just assumes they "
 "know the right way of doing something. If you have not done it before, "
@@ -5013,7 +5053,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2024
+#: documentation/content/en/articles/committers-guide/_index.adoc:2047
 msgid ""
 "  This may sound obvious, but if it really were so obvious then we probably "
 "would not see so many cases of people clearly not doing this. If your "
@@ -5029,14 +5069,14 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2027
+#: documentation/content/en/articles/committers-guide/_index.adoc:2050
 msgid ""
 "  Contributed software is anything under the [.filename]#src/contrib#, [."
 "filename]#src/crypto#, or [.filename]#src/sys/contrib# trees."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2029
+#: documentation/content/en/articles/committers-guide/_index.adoc:2052
 msgid ""
 "  The trees mentioned above are for contributed software usually imported "
 "onto a vendor branch. Committing something there may cause unnecessary "
@@ -5046,7 +5086,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2031
+#: documentation/content/en/articles/committers-guide/_index.adoc:2054
 msgid ""
 "  Reasons for modifying upstream software range from wanting strict control "
 "over a tightly coupled dependency to lack of portability in the canonical "
@@ -5058,7 +5098,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2033
+#: documentation/content/en/articles/committers-guide/_index.adoc:2056
 msgid ""
 "  If a particular piece of software lacks a maintainer, you are encouraged "
 "to take up ownership. If you are unsure of the current maintainership email "
@@ -5066,13 +5106,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2034
+#: documentation/content/en/articles/committers-guide/_index.adoc:2057
 #, no-wrap
 msgid "Policy on Multiple Architectures"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2037
+#: documentation/content/en/articles/committers-guide/_index.adoc:2060
 msgid ""
 "FreeBSD has added several new architecture ports during recent release "
 "cycles and is truly no longer an i386(TM) centric operating system. In an "
@@ -5081,7 +5121,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2040
+#: documentation/content/en/articles/committers-guide/_index.adoc:2063
 msgid ""
 "Our 32-bit reference platform is i386, and our 64-bit reference platform is "
 "amd64. Major design work (including major API and ABI changes) must prove "
@@ -5091,7 +5131,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2042
+#: documentation/content/en/articles/committers-guide/_index.adoc:2065
 msgid ""
 "The i386 and amd64 platforms were chosen due to being more readily available "
 "to developers and as representatives of more diverse processor and system "
@@ -5101,14 +5141,14 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2044
+#: documentation/content/en/articles/committers-guide/_index.adoc:2067
 msgid ""
 "We will continue to re-evaluate this policy as cost and availability of the "
 "64-bit platforms change."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2046
+#: documentation/content/en/articles/committers-guide/_index.adoc:2069
 msgid ""
 "Developers should also be aware of our Tier Policy for the long term support "
 "of hardware architectures. The rules here are intended to provide guidance "
@@ -5119,13 +5159,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2047
+#: documentation/content/en/articles/committers-guide/_index.adoc:2070
 #, no-wrap
 msgid "Other Suggestions"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2050
+#: documentation/content/en/articles/committers-guide/_index.adoc:2073
 msgid ""
 "When committing documentation changes, use a spell checker before "
 "committing. For all XML docs, verify that the formatting directives are "
@@ -5133,7 +5173,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2052
+#: documentation/content/en/articles/committers-guide/_index.adoc:2075
 msgid ""
 "For manual pages, run package:sysutils/manck[] and package:textproc/igor[] "
 "over the manual page to verify all of the cross references and file "
@@ -5142,7 +5182,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2054
+#: documentation/content/en/articles/committers-guide/_index.adoc:2077
 msgid ""
 "Do not mix style fixes with new functionality. A style fix is any change "
 "which does not modify the functionality of the code. Mixing the changes "
@@ -5155,20 +5195,20 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2055
+#: documentation/content/en/articles/committers-guide/_index.adoc:2078
 #, no-wrap
 msgid "Deprecating Features"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2058
+#: documentation/content/en/articles/committers-guide/_index.adoc:2081
 msgid ""
 "When it is necessary to remove functionality from software in the base "
 "system, follow these guidelines whenever possible:"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2060
+#: documentation/content/en/articles/committers-guide/_index.adoc:2083
 msgid ""
 "Mention is made in the manual page and possibly the release notes that the "
 "option, utility, or interface is deprecated. Use of the deprecated feature "
@@ -5176,14 +5216,14 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2061
+#: documentation/content/en/articles/committers-guide/_index.adoc:2084
 msgid ""
 "The option, utility, or interface is preserved until the next major (point "
 "zero) release."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2062
+#: documentation/content/en/articles/committers-guide/_index.adoc:2085
 msgid ""
 "The option, utility, or interface is removed and no longer documented. It is "
 "now obsolete. It is also generally a good idea to note its removal in the "
@@ -5191,18 +5231,18 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2063
+#: documentation/content/en/articles/committers-guide/_index.adoc:2086
 #, no-wrap
 msgid "Privacy and Confidentiality"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2066
+#: documentation/content/en/articles/committers-guide/_index.adoc:2089
 msgid "Most FreeBSD business is done in public."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2068
+#: documentation/content/en/articles/committers-guide/_index.adoc:2091
 msgid ""
 "  FreeBSD is an _open_ project. Which means that not only can anyone use the "
 "source code, but that most of the development process is open to public "
@@ -5210,12 +5250,12 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2069
+#: documentation/content/en/articles/committers-guide/_index.adoc:2092
 msgid "Certain sensitive matters must remain private or held under embargo."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2071
+#: documentation/content/en/articles/committers-guide/_index.adoc:2094
 msgid ""
 "  There unfortunately cannot be complete transparency. As a FreeBSD "
 "developer you will have a certain degree of privileged access to "
@@ -5226,14 +5266,14 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2072
+#: documentation/content/en/articles/committers-guide/_index.adoc:2095
 msgid ""
 "The Security Officer has sole control over the release of security "
 "advisories."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2074
+#: documentation/content/en/articles/committers-guide/_index.adoc:2097
 msgid ""
 "  Where there are security problems that affect many different operating "
 "systems, FreeBSD frequently depends on early access to be able to prepare "
@@ -5246,13 +5286,13 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2075
+#: documentation/content/en/articles/committers-guide/_index.adoc:2098
 msgid ""
 "Communications with Core are kept confidential for as long as necessary."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2077
+#: documentation/content/en/articles/committers-guide/_index.adoc:2100
 msgid ""
 "  Communications to core will initially be treated as confidential. "
 "Eventually however, most of Core's business will be summarized into the "
@@ -5263,14 +5303,14 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2078
+#: documentation/content/en/articles/committers-guide/_index.adoc:2101
 msgid ""
 "Non-disclosure Agreements may be required for access to certain commercially "
 "sensitive data."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2080
+#: documentation/content/en/articles/committers-guide/_index.adoc:2103
 msgid ""
 "  Access to certain commercially sensitive data may only be available under "
 "a Non-Disclosure Agreement. The FreeBSD Foundation legal staff must be "
@@ -5278,12 +5318,12 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2081
+#: documentation/content/en/articles/committers-guide/_index.adoc:2104
 msgid "Private communications must not be made public without permission."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2083
+#: documentation/content/en/articles/committers-guide/_index.adoc:2106
 msgid ""
 "  Beyond the specific requirements above there is a general expectation not "
 "to publish private communications between developers without the consent of "
@@ -5293,14 +5333,14 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2084
+#: documentation/content/en/articles/committers-guide/_index.adoc:2107
 msgid ""
 "Communications on project-only or restricted access channels must be kept "
 "private."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2086
+#: documentation/content/en/articles/committers-guide/_index.adoc:2109
 msgid ""
 "  Similarly to personal communications, certain internal communications "
 "channels, including FreeBSD Committer only mailing lists and restricted "
@@ -5309,12 +5349,12 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2087
+#: documentation/content/en/articles/committers-guide/_index.adoc:2110
 msgid "Core may approve publication."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2089
+#: documentation/content/en/articles/committers-guide/_index.adoc:2112
 msgid ""
 "  Where it is impractical to obtain permission due to the number of "
 "correspondents or where permission to publish is unreasonably withheld, Core "
@@ -5323,13 +5363,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/articles/committers-guide/_index.adoc:2091
+#: documentation/content/en/articles/committers-guide/_index.adoc:2114
 #, no-wrap
 msgid "Support for Multiple Architectures"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2094
+#: documentation/content/en/articles/committers-guide/_index.adoc:2117
 msgid ""
 "FreeBSD is a highly portable operating system intended to function on many "
 "different types of hardware architectures. Maintaining clean separation of "
@@ -5345,13 +5385,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2095
+#: documentation/content/en/articles/committers-guide/_index.adoc:2118
 #, no-wrap
 msgid "Statement of General Intent"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2098
+#: documentation/content/en/articles/committers-guide/_index.adoc:2121
 msgid ""
 "The FreeBSD Project targets \"production quality commercial off-the-shelf "
 "(COTS) workstation, server, and high-end embedded systems\". By retaining a "
@@ -5367,7 +5407,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2100
+#: documentation/content/en/articles/committers-guide/_index.adoc:2123
 msgid ""
 "The FreeBSD Project differentiates platform targets into four tiers. Each "
 "tier includes a list of guarantees consumers may rely on as well as "
@@ -5381,13 +5421,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2101
+#: documentation/content/en/articles/committers-guide/_index.adoc:2124
 #, no-wrap
 msgid "Platform Targets"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2104
+#: documentation/content/en/articles/committers-guide/_index.adoc:2127
 msgid ""
 "Support for a hardware platform consists of two components: kernel support "
 "and userland Application Binary Interfaces (ABIs). Kernel platform support "
@@ -5402,7 +5442,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2106
+#: documentation/content/en/articles/committers-guide/_index.adoc:2129
 msgid ""
 "A FreeBSD kernel also uses an ABI (sometimes referred to as the Kernel "
 "Binary Interface (KBI)) which includes the semantics and layouts of public "
@@ -5411,7 +5451,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2108
+#: documentation/content/en/articles/committers-guide/_index.adoc:2131
 msgid ""
 "A FreeBSD kernel may support multiple userland ABIs. For example, FreeBSD's "
 "amd64 kernel supports FreeBSD amd64 and i386 userland ABIs as well as Linux "
@@ -5422,20 +5462,20 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2110
+#: documentation/content/en/articles/committers-guide/_index.adoc:2133
 msgid ""
 "Tiers are defined for both kernels and userland ABIs. In the common case, a "
 "platform's kernel and FreeBSD ABIs are assigned to the same tier."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2111
+#: documentation/content/en/articles/committers-guide/_index.adoc:2134
 #, no-wrap
 msgid "Tier 1: Fully-Supported Architectures"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2114
+#: documentation/content/en/articles/committers-guide/_index.adoc:2137
 msgid ""
 "Tier 1 platforms are the most mature FreeBSD platforms. They are supported "
 "by the security officer, release engineering, and port management teams. "
@@ -5445,42 +5485,42 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2116
+#: documentation/content/en/articles/committers-guide/_index.adoc:2139
 msgid ""
 "The FreeBSD Project provides the following guarantees to consumers of Tier 1 "
 "platforms:"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2118
+#: documentation/content/en/articles/committers-guide/_index.adoc:2141
 msgid ""
 "Official FreeBSD release images will be provided by the release engineering "
 "team."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2119
+#: documentation/content/en/articles/committers-guide/_index.adoc:2142
 msgid ""
 "Binary updates and source patches for Security Advisories and Errata Notices "
 "will be provided for supported releases."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2120
+#: documentation/content/en/articles/committers-guide/_index.adoc:2143
 msgid ""
 "Source patches for Security Advisories will be provided for supported "
 "branches."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2121
+#: documentation/content/en/articles/committers-guide/_index.adoc:2144
 msgid ""
 "Binary updates and source patches for cross-platform Security Advisories "
 "will typically be provided at the time of the announcement."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2122
+#: documentation/content/en/articles/committers-guide/_index.adoc:2145
 msgid ""
 "Changes to userland ABIs will generally include compatibility shims to "
 "ensure correct operation of binaries compiled against any stable branch "
@@ -5490,7 +5530,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2123
+#: documentation/content/en/articles/committers-guide/_index.adoc:2146
 msgid ""
 "Changes to certain portions of the kernel ABI will include compatibility "
 "shims to ensure correct operation of kernel modules compiled against the "
@@ -5499,7 +5539,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2124
+#: documentation/content/en/articles/committers-guide/_index.adoc:2147
 msgid ""
 "Official binary packages for third party software will be provided by the "
 "ports team. For embedded architectures, these packages may be cross-built "
@@ -5507,21 +5547,21 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2125
+#: documentation/content/en/articles/committers-guide/_index.adoc:2148
 msgid ""
 "Most relevant ports should either build or have the appropriate filters to "
 "prevent inappropriate ones from building."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2126
+#: documentation/content/en/articles/committers-guide/_index.adoc:2149
 msgid ""
 "New features which are not inherently platform-specific will be fully "
 "functional on all Tier 1 architectures."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2127
+#: documentation/content/en/articles/committers-guide/_index.adoc:2150
 msgid ""
 "Features and compatibility shims used by binaries compiled against older "
 "stable branches may be removed in newer major versions. Such removals will "
@@ -5529,19 +5569,19 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2128
+#: documentation/content/en/articles/committers-guide/_index.adoc:2151
 msgid ""
 "Tier 1 platforms should be fully documented. Basic operations will be "
 "documented in the FreeBSD Handbook."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2129
+#: documentation/content/en/articles/committers-guide/_index.adoc:2152
 msgid "Tier 1 platforms will be included in the source tree."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2130
+#: documentation/content/en/articles/committers-guide/_index.adoc:2153
 msgid ""
 "Tier 1 platforms should be self-hosting either via the in-tree toolchain or "
 "an external toolchain. If an external toolchain is required, official binary "
@@ -5549,14 +5589,14 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2132
+#: documentation/content/en/articles/committers-guide/_index.adoc:2155
 msgid ""
 "To maintain maturity of Tier 1 platforms, the FreeBSD Project will maintain "
 "the following resources to support development:"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2134
+#: documentation/content/en/articles/committers-guide/_index.adoc:2157
 msgid ""
 "Build and test automation support either in the FreeBSD.org cluster or some "
 "other location easily available for all developers. Embedded platforms may "
@@ -5565,41 +5605,41 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2135
-#: documentation/content/en/articles/committers-guide/_index.adoc:2162
+#: documentation/content/en/articles/committers-guide/_index.adoc:2158
+#: documentation/content/en/articles/committers-guide/_index.adoc:2185
 msgid "Inclusion in the `make universe` and `make tinderbox` targets."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2136
+#: documentation/content/en/articles/committers-guide/_index.adoc:2159
 msgid ""
 "Dedicated hardware in one of the FreeBSD clusters for package building "
 "(either natively or via qemu-user)."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2138
+#: documentation/content/en/articles/committers-guide/_index.adoc:2161
 msgid ""
 "Collectively, developers are required to provide the following to maintain "
 "the Tier 1 status of a platform:"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2140
+#: documentation/content/en/articles/committers-guide/_index.adoc:2163
 msgid ""
 "Changes to the source tree should not knowingly break the build of a Tier 1 "
 "platform."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2141
+#: documentation/content/en/articles/committers-guide/_index.adoc:2164
 msgid ""
 "Tier 1 architectures must have a mature, healthy ecosystem of users and "
 "active developers."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2142
+#: documentation/content/en/articles/committers-guide/_index.adoc:2165
 msgid ""
 "Developers should be able to build packages on commonly available, non-"
 "embedded Tier 1 systems. This can mean either native builds if non-embedded "
@@ -5608,7 +5648,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2143
+#: documentation/content/en/articles/committers-guide/_index.adoc:2166
 msgid ""
 "Changes cannot break the userland ABI. If an ABI change is required, ABI "
 "compatibility for existing binaries should be provided via use of symbol "
@@ -5616,7 +5656,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2144
+#: documentation/content/en/articles/committers-guide/_index.adoc:2167
 msgid ""
 "Changes merged to stable branches cannot break the protected portions of the "
 "kernel ABI. If a kernel ABI change is required, the change should be "
@@ -5624,13 +5664,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2145
+#: documentation/content/en/articles/committers-guide/_index.adoc:2168
 #, no-wrap
 msgid "Tier 2: Developmental and Niche Architectures"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2148
+#: documentation/content/en/articles/committers-guide/_index.adoc:2171
 msgid ""
 "Tier 2 platforms are functional, but less mature FreeBSD platforms. They are "
 "not supported by the security officer, release engineering, and port "
@@ -5638,7 +5678,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2150
+#: documentation/content/en/articles/committers-guide/_index.adoc:2173
 msgid ""
 "Tier 2 platforms may be Tier 1 platform candidates that are still under "
 "active development. Architectures reaching end of life may also be moved "
@@ -5648,14 +5688,14 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2152
+#: documentation/content/en/articles/committers-guide/_index.adoc:2175
 msgid ""
 "The FreeBSD Project provides the following guarantees to consumers of Tier 2 "
 "platforms:"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2154
+#: documentation/content/en/articles/committers-guide/_index.adoc:2177
 msgid ""
 "The ports infrastructure should include basic support for Tier 2 "
 "architectures sufficient to support building ports and packages. This "
@@ -5664,19 +5704,19 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2155
+#: documentation/content/en/articles/committers-guide/_index.adoc:2178
 msgid ""
 "New features which are not inherently platform-specific should be feasible "
 "on all Tier 2 architectures if not implemented."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2156
+#: documentation/content/en/articles/committers-guide/_index.adoc:2179
 msgid "Tier 2 platforms will be included in the source tree."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2157
+#: documentation/content/en/articles/committers-guide/_index.adoc:2180
 msgid ""
 "Tier 2 platforms should be self-hosting either via the in-tree toolchain or "
 "an external toolchain. If an external toolchain is required, official binary "
@@ -5684,41 +5724,41 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2158
+#: documentation/content/en/articles/committers-guide/_index.adoc:2181
 msgid ""
 "Tier 2 platforms should provide functional kernels and userlands even if an "
 "official release distribution is not provided."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2160
+#: documentation/content/en/articles/committers-guide/_index.adoc:2183
 msgid ""
 "To maintain maturity of Tier 2 platforms, the FreeBSD Project will maintain "
 "the following resources to support development:"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2164
+#: documentation/content/en/articles/committers-guide/_index.adoc:2187
 msgid ""
 "Collectively, developers are required to provide the following to maintain "
 "the Tier 2 status of a platform:"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2166
+#: documentation/content/en/articles/committers-guide/_index.adoc:2189
 msgid ""
 "Changes to the source tree should not knowingly break the build of a Tier 2 "
 "platform."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2167
+#: documentation/content/en/articles/committers-guide/_index.adoc:2190
 msgid ""
 "Tier 2 architectures must have an active ecosystem of users and developers."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2168
+#: documentation/content/en/articles/committers-guide/_index.adoc:2191
 msgid ""
 "While changes are permitted to break the userland ABI, the ABI should not be "
 "broken gratuitously. Significant userland ABI changes should be restricted "
@@ -5726,20 +5766,20 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2169
+#: documentation/content/en/articles/committers-guide/_index.adoc:2192
 msgid ""
 "New features that are not yet implemented on Tier 2 architectures should "
 "provide a means of disabling them on those architectures."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2170
+#: documentation/content/en/articles/committers-guide/_index.adoc:2193
 #, no-wrap
 msgid "Tier 3: Experimental Architectures"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2173
+#: documentation/content/en/articles/committers-guide/_index.adoc:2196
 msgid ""
 "Tier 3 platforms have at least partial FreeBSD support. They are _not_ "
 "supported by the security officer, release engineering, and port management "
@@ -5747,7 +5787,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2175
+#: documentation/content/en/articles/committers-guide/_index.adoc:2198
 msgid ""
 "Tier 3 platforms are architectures in the early stages of development, for "
 "non-mainstream hardware platforms, or which are considered legacy systems "
@@ -5756,7 +5796,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2177
+#: documentation/content/en/articles/committers-guide/_index.adoc:2200
 msgid ""
 "The FreeBSD Project provides no guarantees to consumers of Tier 3 platforms "
 "and is not committed to maintaining resources to support development. Tier 3 "
@@ -5765,18 +5805,18 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2178
+#: documentation/content/en/articles/committers-guide/_index.adoc:2201
 #, no-wrap
 msgid "Tier 4: Unsupported Architectures"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2181
+#: documentation/content/en/articles/committers-guide/_index.adoc:2204
 msgid "Tier 4 platforms are not supported in any form by the project."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2183
+#: documentation/content/en/articles/committers-guide/_index.adoc:2206
 msgid ""
 "All systems not otherwise classified are Tier 4 systems. When a platform "
 "transitions to Tier 4, all support for the platform is removed from the "
@@ -5785,13 +5825,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2184
+#: documentation/content/en/articles/committers-guide/_index.adoc:2207
 #, no-wrap
 msgid "Policy on Changing the Tier of an Architecture"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2187
+#: documentation/content/en/articles/committers-guide/_index.adoc:2210
 msgid ""
 "Systems may only be moved from one tier to another by approval of the "
 "FreeBSD Core Team, which shall make that decision in collaboration with the "
@@ -5801,30 +5841,30 @@ msgid ""
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/articles/committers-guide/_index.adoc:2189
+#: documentation/content/en/articles/committers-guide/_index.adoc:2212
 #, no-wrap
 msgid "Ports Specific FAQ"
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2192
+#: documentation/content/en/articles/committers-guide/_index.adoc:2215
 #, no-wrap
 msgid "Adding a New Port"
 msgstr ""
 
 #. type: Title ====
-#: documentation/content/en/articles/committers-guide/_index.adoc:2195
+#: documentation/content/en/articles/committers-guide/_index.adoc:2218
 #, no-wrap
 msgid "How do I add a new port?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2198
+#: documentation/content/en/articles/committers-guide/_index.adoc:2221
 msgid "First, please read the section about repository copies."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2200
+#: documentation/content/en/articles/committers-guide/_index.adoc:2223
 msgid ""
 "The easiest way to add a new port is the `addport` script located in the [."
 "filename]#ports/Tools/scripts# directory. It adds a port from the directory "
@@ -5836,20 +5876,20 @@ msgid ""
 msgstr ""
 
 #. type: Title ====
-#: documentation/content/en/articles/committers-guide/_index.adoc:2202
+#: documentation/content/en/articles/committers-guide/_index.adoc:2225
 #, no-wrap
 msgid "Any other things I need to know when I add a new port?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2205
+#: documentation/content/en/articles/committers-guide/_index.adoc:2228
 msgid ""
 "Check the port, preferably to make sure it compiles and packages correctly. "
 "This is the recommended sequence:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2215
+#: documentation/content/en/articles/committers-guide/_index.adoc:2238
 #, no-wrap
 msgid ""
 "# make install\n"
@@ -5862,21 +5902,21 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2218
+#: documentation/content/en/articles/committers-guide/_index.adoc:2241
 msgid ""
 "The link:{porters-handbook}[Porters Handbook] contains more detailed "
 "instructions."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2220
+#: documentation/content/en/articles/committers-guide/_index.adoc:2243
 msgid ""
 "Use man:portlint[1] to check the syntax of the port. You do not necessarily "
 "have to eliminate all warnings but make sure you have fixed the simple ones."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2222
+#: documentation/content/en/articles/committers-guide/_index.adoc:2245
 msgid ""
 "If the port came from a submitter who has not contributed to the Project "
 "before, add that person's name to the link:{contributors}#contrib-"
@@ -5884,79 +5924,79 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2224
+#: documentation/content/en/articles/committers-guide/_index.adoc:2247
 msgid ""
 "Close the PR if the port came in as a PR. To close a PR, change the state to "
 "`Issue Resolved` and the resolution as `Fixed`."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2226
+#: documentation/content/en/articles/committers-guide/_index.adoc:2249
 #, no-wrap
 msgid "Removing an Existing Port"
 msgstr ""
 
 #. type: Title ====
-#: documentation/content/en/articles/committers-guide/_index.adoc:2229
+#: documentation/content/en/articles/committers-guide/_index.adoc:2252
 #, no-wrap
 msgid "How do I remove an existing port?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2232
+#: documentation/content/en/articles/committers-guide/_index.adoc:2255
 msgid ""
 "First, please read the section about repository copies. Before you remove "
 "the port, you have to verify there are no other ports depending on it."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2234
+#: documentation/content/en/articles/committers-guide/_index.adoc:2257
 msgid "Make sure there is no dependency on the port in the ports collection:"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2235
+#: documentation/content/en/articles/committers-guide/_index.adoc:2258
 msgid "The port's PKGNAME appears in exactly one line in a recent INDEX file."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2236
+#: documentation/content/en/articles/committers-guide/_index.adoc:2259
 msgid ""
 "No other ports contains any reference to the port's directory or PKGNAME in "
 "their Makefiles"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2240
+#: documentation/content/en/articles/committers-guide/_index.adoc:2263
 msgid ""
 "When using Git, consider using `git grep`, it is much faster than `grep -r`."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2243
+#: documentation/content/en/articles/committers-guide/_index.adoc:2266
 msgid "Then, remove the port:"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2247
+#: documentation/content/en/articles/committers-guide/_index.adoc:2270
 msgid "Remove the port's files and directory with `svn remove`."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2248
+#: documentation/content/en/articles/committers-guide/_index.adoc:2271
 msgid ""
 "Remove the `SUBDIR` listing of the port in the parent directory [."
 "filename]#Makefile#."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2249
-#: documentation/content/en/articles/committers-guide/_index.adoc:2337
+#: documentation/content/en/articles/committers-guide/_index.adoc:2272
+#: documentation/content/en/articles/committers-guide/_index.adoc:2360
 msgid "Add an entry to [.filename]#ports/MOVED#."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2250
+#: documentation/content/en/articles/committers-guide/_index.adoc:2273
 msgid ""
 "Search for entries in [.filename]#ports/security/vuxml/vuln.xml# and adjust "
 "them accordingly. In particular, check for previous packages with the new "
@@ -5964,12 +6004,12 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2251
+#: documentation/content/en/articles/committers-guide/_index.adoc:2274
 msgid "Remove the port from [.filename]#ports/LEGAL# if it is there."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2254
+#: documentation/content/en/articles/committers-guide/_index.adoc:2277
 msgid ""
 "Alternatively, you can use the rmport script, from [.filename]#ports/Tools/"
 "scripts#. This script was written by {vd}. When sending questions about this "
@@ -5978,31 +6018,31 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2256
+#: documentation/content/en/articles/committers-guide/_index.adoc:2279
 #, no-wrap
 msgid "Re-adding a Deleted Port"
 msgstr ""
 
 #. type: Title ====
-#: documentation/content/en/articles/committers-guide/_index.adoc:2259
+#: documentation/content/en/articles/committers-guide/_index.adoc:2282
 #, no-wrap
 msgid "How do I re-add a deleted port?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2262
+#: documentation/content/en/articles/committers-guide/_index.adoc:2285
 msgid "This is essentially the reverse of deleting a port."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2266
+#: documentation/content/en/articles/committers-guide/_index.adoc:2289
 msgid ""
 "Do not use `svn add` to add the port. Follow these steps. If they are "
 "unclear, or are not working, ask for help, do not just `svn add` the port."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2271
+#: documentation/content/en/articles/committers-guide/_index.adoc:2294
 msgid ""
 "Figure out when the port was removed. Use this link:https://people.freebsd."
 "org/~crees/removed_ports/index.xml[list], or look for the port on link:"
@@ -6011,7 +6051,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2276
+#: documentation/content/en/articles/committers-guide/_index.adoc:2299
 #, no-wrap
 msgid ""
 "% cd /usr/ports/category\n"
@@ -6019,21 +6059,21 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2279
+#: documentation/content/en/articles/committers-guide/_index.adoc:2302
 msgid ""
 "Pick the revision that is just before the removal. For example, if the "
 "revision where it was removed is 269874, use 269873."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2281
+#: documentation/content/en/articles/committers-guide/_index.adoc:2304
 msgid ""
 "It is also possible to specify a date. In that case, pick a date that is "
 "before the removal but after the last commit to the port."
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2286
+#: documentation/content/en/articles/committers-guide/_index.adoc:2309
 #, no-wrap
 msgid ""
 "% cd /usr/ports/category\n"
@@ -6041,7 +6081,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2289
+#: documentation/content/en/articles/committers-guide/_index.adoc:2312
 msgid ""
 "Make the changes necessary to get the port working again. If it was deleted "
 "because the distfiles are no longer available, either volunteer to host the "
@@ -6049,7 +6089,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2290
+#: documentation/content/en/articles/committers-guide/_index.adoc:2313
 msgid ""
 "If some files have been added, or were removed during the resurrection "
 "process, use `svn add` or `svn remove` to make sure all the files in the "
@@ -6057,29 +6097,29 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2291
+#: documentation/content/en/articles/committers-guide/_index.adoc:2314
 msgid ""
 "Restore the `SUBDIR` listing of the port in the parent directory [."
 "filename]#Makefile#, keeping the entries sorted."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2292
+#: documentation/content/en/articles/committers-guide/_index.adoc:2315
 msgid "Delete the port entry from [.filename]#ports/MOVED#."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2293
+#: documentation/content/en/articles/committers-guide/_index.adoc:2316
 msgid "If the port had an entry in [.filename]#ports/LEGAL#, restore it."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2294
+#: documentation/content/en/articles/committers-guide/_index.adoc:2317
 msgid "`svn commit` these changes, preferably in one step."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2299
+#: documentation/content/en/articles/committers-guide/_index.adoc:2322
 msgid ""
 "The `addport` script mentioned in <<ports-qa-adding>> now detects when the "
 "port to add has previously existed, and attempts to handle all except the "
@@ -6087,19 +6127,19 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2302
+#: documentation/content/en/articles/committers-guide/_index.adoc:2325
 #, no-wrap
 msgid "Repository Copies"
 msgstr ""
 
 #. type: Title ====
-#: documentation/content/en/articles/committers-guide/_index.adoc:2305
+#: documentation/content/en/articles/committers-guide/_index.adoc:2328
 #, no-wrap
 msgid "When do we need a repository copy?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2308
+#: documentation/content/en/articles/committers-guide/_index.adoc:2331
 msgid ""
 "When you want to add a port that is related to any port that is already in "
 "the tree in a separate directory, you have to do a repository copy. Here "
@@ -6109,7 +6149,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2310
+#: documentation/content/en/articles/committers-guide/_index.adoc:2333
 msgid ""
 "Another example is when a port is moved from one subdirectory to another, or "
 "when the name of a directory must be changed because the authors renamed "
@@ -6117,40 +6157,40 @@ msgid ""
 msgstr ""
 
 #. type: Title ====
-#: documentation/content/en/articles/committers-guide/_index.adoc:2312
+#: documentation/content/en/articles/committers-guide/_index.adoc:2335
 #, no-wrap
 msgid "What do I need to do?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2315
+#: documentation/content/en/articles/committers-guide/_index.adoc:2338
 msgid "With Subversion, a repo copy can be done by any committer:"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2317
+#: documentation/content/en/articles/committers-guide/_index.adoc:2340
 msgid "Doing a repo copy:"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2321
+#: documentation/content/en/articles/committers-guide/_index.adoc:2344
 msgid "Verify that the target directory does not exist."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2322
+#: documentation/content/en/articles/committers-guide/_index.adoc:2345
 msgid ""
 "Use `svn up` to make certain the original files, directories, and checkout "
 "information is current."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2323
+#: documentation/content/en/articles/committers-guide/_index.adoc:2346
 msgid "Use `svn move` or `svn copy` to do the repo copy."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2324
+#: documentation/content/en/articles/committers-guide/_index.adoc:2347
 msgid ""
 "Upgrade the copied port to the new version. Remember to add or change the "
 "`PKGNAMEPREFIX` or `PKGNAMESUFFIX` so there are no duplicate ports with the "
@@ -6165,7 +6205,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2325
+#: documentation/content/en/articles/committers-guide/_index.adoc:2348
 msgid ""
 "Add the new subdirectory to the `SUBDIR` listing in the parent directory [."
 "filename]#Makefile#. You can run make checksubdirs in the parent directory "
@@ -6173,30 +6213,30 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2326
+#: documentation/content/en/articles/committers-guide/_index.adoc:2349
 msgid ""
 "If the port changed categories, modify the CATEGORIES line of the port's [."
 "filename]#Makefile# accordingly"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2327
+#: documentation/content/en/articles/committers-guide/_index.adoc:2350
 msgid ""
 "Add an entry to [.filename]#ports/MOVED#, if you remove the original port."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2328
+#: documentation/content/en/articles/committers-guide/_index.adoc:2351
 msgid "Commit all changes on one commit."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2331
+#: documentation/content/en/articles/committers-guide/_index.adoc:2354
 msgid "When removing a port:"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2335
+#: documentation/content/en/articles/committers-guide/_index.adoc:2358
 msgid ""
 "Perform a thorough check of the ports collection for any dependencies on the "
 "old port location/name, and update them. Running `grep` on [."
@@ -6206,38 +6246,38 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2336
+#: documentation/content/en/articles/committers-guide/_index.adoc:2359
 msgid "Remove the old port and the old `SUBDIR` entry."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2340
+#: documentation/content/en/articles/committers-guide/_index.adoc:2363
 msgid ""
 "After repo moves (“rename” operations where a port is copied and the old "
 "location is removed):"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2344
+#: documentation/content/en/articles/committers-guide/_index.adoc:2367
 msgid ""
 "Follow the same steps that are outlined in the previous two entries, to "
 "activate the new location of the port and remove the old one."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2347
+#: documentation/content/en/articles/committers-guide/_index.adoc:2370
 #, no-wrap
 msgid "Ports Freeze"
 msgstr ""
 
 #. type: Title ====
-#: documentation/content/en/articles/committers-guide/_index.adoc:2350
+#: documentation/content/en/articles/committers-guide/_index.adoc:2373
 #, no-wrap
 msgid "What is a “ports freeze”?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2353
+#: documentation/content/en/articles/committers-guide/_index.adoc:2376
 msgid ""
 "A “ports freeze” was a restricted state the ports tree was put in before a "
 "release. It was used to ensure a higher quality for the packages shipped "
@@ -6248,45 +6288,45 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2355
+#: documentation/content/en/articles/committers-guide/_index.adoc:2378
 msgid ""
 "For more information on how to merge commits to the quarterly branch, see "
 "<<ports-qa-misc-request-mfh>>."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2357
+#: documentation/content/en/articles/committers-guide/_index.adoc:2380
 #, no-wrap
 msgid "Quarterly Branches"
 msgstr ""
 
 #. type: Title ====
-#: documentation/content/en/articles/committers-guide/_index.adoc:2360
+#: documentation/content/en/articles/committers-guide/_index.adoc:2383
 #, no-wrap
 msgid "What is the procedure to request authorization for merging a commit to the quarterly branch?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2363
+#: documentation/content/en/articles/committers-guide/_index.adoc:2386
 msgid ""
 "When doing the commit, add the branch name to the `MFH:` line, for example:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2367
+#: documentation/content/en/articles/committers-guide/_index.adoc:2390
 #, no-wrap
 msgid "MFH:\t2014Q1\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2370
+#: documentation/content/en/articles/committers-guide/_index.adoc:2393
 msgid ""
 "It will automatically notify the {ports-secteam} and the {portmgr}. They "
 "will then decide if the commit can be merged and answer with the procedure."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2372
+#: documentation/content/en/articles/committers-guide/_index.adoc:2395
 msgid ""
 "If the commit has already been made, send an email to the {ports-secteam} "
 "and the {portmgr} with the revision number and a small description of why "
@@ -6294,12 +6334,12 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2376
+#: documentation/content/en/articles/committers-guide/_index.adoc:2399
 msgid "Tip:"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2378
+#: documentation/content/en/articles/committers-guide/_index.adoc:2401
 msgid ""
 "If the MFH is covered by a blanket approval, please explain why with a "
 "couple of words on the `MFH` line, so that the reviewing team can skip this "
@@ -6307,7 +6347,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2383
+#: documentation/content/en/articles/committers-guide/_index.adoc:2406
 #, no-wrap
 msgid ""
 "MFH:  2014Q1 (runtime fix)\n"
@@ -6315,44 +6355,44 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2386
+#: documentation/content/en/articles/committers-guide/_index.adoc:2409
 msgid "The list of blanket approvals is available in <<ports-qa-blanket>>."
 msgstr ""
 
 #. type: Title ====
-#: documentation/content/en/articles/committers-guide/_index.adoc:2389
+#: documentation/content/en/articles/committers-guide/_index.adoc:2412
 #, no-wrap
 msgid "Are there any changes that can be merged without asking for approval?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2392
+#: documentation/content/en/articles/committers-guide/_index.adoc:2415
 msgid ""
 "The following blanket approvals for merging to the quarterly branches are in "
 "effect:"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2396
+#: documentation/content/en/articles/committers-guide/_index.adoc:2419
 msgid ""
 "This blanket approval also applies to direct commits for ports that have "
 "been removed from `head`."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2401
+#: documentation/content/en/articles/committers-guide/_index.adoc:2424
 msgid "These fixes must be tested on the quarterly branch."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2404
+#: documentation/content/en/articles/committers-guide/_index.adoc:2427
 msgid ""
 "Fixes that do not result in a change in contents of the resulting package. "
 "For example:"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2407
+#: documentation/content/en/articles/committers-guide/_index.adoc:2430
 msgid ""
 "[.filename]#pkg-descr#: `WWW`: URL updates (existing 404, moved or "
 "incorrect)  Build, runtime or packaging fixes, if the quarterly branch "
@@ -6361,14 +6401,14 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2408
+#: documentation/content/en/articles/committers-guide/_index.adoc:2431
 msgid ""
 "Fixing link:{porters-handbook}#uses-shebangfix[shebangs], stripping "
 "installed libraries and binaries, and plist fixes."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2409
+#: documentation/content/en/articles/committers-guide/_index.adoc:2432
 msgid ""
 "Backport of security and reliability fixes which only result in "
 "`PORTREVISION` bumps and no changes to enabled features. for example, adding "
@@ -6376,44 +6416,44 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2410
+#: documentation/content/en/articles/committers-guide/_index.adoc:2433
 msgid ""
 "Minor version changes that do nothing but fix security or crash-related "
 "issues."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2411
+#: documentation/content/en/articles/committers-guide/_index.adoc:2434
 msgid "Adding/fixing `CONFLICTS`."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2412
+#: documentation/content/en/articles/committers-guide/_index.adoc:2435
 msgid "Web Browsers, browser plugins, and their required dependencies."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2416
+#: documentation/content/en/articles/committers-guide/_index.adoc:2439
 msgid ""
 "Commits that are not covered by these blanket approvals always require "
 "explicit approval of either {ports-secteam} or {portmgr}."
 msgstr ""
 
 #. type: Title ====
-#: documentation/content/en/articles/committers-guide/_index.adoc:2419
+#: documentation/content/en/articles/committers-guide/_index.adoc:2442
 #, no-wrap
 msgid "What is the procedure for merging commits to the quarterly branch?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2422
+#: documentation/content/en/articles/committers-guide/_index.adoc:2445
 msgid ""
 "A script is provided to automate merging a specific commit: [."
 "filename]#ports/Tools/scripts/mfh#. It is used as follows:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2457
+#: documentation/content/en/articles/committers-guide/_index.adoc:2480
 #, no-wrap
 msgid ""
 "% /usr/ports/Tools/scripts/mfh 380362\n"
@@ -6451,7 +6491,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2463
+#: documentation/content/en/articles/committers-guide/_index.adoc:2486
 #, no-wrap
 msgid ""
 " PORTNAME=      sshkit\n"
@@ -6462,7 +6502,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2477
+#: documentation/content/en/articles/committers-guide/_index.adoc:2500
 #, no-wrap
 msgid ""
 "Index: 2015Q1/security/rubygem-sshkit/distinfo\n"
@@ -6481,7 +6521,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2483
+#: documentation/content/en/articles/committers-guide/_index.adoc:2506
 #, no-wrap
 msgid ""
 "Property changes on: 2015Q1\n"
@@ -6492,7 +6532,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2486
+#: documentation/content/en/articles/committers-guide/_index.adoc:2509
 msgid ""
 "At that point, the script will either open a shell for you to fix things, or "
 "open your text editor with the commit message all prepared and then commit "
@@ -6500,7 +6540,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2488
+#: documentation/content/en/articles/committers-guide/_index.adoc:2511
 msgid ""
 "The script assumes that you can connect to `repo.FreeBSD.org` with SSH "
 "directly, so if your local login name is different than your FreeBSD cluster "
@@ -6508,7 +6548,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2493
+#: documentation/content/en/articles/committers-guide/_index.adoc:2516
 #, no-wrap
 msgid ""
 "Host *.freebsd.org\n"
@@ -6516,7 +6556,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2498
+#: documentation/content/en/articles/committers-guide/_index.adoc:2521
 msgid ""
 "The script is also able to merge more than one revision at a time. If there "
 "have been other updates to the port since the branch was created that have "
@@ -6528,13 +6568,13 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2502
+#: documentation/content/en/articles/committers-guide/_index.adoc:2525
 #, no-wrap
 msgid "% /usr/ports/Tools/scripts/mfh r407208 r407713 r407722 r408567 r408943 r410728\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2508
+#: documentation/content/en/articles/committers-guide/_index.adoc:2531
 msgid ""
 "The mfh script can also take an optional first argument, the branch where "
 "the merge is being done. Only the latest quarterly branch is supported, so "
@@ -6543,7 +6583,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2513
+#: documentation/content/en/articles/committers-guide/_index.adoc:2536
 #, no-wrap
 msgid ""
 "% /usr/ports/Tools/scripts/mfh 2016Q1 r407208 r407713\n"
@@ -6551,19 +6591,19 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2517
+#: documentation/content/en/articles/committers-guide/_index.adoc:2540
 #, no-wrap
 msgid "Creating a New Category"
 msgstr ""
 
 #. type: Title ====
-#: documentation/content/en/articles/committers-guide/_index.adoc:2520
+#: documentation/content/en/articles/committers-guide/_index.adoc:2543
 #, no-wrap
 msgid "What is the procedure for creating a new category?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2523
+#: documentation/content/en/articles/committers-guide/_index.adoc:2546
 msgid ""
 "Please see link:{porters-handbook}#proposing-categories[Proposing a New "
 "Category] in the Porter's Handbook. Once that procedure has been followed "
@@ -6572,42 +6612,42 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2527
+#: documentation/content/en/articles/committers-guide/_index.adoc:2550
 msgid "Perform any needed moves. (This only applies to physical categories.)"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2528
+#: documentation/content/en/articles/committers-guide/_index.adoc:2551
 msgid ""
 "Update the `VALID_CATEGORIES` definition in [.filename]#ports/Mk/bsd.port."
 "mk#."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2529
+#: documentation/content/en/articles/committers-guide/_index.adoc:2552
 msgid "Assign the PR back to you."
 msgstr ""
 
 #. type: Title ====
-#: documentation/content/en/articles/committers-guide/_index.adoc:2532
+#: documentation/content/en/articles/committers-guide/_index.adoc:2555
 #, no-wrap
 msgid "What do I need to do to implement a new physical category?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2537
+#: documentation/content/en/articles/committers-guide/_index.adoc:2560
 msgid ""
 "Upgrade each moved port's [.filename]#Makefile#. Do not connect the new "
 "category to the build yet."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2539
+#: documentation/content/en/articles/committers-guide/_index.adoc:2562
 msgid "To do this, you will need to:"
 msgstr ""
 
 #. type: delimited block = 6
-#: documentation/content/en/articles/committers-guide/_index.adoc:2543
+#: documentation/content/en/articles/committers-guide/_index.adoc:2566
 msgid ""
 "Change the port's `CATEGORIES` (this was the point of the exercise, "
 "remember?) The new category is listed first. This will help to ensure that "
@@ -6615,7 +6655,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 6
-#: documentation/content/en/articles/committers-guide/_index.adoc:2544
+#: documentation/content/en/articles/committers-guide/_index.adoc:2567
 msgid ""
 "Run a `make describe`. Since the top-level `make index` that you will be "
 "running in a few steps is an iteration of `make describe` over the entire "
@@ -6624,14 +6664,14 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 6
-#: documentation/content/en/articles/committers-guide/_index.adoc:2545
+#: documentation/content/en/articles/committers-guide/_index.adoc:2568
 msgid ""
 "If you want to be really thorough, now might be a good time to run man:"
 "portlint[1]."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2548
+#: documentation/content/en/articles/committers-guide/_index.adoc:2571
 msgid ""
 "Check that the ``PKGORIGIN``s are correct. The ports system uses each port's "
 "`CATEGORIES` entry to create its `PKGORIGIN`, which is used to connect "
@@ -6641,7 +6681,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2550
+#: documentation/content/en/articles/committers-guide/_index.adoc:2573
 msgid ""
 "To do this, use the [.filename]#chkorigin.sh# tool: `env PORTSDIR=/path/to/"
 "ports sh -e /path/to/ports/Tools/scripts/chkorigin.sh`. This will check "
@@ -6651,7 +6691,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2551
+#: documentation/content/en/articles/committers-guide/_index.adoc:2574
 msgid ""
 "On your own local system, test the proposed changes: first, comment out the "
 "SUBDIR entries in the old ports' categories' [.filename]##Makefile##s; then "
@@ -6663,7 +6703,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2552
+#: documentation/content/en/articles/committers-guide/_index.adoc:2575
 msgid ""
 "Once this is done, you can commit the updated [.filename]#ports/Makefile# to "
 "connect the new category to the build and also commit the [."
@@ -6671,25 +6711,25 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2553
+#: documentation/content/en/articles/committers-guide/_index.adoc:2576
 msgid "Add appropriate entries to [.filename]#ports/MOVED#."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2554
+#: documentation/content/en/articles/committers-guide/_index.adoc:2577
 msgid "Update the documentation by modifying:"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2555
-#: documentation/content/en/articles/committers-guide/_index.adoc:2569
+#: documentation/content/en/articles/committers-guide/_index.adoc:2578
+#: documentation/content/en/articles/committers-guide/_index.adoc:2592
 msgid ""
 "the link:{porters-handbook}#PORTING-CATEGORIES[list of categories] in the "
 "Porter's Handbook"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2556
+#: documentation/content/en/articles/committers-guide/_index.adoc:2579
 msgid ""
 "[.filename]#doc/en_US.ISO8859-1/htdocs/ports#. Note that these are now "
 "displayed by sub-groups, as specified in [.filename]#doc/en_US.ISO8859-1/"
@@ -6697,14 +6737,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2558
+#: documentation/content/en/articles/committers-guide/_index.adoc:2581
 msgid ""
 "(Note: these are in the docs, not the ports, repository). If you are not a "
 "docs committer, you will need to submit a PR for this."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2560
+#: documentation/content/en/articles/committers-guide/_index.adoc:2583
 msgid ""
 "Only once all the above have been done, and no one is any longer reporting "
 "problems with the new ports, should the old ports be deleted from their "
@@ -6712,7 +6752,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2563
+#: documentation/content/en/articles/committers-guide/_index.adoc:2586
 msgid ""
 "It is not necessary to manually update the link:https://www.FreeBSD.org/"
 "ports/[ports web pages] to reflect the new category. This is done "
@@ -6721,46 +6761,46 @@ msgid ""
 msgstr ""
 
 #. type: Title ====
-#: documentation/content/en/articles/committers-guide/_index.adoc:2564
+#: documentation/content/en/articles/committers-guide/_index.adoc:2587
 #, no-wrap
 msgid "What do I need to do to implement a new virtual category?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2567
+#: documentation/content/en/articles/committers-guide/_index.adoc:2590
 msgid ""
 "This is much simpler than a physical category. Only a few modifications are "
 "needed:"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2570
+#: documentation/content/en/articles/committers-guide/_index.adoc:2593
 msgid "[.filename]#en_US.ISO8859-1/htdocs/ports/categories#"
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/articles/committers-guide/_index.adoc:2572
-#: documentation/content/en/articles/committers-guide/_index.adoc:2678
+#: documentation/content/en/articles/committers-guide/_index.adoc:2595
+#: documentation/content/en/articles/committers-guide/_index.adoc:2701
 #, no-wrap
 msgid "Miscellaneous Questions"
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2575
-#: documentation/content/en/articles/committers-guide/_index.adoc:2680
+#: documentation/content/en/articles/committers-guide/_index.adoc:2598
+#: documentation/content/en/articles/committers-guide/_index.adoc:2703
 #, no-wrap
 msgid "Are there changes that can be committed without asking the maintainer for approval?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2578
-#: documentation/content/en/articles/committers-guide/_index.adoc:2683
+#: documentation/content/en/articles/committers-guide/_index.adoc:2601
+#: documentation/content/en/articles/committers-guide/_index.adoc:2706
 msgid "Blanket approval for most ports applies to these types of fixes:"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2580
-#: documentation/content/en/articles/committers-guide/_index.adoc:2685
+#: documentation/content/en/articles/committers-guide/_index.adoc:2603
+#: documentation/content/en/articles/committers-guide/_index.adoc:2708
 msgid ""
 "Most infrastructure changes to a port (that is, modernizing, but not "
 "changing the functionality). For example, the blanket covers converting to "
@@ -6769,21 +6809,21 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2581
-#: documentation/content/en/articles/committers-guide/_index.adoc:2686
+#: documentation/content/en/articles/committers-guide/_index.adoc:2604
+#: documentation/content/en/articles/committers-guide/_index.adoc:2709
 msgid "Trivial and _tested_ build and runtime fixes."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2582
-#: documentation/content/en/articles/committers-guide/_index.adoc:2687
+#: documentation/content/en/articles/committers-guide/_index.adoc:2605
+#: documentation/content/en/articles/committers-guide/_index.adoc:2710
 msgid ""
 "Documentations or metadata changes to ports, like [.filename]#pkg-descr# or "
 "`COMMENT`."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2586
+#: documentation/content/en/articles/committers-guide/_index.adoc:2609
 msgid ""
 "Exceptions to this are anything maintained by the {portmgr}, or the "
 "{security-officer}. No unauthorized commits may ever be made to ports "
@@ -6791,20 +6831,20 @@ msgid ""
 msgstr ""
 
 #. type: Title ====
-#: documentation/content/en/articles/committers-guide/_index.adoc:2589
+#: documentation/content/en/articles/committers-guide/_index.adoc:2612
 #, no-wrap
 msgid "How do I know if my port is building correctly or not?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2592
+#: documentation/content/en/articles/committers-guide/_index.adoc:2615
 msgid ""
 "The packages are built multiple times each week. If a port fails, the "
 "maintainer will receive an email from `pkg-fallout@FreeBSD.org`."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2594
+#: documentation/content/en/articles/committers-guide/_index.adoc:2617
 msgid ""
 "Reports for all the package builds (official, experimental, and non-"
 "regression) are aggregated at link:pkg-status.FreeBSD.org[pkg-status.FreeBSD."
@@ -6812,26 +6852,26 @@ msgid ""
 msgstr ""
 
 #. type: Title ====
-#: documentation/content/en/articles/committers-guide/_index.adoc:2596
+#: documentation/content/en/articles/committers-guide/_index.adoc:2619
 #, no-wrap
 msgid "I added a new port. Do I need to add it to the [.filename]#INDEX#?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2599
+#: documentation/content/en/articles/committers-guide/_index.adoc:2622
 msgid ""
 "No. The file can either be generated by running `make index`, or a pre-"
 "generated version can be downloaded with `make fetchindex`."
 msgstr ""
 
 #. type: Title ====
-#: documentation/content/en/articles/committers-guide/_index.adoc:2601
+#: documentation/content/en/articles/committers-guide/_index.adoc:2624
 #, no-wrap
 msgid "Are there any other files I am not allowed to touch?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2604
+#: documentation/content/en/articles/committers-guide/_index.adoc:2627
 msgid ""
 "Any file directly under [.filename]#ports/#, or any file under a "
 "subdirectory that starts with an uppercase letter ([.filename]#Mk/#, [."
@@ -6841,13 +6881,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ====
-#: documentation/content/en/articles/committers-guide/_index.adoc:2606
+#: documentation/content/en/articles/committers-guide/_index.adoc:2629
 #, no-wrap
 msgid "What is the proper procedure for updating the checksum for a port distfile when the file changes without a version change?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2609
+#: documentation/content/en/articles/committers-guide/_index.adoc:2632
 msgid ""
 "When the checksum for a distribution file is updated due to the author "
 "updating the file without changing the port revision, the commit message "
@@ -6860,20 +6900,20 @@ msgid ""
 msgstr ""
 
 #. type: Title ====
-#: documentation/content/en/articles/committers-guide/_index.adoc:2611
+#: documentation/content/en/articles/committers-guide/_index.adoc:2634
 #, no-wrap
 msgid "How can an experimental test build of the ports tree (exp-run) be requested?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2614
+#: documentation/content/en/articles/committers-guide/_index.adoc:2637
 msgid ""
 "An exp-run must be completed before patches with a significant ports impact "
 "are committed. The patch can be against the ports tree or the base system."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2616
+#: documentation/content/en/articles/committers-guide/_index.adoc:2639
 msgid ""
 "Full package builds will be done with the patches provided by the submitter, "
 "and the submitter is required to fix detected problems _(fallout)_ before "
@@ -6881,22 +6921,22 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2620
+#: documentation/content/en/articles/committers-guide/_index.adoc:2643
 msgid "Go to the link:https://bugs.freebsd.org/submit[Bugzilla new PR page]."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2621
+#: documentation/content/en/articles/committers-guide/_index.adoc:2644
 msgid "Select the product your patch is about."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2622
+#: documentation/content/en/articles/committers-guide/_index.adoc:2645
 msgid "Fill in the bug report as normal. Remember to attach the patch."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2623
+#: documentation/content/en/articles/committers-guide/_index.adoc:2646
 msgid ""
 "If at the top it says “Show Advanced Fields” click on it. It will now say "
 "“Hide Advanced Fields”. Many new fields will be available. If it already "
@@ -6904,56 +6944,56 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2624
+#: documentation/content/en/articles/committers-guide/_index.adoc:2647
 msgid ""
 "In the “Flags” section, set the “exp-run” one to `?`. As for all other "
 "fields, hovering the mouse over any field shows more details."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2625
+#: documentation/content/en/articles/committers-guide/_index.adoc:2648
 msgid "Submit. Wait for the build to run."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2626
+#: documentation/content/en/articles/committers-guide/_index.adoc:2649
 msgid "{portmgr} will reply with a possible fallout."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2627
+#: documentation/content/en/articles/committers-guide/_index.adoc:2650
 msgid "Depending on the fallout:"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2628
+#: documentation/content/en/articles/committers-guide/_index.adoc:2651
 msgid ""
 "If there is no fallout, the procedure stops here, and the change can be "
 "committed, pending any other approval required."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2629
+#: documentation/content/en/articles/committers-guide/_index.adoc:2652
 msgid ""
 "If there is fallout, it _must_ be fixed, either by fixing the ports directly "
 "in the ports tree, or adding to the submitted patch."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2630
+#: documentation/content/en/articles/committers-guide/_index.adoc:2653
 msgid ""
 "When this is done, go back to step 6 saying the fallout was fixed and wait "
 "for the exp-run to be run again. Repeat as long as there are broken ports."
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/articles/committers-guide/_index.adoc:2633
+#: documentation/content/en/articles/committers-guide/_index.adoc:2656
 #, no-wrap
 msgid "Issues Specific to Developers Who Are Not Committers"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2636
+#: documentation/content/en/articles/committers-guide/_index.adoc:2659
 msgid ""
 "A few people who have access to the FreeBSD machines do not have commit "
 "bits. Almost all of this document will apply to these developers as well "
@@ -6962,17 +7002,17 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2638
+#: documentation/content/en/articles/committers-guide/_index.adoc:2661
 msgid "<<admin>>"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2639
+#: documentation/content/en/articles/committers-guide/_index.adoc:2662
 msgid "<<conventions-everyone>>"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/committers-guide/_index.adoc:2643
+#: documentation/content/en/articles/committers-guide/_index.adoc:2666
 msgid ""
 "Get your mentor to add you to the \"Additional Contributors\" ([."
 "filename]#doc/en_US.ISO8859-1/articles/contributors/contrib.additional."
@@ -6980,28 +7020,28 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2645
+#: documentation/content/en/articles/committers-guide/_index.adoc:2668
 msgid "<<developer.relations>>"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2646
+#: documentation/content/en/articles/committers-guide/_index.adoc:2669
 msgid "<<ssh.guide>>"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2647
+#: documentation/content/en/articles/committers-guide/_index.adoc:2670
 msgid "<<rules>>"
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/articles/committers-guide/_index.adoc:2649
+#: documentation/content/en/articles/committers-guide/_index.adoc:2672
 #, no-wrap
 msgid "Information About Google Analytics"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2652
+#: documentation/content/en/articles/committers-guide/_index.adoc:2675
 msgid ""
 "As of December 12, 2012, Google Analytics was enabled on the FreeBSD Project "
 "website to collect anonymized usage statistics regarding usage of the site. "
@@ -7010,13 +7050,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2654
+#: documentation/content/en/articles/committers-guide/_index.adoc:2677
 #, no-wrap
 msgid "Google Analytics General Policy"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2657
+#: documentation/content/en/articles/committers-guide/_index.adoc:2680
 msgid ""
 "The FreeBSD Project takes visitor privacy very seriously. As such, the "
 "FreeBSD Project website honors the \"Do Not Track\" header _before_ fetching "
@@ -7025,14 +7065,14 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2659
+#: documentation/content/en/articles/committers-guide/_index.adoc:2682
 msgid ""
 "Google Analytics access is _not_ arbitrarily allowed - access must be "
 "requested, voted on by the `{doceng}`, and explicitly granted."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2661
+#: documentation/content/en/articles/committers-guide/_index.adoc:2684
 msgid ""
 "Requests for Google Analytics data must include a specific purpose. For "
 "example, a valid reason for requesting access would be \"to see the most "
@@ -7041,14 +7081,14 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2663
+#: documentation/content/en/articles/committers-guide/_index.adoc:2686
 msgid ""
 "Conversely, \"to see what web browsers are most frequently used\" (without "
 "stating __why__) would be rejected."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2665
+#: documentation/content/en/articles/committers-guide/_index.adoc:2688
 msgid ""
 "All requests must include the timeframe for which the data would be "
 "required. For example, it must be explicitly stated if the requested data "
@@ -7057,46 +7097,46 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2667
+#: documentation/content/en/articles/committers-guide/_index.adoc:2690
 msgid ""
 "Any request for Google Analytics data without a clear, reasonable reason "
 "beneficial to the FreeBSD Project will be rejected."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2669
+#: documentation/content/en/articles/committers-guide/_index.adoc:2692
 #, no-wrap
 msgid "Data Available Through Google Analytics"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2672
+#: documentation/content/en/articles/committers-guide/_index.adoc:2695
 msgid "A few examples of the types of Google Analytics data available include:"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2674
+#: documentation/content/en/articles/committers-guide/_index.adoc:2697
 msgid "Commonly used web browsers"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2675
+#: documentation/content/en/articles/committers-guide/_index.adoc:2698
 msgid "Page load times"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2676
+#: documentation/content/en/articles/committers-guide/_index.adoc:2699
 msgid "Site access by language"
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2688
+#: documentation/content/en/articles/committers-guide/_index.adoc:2711
 #, no-wrap
 msgid "How do I add a new file to a branch?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2691
+#: documentation/content/en/articles/committers-guide/_index.adoc:2714
 msgid ""
 "To add a file onto a branch, simply checkout or update to the branch you "
 "want to add to and then add the file using the add operation as you normally "
@@ -7106,13 +7146,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2692
+#: documentation/content/en/articles/committers-guide/_index.adoc:2715
 #, no-wrap
 msgid "How do I access people.FreeBSD.org to put up personal or project information?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2695
+#: documentation/content/en/articles/committers-guide/_index.adoc:2718
 msgid ""
 "`people.FreeBSD.org` is the same as `freefall.FreeBSD.org`. Just create a [."
 "filename]#public_html# directory. Anything you place in that directory will "
@@ -7121,45 +7161,45 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2696
+#: documentation/content/en/articles/committers-guide/_index.adoc:2719
 #, no-wrap
 msgid "Where are the mailing list archives stored?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2699
+#: documentation/content/en/articles/committers-guide/_index.adoc:2722
 msgid ""
 "The mailing lists are archived under [.filename]#/local/mail# on `freefall."
 "FreeBSD.org`."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2700
+#: documentation/content/en/articles/committers-guide/_index.adoc:2723
 #, no-wrap
 msgid "I would like to mentor a new committer. What process do I need to follow?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2703
+#: documentation/content/en/articles/committers-guide/_index.adoc:2726
 msgid ""
 "See the https://www.freebsd.org/internal/new-account/[New Account Creation "
 "Procedure] document on the internal pages."
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/articles/committers-guide/_index.adoc:2705
+#: documentation/content/en/articles/committers-guide/_index.adoc:2728
 #, no-wrap
 msgid "Benefits and Perks for FreeBSD Committers"
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2708
+#: documentation/content/en/articles/committers-guide/_index.adoc:2731
 #, no-wrap
 msgid "Recognition"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2711
+#: documentation/content/en/articles/committers-guide/_index.adoc:2734
 msgid ""
 "Recognition as a competent software engineer is the longest lasting value. "
 "In addition, getting a chance to work with some of the best people that "
@@ -7167,26 +7207,26 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2713
+#: documentation/content/en/articles/committers-guide/_index.adoc:2736
 #, no-wrap
 msgid "FreeBSD Mall"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2716
+#: documentation/content/en/articles/committers-guide/_index.adoc:2739
 msgid ""
 "FreeBSD committers can get a free 4-CD or DVD set at conferences from http://"
 "www.freebsdmall.com[FreeBSD Mall, Inc.]."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2718
+#: documentation/content/en/articles/committers-guide/_index.adoc:2741
 #, no-wrap
 msgid "IRC"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2721
+#: documentation/content/en/articles/committers-guide/_index.adoc:2744
 msgid ""
 "In addition, developers may request a cloaked hostmask for their account on "
 "the Freenode IRC network in the form of `freebsd/developer/`_freefall name_ "
@@ -7195,20 +7235,20 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/articles/committers-guide/_index.adoc:2723
+#: documentation/content/en/articles/committers-guide/_index.adoc:2746
 #, no-wrap
 msgid "`Gandi.net`"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2726
+#: documentation/content/en/articles/committers-guide/_index.adoc:2749
 msgid ""
 "Gandi provides website hosting, cloud computing, domain registration, and "
 "X.509 certificate services."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/committers-guide/_index.adoc:2727
+#: documentation/content/en/articles/committers-guide/_index.adoc:2750
 msgid ""
 "Gandi offers an E-rate discount to all FreeBSD developers. Send mail to "
 "mailto:non-profit@gandi.net[non-profit@gandi.net] using your `@freebsd.org` "
