@@ -29,6 +29,20 @@ website/content/en"
 
 RESOURCES="${1:-$ALL_RESOURCES}"
 
+GIT_IGNORE_FILES="toc-examples.adoc
+toc-figures.adoc
+toc-tables.adoc
+toc.adoc
+toc-1.adoc
+toc-2.adoc
+toc-3.adoc
+toc-4.adoc
+toc-5.adoc"
+
+for remove_file in $GIT_IGNORE_FILES; do
+	find documentation/content/en/ -name "$remove_file" -delete -print
+done
+
 for resource in $RESOURCES; do
 
 	if [ ! -d "$resource" ]; then
