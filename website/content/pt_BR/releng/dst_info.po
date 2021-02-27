@@ -44,22 +44,22 @@ msgstr ""
 msgid ""
 "FreeBSD uses `/etc/localtime` to control the conversion of the system's "
 "internal representation of time (based on UTC) to the format appropriate for "
-"the local time zone. That file gets copied from one of the files in "
-"`/usr/share/zoneinfo` by the tzsetup(8) command, usually as part of the "
-"initial installation procedure. The change in Daylight Savings Time rules "
-"affects the files in `/usr/share/zoneinfo` for the time zones affected by "
-"the legislation passed in 2005."
+"the local time zone. That file gets copied from one of the files in `/usr/"
+"share/zoneinfo` by the tzsetup(8) command, usually as part of the initial "
+"installation procedure. The change in Daylight Savings Time rules affects "
+"the files in `/usr/share/zoneinfo` for the time zones affected by the "
+"legislation passed in 2005."
 msgstr ""
 
 #. type: Plain text
 #: website/content/en/releng/dst_info.adoc:15
 msgid ""
 "Of the release branches supported by the FreeBSD Security Team as of "
-"February 2007, FreeBSD-6.2 and FreeBSD-5.5 have up to date zoneinfo "
-"files. FreeBSD-6.1 has correct zoneinfo files for time zones in the United "
-"States of America but out of date zoneinfo files for some of the other "
-"countries affected (for example Canada). An Errata Notice will be released "
-"shortly to update the zoneinfo files in FreeBSD-6.1."
+"February 2007, FreeBSD-6.2 and FreeBSD-5.5 have up to date zoneinfo files. "
+"FreeBSD-6.1 has correct zoneinfo files for time zones in the United States "
+"of America but out of date zoneinfo files for some of the other countries "
+"affected (for example Canada). An Errata Notice will be released shortly to "
+"update the zoneinfo files in FreeBSD-6.1."
 msgstr ""
 
 #. type: Plain text
@@ -72,11 +72,10 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releng/dst_info.adoc:19
 msgid ""
-"`/etc/localtime` currently does not get updated when the "
-"cvsup/buildworld/etc system update procedures are used. If a machine was "
-"installed using one of the releases not listed above it will probably have "
-"an outdated `/etc/localtime` file. That file can be updated by running "
-"tzsetup(8)."
+"`/etc/localtime` currently does not get updated when the cvsup/buildworld/"
+"etc system update procedures are used. If a machine was installed using one "
+"of the releases not listed above it will probably have an outdated `/etc/"
+"localtime` file. That file can be updated by running tzsetup(8)."
 msgstr ""
 
 #. type: Plain text
