@@ -52,6 +52,10 @@ for resource in $RESOURCES; do
 
 	for document in $(find "$resource/" -name "*.adoc" ); do
 		name=$(basename -s .adoc "$document")
+		if [ "$name" = "chapters-order" ]; then
+			continue
+		fi
+
 		dirbase=$(dirname "$document")
 		dir=$(echo "$dirbase" | rev | cut -d '/' -f 1 | rev)
 		echo "$document"
