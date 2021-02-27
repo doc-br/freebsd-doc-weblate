@@ -63,8 +63,8 @@ msgid ""
 "The {releaseType} distribution to which these release notes apply represents "
 "the latest point along the {releaseBranch} development branch since "
 "{releaseBranch} was created. Information regarding pre-built, binary "
-"{releaseType} distributions along this branch can be found at "
-"https://www.FreeBSD.org/releases/[https://www.FreeBSD.org/releases/]."
+"{releaseType} distributions along this branch can be found at https://www."
+"FreeBSD.org/releases/[https://www.FreeBSD.org/releases/]."
 msgstr ""
 
 #. type: Plain text
@@ -73,20 +73,19 @@ msgid ""
 "The {releaseType} distribution to which these release notes apply represents "
 "a point along the {releaseBranch} development branch between {releasePrev} "
 "and the future {releaseNext}. Information regarding pre-built, binary "
-"{releaseType} distributions along this branch can be found at "
-"https://www.FreeBSD.org/releases/[https://www.FreeBSD.org/releases/]."
+"{releaseType} distributions along this branch can be found at https://www."
+"FreeBSD.org/releases/[https://www.FreeBSD.org/releases/]."
 msgstr ""
 
 #. type: Plain text
 #: website/content/en/releases/12.2R/relnotes.adoc:34
 msgid ""
 "This distribution of FreeBSD {releaseCurrent} is a {releaseType} "
-"distribution. It can be found at "
-"https://www.FreeBSD.org/releases/[https://www.FreeBSD.org/releases/] or any "
-"of its mirrors. More information on obtaining this (or other) {releaseType} "
-"distributions of FreeBSD can be found in the "
-"link:{handbook}/mirrors[Obtaining FreeBSD appendix] to the "
-"link:{handbook}/[FreeBSD Handbook]."
+"distribution. It can be found at https://www.FreeBSD.org/releases/[https://"
+"www.FreeBSD.org/releases/] or any of its mirrors. More information on "
+"obtaining this (or other) {releaseType} distributions of FreeBSD can be "
+"found in the link:{handbook}/mirrors[Obtaining FreeBSD appendix] to the link:"
+"{handbook}/[FreeBSD Handbook]."
 msgstr ""
 
 #. type: Plain text
@@ -116,8 +115,8 @@ msgid ""
 "major bug fixes, or contributed software upgrades. They may also list "
 "changes to major ports/packages or release engineering practices. Clearly "
 "the release notes cannot list every single change made to FreeBSD between "
-"releases; this document focuses primarily on security advisories, "
-"user-visible changes, and major architectural improvements."
+"releases; this document focuses primarily on security advisories, user-"
+"visible changes, and major architectural improvements."
 msgstr ""
 
 #. type: Title ==
@@ -130,11 +129,11 @@ msgstr ""
 #: website/content/en/releases/12.2R/relnotes.adoc:45
 msgid ""
 "Binary upgrades between RELEASE versions (and snapshots of the various "
-"security branches) are supported using the man:freebsd-update[8] "
-"utility. The binary upgrade procedure will update unmodified userland "
-"utilities, as well as unmodified GENERIC kernels distributed as a part of an "
-"official FreeBSD release. The man:freebsd-update[8] utility requires that "
-"the host being upgraded have Internet connectivity."
+"security branches) are supported using the man:freebsd-update[8] utility. "
+"The binary upgrade procedure will update unmodified userland utilities, as "
+"well as unmodified GENERIC kernels distributed as a part of an official "
+"FreeBSD release. The man:freebsd-update[8] utility requires that the host "
+"being upgraded have Internet connectivity."
 msgstr ""
 
 #. type: Plain text
@@ -397,16 +396,16 @@ msgstr ""
 #: website/content/en/releases/12.2R/relnotes.adoc:268
 msgid ""
 "A new man:rc.conf[5] variable has been added, `linux_mounts_enable`, which "
-"controls if Linux(R)-specific filesystems are mounted in "
-"[.filename]#/compat/linux# if `linux_enable` is set to `YES`. {{< revision "
-"\"364883\" >}} (Sponsored by The FreeBSD Foundation)"
+"controls if Linux(R)-specific filesystems are mounted in [.filename]#/compat/"
+"linux# if `linux_enable` is set to `YES`. {{< revision \"364883\" >}} "
+"(Sponsored by The FreeBSD Foundation)"
 msgstr ""
 
 #. type: Plain text
 #: website/content/en/releases/12.2R/relnotes.adoc:270
 msgid ""
-"The man:devd[8] utility has been updated to change the default "
-"man:syslogd[8] notification for resume from `kern` to `kernel`. {{< revision "
+"The man:devd[8] utility has been updated to change the default man:"
+"syslogd[8] notification for resume from `kern` to `kernel`. {{< revision "
 "\"365540\" >}}"
 msgstr ""
 
@@ -419,8 +418,8 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/12.2R/relnotes.adoc:275
 msgid ""
-"The man:cron[8] utility has been updated to support two new flags in "
-"man:crontab[5], `-n` and `-q`, which suppress mail on successful runs and "
+"The man:cron[8] utility has been updated to support two new flags in man:"
+"crontab[5], `-n` and `-q`, which suppress mail on successful runs and "
 "suppress logging of command execution, respectively. {{< revision \"353134\" "
 ">}}"
 msgstr ""
@@ -486,16 +485,16 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/12.2R/relnotes.adoc:293
 msgid ""
-"The man:syslogd[8] utility has been updated to add property-based "
-"filters. {{< revision \"359739\" >}}"
+"The man:syslogd[8] utility has been updated to add property-based filters. "
+"{{< revision \"359739\" >}}"
 msgstr ""
 
 #. type: Plain text
 #: website/content/en/releases/12.2R/relnotes.adoc:295
 msgid ""
 "The man:mountd[8] utility has been updated to fix incorrect group listing "
-"under certain conditions when `-maproot` or `-mapall` is used for "
-"exports. {{< revision \"362602\" >}}"
+"under certain conditions when `-maproot` or `-mapall` is used for exports. "
+"{{< revision \"362602\" >}}"
 msgstr ""
 
 #. type: Plain text
@@ -509,8 +508,7 @@ msgstr ""
 #: website/content/en/releases/12.2R/relnotes.adoc:299
 msgid ""
 "The man:hostapd[8] and man:wpa_supplicant[8] utilities have been updated to "
-"support 802.11n, 802.11w, 802.11ac, and 802.11ax. {{< revision \"363441\" "
-">}}"
+"support 802.11n, 802.11w, 802.11ac, and 802.11ax. {{< revision \"363441\" >}}"
 msgstr ""
 
 #. type: Plain text
@@ -650,8 +648,8 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/12.2R/relnotes.adoc:340
 msgid ""
-"The man:ntpd[8] suite of utilities have been updated to version "
-"4.2.8p15. {{< revision \"362716\" >}}"
+"The man:ntpd[8] suite of utilities have been updated to version 4.2.8p15. "
+"{{< revision \"362716\" >}}"
 msgstr ""
 
 #. type: Plain text
@@ -730,9 +728,8 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/12.2R/relnotes.adoc:366
 msgid ""
-"The `ifconfig` library has been updated to report the status of a "
-"man:bridge[4] interface, similarly to man:lagg[4]. {{< revision \"363037\" "
-">}}"
+"The `ifconfig` library has been updated to report the status of a man:"
+"bridge[4] interface, similarly to man:lagg[4]. {{< revision \"363037\" >}}"
 msgstr ""
 
 #. type: Title ==
@@ -758,24 +755,24 @@ msgstr ""
 #: website/content/en/releases/12.2R/relnotes.adoc:376
 msgid ""
 "The man:read[2] system call has been changed to disable `read()` calls on "
-"directories by default. A new man:sysctl[8] has been added, "
-"`security.bsd.allow_read_dir`, which when set to `1` will restore the "
-"previous behavior. {{< revision \"363017\" >}}"
+"directories by default. A new man:sysctl[8] has been added, `security.bsd."
+"allow_read_dir`, which when set to `1` will restore the previous behavior. "
+"{{< revision \"363017\" >}}"
 msgstr ""
 
 #. type: Plain text
 #: website/content/en/releases/12.2R/relnotes.adoc:378
 msgid ""
-"The man:ixl[4] driver has now been enabled by default for "
-"FreeBSD/powerpc64. {{< revision \"363712\" >}}"
+"The man:ixl[4] driver has now been enabled by default for FreeBSD/powerpc64. "
+"{{< revision \"363712\" >}}"
 msgstr ""
 
 #. type: Plain text
 #: website/content/en/releases/12.2R/relnotes.adoc:380
 msgid ""
-"The `machdep.kdb_on_nmi` man:sysctl[8] has been removed. The "
-"`machdep.panic_on_nmi` man:sysctl[8] tunable has changed to directly enter "
-"the debugger. {{< revision \"364002\" >}}"
+"The `machdep.kdb_on_nmi` man:sysctl[8] has been removed. The `machdep."
+"panic_on_nmi` man:sysctl[8] tunable has changed to directly enter the "
+"debugger. {{< revision \"364002\" >}}"
 msgstr ""
 
 #. type: Plain text
@@ -914,8 +911,8 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/12.2R/relnotes.adoc:432
 msgid ""
-"The man:tap[4] and man:tun[4] devices have been updated to create "
-"[.filename]#/dev# aliases when they are renamed. {{< revision \"354060\" >}}"
+"The man:tap[4] and man:tun[4] devices have been updated to create [."
+"filename]#/dev# aliases when they are renamed. {{< revision \"354060\" >}}"
 msgstr ""
 
 #. type: Plain text
@@ -1056,5 +1053,6 @@ msgstr ""
 
 #. type: delimited block = 4
 #: website/content/en/releases/12.2R/relnotes.adoc:478
-msgid "This change does not affect the FreeBSD 12.x or 11.x series of releases."
+msgid ""
+"This change does not affect the FreeBSD 12.x or 11.x series of releases."
 msgstr ""
