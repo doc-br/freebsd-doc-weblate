@@ -63,8 +63,8 @@ msgid ""
 "The {releaseType} distribution to which these release notes apply represents "
 "the latest point along the {releaseBranch} development branch since "
 "{releaseBranch} was created. Information regarding pre-built, binary "
-"{releaseType} distributions along this branch can be found at "
-"https://www.FreeBSD.org/releases/[https://www.FreeBSD.org/releases/]."
+"{releaseType} distributions along this branch can be found at https://www."
+"FreeBSD.org/releases/[https://www.FreeBSD.org/releases/]."
 msgstr ""
 
 #. type: Plain text
@@ -73,20 +73,19 @@ msgid ""
 "The {releaseType} distribution to which these release notes apply represents "
 "a point along the {releaseBranch} development branch between {releasePrev} "
 "and the future {releaseNext}. Information regarding pre-built, binary "
-"{releaseType} distributions along this branch can be found at "
-"https://www.FreeBSD.org/releases/[https://www.FreeBSD.org/releases/]."
+"{releaseType} distributions along this branch can be found at https://www."
+"FreeBSD.org/releases/[https://www.FreeBSD.org/releases/]."
 msgstr ""
 
 #. type: Plain text
 #: website/content/en/releases/13.0R/relnotes.adoc:34
 msgid ""
 "This distribution of FreeBSD {releaseCurrent} is a {releaseType} "
-"distribution. It can be found at "
-"https://www.FreeBSD.org/releases/[https://www.FreeBSD.org/releases/] or any "
-"of its mirrors. More information on obtaining this (or other) {releaseType} "
-"distributions of FreeBSD can be found in the "
-"link:{handbook}/mirrors[Obtaining FreeBSD appendix] to the "
-"link:{handbook}/[FreeBSD Handbook]."
+"distribution. It can be found at https://www.FreeBSD.org/releases/[https://"
+"www.FreeBSD.org/releases/] or any of its mirrors. More information on "
+"obtaining this (or other) {releaseType} distributions of FreeBSD can be "
+"found in the link:{handbook}/mirrors[Obtaining FreeBSD appendix] to the link:"
+"{handbook}/[FreeBSD Handbook]."
 msgstr ""
 
 #. type: Plain text
@@ -116,8 +115,8 @@ msgid ""
 "major bug fixes, or contributed software upgrades. They may also list "
 "changes to major ports/packages or release engineering practices. Clearly "
 "the release notes cannot list every single change made to FreeBSD between "
-"releases; this document focuses primarily on security advisories, "
-"user-visible changes, and major architectural improvements."
+"releases; this document focuses primarily on security advisories, user-"
+"visible changes, and major architectural improvements."
 msgstr ""
 
 #. type: Title ==
@@ -130,11 +129,11 @@ msgstr ""
 #: website/content/en/releases/13.0R/relnotes.adoc:45
 msgid ""
 "Binary upgrades between RELEASE versions (and snapshots of the various "
-"security branches) are supported using the man:freebsd-update[8] "
-"utility. The binary upgrade procedure will update unmodified userland "
-"utilities, as well as unmodified GENERIC kernels distributed as a part of an "
-"official FreeBSD release. The man:freebsd-update[8] utility requires that "
-"the host being upgraded have Internet connectivity."
+"security branches) are supported using the man:freebsd-update[8] utility. "
+"The binary upgrade procedure will update unmodified userland utilities, as "
+"well as unmodified GENERIC kernels distributed as a part of an official "
+"FreeBSD release. The man:freebsd-update[8] utility requires that the host "
+"being upgraded have Internet connectivity."
 msgstr ""
 
 #. type: Plain text
@@ -238,8 +237,8 @@ msgstr ""
 msgid ""
 "The {{< manpage \"daemon\" \"8\" >}} utility now supports the `-H` flag, "
 "which causes it to catch SIGHUP and re-open the syslog file received, so log "
-"rotation from {{< manpage \"newsyslog\" \"8\">}} works "
-"properly. gitref:4cd407ec933[repository=src]"
+"rotation from {{< manpage \"newsyslog\" \"8\">}} works properly. "
+"gitref:4cd407ec933[repository=src]"
 msgstr ""
 
 #. type: Plain text
@@ -253,8 +252,7 @@ msgstr ""
 #: website/content/en/releases/13.0R/relnotes.adoc:111
 msgid ""
 "The {{< manpage \"diskinfo\" \"8\" >}} utility now reports the physical "
-"device name GEOM attribute when "
-"available. gitref:b5961be1ab7[repository=src]"
+"device name GEOM attribute when available. gitref:b5961be1ab7[repository=src]"
 msgstr ""
 
 #. type: Plain text
@@ -268,10 +266,10 @@ msgstr ""
 #: website/content/en/releases/13.0R/relnotes.adoc:115
 msgid ""
 "The {{< manpage \"freebsd-update\" \"8\" >}} utility now supports the -p "
-"flag, which ensures password db changes are included in "
-"[.filename]#/etc/passwd# via {{< manpage \"pwd_mkdb\" "
-"\"8\">}}. gitref:9b6591109e8[repository=src] {{< sponsored \"The FreeBSD "
-"Foundation\" >}}"
+"flag, which ensures password db changes are included in [.filename]#/etc/"
+"passwd# via {{< manpage \"pwd_mkdb\" \"8\">}}. "
+"gitref:9b6591109e8[repository=src] {{< sponsored \"The FreeBSD Foundation\" "
+">}}"
 msgstr ""
 
 #. type: Plain text
@@ -286,8 +284,8 @@ msgstr ""
 #: website/content/en/releases/13.0R/relnotes.adoc:119
 msgid ""
 "The {{< manpage \"freebsd-update\" \"8\" >}} utility includes support for "
-"the `PAGER` environment variable, which has now been "
-"documented. gitref:32f4592764d[repository=src]"
+"the `PAGER` environment variable, which has now been documented. "
+"gitref:32f4592764d[repository=src]"
 msgstr ""
 
 #. type: Plain text
@@ -302,8 +300,8 @@ msgstr ""
 #: website/content/en/releases/13.0R/relnotes.adoc:123
 msgid ""
 "The manual page for the {{< manpage \"inetd\" \"8\" >}} utility now includes "
-"an example of how to use netcat as a HTTP "
-"proxy. gitref:a58fc861516[repository=src]"
+"an example of how to use netcat as a HTTP proxy. gitref:"
+"a58fc861516[repository=src]"
 msgstr ""
 
 #. type: Plain text
@@ -476,9 +474,9 @@ msgstr ""
 #: website/content/en/releases/13.0R/relnotes.adoc:172
 msgid ""
 "This function will return the value of the environment variable LOCALBASE if "
-"it has been defined.  Else the value of the sysctl variable "
-"\"user.localbase\" is returned, which has a default value of "
-"__PATH_LOCALBASE (\"/usr/local\", unless changed in paths.h)."
+"it has been defined.  Else the value of the sysctl variable \"user.localbase"
+"\" is returned, which has a default value of __PATH_LOCALBASE (\"/usr/local"
+"\", unless changed in paths.h)."
 msgstr ""
 
 #. type: Plain text
@@ -544,8 +542,8 @@ msgstr ""
 msgid ""
 "For {{< manpage \"iscsi\" \"4\" >}} and {{< manpage \"ctld\" \"8\" >}}, "
 "support for specifying network QoS in the form of DiffServ Codepoints (DSCP) "
-"and Ethernet Priority Code Point (PCP) was "
-"added. gitref:ddf1072aac49[repository=src] {{< sponsored \"NetApp\" >}}"
+"and Ethernet Priority Code Point (PCP) was added. gitref:"
+"ddf1072aac49[repository=src] {{< sponsored \"NetApp\" >}}"
 msgstr ""
 
 #. type: Plain text
@@ -579,8 +577,8 @@ msgstr ""
 #: website/content/en/releases/13.0R/relnotes.adoc:212
 msgid ""
 "The {{< manpage \"efibootmgr\" \"8\" >}} utility now supports the -b flag, "
-"which lets users specify by bootnum as an "
-"index. gitref:a2581e80212[repository=src] {{< sponsored \"Netflix\" >}}"
+"which lets users specify by bootnum as an index. gitref:"
+"a2581e80212[repository=src] {{< sponsored \"Netflix\" >}}"
 msgstr ""
 
 #. type: Plain text
@@ -637,8 +635,8 @@ msgstr ""
 #: website/content/en/releases/13.0R/relnotes.adoc:235
 msgid ""
 "The {{< manpage \"cc_cubic\" \"4\">}} has been improved to address various "
-"corner cases and align more closely with the standard in "
-"RFC8312. gitref:40f9078ff9d9[repository=src] {{< sponsored \"NetApp\" >}}"
+"corner cases and align more closely with the standard in RFC8312. "
+"gitref:40f9078ff9d9[repository=src] {{< sponsored \"NetApp\" >}}"
 msgstr ""
 
 #. type: Plain text
@@ -687,8 +685,8 @@ msgstr ""
 #: website/content/en/releases/13.0R/relnotes.adoc:252
 msgid ""
 "The {{< manpage \"bhyve\" \"8\">}} utility has been updated to remove "
-"bvmconsole and bvmdebug now that UART support is "
-"in. gitref:c4df8cbfde5[repository=src]"
+"bvmconsole and bvmdebug now that UART support is in. gitref:"
+"c4df8cbfde5[repository=src]"
 msgstr ""
 
 #. type: Plain text
@@ -710,17 +708,17 @@ msgstr ""
 #: website/content/en/releases/13.0R/relnotes.adoc:258
 msgid ""
 "The {{< manpage \"bhyve\" \"8\">}} utility now permits suspend/resume of a "
-"XHCI device model that has not been attached to by a driver in a guest "
-"OS. gitref:57b0a3aacad[repository=src]"
+"XHCI device model that has not been attached to by a driver in a guest OS. "
+"gitref:57b0a3aacad[repository=src]"
 msgstr ""
 
 #. type: Plain text
 #: website/content/en/releases/13.0R/relnotes.adoc:260
 msgid ""
 "The {{< manpage \"bhyve\" \"8\">}} utility now honors the disabled setting "
-"for MSI-X interrupts for passthrough "
-"devices. gitref:1925586e03b[repository=src] {{< sponsored \"Chelsio "
-"Communications\" >}}"
+"for MSI-X interrupts for passthrough devices. "
+"gitref:1925586e03b[repository=src] {{< sponsored \"Chelsio Communications\" "
+">}}"
 msgstr ""
 
 #. type: Plain text
@@ -734,9 +732,9 @@ msgstr ""
 #: website/content/en/releases/13.0R/relnotes.adoc:264
 msgid ""
 "The {{< manpage \"bhyve\" \"8\">}} utility now has increased the allowed "
-"size for 64bit BAR allocation below 4G from 32 to 128 "
-"MB. gitref:670b364b76d[repository=src] {{< sponsored \"The FreeBSD "
-"Foundation\" >}}"
+"size for 64bit BAR allocation below 4G from 32 to 128 MB. "
+"gitref:670b364b76d[repository=src] {{< sponsored \"The FreeBSD Foundation\" "
+">}}"
 msgstr ""
 
 #. type: Plain text
@@ -750,8 +748,8 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/13.0R/relnotes.adoc:268
 msgid ""
-"The {{< manpage \"bhyve\" \"8\">}} utility now no longer prints "
-"non-printable characters in the smbios.chassis.maker and smbios.system.maker "
+"The {{< manpage \"bhyve\" \"8\">}} utility now no longer prints non-"
+"printable characters in the smbios.chassis.maker and smbios.system.maker "
 "OIDs. gitref:c4fd0cc9ee2[repository=src] {{< sponsored \"Netflix\" >}}"
 msgstr ""
 
@@ -759,8 +757,8 @@ msgstr ""
 #: website/content/en/releases/13.0R/relnotes.adoc:270
 msgid ""
 "The {{< manpage \"bhyve\" \"8\">}} utility now supports TRIM via the VirtIO "
-"block device. gitref:22769bbe30b[repository=src] {{< sponsored \"Klara "
-"Inc.\" >}}"
+"block device. gitref:22769bbe30b[repository=src] {{< sponsored \"Klara Inc."
+"\" >}}"
 msgstr ""
 
 #. type: Plain text
@@ -789,9 +787,9 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/13.0R/relnotes.adoc:278
 msgid ""
-"The {{< manpage \"bhyve\" \"8\">}} utility now supports LA57 guest "
-"mode. gitref:f3eb12e4a6d[repository=src] {{< sponsored \"The FreeBSD "
-"Foundation\" >}}"
+"The {{< manpage \"bhyve\" \"8\">}} utility now supports LA57 guest mode. "
+"gitref:f3eb12e4a6d[repository=src] {{< sponsored \"The FreeBSD Foundation\" "
+">}}"
 msgstr ""
 
 #. type: Plain text
@@ -805,15 +803,15 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/13.0R/relnotes.adoc:282
 msgid ""
-"The {{< manpage \"bhyve\" \"8\">}} utility now advertises 64-bit "
-"physical-address capability. gitref:fb5f5a17ef0[repository=src]"
+"The {{< manpage \"bhyve\" \"8\">}} utility now advertises 64-bit physical-"
+"address capability. gitref:fb5f5a17ef0[repository=src]"
 msgstr ""
 
 #. type: Plain text
 #: website/content/en/releases/13.0R/relnotes.adoc:284
 msgid ""
-"The {{< manpage \"bhyve\" \"8\">}} utility no longer sends ACPI RTC "
-"errors/warnings in some guests. gitref:6a7ff0600bb[repository=src]"
+"The {{< manpage \"bhyve\" \"8\">}} utility no longer sends ACPI RTC errors/"
+"warnings in some guests. gitref:6a7ff0600bb[repository=src]"
 msgstr ""
 
 #. type: Plain text
@@ -838,8 +836,8 @@ msgstr ""
 #: website/content/en/releases/13.0R/relnotes.adoc:290
 msgid ""
 "The {{< manpage \"bhyve\" \"8\">}} utility now exposes kernel-emulated "
-"special devices like LAPIC, IOAPIC, and HPET devices to "
-"userspace. gitref:8a68ae80f67[repository=src] >}}"
+"special devices like LAPIC, IOAPIC, and HPET devices to userspace. "
+"gitref:8a68ae80f67[repository=src] >}}"
 msgstr ""
 
 #. type: Plain text
@@ -847,8 +845,8 @@ msgstr ""
 msgid ""
 "The {{< manpage \"bhyve\" \"8\">}} utility now supports a new bhyve network "
 "backend that allow connecting the VM to the {{< manpage \"netgraph\" "
-"\"4\">}} network. gitref:2cd7735d920[repository=src] {{< sponsored "
-"\"vStack.com\" >}}"
+"\"4\">}} network. gitref:2cd7735d920[repository=src] {{< sponsored \"vStack."
+"com\" >}}"
 msgstr ""
 
 #. type: Plain text
@@ -893,8 +891,8 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/13.0R/relnotes.adoc:304
 msgid ""
-"The {{< manpage \"bhyve\" \"8\">}} utility now PCI HDAudio "
-"device. gitref:7e3c7420615[repository=src]"
+"The {{< manpage \"bhyve\" \"8\">}} utility now PCI HDAudio device. "
+"gitref:7e3c7420615[repository=src]"
 msgstr ""
 
 #. type: Plain text
@@ -923,9 +921,8 @@ msgstr ""
 #: website/content/en/releases/13.0R/relnotes.adoc:312
 msgid ""
 "The {{< manpage \"bhyve\" \"8\">}} utility now supports PS/2 scancodes for "
-"NumLock, ScrollLock and numerical keypad "
-"keys. gitref:6f2d76643e6[repository=src] {{< sponsored \"iXsystems Inc.\" "
-">}}"
+"NumLock, ScrollLock and numerical keypad keys. "
+"gitref:6f2d76643e6[repository=src] {{< sponsored \"iXsystems Inc.\" >}}"
 msgstr ""
 
 #. type: Plain text
