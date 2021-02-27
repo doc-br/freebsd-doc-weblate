@@ -64,9 +64,9 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/9.3R/installation.adoc:23
 msgid ""
-"The link:{handbook}#bsdinstall[Installing FreeBSD] chapter of the "
-"link:{handbook}[FreeBSD Handbook] provides more in-depth information about "
-"the installation program itself, including a guided walk-through with "
+"The link:{handbook}#bsdinstall[Installing FreeBSD] chapter of the link:"
+"{handbook}[FreeBSD Handbook] provides more in-depth information about the "
+"installation program itself, including a guided walk-through with "
 "screenshots."
 msgstr ""
 
@@ -79,9 +79,9 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/9.3R/installation.adoc:28
 msgid ""
-"If you are upgrading from a previous release of FreeBSD, please read "
-"http://www.FreeBSD.org/releases/9.3R/relnotes/#upgrade[upgrading section in "
-"the Release Notes] for notable incompatibilities carefully."
+"If you are upgrading from a previous release of FreeBSD, please read http://"
+"www.FreeBSD.org/releases/9.3R/relnotes/#upgrade[upgrading section in the "
+"Release Notes] for notable incompatibilities carefully."
 msgstr ""
 
 #. type: Title ==
@@ -114,17 +114,17 @@ msgstr ""
 #: website/content/en/releases/9.3R/installation.adoc:38
 msgid ""
 "The man:freebsd-update[8] utility supports binary upgrades of i386 and amd64 "
-"systems running earlier FreeBSD releases. Systems running `8.4-RELEASE`, "
-"`9.[12]-RELEASE`, `9.3-BETA*`, or `9.3-RC*` can upgrade as follows:"
+"systems running earlier FreeBSD releases. Systems running `8.4-RELEASE`, `9."
+"[12]-RELEASE`, `9.3-BETA*`, or `9.3-RC*` can upgrade as follows:"
 msgstr ""
 
 #. type: Plain text
 #: website/content/en/releases/9.3R/installation.adoc:40
 msgid ""
 "First, ensure that your current system is up to date; a change was recently "
-"made to man:freebsd-update[8] (Errata Notice "
-"http://security.FreeBSD.org/advisories/FreeBSD-EN-12:01.freebsd-update.asc[FreeBSD-EN-12:01.freebsd-update]) "
-"which is needed in order to upgrade to FreeBSD 9.3-RELEASE."
+"made to man:freebsd-update[8] (Errata Notice http://security.FreeBSD.org/"
+"advisories/FreeBSD-EN-12:01.freebsd-update.asc[FreeBSD-EN-12:01.freebsd-"
+"update]) which is needed in order to upgrade to FreeBSD 9.3-RELEASE."
 msgstr ""
 
 #. type: delimited block - 4
@@ -138,8 +138,8 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/9.3R/installation.adoc:48
 msgid ""
-"Now the man:freebsd-update[8] utility can fetch bits belonging to "
-"9.3-RELEASE. During this process man:freebsd-update[8] will ask for help in "
+"Now the man:freebsd-update[8] utility can fetch bits belonging to 9.3-"
+"RELEASE. During this process man:freebsd-update[8] will ask for help in "
 "merging configuration files."
 msgstr ""
 
@@ -159,8 +159,8 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/9.3R/installation.adoc:58
 msgid ""
-"The FreeBSD, which previously could appear in either `/boot/kernel` or "
-"`/boot/GENERIC`, now only appears as `/boot/kernel`. As a result, any kernel "
+"The FreeBSD, which previously could appear in either `/boot/kernel` or `/"
+"boot/GENERIC`, now only appears as `/boot/kernel`. As a result, any kernel "
 "appearing in `/boot/GENERIC` will be deleted. Please carefully read the "
 "output printed by man:freebsd-update[8] and confirm that an updated kernel "
 "will be placed into `/boot/kernel` before proceeding beyond this point."
@@ -169,12 +169,12 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/9.3R/installation.adoc:59
 msgid ""
-"The FreeBSD source tree in `/usr/src` (if present) will be "
-"deleted. (Normally the man:freebsd-update[8] utility will update a source "
-"tree, but in this case the changes in release packaging result in the "
-"man:freebsd-update[8] utility not recognizing that the source tree from the "
-"old release and the source tree from the new release correspond to the same "
-"part of FreeBSD.)"
+"The FreeBSD source tree in `/usr/src` (if present) will be deleted. "
+"(Normally the man:freebsd-update[8] utility will update a source tree, but "
+"in this case the changes in release packaging result in the man:freebsd-"
+"update[8] utility not recognizing that the source tree from the old release "
+"and the source tree from the new release correspond to the same part of "
+"FreeBSD.)"
 msgstr ""
 
 #. type: delimited block - 4
@@ -218,10 +218,10 @@ msgstr ""
 #. type: Plain text
 #: website/content/en/releases/9.3R/installation.adoc:82
 msgid ""
-"After updating installed third-party applications (and again, only if "
-"man:freebsd-update[8] printed a message indicating that this was necessary), "
-"run man:freebsd-update[8] again so that it can delete the old (no longer "
-"used) system libraries:"
+"After updating installed third-party applications (and again, only if man:"
+"freebsd-update[8] printed a message indicating that this was necessary), run "
+"man:freebsd-update[8] again so that it can delete the old (no longer used) "
+"system libraries:"
 msgstr ""
 
 #. type: Plain text
