@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-03-14 20:18+0000\n"
+"PO-Revision-Date: 2021-03-14 22:47+0000\n"
 "Last-Translator: Danilo G. Baio <dbaio@FreeBSD.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/articlesleap-seconds_index/pt_BR/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: documentation/content/en/articles/leap-seconds/_index.adoc:6
 #, no-wrap
 msgid "FreeBSD Support for Leap Seconds"
-msgstr ""
+msgstr "Suporte do FreeBSD a Leap Seconds"
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:19
@@ -42,6 +42,10 @@ msgid ""
 "to UTC to synchronize atomic time scales with variations in the rotation of "
 "the Earth. This article describes how FreeBSD interacts with leap seconds."
 msgstr ""
+"Um _leap second_ é o ajuste de um segundo feito em momentos específicos do "
+"ano para sincronizar a escala atômica de tempo do UTC com a variação da "
+"rotação da terra. Esse artigo descreve como o FreeBSD interage com o leap "
+"seconds."
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:28
@@ -50,6 +54,10 @@ msgid ""
 "UTC. This leap second will occur during a business day for North and South "
 "America and the Asia/Pacific region."
 msgstr ""
+"No momento em que este artigo está sendo escrito, a próxima ocorrência do "
+"leap second irá acontecer em 30 de junho de 2015 as 23:59:60 UTC. Esse leap "
+"second ira ocorrer durante um dia útil para as Américas do Norte e do Sul e "
+"a região da Ásia/Pacifico."
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:30
@@ -57,6 +65,9 @@ msgid ""
 "Leap seconds are announced by http://datacenter.iers.org/[IERS] on http://"
 "datacenter.iers.org/web/guest/bulletins/-/somos/5Rgv/product/16[Bulletin C]."
 msgstr ""
+"Leap seconds são anunciados pelo http://datacenter.iers.org/[IERS] no "
+"http://datacenter.iers.org/web/guest/bulletins/-/somos/5Rgv/product/16["
+"Bulletin C]."
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:32
@@ -64,12 +75,14 @@ msgid ""
 "Standard leap second behavior is described in https://tools.ietf.org/html/"
 "rfc7164#section-3[RFC 7164]. Also see man:time2posix[3]."
 msgstr ""
+"O comportamento padrão do leap Seconds é descrito na https://tools.ietf.org/"
+"html/rfc7164#section-3[RFC 7164]. Veja também em man:time2posix[3]."
 
 #. type: Title ==
 #: documentation/content/en/articles/leap-seconds/_index.adoc:34
 #, no-wrap
 msgid "Default Leap Second Handling on FreeBSD"
-msgstr ""
+msgstr "Manipulação padrão do leap seconds no FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:37
@@ -81,6 +94,12 @@ msgid ""
 "time to automatically repeat the last second of the day. No other "
 "adjustments are necessary."
 msgstr ""
+"A maneira mais fácil de manipular o leap seconds é com a regra de tempo "
+"POSIX que é utilizada por padrão pelo FreeBSD, combinada com o link:{handbook"
+"}#network-ntp[NTP]. Quando o man:ntpd[8] está sendo executado e o tempo é "
+"sincronizado com os servidores NTP de upstream que gerenciam o leap seconds "
+"corretamente, o leap second causará a repetição do último segundo do dia de "
+"forma automática. Nenhum outro ajuste será necessário."
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:39
@@ -89,6 +108,9 @@ msgid ""
 "ntpd[8] will step the time by one second after the errant upstream server "
 "has noticed and stepped itself."
 msgstr ""
+"Se os servidores de NTP upstream não gerenciarem o leap seconds "
+"corretamente, o man:ntpd[8] irá avançar em um segundo após o servidor se "
+"corrigir."
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:41
@@ -96,12 +118,14 @@ msgid ""
 "If NTP is not being used, manual adjustment of the system clock will be "
 "required after the leap second has passed."
 msgstr ""
+"Se o NTP não está sendo utilizado, será necessário um ajuste manual do "
+"relógio do sistema apois o leap seconds ter passado."
 
 #. type: Title ==
 #: documentation/content/en/articles/leap-seconds/_index.adoc:43
 #, no-wrap
 msgid "Cautions"
-msgstr ""
+msgstr "Cuidados"
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:46
@@ -110,6 +134,9 @@ msgid ""
 "midnight. In Japan that is mid-morning, in the Pacific mid-day, in the "
 "Americas late afternoon, and in Europe at night."
 msgstr ""
+"Os Leap seconds são inseridos no mesmo instante em todo o mundo a meia noite "
+"UTC. No Japão será no meio da manhã e no Pacífico ao meio dia, nas Américas "
+"a tarde e na Europa à noite."
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:48
@@ -118,6 +145,9 @@ msgid ""
 "service, will work as designed during this leap second, as it did during the "
 "previous ones."
 msgstr ""
+"Nos acreditamos e esperamos que o FreeBSD, se provido de um serviço de NTP "
+"estável, irá funcionar como foi especificado durante o leap second, como "
+"aconteceu nos anteriores."
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:50
@@ -127,6 +157,10 @@ msgid ""
 "are essentially a replay of the second before the leap second, and this is a "
 "surprise to most application programmers."
 msgstr ""
+"Enrtetanto, nós alertamos que praticamente nenhum aplicativo nunca "
+"questionou o kernel sobre leap seconds. Nossa experiência é que, como "
+"projetado, leap seconds são, essencialmente, a repetição do último segundo "
+"antes do leap second, e isso é uma surpresa para a maioria dos programadores."
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:52
@@ -135,6 +169,10 @@ msgid ""
 "second the same way as FreeBSD, and systems without correct and stable NTP "
 "service will not know anything about leap seconds at all."
 msgstr ""
+"Outros sistemas operacionais e computadores podem ou não manipular o leap "
+"seconds da mesma maneira que o FreeBSD e sistemas sem um serviço correto e "
+"estável de NTP não terão conhecimento algum sobre a ocorrência de leap "
+"seconds."
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:54
@@ -143,18 +181,23 @@ msgid ""
 "experience has shown that a large fraction of all public NTP servers might "
 "handle and announce the leap second incorrectly."
 msgstr ""
+"Não é inédito que os computadores travem por causa do leap seconds, e a "
+"experiência mostra que uma grande parte de todos os servidores públicos de "
+"NTP podem manipular e anunciar o leap seconds de forma incorreta."
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:56
 msgid ""
 "Please try to make sure nothing horrible happens because of the leap second."
 msgstr ""
+"Por favor, tente garantir que nada horrível acontecerá por causa do leap "
+"seconds."
 
 #. type: Title ==
 #: documentation/content/en/articles/leap-seconds/_index.adoc:58
 #, no-wrap
 msgid "Testing"
-msgstr ""
+msgstr "Testando"
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:61
@@ -164,12 +207,16 @@ msgid ""
 "major reference clock sources only announce leap seconds one hour ahead of "
 "the event. Query the NTP daemon:"
 msgstr ""
+"É possível testar se um leap seconds será utilizado. Devido a natureza do "
+"NTP, o teste deve funcionar até 24 horas antes do lead seconds. Algumas das "
+"principais fontes de referência de tempo somente anunciam o leap seconds uma "
+"hora antes do evento. Consulte o daemon do NTP:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/leap-seconds/_index.adoc:65
 #, no-wrap
 msgid "% ntpq -c 'rv 0 leap'\n"
-msgstr ""
+msgstr "% ntpq -c 'rv 0 leap'\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:68
@@ -178,6 +225,9 @@ msgid ""
 "second. Before the 24 hours leading up to the leap second, or after the leap "
 "second has passed, `leap_none` will be shown."
 msgstr ""
+"Uma saída que inclua `leap_add_sec` indica o suporte adequado ao leap "
+"second. Antes de 24 horas até a ocorrência do leap second, ou depois dele já "
+"ter ocorrido, a saída do comando irá mostrar `leap_none`."
 
 #. type: Title ==
 #: documentation/content/en/articles/leap-seconds/_index.adoc:70
@@ -192,3 +242,6 @@ msgid ""
 "this overview helps clarify what to expect and how to make the leap second "
 "event proceed more smoothly."
 msgstr ""
+"Na prática, o leap seconds não é um problema do FreeBSD. Esperamos que esta "
+"visão geral, ajude-o a esclarecer oque esperar e como tornar o evento de "
+"leap seconds o menos traumático possível."
