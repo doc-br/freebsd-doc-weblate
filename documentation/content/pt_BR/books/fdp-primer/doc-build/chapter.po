@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
-"POT-Creation-Date: 2021-02-21 18:54-0300\n"
+"POT-Creation-Date: 2021-03-14 11:02-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -72,21 +72,27 @@ msgid ""
 "|Electronic Publication. ePub file format.\n"
 msgstr ""
 
-#. type: Plain text
+#. type: Title ===
 #: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:52
+#, no-wrap
+msgid "Rendering to html"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:55
 msgid ""
-"To render the documentation and the website use one of the following "
-"examples."
+"To render the documentation and the website to `html` use one of the "
+"following examples."
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:54
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:57
 #, no-wrap
 msgid "Build the documentation"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:61
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:64
 #, no-wrap
 msgid ""
 "% cd ~/doc/documentation\n"
@@ -94,13 +100,13 @@ msgid ""
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:65
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:68
 #, no-wrap
 msgid "Build the website"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:72
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:75
 #, no-wrap
 msgid ""
 "% cd ~/doc/website\n"
@@ -108,92 +114,113 @@ msgid ""
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:76
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:79
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:97
 #, no-wrap
 msgid "Build the entire documentation project"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:83
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:86
 #, no-wrap
 msgid ""
 "% cd ~/doc\n"
 "% make -j2\n"
 msgstr ""
 
+#. type: Title ===
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:90
+#, no-wrap
+msgid "Rendering to pdf"
+msgstr ""
+
+#. type: delimited block = 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:95
+msgid ""
+"To generate a document in `pdf` format use this command.  In this example "
+"the English Handbook will be used.  In order to export the document "
+"correctly all the extensions should be passed used the `-r` argument."
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:103
+#, no-wrap
+msgid "asciidoctor-pdf -r ./shared/lib/man-macro.rb -r ./shared/lib/git-macro.rb -r ./shared/lib/packages-macro.rb -r ./shared/lib/inter-document-references-macro.rb -r ./shared/lib/sectnumoffset-treeprocessor.rb --doctype=book -a skip-front-matter -a pdf-theme=./themes/default-pdf-theme.yml content/en/books/handbook/book.adoc\n"
+msgstr ""
+
 #. type: Title ==
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:87
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:107
 #, no-wrap
 msgid "The FreeBSD Documentation Build Toolset"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:90
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:110
 msgid "These are the tools used to build and install the FDP documentation."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:92
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:112
 msgid "The primary build tool is man:make[1], specifically Berkeley Make."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:93
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:113
 msgid ""
 "Python is used to generate the Table of Contents and other related Tables."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:94
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:114
 msgid "Hugo"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:95
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:115
 msgid "AsciiDoctor"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:96
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:116
 msgid "Git"
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:98
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:118
 #, no-wrap
 msgid "Understanding the Makefile in the Documentation Tree"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:101
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:121
 msgid ""
 "There are three [.filename]#Makefile# files for building some or all of the "
 "documentation project."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:103
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:123
 msgid ""
 "The [.filename]#Makefile# in the [.filename]#documentation# directory will "
 "build only the documentation."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:104
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:124
 msgid ""
 "The [.filename]#Makefile# in the [.filename]#website# directory will build "
 "only the website."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:105
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:125
 msgid ""
 "The [.filename]#Makefile# at the top of the tree will build both the "
 "documentation and the website."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:107
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:127
 msgid ""
 "The [.filename]#Makefile# appearing in subdirectories also support `make "
 "run` to serve built content with Hugo's internal webserver. This webserver "
@@ -201,18 +228,18 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:109
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:129
 #, no-wrap
 msgid "Documentation Makefile"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:112
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:132
 msgid "This [.filename]#Makefile# takes the following form:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:129
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:149
 #, no-wrap
 msgid ""
 "# Generate the FreeBSD documentation\n"
@@ -232,14 +259,14 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:131
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:197
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:151
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:217
 #, no-wrap
 msgid "MAINTAINER=carlavilla@FreeBSD.org <.>\n"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:135
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:155
 #, no-wrap
 msgid ""
 "PYTHON_CMD =\t/usr/local/bin/python3 <.>\n"
@@ -248,14 +275,14 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:137
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:202
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:157
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:222
 #, no-wrap
 msgid ".ORDER: all run<.>\n"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:141
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:161
 #, no-wrap
 msgid ""
 ".ORDER: starting-message generate-books-toc\n"
@@ -264,13 +291,13 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:143
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:163
 #, no-wrap
 msgid "all: starting-message generate-books-toc build <.>\n"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:148
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:168
 #, no-wrap
 msgid ""
 "starting-message: .PHONY <.>\n"
@@ -280,7 +307,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:155
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:175
 #, no-wrap
 msgid ""
 "generate-books-toc: .PHONY <.>\n"
@@ -292,8 +319,8 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:158
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:219
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:178
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:239
 #, no-wrap
 msgid ""
 "run: .PHONY <.>\n"
@@ -301,7 +328,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:161
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:181
 #, no-wrap
 msgid ""
 "build: .PHONY <.>\n"
@@ -309,7 +336,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:173
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:193
 msgid ""
 "<.> The `MAINTAINER` flag specifies who is the maintainer of this Makefile.  "
 "<.> `PYTHON_CMD` flag specifies the location of the Python binary.  <.> "
@@ -327,18 +354,18 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:175
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:195
 #, no-wrap
 msgid "Website Makefile"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:178
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:198
 msgid "This [.filename]#Makefile# takes the form of:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:195
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:215
 #, no-wrap
 msgid ""
 "# Generate the FreeBSD website\n"
@@ -358,7 +385,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:200
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:220
 #, no-wrap
 msgid ""
 "PYTHON_CMD =\t/usr/local/bin/python3 <.>\n"
@@ -366,7 +393,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:206
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:226
 #, no-wrap
 msgid ""
 ".ORDER: starting-message generate-releases\n"
@@ -375,13 +402,13 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:208
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:228
 #, no-wrap
 msgid "all: starting-message generate-releases run <.>\n"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:213
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:233
 #, no-wrap
 msgid ""
 "starting-message: .PHONY <.>\n"
@@ -391,7 +418,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:216
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:236
 #, no-wrap
 msgid ""
 "generate-releases: .PHONY <.>\n"
@@ -399,7 +426,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:222
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:242
 #, no-wrap
 msgid ""
 "build: .PHONY <.>\n"
@@ -407,7 +434,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:232
+#: documentation/content/en/books/fdp-primer/doc-build/chapter.adoc:252
 msgid ""
 "<.> The `MAINTAINER` flag specifies who is the maintainer of this Makefile.  "
 "<.> `PYTHON_CMD` flag specifies the location of the Python binary.  <.> "
