@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
-"POT-Creation-Date: 2021-02-21 18:54-0300\n"
+"POT-Creation-Date: 2021-03-14 11:02-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -96,7 +96,8 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/linuxemu/_index.adoc:66
-msgid "Know how to install crossref:ports[ports,additional third-party software]."
+msgid ""
+"Know how to install crossref:ports[ports,additional third-party software]."
 msgstr ""
 
 #. type: Title ==
@@ -156,8 +157,8 @@ msgstr ""
 #: documentation/content/en/books/handbook/linuxemu/_index.adoc:97
 msgid ""
 "The package:emulators/linux_base-c7[] package or port is the easiest way to "
-"install a base set of Linux(R) libraries and binaries on a FreeBSD "
-"system. To install the port:"
+"install a base set of Linux(R) libraries and binaries on a FreeBSD system. "
+"To install the port:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -169,8 +170,8 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/linuxemu/_index.adoc:104
 msgid ""
-"For Linux(R) compatibility to be enabled at boot time, add this line to "
-"[.filename]#/etc/rc.conf#:"
+"For Linux(R) compatibility to be enabled at boot time, add this line to [."
+"filename]#/etc/rc.conf#:"
 msgstr ""
 
 #. type: delimited block . 4
@@ -191,18 +192,48 @@ msgstr ""
 msgid ""
 "Since the Linux(R) binary compatibility layer has gained support for running "
 "both 32- and 64-bit Linux(R) binaries (on 64-bit x86 hosts), it is no longer "
-"possible to link the emulation functionality statically into a custom "
-"kernel."
+"possible to link the emulation functionality statically into a custom kernel."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:115
+msgid ""
+"For some applications, [.filename]#/compat/linux/proc#, [.filename]#/compat/"
+"linux/sys#, and [.filename]#/compat/linux/dev/shm# may need to be mounted. "
+"Add this line to [.filename]#/etc/fstab#:"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:120
+#, no-wrap
+msgid ""
+"linprocfs  /compat/linux/proc     linprocfs   rw            0   0\n"
+"linsysfs   /compat/linux/sys      linsysfs    rw            0   0\n"
+"tmpfs      /compat/linux/dev/shm  tmpfs       rw,mode=1777  0   0\n"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:123
+msgid "Then mount the filesystem accordingly:"
+msgstr ""
+
+#. type: delimited block - 4
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:129
+#, no-wrap
+msgid ""
+"# mount /compat/linux/sys\n"
+"# mount /compat/linux/proc\n"
+"# mount /compat/linux/dev/shm\n"
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:115
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:132
 #, no-wrap
 msgid "Installing Additional Libraries Manually"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:118
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:135
 msgid ""
 "If a Linux(R) application complains about missing shared libraries after "
 "configuring Linux(R) binary compatibility, determine which shared libraries "
@@ -210,7 +241,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:120
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:137
 msgid ""
 "From a Linux(R) system, `ldd` can be used to determine which shared "
 "libraries the application needs. For example, to check which shared "
@@ -219,7 +250,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:127
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:144
 #, no-wrap
 msgid ""
 "% ldd linuxdoom\n"
@@ -229,7 +260,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:130
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:147
 msgid ""
 "Then, copy all the files in the last column of the output from the Linux(R) "
 "system into [.filename]#/compat/linux# on the FreeBSD system. Once copied, "
@@ -238,7 +269,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:139
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:156
 #, no-wrap
 msgid ""
 "/compat/linux/usr/X11/lib/libXt.so.3.1.0\n"
@@ -250,7 +281,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:142
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:159
 msgid ""
 "If a Linux(R) shared library already exists with a matching major revision "
 "number to the first column of the `ldd` output, it does not need to be "
@@ -261,12 +292,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:144
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:161
 msgid "For example, these libraries already exist on the FreeBSD system:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:149
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:166
 #, no-wrap
 msgid ""
 "/compat/linux/lib/libc.so.4.6.27\n"
@@ -274,27 +305,27 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:152
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:169
 msgid "and `ldd` indicates that a binary requires a later version:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:156
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:173
 #, no-wrap
 msgid "libc.so.4 (DLL Jump 4.5pl26) -> libc.so.4.6.29\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:159
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:176
 msgid ""
 "Since the existing library is only one or two versions out of date in the "
-"last digit, the program should still work with the slightly older "
-"version. However, it is safe to replace the existing [.filename]#libc.so# "
-"with the newer version:"
+"last digit, the program should still work with the slightly older version. "
+"However, it is safe to replace the existing [.filename]#libc.so# with the "
+"newer version:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:164
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:181
 #, no-wrap
 msgid ""
 "/compat/linux/lib/libc.so.4.6.29\n"
@@ -302,7 +333,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:167
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:184
 msgid ""
 "Generally, one will need to look for the shared libraries that Linux(R) "
 "binaries depend on only the first few times that a Linux(R) program is "
@@ -312,20 +343,20 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:168
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:185
 #, no-wrap
 msgid "Installing Linux(R) ELF Binaries"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:171
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:188
 msgid ""
 "ELF binaries sometimes require an extra step. When an unbranded ELF binary "
 "is executed, it will generate an error message:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:177
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:194
 #, no-wrap
 msgid ""
 "% ./my-linux-elf-binary\n"
@@ -334,41 +365,41 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:180
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:197
 msgid ""
 "To help the FreeBSD kernel distinguish between a FreeBSD ELF binary and a "
 "Linux(R) binary, use man:brandelf[1]:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:184
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:201
 #, no-wrap
 msgid "% brandelf -t Linux my-linux-elf-binary\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:187
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:204
 msgid ""
 "Since the GNU toolchain places the appropriate branding information into ELF "
 "binaries automatically, this step is usually not necessary."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:188
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:205
 #, no-wrap
 msgid "Installing a Linux(R) RPM Based Application"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:191
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:208
 msgid ""
-"To install a Linux(R) RPM-based application, first install the "
-"package:archivers/rpm4[] package or port. Once installed, `root` can use "
-"this command to install a [.filename]#.rpm#:"
+"To install a Linux(R) RPM-based application, first install the package:"
+"archivers/rpm4[] package or port. Once installed, `root` can use this "
+"command to install a [.filename]#.rpm#:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:196
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:213
 #, no-wrap
 msgid ""
 "# cd /compat/linux\n"
@@ -376,25 +407,25 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:199
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:216
 msgid ""
 "If necessary, `brandelf` the installed ELF binaries. Note that this will "
 "prevent a clean uninstall."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:200
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:217
 #, no-wrap
 msgid "Configuring the Hostname Resolver"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:203
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:220
 msgid "If DNS does not work or this error appears:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:208
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:225
 #, no-wrap
 msgid ""
 "resolv+: \"bind\" is an invalid keyword resolv+:\n"
@@ -402,12 +433,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:211
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:228
 msgid "configure [.filename]#/compat/linux/etc/host.conf# as follows:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:216
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:233
 #, no-wrap
 msgid ""
 "order hosts, bind\n"
@@ -415,7 +446,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:219
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:236
 msgid ""
 "This specifies that [.filename]#/etc/hosts# is searched first and DNS is "
 "searched second. When [.filename]#/compat/linux/etc/host.conf# does not "
@@ -425,29 +456,29 @@ msgid ""
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:221
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:238
 #, no-wrap
 msgid "Advanced Topics"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:224
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:241
 msgid ""
 "This section describes how Linux(R) binary compatibility works and is based "
-"on an email written to {freebsd-chat} by Terry Lambert "
-"mailto:tlambert@primenet.com[tlambert@primenet.com] (Message ID: "
-"`<199906020108.SAA07001@usr09.primenet.com>`)."
+"on an email written to {freebsd-chat} by Terry Lambert mailto:"
+"tlambert@primenet.com[tlambert@primenet.com] (Message ID: `<199906020108."
+"SAA07001@usr09.primenet.com>`)."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:226
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:243
 msgid ""
 "FreeBSD has an abstraction called an \"execution class loader\". This is a "
 "wedge into the man:execve[2] system call."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:228
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:245
 msgid ""
 "Historically, the UNIX(R) loader examined the magic number (generally the "
 "first 4 or 8 bytes of the file) to see if it was a binary known to the "
@@ -455,7 +486,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:230
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:247
 msgid ""
 "If it was not the binary type for the system, the man:execve[2] call "
 "returned a failure, and the shell attempted to start executing it as shell "
@@ -463,21 +494,21 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:232
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:249
 msgid ""
 "Later, a hack was made for man:sh[1] to examine the first two characters, "
 "and if they were `:\\n`, it invoked the man:csh[1] shell instead."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:234
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:251
 msgid ""
 "FreeBSD has a list of loaders, instead of a single loader, with a fallback "
 "to the `#!` loader for running shell interpreters or shell scripts."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:236
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:253
 msgid ""
 "For the Linux(R) ABI support, FreeBSD sees the magic number as an ELF "
 "binary. The ELF loader looks for a specialized _brand_, which is a comment "
@@ -486,20 +517,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:238
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:255
 msgid ""
 "For Linux(R) binaries to function, they must be _branded_ as type `Linux` "
 "using man:brandelf[1]:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:242
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:259
 #, no-wrap
 msgid "# brandelf -t Linux file\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:245
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:262
 msgid ""
 "When the ELF loader sees the `Linux` brand, the loader replaces a pointer in "
 "the `proc` structure. All system calls are indexed through this pointer. In "
@@ -509,14 +540,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:247
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:264
 msgid ""
 "The Linux(R) system call vector contains, among other things, a list of "
 "`sysent[]` entries whose addresses reside in the kernel module."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:249
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:266
 msgid ""
 "When a system call is called by the Linux(R) binary, the trap code "
 "dereferences the system call function pointer off the `proc` structure, and "
@@ -524,7 +555,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:251
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:268
 msgid ""
 "Linux(R) mode dynamically _reroots_ lookups. This is, in effect, equivalent "
 "to `union` to file system mounts. First, an attempt is made to lookup the "
@@ -533,13 +564,13 @@ msgid ""
 "require other binaries can run. For example, the Linux(R) toolchain can all "
 "run under Linux(R) ABI support. It also means that the Linux(R) binaries can "
 "load and execute FreeBSD binaries, if there are no corresponding Linux(R) "
-"binaries present, and that a man:uname[1] command can be placed in the "
-"[.filename]#/compat/linux# directory tree to ensure that the Linux(R) "
-"binaries cannot tell they are not running on Linux(R)."
+"binaries present, and that a man:uname[1] command can be placed in the [."
+"filename]#/compat/linux# directory tree to ensure that the Linux(R) binaries "
+"cannot tell they are not running on Linux(R)."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:253
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:270
 msgid ""
 "In effect, there is a Linux(R) kernel in the FreeBSD kernel. The various "
 "underlying functions that implement all of the services provided by the "
@@ -553,11 +584,11 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/linuxemu/_index.adoc:254
+#: documentation/content/en/books/handbook/linuxemu/_index.adoc:271
 msgid ""
 "Technically, this is not really emulation, it is an ABI implementation. It "
 "is sometimes called \"Linux(R) emulation\" because the implementation was "
-"done at a time when there was no other word to describe what was going "
-"on. Saying that FreeBSD ran Linux(R) binaries was not true, since the code "
-"was not compiled in."
+"done at a time when there was no other word to describe what was going on. "
+"Saying that FreeBSD ran Linux(R) binaries was not true, since the code was "
+"not compiled in."
 msgstr ""
