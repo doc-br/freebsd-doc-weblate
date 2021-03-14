@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
-"POT-Creation-Date: 2021-02-21 18:54-0300\n"
+"POT-Creation-Date: 2021-03-14 11:02-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -468,41 +468,54 @@ msgstr ""
 msgid "% make validate\n"
 msgstr ""
 
+#. type: Plain text
+#: documentation/content/en/books/porters-handbook/security/chapter.adoc:203
+msgid ""
+"The previous command generates the [.filename]#vuln-flat.xml# file. It can "
+"also be generated with:"
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/porters-handbook/security/chapter.adoc:207
+#, no-wrap
+msgid "% make vuln-flat.xml\n"
+msgstr ""
+
 #. type: delimited block = 4
-#: documentation/content/en/books/porters-handbook/security/chapter.adoc:204
+#: documentation/content/en/books/porters-handbook/security/chapter.adoc:212
 msgid ""
 "At least one of these packages needs to be installed: package:textproc/"
 "libxml2[], package:textproc/jade[]."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/porters-handbook/security/chapter.adoc:207
+#: documentation/content/en/books/porters-handbook/security/chapter.adoc:215
 msgid ""
 "Verify that the `<affected>` section of the entry will match the correct "
 "packages:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/porters-handbook/security/chapter.adoc:211
+#: documentation/content/en/books/porters-handbook/security/chapter.adoc:219
 #, no-wrap
-msgid "% pkg audit -f ${PORTSDIR}/security/vuxml/vuln.xml dropbear-2013.58\n"
+msgid "% pkg audit -f ${PORTSDIR}/security/vuxml/vuln-flat.xml dropbear-2013.58\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/porters-handbook/security/chapter.adoc:214
+#: documentation/content/en/books/porters-handbook/security/chapter.adoc:222
 msgid "Make sure that the entry produces no spurious matches in the output."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/porters-handbook/security/chapter.adoc:216
+#: documentation/content/en/books/porters-handbook/security/chapter.adoc:224
 msgid "Now check whether the right package versions are matched by the entry:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/porters-handbook/security/chapter.adoc:225
+#: documentation/content/en/books/porters-handbook/security/chapter.adoc:233
 #, no-wrap
 msgid ""
-"% pkg audit -f ${PORTSDIR}/security/vuxml/vuln.xml dropbear-2013.58 dropbear-2013.59\n"
+"% pkg audit -f ${PORTSDIR}/security/vuxml/vuln-flat.xml dropbear-2013.58 dropbear-2013.59\n"
 "dropbear-2012.58 is vulnerable:\n"
 "dropbear -- exposure of sensitive information, DoS\n"
 "CVE: CVE-2013-4434\n"
@@ -511,12 +524,12 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/porters-handbook/security/chapter.adoc:227
+#: documentation/content/en/books/porters-handbook/security/chapter.adoc:235
 #, no-wrap
 msgid "1 problem(s) in the installed packages found.\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/porters-handbook/security/chapter.adoc:229
+#: documentation/content/en/books/porters-handbook/security/chapter.adoc:237
 msgid "The former version matches while the latter one does not."
 msgstr ""
