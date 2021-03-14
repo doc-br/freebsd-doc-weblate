@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
-"POT-Creation-Date: 2021-02-27 11:44-0300\n"
+"POT-Creation-Date: 2021-03-14 11:02-0300\n"
 "PO-Revision-Date: 2021-02-24 00:32+0000\n"
 "Last-Translator: Danilo G. Baio <dbaio@FreeBSD.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
@@ -5190,8 +5190,66 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/security/_index.adoc:2127
+#: documentation/content/en/books/handbook/security/_index.adoc:2128
 msgid ""
 "The `sudoreplay` is extremely extendable. Consult the documentation for more "
 "information."
+msgstr ""
+
+#. type: Title ==
+#: documentation/content/en/books/handbook/security/_index.adoc:2130
+#, no-wrap
+msgid "Using doas as an alternative to sudo"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/handbook/security/_index.adoc:2133
+msgid ""
+"As an alternative to package:security/sudo[] package:security/doas[] can be "
+"used to provide the ability for users to get enhanced privileges."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/handbook/security/_index.adoc:2135
+msgid ""
+"The doas utility is available via the ports collection in package:security/"
+"doas[] or via the man:pkg[8] utility."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/handbook/security/_index.adoc:2137
+msgid ""
+"After the installation [.filename]#/usr/local/etc/doas.conf# must be "
+"configured to grant access for users for specific commands, or roles."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/handbook/security/_index.adoc:2139
+msgid ""
+"The simpliest entry could be the following, which grants local_user root "
+"permissions without asking for its password when executing the doas command."
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/handbook/security/_index.adoc:2143
+#, no-wrap
+msgid "permit nopass local_user as root\n"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/handbook/security/_index.adoc:2146
+msgid "For more configuration examples, please read man:doas.conf[5]."
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/handbook/security/_index.adoc:2148
+msgid ""
+"After the installation and configuration of the `doas` utility, a command "
+"can now be executed with enhanced privileges, like for example."
+msgstr ""
+
+#. type: delimited block . 4
+#: documentation/content/en/books/handbook/security/_index.adoc:2152
+#, no-wrap
+msgid "$ doas vi /etc/rc.conf\n"
 msgstr ""
