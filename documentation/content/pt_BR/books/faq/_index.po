@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
-"POT-Creation-Date: 2021-02-27 11:44-0300\n"
+"POT-Creation-Date: 2021-03-14 11:02-0300\n"
 "PO-Revision-Date: 2021-02-24 00:32+0000\n"
 "Last-Translator: Danilo G. Baio <dbaio@FreeBSD.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
@@ -4744,11 +4744,10 @@ msgstr ""
 msgid ""
 "There are two schools of thought on how to start man:xdm[1]. One school "
 "starts `xdm` from [.filename]#/etc/ttys# (see man:ttys[5]) using the "
-"supplied example, while the other runs `xdm` from [.filename]#rc.local# (see "
-"man:rc[8]) or from an [.filename]#X# script in [.filename]#/usr/local/etc/rc."
-"d#. Both are equally valid, and one may work in situations where the other "
-"does not. In both cases the result is the same: X will pop up a graphical "
-"login prompt."
+"supplied example, while the other sets `xdm_enable=yes` in [.filename]#/etc/"
+"rc.conf#. Both are equally valid, and one may work in situations where the "
+"other does not. In both cases the result is the same: X will pop up a "
+"graphical login prompt."
 msgstr ""
 
 #. type: Plain text
@@ -4763,42 +4762,18 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1798
 msgid ""
-"If loaded from man:rc[8], `xdm` should be started without any arguments. "
-"`xdm` must start _after_ man:getty[8] runs, or else `getty` and `xdm` will "
-"conflict, locking out the console. The best way around this is to have the "
-"script sleep 10 seconds or so then launch `xdm`."
-msgstr ""
-
-#. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1800
-msgid ""
-"When starting `xdm` from [.filename]#/etc/ttys#, there still is a chance of "
-"conflict between `xdm` and man:getty[8]. One way to avoid this is to add the "
-"`vt` number in [.filename]#/usr/local/lib/X11/xdm/Xservers#:"
-msgstr ""
-
-#. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:1804
-#, no-wrap
-msgid ":0 local /usr/local/bin/X vt4\n"
-msgstr ""
-
-#. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1807
-msgid ""
-"The above example will direct the X server to run in [.filename]#/dev/"
-"ttyv3#. Note the number is offset by one. The X server counts the vty from "
-"one, whereas the FreeBSD kernel numbers the vty from zero."
+"When using the man:rc[8] method, `xdm_tty` (default `ttyv8`) can be set in [."
+"filename]#/etc/rc.conf# to choose which vty man:xdm[1] opens on."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:1809
+#: documentation/content/en/books/faq/_index.adoc:1800
 #, no-wrap
 msgid "Why do I get Couldn't open console when I run xconsole?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1812
+#: documentation/content/en/books/faq/_index.adoc:1803
 msgid ""
 "When X is started with `startx`, the permissions on [.filename]#/dev/"
 "console# will _not_ get changed, resulting in things like `xterm -C` and "
@@ -4806,7 +4781,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1814
+#: documentation/content/en/books/faq/_index.adoc:1805
 msgid ""
 "This is because of the way console permissions are set by default. On a "
 "multi-user system, one does not necessarily want just any user to be able to "
@@ -4815,46 +4790,46 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1816
+#: documentation/content/en/books/faq/_index.adoc:1807
 msgid ""
 "In a nutshell, make sure an uncommented line of the form is in [.filename]#/"
 "etc/fbtab# (see man:fbtab[5]):"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:1820
+#: documentation/content/en/books/faq/_index.adoc:1811
 #, no-wrap
 msgid "/dev/ttyv0 0600 /dev/console\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1823
+#: documentation/content/en/books/faq/_index.adoc:1814
 msgid ""
 "It will ensure that whomever logs in on [.filename]#/dev/ttyv0# will own the "
 "console."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:1825
+#: documentation/content/en/books/faq/_index.adoc:1816
 #, no-wrap
 msgid "Why does my PS/2 mouse misbehave under X?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1828
+#: documentation/content/en/books/faq/_index.adoc:1819
 msgid ""
 "The mouse and the mouse driver may have become out of synchronization. In "
 "rare cases, the driver may also erroneously report synchronization errors:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:1832
+#: documentation/content/en/books/faq/_index.adoc:1823
 #, no-wrap
 msgid "psmintr: out of sync (xxxx != yyyy)\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1835
+#: documentation/content/en/books/faq/_index.adoc:1826
 msgid ""
 "If this happens, disable the synchronization check code by setting the "
 "driver flags for the PS/2 mouse driver to `0x100`. This can be easiest "
@@ -4863,79 +4838,79 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:1837
+#: documentation/content/en/books/faq/_index.adoc:1828
 #, no-wrap
 msgid "How do I reverse the mouse buttons?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1840
+#: documentation/content/en/books/faq/_index.adoc:1831
 msgid ""
 "Type `xmodmap -e \"pointer = 3 2 1\"`. Add this command to [.filename]#~/."
 "xinitrc# or [.filename]#~/.xsession# to make it happen automatically."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:1842
+#: documentation/content/en/books/faq/_index.adoc:1833
 #, no-wrap
 msgid "How do I install a splash screen and where do I find them?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1845
+#: documentation/content/en/books/faq/_index.adoc:1836
 msgid ""
 "The detailed answer for this question can be found in the link:{handbook}"
 "#boot-splash/[Boot Time Splash Screens] section of the FreeBSD Handbook."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:1847
+#: documentation/content/en/books/faq/_index.adoc:1838
 #, no-wrap
 msgid "Can I use the kbd:[Windows] keys on my keyboard in X?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1850
+#: documentation/content/en/books/faq/_index.adoc:1841
 msgid ""
 "Yes. Use man:xmodmap[1] to define which functions the keys should perform."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1852
+#: documentation/content/en/books/faq/_index.adoc:1843
 msgid ""
 "Assuming all Windows keyboards are standard, the keycodes for these three "
 "keys are the following:"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1854
+#: documentation/content/en/books/faq/_index.adoc:1845
 msgid ""
 "115 - kbd:[Windows] key, between the left-hand kbd:[Ctrl] and kbd:[Alt] keys"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1855
+#: documentation/content/en/books/faq/_index.adoc:1846
 msgid "116 - kbd:[Windows] key, to the right of kbd:[AltGr]"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1856
+#: documentation/content/en/books/faq/_index.adoc:1847
 msgid "117 - kbd:[Menu], to the left of the right-hand kbd:[Ctrl]"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1858
+#: documentation/content/en/books/faq/_index.adoc:1849
 msgid "To have the left kbd:[Windows] key print a comma, try this."
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:1862
+#: documentation/content/en/books/faq/_index.adoc:1853
 #, no-wrap
 msgid "# xmodmap -e \"keycode 115 = comma\"\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1865
+#: documentation/content/en/books/faq/_index.adoc:1856
 msgid ""
 "To have the kbd:[Windows] key-mappings enabled automatically every time X is "
 "started, either put the `xmodmap` commands in [.filename]#~/.xinitrc# or, "
@@ -4945,13 +4920,13 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:1869
+#: documentation/content/en/books/faq/_index.adoc:1860
 #, no-wrap
 msgid "xmodmap $HOME/.xmodmaprc\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1872
+#: documentation/content/en/books/faq/_index.adoc:1863
 msgid ""
 "For example, to map the 3 keys to be kbd:[F13], kbd:[F14], and kbd:[F15], "
 "respectively. This would make it easy to map them to useful functions within "
@@ -4959,12 +4934,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1874
+#: documentation/content/en/books/faq/_index.adoc:1865
 msgid "To do this, put the following in [.filename]#~/.xmodmaprc#."
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:1880
+#: documentation/content/en/books/faq/_index.adoc:1871
 #, no-wrap
 msgid ""
 "keycode 115 = F13\n"
@@ -4973,7 +4948,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1883
+#: documentation/content/en/books/faq/_index.adoc:1874
 msgid ""
 "For the package:x11-wm/fvwm2[] desktop manager, one could map the keys so "
 "that kbd:[F13] iconifies or de-iconifies the window the cursor is in, kbd:"
@@ -4984,14 +4959,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1885
+#: documentation/content/en/books/faq/_index.adoc:1876
 msgid ""
 "The following entries in [.filename]#~/.fvwmrc# implement the aforementioned "
 "setup:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:1891
+#: documentation/content/en/books/faq/_index.adoc:1882
 #, no-wrap
 msgid ""
 "Key F13        FTIWS    A        Iconify\n"
@@ -5000,13 +4975,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:1894
+#: documentation/content/en/books/faq/_index.adoc:1885
 #, no-wrap
 msgid "How can I get 3D hardware acceleration for OpenGL(R)?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1897
+#: documentation/content/en/books/faq/_index.adoc:1888
 msgid ""
 "The availability of 3D acceleration depends on the version of Xorg and the "
 "type of video chip. For an nVidia chip, use the binary drivers provided for "
@@ -5014,19 +4989,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1899
+#: documentation/content/en/books/faq/_index.adoc:1890
 msgid ""
 "The latest versions of nVidia cards are supported by the package:x11/nvidia-"
 "driver[] port."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1901
+#: documentation/content/en/books/faq/_index.adoc:1892
 msgid "Older drivers are available as package:x11/nvidia-driver-[]"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1903
+#: documentation/content/en/books/faq/_index.adoc:1894
 msgid ""
 "nVidia provides detailed information on which card is supported by which "
 "driver on their web site: http://www.nvidia.com/object/IO_32667.html[http://"
@@ -5034,31 +5009,31 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1905
+#: documentation/content/en/books/faq/_index.adoc:1896
 msgid ""
 "For Matrox G200/G400, check the package:x11-drivers/xf86-video-mga[] port."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1907
+#: documentation/content/en/books/faq/_index.adoc:1898
 msgid ""
 "For ATI Rage 128 and Radeon see man:ati[4], man:r128[4] and man:radeon[4]."
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/books/faq/_index.adoc:1909
+#: documentation/content/en/books/faq/_index.adoc:1900
 #, no-wrap
 msgid "Networking"
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:1912
+#: documentation/content/en/books/faq/_index.adoc:1903
 #, no-wrap
 msgid "Where can I get information on diskless booting?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1915
+#: documentation/content/en/books/faq/_index.adoc:1906
 msgid ""
 "\"Diskless booting\" means that the FreeBSD box is booted over a network, "
 "and reads the necessary files from a server instead of its hard disk. For "
@@ -5067,13 +5042,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:1917
+#: documentation/content/en/books/faq/_index.adoc:1908
 #, no-wrap
 msgid "Can a FreeBSD box be used as a dedicated network router?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1920
+#: documentation/content/en/books/faq/_index.adoc:1911
 msgid ""
 "Yes. Refer to the Handbook entry on link:{handbook}#advanced-networking/"
 "[advanced networking], specifically the section on link:{handbook}#network-"
@@ -5081,13 +5056,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:1922
+#: documentation/content/en/books/faq/_index.adoc:1913
 #, no-wrap
 msgid "Does FreeBSD support NAT or Masquerading?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1925
+#: documentation/content/en/books/faq/_index.adoc:1916
 msgid ""
 "Yes. For instructions on how to use NAT over a PPP connection, see the link:"
 "{handbook}#userppp/[Handbook entry on PPP]. To use NAT over some other sort "
@@ -5096,69 +5071,69 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:1927
+#: documentation/content/en/books/faq/_index.adoc:1918
 #, no-wrap
 msgid "How can I set up Ethernet aliases?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1930
+#: documentation/content/en/books/faq/_index.adoc:1921
 msgid ""
 "If the alias is on the same subnet as an address already configured on the "
 "interface, add `netmask 0xffffffff` to this command:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:1934
+#: documentation/content/en/books/faq/_index.adoc:1925
 #, no-wrap
 msgid "# ifconfig ed0 alias 192.0.2.2 netmask 0xffffffff\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1937
+#: documentation/content/en/books/faq/_index.adoc:1928
 msgid "Otherwise, specify the network address and netmask as usual:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:1941
+#: documentation/content/en/books/faq/_index.adoc:1932
 #, no-wrap
 msgid "# ifconfig ed0 alias 172.16.141.5 netmask 0xffffff00\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1944
+#: documentation/content/en/books/faq/_index.adoc:1935
 msgid ""
 "More information can be found in the FreeBSD link:{handbook}#configtuning-"
 "virtual-hosts/[Handbook]."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:1946
+#: documentation/content/en/books/faq/_index.adoc:1937
 #, no-wrap
 msgid "Why can I not NFS-mount from a Linux(R) box?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1949
+#: documentation/content/en/books/faq/_index.adoc:1940
 msgid ""
 "Some versions of the Linux(R) NFS code only accept mount requests from a "
 "privileged port; try to issue the following command:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:1953
+#: documentation/content/en/books/faq/_index.adoc:1944
 #, no-wrap
 msgid "# mount -o -P linuxbox:/blah /mnt\n"
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:1956
+#: documentation/content/en/books/faq/_index.adoc:1947
 #, no-wrap
 msgid "Why does mountd keep telling me it can't change attributes and that I have a bad exports list on my FreeBSD NFS server?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1959
+#: documentation/content/en/books/faq/_index.adoc:1950
 msgid ""
 "The most frequent problem is not understanding the correct format of [."
 "filename]#/etc/exports#. Review man:exports[5] and the link:{handbook}"
@@ -5167,75 +5142,75 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:1961
+#: documentation/content/en/books/faq/_index.adoc:1952
 #, no-wrap
 msgid "How do I enable IP multicast support?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1964
+#: documentation/content/en/books/faq/_index.adoc:1955
 msgid ""
 "Install the package:net/mrouted[] package or port and add `mrouted_enable="
 "\"YES\"` to [.filename]#/etc/rc.conf# start this service at boot time."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:1966
+#: documentation/content/en/books/faq/_index.adoc:1957
 #, no-wrap
 msgid "Why do I have to use the FQDN for hosts on my site?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1969
+#: documentation/content/en/books/faq/_index.adoc:1960
 msgid "See the answer in the FreeBSD link:{handbook}#mail-trouble/[Handbook]."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:1971
+#: documentation/content/en/books/faq/_index.adoc:1962
 #, no-wrap
 msgid "Why do I get an error, Permission denied, for all networking operations?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1974
+#: documentation/content/en/books/faq/_index.adoc:1965
 msgid ""
 "If the kernel is compiled with the `IPFIREWALL` option, be aware that the "
 "default policy is to deny all packets that are not explicitly allowed."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1976
+#: documentation/content/en/books/faq/_index.adoc:1967
 msgid ""
 "If the firewall is unintentionally misconfigured, restore network "
 "operability by typing the following as `root`:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:1980
+#: documentation/content/en/books/faq/_index.adoc:1971
 #, no-wrap
 msgid "# ipfw add 65534 allow all from any to any\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1983
+#: documentation/content/en/books/faq/_index.adoc:1974
 msgid "Consider setting `firewall_type=\"open\"` in [.filename]#/etc/rc.conf#."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1985
+#: documentation/content/en/books/faq/_index.adoc:1976
 msgid ""
 "For further information on configuring this firewall, see the link:{handbook}"
 "#firewalls-ipfw/[Handbook chapter]."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:1987
+#: documentation/content/en/books/faq/_index.adoc:1978
 #, no-wrap
 msgid "Why is my `ipfw` “fwd” rule to redirect a service to another machine not working?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1990
+#: documentation/content/en/books/faq/_index.adoc:1981
 msgid ""
 "Possibly because network address translation (NAT) is needed instead of just "
 "forwarding packets. A \"fwd\" rule only forwards packets, it does not "
@@ -5243,13 +5218,13 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:1994
+#: documentation/content/en/books/faq/_index.adoc:1985
 #, no-wrap
 msgid "01000 fwd 10.0.0.1 from any to foo 21\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1997
+#: documentation/content/en/books/faq/_index.adoc:1988
 msgid ""
 "When a packet with a destination address of _foo_ arrives at the machine "
 "with this rule, the packet is forwarded to _10.0.0.1_, but it still has the "
@@ -5261,7 +5236,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:1999
+#: documentation/content/en/books/faq/_index.adoc:1990
 msgid ""
 "See the <<service-redirect,FAQ about redirecting services>>, the man:natd[8] "
 "manual, or one of the several port redirecting utilities in the link:https://"
@@ -5269,13 +5244,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2001
+#: documentation/content/en/books/faq/_index.adoc:1992
 #, no-wrap
 msgid "How can I redirect service requests from one machine to another?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2004
+#: documentation/content/en/books/faq/_index.adoc:1995
 msgid ""
 "FTP and other service requests can be redirected with the package:sysutils/"
 "socket[] package or port. Replace the entry for the service in [.filename]#/"
@@ -5283,26 +5258,26 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:2008
+#: documentation/content/en/books/faq/_index.adoc:1999
 #, no-wrap
 msgid "ftp stream tcp nowait nobody /usr/local/bin/socket socket ftp.example.com ftp\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2011
+#: documentation/content/en/books/faq/_index.adoc:2002
 msgid ""
 "where _ftp.example.com_ and _ftp_ are the host and port to redirect to, "
 "respectively."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2013
+#: documentation/content/en/books/faq/_index.adoc:2004
 #, no-wrap
 msgid "Where can I get a bandwidth management tool?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2016
+#: documentation/content/en/books/faq/_index.adoc:2007
 msgid ""
 "There are three bandwidth management tools available for FreeBSD. man:"
 "dummynet[4] is integrated into FreeBSD as part of man:ipfw[4]. http://www."
@@ -5312,13 +5287,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2018
+#: documentation/content/en/books/faq/_index.adoc:2009
 #, no-wrap
 msgid "Why do I get /dev/bpf0: device not configured?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2021
+#: documentation/content/en/books/faq/_index.adoc:2012
 msgid ""
 "The running application requires the Berkeley Packet Filter (man:bpf[4]), "
 "but it was removed from a custom kernel. Add this to the kernel config file "
@@ -5326,19 +5301,19 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:2025
+#: documentation/content/en/books/faq/_index.adoc:2016
 #, no-wrap
 msgid "device bpf        # Berkeley Packet Filter\n"
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2028
+#: documentation/content/en/books/faq/_index.adoc:2019
 #, no-wrap
 msgid "How do I mount a disk from a Windows(R) machine that is on my network, like smbmount in Linux(R)?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2031
+#: documentation/content/en/books/faq/_index.adoc:2022
 msgid ""
 "Use the SMBFS toolset. It includes a set of kernel modifications and a set "
 "of userland programs. The programs and information are available as man:"
@@ -5346,13 +5321,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2033
+#: documentation/content/en/books/faq/_index.adoc:2024
 #, no-wrap
 msgid "What are these messages about: Limiting icmp/open port/closed port response in my log files?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2036
+#: documentation/content/en/books/faq/_index.adoc:2027
 msgid ""
 "This kernel message indicates that some activity is provoking it to send a "
 "large amount of ICMP or TCP reset (RST) responses. ICMP responses are often "
@@ -5363,21 +5338,21 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2038
+#: documentation/content/en/books/faq/_index.adoc:2029
 msgid ""
 "Brute-force denial of service (DoS) attacks (as opposed to single-packet "
 "attacks which exploit a specific vulnerability)."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2039
+#: documentation/content/en/books/faq/_index.adoc:2030
 msgid ""
 "Port scans which attempt to connect to a large number of ports (as opposed "
 "to only trying a few well-known ports)."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2041
+#: documentation/content/en/books/faq/_index.adoc:2032
 msgid ""
 "The first number in the message indicates how many packets the kernel would "
 "have sent if the limit was not in place, and the second indicates the limit. "
@@ -5386,26 +5361,26 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:2045
+#: documentation/content/en/books/faq/_index.adoc:2036
 #, no-wrap
 msgid "# sysctl net.inet.icmp.icmplim=300\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2048
+#: documentation/content/en/books/faq/_index.adoc:2039
 msgid ""
 "To disable these messages without disabling response limiting, use `net.inet."
 "icmp.icmplim_output` to disable the output:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:2052
+#: documentation/content/en/books/faq/_index.adoc:2043
 #, no-wrap
 msgid "# sysctl net.inet.icmp.icmplim_output=0\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2055
+#: documentation/content/en/books/faq/_index.adoc:2046
 msgid ""
 "Finally, to disable response limiting completely, set `net.inet.icmp."
 "icmplim` to `0`. Disabling response limiting is discouraged for the reasons "
@@ -5413,13 +5388,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2057
+#: documentation/content/en/books/faq/_index.adoc:2048
 #, no-wrap
 msgid "What are these arp: unknown hardware address format error messages?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2060
+#: documentation/content/en/books/faq/_index.adoc:2051
 msgid ""
 "This means that some device on the local Ethernet is using a MAC address in "
 "a format that FreeBSD does not recognize. This is probably caused by someone "
@@ -5429,31 +5404,31 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2062
+#: documentation/content/en/books/faq/_index.adoc:2053
 #, no-wrap
 msgid "Why do I keep seeing messages like: 192.168.0.10 is on fxp1 but got reply from 00:15:17:67:cf:82 on rl0, and how do I disable it?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2065
+#: documentation/content/en/books/faq/_index.adoc:2056
 msgid ""
 "A packet is coming from outside the network unexpectedly. To disable them, "
 "set `net.link.ether.inet.log_arp_wrong_iface` to `0`."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2067
+#: documentation/content/en/books/faq/_index.adoc:2058
 #, no-wrap
 msgid "How do I compile an IPv6 only kernel?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2070
+#: documentation/content/en/books/faq/_index.adoc:2061
 msgid "Configure your kernel with these settings:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:2078
+#: documentation/content/en/books/faq/_index.adoc:2069
 #, no-wrap
 msgid ""
 "include GENERIC\n"
@@ -5464,24 +5439,24 @@ msgid ""
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/books/faq/_index.adoc:2081
+#: documentation/content/en/books/faq/_index.adoc:2072
 #, no-wrap
 msgid "Security"
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2084
+#: documentation/content/en/books/faq/_index.adoc:2075
 #, no-wrap
 msgid "What is a sandbox?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2087
+#: documentation/content/en/books/faq/_index.adoc:2078
 msgid "\"Sandbox\" is a security term. It can mean two things:"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2089
+#: documentation/content/en/books/faq/_index.adoc:2080
 msgid ""
 "A process which is placed inside a set of virtual walls that are designed to "
 "prevent someone who breaks into the process from being able to break into "
@@ -5489,7 +5464,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2091
+#: documentation/content/en/books/faq/_index.adoc:2082
 msgid ""
 "  The process is only able to run inside the walls. Since nothing the "
 "process does in regards to executing code is supposed to be able to breach "
@@ -5498,14 +5473,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2093
+#: documentation/content/en/books/faq/_index.adoc:2084
 msgid ""
 "  The walls might be a user ID, for example. This is the definition used in "
 "the man:security[7] and man:named[8] man pages."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2095
+#: documentation/content/en/books/faq/_index.adoc:2086
 msgid ""
 "  Take the `ntalk` service, for example (see man:inetd[8]). This service "
 "used to run as user ID `root`. Now it runs as user ID `tty`. The `tty` user "
@@ -5515,7 +5490,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2096
+#: documentation/content/en/books/faq/_index.adoc:2087
 msgid ""
 "A process which is placed inside a simulation of the machine. It means that "
 "someone who is able to break into the process may believe that he can break "
@@ -5524,7 +5499,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2098
+#: documentation/content/en/books/faq/_index.adoc:2089
 msgid ""
 "  The most common way to accomplish this is to build a simulated environment "
 "in a subdirectory and then run the processes in that directory chrooted so "
@@ -5533,7 +5508,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2100
+#: documentation/content/en/books/faq/_index.adoc:2091
 msgid ""
 "  Another common use is to mount an underlying file system read-only and "
 "then create a file system layer on top of it that gives a process a "
@@ -5543,28 +5518,28 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2102
+#: documentation/content/en/books/faq/_index.adoc:2093
 msgid ""
 "  An attempt is made to make this sort of sandbox so transparent that the "
 "user (or hacker) does not realize that he is sitting in it."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2104
+#: documentation/content/en/books/faq/_index.adoc:2095
 msgid ""
 "UNIX(R) implements two core sandboxes. One is at the process level, and one "
 "is at the userid level."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2106
+#: documentation/content/en/books/faq/_index.adoc:2097
 msgid ""
 "Every UNIX(R) process is completely firewalled off from every other UNIX(R) "
 "process. One process cannot modify the address space of another."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2108
+#: documentation/content/en/books/faq/_index.adoc:2099
 msgid ""
 "A UNIX(R) process is owned by a particular userid. If the user ID is not the "
 "`root` user, it serves to firewall the process off from processes owned by "
@@ -5572,13 +5547,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2110
+#: documentation/content/en/books/faq/_index.adoc:2101
 #, no-wrap
 msgid "What is securelevel?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2113
+#: documentation/content/en/books/faq/_index.adoc:2104
 msgid ""
 "`securelevel` is a security mechanism implemented in the kernel. When the "
 "securelevel is positive, the kernel restricts certain tasks; not even the "
@@ -5587,46 +5562,46 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2115
+#: documentation/content/en/books/faq/_index.adoc:2106
 msgid "Unset certain file flags, such as `schg` (the system immutable flag)."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2116
+#: documentation/content/en/books/faq/_index.adoc:2107
 msgid ""
 "Write to kernel memory via [.filename]#/dev/mem# and [.filename]#/dev/kmem#."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2117
+#: documentation/content/en/books/faq/_index.adoc:2108
 msgid "Load kernel modules."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2118
+#: documentation/content/en/books/faq/_index.adoc:2109
 msgid "Alter firewall rules."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2120
+#: documentation/content/en/books/faq/_index.adoc:2111
 msgid "To check the status of the securelevel on a running system:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:2124
+#: documentation/content/en/books/faq/_index.adoc:2115
 #, no-wrap
 msgid "# sysctl -n kern.securelevel\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2127
+#: documentation/content/en/books/faq/_index.adoc:2118
 msgid ""
 "The output contains the current value of the securelevel. If it is greater "
 "than 0, at least some of the securelevel's protections are enabled."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2129
+#: documentation/content/en/books/faq/_index.adoc:2120
 msgid ""
 "The securelevel of a running system cannot be lowered as this would defeat "
 "its purpose. If a task requires that the securelevel be non-positive, change "
@@ -5635,21 +5610,21 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2131
+#: documentation/content/en/books/faq/_index.adoc:2122
 msgid ""
 "For more information on securelevel and the specific things all the levels "
 "do, consult man:init[8]."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2136
+#: documentation/content/en/books/faq/_index.adoc:2127
 msgid ""
 "Securelevel is not a silver bullet; it has many known deficiencies. More "
 "often than not, it provides a false sense of security."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2138
+#: documentation/content/en/books/faq/_index.adoc:2129
 msgid ""
 "One of its biggest problems is that in order for it to be at all effective, "
 "all files used in the boot process up until the securelevel is set must be "
@@ -5664,7 +5639,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2140
+#: documentation/content/en/books/faq/_index.adoc:2131
 msgid ""
 "This point and others are often discussed on the mailing lists, particularly "
 "the {freebsd-security}. Search the archives link:https://www.FreeBSD.org/"
@@ -5673,13 +5648,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2143
+#: documentation/content/en/books/faq/_index.adoc:2134
 #, no-wrap
 msgid "What is this UID 0 toor account? Have I been compromised?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2146
+#: documentation/content/en/books/faq/_index.adoc:2137
 msgid ""
 "Do not worry. `toor` is an \"alternative\" superuser account, where toor is "
 "root spelled backwards. It is intended to be used with a non-standard shell "
@@ -5694,7 +5669,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2148
+#: documentation/content/en/books/faq/_index.adoc:2139
 msgid ""
 "Some people use `toor` for day-to-day `root` tasks with a non-standard "
 "shell, leaving `root`, with a standard shell, for single-user mode or "
@@ -5704,37 +5679,37 @@ msgid ""
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/books/faq/_index.adoc:2150
+#: documentation/content/en/books/faq/_index.adoc:2141
 #, no-wrap
 msgid "Serial Communications"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2153
+#: documentation/content/en/books/faq/_index.adoc:2144
 msgid ""
 "This section answers common questions about serial communications with "
 "FreeBSD."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2155
+#: documentation/content/en/books/faq/_index.adoc:2146
 #, no-wrap
 msgid "How do I get the boot: prompt to show on the serial console?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2158
+#: documentation/content/en/books/faq/_index.adoc:2149
 msgid "See link:{handbook}#serialconsole-setup/[this section of the Handbook]."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2160
+#: documentation/content/en/books/faq/_index.adoc:2151
 #, no-wrap
 msgid "How do I tell if FreeBSD found my serial ports or modem cards?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2163
+#: documentation/content/en/books/faq/_index.adoc:2154
 msgid ""
 "As the FreeBSD kernel boots, it will probe for the serial ports for which "
 "the kernel is configured. Either watch the boot messages closely or run this "
@@ -5742,7 +5717,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:2171
+#: documentation/content/en/books/faq/_index.adoc:2162
 #, no-wrap
 msgid ""
 "% grep -E '^(sio|uart)[0-9]' < /var/run/dmesg.boot\n"
@@ -5753,7 +5728,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2174
+#: documentation/content/en/books/faq/_index.adoc:2165
 msgid ""
 "This example shows two serial ports. The first is on IRQ4, port address "
 "`0x3f8`, and has a 16550A-type UART chip. The second uses the same kind of "
@@ -5763,7 +5738,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2176
+#: documentation/content/en/books/faq/_index.adoc:2167
 msgid ""
 "The [.filename]#GENERIC# kernel includes support for two serial ports using "
 "the same IRQ and port address settings in the above example. If these "
@@ -5773,13 +5748,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2178
+#: documentation/content/en/books/faq/_index.adoc:2169
 #, no-wrap
 msgid "How do I access the serial ports on FreeBSD? (x86-specific)"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2181
+#: documentation/content/en/books/faq/_index.adoc:2172
 msgid ""
 "The third serial port, [.filename]#sio2#, or [.filename]#COM3#, is on [."
 "filename]#/dev/cuad2# for dial-out devices, and on [.filename]#/dev/ttyd2# "
@@ -5788,7 +5763,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2183
+#: documentation/content/en/books/faq/_index.adoc:2174
 msgid ""
 "When opening [.filename]#/dev/ttydX# in blocking mode, a process will wait "
 "for the corresponding [.filename]#cuadX# device to become inactive, and then "
@@ -5802,13 +5777,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2185
+#: documentation/content/en/books/faq/_index.adoc:2176
 #, no-wrap
 msgid "How do I enable support for a multi-port serial card?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2188
+#: documentation/content/en/books/faq/_index.adoc:2179
 msgid ""
 "The section on kernel configuration provides information about configuring "
 "the kernel. For a multi-port serial card, place an man:sio[4] line for each "
@@ -5819,20 +5794,20 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:2192
+#: documentation/content/en/books/faq/_index.adoc:2183
 #, no-wrap
 msgid "options COM_MULTIPORT\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2195
+#: documentation/content/en/books/faq/_index.adoc:2186
 msgid ""
 "The following [.filename]#/boot/device.hints# example is for an AST 4-port "
 "serial card on IRQ 12:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:2211
+#: documentation/content/en/books/faq/_index.adoc:2202
 #, no-wrap
 msgid ""
 "hint.sio.4.at=\"isa\"\n"
@@ -5851,33 +5826,33 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2214
+#: documentation/content/en/books/faq/_index.adoc:2205
 msgid ""
 "The flags indicate that the master port has minor number `7` (`0x700`), and "
 "all the ports share an IRQ (`0x001`)."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2216
+#: documentation/content/en/books/faq/_index.adoc:2207
 #, no-wrap
 msgid "Can I set the default serial parameters for a port?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2219
+#: documentation/content/en/books/faq/_index.adoc:2210
 msgid ""
 "See the link:{handbook}#serial/#serial-hw-config[Serial Communications] "
 "section in the FreeBSD Handbook."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2221
+#: documentation/content/en/books/faq/_index.adoc:2212
 #, no-wrap
 msgid "Why can I not run tip or cu?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2224
+#: documentation/content/en/books/faq/_index.adoc:2215
 msgid ""
 "The built-in man:tip[1] and man:cu[1] utilities can only access the [."
 "filename]#/var/spool/lock# directory via user `uucp` and group `dialer`. Use "
@@ -5886,14 +5861,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2226
+#: documentation/content/en/books/faq/_index.adoc:2217
 msgid ""
 "Alternatively, everyone can be configured to run man:tip[1] and man:cu[1] by "
 "typing:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:2231
+#: documentation/content/en/books/faq/_index.adoc:2222
 #, no-wrap
 msgid ""
 "# chmod 4511 /usr/bin/cu\n"
@@ -5901,19 +5876,19 @@ msgid ""
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/books/faq/_index.adoc:2234
+#: documentation/content/en/books/faq/_index.adoc:2225
 #, no-wrap
 msgid "Miscellaneous Questions"
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2237
+#: documentation/content/en/books/faq/_index.adoc:2228
 #, no-wrap
 msgid "FreeBSD uses a lot of swap space even when the computer has free memory left. Why?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2240
+#: documentation/content/en/books/faq/_index.adoc:2231
 msgid ""
 "FreeBSD will proactively move entirely idle, unused pages of main memory "
 "into swap in order to make more main memory available for active use. This "
@@ -5921,7 +5896,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2242
+#: documentation/content/en/books/faq/_index.adoc:2233
 msgid ""
 "Note that while FreeBSD is proactive in this regard, it does not arbitrarily "
 "decide to swap pages when the system is truly idle. Thus, the system will "
@@ -5929,13 +5904,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2244
+#: documentation/content/en/books/faq/_index.adoc:2235
 #, no-wrap
 msgid "Why does top show very little free memory even when I have very few programs running?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2247
+#: documentation/content/en/books/faq/_index.adoc:2238
 msgid ""
 "The simple answer is that free memory is wasted memory. Any memory that "
 "programs do not actively allocate is used within the FreeBSD kernel as disk "
@@ -5947,13 +5922,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2249
+#: documentation/content/en/books/faq/_index.adoc:2240
 #, no-wrap
 msgid "Why will `chmod` not change the permissions on symlinks?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2252
+#: documentation/content/en/books/faq/_index.adoc:2243
 msgid ""
 "Symlinks do not have permissions, and by default, man:chmod[1] will follow "
 "symlinks to change the permissions on the source file, if possible. For the "
@@ -5962,18 +5937,18 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:2256
+#: documentation/content/en/books/faq/_index.adoc:2247
 #, no-wrap
 msgid "% chmod g-w bar\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2259
+#: documentation/content/en/books/faq/_index.adoc:2250
 msgid "However, the permissions on [.filename]#bar# will not have changed."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2261
+#: documentation/content/en/books/faq/_index.adoc:2252
 msgid ""
 "When changing modes of the file hierarchies rooted in the files instead of "
 "the files themselves, use either `-H` or `-L` together with `-R` to make "
@@ -5981,7 +5956,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2266
+#: documentation/content/en/books/faq/_index.adoc:2257
 msgid ""
 "`-R` does a _recursive_ man:chmod[1]. Be careful about specifying "
 "directories or symlinks to directories to man:chmod[1]. To change the "
@@ -5993,33 +5968,33 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:2270
+#: documentation/content/en/books/faq/_index.adoc:2261
 #, no-wrap
 msgid "% chmod 555 foo/\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2273
+#: documentation/content/en/books/faq/_index.adoc:2264
 msgid ""
 "With the trailing slash, man:chmod[1] will follow the symlink, [."
 "filename]#foo#, to change the permissions of the directory, [.filename]#bar#."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2276
+#: documentation/content/en/books/faq/_index.adoc:2267
 #, no-wrap
 msgid "Can I run DOS binaries under FreeBSD?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2279
+#: documentation/content/en/books/faq/_index.adoc:2270
 msgid ""
 "Yes. A DOS emulation program, package:emulators/doscmd[], is available in "
 "the FreeBSD Ports Collection."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2281
+#: documentation/content/en/books/faq/_index.adoc:2272
 msgid ""
 "If doscmd will not suffice, package:emulators/pcemu[] emulates an 8088 and "
 "enough BIOS services to run many DOS text-mode applications. It requires the "
@@ -6027,7 +6002,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2283
+#: documentation/content/en/books/faq/_index.adoc:2274
 msgid ""
 "The Ports Collection also has package:emulators/dosbox[]. The main focus of "
 "this application is emulating old DOS games using the local file system for "
@@ -6035,26 +6010,26 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2285
+#: documentation/content/en/books/faq/_index.adoc:2276
 #, no-wrap
 msgid "What do I need to do to translate a FreeBSD document into my native language?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2288
+#: documentation/content/en/books/faq/_index.adoc:2279
 msgid ""
 "See the link:{fdp-primer}#translations/[Translation FAQ] in the FreeBSD "
 "Documentation Project Primer."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2290
+#: documentation/content/en/books/faq/_index.adoc:2281
 #, no-wrap
 msgid "Why does my email to any address at FreeBSD.org bounce?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2293
+#: documentation/content/en/books/faq/_index.adoc:2284
 msgid ""
 "The `FreeBSD.org` mail system implements some Postfix checks on incoming "
 "mail and rejects mail that is either from misconfigured relays or otherwise "
@@ -6062,40 +6037,40 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2295
+#: documentation/content/en/books/faq/_index.adoc:2286
 msgid ""
 "The IP address of the SMTP client must \"reverse-resolve\" to a forward "
 "confirmed hostname."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2296
+#: documentation/content/en/books/faq/_index.adoc:2287
 msgid ""
 "The fully-qualified hostname given in the SMTP conversation (either HELO or "
 "EHLO) must resolve to the IP address of the client."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2298
+#: documentation/content/en/books/faq/_index.adoc:2289
 msgid "Other advice to help mail reach its destination include:"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2300
+#: documentation/content/en/books/faq/_index.adoc:2291
 msgid ""
 "Mail should be sent in plain text, and messages sent to mailing lists should "
 "generally be no more than 200KB in length."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2301
+#: documentation/content/en/books/faq/_index.adoc:2292
 msgid ""
 "Avoid excessive cross posting. Choose _one_ mailing list which seems most "
 "relevant and send it there."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2303
+#: documentation/content/en/books/faq/_index.adoc:2294
 msgid ""
 "If you still have trouble with email infrastructure at `FreeBSD.org`, send a "
 "note with the details to mailto:postmaster@freebsd.org[postmaster@freebsd."
@@ -6105,13 +6080,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2305
+#: documentation/content/en/books/faq/_index.adoc:2296
 #, no-wrap
 msgid "Where can I find a free FreeBSD account?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2308
+#: documentation/content/en/books/faq/_index.adoc:2299
 msgid ""
 "While FreeBSD does not provide open access to any of their servers, others "
 "do provide open access UNIX(R) systems. The charge varies and limited "
@@ -6119,7 +6094,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2310
+#: documentation/content/en/books/faq/_index.adoc:2301
 msgid ""
 "http://www.arbornet.org/[Arbornet, Inc], also known as _M-Net_, has been "
 "providing open access to UNIX(R) systems since 1983. Starting on an Altos "
@@ -6132,13 +6107,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2312
+#: documentation/content/en/books/faq/_index.adoc:2303
 #, no-wrap
 msgid "What is the cute little red guy's name?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2315
+#: documentation/content/en/books/faq/_index.adoc:2306
 msgid ""
 "He does not have one, and is just called \"the BSD daemon\". If you insist "
 "upon using a name, call him \"beastie\". Note that \"beastie\" is pronounced "
@@ -6146,20 +6121,20 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2317
+#: documentation/content/en/books/faq/_index.adoc:2308
 msgid ""
 "More about the BSD daemon is available on his http://www.mckusick.com/"
 "beastie/index.html[home page]."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2319
+#: documentation/content/en/books/faq/_index.adoc:2310
 #, no-wrap
 msgid "Can I use the BSD daemon image?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2322
+#: documentation/content/en/books/faq/_index.adoc:2313
 msgid ""
 "Perhaps. The BSD daemon is copyrighted by Marshall Kirk McKusick. Check his "
 "http://www.mckusick.com/beastie/mainpage/copyright.html[Statement on the Use "
@@ -6167,7 +6142,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2324
+#: documentation/content/en/books/faq/_index.adoc:2315
 msgid ""
 "In summary, the image can be used in a tasteful manner, for personal use, so "
 "long as appropriate credit is given. Before using the logo commercially, "
@@ -6176,37 +6151,37 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2326
+#: documentation/content/en/books/faq/_index.adoc:2317
 #, no-wrap
 msgid "Do you have any BSD daemon images I could use?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2329
+#: documentation/content/en/books/faq/_index.adoc:2320
 msgid ""
 "Xfig and eps drawings are available under [.filename]#/usr/share/examples/"
 "BSD_daemon/#."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2331
+#: documentation/content/en/books/faq/_index.adoc:2322
 #, no-wrap
 msgid "I have seen an acronym or other term on the mailing lists and I do not understand what it means. Where should I look?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2334
+#: documentation/content/en/books/faq/_index.adoc:2325
 msgid "Refer to the link:{handbook}#freebsd-glossary/[FreeBSD Glossary]."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2336
+#: documentation/content/en/books/faq/_index.adoc:2327
 #, no-wrap
 msgid "Why should I care what color the bikeshed is?"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2339
+#: documentation/content/en/books/faq/_index.adoc:2330
 msgid ""
 "The really, really short answer is that you should not. The somewhat longer "
 "answer is that just because you are capable of building a bikeshed does not "
@@ -6218,7 +6193,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2341
+#: documentation/content/en/books/faq/_index.adoc:2332
 msgid ""
 "The longer and more complete answer is that after a very long argument about "
 "whether man:sleep[1] should take fractional second arguments, {phk} posted a "
@@ -6228,12 +6203,12 @@ msgid ""
 msgstr ""
 
 #. type: delimited block * 4
-#: documentation/content/en/books/faq/_index.adoc:2344
+#: documentation/content/en/books/faq/_index.adoc:2335
 msgid "“What is it about this bike shed?” Some of you have asked me."
 msgstr ""
 
 #. type: delimited block * 4
-#: documentation/content/en/books/faq/_index.adoc:2346
+#: documentation/content/en/books/faq/_index.adoc:2337
 msgid ""
 "It is a long story, or rather it is an old story, but it is quite short "
 "actually. C. Northcote Parkinson wrote a book in the early 1960s, called "
@@ -6242,14 +6217,14 @@ msgid ""
 msgstr ""
 
 #. type: delimited block * 4
-#: documentation/content/en/books/faq/_index.adoc:2350
+#: documentation/content/en/books/faq/_index.adoc:2341
 msgid ""
 "In the specific example involving the bike shed, the other vital component "
 "is an atomic power-plant, I guess that illustrates the age of the book."
 msgstr ""
 
 #. type: delimited block * 4
-#: documentation/content/en/books/faq/_index.adoc:2352
+#: documentation/content/en/books/faq/_index.adoc:2343
 msgid ""
 "Parkinson shows how you can go into the board of directors and get approval "
 "for building a multi-million or even billion dollar atomic power plant, but "
@@ -6258,7 +6233,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block * 4
-#: documentation/content/en/books/faq/_index.adoc:2354
+#: documentation/content/en/books/faq/_index.adoc:2345
 msgid ""
 "Parkinson explains that this is because an atomic plant is so vast, so "
 "expensive and so complicated that people cannot grasp it, and rather than "
@@ -6269,7 +6244,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block * 4
-#: documentation/content/en/books/faq/_index.adoc:2356
+#: documentation/content/en/books/faq/_index.adoc:2347
 msgid ""
 "A bike shed on the other hand. Anyone can build one of those over a weekend, "
 "and still have time to watch the game on TV. So no matter how well prepared, "
@@ -6279,7 +6254,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block * 4
-#: documentation/content/en/books/faq/_index.adoc:2358
+#: documentation/content/en/books/faq/_index.adoc:2349
 msgid ""
 "In Denmark we call it “setting your fingerprint”. It is about personal pride "
 "and prestige, it is about being able to point somewhere and say “There! I "
@@ -6288,25 +6263,25 @@ msgid ""
 msgstr ""
 
 #. type: delimited block * 4
-#: documentation/content/en/books/faq/_index.adoc:2360
+#: documentation/content/en/books/faq/_index.adoc:2351
 msgid ""
 "--Poul-Henning Kamp <phk@FreeBSD.org> on freebsd-hackers, October 2, 1999"
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/books/faq/_index.adoc:2363
+#: documentation/content/en/books/faq/_index.adoc:2354
 #, no-wrap
 msgid "The FreeBSD Funnies"
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2366
+#: documentation/content/en/books/faq/_index.adoc:2357
 #, no-wrap
 msgid "How cool is FreeBSD?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2370
+#: documentation/content/en/books/faq/_index.adoc:2361
 msgid ""
 "Q::Has anyone done any temperature testing while running FreeBSD? I know "
 "Linux(R) runs cooler than DOS, but have never seen a mention of FreeBSD. It "
@@ -6314,14 +6289,14 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
+#: documentation/content/en/books/faq/_index.adoc:2361
 #: documentation/content/en/books/faq/_index.adoc:2370
-#: documentation/content/en/books/faq/_index.adoc:2379
 #, no-wrap
 msgid "A"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2371
+#: documentation/content/en/books/faq/_index.adoc:2362
 msgid ""
 "No, but we have done numerous taste tests on blindfolded volunteers who have "
 "also had 250 micrograms of LSD-25 administered beforehand. 35% of the "
@@ -6335,7 +6310,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2373
+#: documentation/content/en/books/faq/_index.adoc:2364
 msgid ""
 "Seriously, FreeBSD uses the HLT (halt) instruction when the system is idle "
 "thus lowering its energy consumption and therefore the heat it generates. "
@@ -6344,19 +6319,19 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2375
+#: documentation/content/en/books/faq/_index.adoc:2366
 #, no-wrap
 msgid "Who is scratching in my memory banks??"
 msgstr ""
 
 #. type: Labeled list
-#: documentation/content/en/books/faq/_index.adoc:2378
+#: documentation/content/en/books/faq/_index.adoc:2369
 #, no-wrap
 msgid "Q"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2379
+#: documentation/content/en/books/faq/_index.adoc:2370
 msgid ""
 "Is there anything \"odd\" that FreeBSD does when compiling the kernel which "
 "would cause the memory to make a scratchy sound? When compiling (and for a "
@@ -6365,7 +6340,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2380
+#: documentation/content/en/books/faq/_index.adoc:2371
 msgid ""
 "Yes! You will see frequent references to \"daemons\" in the BSD "
 "documentation, and what most people do not know is that this refers to "
@@ -6376,7 +6351,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2382
+#: documentation/content/en/books/faq/_index.adoc:2373
 msgid ""
 "If the noise gets to you, a good `fdisk /mbr` from DOS will get rid of them, "
 "but do not be surprised if they react adversely and try to stop you. In "
@@ -6390,67 +6365,67 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2384
+#: documentation/content/en/books/faq/_index.adoc:2375
 #, no-wrap
 msgid "How many FreeBSD hackers does it take to change a lightbulb?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2387
+#: documentation/content/en/books/faq/_index.adoc:2378
 msgid "One thousand, one hundred and sixty-nine:"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2389
+#: documentation/content/en/books/faq/_index.adoc:2380
 msgid "Twenty-three to complain to -CURRENT about the lights being out;"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2391
+#: documentation/content/en/books/faq/_index.adoc:2382
 msgid ""
 "Four to claim that it is a configuration problem, and that such matters "
 "really belong on -questions;"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2393
+#: documentation/content/en/books/faq/_index.adoc:2384
 msgid ""
 "Three to submit PRs about it, one of which is misfiled under doc and "
 "consists only of \"it's dark\";"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2395
+#: documentation/content/en/books/faq/_index.adoc:2386
 msgid ""
 "One to commit an untested lightbulb which breaks buildworld, then back it "
 "out five minutes later;"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2397
+#: documentation/content/en/books/faq/_index.adoc:2388
 msgid ""
 "Eight to flame the PR originators for not including patches in their PRs;"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2399
+#: documentation/content/en/books/faq/_index.adoc:2390
 msgid "Five to complain about buildworld being broken;"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2401
+#: documentation/content/en/books/faq/_index.adoc:2392
 msgid ""
 "Thirty-one to answer that it works for them, and they must have updated at a "
 "bad time;"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2403
+#: documentation/content/en/books/faq/_index.adoc:2394
 msgid "One to post a patch for a new lightbulb to -hackers;"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2405
+#: documentation/content/en/books/faq/_index.adoc:2396
 msgid ""
 "One to complain that he had patches for this three years ago, but when he "
 "sent them to -CURRENT they were just ignored, and he has had bad experiences "
@@ -6458,7 +6433,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2407
+#: documentation/content/en/books/faq/_index.adoc:2398
 msgid ""
 "Thirty-seven to scream that lightbulbs do not belong in the base system, "
 "that committers have no right to do things like this without consulting the "
@@ -6466,22 +6441,22 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2409
+#: documentation/content/en/books/faq/_index.adoc:2400
 msgid "Two hundred to complain about the color of the bicycle shed;"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2411
+#: documentation/content/en/books/faq/_index.adoc:2402
 msgid "Three to point out that the patch breaks man:style[9];"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2413
+#: documentation/content/en/books/faq/_index.adoc:2404
 msgid "Seventeen to complain that the proposed new lightbulb is under GPL;"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2415
+#: documentation/content/en/books/faq/_index.adoc:2406
 msgid ""
 "Five hundred and eighty-six to engage in a flame war about the comparative "
 "advantages of the GPL, the BSD license, the MIT license, the NPL, and the "
@@ -6489,61 +6464,61 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2417
+#: documentation/content/en/books/faq/_index.adoc:2408
 msgid "Seven to move various portions of the thread to -chat and -advocacy;"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2419
+#: documentation/content/en/books/faq/_index.adoc:2410
 msgid ""
 "One to commit the suggested lightbulb, even though it shines dimmer than the "
 "old one;"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2421
+#: documentation/content/en/books/faq/_index.adoc:2412
 msgid ""
 "Two to back it out with a furious flame of a commit message, arguing that "
 "FreeBSD is better off in the dark than with a dim lightbulb;"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2423
+#: documentation/content/en/books/faq/_index.adoc:2414
 msgid ""
 "Forty-six to argue vociferously about the backing out of the dim lightbulb "
 "and demanding a statement from -core;"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2425
+#: documentation/content/en/books/faq/_index.adoc:2416
 msgid ""
 "Eleven to request a smaller lightbulb so it will fit their Tamagotchi if we "
 "ever decide to port FreeBSD to that platform;"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2427
+#: documentation/content/en/books/faq/_index.adoc:2418
 msgid ""
 "Seventy-three to complain about the SNR on -hackers and -chat and "
 "unsubscribe in protest;"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2429
+#: documentation/content/en/books/faq/_index.adoc:2420
 msgid ""
 "Thirteen to post \"unsubscribe\", \"How do I unsubscribe?\", or \"Please "
 "remove me from the list\", followed by the usual footer;"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2431
+#: documentation/content/en/books/faq/_index.adoc:2422
 msgid ""
 "One to commit a working lightbulb while everybody is too busy flaming "
 "everybody else to notice;"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2433
+#: documentation/content/en/books/faq/_index.adoc:2424
 msgid ""
 "Thirty-one to point out that the new lightbulb would shine 0.364% brighter "
 "if compiled with TenDRA (although it will have to be reshaped into a cube), "
@@ -6551,59 +6526,59 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2435
+#: documentation/content/en/books/faq/_index.adoc:2426
 msgid "One to complain that the new lightbulb lacks fairings;"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2437
+#: documentation/content/en/books/faq/_index.adoc:2428
 msgid "Nine (including the PR originators) to ask \"what is MFC?\";"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2439
+#: documentation/content/en/books/faq/_index.adoc:2430
 msgid ""
 "Fifty-seven to complain about the lights being out two weeks after the bulb "
 "has been changed."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2441
+#: documentation/content/en/books/faq/_index.adoc:2432
 msgid "_{nik} adds:_"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2443
+#: documentation/content/en/books/faq/_index.adoc:2434
 msgid "_I was laughing quite hard at this._"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2445
+#: documentation/content/en/books/faq/_index.adoc:2436
 msgid ""
 "_And then I thought, \"Hang on, shouldn't there be '1 to document it.' in "
 "that list somewhere?\"_"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2447
+#: documentation/content/en/books/faq/_index.adoc:2438
 msgid "_And then I was enlightened :-)_"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2449
+#: documentation/content/en/books/faq/_index.adoc:2440
 msgid ""
 "_{tabthorpe}_ says: \"None, _real_ FreeBSD hackers are not afraid of the "
 "dark!\""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2451
+#: documentation/content/en/books/faq/_index.adoc:2442
 #, no-wrap
 msgid "Where does data written to [.filename]#/dev/null# go?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2454
+#: documentation/content/en/books/faq/_index.adoc:2445
 msgid ""
 "It goes into a special data sink in the CPU where it is converted to heat "
 "which is vented through the heatsink / fan assembly. This is why CPU cooling "
@@ -6621,12 +6596,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2456
+#: documentation/content/en/books/faq/_index.adoc:2447
 msgid "_Paul Robinson adds:_"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2458
+#: documentation/content/en/books/faq/_index.adoc:2449
 msgid ""
 "There are other methods. As every good sysadmin knows, it is part of "
 "standard practice to send data to the screen of interesting variety to keep "
@@ -6640,7 +6615,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2460
+#: documentation/content/en/books/faq/_index.adoc:2451
 msgid ""
 "To take your suggestions further, you could just throw the random data to "
 "console, thereby letting the pixies consume it. This causes no heat to be "
@@ -6649,7 +6624,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2462
+#: documentation/content/en/books/faq/_index.adoc:2453
 msgid ""
 "Incidentally, as an ex-admin of a large ISP who experienced many problems "
 "attempting to maintain a stable temperature in a server room, I would "
@@ -6659,48 +6634,48 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2464
+#: documentation/content/en/books/faq/_index.adoc:2455
 #, no-wrap
 msgid "My colleague sits at the computer too much, how can I prank her?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2467
+#: documentation/content/en/books/faq/_index.adoc:2458
 msgid "Install package:games/sl[] and wait for her to mistype `sl` for `ls`."
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/books/faq/_index.adoc:2469
+#: documentation/content/en/books/faq/_index.adoc:2460
 #, no-wrap
 msgid "Advanced Topics"
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2472
+#: documentation/content/en/books/faq/_index.adoc:2463
 #, no-wrap
 msgid "How can I learn more about FreeBSD's internals?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2475
+#: documentation/content/en/books/faq/_index.adoc:2466
 msgid "See the link:{arch-handbook}[FreeBSD Architecture Handbook]."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2477
+#: documentation/content/en/books/faq/_index.adoc:2468
 msgid ""
 "Additionally, much general UNIX(R) knowledge is directly applicable to "
 "FreeBSD."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2479
+#: documentation/content/en/books/faq/_index.adoc:2470
 #, no-wrap
 msgid "How can I contribute to FreeBSD? What can I do to help?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2482
+#: documentation/content/en/books/faq/_index.adoc:2473
 msgid ""
 "We accept all types of contributions: documentation, code, and even art. See "
 "the article on link:{contributing}[Contributing to FreeBSD] for specific "
@@ -6708,18 +6683,18 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2484
+#: documentation/content/en/books/faq/_index.adoc:2475
 msgid "And thanks for the thought!"
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2486
+#: documentation/content/en/books/faq/_index.adoc:2477
 #, no-wrap
 msgid "What are snapshots and releases?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2489
+#: documentation/content/en/books/faq/_index.adoc:2480
 msgid ""
 "There are currently {rel-numbranch} active/semi-active branches in the "
 "FreeBSD http://svnweb.FreeBSD.org/base/[Subversion Repository]. (Earlier "
@@ -6728,29 +6703,29 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2491
+#: documentation/content/en/books/faq/_index.adoc:2482
 msgid "{rel2-releng} AKA {rel2-stable}"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2492
+#: documentation/content/en/books/faq/_index.adoc:2483
 msgid "{rel-releng} AKA {rel-stable}"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2493
+#: documentation/content/en/books/faq/_index.adoc:2484
 msgid "{rel-head-releng} AKA _-CURRENT_ AKA {rel-head}"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2495
+#: documentation/content/en/books/faq/_index.adoc:2486
 msgid ""
 "`HEAD` is not an actual branch tag. It is a symbolic constant for the "
 "current, non-branched development stream known as _-CURRENT_."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2497
+#: documentation/content/en/books/faq/_index.adoc:2488
 msgid ""
 "Right now, _-CURRENT_ is the {rel-head-relx} development stream; the {rel-"
 "stable} branch, {rel-releng}, forked off from _-CURRENT_ in {rel-relengdate} "
@@ -6759,18 +6734,18 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2499
+#: documentation/content/en/books/faq/_index.adoc:2490
 #, no-wrap
 msgid "How can I make the most of the data I see when my kernel panics?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2502
+#: documentation/content/en/books/faq/_index.adoc:2493
 msgid "Here is typical kernel panic:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:2518
+#: documentation/content/en/books/faq/_index.adoc:2509
 #, no-wrap
 msgid ""
 "Fatal trap 12: page fault while in kernel mode\n"
@@ -6789,7 +6764,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2521
+#: documentation/content/en/books/faq/_index.adoc:2512
 msgid ""
 "This message is not enough. While the instruction pointer value is "
 "important, it is also configuration dependent as it varies depending on the "
@@ -6800,12 +6775,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2523
+#: documentation/content/en/books/faq/_index.adoc:2514
 msgid "To proceed:"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2527
+#: documentation/content/en/books/faq/_index.adoc:2518
 msgid ""
 "Write down the instruction pointer value. Note that the `0x8:` part at the "
 "beginning is not significant in this case: it is the `0xf0xxxxxx` part that "
@@ -6813,18 +6788,18 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2528
+#: documentation/content/en/books/faq/_index.adoc:2519
 msgid "When the system reboots, do the following:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:2532
+#: documentation/content/en/books/faq/_index.adoc:2523
 #, no-wrap
 msgid "% nm -n kernel.that.caused.the.panic | grep f0xxxxxx\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2535
+#: documentation/content/en/books/faq/_index.adoc:2526
 msgid ""
 "  where `f0xxxxxx` is the instruction pointer value. The odds are you will "
 "not get an exact match since the symbols in the kernel symbol table are for "
@@ -6834,13 +6809,13 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:2539
+#: documentation/content/en/books/faq/_index.adoc:2530
 #, no-wrap
 msgid "% nm -n kernel.that.caused.the.panic | grep f0xxxxx\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2542
+#: documentation/content/en/books/faq/_index.adoc:2533
 msgid ""
 "  If that does not yield any results, chop off another digit. Repeat until "
 "there is some sort of output. The result will be a possible list of "
@@ -6849,7 +6824,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2545
+#: documentation/content/en/books/faq/_index.adoc:2536
 msgid ""
 "However, the best way to track down the cause of a panic is by capturing a "
 "crash dump, then using man:kgdb[1] to generate a stack trace on the crash "
@@ -6857,70 +6832,70 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2547
+#: documentation/content/en/books/faq/_index.adoc:2538
 msgid "In any case, the method is this:"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2551
+#: documentation/content/en/books/faq/_index.adoc:2542
 msgid ""
 "Make sure that the following line is included in the kernel configuration "
 "file:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:2555
+#: documentation/content/en/books/faq/_index.adoc:2546
 #, no-wrap
 msgid "makeoptions     DEBUG=-g          # Build kernel with gdb(1) debug symbols\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2558
+#: documentation/content/en/books/faq/_index.adoc:2549
 msgid "Change to the [.filename]#/usr/src# directory:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:2562
+#: documentation/content/en/books/faq/_index.adoc:2553
 #, no-wrap
 msgid "# cd /usr/src\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2565
+#: documentation/content/en/books/faq/_index.adoc:2556
 msgid "Compile the kernel:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:2569
+#: documentation/content/en/books/faq/_index.adoc:2560
 #, no-wrap
 msgid "# make buildkernel KERNCONF=MYKERNEL\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2572
+#: documentation/content/en/books/faq/_index.adoc:2563
 msgid "Wait for man:make[1] to finish compiling."
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:2576
+#: documentation/content/en/books/faq/_index.adoc:2567
 #, no-wrap
 msgid "# make installkernel KERNCONF=MYKERNEL\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2579
+#: documentation/content/en/books/faq/_index.adoc:2570
 msgid "Reboot."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2584
+#: documentation/content/en/books/faq/_index.adoc:2575
 msgid ""
 "If `KERNCONF` is not included, the [.filename]#GENERIC# kernel will instead "
 "be built and installed."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2587
+#: documentation/content/en/books/faq/_index.adoc:2578
 msgid ""
 "The man:make[1] process will have built two kernels. [.filename]#/usr/obj/"
 "usr/src/sys/MYKERNEL/kernel# and [.filename]#/usr/obj/usr/src/sys/MYKERNEL/"
@@ -6930,7 +6905,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2589
+#: documentation/content/en/books/faq/_index.adoc:2580
 msgid ""
 "To capture a crash dump, edit [.filename]#/etc/rc.conf# and set `dumpdev` to "
 "point to either the swap partition or `AUTO`. This will cause the man:rc[8] "
@@ -6942,7 +6917,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2593
+#: documentation/content/en/books/faq/_index.adoc:2584
 msgid ""
 "FreeBSD crash dumps are usually the same size as physical RAM. Therefore, "
 "make sure there is enough space in [.filename]#/var/crash# to hold the dump. "
@@ -6955,12 +6930,12 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2596
+#: documentation/content/en/books/faq/_index.adoc:2587
 msgid "Once the crash dump has been recovered , get a stack trace as follows:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:2601
+#: documentation/content/en/books/faq/_index.adoc:2592
 #, no-wrap
 msgid ""
 "% kgdb /usr/obj/usr/src/sys/MYKERNEL/kernel.debug /var/crash/vmcore.0\n"
@@ -6968,7 +6943,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2604
+#: documentation/content/en/books/faq/_index.adoc:2595
 msgid ""
 "Note that there may be several screens worth of information. Ideally, use "
 "man:script[1] to capture all of them. Using the unstripped kernel image with "
@@ -6980,7 +6955,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2609
+#: documentation/content/en/books/faq/_index.adoc:2600
 msgid ""
 "If a second computer is available, man:kgdb[1] can be configured to do "
 "remote debugging, including setting breakpoints and single-stepping through "
@@ -6988,7 +6963,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/faq/_index.adoc:2614
+#: documentation/content/en/books/faq/_index.adoc:2605
 msgid ""
 "If `DDB` is enabled and the kernel drops into the debugger, a panic and a "
 "crash dump can be forced by typing `panic` at the `ddb` prompt. It may stop "
@@ -6997,13 +6972,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2617
+#: documentation/content/en/books/faq/_index.adoc:2608
 #, no-wrap
 msgid "Why has dlsym() stopped working for ELF executables?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2620
+#: documentation/content/en/books/faq/_index.adoc:2611
 msgid ""
 "The ELF toolchain does not, by default, make the symbols defined in an "
 "executable visible to the dynamic linker. Consequently `dlsym()` searches on "
@@ -7012,7 +6987,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2622
+#: documentation/content/en/books/faq/_index.adoc:2613
 msgid ""
 "To search, using `dlsym()`, for symbols present in the main executable of a "
 "process, link the executable using the `--export-dynamic` option to the ELF "
@@ -7020,13 +6995,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/faq/_index.adoc:2624
+#: documentation/content/en/books/faq/_index.adoc:2615
 #, no-wrap
 msgid "How can I increase or reduce the kernel address space on i386?"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2627
+#: documentation/content/en/books/faq/_index.adoc:2618
 msgid ""
 "By default, the kernel address space is 1 GB (2 GB for PAE) for i386. When "
 "running a network-intensive server or using ZFS, this will probably not be "
@@ -7034,33 +7009,33 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2629
+#: documentation/content/en/books/faq/_index.adoc:2620
 msgid ""
 "Add the following line to the kernel configuration file to increase "
 "available space and rebuild the kernel:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/faq/_index.adoc:2633
+#: documentation/content/en/books/faq/_index.adoc:2624
 #, no-wrap
 msgid "options KVA_PAGES=N\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2636
+#: documentation/content/en/books/faq/_index.adoc:2627
 msgid ""
 "To find the correct value of _N_, divide the desired address space size (in "
 "megabytes) by four. (For example, it is `512` for 2 GB.)"
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/books/faq/_index.adoc:2638
+#: documentation/content/en/books/faq/_index.adoc:2629
 #, no-wrap
 msgid "Acknowledgments"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2641
+#: documentation/content/en/books/faq/_index.adoc:2632
 msgid ""
 "This innocent little Frequently Asked Questions document has been written, "
 "rewritten, edited, folded, spindled, mutilated, eviscerated, contemplated, "
@@ -7070,7 +7045,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/faq/_index.adoc:2642
+#: documentation/content/en/books/faq/_index.adoc:2633
 msgid ""
 "We wish to thank every one of the people responsible, and we encourage you "
 "to link:{contributing}[join them] in making this FAQ even better."
