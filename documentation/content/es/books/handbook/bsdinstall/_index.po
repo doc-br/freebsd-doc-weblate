@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
-"POT-Creation-Date: 2021-03-14 11:02-0300\n"
+"POT-Creation-Date: 2021-03-20 17:26-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -226,14 +226,16 @@ msgid "Older desktops and laptops often use this 32-bit, x86 architecture."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:94
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:95
 msgid ""
 "Almost all i386-compatible processors with a floating point unit are "
-"supported. All Intel(R) processors 486 or higher are supported."
+"supported. All Intel(R) processors 486 or higher are supported.  However, "
+"binaries released by the project are compiled for the 686 processor, so a "
+"special build will be needed for 486 and 586 systems."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:96
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:97
 msgid ""
 "FreeBSD will take advantage of Physical Address Extensions (PAE) support on "
 "CPUs with this feature. A kernel with the PAE feature enabled will detect "
@@ -242,52 +244,55 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:97
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:98
+#, no-wrap
+msgid "arm64"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:101
+msgid ""
+"Most embedded boards are 64-bit ARM computers.  A number of arm64 servers "
+"are supported."
+msgstr ""
+
+#. type: Labeled list
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:102
+#, no-wrap
+msgid "arm"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:104
+msgid "Older armv7 boards are supported."
+msgstr ""
+
+#. type: Labeled list
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:105
 #, no-wrap
 msgid "powerpc"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:99
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:107
 msgid ""
 "All New World ROM Apple(R) Mac(R) systems with built-in USB are supported. "
 "SMP is supported on machines with multiple CPUs."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:101
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:109
 msgid "A 32-bit kernel can only use the first 2 GB of RAM."
 msgstr ""
 
-#. type: Labeled list
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:102
-#, no-wrap
-msgid "sparc64"
-msgstr ""
-
-#. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:104
-msgid ""
-"Systems supported by FreeBSD/sparc64 are listed at the link:https://www."
-"FreeBSD.org/platforms/sparc/[FreeBSD/sparc64 Project]."
-msgstr ""
-
-#. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:106
-msgid ""
-"SMP is supported on all systems with more than 1 processor. A dedicated disk "
-"is required as it is not possible to share a disk with another operating "
-"system at this time."
-msgstr ""
-
 #. type: Title ==
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:108
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:111
 #, no-wrap
 msgid "Pre-Installation Tasks"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:111
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:114
 msgid ""
 "Once it has been determined that the system meets the minimum hardware "
 "requirements for installing FreeBSD, the installation file should be "
@@ -297,23 +302,9 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:114
-#, no-wrap
-msgid "*Back Up Important Data*\n"
-msgstr ""
-
-#. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:116
-#, no-wrap
-msgid ""
-"\n"
-"Before installing any operating system, _always_ backup all important data first. Do not store the backup on the system being installed. Instead, save the data to a removable disk such as a USB drive, another system on the network, or an online backup service. Test the backup before starting the installation to make sure it contains all of the needed files. Once the installer formats the system's disk, all data stored on that disk will be lost.\n"
-msgstr ""
-
-#. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:117
 #, no-wrap
-msgid "*Decide Where to Install FreeBSD*\n"
+msgid "*Back Up Important Data*\n"
 msgstr ""
 
 #. type: Plain text
@@ -321,11 +312,25 @@ msgstr ""
 #, no-wrap
 msgid ""
 "\n"
+"Before installing any operating system, _always_ backup all important data first. Do not store the backup on the system being installed. Instead, save the data to a removable disk such as a USB drive, another system on the network, or an online backup service. Test the backup before starting the installation to make sure it contains all of the needed files. Once the installer formats the system's disk, all data stored on that disk will be lost.\n"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:120
+#, no-wrap
+msgid "*Decide Where to Install FreeBSD*\n"
+msgstr ""
+
+#. type: Plain text
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:122
+#, no-wrap
+msgid ""
+"\n"
 "If FreeBSD will be the only operating system installed, this step can be skipped. But if FreeBSD will share the disk with another operating system, decide which disk or partition will be used for FreeBSD.\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:121
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:124
 #, no-wrap
 msgid ""
 "\n"
@@ -333,7 +338,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:123
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:126
 #, no-wrap
 msgid ""
 "\n"
@@ -341,7 +346,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:125
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:128
 #, no-wrap
 msgid ""
 "\n"
@@ -349,7 +354,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:130
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:133
 msgid ""
 "When used properly, disk shrinking utilities can safely create space for "
 "creating a new partition. Since the possibility of selecting the wrong "
@@ -358,7 +363,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:133
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:136
 msgid ""
 "  Disk partitions containing different operating systems make it possible to "
 "install multiple operating systems on one computer. An alternative is to use "
@@ -368,13 +373,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:134
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:137
 #, no-wrap
 msgid "*Collect Network Information*\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:136
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:139
 #, no-wrap
 msgid ""
 "\n"
@@ -382,7 +387,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:138
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:141
 #, no-wrap
 msgid ""
 "\n"
@@ -390,43 +395,43 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:141
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:144
 msgid "Required Network Information"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:143
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:146
 msgid "IP address"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:144
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:147
 msgid "Subnet mask"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:145
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:148
 msgid "IP address of default gateway"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:146
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:149
 msgid "Domain name of the network"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:147
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:150
 msgid "IP addresses of the network's DNS servers"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:149
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:152
 #, no-wrap
 msgid "*Check for FreeBSD Errata*\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:151
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:154
 msgid ""
 "Although the FreeBSD Project strives to ensure that each release of FreeBSD "
 "is as stable as possible, bugs occasionally creep into the process. On very "
@@ -439,7 +444,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:153
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:156
 msgid ""
 "  Information and errata for all the releases can be found on the release "
 "information section of the FreeBSD web site (link:https://www.FreeBSD.org/"
@@ -447,13 +452,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:155
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:158
 #, no-wrap
 msgid "Prepare the Installation Media"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:158
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:161
 msgid ""
 "The FreeBSD installer is not an application that can be run from within "
 "another operating system. Instead, download a FreeBSD installation file, "
@@ -462,7 +467,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:160
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:163
 msgid ""
 "FreeBSD installation files are available at link:https://www.FreeBSD.org/"
 "where/[www.freebsd.org/where/]. Each installation file's name includes the "
@@ -473,14 +478,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:162
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:165
 msgid ""
 "Installation files are available in several formats. The formats vary "
 "depending on computer architecture and media type."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:164
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:167
 msgid ""
 "Additional installation files are included for computers that boot with UEFI "
 "(Unified Extensible Firmware Interface). The names of these files include "
@@ -488,12 +493,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:166
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:169
 msgid "File types:"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:168
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:171
 msgid ""
 "`-bootonly.iso`: This is the smallest installation file as it only contains "
 "the installer. A working Internet connection is required during installation "
@@ -503,7 +508,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:169
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:172
 msgid ""
 "`-disc1.iso`: This file contains all of the files needed to install FreeBSD, "
 "its source, and the Ports Collection. It should be burned to a CD using a CD "
@@ -511,7 +516,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:170
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:173
 msgid ""
 "`-dvd1.iso`: This file contains all of the files needed to install FreeBSD, "
 "its source, and the Ports Collection. It also contains a set of popular "
@@ -522,7 +527,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:171
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:174
 msgid ""
 "`-memstick.img`: This file contains all of the files needed to install "
 "FreeBSD, its source, and the Ports Collection. It should be burned to a USB "
@@ -530,7 +535,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:172
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:175
 msgid ""
 "`-mini-memstick.img`: Like `-bootonly.iso`, does not include installation "
 "files, but downloads them as needed. A working internet connection is "
@@ -539,7 +544,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:174
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:177
 msgid ""
 "After downloading the image file, download [.filename]#CHECKSUM.SHA256# from "
 "the same directory. Calculate a _checksum_ for the image file. FreeBSD "
@@ -548,7 +553,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:176
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:179
 msgid ""
 "Compare the calculated checksum with the one shown in [.filename]#CHECKSUM."
 "SHA256#. The checksums must match exactly. If the checksums do not match, "
@@ -556,13 +561,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ====
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:178
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:181
 #, no-wrap
 msgid "Writing an Image File to USB"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:181
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:184
 msgid ""
 "The [.filename]#\\*.img# file is an _image_ of the complete contents of a "
 "memory stick. It _cannot_ be copied to the target device as a file. Several "
@@ -571,20 +576,20 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:185
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:188
 msgid ""
 "Before proceeding, back up any important data on the USB stick. This "
 "procedure will erase the existing data on the stick."
 msgstr ""
 
 #. type: delimited block * 4
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:191
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:194
 #, no-wrap
 msgid "*Procedure. Using `dd` to Write the Image* +\n"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:196
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:199
 msgid ""
 "This example uses [.filename]#/dev/da0# as the target device where the image "
 "will be written. Be _very careful_ that the correct device is used as this "
@@ -592,7 +597,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:198
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:201
 msgid ""
 "The command-line utility is available on BSD, Linux(R), and Mac OS(R) "
 "systems. To burn the image using `dd`, insert the USB stick and determine "
@@ -602,13 +607,13 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:202
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:205
 #, no-wrap
 msgid "# dd if=FreeBSD-12.1-RELEASE-amd64-memstick.img of=/dev/da0 bs=1M conv=sync\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:209
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:212
 msgid ""
 "If this command fails, verify that the USB stick is not mounted and that the "
 "device name is for the disk, not a partition.  Some operating systems might "
@@ -619,26 +624,26 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:214
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:217
 #, no-wrap
 msgid "*Procedure. Using Windows(R) to Write the Image* +\n"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:219
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:222
 msgid ""
 "Be sure to give the correct drive letter as the existing data on the "
 "specified drive will be overwritten and destroyed."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:221
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:224
 #, no-wrap
 msgid "*Obtaining Image Writer for Windows(R)*\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:223
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:226
 msgid ""
 "Image Writer for Windows(R) is a free application that can correctly write "
 "an image file to a memory stick. Download it from https://sourceforge.net/"
@@ -647,13 +652,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:224
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:227
 #, no-wrap
 msgid "*Writing the Image with Image Writer*\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:226
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:229
 msgid ""
 "Double-click the Win32DiskImager icon to start the program. Verify that the "
 "drive letter shown under `Device` is the drive with the memory stick. Click "
@@ -665,25 +670,25 @@ msgid ""
 msgstr ""
 
 #. type: delimited block * 4
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:229
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:232
 msgid "You are now ready to start installing FreeBSD."
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:231
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:234
 #, no-wrap
 msgid "Starting the Installation"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:236
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:239
 msgid ""
 "By default, the installation will not make any changes to the disk(s) before "
 "the following message:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:243
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:246
 #, no-wrap
 msgid ""
 "Your changes will now be written to disk. If you\n"
@@ -693,7 +698,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:246
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:249
 msgid ""
 "The install can be exited at any time prior to this warning. If there is a "
 "concern that something is incorrectly configured, just turn the computer off "
@@ -701,7 +706,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:249
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:252
 msgid ""
 "This section describes how to boot the system from the installation media "
 "which was prepared using the instructions in <<bsdinstall-installation-"
@@ -712,13 +717,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:251
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:254
 #, no-wrap
 msgid "Booting on i386(TM) and amd64"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:254
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:257
 msgid ""
 "These architectures provide a BIOS menu for selecting the boot device. "
 "Depending upon the installation media being used, select the CD/DVD or USB "
@@ -729,28 +734,28 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:256
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:259
 msgid ""
 "If the computer loads the existing operating system instead of the FreeBSD "
 "installer, then either:"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:258
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:261
 msgid ""
 "The installation media was not inserted early enough in the boot process. "
 "Leave the media inserted and try restarting the computer."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:259
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:262
 msgid ""
 "The BIOS changes were incorrect or not saved. Double-check that the right "
 "boot device is selected as the first boot device."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:260
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:263
 msgid ""
 "This system is too old to support booting from the chosen media. In this "
 "case, the Plop Boot Manager (http://www.plop.at/en/bootmanagers.html[]) can "
@@ -758,13 +763,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:261
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:264
 #, no-wrap
 msgid "Booting on PowerPC(R)"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:264
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:267
 msgid ""
 "On most machines, holding kbd:[C] on the keyboard during boot will boot from "
 "the CD. Otherwise, hold kbd:[Command+Option+O+F], or kbd:[Windows+Alt+O+F] "
@@ -772,38 +777,38 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:268
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:271
 #, no-wrap
 msgid " boot cd:,\\ppc\\loader cd:0\n"
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:271
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:274
 #, no-wrap
 msgid "FreeBSD Boot Menu"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:274
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:277
 msgid ""
 "Once the system boots from the installation media, a menu similar to the "
 "following will be displayed:"
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:276
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:279
 #, no-wrap
 msgid "FreeBSD Boot Loader Menu"
 msgstr ""
 
 #. type: Target for macro image
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:277
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:280
 #, no-wrap
 msgid "bsdinstall-newboot-loader-menu.png"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:280
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:283
 msgid ""
 "By default, the menu will wait ten seconds for user input before booting "
 "into the FreeBSD installer or, if FreeBSD is already installed, before "
@@ -813,7 +818,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:282
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:285
 msgid ""
 "`Boot Multi User`: This will continue the FreeBSD boot process. If the boot "
 "timer has been paused, press kbd:[1], upper- or lower-case kbd:[B], or kbd:"
@@ -821,7 +826,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:283
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:286
 msgid ""
 "`Boot Single User`: This mode can be used to fix an existing FreeBSD "
 "installation as described in crossref:boot[boot-singleuser,“Single-User "
@@ -829,7 +834,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:284
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:287
 msgid ""
 "`Escape to loader prompt`: This will boot the system into a repair prompt "
 "that contains a limited number of low-level commands. This prompt is "
@@ -838,36 +843,36 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:285
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:288
 msgid "`Reboot`: Reboots the system."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:286
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:289
 msgid "`Kernel`: Loads a different kernel."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:287
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:290
 msgid ""
 "`Configure Boot Options`: Opens the menu shown in, and described under, "
 "<<bsdinstall-boot-options-menu>>."
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:289
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:292
 #, no-wrap
 msgid "FreeBSD Boot Options Menu"
 msgstr ""
 
 #. type: Target for macro image
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:290
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:293
 #, no-wrap
 msgid "bsdinstall-boot-options-menu.png"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:293
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:296
 msgid ""
 "The boot options menu is divided into two sections. The first section can be "
 "used to either return to the main boot menu or to reset any toggled options "
@@ -875,7 +880,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:295
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:298
 msgid ""
 "The next section is used to toggle the available options to `On` or `Off` by "
 "pressing the option's highlighted number or character. The system will "
@@ -884,21 +889,21 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:297
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:300
 msgid ""
 "`ACPI Support`: If the system hangs during boot, try toggling this option to "
 "`Off`."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:298
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:301
 msgid ""
 "`Safe Mode`: If the system still hangs during boot even with `ACPI Support` "
 "set to `Off`, try setting this option to `On`."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:299
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:302
 msgid ""
 "`Single User`: Toggle this option to `On` to fix an existing FreeBSD "
 "installation as described in crossref:boot[boot-singleuser,“Single-User "
@@ -906,7 +911,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:300
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:303
 msgid ""
 "`Verbose`: Toggle this option to `On` to see more detailed messages during "
 "the boot process. This can be useful when troubleshooting a piece of "
@@ -914,7 +919,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:302
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:305
 msgid ""
 "After making the needed selections, press kbd:[1] or kbd:[Backspace] to "
 "return to the main boot menu, then press kbd:[Enter] to continue booting "
@@ -925,19 +930,19 @@ msgid ""
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:304
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:307
 #, no-wrap
 msgid "Welcome Menu"
 msgstr ""
 
 #. type: Target for macro image
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:305
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:308
 #, no-wrap
 msgid "bsdinstall-choose-mode.png"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:308
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:311
 msgid ""
 "Press kbd:[Enter] to select the default of btn:[Install] to enter the "
 "installer. The rest of this chapter describes how to use this installer. "
@@ -949,7 +954,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:313
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:316
 msgid ""
 "To review the boot messages, including the hardware device probe, press the "
 "upper- or lower-case kbd:[S] and then kbd:[Enter] to access a shell. At the "
@@ -959,13 +964,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:316
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:319
 #, no-wrap
 msgid "Using bsdinstall"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:319
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:322
 msgid ""
 "This section shows the order of the bsdinstall menus and the type of "
 "information that will be asked before the system is installed. Use the arrow "
@@ -975,32 +980,32 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:321
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:324
 #, no-wrap
 msgid "Selecting the Keymap Menu"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:324
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:327
 msgid ""
 "Before starting the process, bsdinstall will load the keymap files as show "
 "in <<bsdinstall-keymap-loading>>."
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:326
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:329
 #, no-wrap
 msgid "Keymap Loading"
 msgstr ""
 
 #. type: Target for macro image
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:327
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:330
 #, no-wrap
 msgid "bsdinstall-keymap-loading.png"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:330
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:333
 msgid ""
 "After the keymaps have been loaded bsdinstall displays the menu shown in "
 "<<bsdinstall-keymap-10>>. Use the up and down arrows to select the keymap "
@@ -1009,19 +1014,19 @@ msgid ""
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:332
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:335
 #, no-wrap
 msgid "Keymap Selection Menu"
 msgstr ""
 
 #. type: Target for macro image
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:333
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:336
 #, no-wrap
 msgid "bsdinstall-keymap-10.png"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:338
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:341
 msgid ""
 "Pressing kbd:[Esc] will exit this menu and use the default keymap. If the "
 "choice of keymap is not clear, [.guimenuitem]#United States of America "
@@ -1029,7 +1034,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:341
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:344
 msgid ""
 "In addition, when selecting a different keymap, the user can try the keymap "
 "and ensure it is correct before proceeding as shown in <<bsdinstall-keymap-"
@@ -1037,64 +1042,64 @@ msgid ""
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:343
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:346
 #, no-wrap
 msgid "Keymap Testing Menu"
 msgstr ""
 
 #. type: Target for macro image
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:344
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:347
 #, no-wrap
 msgid "bsdinstall-keymap-testing.png"
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:347
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:352
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:350
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:355
 #, no-wrap
 msgid "Setting the Hostname"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:350
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:353
 msgid ""
 "The next bsdinstall menu is used to set the hostname for the newly installed "
 "system."
 msgstr ""
 
 #. type: Target for macro image
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:353
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:356
 #, no-wrap
 msgid "bsdinstall-config-hostname.png"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:356
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:359
 msgid ""
 "Type in a hostname that is unique for the network. It should be a fully-"
 "qualified hostname, such as `machine3.example.com`."
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:358
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:363
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:361
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:366
 #, no-wrap
 msgid "Selecting Components to Install"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:361
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:364
 msgid "Next, bsdinstall will prompt to select optional components to install."
 msgstr ""
 
 #. type: Target for macro image
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:364
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:367
 #, no-wrap
 msgid "bsdinstall-config-components.png"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:367
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:370
 msgid ""
 "Deciding which components to install will depend largely on the intended use "
 "of the system and the amount of disk space available. The FreeBSD kernel and "
@@ -1103,33 +1108,33 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:369
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:372
 msgid ""
 "`base-dbg` - Base tools like cat, ls among many others with debug symbols "
 "activated."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:370
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:373
 msgid "`kernel-dbg` - Kernel and modules with debug symbols activated."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:371
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:374
 msgid ""
 "`lib32-dbg` - Compatibility libraries for running 32-bit applications on a "
 "64-bit version of FreeBSD with debug symbols activated."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:372
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:375
 msgid ""
 "`lib32` - Compatibility libraries for running 32-bit applications on a 64-"
 "bit version of FreeBSD."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:373
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:376
 msgid ""
 "`ports` - The FreeBSD Ports Collection is a collection of files which "
 "automates the downloading, compiling and installation of third-party "
@@ -1138,7 +1143,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:378
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:381
 msgid ""
 "The installation program does not check for adequate disk space. Select this "
 "option only if sufficient hard disk space is available. The FreeBSD Ports "
@@ -1146,7 +1151,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:381
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:384
 msgid ""
 "`src` - The complete FreeBSD source code for both the kernel and the "
 "userland. Although not required for the majority of applications, it may be "
@@ -1157,19 +1162,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:382
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:385
 msgid "`tests` - FreeBSD Test Suite."
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:384
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:389
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:387
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:392
 #, no-wrap
 msgid "Installing from the Network"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:387
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:390
 msgid ""
 "The menu shown in <<bsdinstall-netinstall-notify>> only appears when "
 "installing from a [.filename]#-bootonly.iso# or [.filename]#-mini-memstick."
@@ -1181,56 +1186,56 @@ msgid ""
 msgstr ""
 
 #. type: Target for macro image
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:390
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:393
 #, no-wrap
 msgid "bsdinstall-netinstall-files.png"
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:393
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:396
 #, no-wrap
 msgid "Allocating Disk Space"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:396
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:399
 msgid ""
 "The next menu is used to determine the method for allocating disk space."
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:398
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:401
 #, no-wrap
 msgid "Partitioning Choices"
 msgstr ""
 
 #. type: Target for macro image
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:399
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:402
 #, no-wrap
 msgid "bsdinstall-zfs-partmenu.png"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:402
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:405
 msgid "bsdinstall gives the user four methods for allocating disk space:"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:404
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:407
 msgid ""
 "`Auto (UFS)` partitioning automatically sets up the disk partitions using "
 "the `UFS` file system."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:405
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:408
 msgid ""
 "`Manual` partitioning allows advanced users to create customized partitions "
 "from menu options."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:406
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:409
 msgid ""
 "`Shell` opens a shell prompt where advanced users can create customized "
 "partitions using command-line utilities like man:gpart[8], man:fdisk[8], and "
@@ -1238,27 +1243,27 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:407
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:410
 msgid ""
 "`Auto (ZFS)` partitioning creates a root-on-ZFS system with optional GELI "
 "encryption support for _boot environments_."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:409
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:412
 msgid ""
 "This section describes what to consider when laying out the disk partitions. "
 "It then demonstrates how to use the different partitioning methods."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:411
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:414
 #, no-wrap
 msgid "Designing the Partition Layout"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:414
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:417
 msgid ""
 "When laying out file systems, remember that hard drives transfer data faster "
 "from the outer tracks to the inner. Thus, smaller and heavier-accessed file "
@@ -1269,7 +1274,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:416
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:419
 msgid ""
 "The size of the [.filename]#/var# partition reflects the intended machine's "
 "usage. This partition is used to hold mailboxes, log files, and printer "
@@ -1280,7 +1285,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:420
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:423
 msgid ""
 "Sometimes, a lot of disk space is required in [.filename]#/var/tmp#. When "
 "new software is installed, the packaging tools extract a temporary copy of "
@@ -1290,7 +1295,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:423
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:426
 msgid ""
 "The [.filename]#/usr# partition holds many of the files which support the "
 "system, including the FreeBSD Ports Collection and system source code. At "
@@ -1298,14 +1303,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:425
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:428
 msgid ""
 "When selecting partition sizes, keep the space requirements in mind. Running "
 "out of space in one partition while barely using another can be a hassle."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:427
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:430
 msgid ""
 "As a rule of thumb, the swap partition should be about double the size of "
 "physical memory (RAM). Systems with minimal RAM may perform better with more "
@@ -1314,7 +1319,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:429
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:432
 msgid ""
 "On larger systems with multiple SCSI disks or multiple IDE disks operating "
 "on different controllers, it is recommended that swap be configured on each "
@@ -1328,7 +1333,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:431
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:434
 msgid ""
 "By properly partitioning a system, fragmentation introduced in the smaller "
 "write heavy partitions will not bleed over into the mostly read partitions. "
@@ -1340,13 +1345,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:433
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:436
 #, no-wrap
 msgid "Guided Partitioning Using UFS"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:436
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:439
 msgid ""
 "When this method is selected, a menu will display the available disk(s). If "
 "multiple disks are connected, choose the one where FreeBSD is to be "
@@ -1354,19 +1359,19 @@ msgid ""
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:438
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:441
 #, no-wrap
 msgid "Selecting from Multiple Disks"
 msgstr ""
 
 #. type: Target for macro image
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:439
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:442
 #, no-wrap
 msgid "bsdinstall-part-guided-disk.png"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:442
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:445
 msgid ""
 "Once the disk is selected, the next menu prompts to install to either the "
 "entire disk or to create a partition using free space. If btn:[Entire Disk] "
@@ -1376,38 +1381,38 @@ msgid ""
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:444
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:447
 #, no-wrap
 msgid "Selecting Entire Disk or Partition"
 msgstr ""
 
 #. type: Target for macro image
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:445
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:448
 #, no-wrap
 msgid "bsdinstall-part-entire-part.png"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:448
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:451
 msgid ""
 "After btn:[Entire Disk] is chosen bsdinstall displays a dialog indicating "
 "that the disk will be erased."
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:450
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:453
 #, no-wrap
 msgid "Confirmation"
 msgstr ""
 
 #. type: Target for macro image
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:451
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:454
 #, no-wrap
 msgid "bsdinstall-ufs-warning.png"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:454
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:457
 msgid ""
 "The next menu shows a list with the partition schemes types. GPT is usually "
 "the most appropriate choice for amd64 computers. Older computers that are "
@@ -1417,20 +1422,20 @@ msgid ""
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:456
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:459
 #, no-wrap
 msgid "Select Partition Scheme"
 msgstr ""
 
 #. type: Target for macro image
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:457
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:486
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:460
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:489
 #, no-wrap
 msgid "bsdinstall-part-manual-partscheme.png"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:460
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:463
 msgid ""
 "After the partition layout has been created, review it to ensure it meets "
 "the needs of the installation. Selecting btn:[Revert] will reset the "
@@ -1441,19 +1446,19 @@ msgid ""
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:462
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:465
 #, no-wrap
 msgid "Review Created Partitions"
 msgstr ""
 
 #. type: Target for macro image
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:463
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:466
 #, no-wrap
 msgid "bsdinstall-part-review.png"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:466
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:469
 msgid ""
 "Once the disks are configured, the next menu provides the last chance to "
 "make changes before the selected drives are formatted. If changes need to be "
@@ -1463,58 +1468,58 @@ msgid ""
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:468
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:471
 #, no-wrap
 msgid "Final Confirmation"
 msgstr ""
 
 #. type: Target for macro image
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:469
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:472
 #, no-wrap
 msgid "bsdinstall-final-confirmation.png"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:472
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:475
 msgid ""
 "To continue with the installation process go to <<bsdinstall-fetching-"
 "distribution>>."
 msgstr ""
 
 #. type: Title ===
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:474
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:477
 #, no-wrap
 msgid "Manual Partitioning"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:477
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:480
 msgid "Selecting this method opens the partition editor:"
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:479
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:485
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:482
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:488
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:516
 #, no-wrap
 msgid "Manually Create Partitions"
 msgstr ""
 
 #. type: Target for macro image
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:480
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:483
 #, no-wrap
 msgid "bsdinstall-part-manual-create.png"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:483
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:486
 msgid ""
 "Highlight the installation drive ([.filename]#ada0# in this example) and "
 "select btn:[Create] to display a menu of available partition schemes:"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:489
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:492
 msgid ""
 "GPT is usually the most appropriate choice for amd64 computers. Older "
 "computers that are not compatible with GPT should use MBR. The other "
@@ -1522,7 +1527,7 @@ msgid ""
 msgstr ""
 
 #. type: Block title
-#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:491
+#: documentation/content/en/books/handbook/bsdinstall/_index.adoc:494
 #, no-wrap
 msgid "Partitioning Schemes"
 msgstr ""
@@ -1545,9 +1550,6 @@ msgid ""
 "\n"
 "|MBR\n"
 "|Master Boot Record (http://en.wikipedia.org/wiki/Master_boot_record[http://en.wikipedia.org/wiki/Master_boot_record]).\n"
-"\n"
-"|VTOC8\n"
-"|Volume Table Of Contents used by Sun SPARC64 and UltraSPARC computers.\n"
 msgstr ""
 
 #. type: Plain text
