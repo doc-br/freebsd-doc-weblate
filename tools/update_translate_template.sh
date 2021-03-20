@@ -52,7 +52,13 @@ for resource in $RESOURCES; do
 
 	for document in $(find "$resource/" -name "*.adoc" ); do
 		name=$(basename -s .adoc "$document")
+
+		# Ignore some files
 		if [ "$name" = "chapters-order" ]; then
+			continue
+		fi
+
+		if [ "$document" = "documentation/content/en/books/books.adoc" ]; then
 			continue
 		fi
 
