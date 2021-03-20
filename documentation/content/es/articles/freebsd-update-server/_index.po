@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
-"POT-Creation-Date: 2021-02-21 18:54-0300\n"
+"POT-Creation-Date: 2021-03-20 17:26-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -28,12 +28,12 @@ msgid "Abstract"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:28
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:30
 msgid ""
-"This article describes building an internal FreeBSD Update Server. The "
+"This article describes building an internal FreeBSD Update Server.  The "
 "https://svnweb.freebsd.org/base/user/cperciva/freebsd-update-build/[freebsd-"
 "update-server] is written by `{cperciva}`, Security Officer Emeritus of "
-"FreeBSD. For users that think it is convenient to update their systems "
+"FreeBSD.  For users that think it is convenient to update their systems "
 "against an official update server, building their own FreeBSD Update Server "
 "may help to extend its functionality by supporting manually-tweaked FreeBSD "
 "releases or by providing a local mirror that will allow faster updates for a "
@@ -41,68 +41,68 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:30
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:32
 msgid "'''"
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:34
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:36
 #, no-wrap
 msgid "Acknowledgments"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:37
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:39
 msgid ""
 "This article was subsequently printed at https://people.freebsd.org/~jgh/"
 "files/fus/BSD_03_2010_EN.pdf[BSD Magazine]."
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:39
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:41
 #, no-wrap
 msgid "Introduction"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:42
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:48
 msgid ""
 "Experienced users or administrators are often responsible for several "
-"machines or environments. They understand the difficult demands and "
-"challenges of maintaining such an infrastructure. Running a FreeBSD Update "
+"machines or environments.  They understand the difficult demands and "
+"challenges of maintaining such an infrastructure.  Running a FreeBSD Update "
 "Server makes it easier to deploy security and software patches to selected "
-"test machines before rolling them out to production. It also means a number "
+"test machines before rolling them out to production.  It also means a number "
 "of systems can be updated from the local network rather than a potentially "
-"slower Internet connection. This article outlines the steps involved in "
+"slower Internet connection.  This article outlines the steps involved in "
 "creating an internal FreeBSD Update Server."
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:44
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:50
 #, no-wrap
 msgid "Prerequisites"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:47
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:53
 msgid ""
 "To build an internal FreeBSD Update Server some requirements should be met."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:49
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:55
 msgid "A running FreeBSD system."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:53
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:59
 msgid ""
 "At a minimum, updates require building on a FreeBSD release greater than or "
 "equal to the target release version for distribution."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:55
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:61
 msgid ""
 "A user account with at least 4 GB of available space. This will allow the "
 "creation of updates for 7.1 and 7.2, but the exact space requirements may "
@@ -110,13 +110,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:56
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:62
 msgid ""
 "An man:ssh[1] account on a remote machine to upload distributed updates."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:57
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:63
 msgid ""
 "A web server, like link:{handbook}#network-apache[Apache], with over half of "
 "the space required for the build. For instance, test builds for 7.1 and 7.2 "
@@ -125,18 +125,18 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:58
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:64
 msgid "Basic knowledge of shell scripting with Bourne shell, man:sh[1]."
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:60
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:66
 #, no-wrap
 msgid "Configuration: Installation & Setup"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:63
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:69
 msgid ""
 "Download the https://svnweb.freebsd.org/base/user/cperciva/freebsd-update-"
 "build/[freebsd-update-server] software by installing package:devel/"
@@ -144,27 +144,27 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:67
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:73
 #, no-wrap
 msgid "% svn co https://svn.freebsd.org/base/user/cperciva/freebsd-update-build freebsd-update-server\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:70
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:77
 msgid ""
-"Update [.filename]#scripts/build.conf# appropriately. It is sourced during "
+"Update [.filename]#scripts/build.conf# appropriately.  It is sourced during "
 "all build operations."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:72
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:79
 msgid ""
 "Here is the default [.filename]#build.conf#, which should be modified to "
 "suit your environment."
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:78
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:85
 #, no-wrap
 msgid ""
 "# Main configuration file for FreeBSD Update builds.  The\n"
@@ -173,7 +173,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:81
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:88
 #, no-wrap
 msgid ""
 "# Location from which to fetch releases\n"
@@ -181,7 +181,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:84
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:91
 #, no-wrap
 msgid ""
 "# Host platform\n"
@@ -189,7 +189,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:87
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:94
 #, no-wrap
 msgid ""
 "# Host name to use inside jails\n"
@@ -197,7 +197,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:90
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:97
 #, no-wrap
 msgid ""
 "# Location of SSH key\n"
@@ -205,7 +205,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:93
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:100
 #, no-wrap
 msgid ""
 "# SSH account into which files are uploaded\n"
@@ -213,7 +213,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:96
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:103
 #, no-wrap
 msgid ""
 "# Directory into which files are uploaded\n"
@@ -221,12 +221,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:99
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:106
 msgid "Parameters for consideration would be:"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:102
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:109
 msgid ""
 "<.> This is the location where ISO images are downloaded from (by the "
 "`fetchiso()` subroutine of [.filename]#scripts/build.subr#). The location "
@@ -238,20 +238,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:104
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:111
 msgid ""
 "<.> The name of the build host. This information will be displayed on "
 "updated systems when issuing:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:108
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:115
 #, no-wrap
 msgid "% uname -v\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:112
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:119
 msgid ""
 "<.> The SSH key for uploading files to the update server. A key pair can be "
 "created by typing `ssh-keygen -t dsa`. This parameter is optional; standard "
@@ -262,17 +262,17 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:114
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:121
 msgid "<.> Account for uploading files to the update server."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:116
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:123
 msgid "<.> Directory on the update server where files are uploaded to."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:118
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:125
 msgid ""
 "The default [.filename]#build.conf# shipped with the freebsd-update-server "
 "sources is suitable for building i386 releases of FreeBSD. As an example of "
@@ -281,18 +281,18 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:122
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:129
 msgid "Create a build environment for amd64:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:126
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:133
 #, no-wrap
 msgid "% mkdir -p /usr/local/freebsd-update-server/scripts/7.2-RELEASE/amd64\n"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:129
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:136
 msgid ""
 "Install a [.filename]#build.conf# in the newly created build directory. The "
 "build configuration options for FreeBSD 7.2-RELEASE on amd64 should be "
@@ -300,7 +300,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:140
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:147
 #, no-wrap
 msgid ""
 "# SHA256 hash of RELEASE disc1.iso image.\n"
@@ -314,7 +314,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:143
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:150
 #, no-wrap
 msgid ""
 "# EOL date\n"
@@ -322,7 +322,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:147
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:154
 msgid ""
 "<.> The man:sha256[1] hash key for the desired release, is published within "
 "the respective link:https://www.FreeBSD.org/releases/[release "
@@ -334,28 +334,28 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:151
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:158
 #, no-wrap
 msgid "% date -j -f '%Y%m%d-%H%M%S' '20090401-000000' '+%s'\n"
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:155
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:162
 #, no-wrap
 msgid "Building Update Code"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:158
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:167
 msgid ""
-"The first step is to run [.filename]#scripts/make.sh#. This will build some "
+"The first step is to run [.filename]#scripts/make.sh#.  This will build some "
 "binaries, create directories, and generate an RSA signing key used for "
-"approving builds. In this step, a passphrase will have to be supplied for "
+"approving builds.  In this step, a passphrase will have to be supplied for "
 "the final creation of the signing key."
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:173
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:182
 #, no-wrap
 msgid ""
 "# sh scripts/make.sh\n"
@@ -373,7 +373,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:176
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:185
 #, no-wrap
 msgid ""
 "Public key fingerprint:\n"
@@ -381,7 +381,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:180
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:189
 #, no-wrap
 msgid ""
 "Encrypting signing key for root\n"
@@ -390,19 +390,19 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:185
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:195
 msgid ""
-"Keep a note of the generated key fingerprint. This value is required in [."
+"Keep a note of the generated key fingerprint.  This value is required in [."
 "filename]#/etc/freebsd-update.conf# for binary updates."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:188
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:198
 msgid "At this point, we are ready to stage a build."
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:193
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:203
 #, no-wrap
 msgid ""
 "# cd /usr/local/freebsd-update-server\n"
@@ -410,12 +410,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:196
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:206
 msgid "What follows is a sample of an _initial_ build run."
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:216
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:226
 #, no-wrap
 msgid ""
 "# sh scripts/init.sh amd64 7.2-RELEASE\n"
@@ -438,7 +438,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:237
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:247
 #, no-wrap
 msgid ""
 "Files built but not released:\n"
@@ -464,26 +464,26 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:240
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:251
 msgid ""
-"Then the build of the world is performed again, with world patches. A more "
+"Then the build of the world is performed again, with world patches.  A more "
 "detailed explanation may be found in [.filename]#scripts/build.subr#."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:245
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:257
 msgid ""
 "During this second build cycle, the network time protocol daemon, man:"
-"ntpd[8], is turned off. Per `{cperciva}`, Security Officer Emeritus of "
+"ntpd[8], is turned off.  Per `{cperciva}`, Security Officer Emeritus of "
 "FreeBSD, \"the https://svnweb.freebsd.org/base/user/cperciva/freebsd-update-"
 "build/[freebsd-update-server] build code needs to identify timestamps which "
 "are stored in files so that they can be ignored when comparing builds to "
-"determine which files need to be updated. This timestamp-finding works by "
+"determine which files need to be updated.  This timestamp-finding works by "
 "doing two builds 400 days apart and comparing the results.\""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:264
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:276
 #, no-wrap
 msgid ""
 "Mon Aug 24 17:54:07 PDT 2009 Extracting world+src for FreeBSD/amd64 7.2-RELEASE\n"
@@ -504,7 +504,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:282
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:294
 #, no-wrap
 msgid ""
 "Files found which include build stamps:\n"
@@ -527,12 +527,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:285
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:297
 msgid "Finally, the build completes."
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:314
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:326
 #, no-wrap
 msgid ""
 "Values of build stamps, excluding library archive headers:\n"
@@ -564,7 +564,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:320
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:332
 #, no-wrap
 msgid ""
 "FreeBSD/amd64 7.2-RELEASE initialization build complete.  Please\n"
@@ -575,16 +575,16 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:323
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:337
 msgid ""
-"Approve the build if everything is correct. More information on determining "
+"Approve the build if everything is correct.  More information on determining "
 "this can be found in the distributed source file named [.filename]#USAGE#. "
-"Execute [.filename]#scripts/approve.sh#, as directed. This will sign the "
+"Execute [.filename]#scripts/approve.sh#, as directed.  This will sign the "
 "release, and move components into a staging area suitable for uploading."
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:328
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:342
 #, no-wrap
 msgid ""
 "# cd /usr/local/freebsd-update-server\n"
@@ -592,7 +592,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:338
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:352
 #, no-wrap
 msgid ""
 "# sh -e scripts/approve.sh amd64 7.2-RELEASE\n"
@@ -604,13 +604,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:341
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:355
 msgid ""
 "After the approval process is complete, the upload procedure may be started."
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:346
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:360
 #, no-wrap
 msgid ""
 "# cd /usr/local/freebsd-update-server\n"
@@ -618,7 +618,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:351
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:365
 msgid ""
 "In the event update code needs to be re-uploaded, this may be done by "
 "changing to the public distributions directory for the target release and "
@@ -626,7 +626,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:356
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:370
 #, no-wrap
 msgid ""
 "# cd /usr/local/freebsd-update-server/pub/7.2-RELEASE/amd64\n"
@@ -634,17 +634,17 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:361
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:377
 msgid ""
 "The uploaded files will need to be in the document root of the webserver in "
-"order for updates to be distributed. The exact configuration will vary "
-"depending on the web server used. For the Apache web server, please refer to "
-"the link:{handbook}#network-apache[Configuration of Apache servers] section "
-"in the Handbook."
+"order for updates to be distributed.  The exact configuration will vary "
+"depending on the web server used.  For the Apache web server, please refer "
+"to the link:{handbook}#network-apache[Configuration of Apache servers] "
+"section in the Handbook."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:363
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:379
 msgid ""
 "Update client's `KeyPrint` and `ServerName` in [.filename]#/etc/freebsd-"
 "update.conf#, and perform updates as instructed in the link:{handbook}"
@@ -652,31 +652,31 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:367
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:385
 msgid ""
 "In order for FreeBSD Update Server to work properly, updates for both the "
 "_current_ release and the release _one wants to upgrade to_ need to be "
-"built. This is necessary for determining the differences of files between "
-"releases. For example, when upgrading a FreeBSD system from 7.1-RELEASE to "
+"built.  This is necessary for determining the differences of files between "
+"releases.  For example, when upgrading a FreeBSD system from 7.1-RELEASE to "
 "7.2-RELEASE, updates will need to be built and uploaded to your distribution "
 "server for both versions."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:370
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:388
 msgid ""
 "For reference, the entire run of link:../../source/articles/freebsd-update-"
 "server/init.txt[init.sh] is attached."
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:372
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:390
 #, no-wrap
 msgid "Building a Patch"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:375
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:393
 msgid ""
 "Every time a link:https://www.FreeBSD.org/security/advisories/[security "
 "advisory] or link:https://www.FreeBSD.org/security/notices/[security notice] "
@@ -684,34 +684,34 @@ msgid ""
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:377
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:395
 msgid "For this example, 7.1-RELEASE will be used."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:379
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:397
 msgid "A couple of assumptions are made for a different release build:"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:381
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:399
 msgid "Setup the correct directory structure for the initial build."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:382
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:400
 msgid "Perform an initial build for 7.1-RELEASE."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:384
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:402
 msgid ""
 "Create the patch directory of the respective release under [.filename]#/usr/"
 "local/freebsd-update-server/patches/#."
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:389
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:407
 #, no-wrap
 msgid ""
 "% mkdir -p /usr/local/freebsd-update-server/patches/7.1-RELEASE/\n"
@@ -719,65 +719,65 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:392
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:412
 msgid ""
-"As an example, take the patch for man:named[8]. Read the advisory, and grab "
+"As an example, take the patch for man:named[8].  Read the advisory, and grab "
 "the necessary file from link:https://www.FreeBSD.org/security/advisories/"
-"[FreeBSD Security Advisories]. More information on interpreting the "
+"[FreeBSD Security Advisories].  More information on interpreting the "
 "advisory, can be found in the link:{handbook}#security-advisories[FreeBSD "
 "Handbook]."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:394
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:417
 msgid ""
 "In the https://security.freebsd.org/advisories/FreeBSD-SA-09:12.bind."
-"asc[security brief], this advisory is called `SA-09:12.bind`. After "
+"asc[security brief], this advisory is called `SA-09:12.bind`.  After "
 "downloading the file, it is required to rename the file to an appropriate "
-"patch level. It is suggested to keep this consistent with official FreeBSD "
-"patch levels, but its name may be freely chosen. For this build, let us "
+"patch level.  It is suggested to keep this consistent with official FreeBSD "
+"patch levels, but its name may be freely chosen.  For this build, let us "
 "follow the currently established practice of FreeBSD and call this `p7`. "
 "Rename the file:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:398
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:421
 #, no-wrap
 msgid "% cd /usr/local/freebsd-update-server/patches/7.1-RELEASE/; mv bind.patch 7-SA-09:12.bind\n"
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:403
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:427
 msgid ""
 "When running a patch level build, it is assumed that previous patches are in "
-"place. When a patch build is run, it will run all patches contained in the "
+"place.  When a patch build is run, it will run all patches contained in the "
 "patch directory."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:405
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:429
 msgid ""
 "There can be custom patches added to any build. Use the number zero, or any "
 "other number."
 msgstr ""
 
 #. type: delimited block = 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:411
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:435
 msgid ""
 "It is up to the administrator of the FreeBSD Update Server to take "
 "appropriate measures to verify the authenticity of every patch."
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:414
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:439
 msgid ""
-"At this point, a _diff_ is ready to be built. The software checks first to "
+"At this point, a _diff_ is ready to be built.  The software checks first to "
 "see if a [.filename]#scripts/init.sh# has been run on the respective release "
 "prior to running the diff build."
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:419
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:444
 #, no-wrap
 msgid ""
 "# cd /usr/local/freebsd-update-server\n"
@@ -785,12 +785,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:422
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:447
 msgid "What follows is a sample of a _differential_ build run."
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:496
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:521
 #, no-wrap
 msgid ""
 "# sh -e scripts/diff.sh amd64 7.1-RELEASE 7\n"
@@ -867,12 +867,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:499
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:524
 msgid "Updates are printed, and approval is requested."
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:518
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:543
 #, no-wrap
 msgid ""
 "New updates:\n"
@@ -894,12 +894,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:521
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:546
 msgid "Follow the same process as noted before for approving a build:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:530
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:555
 #, no-wrap
 msgid ""
 "# sh -e scripts/approve.sh amd64 7.1-RELEASE\n"
@@ -911,7 +911,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:536
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:561
 #, no-wrap
 msgid ""
 "The FreeBSD/amd64 7.1-RELEASE update build has been signed and is\n"
@@ -922,12 +922,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:539
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:564
 msgid "After approving the build, upload the software:"
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:544
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:569
 #, no-wrap
 msgid ""
 "# cd /usr/local/freebsd-update-server\n"
@@ -935,20 +935,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:547
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:572
 msgid ""
 "For reference, the entire run of link:../../source/articles/freebsd-update-"
 "server/diff.txt[diff.sh] is attached."
 msgstr ""
 
 #. type: Title ==
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:549
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:574
 #, no-wrap
 msgid "Tips"
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:552
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:577
 msgid ""
 "If a custom release is built using the native `make release` link:{releng}"
 "#release-build[procedure], freebsd-update-server code will work from your "
@@ -962,7 +962,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:563
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:588
 #, no-wrap
 msgid ""
 "# Compare ${WORKDIR}/release and ${WORKDIR}/$1, identify which parts\n"
@@ -976,7 +976,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:566
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:591
 msgid ""
 "Adding `-j _NUMBER_` flags to `buildworld` and `obj` targets in the [."
 "filename]#scripts/build.subr# script may speed up processing depending on "
@@ -985,7 +985,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:578
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:603
 #, no-wrap
 msgid ""
 "              # Build the world\n"
@@ -1000,7 +1000,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:581
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:606
 msgid ""
 "Create an appropriate link:{handbook}#network-dns[DNS] SRV record for the "
 "update server, and put others behind it with variable weights. Using this "
@@ -1009,7 +1009,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block . 4
-#: documentation/content/en/articles/freebsd-update-server/_index.adoc:587
+#: documentation/content/en/articles/freebsd-update-server/_index.adoc:612
 #, no-wrap
 msgid ""
 "_http._tcp.update.myserver.com.\t\tIN SRV   0 2 80   host1.myserver.com.\n"
