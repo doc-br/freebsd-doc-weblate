@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-03-14 22:47+0000\n"
+"PO-Revision-Date: 2021-03-21 12:42+0000\n"
 "Last-Translator: Danilo G. Baio <dbaio@FreeBSD.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/articlesleap-seconds_index/pt_BR/>\n"
@@ -37,12 +37,6 @@ msgstr "Introdução"
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:27
-#, fuzzy
-#| msgid ""
-#| "A _leap second_ is an one second adjustment made at specific times of "
-#| "year to UTC to synchronize atomic time scales with variations in the "
-#| "rotation of the Earth. This article describes how FreeBSD interacts with "
-#| "leap seconds."
 msgid ""
 "A _leap second_ is an one second adjustment made at specific times of year "
 "to UTC to synchronize atomic time scales with variations in the rotation of "
@@ -55,11 +49,6 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:30
-#, fuzzy
-#| msgid ""
-#| "As of this writing, the next leap second will occur at 2015-Jun-30 "
-#| "23:59:60 UTC. This leap second will occur during a business day for North "
-#| "and South America and the Asia/Pacific region."
 msgid ""
 "As of this writing, the next leap second will occur at 2015-Jun-30 23:59:60 "
 "UTC.  This leap second will occur during a business day for North and South "
@@ -81,10 +70,6 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:35
-#, fuzzy
-#| msgid ""
-#| "Standard leap second behavior is described in https://tools.ietf.org/html/"
-#| "rfc7164#section-3[RFC 7164]. Also see man:time2posix[3]."
 msgid ""
 "Standard leap second behavior is described in https://tools.ietf.org/html/"
 "rfc7164#section-3[RFC 7164].  Also see man:time2posix[3]."
@@ -100,14 +85,6 @@ msgstr "Manipulação padrão do leap seconds no FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:42
-#, fuzzy
-#| msgid ""
-#| "The easiest way to handle leap seconds is with the POSIX time rules "
-#| "FreeBSD uses by default, combined with link:{handbook}#network-ntp[NTP]. "
-#| "When man:ntpd[8] is running and the time is synchronized with upstream "
-#| "NTP servers that handle leap seconds correctly, the leap second will "
-#| "cause the system time to automatically repeat the last second of the day. "
-#| "No other adjustments are necessary."
 msgid ""
 "The easiest way to handle leap seconds is with the POSIX time rules FreeBSD "
 "uses by default, combined with link:{handbook}#network-ntp[NTP].  When man:"
@@ -117,11 +94,11 @@ msgid ""
 "adjustments are necessary."
 msgstr ""
 "A maneira mais fácil de manipular o leap seconds é com a regra de tempo "
-"POSIX que é utilizada por padrão pelo FreeBSD, combinada com o link:"
-"{handbook}#network-ntp[NTP]. Quando o man:ntpd[8] está sendo executado e o "
-"tempo é sincronizado com os servidores NTP de upstream que gerenciam o leap "
-"seconds corretamente, o leap second causará a repetição do último segundo do "
-"dia de forma automática. Nenhum outro ajuste será necessário."
+"POSIX que é utilizada por padrão pelo FreeBSD, combinada com o link:{handbook"
+"}#network-ntp[NTP]. Quando o man:ntpd[8] está sendo executado e o tempo é "
+"sincronizado com os servidores NTP de upstream que gerenciam o leap seconds "
+"corretamente, o leap second causará a repetição do último segundo do dia de "
+"forma automática. Nenhum outro ajuste será necessário."
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:44
@@ -151,11 +128,6 @@ msgstr "Cuidados"
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:52
-#, fuzzy
-#| msgid ""
-#| "Leap seconds are inserted at the same instant all over the world: UTC "
-#| "midnight. In Japan that is mid-morning, in the Pacific mid-day, in the "
-#| "Americas late afternoon, and in Europe at night."
 msgid ""
 "Leap seconds are inserted at the same instant all over the world: UTC "
 "midnight.  In Japan that is mid-morning, in the Pacific mid-day, in the "
@@ -178,12 +150,6 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:57
-#, fuzzy
-#| msgid ""
-#| "However, we caution that practically no applications have ever asked the "
-#| "kernel about leap seconds. Our experience is that, as designed, leap "
-#| "seconds are essentially a replay of the second before the leap second, "
-#| "and this is a surprise to most application programmers."
 msgid ""
 "However, we caution that practically no applications have ever asked the "
 "kernel about leap seconds.  Our experience is that, as designed, leap "
@@ -234,12 +200,6 @@ msgstr "Testando"
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:71
-#, fuzzy
-#| msgid ""
-#| "It is possible to test whether a leap second will be used. Due to the "
-#| "nature of NTP, the test might work up to 24 hours before the leap second. "
-#| "Some major reference clock sources only announce leap seconds one hour "
-#| "ahead of the event. Query the NTP daemon:"
 msgid ""
 "It is possible to test whether a leap second will be used.  Due to the "
 "nature of NTP, the test might work up to 24 hours before the leap second.  "
@@ -259,11 +219,6 @@ msgstr "% ntpq -c 'rv 0 leap'\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:79
-#, fuzzy
-#| msgid ""
-#| "Output that includes `leap_add_sec` indicates proper support of the leap "
-#| "second. Before the 24 hours leading up to the leap second, or after the "
-#| "leap second has passed, `leap_none` will be shown."
 msgid ""
 "Output that includes `leap_add_sec` indicates proper support of the leap "
 "second.  Before the 24 hours leading up to the leap second, or after the "
@@ -281,11 +236,6 @@ msgstr "Conclusão"
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:84
-#, fuzzy
-#| msgid ""
-#| "In practice, leap seconds are usually not a problem on FreeBSD. We hope "
-#| "that this overview helps clarify what to expect and how to make the leap "
-#| "second event proceed more smoothly."
 msgid ""
 "In practice, leap seconds are usually not a problem on FreeBSD.  We hope "
 "that this overview helps clarify what to expect and how to make the leap "
