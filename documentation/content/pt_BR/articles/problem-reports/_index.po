@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-03-20 19:50+0000\n"
-"Last-Translator: Danilo G. Baio <dbaio@FreeBSD.org>\n"
+"PO-Revision-Date: 2021-03-28 14:33+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/articlesproblem-reports_index/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -15,14 +15,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.5.1\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: Title =
 #: documentation/content/en/articles/problem-reports/_index.adoc:1
 #: documentation/content/en/articles/problem-reports/_index.adoc:10
 #, no-wrap
 msgid "Writing FreeBSD Problem Reports"
-msgstr ""
+msgstr "Escrevendo Relatórios de Problemas para o FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:25
@@ -35,6 +35,8 @@ msgid ""
 "This article describes how to best formulate and submit a problem report to "
 "the FreeBSD Project."
 msgstr ""
+"Este artigo descreve como redigir e submeter um bom relatório de problemas "
+"ao Projeto FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:29
@@ -74,6 +76,9 @@ msgid ""
 "Although the primary focus of this article is on FreeBSD problem reports, "
 "most of it should apply quite well to other software projects."
 msgstr ""
+"Embora o foco principal deste artigo esteja nos relatórios de problemas do "
+"FreeBSD, a maioria das recomendações deve se aplicar muito bem a outros "
+"projetos de software."
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:45
@@ -87,7 +92,7 @@ msgstr ""
 #: documentation/content/en/articles/problem-reports/_index.adoc:47
 #, no-wrap
 msgid "When to Submit a Problem Report"
-msgstr ""
+msgstr "Quando Enviar um Relatório de Problemas"
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:53
@@ -122,6 +127,8 @@ msgid ""
 "Consider these factors when submitting PRs about ports or other software "
 "that is not part of FreeBSD itself:"
 msgstr ""
+"Considere estes fatores ao enviar PRs sobre ports ou outros softwares que "
+"não fazem parte do próprio FreeBSD:"
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:61
@@ -171,6 +178,9 @@ msgid ""
 "understand that the software that makes up FreeBSD is composed of several "
 "different elements:"
 msgstr ""
+"Em seguida, para decidir para quem você deve enviar seu relatório de "
+"problema, você precisa entender que o software que compõe o FreeBSD é "
+"composto por vários elementos diferentes:"
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:72
@@ -235,7 +245,7 @@ msgstr ""
 #: documentation/content/en/articles/problem-reports/_index.adoc:86
 #, no-wrap
 msgid "Preparations"
-msgstr ""
+msgstr "Preparativos"
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:92
@@ -290,6 +300,8 @@ msgid ""
 "Most importantly, attempt to see if existing documentation in the source "
 "base addresses your problem."
 msgstr ""
+"Mais importante ainda, tente verificar se a documentação existente não "
+"endereça o seu problema."
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:101
@@ -319,7 +331,7 @@ msgstr ""
 #: documentation/content/en/articles/problem-reports/_index.adoc:106
 #, no-wrap
 msgid "Writing the Problem Report"
-msgstr ""
+msgstr "Escrevendo o Relatório do Problema"
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:110
@@ -335,7 +347,7 @@ msgstr ""
 #: documentation/content/en/articles/problem-reports/_index.adoc:112
 #, no-wrap
 msgid "Tips and Tricks for Writing a Good Problem Report"
-msgstr ""
+msgstr "Dicas e Truques para Escrever um Bom Relatório de Problemas"
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:115
@@ -417,6 +429,12 @@ msgid ""
 "cannot be made public, then do try to create a minimal file that exhibits "
 "the same issue and that can be included within the PR."
 msgstr ""
+"Se o problema puder ser reproduzido facilmente, inclua informações que irão "
+"ajudar um desenvolvedor a reproduzi-lo. Se um problema puder ser demonstrado "
+"com uma entrada específica, então inclua um exemplo desta entrada se "
+"possível, e inclua tanto a saída real quanto a esperada. Se esses dados "
+"forem grandes ou não puderem ser tornados públicos, então tente criar um "
+"arquivo pequeno que exiba o mesmo problema e que possa ser incluído no PR."
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:124
@@ -426,6 +444,10 @@ msgid ""
 "to fill up the database, but you should include excerpts that you think "
 "might be relevant):"
 msgstr ""
+"Se este for um problema do kernel, esteja preparado para fornecer as "
+"seguintes informações. (Você não precisa incluí-las por padrão, o que apenas "
+"tende a preencher o banco de dados, mas você deve incluir os trechos que "
+"considera ser relevantes):"
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:126
@@ -433,6 +455,8 @@ msgid ""
 "your kernel configuration (including which hardware devices you have "
 "installed)"
 msgstr ""
+"sua configuração do kernel (incluindo quais dispositivos de hardware você "
+"tem instalado)"
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:127
@@ -469,6 +493,9 @@ msgid ""
 "out hardware-related issues such as failing disks and overheating CPUs, "
 "which can masquerade as kernel problems)"
 msgstr ""
+"independente de você poder executar qualquer outro kernel como um fallback ("
+"isso é para descartar problemas relacionados a hardware, como discos com "
+"falhas e CPUs superaquecidas, que podem se passar por problemas de kernel)"
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:133
@@ -478,11 +505,15 @@ msgid ""
 "to fill up the database, but you should include excerpts that you think "
 "might be relevant):"
 msgstr ""
+"Se este for um problema de algum port, esteja preparado para fornecer as "
+"seguintes informações. (Você não precisa incluí-las por padrão, o que apenas "
+"tende a preencher o banco de dados, mas você deve incluir trechos que você "
+"considera relevantes):"
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:135
 msgid "which ports you have installed"
-msgstr ""
+msgstr "quais ports você instalou"
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:136
@@ -553,7 +584,7 @@ msgstr ""
 #: documentation/content/en/articles/problem-reports/_index.adoc:145
 #, no-wrap
 msgid "Before Beginning"
-msgstr ""
+msgstr "Antes de Começar"
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:149
@@ -569,12 +600,14 @@ msgid ""
 "Finally, if the submission is lengthy, prepare the work offline so that "
 "nothing will be lost if there is a problem submitting it."
 msgstr ""
+"Finalmente, se o envio for demorado, prepare o trabalho off-line para que "
+"nada seja perdido se houver um problema ao enviá-lo."
 
 #. type: Title ==
 #: documentation/content/en/articles/problem-reports/_index.adoc:153
 #, no-wrap
 msgid "Attaching Patches or Files"
-msgstr ""
+msgstr "Anexando Patches ou Arquivos"
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:158
@@ -597,6 +630,10 @@ msgid ""
 "tabs as spaces, which will completely ruin anything intended to be part of a "
 "Makefile."
 msgstr ""
+"Se você anexar um patch inline, em vez de um anexo, observe que o problema "
+"mais comum, de longe, é a tendência de alguns programas de email renderizar "
+"tabs como espaços, o que ira arruinar completamente qualquer coisa destinada "
+"a fazer parte de um Makefile."
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:163
@@ -628,12 +665,16 @@ msgid ""
 "your PR or in the patch itself, any patches you submit will be assumed to be "
 "licensed under the same terms as the original file you modified."
 msgstr ""
+"Você também deve observar que, a menos que você especifique explicitamente o "
+"contrário em seu PR ou no próprio patch, quaisquer patches enviados por você "
+"serão considerados licenciados sob os mesmos termos do arquivo original que "
+"você modificou."
 
 #. type: Title ==
 #: documentation/content/en/articles/problem-reports/_index.adoc:172
 #, no-wrap
 msgid "Filling out the Form"
-msgstr ""
+msgstr "Preenchendo o formulário"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/problem-reports/_index.adoc:179
@@ -648,7 +689,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:182
 msgid "When you file a bug, you will find the following fields:"
-msgstr ""
+msgstr "Quando você for reportar um bug, você encontrará os seguintes campos:"
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:184
@@ -788,7 +829,7 @@ msgstr ""
 #: documentation/content/en/articles/problem-reports/_index.adoc:216
 #, no-wrap
 msgid "Correct Use of Arch-Specific Category"
-msgstr ""
+msgstr "Uso Correto da Categoria Específica de Arquitetura"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/problem-reports/_index.adoc:220
@@ -802,7 +843,7 @@ msgstr ""
 #: documentation/content/en/articles/problem-reports/_index.adoc:222
 #, no-wrap
 msgid "Incorrect Use of Arch-Specific Category"
-msgstr ""
+msgstr "Uso Incorreto da Categoria Específica de Arquitetura"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/problem-reports/_index.adoc:226
@@ -851,7 +892,7 @@ msgstr ""
 #: documentation/content/en/articles/problem-reports/_index.adoc:232
 #, no-wrap
 msgid "Follow-up"
-msgstr ""
+msgstr "Acompanhamento"
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:237
@@ -884,6 +925,10 @@ msgid ""
 "a comment saying that the problem report can be closed, and, if possible, "
 "explaining how or when the problem was fixed."
 msgstr ""
+"Se o relatório de problemas permanecer aberto após o desaparecimento do "
+"problema, basta adicionar um comentário dizendo que o relatório de problemas "
+"pode ser fechado e, se possível, explicar como ou quando o problema foi "
+"corrigido."
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:247
@@ -901,6 +946,8 @@ msgid ""
 "There are a few ways to do so, ideally in the following order, with a few "
 "days between attempting each communication channel:"
 msgstr ""
+"Existem algumas maneiras de se fazer isso, idealmente na seguinte ordem, com "
+"alguns dias entre a tentativa em cada canal de comunicação:"
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:251
@@ -946,7 +993,7 @@ msgstr ""
 #: documentation/content/en/articles/problem-reports/_index.adoc:259
 #, no-wrap
 msgid "If There Are Problems"
-msgstr ""
+msgstr "Se Existir Problemas"
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:263
@@ -960,7 +1007,7 @@ msgstr ""
 #: documentation/content/en/articles/problem-reports/_index.adoc:265
 #, no-wrap
 msgid "Further Reading"
-msgstr ""
+msgstr "Leitura Adicional"
 
 #. type: Plain text
 #: documentation/content/en/articles/problem-reports/_index.adoc:269
