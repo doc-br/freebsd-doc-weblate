@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:55-0300\n"
-"PO-Revision-Date: 2021-02-24 00:32+0000\n"
-"Last-Translator: Danilo G. Baio <dbaio@FreeBSD.org>\n"
+"PO-Revision-Date: 2021-03-28 20:54+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/booksdev-model_index/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -15,14 +15,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.5\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: Title =
 #: documentation/content/en/books/dev-model/_index.adoc:1
 #: documentation/content/en/books/dev-model/_index.adoc:10
 #, no-wrap
 msgid "A project model for the FreeBSD Project"
-msgstr ""
+msgstr "Um modelo de projeto para o projeto FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:58
@@ -32,7 +32,7 @@ msgstr "'''"
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:64
 msgid "Foreword"
-msgstr ""
+msgstr "Prefácio"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:66
@@ -55,6 +55,8 @@ msgid ""
 "I would like to thank the following people for taking the time to explain "
 "things that were unclear to me and for proofreading the document."
 msgstr ""
+"Gostaria de agradecer às pessoas a seguir por dedicarem tempo para explicar "
+"coisas que não estavam claras para mim e por revisar o documento."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:70
@@ -111,7 +113,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:80
 msgid "Marleen Devos"
-msgstr ""
+msgstr "Marleen Devos"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:81
@@ -137,7 +139,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:86
 #, no-wrap
 msgid "Overview"
-msgstr ""
+msgstr "Visão geral"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:88
@@ -182,6 +184,12 @@ msgid ""
 "for process control, it will present the defined processes. Finally it will "
 "outline major sub-projects of the FreeBSD project."
 msgstr ""
+"Depois de fornecer as definições dos termos usados, este documento delineará "
+"a estrutura organizacional (incluindo descrições de funções e linhas de "
+"comunicação), discutirá o modelo de metodologia e, depois de apresentar as "
+"ferramentas usadas para controle de processos, apresentará os processos "
+"definidos. Finalmente, ele delineará os principais subprojetos do projeto "
+"FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:96
@@ -199,13 +207,13 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:98
 #, no-wrap
 msgid "Definitions"
-msgstr ""
+msgstr "Definições"
 
 #. type: Title ===
 #: documentation/content/en/books/dev-model/_index.adoc:101
 #, no-wrap
 msgid "Activity"
-msgstr ""
+msgstr "Atividade"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:104
@@ -220,7 +228,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:106
 #, no-wrap
 msgid "Process"
-msgstr ""
+msgstr "Processo"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:109
@@ -234,7 +242,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:111
 #, no-wrap
 msgid "Hat"
-msgstr ""
+msgstr "Hat (Definição/função especifica para algumas pessoas)"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:114
@@ -249,7 +257,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:116
 #, no-wrap
 msgid "Outcome"
-msgstr ""
+msgstr "Resultado"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:119
@@ -267,7 +275,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:121
 #, no-wrap
 msgid "FreeBSD"
-msgstr ""
+msgstr "FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:124
@@ -281,7 +289,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:126
 #, no-wrap
 msgid "Organisational structure"
-msgstr ""
+msgstr "Estrutura organizacional"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:129
@@ -290,6 +298,9 @@ msgid ""
 "into core, committers and contributors and is part of the FreeBSD community "
 "that lives around it."
 msgstr ""
+"Enquanto ninguém assume a propriedade do FreeBSD, a organização do FreeBSD é "
+"dividida em core, committers e colaboradores e isso faz parte da comunidade "
+"do FreeBSD que vive em torno dele."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:131
@@ -320,6 +331,9 @@ msgid ""
 "January 1st, 2004 to December 31st, 2004 and contributors by going through "
 "the list of contributions and problem reports."
 msgstr ""
+"O número de committers foi determinado passando pelos logs do CVS de 1º de "
+"janeiro de 2004 a 31 de dezembro de 2004 e pelos colaboradores, passando "
+"pela lista de contribuições e relatórios de problemas."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:151
@@ -329,6 +343,11 @@ msgid ""
 "forward. Regular developers are referred to as contributors. As of January "
 "1st, 2003, there are an estimated 5500 contributors on the project."
 msgstr ""
+"O principal recurso na comunidade do FreeBSD são seus desenvolvedores: os "
+"committers e colaboradores. É com suas contribuições que o projeto pode "
+"avançar. Desenvolvedores regulares são referidos como colaboradores. Desde "
+"1º de janeiro de 2003, existe uma estimativa de 5500 colaboradores no "
+"projeto."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:153
@@ -340,6 +359,12 @@ msgid ""
 "the developers who elect the core team, and they have access to closed "
 "discussions."
 msgstr ""
+"Os committers são desenvolvedores com o privilégio de poder aplicar mudanças "
+"(fazer commit). Geralmente, são os desenvolvedores mais ativos que estão "
+"dispostos a gastar seu tempo não apenas integrando seu próprio código, mas "
+"integrando o código enviado pelos desenvolvedores que não têm esse "
+"privilégio. Eles também são os desenvolvedores que elegem a equipe principal "
+"(core) e têm acesso a discussões fechadas."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:155
@@ -353,7 +378,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:157
 msgid "This split changes our table to look like this:"
-msgstr ""
+msgstr "Esta divisão muda nossa tabela para ficar assim:"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:159
@@ -405,6 +430,11 @@ msgid ""
 "work in multiple areas, making the total number higher than the real number "
 "of committers. The total number of committers at that time was 269."
 msgstr ""
+"O número de committers por área foi determinado passando por logs do CVS de "
+"1 de janeiro de 2004 a 31 de dezembro de 2004. Observe que muitos committers "
+"trabalham em várias áreas, fazendo com que o número total seja maior que o "
+"número real de committers. O número total de committers naquele momento era "
+"269."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:199
@@ -416,6 +446,12 @@ msgid ""
 "different parts, the total number in the committers section of the table is "
 "higher than in the above table."
 msgstr ""
+"Os committers se enquadram em três grupos: committers que estão preocupados "
+"apenas com uma área do projeto (por exemplo, sistemas de arquivos), "
+"committers que estão envolvidos apenas com um subprojeto e committers que se "
+"comprometem com partes diferentes do código, incluindo subprojetos. Como "
+"alguns committers trabalham em partes diferentes, o número total na seção "
+"commiters da tabela é maior que na tabela acima."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:201
@@ -470,13 +506,13 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:209
 #, no-wrap
 msgid "Methodology model"
-msgstr ""
+msgstr "Modelo de metodologia"
 
 #. type: Title ===
 #: documentation/content/en/books/dev-model/_index.adoc:212
 #, no-wrap
 msgid "Development model"
-msgstr ""
+msgstr "Modelo de desenvolvimento"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:215
@@ -485,6 +521,9 @@ msgid ""
 "Niels Jørgenssen has suggested a model of how written code is integrated "
 "into the project."
 msgstr ""
+"Não existe um modelo definido para como as pessoas escrevem código no "
+"FreeBSD. No entanto, Niels Jørgenssen sugeriu um modelo de como o código "
+"escrito é integrado ao projeto."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:217
@@ -547,6 +586,16 @@ msgid ""
 "the process. To integrate a change with either -CURRENT or -STABLE is called "
 "making a commit."
 msgstr ""
+"Este é um modelo para uma mudança e mostra que, após a codificação, os "
+"desenvolvedores buscam a revisão da comunidade e tentam integrá-la com seus "
+"próprios sistemas. Depois de integrar a mudança na versão de "
+"desenvolvimento, chamada FreeBSD-CURRENT, ela é testada por muitos usuários "
+"e desenvolvedores na comunidade FreeBSD. Depois de passar por testes "
+"suficientes, é feito o merge (aplicado) na versão de produção, chamada "
+"FreeBSD-STABLE. A menos que cada estágio seja concluído com êxito, o "
+"desenvolvedor precisa voltar e fazer modificações no código e reiniciar o "
+"processo. Integrar uma mudança com -CURRENT ou -STABLE é chamado de fazer um "
+"commit."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:255
@@ -557,6 +606,13 @@ msgid ""
 "that while they are waiting for review or people to test one or more of "
 "their changes, they may be writing another change."
 msgstr ""
+"Jørgensen descobriu que a maioria dos desenvolvedores do FreeBSD trabalha "
+"individualmente, o que significa que este modelo é usado em paralelo por "
+"muitos desenvolvedores nos diferentes esforços de desenvolvimento em "
+"andamento. Um desenvolvedor também pode estar trabalhando em várias "
+"alterações, de modo que, enquanto eles aguardam revisão ou que pessoas "
+"testem uma ou mais de suas alterações, ele pode estar escrevendo outra "
+"alteração."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:257
@@ -592,6 +648,16 @@ msgid ""
 "before merging it to -STABLE is 3 days. Such a merge is referred to as an "
 "MFC (Merge From Current)."
 msgstr ""
+"Da perspectiva de um modelo em etapas (como o modelo em cascata), os outros "
+"suportes podem ser vistos como verificação adicional e integração do "
+"sistema. Essa integração do sistema também é importante para ver se uma "
+"alteração é aceita pela comunidade. Até que o código seja \"committed\", o "
+"desenvolvedor é livre para escolher quanto se deve comunicar sobre o "
+"restante do projeto. Para que o -CURRENT funcione como um buffer (para que "
+"as ideias brilhantes que tinham algumas desvantagens não descobertas possam "
+"ser recuperadas), o tempo mínimo que um \"commit\" deve estar no -CURRENT "
+"antes de fazer o merge (aplicar o código) para -STABLE é de 3 dias. Esse "
+"merge (aplicação) é referido como um MFC (Merge From Current)."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:263
@@ -607,6 +673,9 @@ msgid ""
 "features that are deprecated in the -CURRENT branch. In these cases, changes "
 "can be committed directly to the -STABLE branch."
 msgstr ""
+"As únicas exceções desse modelo são correções de segurança e alterações nos "
+"recursos que estão obsoletos na branch (ramificação) -CURRENT. Nesses casos, "
+"as alterações podem ser \"committed\" diretamente na branch -STABLE."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:267
@@ -648,7 +717,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:271
 #, no-wrap
 msgid "Release branches"
-msgstr ""
+msgstr "Lançamento de versões (Release branches)"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:274
@@ -657,6 +726,9 @@ msgid ""
 "where each major branch represents a major version. Minor versions are "
 "represented by branches of the major branches."
 msgstr ""
+"Os lançamentos do FreeBSD são melhores ilustrados por uma árvore com muitas "
+"branches, onde cada branch principal representa uma versão principal. "
+"Versões secundárias são representadas por branches das branches maiores."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:276
@@ -671,12 +743,22 @@ msgid ""
 "STABLE and 5.0-CURRENT. At 4.5-RELEASE, the branch forked off a security "
 "branch called RELENG_4_5."
 msgstr ""
+"Na árvore de versões a seguir, as setas que seguem uma a outra em uma "
+"determinada direção representam uma branch. Caixas com linhas completas e "
+"encorporadas representam lançamentos oficiais. Caixas com linhas pontilhadas "
+"representam a branch de desenvolvimento nesse momento. Branchs de segurança "
+"são representadas por ovais. As encorporadas diferem das caixas em que "
+"representam um fork, definindo um lugar onde uma branch se divide em duas "
+"branchs, onde uma das branches se tornam uma sub-branch (sub ramificação). "
+"Por exemplo, em 4.0-RELEASE, a branch 4.0-CURRENT é dividida em 4-STABLE e 5."
+"0-CURRENT. No 4.5-RELEASE, a branch retirou uma branch de segurança chamada "
+"RELENG_4_5."
 
 #. type: Block title
 #: documentation/content/en/books/dev-model/_index.adoc:277
 #, no-wrap
 msgid "The FreeBSD release tree"
-msgstr ""
+msgstr "A árvore de versões (release) do FreeBSD"
 
 #. type: Positional ($1) AttributeList argument for macro 'image'
 #: documentation/content/en/books/dev-model/_index.adoc:278
@@ -786,7 +868,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:324
 #, no-wrap
 msgid "Model summary"
-msgstr ""
+msgstr "Resumo do modelo"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:327
@@ -794,12 +876,14 @@ msgid ""
 "To summarise, the development model of FreeBSD can be seen as the following "
 "tree:"
 msgstr ""
+"Para resumir, o modelo de desenvolvimento do FreeBSD pode ser visto como a "
+"seguinte árvore:"
 
 #. type: Block title
 #: documentation/content/en/books/dev-model/_index.adoc:328
 #, no-wrap
 msgid "The overall development model"
-msgstr ""
+msgstr "O modelo geral de desenvolvimento"
 
 #. type: Positional ($1) AttributeList argument for macro 'image'
 #: documentation/content/en/books/dev-model/_index.adoc:329
@@ -819,6 +903,8 @@ msgid ""
 "The tree of the FreeBSD development with ongoing development efforts and "
 "continuous integration."
 msgstr ""
+"A árvore do desenvolvimento do FreeBSD com esforços contínuos de "
+"desenvolvimento e integração contínua."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:334
@@ -839,6 +925,12 @@ msgid ""
 "finally merged from -CURRENT into -STABLE. Security fixes are merged from -"
 "STABLE to the security branches."
 msgstr ""
+"Nuvens de esforços de desenvolvimento pairam sobre o projeto, onde os "
+"desenvolvedores usam os modelos de desenvolvimento que eles acham adequados. "
+"O produto de seu trabalho é então integrado em -CURRENT, onde ele é depurado "
+"paralelamente e finalmente é feito o merge (aplicado o código) do -CURRENT "
+"na -STABLE. As correções de segurança são feitos os merges (aplicado os "
+"códigos) da -STABLE para as branches de segurança."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:338
@@ -862,24 +954,30 @@ msgid ""
 "not such a formalisation, rather a summary of the role with links to the "
 "charter where available and contact addresses."
 msgstr ""
+"Muitos desses hats não são formalizados. Hats formalizados têm uma carta "
+"indicando o propósito exato do hat, juntamente com seus privilégios e "
+"responsabilidades. A redação de tais cartas é uma nova parte do projeto e, "
+"portanto, ainda não foi concluída para todos os hats. Essas descrições de "
+"hats não são uma formalização, e sim um resumo da função com links para a "
+"carta quando disponíveis e endereços de contato."
 
 #. type: Title ==
 #: documentation/content/en/books/dev-model/_index.adoc:342
 #, no-wrap
 msgid "Hats"
-msgstr ""
+msgstr "Hats (Funções)"
 
 #. type: Title ===
 #: documentation/content/en/books/dev-model/_index.adoc:345
 #, no-wrap
 msgid "General Hats"
-msgstr ""
+msgstr "Hats Universais"
 
 #. type: Title ====
 #: documentation/content/en/books/dev-model/_index.adoc:348
 #, no-wrap
 msgid "Contributor"
-msgstr ""
+msgstr "Colaborador"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:351
@@ -894,7 +992,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:353
 #, no-wrap
 msgid "Committer"
-msgstr ""
+msgstr "Committer"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:356
@@ -922,7 +1020,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:360
 #, no-wrap
 msgid "Core Team"
-msgstr ""
+msgstr "Equipe principal (Core Team)"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:363
@@ -939,7 +1037,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:365
 #, no-wrap
 msgid "Maintainership"
-msgstr ""
+msgstr "Maintainership"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:368
@@ -949,6 +1047,10 @@ msgid ""
 "over the code occur. This involves proactive work aimed at stimulating "
 "contributions and reactive work in reviewing commits."
 msgstr ""
+"Maintainership significa que essa pessoa é responsável pelo que é permitido "
+"entrar nessa área do código e tem a palavra final caso ocorram discordâncias "
+"sobre o código. Isso envolve trabalho proativo destinado a estimular "
+"contribuições e trabalho reativo na revisão de commits."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:370
@@ -959,6 +1061,12 @@ msgid ""
 "development effort rather than being stuck in a slow correspondence should "
 "the maintainer be unavailable for some time."
 msgstr ""
+"Com o código fonte do FreeBSD vem o arquivo MAINTAINERS que contém um resumo "
+"de uma linha de como cada mantenedor gostaria que as contribuições fossem "
+"feitas. Ter este aviso e informações de contato permite que os "
+"desenvolvedores se concentrem no esforço de desenvolvimento, em vez de "
+"ficarem presos em uma correspondência lenta, caso o mantenedor não esteja "
+"disponível por algum tempo."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:372
@@ -968,6 +1076,11 @@ msgid ""
 "switched without the maintainer's approval. This is based on the stance that "
 "maintainership should be demonstrated, not declared."
 msgstr ""
+"Se o mantenedor não estiver disponível por um período de tempo "
+"excessivamente longo, e outras pessoas fizerem uma quantidade significativa "
+"de trabalho, a manutenção pode ser trocada sem a aprovação do mantenedor. "
+"Isto é baseado na postura de que a manutenção deve ser demonstrada, não "
+"declarada."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:374
@@ -975,12 +1088,14 @@ msgid ""
 "Maintainership of a particular piece of code is a hat that is not held as a "
 "group."
 msgstr ""
+"A manutenção de uma parte específica do código é um hat que não é mantido "
+"como um grupo."
 
 #. type: Title ===
 #: documentation/content/en/books/dev-model/_index.adoc:376
 #, no-wrap
 msgid "Official Hats"
-msgstr ""
+msgstr "Hats oficiais (Pessoas com funções definidas)"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:379
@@ -995,7 +1110,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:381
 #, no-wrap
 msgid "Documentation project manager"
-msgstr ""
+msgstr "Gerente de Projetos de Documentação"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:384
@@ -1016,7 +1131,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:388
 #, no-wrap
 msgid "Postmaster"
-msgstr ""
+msgstr "Postmaster"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:391
@@ -1038,7 +1153,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:395
 #, no-wrap
 msgid "Release Coordination"
-msgstr ""
+msgstr "Coordenação de Release (Versões/Lançamentos)"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:398
@@ -1050,16 +1165,18 @@ msgstr ""
 msgid ""
 "Setting, publishing and following a release schedule for official releases"
 msgstr ""
+"Definir, publicar e seguir um cronograma de lançamento para releases "
+"(versões) oficiais"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:401
 msgid "Documenting and formalising release engineering procedures"
-msgstr ""
+msgstr "Documentando e formalizando procedimentos de engenharia da release"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:402
 msgid "Creation and maintenance of code branches"
-msgstr ""
+msgstr "Criação e manutenção de branches de código"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:403
@@ -1067,6 +1184,8 @@ msgid ""
 "Coordinating with the Ports and Documentation teams to have an updated set "
 "of packages and documentation released with the new releases"
 msgstr ""
+"Coordenando com as equipes de Ports e Documentação para ter um conjunto "
+"atualizado de pacotes e documentação lançados com as novas releases"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:404
@@ -1074,6 +1193,8 @@ msgid ""
 "Coordinating with the Security team so that pending releases are not "
 "affected by recently disclosed vulnerabilities."
 msgstr ""
+"Coordenar com a equipe de segurança para que as versões pendentes não sejam "
+"afetadas por vulnerabilidades divulgadas recentemente."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:406
@@ -1107,6 +1228,8 @@ msgid ""
 "Making press statements when happenings that are important to the FreeBSD "
 "Project happen."
 msgstr ""
+"Fazer declarações de imprensa quando acontecem coisas que são importantes "
+"para o projeto FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:417
@@ -1114,6 +1237,8 @@ msgid ""
 "Being the official contact person for corporations that are working close "
 "with the FreeBSD Project."
 msgstr ""
+"Ser a pessoa de contato oficial para corporações que estão trabalhando em "
+"estreita colaboração com o Projeto FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:418
@@ -1121,6 +1246,8 @@ msgid ""
 "Take steps to promote FreeBSD within both the Open Source community and the "
 "corporate world."
 msgstr ""
+"Tomar medidas para promover o FreeBSD tanto na comunidade Open Source quanto "
+"no mundo corporativo."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:419
@@ -1130,13 +1257,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:421
 msgid "This hat is currently not occupied."
-msgstr ""
+msgstr "Este hat não está atualmente ocupado."
 
 #. type: Title ====
 #: documentation/content/en/books/dev-model/_index.adoc:423
 #, no-wrap
 msgid "Security Officer"
-msgstr ""
+msgstr "Oficial de segurança"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:426
@@ -1147,6 +1274,11 @@ msgid ""
 "problems are reported and promoting proactive development behavior when it "
 "comes to security."
 msgstr ""
+"A principal responsabilidade do Security Officer (Oficial de Segurança) é "
+"coordenar a troca de informações com outras pessoas na comunidade de "
+"segurança e no projeto FreeBSD. O agente de segurança também é responsável "
+"por tomar medidas quando os problemas de segurança são relatados e promover "
+"um comportamento proativo de desenvolvimento quando se trata de segurança."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:428
@@ -1163,7 +1295,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:430
 #, no-wrap
 msgid "Source Repository Manager"
-msgstr ""
+msgstr "Gerenciador do Repositório de Código Fonte"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:433
@@ -1187,7 +1319,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:437
 #, no-wrap
 msgid "Election Manager"
-msgstr ""
+msgstr "Gerente de Eleições"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:440
@@ -1202,13 +1334,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:442
 msgid "Hat held only during elections."
-msgstr ""
+msgstr "Hat realizado apenas durante as eleições."
 
 #. type: Title ====
 #: documentation/content/en/books/dev-model/_index.adoc:444
 #, no-wrap
 msgid "Web site Management"
-msgstr ""
+msgstr "Gerenciamento de sites"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:447
@@ -1230,7 +1362,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:451
 #, no-wrap
 msgid "Ports Manager"
-msgstr ""
+msgstr "Gerente de Ports"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:454
@@ -1252,7 +1384,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:458
 #, no-wrap
 msgid "Standards"
-msgstr ""
+msgstr "Padrões"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:461
@@ -1263,6 +1395,11 @@ msgid ""
 "allows them to take a proactive role and decrease the time between a "
 "standards update and FreeBSD's compliancy."
 msgstr ""
+"O Standards (Padrões) é responsável por garantir que o FreeBSD cumpra com os "
+"padrões com os quais está comprometido, mantendo-se atualizado sobre o "
+"desenvolvimento desses padrões e notificando os desenvolvedores do FreeBSD "
+"sobre mudanças importantes que lhes permitam assumir um papel proativo e "
+"diminuir o tempo entre atualização de padrões e complacência do FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:463
@@ -1275,7 +1412,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:465
 #, no-wrap
 msgid "Core Secretary"
-msgstr ""
+msgstr "Secretário do Core (do time do Core)"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:468
@@ -1284,6 +1421,9 @@ msgid ""
 "the final Core Reports. The secretary also keeps the core agenda, thus "
 "ensuring that no balls are dropped unresolved."
 msgstr ""
+"A principal responsabilidade do Secretário do Core é redigir os drafts e "
+"publicar os Relatórios finais do Core. O secretário também mantém a agenda "
+"central, assegurando assim que nenhuma bola seja descartada sem solução."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:470
@@ -1294,7 +1434,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:472
 #, no-wrap
 msgid "Bugmeister"
-msgstr ""
+msgstr "Bugmeister"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:475
@@ -1315,7 +1455,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:479
 #, no-wrap
 msgid "Donations Liaison Officer"
-msgstr ""
+msgstr "Oficial de Contratos de doações"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:482
@@ -1336,7 +1476,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:486
 #, no-wrap
 msgid "Admin"
-msgstr ""
+msgstr "Admin"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:489
@@ -1351,6 +1491,10 @@ msgid ""
 "communication to be synchronised. It consists mainly of those people who "
 "have physical access to the servers."
 msgstr ""
+"A equipe administrativa consiste nas pessoas responsáveis por administrar os "
+"computadores dos quais o projeto depende, para que seu trabalho distribuído "
+"e comunicação sejam sincronizados. Consiste principalmente naquelas pessoas "
+"que têm acesso físico aos servidores."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:493
@@ -1362,24 +1506,26 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:495
 #, no-wrap
 msgid "Process dependent hats"
-msgstr ""
+msgstr "Hats dependentes de processo"
 
 #. type: Title ====
 #: documentation/content/en/books/dev-model/_index.adoc:498
 #, no-wrap
 msgid "Report originator"
-msgstr ""
+msgstr "Criador do relatório"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:501
 msgid "The person originally responsible for filing a Problem Report."
 msgstr ""
+"A pessoa originalmente responsável pelo preenchimento de um Relatório de "
+"Problemas."
 
 #. type: Title ====
 #: documentation/content/en/books/dev-model/_index.adoc:503
 #, no-wrap
 msgid "Bugbuster"
-msgstr ""
+msgstr "Bugbuster"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:506
@@ -1387,12 +1533,14 @@ msgid ""
 "A person who will either find the right person to solve the problem, or "
 "close the PR if it is a duplicate or otherwise not an interesting one."
 msgstr ""
+"Uma pessoa que irá encontrar a pessoa certa para resolver o problema, ou "
+"fechar o PR se for uma duplicata ou não uma interessante."
 
 #. type: Title ====
 #: documentation/content/en/books/dev-model/_index.adoc:508
 #, no-wrap
 msgid "Mentor"
-msgstr ""
+msgstr "Mentor"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:511
@@ -1408,7 +1556,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:513
 #, no-wrap
 msgid "Vendor"
-msgstr ""
+msgstr "Fornecedor"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:516
@@ -1416,17 +1564,20 @@ msgid ""
 "The person(s) or organisation whom external code comes from and whom patches "
 "are sent to."
 msgstr ""
+"A(s) pessoa(s) ou organização de quem vem o código externo e para quem os "
+"patches são enviados."
 
 #. type: Title ====
 #: documentation/content/en/books/dev-model/_index.adoc:518
 #, no-wrap
 msgid "Reviewers"
-msgstr ""
+msgstr "Revisores"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:521
 msgid "People on the mailing list where the request for review is posted."
 msgstr ""
+"Pessoas na lista de discussão em que a solicitação de revisão é postada."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:523
@@ -1435,18 +1586,21 @@ msgid ""
 "that are not handled by these processes happen on an ad-hoc basis based on "
 "what has been customary to do in similar cases."
 msgstr ""
+"A seção a seguir descreverá os processos definidos do projeto. Questões que "
+"não são tratadas por esses processos acontecem em uma base ad-hoc com base "
+"no que era costume fazer em casos semelhantes."
 
 #. type: Title ==
 #: documentation/content/en/books/dev-model/_index.adoc:525
 #, no-wrap
 msgid "Processes"
-msgstr ""
+msgstr "Processos"
 
 #. type: Title ===
 #: documentation/content/en/books/dev-model/_index.adoc:528
 #, no-wrap
 msgid "Adding new and removing old committers"
-msgstr ""
+msgstr "Adicionando novos committers  e removendo committers  antigos"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:531
@@ -1457,6 +1611,11 @@ msgid ""
 "privileges to people working on these projects, but have to date not removed "
 "such privileges."
 msgstr ""
+"O Core team tem a responsabilidade de fornecer e remover os privilégios de "
+"commit aos colaboradores. Isso só pode ser feito por meio de votação na "
+"lista de discussão do core. Os subprojetos de ports e documentação podem "
+"conceder privilégios de commit a pessoas que trabalham nesses projetos, mas "
+"até o momento não removeram esses privilégios."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:533
@@ -1465,6 +1624,9 @@ msgid ""
 "contributors or outsiders to contact core asking to be a committer is not "
 "well thought of and is usually rejected."
 msgstr ""
+"Normalmente, um colaborador é recomendado para o core por um committer. Para "
+"colaboradores ou pessoas de fora entrar em contato com o core pedindo para "
+"ser um committer não é algo bem pensado e geralmente é rejeitado."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:535
@@ -1474,6 +1636,10 @@ msgid ""
 "maintainers is sought. However, it is frequently this committer that "
 "recommends the developer."
 msgstr ""
+"Se a área de interesse particular para o desenvolvedor potencialmente se "
+"sobrepuser à área de manutenção de outros committers, a opinião desses "
+"commiters mantenedores é solicitada. No entanto, é frequentemente esse "
+"committer que recomenda o desenvolvedor."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:537
@@ -1500,7 +1666,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:540
 #, no-wrap
 msgid "Process summary: adding a new committer"
-msgstr ""
+msgstr "Resumo do processo: adicionando um novo committer"
 
 #. type: Positional ($1) AttributeList argument for macro 'image'
 #: documentation/content/en/books/dev-model/_index.adoc:541
@@ -1545,7 +1711,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:547
 #, no-wrap
 msgid "Process summary: removing a committer"
-msgstr ""
+msgstr "Resumo do processo: removendo um committer"
 
 #. type: Target for macro image
 #: documentation/content/en/books/dev-model/_index.adoc:548
@@ -1569,6 +1735,10 @@ msgid ""
 "committing to the project. In this case, it can also be restored at a later "
 "time by core, should the committer ask."
 msgstr ""
+"Também é possível que os committers solicitem que seu commit bit seja "
+"retirado se, por alguma razão, eles não estiverem mais se comprometendo "
+"ativamente com o projeto. Nesse caso, ele também pode ser restaurado "
+"posteriormente pelo core, caso o committer peça."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:555
@@ -1611,7 +1781,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:565
 #, no-wrap
 msgid "Committing code"
-msgstr ""
+msgstr "Enviando código para o projeto (Committing code)"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:568
@@ -1671,7 +1841,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:577
 #, no-wrap
 msgid "Process summary: A committer commits code"
-msgstr ""
+msgstr "Resumo do processo: um committer aplica o código"
 
 #. type: Target for macro image
 #: documentation/content/en/books/dev-model/_index.adoc:578
@@ -1698,7 +1868,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:582
 #, no-wrap
 msgid "Process summary: A contributor commits code"
-msgstr ""
+msgstr "Resumo do processo: um colaborador envia o código"
 
 #. type: Positional ($1) AttributeList argument for macro 'image'
 #: documentation/content/en/books/dev-model/_index.adoc:583
@@ -1745,7 +1915,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:597
 #, no-wrap
 msgid "Core election"
-msgstr ""
+msgstr "Eleição do Core"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:600
@@ -1763,6 +1933,8 @@ msgid ""
 "When an election is to take place, core announces this at least 6 weeks in "
 "advance, and appoints an election manager to run the elections."
 msgstr ""
+"Quando uma eleição é realizada, o core anuncia isso com pelo menos 6 semanas "
+"de antecedência e nomeia um gerente eleitoral para dirigir as eleições."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:604
@@ -1782,6 +1954,9 @@ msgid ""
 "12 past months is followed strictly. Only these committers are eligible to "
 "vote."
 msgstr ""
+"Durante as eleições, a regra que um committer deve ter feito um commit "
+"durante os 12 meses passados é seguida estritamente. Apenas esses committers "
+"estão qualificados para votar."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:608
@@ -1797,6 +1972,9 @@ msgid ""
 "The election results are released one week after the election ends, and the "
 "new core team takes office one week after the results have been posted."
 msgstr ""
+"Os resultados das eleições são divulgados uma semana após o término da "
+"eleição, e a nova equipe do core toma posse uma semana após o lançamento dos "
+"resultados."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:612
@@ -1804,6 +1982,8 @@ msgid ""
 "Should there be a voting tie, this will be resolved by the new, "
 "unambiguously elected core members."
 msgstr ""
+"Se houver um empate de votação, isso será resolvido pelos novos membros do "
+"core, eleitos sem ambiguidade."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:614
@@ -1811,12 +1991,14 @@ msgid ""
 "Votes and candidate statements are archived, but the archives are not "
 "publicly available."
 msgstr ""
+"Votos e declarações de candidatos são arquivados, mas os arquivos não estão "
+"publicamente disponíveis."
 
 #. type: Block title
 #: documentation/content/en/books/dev-model/_index.adoc:615
 #, no-wrap
 msgid "Process summary: Core elections"
-msgstr ""
+msgstr "Resumo do processo: Eleições do Core"
 
 #. type: Target for macro image
 #: documentation/content/en/books/dev-model/_index.adoc:616
@@ -1854,7 +2036,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:629
 #, no-wrap
 msgid "Development of new features"
-msgstr ""
+msgstr "Desenvolvimento de novos recursos"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:632
@@ -1894,6 +2076,13 @@ msgid ""
 "Other than archives of the discussions that have taken place, no outcome is "
 "created by this phase that is merged into the main project."
 msgstr ""
+"A análise de requisitos acontece de duas maneiras. As solicitações que "
+"entram são discutidas em listas de discussão, tanto dentro do projeto "
+"principal quanto no subprojeto ao qual a solicitação pertence ou é gerada "
+"pela solicitação. Além disso, os desenvolvedores individuais no subprojeto "
+"avaliarão a viabilidade das solicitações e determinarão a priorização entre "
+"elas. Além dos arquivos das discussões que ocorreram, nenhum resultado é "
+"criado por essa fase que é incorporada ao projeto principal."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:638
@@ -1928,7 +2117,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:642
 #, no-wrap
 msgid "Maintenance"
-msgstr ""
+msgstr "Manutenção"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:645
@@ -1977,6 +2166,15 @@ msgid ""
 "better feedback that again spurs more maintenance and ultimately should "
 "create a better product."
 msgstr ""
+"A partir desta escrita, havia 269 committers no projeto. Quando eles fazem o "
+"commit de uma mudança em uma branch, isso constitui uma nova release (versão)"
+". É muito comum os usuários da comunidade rastrearem uma determinada branch. "
+"A existência imediata de uma nova release torna as mudanças amplamente "
+"disponíveis imediatamente e permite um feedback rápido da comunidade. Isso "
+"também dá à comunidade o tempo de resposta que eles esperam em questões que "
+"são importantes para eles. Isso torna a comunidade mais engajada e, assim, "
+"permite mais e melhores feedbacks que estimulam mais a manutenção e, por "
+"fim, deverá criar um produto melhor."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:687
@@ -1986,12 +2184,16 @@ msgid ""
 "to see why certain features are implemented the way they are in order not to "
 "make mistakes that have previously either been thought through or resolved."
 msgstr ""
+"Antes de fazer alterações no código em partes da árvore que tem um histórico "
+"desconhecido para o committer, o committer é obrigado a ler os logs de "
+"commit para ver porque certos recursos são implementados da maneira que eles "
+"estão, para não cometer erros que foram anteriormente pensado ou resolvido."
 
 #. type: Title ===
 #: documentation/content/en/books/dev-model/_index.adoc:689
 #, no-wrap
 msgid "Problem reporting"
-msgstr ""
+msgstr "Relatório de Problemas"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:692
@@ -2028,7 +2230,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:695
 #, no-wrap
 msgid "Process summary: problem reporting"
-msgstr ""
+msgstr "Resumo do processo: Relatório de Pproblemas"
 
 #. type: Target for macro image
 #: documentation/content/en/books/dev-model/_index.adoc:696
@@ -2072,7 +2274,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:709
 #, no-wrap
 msgid "Reacting to misbehavior"
-msgstr ""
+msgstr "Reagindo ao mau comportamento"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:712
@@ -2090,21 +2292,23 @@ msgid ""
 "Committing during code freezes without the approval of the Release "
 "Engineering team - 2 days"
 msgstr ""
+"Fazer um commit durante o code freeze (tempo de congelamento de código) sem "
+"a aprovação da equipe dos Engenheiros de Release - 2 dias"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:715
 msgid "Committing to a security branch without approval - 2 days"
-msgstr ""
+msgstr "Fazer um commit em uma branch de segurança sem aprovação - 2 dias"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:716
 msgid "Commit wars - 5 days to all participating parties"
-msgstr ""
+msgstr "Guerras por causa de commit - 5 dias para todas as partes participantes"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:717
 msgid "Impolite or inappropriate behavior - 5 days"
-msgstr ""
+msgstr "Comportamento deselegante ou inapropriado - 5 dias"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:721
@@ -2124,6 +2328,8 @@ msgid ""
 "It is important that you cannot be suspended for making technical errors. "
 "All penalties come from breaking social etiquette."
 msgstr ""
+"É importante que você não possa ser suspenso por cometer erros técnicos. "
+"Todas as penalidades vêm de quebrar a etiqueta social."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:725
@@ -2134,7 +2340,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:730
 #, no-wrap
 msgid "Release engineering"
-msgstr ""
+msgstr "Engenharia de Release (Versão)"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:733
@@ -2149,6 +2355,16 @@ msgid ""
 "set and for having an updated set of documents. When referring to the "
 "release engineer, a representative for the release engineering team is meant."
 msgstr ""
+"O projeto FreeBSD possui uma equipe de Engenharia de Release com um "
+"engenheiro de release principal responsável por criar versões do FreeBSD que "
+"podem ser trazidas para a comunidade de usuários através da rede ou vendidas "
+"em lojas de varejo. Como o FreeBSD está disponível em várias plataformas e "
+"as releases para as diferentes arquiteturas são disponibilizadas ao mesmo "
+"tempo, a equipe tem uma pessoa responsável por cada arquitetura. Além disso, "
+"há cargos na equipe responsável por coordenar os esforços de garantia de "
+"qualidade, construir um conjunto de pacotes e ter um conjunto atualizado de "
+"documentos. Ao se referir ao engenheiro de release, um representante da "
+"equipe de engenharia de release é indicado."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:735
@@ -2177,6 +2393,9 @@ msgid ""
 "the -CURRENT branch and have a significantly longer release engineering "
 "cycle due to the unstable nature of the -CURRENT branch"
 msgstr ""
+"Releases .0 são o primeiro lançamento de uma versão principal. Eles são "
+"branches da branch -CURRENT e têm um ciclo de engenharia de release "
+"significativamente maior devido à natureza instável da branch -CURRENT"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:740
@@ -2184,6 +2403,8 @@ msgid ""
 ".X releases are releases of the -STABLE branch. They are scheduled to come "
 "out every 4 months."
 msgstr ""
+"As versões .X são releases da branch -STABLE. Elas estão programadas para "
+"sair a cada 4 meses."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:741
@@ -2193,6 +2414,11 @@ msgid ""
 "release on that branch. New features are rarely included, and the security "
 "team is far more involved in these than in regular releases."
 msgstr ""
+"As versões .X.Y são versões de segurança que seguem a branch .X. Eles saem "
+"somente quando correções de segurança suficientes foram feito aplicadas "
+"desde o último release nessa branch. Novos recursos raramente são incluídos "
+"e a equipe de segurança está muito mais envolvida nesses recursos do que em "
+"releases regulares."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:743
@@ -2251,6 +2477,14 @@ msgid ""
 "time not to become too long with regards to security and stability issues, "
 "extra discipline is required when committing changes to -STABLE."
 msgstr ""
+"A maioria das versões são feitas quando uma determinada data é considerada "
+"longa o suficiente desde o lançamento anterior. Uma data destino é definida "
+"para ter grandes releases a cada 18 meses e versões menores a cada 4 meses. "
+"A comunidade de usuários deixou bem claro que a segurança e a estabilidade "
+"não podem ser sacrificadas por prazos auto impostos e datas de lançamento "
+"desejadas. Por um lapso de tempo para não se tornar muito longo no que diz "
+"respeito a questões de segurança e estabilidade, é necessária uma disciplina "
+"extra ao aplicar alterações na -STABLE."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:751
@@ -2308,7 +2542,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:763
 #, no-wrap
 msgid "Tools"
-msgstr ""
+msgstr "Ferramentas"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:766
@@ -2317,12 +2551,15 @@ msgid ""
 "Mailman, and OpenSSH. These are externally developed tools and are commonly "
 "used in the open source world."
 msgstr ""
+"As principais ferramentas de suporte para suportar o processo de "
+"desenvolvimento são Bugzilla, Mailman e OpenSSH. Estas são ferramentas "
+"desenvolvidas externamente e são comumente usadas no mundo do código aberto."
 
 #. type: Title ===
 #: documentation/content/en/books/dev-model/_index.adoc:768
 #, no-wrap
 msgid "Subversion (SVN)"
-msgstr ""
+msgstr "Subversion (SVN)"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:771
@@ -2336,7 +2573,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:773
 #, no-wrap
 msgid "Bugzilla"
-msgstr ""
+msgstr "Bugzilla"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:776
@@ -2353,7 +2590,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:778
 #, no-wrap
 msgid "Mailman"
-msgstr ""
+msgstr "Mailman"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:781
@@ -2373,7 +2610,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:783
 #, no-wrap
 msgid "Pretty Good Privacy"
-msgstr ""
+msgstr "Pretty Good Privacy"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:786
@@ -2392,7 +2629,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:788
 #, no-wrap
 msgid "Secure Shell"
-msgstr ""
+msgstr "Secure Shell"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:791
@@ -2406,12 +2643,20 @@ msgid ""
 "is updated more often than FreeBSD releases, the latest version is also "
 "available in the ports tree."
 msgstr ""
+"O Secure Shell é um padrão para efetuar login com segurança em um sistema "
+"remoto e para executar comandos no sistema remoto. Ele permite que outras "
+"conexões, chamadas túneis, sejam estabelecidas e protegidas entre os dois "
+"sistemas envolvidos. Este padrão existe em duas versões primárias, e somente "
+"a versão dois é usada para o projeto FreeBSD. A implementação mais comum do "
+"padrão é o OpenSSH, que faz parte da distribuição principal do projeto. Uma "
+"vez que sua fonte é atualizada com mais frequência do que as liberações do "
+"FreeBSD, a versão mais recente também está disponível na árvore de ports."
 
 #. type: Title ==
 #: documentation/content/en/books/dev-model/_index.adoc:793
 #, no-wrap
 msgid "Sub-projects"
-msgstr ""
+msgstr "Sub-projetos"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:795
@@ -2422,12 +2667,17 @@ msgid ""
 "problem, requiring less communication with the groups they communicate with "
 "than were the group not isolated."
 msgstr ""
+"Subprojetos são formados para reduzir a quantidade de comunicação necessária "
+"para coordenar o grupo de desenvolvedores. Quando uma área problemática é "
+"suficientemente isolada, a maior parte da comunicação estaria dentro do "
+"grupo, focando no problema, exigindo menos comunicação com os grupos com os "
+"quais eles se comunicam do que se o grupo não estivesse isolado."
 
 #. type: Title ===
 #: documentation/content/en/books/dev-model/_index.adoc:797
 #, no-wrap
 msgid "The Ports Subproject"
-msgstr ""
+msgstr "Subprojeto Ports"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:800
@@ -2593,6 +2843,11 @@ msgid ""
 "gaining a more empowered structure, and is more and more becoming a sub-"
 "project of the FreeBSD project."
 msgstr ""
+"Como o software externo descrito pelo port geralmente está em "
+"desenvolvimento contínuo, a quantidade de trabalho necessária para manter os "
+"ports já é grande e está aumentando. Isso fez com que a parte dos ports do "
+"projeto FreeBSD ganhasse uma estrutura mais poderosa, e está se tornando "
+"cada vez mais um subprojeto do projeto FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:920
@@ -2613,6 +2868,12 @@ msgid ""
 "means that a port that makes dependencies on the system may need to have "
 "variations depending on what version of FreeBSD it runs on."
 msgstr ""
+"Ao contrário do projeto principal, a árvore de ports não é ramificada (tem "
+"uma branch própria). Cada versão do FreeBSD segue a coleção atual de ports "
+"e, portanto, disponibiliza informações atualizadas sobre onde encontrar "
+"programas e como construí-los. Isso, no entanto, significa que um port que "
+"faz dependências no sistema pode precisar ter variações dependendo de qual "
+"versão do FreeBSD é executada."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:924
@@ -2622,6 +2883,10 @@ msgid ""
 "older, minor releases. There is neither the infrastructure nor volunteer "
 "time needed to guarantee this."
 msgstr ""
+"Com um repositório de ports não ramificado (sem branches), não é possível "
+"garantir que qualquer port seja executado em algo diferente de -CURRENT e -"
+"STABLE, em particular liberações secundárias e antigas. Não há "
+"infraestrutura nem tempo de voluntariado necessário para garantir isso."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:926
@@ -2629,12 +2894,14 @@ msgid ""
 "For efficiency of communication, teams depending on Ports, such as the "
 "release engineering team, have their own ports liaisons."
 msgstr ""
+"Para eficiência de comunicação, as equipes que dependem de ports, como a "
+"equipe de engenharia de release, têm suas próprias conexões com ports."
 
 #. type: Title ===
 #: documentation/content/en/books/dev-model/_index.adoc:928
 #, no-wrap
 msgid "The FreeBSD Documentation Project"
-msgstr ""
+msgstr "O projeto de documentação do FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:931
@@ -2644,6 +2911,11 @@ msgid ""
 "total of 44 committers. The documentation mailing list has just under 300 "
 "members, indicating that there is quite a large community around it."
 msgstr ""
+"O projeto de Documentação do FreeBSD foi iniciado em janeiro de 1995. Desde "
+"o grupo inicial de um líder de projeto, quatro líderes de equipe e 16 "
+"membros, eles são agora um total de 44 committers. A lista de discussão de "
+"documentação tem pouco menos de 300 membros, indicando que há uma grande "
+"comunidade em torno dela."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:933
@@ -2652,6 +2924,9 @@ msgid ""
 "documentation of the FreeBSD project, thus making it easier for new users to "
 "get familiar with the system and detailing advanced features for the users."
 msgstr ""
+"O objetivo do projeto de Documentação é fornecer uma documentação boa e útil "
+"do projeto FreeBSD, facilitando assim que novos usuários se familiarizem com "
+"o sistema e detalhando recursos avançados para os usuários."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:935
@@ -2669,6 +2944,10 @@ msgid ""
 "each version. Only documentation errors are corrected in the security "
 "branches."
 msgstr ""
+"Como o Projeto FreeBSD, a documentação é dividida nas mesmas branches. Isso "
+"é feito para que sempre haja uma versão atualizada da documentação de cada "
+"versão. Apenas erros de documentação são corrigidos nas branches de "
+"segurança."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:939
@@ -2690,7 +2969,7 @@ msgstr ""
 #: documentation/content/en/books/dev-model/_index.adoc:946
 #, no-wrap
 msgid "References"
-msgstr ""
+msgstr "Referências"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:950
