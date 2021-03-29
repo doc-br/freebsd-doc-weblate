@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-03-29 22:54+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
+"projects/documentation/booksporters-handbookslow-portingchapter/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:1
@@ -25,7 +28,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:8
 #, no-wrap
 msgid "Slow Porting"
-msgstr ""
+msgstr "Port Lento"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:33
@@ -34,12 +37,15 @@ msgid ""
 "get it to work. In this section, we will explain, step by step, how to "
 "modify it to get it to work with the ports paradigm."
 msgstr ""
+"Certo, então não foi tão simples e o port precisou de algumas modificações "
+"para poder funcionar. Nesta seção, vamos explicar passo a passo como "
+"modificá-lo para que funcione com o paradigma do ports."
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:35
 #, no-wrap
 msgid "How Things Work"
-msgstr ""
+msgstr "Como as Coisas Funcionam"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:38
@@ -189,7 +195,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:68
 #, no-wrap
 msgid "Getting the Original Sources"
-msgstr ""
+msgstr "Obtendo os Fontes Originais"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:71
@@ -218,6 +224,9 @@ msgid ""
 "find sites that have irritatingly non-standard formats, put a copy on a "
 "reliable FTP or HTTP server (for example, a home page)."
 msgstr ""
+"Se não houver nenhum site FTP/HTTP bem conectado à rede ou se puder "
+"encontrar apenas sites com formatos irritantemente não-padrão, coloque uma "
+"cópia em um servidor FTP ou HTTP confiável (por exemplo, uma home page)."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:77
@@ -258,7 +267,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:83
 #, no-wrap
 msgid "Modifying the Port"
-msgstr ""
+msgstr "Modificando o Port"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:86
@@ -288,12 +297,15 @@ msgid ""
 "contributed to the FreeBSD ports collection are assumed to be covered by the "
 "standard BSD copyright conditions."
 msgstr ""
+"A menos que explicitamente declarado, os arquivos de patch, scripts e outros "
+"arquivos criados e contribuídos para a coleção de ports do FreeBSD são "
+"assumidos como cobertos pelas condições de copyright padrão do BSD."
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:95
 #, no-wrap
 msgid "Patching"
-msgstr ""
+msgstr "Patching"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:98
@@ -330,7 +342,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:113
 #, no-wrap
 msgid "General Rules for Patching"
-msgstr ""
+msgstr "Regras Gerais para Patching"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:116
@@ -389,6 +401,14 @@ msgid ""
 "but makes it hard to find out what exactly caused the problem and what was "
 "changed at all."
 msgstr ""
+"Minimize a quantidade de mudanças de espaço em branco não funcionais em "
+"patches. É comum no mundo Open Source para projetos compartilhar grandes "
+"quantidades de uma base de código, mas obedecer a regras de recuo e estilo "
+"diferentes. Ao usar uma funcionalidade funcional de um projeto para "
+"consertar áreas similares em outra, por favor, tenha cuidado: o patch "
+"resultante pode estar cheio de mudanças não-funcionais. Ele não só aumenta o "
+"tamanho do repositório do ports, mas torna difícil descobrir o que "
+"exatamente causou o problema e o que foi alterado em todos."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:125
@@ -401,7 +421,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:127
 #, no-wrap
 msgid "Manual Patch Generation"
-msgstr ""
+msgstr "Geração Manual de Patches"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:132
@@ -410,6 +430,10 @@ msgid ""
 "as described earlier in this section is the preferred method. However, "
 "manual patching may be required occasionally."
 msgstr ""
+"A criação manual de patches geralmente não é necessária. A geração "
+"automática de patches, conforme descrito anteriormente nesta seção, é o "
+"método preferido. No entanto, patches manuais podem ser necessários "
+"ocasionalmente."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:135
@@ -475,7 +499,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:155
 #, no-wrap
 msgid "Simple Automatic Replacements"
-msgstr ""
+msgstr "Substituições Automáticas Simples"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:158
@@ -518,7 +542,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:178
 msgid "A list of specific files to convert can be given:"
-msgstr ""
+msgstr "Uma lista de arquivos específicos para conversão pode ser informada:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:183
@@ -568,6 +592,9 @@ msgid ""
 "are multiple distfiles and several contain files which require line-ending "
 "conversion."
 msgstr ""
+"O diretório base para a conversão pode ser definido. Isso é útil quando há "
+"vários distfiles e vários arquivos contidos que requerem conversão de fim de "
+"linha."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:207
@@ -581,7 +608,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:210
 #, no-wrap
 msgid "Patching Conditionally"
-msgstr ""
+msgstr "Corrigindo Condicionalmente"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:213
@@ -595,7 +622,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:215
 #, no-wrap
 msgid "Applying a Patch for a Specific FreeBSD Version"
-msgstr ""
+msgstr "Aplicando um Patch para uma Versão Específica do FreeBSD"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:221
@@ -623,7 +650,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:233
 #, no-wrap
 msgid "Optionally Applying a Patch"
-msgstr ""
+msgstr "Aplicando Opcionalmente um Patch"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:237
@@ -698,7 +725,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:275
 #, no-wrap
 msgid "Configuring"
-msgstr ""
+msgstr "Configurando"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:278
@@ -714,7 +741,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:280
 #, no-wrap
 msgid "Handling User Input"
-msgstr ""
+msgstr "Manipulando a Entrada do Usuário"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:283
