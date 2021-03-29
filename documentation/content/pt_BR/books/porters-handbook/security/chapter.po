@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-14 11:02-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-03-29 11:12+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
+"projects/documentation/booksporters-handbooksecuritychapter/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:1
@@ -25,13 +28,13 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:8
 #, no-wrap
 msgid "Security"
-msgstr ""
+msgstr "Segurança"
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:33
 #, no-wrap
 msgid "Why Security is So Important"
-msgstr ""
+msgstr "Por Que Segurança é Tão Importante"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:36
@@ -42,6 +45,11 @@ msgid ""
 "the bugs that caused them. However, the policies for handling mere bugs and "
 "security vulnerabilities are very different."
 msgstr ""
+"Bugs ocasionalmente são inseridos em software. Indiscutivelmente, os mais "
+"perigosos deles são aqueles que abrem vulnerabilidades de segurança. Do "
+"ponto de vista técnico, tais vulnerabilidades devem ser fechadas "
+"exterminando os bugs que as causam. No entanto, as políticas para lidar com "
+"meros bugs e vulnerabilidades de segurança são muito diferentes."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:38
@@ -56,6 +64,15 @@ msgid ""
 "loss, and so they make backups of important data; in addition, a critical "
 "bug will be discovered really soon."
 msgstr ""
+"Um bug pequeno típico afeta apenas os usuários que ativaram alguma "
+"combinação de opções que acionam o bug. O desenvolvedor acabará lançando um "
+"patch seguido de uma nova versão do software, livre do bug, mas a maioria "
+"dos usuários não irá se incomodar em fazer a atualização de imediato porque "
+"o bug nunca os incomodou. Um bug crítico que pode causar perda de dados "
+"representa um problema grave. No entanto, usuários prudentes sabem que "
+"muitos acidentes são possíveis, e que além de erros de software, podem levar "
+"à perda de dados, e portanto eles fazem backups dos dados importantes, além "
+"disso, um bug crítico será descoberto muito rapidamente."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:40
@@ -71,12 +88,22 @@ msgid ""
 "manner, which will allow them to evaluate the danger and take appropriate "
 "action."
 msgstr ""
+"Uma vulnerabilidade de segurança é diferente. Primeiro, ela pode permanecer "
+"despercebida por anos, porque geralmente não causa mau funcionamento do "
+"software. Segundo, uma parte mal-intencionada pode usá-la para obter acesso "
+"não autorizado a um sistema vulnerável, para destruir ou alterar dados "
+"confidenciais; no pior dos casos, o usuário nem notará os danos causados. "
+"Terceiro, expor um sistema vulnerável geralmente ajuda os invasores a "
+"invadir outros sistemas que não poderiam ser comprometidos de outra forma. "
+"Portanto, fechar uma vulnerabilidade por si só não é suficiente: notifique a "
+"audiência afetada da maneira mais clara e abrangente, o que lhes permitirá "
+"avaliar o perigo e tomar as medidas adequadas."
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:42
 #, no-wrap
 msgid "Fixing Security Vulnerabilities"
-msgstr ""
+msgstr "Corrigindo Vulnerabilidades de Segurança"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:45
@@ -98,6 +125,9 @@ msgid ""
 "Being a ports committer is not enough to commit to an arbitrary port. "
 "Remember that ports usually have maintainers, must be respected."
 msgstr ""
+"Ser um committer de ports não é suficiente para fazer um commit em um port "
+"arbitrário. Lembre-se que os ports geralmente possuem mantenedores, e eles "
+"devem ser respeitados."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:52
@@ -118,13 +148,13 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:54
 #, no-wrap
 msgid "Keeping the Community Informed"
-msgstr ""
+msgstr "Mantendo a Comunidade Informada"
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:57
 #, no-wrap
 msgid "The VuXML Database"
-msgstr ""
+msgstr "O Banco de Dados VuXML"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:60
@@ -178,7 +208,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:68
 #, no-wrap
 msgid "A Short Introduction to VuXML"
-msgstr ""
+msgstr "Uma Breve Introdução ao VuXML"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:71
@@ -198,7 +228,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:73
 msgid "Now consider a realistic VuXML entry:"
-msgstr ""
+msgstr "Agora considere uma entrada VuXML realista:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:124
@@ -260,6 +290,8 @@ msgid ""
 "The tag names are supposed to be self-explanatory so we shall take a closer "
 "look only at fields which needs to be filled in:"
 msgstr ""
+"Os nomes das tags devem ser auto explicativos, por isso vamos dar uma olhada "
+"apenas nos campos que precisam ser preenchidos:"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:129
@@ -415,7 +447,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:173
 #, no-wrap
 msgid "Testing Changes to the VuXML Database"
-msgstr ""
+msgstr "Testando Alterações no Banco de Dados VuXML"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:176
@@ -448,6 +480,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:187
 msgid "If there is none found, add a new entry for this vulnerability."
 msgstr ""
+"Se não houver nenhuma, adicione uma nova entrada para esta vulnerabilidade."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:192
@@ -460,7 +493,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:195
 msgid "Verify its syntax and formatting:"
-msgstr ""
+msgstr "Verifique sua sintaxe e formatação:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:199
@@ -504,12 +537,14 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:222
 msgid "Make sure that the entry produces no spurious matches in the output."
-msgstr ""
+msgstr "Certifique-se de que a entrada não produza correspondências incorretas."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:224
 msgid "Now check whether the right package versions are matched by the entry:"
 msgstr ""
+"Agora, verifique se as versões corretas do pacote são correspondidas pela "
+"entrada:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:233
@@ -532,4 +567,4 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:237
 msgid "The former version matches while the latter one does not."
-msgstr ""
+msgstr "A versão anterior é encontrada enquanto a última não."
