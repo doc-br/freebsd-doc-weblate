@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:55-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-03-29 22:55+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookkernelconfig_index/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:1
@@ -31,13 +34,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:9
 #, no-wrap
 msgid "Configuring the FreeBSD Kernel"
-msgstr ""
+msgstr "Configurando o kernel do FreeBSD"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "Sinopse"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:48
@@ -47,42 +50,49 @@ msgid ""
 "and much more. While much of FreeBSD is dynamically configurable, it is "
 "still occasionally necessary to configure and compile a custom kernel."
 msgstr ""
+"O kernel é o núcleo do sistema operacional do FreeBSD. Ele é responsável "
+"pelo gerenciamento de memória, aplicação de controles de segurança, rede, "
+"acesso ao disco e muito mais. Embora grande parte do FreeBSD seja "
+"configurável dinamicamente, ainda é necessário configurar e compilar um "
+"kernel personalizado ocasionalmente."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:50
 msgid "After reading this chapter, you will know:"
-msgstr ""
+msgstr "Depois de ler este capítulo, você saberá:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:52
 msgid "When to build a custom kernel."
-msgstr ""
+msgstr "Quando compilar um kernel personalizado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:53
 msgid "How to take a hardware inventory."
-msgstr ""
+msgstr "Como obter um inventário do hardware."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:54
 msgid "How to customize a kernel configuration file."
-msgstr ""
+msgstr "Como personalizar um arquivo de configuração do kernel."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:55
 msgid ""
 "How to use the kernel configuration file to create and build a new kernel."
 msgstr ""
+"Como usar o arquivo de configuração do kernel para criar e compilar um novo "
+"kernel."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:56
 msgid "How to install the new kernel."
-msgstr ""
+msgstr "Como instalar o novo kernel."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:57
 msgid "How to troubleshoot if things go wrong."
-msgstr ""
+msgstr "Como solucionar problemas se as coisas derem errado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:59
@@ -95,7 +105,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:61
 #, no-wrap
 msgid "Why Build a Custom Kernel?"
-msgstr ""
+msgstr "Por que compilar um kernel personalizado?"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:64
@@ -104,6 +114,10 @@ msgid ""
 "program, supported a fixed list of devices, and in order to change the "
 "kernel's behavior, one had to compile and then reboot into a new kernel."
 msgstr ""
+"Tradicionalmente, o FreeBSD usava um kernel monolítico. O kernel era um "
+"grande programa, suportava uma lista fixa de dispositivos e, para mudar o "
+"comportamento do kernel, era preciso compilar e depois reinicializar em um "
+"novo kernel."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:66
@@ -114,6 +128,11 @@ msgid ""
 "hardware and for new functionality to be brought into the kernel. This is "
 "known as a modular kernel."
 msgstr ""
+"Hoje, a maior parte da funcionalidade do kernel do FreeBSD está contida em "
+"módulos que podem ser dinamicamente carregados e descarregados do kernel, "
+"conforme necessário. Isso permite que o kernel em execução se adapte "
+"imediatamente ao novo hardware e que novas funcionalidades sejam trazidas "
+"para o kernel. Isso é conhecido como um kernel modular."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:68
@@ -124,6 +143,11 @@ msgid ""
 "and unloading of kernel modules and require that only needed functionality "
 "is statically compiled into the kernel."
 msgstr ""
+"Ocasionalmente, ainda é necessário executar a configuração do kernel "
+"estático. Às vezes, a funcionalidade necessária é tão ligada ao kernel que "
+"não pode ser carregada dinamicamente. Alguns ambientes de segurança impedem "
+"o carregamento e descarregamento de módulos do kernel e exigem que apenas a "
+"funcionalidade necessária seja estaticamente compilada no kernel."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:70
@@ -141,6 +165,9 @@ msgid ""
 "Faster boot time. Since the kernel will only probe the hardware on the "
 "system, the time it takes the system to boot can decrease."
 msgstr ""
+"Tempo de inicialização mais rápido. Uma vez que o kernel irá verificar "
+"apenas o hardware existente no sistema, o tempo que o sistema leva para "
+"inicializar pode diminuir."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:73
@@ -166,6 +193,9 @@ msgid ""
 "Before building a custom kernel, consider the reason for doing so. If there "
 "is a need for specific hardware support, it may already exist as a module."
 msgstr ""
+"Antes de criar um kernel personalizado, considere a razão para isso. Se "
+"houver necessidade de suporte para um  hardware específico, ele já pode "
+"existir como um módulo."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:78
@@ -208,7 +238,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:92
 #, no-wrap
 msgid "Finding the System Hardware"
-msgstr ""
+msgstr "Encontrando o hardware do sistema"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:95
@@ -252,6 +282,8 @@ msgid ""
 "Since this hardware exists, this driver should not be removed from a custom "
 "kernel configuration file."
 msgstr ""
+"Como esse hardware existe, esse driver não deve ser removido de um arquivo "
+"de configuração de kernel personalizado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:114
@@ -310,12 +342,15 @@ msgid ""
 "drivers for installed hardware are not removed as the custom kernel "
 "configuration is edited."
 msgstr ""
+"Depois que a lista de inventário de hardware for criada, consulte-a para "
+"garantir que os drivers para o hardware instalado não sejam removidos à "
+"medida que a configuração do kernel personalizado é editada."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:141
 #, no-wrap
 msgid "The Configuration File"
-msgstr ""
+msgstr "O arquivo de configuração"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:144
@@ -323,6 +358,9 @@ msgid ""
 "In order to create a custom kernel configuration file and build a custom "
 "kernel, the full FreeBSD source tree must first be installed."
 msgstr ""
+"Para criar um arquivo de configuração do kernel personalizado e compilar um "
+"kernel personalizado, a árvore de código-fonte completa do FreeBSD deve ser "
+"instalada primeira."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:146
@@ -416,6 +454,8 @@ msgid ""
 "Alternately, keep the kernel configuration file elsewhere and create a "
 "symbolic link to the file:"
 msgstr ""
+"Como alternativa, mantenha o arquivo de configuração do kernel em outro "
+"lugar e crie um link simbólico para o arquivo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:182
@@ -484,7 +524,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:213
 #, no-wrap
 msgid "Building and Installing a Custom Kernel"
-msgstr ""
+msgstr "Criando e Instalando um Kernel Customizado"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:216
@@ -492,6 +532,8 @@ msgid ""
 "Once the edits to the custom configuration file have been saved, the source "
 "code for the kernel can be compiled using the following steps:"
 msgstr ""
+"Depois que as edições no arquivo de configuração personalizada forem salvas, "
+"o código-fonte do kernel poderá ser compilado usando as seguintes etapas:"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:219
@@ -517,6 +559,8 @@ msgid ""
 "Compile the new kernel by specifying the name of the custom kernel "
 "configuration file:"
 msgstr ""
+"Compile o novo kernel especificando o nome do arquivo de configuração do "
+"kernel personalizado:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:231
@@ -559,6 +603,8 @@ msgid ""
 "For example, this variable specifies the list of modules to build instead of "
 "using the default of building all modules:"
 msgstr ""
+"Por exemplo, esta variável especifica a lista de módulos para compilar em "
+"vez de usar o padrão de construir todos os módulos:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:249
@@ -572,6 +618,8 @@ msgid ""
 "Alternately, this variable lists which modules to exclude from the build "
 "process:"
 msgstr ""
+"Como alternativa, essa variável lista quais módulos excluir do processo de "
+"criação:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:256
@@ -589,7 +637,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:261
 #, no-wrap
 msgid "If Something Goes Wrong"
-msgstr ""
+msgstr "Se algo der errado"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:264
@@ -597,6 +645,8 @@ msgid ""
 "There are four categories of trouble that can occur when building a custom "
 "kernel:"
 msgstr ""
+"Existem quatro categorias de problemas que podem ocorrer ao criar um kernel "
+"personalizado:"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:265
@@ -637,7 +687,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:276
 #, no-wrap
 msgid "The kernel does not boot"
-msgstr ""
+msgstr "O kernel não inicializa"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:278
