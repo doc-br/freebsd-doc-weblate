@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-14 11:02-0300\n"
-"PO-Revision-Date: 2021-02-24 00:32+0000\n"
-"Last-Translator: Danilo G. Baio <dbaio@FreeBSD.org>\n"
+"PO-Revision-Date: 2021-03-29 22:55+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbooksecurity_index/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.5\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/security/_index.adoc:1
@@ -33,13 +33,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:9
 #, no-wrap
 msgid "Security"
-msgstr ""
+msgstr "Segurança"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/security/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "Sinopse"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:48
@@ -49,6 +49,10 @@ msgid ""
 "authored about how to secure systems and networks, and as a user of FreeBSD, "
 "understanding how to protect against attacks and intruders is a must."
 msgstr ""
+"A segurança, seja física ou virtual, é um tópico tão amplo que todo um setor "
+"evoluiu em torno dele. Centenas de práticas padrão foram criadas sobre como "
+"proteger sistemas e redes e, como usuário do FreeBSD, é essencial entender "
+"como se proteger contra ataques e intrusos."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:50
@@ -57,26 +61,29 @@ msgid ""
 "FreeBSD system comes with multiple layers of security, and many more third "
 "party utilities may be added to enhance security."
 msgstr ""
+"Neste capítulo, vários fundamentos e técnicas serão discutidos. O sistema "
+"FreeBSD vem com múltiplas camadas de segurança, e muitos outros utilitários "
+"de terceiros podem ser adicionados para aumentar a segurança."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:52
 msgid "After reading this chapter, you will know:"
-msgstr ""
+msgstr "Depois de ler este capítulo, você saberá:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:54
 msgid "Basic FreeBSD system security concepts."
-msgstr ""
+msgstr "Conceitos básicos de segurança do sistema FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:55
 msgid "The various crypt mechanisms available in FreeBSD."
-msgstr ""
+msgstr "Os vários mecanismos de criptografia disponíveis no FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:56
 msgid "How to set up one-time password authentication."
-msgstr ""
+msgstr "Como configurar a autenticação de senha única."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:57
@@ -113,12 +120,12 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:63
 msgid "How to utilize FreeBSD security advisories."
-msgstr ""
+msgstr "Como utilizar os alertas de segurança do FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:64
 msgid "What Process Accounting is and how to enable it on FreeBSD."
-msgstr ""
+msgstr "O que é Auditoria de Processos e como ativá-la no FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:65
@@ -126,16 +133,18 @@ msgid ""
 "How to control user resources using login classes or the resource limits "
 "database."
 msgstr ""
+"Como controlar os recursos do usuário usando classes de login ou o banco de "
+"dados de limites de recursos."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:67
 msgid "Before reading this chapter, you should:"
-msgstr ""
+msgstr "Antes de ler este capítulo, você deve:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:69
 msgid "Understand basic FreeBSD and Internet concepts."
-msgstr ""
+msgstr "Entender os conceitos básicos do FreeBSD e de Internet."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:71
@@ -194,6 +203,11 @@ msgid ""
 "software, unauthorized network devices, natural disasters, security "
 "vulnerabilities, and even competing corporations."
 msgstr ""
+"O que é uma ameaça no que se refere à segurança do computador? As ameaças "
+"não se limitam a invasores remotos que tentam acessar um sistema sem "
+"permissão de um local remoto. As ameaças também incluem funcionários, "
+"softwares mal-intencionados, dispositivos de rede não autorizados, desastres "
+"naturais, vulnerabilidades de segurança e até corporações concorrentes."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:84
@@ -205,6 +219,12 @@ msgid ""
 "the security team. As an administrator, it is important to know of the "
 "threats and be prepared to mitigate them."
 msgstr ""
+"Sistemas e redes podem ser acessados sem permissão, às vezes por acidente, "
+"ou por atacantes remotos e, em alguns casos, por meio de espionagem "
+"corporativa ou ex-funcionários. Como usuário, é importante se preparar e "
+"admitir quando um erro levou a uma violação de segurança e relatar possíveis "
+"problemas à equipe de segurança. Como administrador, é importante conhecer "
+"as ameaças e estar preparado para mitigá-las."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:86
@@ -228,12 +248,16 @@ msgid ""
 "describes some specific tools which can be used when implementing a security "
 "policy on a FreeBSD system."
 msgstr ""
+"O restante desta introdução descreve como algumas dessas configurações "
+"básicas de segurança são executadas em um sistema FreeBSD. O restante deste "
+"capítulo descreve algumas ferramentas específicas que podem ser usadas ao "
+"implementar uma política de segurança em um sistema FreeBSD."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:90
 #, no-wrap
 msgid "Preventing Logins"
-msgstr ""
+msgstr "Prevenindo Logins"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:93
@@ -281,7 +305,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:111
 #, no-wrap
 msgid "Permitted Account Escalation"
-msgstr ""
+msgstr "Escalonamento de Contas Permitido"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:114
@@ -328,7 +352,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:127
 #, no-wrap
 msgid "Password Hashes"
-msgstr ""
+msgstr "Hashes de Senhas"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:130
@@ -390,6 +414,7 @@ msgstr ""
 msgid ""
 "To change the algorithm to Blowfish, modify that line to look like this:"
 msgstr ""
+"Para alterar o algoritmo para Blowfish, modifique a linha para ficar assim:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:156
@@ -423,7 +448,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:163
 #, no-wrap
 msgid "Password Policy Enforcement"
-msgstr ""
+msgstr "Aplicação de Política de Senha"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:166
@@ -489,6 +514,8 @@ msgid ""
 "Once this file is saved, a user changing their password will see a message "
 "similar to the following:"
 msgstr ""
+"Depois que este arquivo for salvo, um usuário que alterar sua senha verá uma "
+"mensagem semelhante a seguinte:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:187
@@ -522,6 +549,9 @@ msgid ""
 "with a warning and the user will have an opportunity to try again, up to the "
 "configured number of retries."
 msgstr ""
+"Se uma senha que não corresponde à política for inserida, ela será rejeitada "
+"com um aviso e o usuário terá a oportunidade de tentar novamente, até o "
+"número configurado de novas tentativas."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:203
@@ -569,7 +599,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:221
 #, no-wrap
 msgid "Detecting Rootkits"
-msgstr ""
+msgstr "Detectando Rootkits"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:224
@@ -632,7 +662,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:239
 #, no-wrap
 msgid "Binary Verification"
-msgstr ""
+msgstr "Verificação Binária"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:242
@@ -739,6 +769,10 @@ msgid ""
 "save the results to a file. This command requires the seed that was used to "
 "generate the original specification:"
 msgstr ""
+"Para verificar se as assinaturas binárias não foram alteradas, compare o "
+"conteúdo atual do diretório com a especificação gerada anteriormente e salve "
+"os resultados em um arquivo. Este comando requer o seed que foi usado para "
+"gerar a especificação original:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:289
@@ -793,7 +827,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:307
 #, no-wrap
 msgid "System Tuning for Security"
-msgstr ""
+msgstr "Otimizando o Sistema para Segurança"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:310
@@ -886,7 +920,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:335
 #, no-wrap
 msgid "One-time Passwords"
-msgstr ""
+msgstr "Senhas de Uso Unico"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:338
@@ -1002,6 +1036,10 @@ msgid ""
 "account. It must be between 10 and 127 characters long. Remember this "
 "password."
 msgstr ""
+"Quando solicitado, insira a senha secreta que será usada para gerar as "
+"chaves de login de uso único. Essa senha deve ser difícil de adivinhar e "
+"deve ser diferente da senha associada à conta de login do usuário. Deve ter "
+"entre 10 e 127 caracteres. Lembre-se desta senha."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:371
@@ -1018,7 +1056,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:372
 #, no-wrap
 msgid "Insecure Connection Initialization"
-msgstr ""
+msgstr "Inicialização de uma Conexão Insegura"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:375
@@ -1084,12 +1122,14 @@ msgid ""
 "Switch back over to the insecure connection, and copy the generated one-time "
 "password over to the relevant program."
 msgstr ""
+"Volte para a conexão insegura e copie a senha única gerada para o programa "
+"relevante."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:406
 #, no-wrap
 msgid "Generating a Single One-time Password"
-msgstr ""
+msgstr "Gerando uma Senha de Uso Único"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:409
@@ -1145,18 +1185,18 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:429
 msgid "On the trusted system:"
-msgstr ""
+msgstr "No sistema confiável:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:440
 msgid "Once the one-time password is generated, continue to log in."
-msgstr ""
+msgstr "Depois que a senha descartável for gerada, continue a logar."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:441
 #, no-wrap
 msgid "Generating Multiple One-time Passwords"
-msgstr ""
+msgstr "Gerando Múltiplas Senhas de Uso Único"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:444
@@ -1236,7 +1276,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:476
 #, no-wrap
 msgid "TCP Wrapper"
-msgstr ""
+msgstr "TCP Wrapper"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:479
@@ -1262,7 +1302,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:482
 #, no-wrap
 msgid "Initial Configuration"
-msgstr ""
+msgstr "Configuração Inicial"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:485
@@ -1343,7 +1383,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:518
 #, no-wrap
 msgid "Advanced Configuration"
-msgstr ""
+msgstr "Configuração Avançada"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:521
@@ -1393,6 +1433,8 @@ msgid ""
 "It may be possible to launch a denial of service attack on the server if an "
 "attacker floods these daemons with connection requests."
 msgstr ""
+"Pode ser possível iniciar um ataque de negação de serviço no servidor se um "
+"invasor inunda esses daemons com solicitações de conexão."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:541
@@ -1782,7 +1824,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:722
 msgid "The temporary ticket can be destroyed when the test is finished:"
-msgstr ""
+msgstr "O ticket temporário pode ser destruído quando o teste terminar:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:726
@@ -2123,6 +2165,10 @@ msgid ""
 "hours, the user cache will have an expired host principal and the ticket "
 "cache will not work as expected."
 msgstr ""
+"Os principals do host podem ter uma vida útil maior do ticket. Se o usuário "
+"do principal tiver uma vida útil de uma semana, mas o host ao qual está "
+"conectado tiver uma vida útil de nove horas, o cache do usuário terá um host "
+"principal expirado e o cache do ticket não funcionará como esperado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:823
@@ -2193,7 +2239,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:836
 #, no-wrap
 msgid "Resources and Further Information"
-msgstr ""
+msgstr "Recursos e Outras Informações"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:839
@@ -2230,7 +2276,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:845
 #, no-wrap
 msgid "OpenSSL"
-msgstr ""
+msgstr "OpenSSL"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:848
@@ -2303,7 +2349,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:864
 #, no-wrap
 msgid "Generating Certificates"
-msgstr ""
+msgstr "Gerando Certificados"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:867
@@ -2397,6 +2443,8 @@ msgid ""
 "Use this key to create a self-signed certificate. Follow the usual prompts "
 "for creating a certificate:"
 msgstr ""
+"Use essa chave para criar um certificado auto-assinado. Siga os prompts "
+"usuais para criar um certificado:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:932
@@ -2433,7 +2481,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:936
 #, no-wrap
 msgid "Using Certificates"
-msgstr ""
+msgstr "Usando Certificados"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:939
@@ -2449,6 +2497,9 @@ msgid ""
 "local copy of the certificate. Refer to the documentation included with the "
 "software for more information on certificate installation."
 msgstr ""
+"Alguns clientes de email exibirão um erro se o usuário não tiver instalado "
+"uma cópia local do certificado. Consulte a documentação incluída com o "
+"software para obter maiores informações sobre a instalação do certificado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:946
@@ -2578,6 +2629,8 @@ msgid ""
 "These protocols can either be used together or separately, depending on the "
 "environment."
 msgstr ""
+"Esses protocolos podem ser usados juntos ou separadamente, dependendo do "
+"ambiente."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1003
@@ -2632,6 +2685,8 @@ msgid ""
 "Both sites are connected to the Internet through a gateway that is running "
 "FreeBSD."
 msgstr ""
+"Ambos os sites estão conectados à Internet através de um gateway que está "
+"executando o FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1023
@@ -2704,7 +2759,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1049
 msgid "Here is the output from Gateway 2:"
-msgstr ""
+msgstr "Aqui está a saída do Gateway 2:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1056
@@ -2963,7 +3018,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1207
 msgid "The output should be similar to the following:"
-msgstr ""
+msgstr "A saída deve ser semelhante à seguinte:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1222
@@ -3003,6 +3058,8 @@ msgid ""
 "Data similar to the following should appear on the console. If not, there is "
 "an issue and debugging the returned data will be required."
 msgstr ""
+"Dados semelhantes aos seguintes devem aparecer no console. Caso contrário, "
+"há um problema e a depuração dos dados retornados será necessária."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1238
@@ -3039,6 +3096,8 @@ msgid ""
 "The rule numbers may need to be altered depending on the current host "
 "configuration."
 msgstr ""
+"Os números das regras podem precisar ser alterados dependendo da "
+"configuração atual do host."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1256
@@ -3084,7 +3143,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1282
 #, no-wrap
 msgid "OpenSSH"
-msgstr ""
+msgstr "OpenSSH"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1285
@@ -3127,7 +3186,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1292
 #, no-wrap
 msgid "Using the SSH Client Utilities"
-msgstr ""
+msgstr "Usando os Utilitários de Cliente SSH"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1295
@@ -3198,6 +3257,8 @@ msgid ""
 "Since the fingerprint was already verified for this host, the server's key "
 "is automatically checked before prompting for the user's password."
 msgstr ""
+"Como a impressão digital já foi verificada para esse host, a chave do "
+"servidor é verificada automaticamente antes de solicitar a senha do usuário."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1324
@@ -3220,7 +3281,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1328
 #, no-wrap
 msgid "Key-based Authentication"
-msgstr ""
+msgstr "Autenticação Baseada em Chave"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1331
@@ -3388,7 +3449,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1410
 msgid "This example uses the following options:"
-msgstr ""
+msgstr "Este exemplo usa as seguintes opções:"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/security/_index.adoc:1411
@@ -3528,7 +3589,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1461
 #, no-wrap
 msgid "Bypassing a Firewall"
-msgstr ""
+msgstr "Ignorando um Firewall"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1465
@@ -3566,7 +3627,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1477
 #, no-wrap
 msgid "Enabling the SSH Server"
-msgstr ""
+msgstr "Ativando o Servidor SSH"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1480
@@ -3640,7 +3701,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1508
 #, no-wrap
 msgid "SSH Server Security"
-msgstr ""
+msgstr "Segurança do Servidor SSH"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1511
@@ -3682,7 +3743,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1527
 msgid "Multiple users should be listed on the same line, like so:"
-msgstr ""
+msgstr "Multiplos usuários devem ser listados na mesma linha, assim:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1531
@@ -3745,7 +3806,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1559
 #, no-wrap
 msgid "Access Control Lists"
-msgstr ""
+msgstr "Listas de Controle de Acesso"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1562
@@ -3929,7 +3990,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1633
 #, no-wrap
 msgid "Monitoring Third Party Security Issues"
-msgstr ""
+msgstr "Monitorando Problemas de Segurança de Terceiros"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1636
@@ -3939,6 +4000,10 @@ msgid ""
 "increases as third party utilities are installed and configured for "
 "virtually any operating system available today."
 msgstr ""
+"Nos últimos anos, o mundo da segurança fez muitas melhorias em como a "
+"avaliação de vulnerabilidades é tratada. A ameaça de invasão do sistema "
+"aumenta à medida que utilitários de terceiros são instalados e configurados "
+"para praticamente qualquer sistema operacional disponível atualmente."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1638
@@ -3982,6 +4047,10 @@ msgid ""
 "Collection at any time, an administrator may choose to update the database "
 "and view known vulnerabilities of installed packages by invoking:"
 msgstr ""
+"Após a instalação e para auditar utilitários de terceiros como parte da "
+"Coleção de Ports a qualquer momento, um administrador pode optar por "
+"atualizar o banco de dados e visualizar as vulnerabilidades conhecidas dos "
+"pacotes instalados, invocando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1650
@@ -4036,7 +4105,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1670
 #, no-wrap
 msgid "FreeBSD Security Advisories"
-msgstr ""
+msgstr "Avisos de Segurança do FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1673
@@ -4065,18 +4134,18 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1677
 msgid "This section describes the format of a FreeBSD security advisory."
-msgstr ""
+msgstr "Esta seção descreve o formato de um alerta de segurança do FreeBSD."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:1678
 #, no-wrap
 msgid "Format of a Security Advisory"
-msgstr ""
+msgstr "Formato de um Comunicado de Segurança"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1681
 msgid "Here is an example of a FreeBSD security advisory:"
-msgstr ""
+msgstr "Aqui está um exemplo de um aviso de segurança do FreeBSD:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1687
@@ -4405,7 +4474,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1828
 msgid "Every security advisory uses the following format:"
-msgstr ""
+msgstr "Todo comunicado de segurança usa o seguinte formato:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1830
@@ -4543,7 +4612,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1848
 #, no-wrap
 msgid "Process Accounting"
-msgstr ""
+msgstr "Auditoria de Processo"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1851
@@ -4552,6 +4621,10 @@ msgid ""
 "track of system resources used and their allocation among users, provide for "
 "system monitoring, and minimally track a user's commands."
 msgstr ""
+"A auditoria de processos é um método de segurança no qual um administrador "
+"pode controlar os recursos do sistema utilizados e sua alocação entre os "
+"usuários, fornecer monitoramento do sistema e controlar minimamente os "
+"comandos de um usuário."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1853
@@ -4562,6 +4635,11 @@ msgid ""
 "space they may require. This section walks an administrator through the "
 "basics of process accounting."
 msgstr ""
+"A auditoria de processos tem pontos positivos e negativos. Um dos pontos "
+"positivos é que uma intrusão pode ser rastreada ao ponto de entrada. Um "
+"valor negativo é a quantidade de logs gerados pela contabilidade do processo "
+"e o espaço em disco necessário. Esta seção conduz um administrador pelos "
+"fundamentos da contabilidade de processo."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1857
@@ -4574,7 +4652,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1859
 #, no-wrap
 msgid "Enabling and Utilizing Process Accounting"
-msgstr ""
+msgstr "Ativando e Utilizando a Auditoria de Processos"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1862
@@ -4582,6 +4660,8 @@ msgid ""
 "Before using process accounting, it must be enabled using the following "
 "commands:"
 msgstr ""
+"Antes de usar a auditoria de processos, ela deve ser ativada usando os "
+"seguintes comandos:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1867
@@ -4640,7 +4720,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1883
 #, no-wrap
 msgid "Resource Limits"
-msgstr ""
+msgstr "Limites de Recursos"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1886
@@ -4678,12 +4758,14 @@ msgid ""
 "This section demonstrates both methods for controlling resources, beginning "
 "with the traditional method."
 msgstr ""
+"Esta seção demonstra os dois métodos para controlar recursos, começando com "
+"o método tradicional."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:1894
 #, no-wrap
 msgid "Configuring Login Classes"
-msgstr ""
+msgstr "Configurando Classes de Login"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1897
@@ -4733,7 +4815,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1913
 #, no-wrap
 msgid "Login Class Resource Limits"
-msgstr ""
+msgstr "Limites de Recursos de Classe de Login"
 
 #. type: Table
 #: documentation/content/en/books/handbook/security/_index.adoc:1945
@@ -4774,6 +4856,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1948
 msgid "There are a few other things to remember when setting resource limits:"
 msgstr ""
+"Existem algumas outras coisas para se lembrar ao definir limites de recursos:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1950
@@ -4820,7 +4903,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1956
 #, no-wrap
 msgid "Enabling and Configuring Resource Limits"
-msgstr ""
+msgstr "Ativando e Configurando Limites de Recursos"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1959
@@ -4850,6 +4933,8 @@ msgid ""
 "Rule syntax is controlled through the use of a subject, subject-id, "
 "resource, and action, as seen in this example rule:"
 msgstr ""
+"A sintaxe da regra é controlada por meio do uso de um subject, subject-id, "
+"resource e action, conforme visto nesta regra de exemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1973
@@ -4892,6 +4977,8 @@ msgid ""
 "As another example, a jail can be prevented from exceeding a memory limit. "
 "This rule could be written as:"
 msgstr ""
+"Como outro exemplo, uma jail pode ser impedida de exceder um limite de "
+"memória. Esta regra pode ser escrita como:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1991
@@ -4950,7 +5037,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:2018
 #, no-wrap
 msgid "Shared Administration with Sudo"
-msgstr ""
+msgstr "Administração Compartilhada com Sudo"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2021
@@ -4964,6 +5051,16 @@ msgid ""
 "superuser access. Thankfully, there is no reason to provide such access to "
 "end users because tools exist to manage this exact requirement."
 msgstr ""
+"Os administradores do sistema geralmente precisam conceder permissões "
+"avançadas aos usuários para que eles possam executar tarefas privilegiadas. "
+"A ideia de que os membros da equipe tenham acesso a um sistema FreeBSD para "
+"executar suas tarefas específicas abre desafios únicos para cada "
+"administrador. Esses membros da equipe precisam apenas de um subconjunto de "
+"acesso além dos níveis normais de usuário final; no entanto, eles quase "
+"sempre dizem ao gerenciadores que eles são incapazes de executar suas "
+"tarefas sem acesso de superusuário. Felizmente, não há motivo para fornecer "
+"tal acesso aos usuários finais porque existem ferramentas para gerenciar "
+"esse exato requisito."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2023
@@ -5108,7 +5205,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:2085
 #, no-wrap
 msgid "Logging Output"
-msgstr ""
+msgstr "Logando a Saída"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:2088
