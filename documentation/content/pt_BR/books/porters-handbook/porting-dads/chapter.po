@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-02-24 00:32+0000\n"
-"Last-Translator: Danilo G. Baio <dbaio@FreeBSD.org>\n"
+"PO-Revision-Date: 2021-03-29 15:21+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/booksporters-handbookporting-dadschapter/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.5\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:1
@@ -27,7 +27,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:8
 #, no-wrap
 msgid "Dos and Don'ts"
-msgstr ""
+msgstr "O Que Fazer e Não Fazer"
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:35
@@ -90,7 +90,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:52
 #, no-wrap
 msgid "Differentiating Operating Systems and OS Versions"
-msgstr ""
+msgstr "Diferenciando Sistemas Operacionais e Versões de OS"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:55
@@ -266,7 +266,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:146
 #, no-wrap
 msgid "Do Things Rationally"
-msgstr ""
+msgstr "Faça as Coisas Racionalmente"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:149
@@ -442,7 +442,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:223
 #, no-wrap
 msgid "Verbose Build Logs"
-msgstr ""
+msgstr "Logs de Compilação Detalhados"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:226
@@ -450,11 +450,14 @@ msgid ""
 "Make the port build system display all commands executed during the build "
 "stage. Complete build logs are crucial to debugging port problems."
 msgstr ""
+"Faz com que o sistema de build dos ports exiba todos os comandos executados "
+"durante o estágio de build. Os registros de build completos são cruciais "
+"para depurar problemas de ports."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:228
 msgid "Non-informative build log example (bad):"
-msgstr ""
+msgstr "Exemplo de log de compilação não informativo (ruim):"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:234
@@ -468,7 +471,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:237
 msgid "Verbose build log example (good):"
-msgstr ""
+msgstr "Exemplo de log de compilação detalhado (bom):"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:243
@@ -491,7 +494,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:248
 #, no-wrap
 msgid "Feedback"
-msgstr ""
+msgstr "Feedback"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:251
@@ -500,6 +503,9 @@ msgid ""
 "inclusion in the next release of the code. This makes updating to the next "
 "release that much easier."
 msgstr ""
+"Envie mudanças aplicáveis e correções para o mantenedor upstream para "
+"inclusão na próxima versão do código. Isso torna a atualização para a "
+"próxima versão muito mais fácil."
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:253
@@ -544,7 +550,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:268
 #, no-wrap
 msgid "Variables"
-msgstr ""
+msgstr "Variáveis"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:271
@@ -570,12 +576,12 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:277
 msgid "does not compile"
-msgstr ""
+msgstr "não compila"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:278
 msgid "fails its configuration or installation process"
-msgstr ""
+msgstr "falha em sua configuração ou no processo de instalação"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:279
@@ -588,11 +594,16 @@ msgid ""
 "does not remove all its files cleanly upon deinstall (however, it may be "
 "acceptable, and desirable, for the port to leave user-modified files behind)"
 msgstr ""
+"não remove todos os seus arquivos corretamente após a desinstalação (no "
+"entanto, pode ser aceitável, e desejável, que o port deixe arquivos "
+"modificados pelo usuário por fora do port)"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:281
 msgid "has runtime issues on systems where it is supposed to run fine."
 msgstr ""
+"tem problemas em tempo de execução em sistemas nos quais é necessário que "
+"ele seja executado corretamente."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:283
@@ -622,7 +633,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:286
 msgid "does not work on the installed version of FreeBSD"
-msgstr ""
+msgstr "não funciona na versão instalada do FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:287
@@ -630,6 +641,8 @@ msgid ""
 "has a distfile which may not be automatically fetched due to licensing "
 "restrictions"
 msgstr ""
+"tem um distfile que não pôde ser obtido automaticamente devido a restrições "
+"de licenciamento"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:288
@@ -652,7 +665,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:295
 #, no-wrap
 msgid "Implementation Notes"
-msgstr ""
+msgstr "Notas de Implementação"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:298
@@ -695,13 +708,13 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:322
 #, no-wrap
 msgid "Architectural Considerations"
-msgstr ""
+msgstr "Considerações Arquitetônicas"
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:325
 #, no-wrap
 msgid "General Notes on Architectures"
-msgstr ""
+msgstr "Notas Gerais sobre Arquiteturas"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:328
@@ -710,11 +723,14 @@ msgid ""
 "x86-based ones. Some ports have constraints which are particular to one or "
 "more of these architectures."
 msgstr ""
+"O FreeBSD roda em muito mais arquiteturas de processador do que apenas as "
+"conhecidas baseadas em x86. Alguns ports possuem restrições específicas para "
+"uma ou mais dessas arquiteturas."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:330
 msgid "For the list of supported architectures, run:"
-msgstr ""
+msgstr "Para a lista de arquiteturas suportadas, execute:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:334
@@ -734,7 +750,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:339
 #, no-wrap
 msgid "Marking a Port as Architecture Neutral"
-msgstr ""
+msgstr "Marcando um Port como de Arquitetura Neutra"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:342
@@ -758,7 +774,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:349
 #, no-wrap
 msgid "Marking a Port as Ignored Only On Certain Architectures"
-msgstr ""
+msgstr "Marcando um port para ser ignorado apenas em determinadas arquiteturas"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:352
@@ -802,7 +818,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:369
 #, no-wrap
 msgid "Cluster-Specific Considerations"
-msgstr ""
+msgstr "Considerações Específicas do Cluster"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:372
@@ -858,6 +874,10 @@ msgid ""
 "be one month for security-related issues and two months for build issues. "
 "This also gives any interested committers a little time to fix the problems."
 msgstr ""
+"Não existe uma política definida sobre o tempo de aviso a ser dado. A "
+"prática atual parece ser de um mês para problemas relacionados à segurança e "
+"dois meses para problemas de compilação. Isso também dá a algum interessado "
+"um pouco de tempo para resolver os problemas."
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:387
@@ -936,7 +956,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:420
 #, no-wrap
 msgid "Rerolling Distfiles"
-msgstr ""
+msgstr "Atualizando Distfiles"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:423
@@ -947,6 +967,11 @@ msgid ""
 "distfile was silently altered on the download servers with the intent to "
 "cause harm or compromise end user security."
 msgstr ""
+"De vez em quando os autores de software alteram o conteúdo dos distfiles "
+"liberados sem alterar o nome do arquivo. Verifique se as alterações são "
+"oficiais e se foram realizadas pelo autor. Já aconteceu no passado em que o "
+"distfile foi silenciosamente alterado nos servidores de download com a "
+"intenção de prejudicar ou comprometer a segurança do usuário final."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:425
@@ -962,11 +987,13 @@ msgid ""
 "Be sure to summarize the differences in the PR and commit log, so that other "
 "people know that nothing bad has happened."
 msgstr ""
+"Certifique-se de resumir as diferenças no log do PR e do commit, para que "
+"outras pessoas saibam que nada de ruim aconteceu."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:432
 msgid "Contact the authors of the software and confirm the changes with them."
-msgstr ""
+msgstr "Contate os autores do software e confirme as alterações com eles."
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:434
@@ -1066,7 +1093,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:459
 #, no-wrap
 msgid "Miscellanea"
-msgstr ""
+msgstr "Miscelânea"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:462
@@ -1081,6 +1108,8 @@ msgid ""
 "Do not copy more copies of the GNU General Public License into our system, "
 "please."
 msgstr ""
+"Não faça mais cópias da Licença GNU General Public License em nosso sistema. "
+"Obrigado."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:465
@@ -1088,3 +1117,5 @@ msgid ""
 "Please be careful to note any legal issues! Do not let us illegally "
 "distribute software!"
 msgstr ""
+"Por favor, tenha cuidado ao notar quaisquer questões legais! Não nos deixe "
+"distribuir software ilegalmente!"
