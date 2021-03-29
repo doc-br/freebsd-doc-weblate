@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-14 11:02-0300\n"
-"PO-Revision-Date: 2021-02-24 00:32+0000\n"
-"Last-Translator: Danilo G. Baio <dbaio@FreeBSD.org>\n"
+"PO-Revision-Date: 2021-03-29 22:54+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/booksporters-handbookspecialchapter/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.5\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1
@@ -27,7 +27,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:8
 #, no-wrap
 msgid "Special Considerations"
-msgstr ""
+msgstr "Considerações Especiais"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:33
@@ -35,12 +35,13 @@ msgid ""
 "This section explains the most common things to consider when creating a "
 "port."
 msgstr ""
+"Esta seção explica as coisas mais comuns a se considerar ao criar um port."
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:35
 #, no-wrap
 msgid "Staging"
-msgstr ""
+msgstr "Staging"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:38
@@ -112,7 +113,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:64
 #, no-wrap
 msgid "Handling Symbolic Links"
-msgstr ""
+msgstr "Lidando com Links Simbólicos"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:67
@@ -126,7 +127,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:69
 #, no-wrap
 msgid "Create Relative Symbolic Links Automatically"
-msgstr ""
+msgstr "Crie Links Simbólicos Relativos Automaticamente"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:73
@@ -147,7 +148,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:82
 msgid "Will generate:"
-msgstr ""
+msgstr "Irá gerar:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:92
@@ -166,7 +167,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:97
 #, no-wrap
 msgid "Bundled Libraries"
-msgstr ""
+msgstr "Bibliotecas Empacotadas (Bundled)"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:100
@@ -174,12 +175,14 @@ msgid ""
 "This section explains why bundled dependencies are considered bad and what "
 "to do about them."
 msgstr ""
+"Esta seção explica porque as dependências agrupadas(bundled) são "
+"consideradas ruins e o que fazer com elas."
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:102
 #, no-wrap
 msgid "Why Bundled Libraries Are Bad"
-msgstr ""
+msgstr "Por Que as Bibliotecas Agrupadas(Bundled) São Ruins"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:105
@@ -189,6 +192,11 @@ msgid ""
 "libraries into the distribution file. The second approach seems easier at "
 "first, but there are some serious drawbacks:"
 msgstr ""
+"Alguns softwares requerem que o mantenedor do port localize bibliotecas de "
+"terceiros e adicione as dependências necessárias ao port. Outros softwares "
+"agrupam todas as bibliotecas necessárias no arquivo de distribuição. A "
+"segunda abordagem parece mais fácil no começo, mas há algumas desvantagens "
+"sérias:"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:107
@@ -203,7 +211,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:108
 #, no-wrap
 msgid "Security"
-msgstr ""
+msgstr "Segurança"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:110
@@ -216,12 +224,20 @@ msgid ""
 "longer than necessary. This in turn makes it harder to coordinate a fix "
 "without unnecessarily leaking information about the vulnerability."
 msgstr ""
+"Se vulnerabilidades forem encontradas na biblioteca e arrumadas no upstream, "
+"elas podem não ser consertadas na biblioteca empacotada com o port. Uma "
+"razão pode ser que o autor não esteja ciente do problema. Isto significa que "
+"o mantenedor do port deve consertá-las, ou atualizar para uma versão não "
+"vulnerável e enviar um patch para o autor. Isso tudo leva tempo, o que "
+"resulta em software vulnerável por mais tempo do que o necessário. Isso, por "
+"sua vez, torna mais difícil coordenar uma correção sem vazamento "
+"desnecessário de informações sobre a vulnerabilidade."
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:111
 #, no-wrap
 msgid "Bugs"
-msgstr ""
+msgstr "Bugs"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:113
@@ -229,12 +245,14 @@ msgid ""
 "This problem is similar to the problem with security in the last paragraph, "
 "but generally less severe."
 msgstr ""
+"Esse problema é semelhante ao problema de segurança no último parágrafo, mas "
+"geralmente menos grave."
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:114
 #, no-wrap
 msgid "Forking"
-msgstr ""
+msgstr "Forking"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:116
@@ -244,6 +262,11 @@ msgid ""
 "upstream making it harder to address security or other problems with the "
 "software. A reason for this is that patching becomes harder."
 msgstr ""
+"É mais fácil para o autor criar um fork da biblioteca depois que ela é "
+"empacotada. Embora seja conveniente à primeira vista, isso significa que o "
+"código diverge do upstream, dificultando o tratamento da segurança ou outros "
+"problemas com o software. A razão para isso é que o patching se torna mais "
+"difícil."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:118
@@ -252,12 +275,15 @@ msgid ""
 "get solved over and over again instead of just once at a central location. "
 "This defeats the idea of open source software in the first place."
 msgstr ""
+"Outro problema de forking é que, como o código diverge do upstream, os bugs "
+"são resolvidos repetidamente em vez de apenas uma vez em um local central. "
+"Isso, em primeiro lugar, anula a ideia de software de código aberto."
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:119
 #, no-wrap
 msgid "Symbol collision"
-msgstr ""
+msgstr "Colisão de símbolo"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:121
@@ -268,12 +294,17 @@ msgid ""
 "down. The latter problem could be caused because the versions of the two "
 "libraries are incompatible."
 msgstr ""
+"Quando uma biblioteca é instalada no sistema, ela pode colidir com a versão "
+"empacotada. Isso pode causar erros imediatos no tempo de compilação ou link. "
+"Também pode causar erros ao executar o programa, o que pode ser mais difícil "
+"de rastrear. O último problema poderia ser causado porque as versões das "
+"duas bibliotecas são incompatíveis."
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:122
 #, no-wrap
 msgid "Licensing"
-msgstr ""
+msgstr "Licenciamento"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:124
@@ -281,12 +312,15 @@ msgid ""
 "When bundling projects from different sources, license issues can arise more "
 "easily, especially when licenses are incompatible."
 msgstr ""
+"Ao agrupar projetos de diferentes fontes, os problemas de licença podem "
+"surgir com mais facilidade, especialmente quando as licenças são "
+"incompatíveis."
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:125
 #, no-wrap
 msgid "Waste of resources"
-msgstr ""
+msgstr "Desperdício de recursos"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:127
@@ -297,12 +331,17 @@ msgid ""
 "the system-wide library is already loaded by one program and the bundled "
 "library is loaded by another program."
 msgstr ""
+"Bibliotecas empacotadas desperdiçam recursos em vários níveis. Demora mais "
+"para compilar o aplicativo real, especialmente se essas bibliotecas já "
+"estiverem presentes no sistema. Em tempo de execução, elas podem ocupar "
+"memória desnecessária quando a biblioteca do sistema já está carregada por "
+"um programa e a biblioteca agrupada é carregada por outro programa."
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:128
 #, no-wrap
 msgid "Waste of effort"
-msgstr ""
+msgstr "Desperdício de esforço"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:130
@@ -312,12 +351,17 @@ msgid ""
 "the patches might not apply cleanly. It can also be hard to notice that "
 "these patches are required in the first place."
 msgstr ""
+"Quando uma biblioteca precisa de patches para o FreeBSD, esses patches "
+"precisam ser duplicados novamente na biblioteca. Isso desperdiça tempo do "
+"desenvolvedor porque os patches podem não ser aplicados de forma limpa. "
+"Também pode ser difícil perceber que estes patches são necessários em "
+"primeiro lugar."
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:132
 #, no-wrap
 msgid "What to do About Bundled Libraries"
-msgstr ""
+msgstr "O Que Fazer em Relação às Bibliotecas Agrupadas"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:135
@@ -333,6 +377,9 @@ msgid ""
 "Only use bundled libraries if the upstream has a good track record on "
 "security and using unbundled versions leads to overly complex patches."
 msgstr ""
+"Use bibliotecas agrupadas somente se o upstream tiver um bom histórico de "
+"segurança e se o uso de versões não agrupadas originarem patches "
+"excessivamente complexos."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:141
@@ -349,7 +396,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:144
 #, no-wrap
 msgid "Shared Libraries"
-msgstr ""
+msgstr "Bibliotecas Compartilhadas"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:147
@@ -423,7 +470,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:169
 #, no-wrap
 msgid "Ports with Distribution Restrictions or Legal Concerns"
-msgstr ""
+msgstr "Ports com Restrições de Distribuição ou Preocupações Legais"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:172
@@ -431,6 +478,9 @@ msgid ""
 "Licenses vary, and some of them place restrictions on how the application "
 "can be packaged, whether it can be sold for profit, and so on."
 msgstr ""
+"As licenças variam e algumas delas impõem restrições sobre como o aplicativo "
+"pode ser empacotado, se pode ser vendido com fins lucrativos e assim por "
+"diante."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:176
@@ -447,6 +497,8 @@ msgid ""
 "In situations like this, the variables described in the next sections can be "
 "set."
 msgstr ""
+"Em situações como esta, as variáveis descritas nas próximas seções podem ser "
+"definidas."
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:181
@@ -461,6 +513,9 @@ msgid ""
 "application. For instance, the license may disallow binary redistribution, "
 "or it may prohibit distribution of packages created from patched sources."
 msgstr ""
+"Esta variável indica que não podemos gerar um pacote binário da aplicação. "
+"Por exemplo, a licença pode proibir a redistribuição binária, ou pode "
+"proibir a distribuição de pacotes criados a partir de código adaptado."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:186
@@ -617,7 +672,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3825
 #, no-wrap
 msgid "Examples"
-msgstr ""
+msgstr "Exemplos"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:235
@@ -625,6 +680,8 @@ msgid ""
 "The preferred way to state \"the distfiles for this port must be fetched "
 "manually\" is as follows:"
 msgstr ""
+"A maneira preferida de declarar \"os distfiles para este port devem ser "
+"obtidos manualmente\" é a seguinte:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:241
@@ -641,6 +698,8 @@ msgid ""
 "This both informs the user, and sets the proper metadata on the user's "
 "machine for use by automated programs."
 msgstr ""
+"Isso tanto informa o usuário, quanto define os metadados apropriados na "
+"máquina do usuário para uso por programas automatizados."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:246
@@ -653,13 +712,13 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:248
 #, no-wrap
 msgid "Building Mechanisms"
-msgstr ""
+msgstr "Mecanismos de Compilação"
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:251
 #, no-wrap
 msgid "Building Ports in Parallel"
-msgstr ""
+msgstr "Compilando Ports em Paralelo"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:254
@@ -916,7 +975,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:376
 msgid "Is equivalent to:"
-msgstr ""
+msgstr "É equivalente a:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:380
@@ -1081,7 +1140,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:506
 #, no-wrap
 msgid "Creating a Port for a Simple Rust Application"
-msgstr ""
+msgstr "Criando um Port para uma Aplicação Simples em Rust"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:510
@@ -1089,6 +1148,9 @@ msgid ""
 "Creating a Cargo based port is a three stage process. First we need to "
 "provide a ports template that fetches the application distribution file:"
 msgstr ""
+"Criar um port baseado em cargo é um processo de três estágios. Primeiro, "
+"precisamos fornecer um modelo de port que busque o arquivo de distribuição "
+"do aplicativo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:517
@@ -1182,7 +1244,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:790
 msgid ""
 "The output of this command needs to be pasted directly into the Makefile:"
-msgstr ""
+msgstr "A saída deste comando precisa ser colada diretamente no Makefile:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:576
@@ -1234,6 +1296,9 @@ msgid ""
 "a plist, writing a description, adding license information, options, etc. as "
 "normal."
 msgstr ""
+"O port está agora pronto para uma compilação de teste e ajustes adicionais, "
+"como criar um plist, escrever uma descrição, adicionar informações de "
+"licença, opções, etc. como é normal."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:604
@@ -1248,7 +1313,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:607
 #, no-wrap
 msgid "Enabling Additional Application Features"
-msgstr ""
+msgstr "Ativando Recursos Adicionais do Aplicativo"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:611
@@ -1272,7 +1337,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:622
 #, no-wrap
 msgid "Encoding Application Features As Port Options"
-msgstr ""
+msgstr "Features de Codificação de Aplicativos como Opções de Port"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:626
@@ -1324,7 +1389,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:650
 #, no-wrap
 msgid "Listing Crate Licenses"
-msgstr ""
+msgstr "Listando Licenças Crate"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:654
@@ -1425,7 +1490,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:713
 #, no-wrap
 msgid "Creating a Port for a Go Modules Based Application"
-msgstr ""
+msgstr "Criando um Port para uma Aplicação Baseada em Módulos Go"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:717
@@ -1487,6 +1552,9 @@ msgid ""
 "Creating a Go based port is a five stage process. First we need to provide a "
 "ports template that fetches the application distribution file:"
 msgstr ""
+"Criar um port baseado em Go é um processo de cinco estágios. Primeiro, "
+"precisamos fornecer um modelo de port que baixa o arquivo de distribuição do "
+"aplicativo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:749
@@ -1598,7 +1666,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:838
 #, no-wrap
 msgid "Setting Output Binary Name or Installation Path"
-msgstr ""
+msgstr "Definindo o Nome do Binário ou o Caminho da Instalação"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:842
@@ -1648,7 +1716,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:864
 #, no-wrap
 msgid "Creating a Port for a Hackage-hosted Haskell Application"
-msgstr ""
+msgstr "Criando um Port para uma Aplicação Hackage-hosted Haskell"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:868
@@ -1685,7 +1753,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:884
 msgid "This minimal Makefile allows us to fetch the distribution file:"
-msgstr ""
+msgstr "Esse Makefile mínimo nos permite baixar o arquivo de distribuição:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:894
@@ -1706,6 +1774,8 @@ msgid ""
 "Now we have ShellCheck.cabal package description file, which allows us to "
 "fetch all package's dependencies, including transitive ones:"
 msgstr ""
+"Agora, temos o arquivo de descrição do pacote ShellCheck.cabal, que permite "
+"baixar todas as dependências do pacote, incluindo as transitivas:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:911
@@ -1731,6 +1801,9 @@ msgid ""
 "command may take some time. Once done, a list of required dependencies can "
 "generated:"
 msgstr ""
+"Como efeito colateral, as dependências do pacote também são compiladas, "
+"portanto, o comando pode levar algum tempo. Uma vez feito, uma lista de "
+"dependências necessárias pode ser gerada:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:922
@@ -1795,7 +1868,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:957
 #, no-wrap
 msgid "Using GNU Autotools"
-msgstr ""
+msgstr "Usando o GNU Autotools"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:960
@@ -1814,7 +1887,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:965
 #, no-wrap
 msgid "Basic Usage"
-msgstr ""
+msgstr "Uso Básico"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:968
@@ -1859,7 +1932,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:986
 #, no-wrap
 msgid "Optional Usage"
-msgstr ""
+msgstr "Uso Opcional"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:989
@@ -1896,7 +1969,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1004
 msgid "Or using the older way of using options:"
-msgstr ""
+msgstr "Ou usando a maneira antiga de usar opções:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1010
@@ -1957,7 +2030,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1035
 #, no-wrap
 msgid "Handling Message Catalog Directories"
-msgstr ""
+msgstr "Manipulando Diretórios do Catálogo de Mensagens"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1038
@@ -2062,7 +2135,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1085
 #, no-wrap
 msgid "Perl Dependency Example"
-msgstr ""
+msgstr "Exemplo de Dependência Perl"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1091
@@ -2088,7 +2161,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1104
 msgid "can be replaced with"
-msgstr ""
+msgstr "pode ser substituído por"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1109
@@ -2109,12 +2182,12 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1117
 #, no-wrap
 msgid "A Port Which Only Requires Perl to Build"
-msgstr ""
+msgstr "Um Port Que Requer Perl Apenas para Compilar"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1121
 msgid "As the default USE_PERL5 value is build and run, set it to:"
-msgstr ""
+msgstr "Como o valor padrão para USE_PERL5 é build e run, configure-o para:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1126
@@ -2128,7 +2201,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1131
 #, no-wrap
 msgid "A Port Which Also Requires Perl to Patch"
-msgstr ""
+msgstr "Um Port Que Também Requer Perl Para Patch"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1135
@@ -2204,13 +2277,13 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1181
 #, no-wrap
 msgid "Using X11"
-msgstr ""
+msgstr "Usando o X11"
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1184
 #, no-wrap
 msgid "X.Org Components"
-msgstr ""
+msgstr "Componentes X.Org"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1187
@@ -2249,7 +2322,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1204
 #, no-wrap
 msgid "Variables for Ports That Use X"
-msgstr ""
+msgstr "Variáveis para Ports Que Usam X"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1212
@@ -2266,7 +2339,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1215
 #, no-wrap
 msgid "Using X11-Related Variables"
-msgstr ""
+msgstr "Usando Variáveis Relacionadas ao X11"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1223
@@ -2281,7 +2354,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1228
 #, no-wrap
 msgid "Ports That Require Motif"
-msgstr ""
+msgstr "Ports que Requerem Motif"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1231
@@ -2304,7 +2377,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1235
 msgid "There are two common cases:"
-msgstr ""
+msgstr "Existem dois casos comuns:"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1237
@@ -2332,7 +2405,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1242
 #, no-wrap
 msgid "X11 Fonts"
-msgstr ""
+msgstr "Fontes X11"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1245
@@ -2367,7 +2440,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1258
 #, no-wrap
 msgid "Desktop Entries"
-msgstr ""
+msgstr "Entradas de Desktop"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1261
@@ -2402,7 +2475,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1268
 #, no-wrap
 msgid "Updating Desktop Database"
-msgstr ""
+msgstr "Atualizando o Banco de Dados do Desktop"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1271
@@ -2450,7 +2523,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1285
 msgid "Example:"
-msgstr ""
+msgstr "Exemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1292
@@ -2466,7 +2539,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1296
 #, no-wrap
 msgid "Using GNOME"
-msgstr ""
+msgstr "Usando o GNOME"
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1299
@@ -2576,7 +2649,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1345
 #, no-wrap
 msgid "Variables"
-msgstr ""
+msgstr "Variáveis"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1348
@@ -2616,6 +2689,9 @@ msgid ""
 "files to the port plist and handle the registration of these files on "
 "install and deinstall."
 msgstr ""
+"Lista de todos os arquivos de esquema de glib que o port instala. A macro "
+"adicionará os arquivos ao plist do port e manipulará o registro destes "
+"arquivos na instalação e desinstalação."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1356
@@ -2654,6 +2730,9 @@ msgid ""
 "List all the gconf schema files. The macro will add the schema files to the "
 "port plist and will handle their registration on install and deinstall."
 msgstr ""
+"Liste todos os arquivos do esquema gconf. A macro adicionará os arquivos de "
+"esquema ao plist do port e manipulará seu registro na instalação e "
+"desinstalação."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1371
@@ -2716,7 +2795,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1398
 #, no-wrap
 msgid "GNOME Components"
-msgstr ""
+msgstr "Componentes GNOME"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1396
@@ -2904,7 +2983,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1567
 #, no-wrap
 msgid "GNOME Macro Components"
-msgstr ""
+msgstr "Componentes Macro do GNOME"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1581
@@ -2927,7 +3006,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1584
 #, no-wrap
 msgid "GNOME Legacy Components"
-msgstr ""
+msgstr "Componentes Legados do GNOME"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1750
@@ -3102,7 +3181,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1753
 #, no-wrap
 msgid "Deprecated Components: Do Not Use"
-msgstr ""
+msgstr "Componentes Obsoletos: Não Use"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1761
@@ -3119,7 +3198,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1764
 #, no-wrap
 msgid "Using Qt"
-msgstr ""
+msgstr "Usando o Qt"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1769
@@ -3130,7 +3209,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1772
 #, no-wrap
 msgid "Ports That Require Qt"
-msgstr ""
+msgstr "Ports que requerem o Qt"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1775
@@ -3145,12 +3224,14 @@ msgid ""
 "The Qt framework exports a number of variables which can be used by ports, "
 "some of them listed below:"
 msgstr ""
+"O framework Qt exporta um número de variáveis que podem ser usadas por "
+"ports, algumas delas listadas abaixo:"
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1779
 #, no-wrap
 msgid "Variables Provided to Ports That Use Qt"
-msgstr ""
+msgstr "Variáveis Fornecidas aos Ports Que Usam o Qt"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1805
@@ -3186,7 +3267,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3474
 #, no-wrap
 msgid "Component Selection"
-msgstr ""
+msgstr "Seleção de Componentes"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1811
@@ -3206,7 +3287,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1812
 #, no-wrap
 msgid "Available Qt Library Components"
-msgstr ""
+msgstr "Componentes da Biblioteca Qt Disponíveis"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2027
@@ -3437,7 +3518,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2032
 #, no-wrap
 msgid "Available Qt Tool Components"
-msgstr ""
+msgstr "Componentes Disponíveis da Ferramenta Qt"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2046
@@ -3460,7 +3541,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2049
 #, no-wrap
 msgid "Available Qt Plugin Components"
-msgstr ""
+msgstr "Componentes Disponíveis de Plugin Qt"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2057
@@ -3477,7 +3558,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2060
 #, no-wrap
 msgid "Selecting Qt 5 Components"
-msgstr ""
+msgstr "Selecionando Componentes do Qt 5"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2064
@@ -3633,6 +3714,9 @@ msgid ""
 "not the platform they are developed on, which in turn leads to certain loose "
 "ends, like:"
 msgstr ""
+"Aplicações Qt são frequentemente escritas para serem multi-plataforma e "
+"muitas vezes o X11/Unix não é a plataforma em que são desenvolvidas, o que "
+"por sua vez leva a certas pontas soltas, como:"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2151
@@ -3666,13 +3750,13 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2162
 #, no-wrap
 msgid "Using KDE"
-msgstr ""
+msgstr "Usando o KDE"
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2165
 #, no-wrap
 msgid "KDE Variable Definitions"
-msgstr ""
+msgstr "Definições de Variáveis do KDE"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2168
@@ -3690,7 +3774,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2169
 #, no-wrap
 msgid "Available KDE Components"
-msgstr ""
+msgstr "Componentes Disponíveis do KDE"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2720
@@ -4276,7 +4360,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2738
 #, no-wrap
 msgid "Using LXQt"
-msgstr ""
+msgstr "Usando o LXQt"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2741
@@ -4289,7 +4373,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2743
 #, no-wrap
 msgid "Available LXQt Components"
-msgstr ""
+msgstr "Componentes disponíveis do LXQt"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2760
@@ -4338,13 +4422,13 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2778
 #, no-wrap
 msgid "Using Java"
-msgstr ""
+msgstr "Usando Java"
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2781
 #, no-wrap
 msgid "Variable Definitions"
-msgstr ""
+msgstr "Definições de Variáveis"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2784
@@ -4368,7 +4452,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2787
 #, no-wrap
 msgid "Variables Which May be Set by Ports That Use Java"
-msgstr ""
+msgstr "Variáveis Que Podem ser Definidas por Ports Que Usam Java"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2813
@@ -4410,7 +4494,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2818
 #, no-wrap
 msgid "Variables Provided to Ports That Use Java"
-msgstr ""
+msgstr "Variáveis Fornecidas para Ports que Usam Java"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2889
@@ -4499,12 +4583,14 @@ msgid ""
 "Additionally, these constants are defined so all Java ports may be installed "
 "in a consistent way:"
 msgstr ""
+"Além disso, essas constantes são definidas para que todos os ports Java "
+"possam ser instalados de maneira consistente:"
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2896
 #, no-wrap
 msgid "Constants Defined for Ports That Use Java"
-msgstr ""
+msgstr "Constantes definidas para os ports que usam Java"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2910
@@ -4534,7 +4620,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2915
 #, no-wrap
 msgid "Building with Ant"
-msgstr ""
+msgstr "Compilando com Ant"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2918
@@ -4550,7 +4636,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2920
 #, no-wrap
 msgid "Best Practices"
-msgstr ""
+msgstr "Melhores Práticas"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2923
@@ -4687,19 +4773,19 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2961
 #, no-wrap
 msgid "Web Applications, Apache and PHP"
-msgstr ""
+msgstr "Aplicações Web, Apache e PHP"
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2964
 #, no-wrap
 msgid "Apache"
-msgstr ""
+msgstr "Apache"
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2967
 #, no-wrap
 msgid "Variables for Ports That Use Apache"
-msgstr ""
+msgstr "Variáveis para Ports Que Usam o Apache"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2990
@@ -4731,7 +4817,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2993
 #, no-wrap
 msgid "Useful Variables for Porting Apache Modules"
-msgstr ""
+msgstr "Variáveis Úteis para Portar Módulos do Apache"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3016
@@ -4763,7 +4849,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3019
 #, no-wrap
 msgid "Web Applications"
-msgstr ""
+msgstr "Aplicações Web"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3022
@@ -4803,7 +4889,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3033
 #, no-wrap
 msgid "PHP"
-msgstr ""
+msgstr "PHP"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3036
@@ -4816,12 +4902,12 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3038
 #, no-wrap
 msgid "PEAR Modules"
-msgstr ""
+msgstr "Módulos PEAR"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3041
 msgid "Porting PEAR modules is a very simple process."
-msgstr ""
+msgstr "Portar módulos PEAR é um processo muito simples."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3043
@@ -4835,7 +4921,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3045
 #, no-wrap
 msgid "Example Makefile for PEAR Class"
-msgstr ""
+msgstr "Exemplo de Makefile para Classes PEAR"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3053
@@ -4978,7 +5064,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3126
 #, no-wrap
 msgid "Using Python"
-msgstr ""
+msgstr "Usando Python"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3129
@@ -5007,7 +5093,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3139
 #, no-wrap
 msgid "Most Useful Variables for Ports That Use Python"
-msgstr ""
+msgstr "Variáveis úteis para Ports que usam Python"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3171
@@ -5048,7 +5134,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3174
 #, no-wrap
 msgid "Python Module Dependency Helpers"
-msgstr ""
+msgstr "Assistentes do Módulo de Dependências do Python"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3200
@@ -5224,13 +5310,13 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3279
 #, no-wrap
 msgid "Using Ruby"
-msgstr ""
+msgstr "Usando Ruby"
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3282
 #, no-wrap
 msgid "Useful Variables for Ports That Use Ruby"
-msgstr ""
+msgstr "Variáveis Úteis para Ports Que Usam Ruby"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3299
@@ -5265,7 +5351,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3303
 #, no-wrap
 msgid "Selected Read-Only Variables for Ports That Use Ruby"
-msgstr ""
+msgstr "Variáveis Somente Leitura Selecionadas para Ports Que Usam Ruby"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3333
@@ -5311,7 +5397,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3338
 #, no-wrap
 msgid "Using SDL"
-msgstr ""
+msgstr "Usando SDL"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3341
@@ -5324,7 +5410,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3343
 msgid "These SDL libraries for version 1.2 are recognized:"
-msgstr ""
+msgstr "Estas bibliotecas SDL para a versão 1.2 são reconhecidas:"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3345
@@ -5379,7 +5465,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3356
 msgid "These SDL libraries for version 2.0 are recognized:"
-msgstr ""
+msgstr "Estas são as bibliotecas SDL para a versão 2.0 reconhecidas:"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3358
@@ -5506,7 +5592,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3688
 #, no-wrap
 msgid "Version Selection"
-msgstr ""
+msgstr "Seleção de Versão"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3402
@@ -5605,6 +5691,9 @@ msgid ""
 "available ones. They can be set to a list of versions, the first ones will "
 "have higher priority."
 msgstr ""
+"Também existem algumas variáveis para selecionar as versões preferidas entre "
+"as disponíveis. Elas podem ser configuradas para uma lista de versões, as "
+"primeiras terão maior prioridade."
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3460
@@ -5695,7 +5784,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3517
 msgid "The default values for the components are detailed in this table:"
-msgstr ""
+msgstr "Os valores padrão para os componentes estão detalhados nesta tabela:"
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3519
@@ -5751,7 +5840,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3556
 #, no-wrap
 msgid "Detecting Installed Versions"
-msgstr ""
+msgstr "Detectando Versões Instaladas"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3559
@@ -5831,7 +5920,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3754
 #, no-wrap
 msgid "Defined Variables"
-msgstr ""
+msgstr "Variáveis Definidas"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3600
@@ -5992,6 +6081,9 @@ msgid ""
 "to find the expected version. But it can be solved by adding some additional "
 "flags to the compiler and linker."
 msgstr ""
+"A desvantagem óbvia disso é que cada aplicativo precisa ser modificado para "
+"encontrar a versão esperada. Mas isto pode ser resolvido adicionando alguns "
+"sinalizadores adicionais ao compilador e ao linker."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3686
@@ -6050,7 +6142,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3712
 #, no-wrap
 msgid "Configuration and Compiler flags"
-msgstr ""
+msgstr "Flags de Configuração e Compilador"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3715
@@ -6082,12 +6174,14 @@ msgid ""
 "Patch the software's configuration or build files to select the correct "
 "version."
 msgstr ""
+"Altere a configuração do software ou arquivos de compilação para selecionar "
+"a versão correta."
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3722
 #, no-wrap
 msgid "Version Flavors"
-msgstr ""
+msgstr "Flavors de Versão"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3725
@@ -6109,6 +6203,8 @@ msgid ""
 "A version number or range of versions can be specified as well; use a comma "
 "to separate parameters."
 msgstr ""
+"Um número de versão ou intervalo de versões também pode ser especificado; "
+"use uma vírgula para separar os parâmetros."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3734
@@ -6172,7 +6268,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3757
 msgid "These variables are available in the port."
-msgstr ""
+msgstr "Essas variáveis estão disponíveis no port."
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3759
@@ -6501,7 +6597,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3986
 #, no-wrap
 msgid "Using Xfce"
-msgstr ""
+msgstr "Usando o Xfce"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3989
@@ -6526,7 +6622,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3993
 #, no-wrap
 msgid "garcon"
-msgstr ""
+msgstr "garcon"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3995
@@ -6537,7 +6633,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3996
 #, no-wrap
 msgid "libexo"
-msgstr ""
+msgstr "libexo"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3998
@@ -6548,7 +6644,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3999
 #, no-wrap
 msgid "libgui"
-msgstr ""
+msgstr "libgui"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4001
@@ -6559,7 +6655,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4002
 #, no-wrap
 msgid "libmenu"
-msgstr ""
+msgstr "libmenu"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4004
@@ -6570,7 +6666,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4005
 #, no-wrap
 msgid "libutil"
-msgstr ""
+msgstr "libutil"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4007
@@ -6581,7 +6677,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4008
 #, no-wrap
 msgid "panel"
-msgstr ""
+msgstr "painel"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4010
@@ -6592,7 +6688,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4011
 #, no-wrap
 msgid "thunar"
-msgstr ""
+msgstr "thunar"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4013
@@ -6603,7 +6699,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4014
 #, no-wrap
 msgid "xfconf"
-msgstr ""
+msgstr "xfconf"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4016
@@ -6628,7 +6724,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4031
 #, no-wrap
 msgid "Using Xfce's Own GTK2 Widgets"
-msgstr ""
+msgstr "Usando os Próprios Widgets GTK2 do Xfce"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4035
@@ -6688,7 +6784,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4067
 #, no-wrap
 msgid "Using Databases"
-msgstr ""
+msgstr "Usando Bancos de Dados"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4070
@@ -6727,7 +6823,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4092
 #, no-wrap
 msgid "Using Berkeley DB 6"
-msgstr ""
+msgstr "Usando o Berkeley DB 6"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4098
@@ -6744,7 +6840,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4104
 #, no-wrap
 msgid "Using MySQL"
-msgstr ""
+msgstr "Usando MySQL"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4108
@@ -6766,7 +6862,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4118
 #, no-wrap
 msgid "Using PostgreSQL"
-msgstr ""
+msgstr "Usando PostgreSQL"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4122
@@ -6790,7 +6886,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4133
 #, no-wrap
 msgid "Using SQLite 3"
-msgstr ""
+msgstr "Usando SQLite 3"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4139
@@ -6938,6 +7034,9 @@ msgid ""
 "Unless there is a very good reason to start the service earlier, or it runs "
 "as a particular user (other than root), all ports scripts must use:"
 msgstr ""
+"A menos que haja uma boa razão para iniciar o serviço mais cedo, ou ele seja "
+"executado como um usuário específico (diferente de root), todos os scripts "
+"de ports devem usar:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4203
@@ -6951,6 +7050,8 @@ msgid ""
 "If the startup script launches a daemon that must be shutdown, the following "
 "will trigger a stop of the service on system shutdown:"
 msgstr ""
+"Se o script de inicialização iniciar um daemon que deve ser desligado, o "
+"seguinte acionará uma parada do serviço no desligamento do sistema:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4210
@@ -6963,6 +7064,7 @@ msgstr ""
 msgid ""
 "If the script is not starting a persistent service this is not necessary."
 msgstr ""
+"Se o script não está iniciando um serviço persistente, isso não é necessário."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4215
@@ -7001,7 +7103,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4229
 #, no-wrap
 msgid "Pre-Commit Checklist"
-msgstr ""
+msgstr "Pre-Commit Checklist"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4232
@@ -7108,11 +7210,14 @@ msgid ""
 "double-check that the option is documented in the comments at the top of the "
 "file."
 msgstr ""
+"Existem atribuições padrões para sequências vazias? Elas devem ser "
+"removidas, mas verifique se a opção está documentada nos comentários na "
+"parte superior do arquivo."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4254
 msgid "Are things that are set in variables actually used in the script?"
-msgstr ""
+msgstr "As variáveis definidas estão realmente sendo utilizadas no script?"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4255
@@ -7151,6 +7256,9 @@ msgid ""
 "have a counter to terminate the loop? We do not want the boot to be stuck "
 "forever if there is an error."
 msgstr ""
+"Se houver um loop (por exemplo, esperando que algo inicie), ele tem um "
+"contador para terminar o loop? Não queremos que a inicialização seja "
+"bloqueada para sempre se houver um erro."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4260
@@ -7166,7 +7274,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4262
 #, no-wrap
 msgid "Adding Users and Groups"
-msgstr ""
+msgstr "Adicionando Usuários e Grupos"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4265
@@ -7184,6 +7292,8 @@ msgid ""
 "Please include a patch against these two files when requiring a new user or "
 "group to be created for the port."
 msgstr ""
+"Por favor, inclua um patch para estes dois arquivos quando for necessário "
+"que um novo usuário ou grupo seja criado para o port."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4269
@@ -7211,7 +7321,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4279
 #, no-wrap
 msgid "Ports That Rely on Kernel Sources"
-msgstr ""
+msgstr "Ports que Dependem dos Fontes do kernel"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4282
@@ -7220,6 +7330,9 @@ msgid ""
 "that the port can compile. Here is the correct way to determine if the user "
 "has them installed:"
 msgstr ""
+"Alguns ports (como módulos carregáveis do kernel) precisam dos arquivos "
+"fonte do kernel para que o port possa ser compilado. Aqui está a maneira "
+"correta de determinar se o usuário os instalou:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4286
@@ -7238,7 +7351,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4291
 #, no-wrap
 msgid "Go Libraries"
-msgstr ""
+msgstr "Bibliotecas Go"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4294
@@ -7247,16 +7360,20 @@ msgid ""
 "fetch the required deps at the normal fetch time and should only install the "
 "programs and things users need, not the things Go developers would need."
 msgstr ""
+"Os ports não devem empacotar ou instalar bibliotecas Go ou código-fonte. Os "
+"ports Go devem baixar as dependências na hora da compilação e devem instalar "
+"apenas programas que os usuários precisam, e não o que os desenvolvedores Go "
+"precisam."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4296
 msgid "Ports should (in order of preference):"
-msgstr ""
+msgstr "Ports devem (por ordem de preferência):"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4298
 msgid "Use vendored dependencies included with the package source."
-msgstr ""
+msgstr "Usar as dependências fornecidas no código fonte do pacote."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4299
@@ -7264,6 +7381,8 @@ msgid ""
 "Fetch the versions of deps specified by upstream (in the case of go.mod, "
 "vendor.json or similar)."
 msgstr ""
+"Baixar as versões das dependências especificadas pelo upstream (no caso do "
+"go.mod, vendor.json ou similar)."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4300
@@ -7272,12 +7391,15 @@ msgid ""
 "fetch versions of dependencies available at the time of upstream development/"
 "release."
 msgstr ""
+"Como um último recurso (as dependências não estão incluídas e nem as versões "
+"foram especificadas exatamente) busque as versões das dependências "
+"disponíveis no momento do desenvolvimento/release."
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4303
 #, no-wrap
 msgid "Haskell Libraries"
-msgstr ""
+msgstr "Bibliotecas Haskell"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4306
@@ -7286,12 +7408,15 @@ msgid ""
 "libraries. Haskell ports must link statically to their dependencies and "
 "fetch all distribution files on fetch stage."
 msgstr ""
+"Assim como na linguagem Go, Ports não devem empacotar ou instalar as "
+"bibliotecas Haskell. Os ports Haskell devem vincular estaticamente a suas "
+"dependências e buscar todos os arquivos de distribuição no estágio fetch."
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4308
 #, no-wrap
 msgid "Shell Completion Files"
-msgstr ""
+msgstr "Arquivos Shell Completion"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4311
@@ -7302,6 +7427,11 @@ msgid ""
 "command. Ports sometimes ship with their own completion files, or porters "
 "may have created them themselves."
 msgstr ""
+"Muitos shells modernos (incluindo bash, tcsh e zsh) suportam parâmetro e/ou "
+"opção de tab-completion. Esse suporte geralmente vem de arquivos completion, "
+"os quais contêm as definições de como as tabs completion funcionarão para um "
+"determinado comando. As vezes ports vem com seus arquivos completion, ou os "
+"mantenedores de ports podem ter criado um eles mesmos."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4313
@@ -7315,7 +7445,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4314
 #, no-wrap
 msgid "Shell completion file paths"
-msgstr ""
+msgstr "Caminhos dos arquivos shell completion"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4322
@@ -7331,4 +7461,4 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4324
 msgid "Do not register any dependencies on the shells themselves."
-msgstr ""
+msgstr "Não registre nenhuma dependência nos próprios shells."
