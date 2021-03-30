@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:55-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-03-30 23:19+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookdisks_index/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/disks/_index.adoc:1
@@ -31,13 +34,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:9
 #, no-wrap
 msgid "Storage"
-msgstr ""
+msgstr "Armazenamento"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/disks/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "Sinopse"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:48
@@ -50,17 +53,17 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:50
 msgid "After reading this chapter, you will know:"
-msgstr ""
+msgstr "Depois de ler este capítulo, você saberá:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:52
 msgid "How to add additional hard disks to a FreeBSD system."
-msgstr ""
+msgstr "Como adicionar discos rígidos adicionais a um sistema FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:53
 msgid "How to grow the size of a disk's partition on FreeBSD."
-msgstr ""
+msgstr "Como aumentar o tamanho da partição de um disco no FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:54
@@ -75,37 +78,38 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:56
 msgid "How to use the backup programs available under FreeBSD."
-msgstr ""
+msgstr "Como usar os programas de backup disponíveis no FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:57
 msgid "How to set up memory disks."
-msgstr ""
+msgstr "Como configurar discos de memória."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:58
 msgid "What file system snapshots are and how to use them efficiently."
 msgstr ""
+"O que são snapshots de sistema de arquivos e como usá-los com eficiência."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:59
 msgid "How to use quotas to limit disk space usage."
-msgstr ""
+msgstr "Como usar cotas para limitar o uso de espaço em disco."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:60
 msgid "How to encrypt disks and swap to secure them against attackers."
-msgstr ""
+msgstr "Como criptografar discos e swap para protegê-los contra invasores."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:61
 msgid "How to configure a highly available storage network."
-msgstr ""
+msgstr "Como configurar uma rede de armazenamento altamente disponível."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:63
 msgid "Before reading this chapter, you should:"
-msgstr ""
+msgstr "Antes de ler este capítulo, você deve:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:65
@@ -118,7 +122,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:67
 #, no-wrap
 msgid "Adding Disks"
-msgstr ""
+msgstr "Adicionando Discos"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:70
@@ -158,6 +162,10 @@ msgid ""
 "improve performance on newer disks with larger hardware block sizes, the "
 "partition is aligned to one megabyte boundaries:"
 msgstr ""
+"O esquema de partição é criado e, em seguida, uma única partição é "
+"adicionada. Para melhorar o desempenho em discos mais recentes com tamanhos "
+"maiores de blocos de hardware, a partição está alinhada a divisões de um "
+"megabyte:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:86
@@ -193,7 +201,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:102
 msgid "A file system is created in the new partition on the new disk:"
-msgstr ""
+msgstr "Um sistema de arquivos é criado em uma nova partição no novo disco:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:106
@@ -230,7 +238,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:123
 msgid "The new disk can be mounted manually, without restarting the system:"
-msgstr ""
+msgstr "O novo disco pode ser montado manualmente, sem reiniciar o sistema:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:127
@@ -242,7 +250,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:130
 #, no-wrap
 msgid "Resizing and Growing Disks"
-msgstr ""
+msgstr "Redimensionando e Ampliando Discos"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:133
@@ -266,7 +274,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:137
 msgid "List the partitions on the disk to see the current configuration:"
-msgstr ""
+msgstr "Liste as partições no disco para ver a configuração atual:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:146
@@ -303,6 +311,8 @@ msgid ""
 "Now the additional space on the disk is available for use by a new "
 "partition, or an existing partition can be expanded:"
 msgstr ""
+"Agora, o espaço adicional no disco está disponível para uso por uma nova "
+"partição ou uma partição existente pode ser expandida:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:170
@@ -325,11 +335,16 @@ msgid ""
 "so it can safely be unmounted, deleted, and then recreate the third "
 "partition after resizing the second partition."
 msgstr ""
+"As partições só podem ser redimensionadas para um espaço livre contíguo. "
+"Aqui, a última partição no disco é a partição swap, mas a segunda partição é "
+"aquela que precisa ser redimensionada. As partições de Swap contêm apenas "
+"dados temporários, portanto, podem ser desmontadas, excluídas e, em seguida, "
+"recriadas a terceira partição após redimensionar a segunda partição."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:175
 msgid "Disable the swap partition:"
-msgstr ""
+msgstr "Desative a partição de swap:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:179
@@ -454,6 +469,8 @@ msgid ""
 "Both the partition and the file system on it have now been resized to use "
 "the newly-available disk space."
 msgstr ""
+"Tanto a partição quanto o sistema de arquivos foram redimensionados para "
+"usar o espaço em disco recém-disponível."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/disks/_index.adoc:256
@@ -522,7 +539,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:285
 #, no-wrap
 msgid "Device Configuration"
-msgstr ""
+msgstr "Configuração de Dispositivo"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:288
@@ -731,6 +748,8 @@ msgid ""
 "After device removal, the system message buffer will show messages similar "
 "to the following:"
 msgstr ""
+"Após a remoção do dispositivo, o buffer de mensagens do sistema mostrará "
+"mensagens semelhantes às seguintes:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:400
@@ -746,7 +765,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:402
 #, no-wrap
 msgid "Automounting Removable Media"
-msgstr ""
+msgstr "Montando Automaticamente Uma Mídia Removível"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:405
@@ -813,7 +832,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:440
 msgid "Start the services immediately with:"
-msgstr ""
+msgstr "Inicie os serviços imediatamente com:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:447
@@ -840,6 +859,9 @@ msgid ""
 "after a period of inactivity. Automounted drives can also be unmounted "
 "manually:"
 msgstr ""
+"O sistema de arquivos é montado de forma transparente no primeiro acesso e "
+"desmontado após um período de inatividade. Unidades montadas automaticamente "
+"também podem ser desmontadas manualmente:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:456
@@ -885,7 +907,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:468
 #, no-wrap
 msgid "Supported Devices"
-msgstr ""
+msgstr "Dispositivos Suportados"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:471
@@ -978,6 +1000,8 @@ msgid ""
 "This will require a reboot of the system as this driver can only be loaded "
 "at boot time."
 msgstr ""
+"Isso exigirá uma reinicialização do sistema, pois esse driver só pode ser "
+"carregado no momento da inicialização."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:528
@@ -1076,6 +1100,8 @@ msgid ""
 "Alternately, run the following command to get the device address of the "
 "burner:"
 msgstr ""
+"Como alternativa, execute o seguinte comando para obter o endereço do "
+"dispositivo do gravador:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:586
@@ -1475,7 +1501,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:738
 #, no-wrap
 msgid "Configuration"
-msgstr ""
+msgstr "Configuração"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:741
@@ -1602,7 +1628,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:787
 msgid "To create this type of ISO file:"
-msgstr ""
+msgstr "Para criar este tipo de arquivo ISO:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:791
@@ -1613,7 +1639,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:794
 msgid "To burn files directly to a disk:"
-msgstr ""
+msgstr "Para gravar arquivos diretamente em um disco:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:798
@@ -1757,7 +1783,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:853
 msgid "To blank the media, use:"
-msgstr ""
+msgstr "Para apagar a mídia, use:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:857
@@ -1868,13 +1894,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:905
 msgid "To change back to sequential format, use:"
-msgstr ""
+msgstr "Para voltar ao formato sequencial, use:"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/disks/_index.adoc:911
 #, no-wrap
 msgid "Multi-Session"
-msgstr ""
+msgstr "Multi-Sessão"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:914
@@ -1909,12 +1935,16 @@ msgid ""
 "to optimize media space. The number of sessions is limited to 154 for a DVD"
 "+R, about 2000 for a DVD-R, and 127 for a DVD+R Double Layer."
 msgstr ""
+"Como algum espaço na mídia é usado entre cada sessão para marcar o final e o "
+"início das sessões, deve-se adicionar sessões com uma grande quantidade de "
+"dados para otimizar o espaço da mídia. O número de sessões é limitado a 154 "
+"para um DVD+R, cerca de 2000 para um DVD-R e 127 para um DVD+R Double Layer."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/disks/_index.adoc:929
 #, no-wrap
 msgid "For More Information"
-msgstr ""
+msgstr "Para Maiores Informações"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:932
@@ -1998,12 +2028,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:971
 #, no-wrap
 msgid "Creating and Using Floppy Disks"
-msgstr ""
+msgstr "Criando e Usando Disquetes"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:974
 msgid "This section explains how to format a 3.5 inch floppy disk in FreeBSD."
 msgstr ""
+"Esta seção explica como formatar um disquete de 3.5 polegadas no FreeBSD."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:978
@@ -2027,6 +2058,8 @@ msgid ""
 "To format the floppy, insert a new 3.5 inch floppy disk into the first "
 "floppy drive and issue:"
 msgstr ""
+"Para formatar o disquete, insira um novo disquete de 3.5 polegadas na "
+"primeira unidade de disquete e digite:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:986
@@ -2060,11 +2093,14 @@ msgid ""
 "floppy's file system can be either UFS or FAT, where FAT is generally a "
 "better choice for floppies."
 msgstr ""
+"O disquete agora está pronto para ser formatado em alto nível com um sistema "
+"de arquivos. O sistema de arquivos do disquete pode ser UFS ou FAT, onde o "
+"FAT geralmente é uma opção melhor para disquetes."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1000
 msgid "To format the floppy with FAT, issue:"
-msgstr ""
+msgstr "Para formatar o disquete com o FAT, digite:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1004
@@ -2226,7 +2262,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1096
 #, no-wrap
 msgid "Backup Basics"
-msgstr ""
+msgstr "Noções Básicas de Backup"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1099
@@ -2235,6 +2271,10 @@ msgid ""
 "recover from disk failure, accidental file deletion, random file corruption, "
 "or complete machine destruction, including destruction of on-site backups."
 msgstr ""
+"A implementação de um plano de backup é essencial para que seja possível "
+"recuperar de uma falha de disco, exclusão acidental de arquivos, corrupção "
+"aleatória de arquivos ou destruição completa da máquina, incluindo a "
+"destruição de backups no local."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1101
@@ -2243,6 +2283,10 @@ msgid ""
 "data, the granularity needed for file restores, and the amount of acceptable "
 "downtime. Some possible backup techniques include:"
 msgstr ""
+"O tipo e a programação do backup variam, dependendo da importância dos "
+"dados, da granularidade necessária para as restaurações de arquivos e da "
+"quantidade de tempo de inatividade aceitável. Algumas técnicas de backup "
+"possíveis incluem:"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1103
@@ -2251,6 +2295,10 @@ msgid ""
 "provides protection against all of the problems listed above, but is slow "
 "and inconvenient to restore from, especially for non-privileged users."
 msgstr ""
+"Arquivos de todo o sistema, protegidos por meio de backups em mídias "
+"permanentes, armazenados off-site. Isso fornece proteção contra todos os "
+"problemas listados acima, mas é lento e inconveniente para restaurar, "
+"especialmente para usuários sem privilégios."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1104
@@ -2258,6 +2306,8 @@ msgid ""
 "File system snapshots, which are useful for restoring deleted files or "
 "previous versions of files."
 msgstr ""
+"Snapshots do sistema de arquivos, que são úteis para restaurar arquivos "
+"excluídos ou versões anteriores de arquivos."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1105
@@ -2282,6 +2332,11 @@ msgid ""
 "could make a manual backup of individual directories or files before making "
 "file edits or deletions."
 msgstr ""
+"Normalmente, uma mistura de técnicas de backup é usada. Por exemplo, pode-se "
+"criar um agendamento semanal para automatizar um backup completo do sistema "
+"e armazená-lo off-site e para suplementá-lo, snapshots do ZFS tirados a cada "
+"hora. Além disso, é possível fazer um backup manual de diretórios ou "
+"arquivos individuais antes de fazer edições ou exclusões de arquivos."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1110
@@ -2289,12 +2344,14 @@ msgid ""
 "This section describes some of the utilities which can be used to create and "
 "manage backups on a FreeBSD system."
 msgstr ""
+"Esta seção descreve alguns dos utilitários que podem ser usados para criar e "
+"gerenciar backups em um sistema FreeBSD."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/disks/_index.adoc:1111
 #, no-wrap
 msgid "File System Backups"
-msgstr ""
+msgstr "Backups do Sistema de Arquivos"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1114
@@ -2392,7 +2449,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1149
 #, no-wrap
 msgid "Directory Backups"
-msgstr ""
+msgstr "Backups de Diretório"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1152
@@ -2400,6 +2457,8 @@ msgid ""
 "Several built-in utilities are available for backing up and restoring "
 "specified files and directories as needed."
 msgstr ""
+"Vários utilitários integrados estão disponíveis para backup e restauração de "
+"arquivos e diretórios especificados, conforme necessário."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1154
@@ -2521,7 +2580,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1206
 #, no-wrap
 msgid "Using Data Tapes for Backups"
-msgstr ""
+msgstr "Usando Fitas de Dados para Backups"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1209
@@ -2619,7 +2678,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1250
 #, no-wrap
 msgid "Third-Party Backup Utilities"
-msgstr ""
+msgstr "Utilitários de Backup de Terceiros"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1253
@@ -2630,6 +2689,12 @@ msgid ""
 "server based and can be used to automate the backups of a single system or "
 "all of the computers in a network."
 msgstr ""
+"A Coleção de Ports do FreeBSD fornece muitos utilitários de terceiros que "
+"podem ser usados para agendar a criação de backups, simplificar o backup em "
+"fita e tornar os backups mais fáceis e convenientes. Muitos desses "
+"aplicativos são baseados em cliente/servidor e podem ser usados para "
+"automatizar os backups de um único sistema ou de todos os computadores em "
+"uma rede."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1255
@@ -2640,7 +2705,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1256
 #, no-wrap
 msgid "Emergency Recovery"
-msgstr ""
+msgstr "Recuperação de Emergência"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1259
@@ -2648,11 +2713,13 @@ msgid ""
 "In addition to regular backups, it is recommended to perform the following "
 "steps as part of an emergency preparedness plan."
 msgstr ""
+"Além dos backups regulares, é recomendável executar as etapas a seguir como "
+"parte de um plano de preparação para emergências."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1261
 msgid "Create a print copy of the output of the following commands:"
-msgstr ""
+msgstr "Crie uma cópia impressa da saída dos seguintes comandos:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1263
@@ -2698,6 +2765,10 @@ msgid ""
 "notes may prevent the inadvertent destruction of the backups while under the "
 "stress of performing an emergency recovery."
 msgstr ""
+"Em seguida, teste o shell de recuperação e os backups. Faça anotações do "
+"procedimento. Armazene estas notas com a mídia, as impressões e os backups. "
+"Estas notas podem impedir a destruição inadvertida dos backups, enquanto sob "
+"o estresse de realizar uma recuperação de emergência."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1276
@@ -2706,12 +2777,15 @@ msgid ""
 "location which is physically separated from the computers and disk drives by "
 "a significant distance."
 msgstr ""
+"Para uma medida adicional de segurança, armazene o backup mais recente em um "
+"local remoto, fisicamente separado dos computadores e das unidades de disco "
+"por uma distância significativa."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/disks/_index.adoc:1278
 #, no-wrap
 msgid "Memory Disks"
-msgstr ""
+msgstr "Discos de Memória"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1281
@@ -2740,7 +2814,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1290
 #, no-wrap
 msgid "Attaching and Detaching Existing Images"
-msgstr ""
+msgstr "Anexando e Desanexando Imagens Existentes"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1293
@@ -2799,7 +2873,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1313
 #, no-wrap
 msgid "Creating a File- or Memory-Backed Memory Disk"
-msgstr ""
+msgstr "Criando um Disco Virtual Baseado em Arquivo ou Memória"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1316
@@ -2919,7 +2993,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1377
 #, no-wrap
 msgid "File System Snapshots"
-msgstr ""
+msgstr "Snapshots de Sistemas de Arquivos"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1380
@@ -2991,7 +3065,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1407
 msgid "Once a snapshot has been created, it has several uses:"
-msgstr ""
+msgstr "Depois que um snapshot foi criado, ele tem vários usos:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1409
@@ -3061,7 +3135,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1431
 #, no-wrap
 msgid "Disk Quotas"
-msgstr ""
+msgstr "Cotas de Disco"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1434
@@ -3071,6 +3145,10 @@ msgid ""
 "This prevents one user or group of users from consuming all of the available "
 "disk space."
 msgstr ""
+"As cotas de disco podem ser usadas para limitar a quantidade de espaço em "
+"disco ou o número de arquivos que um usuário ou membros de um grupo podem "
+"alocar em uma base por sistema de arquivos. Isso impede que um usuário ou "
+"grupo de usuários consuma todo o espaço em disco disponível."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1436
@@ -3084,12 +3162,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1437
 #, no-wrap
 msgid "Enabling Disk Quotas"
-msgstr ""
+msgstr "Habilitando Cotas de Disco"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1440
 msgid "To determine if the FreeBSD kernel provides support for disk quotas:"
 msgstr ""
+"Para determinar se o kernel do FreeBSD fornece suporte para cotas de disco:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1445
@@ -3198,12 +3277,12 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1488
 #, no-wrap
 msgid "Setting Quota Limits"
-msgstr ""
+msgstr "Definindo Limites de Cota"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1491
 msgid "To verify that quotas are enabled, run:"
-msgstr ""
+msgstr "Para verificar se as cotas estão ativadas, execute:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1495
@@ -3217,6 +3296,8 @@ msgid ""
 "There should be a one line summary of disk usage and current quota limits "
 "for each file system that quotas are enabled on."
 msgstr ""
+"Deve haver um resumo de uma linha sobre o uso de disco e limites de cota "
+"atuais para cada sistema de arquivos em que as cotas estão ativadas."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1500
@@ -3232,6 +3313,12 @@ msgid ""
 "files (inode quotas), or a combination of both. Each limit is further broken "
 "down into two categories: hard and soft limits."
 msgstr ""
+"Várias opções estão disponíveis para impor limites à quantidade de espaço em "
+"disco que um usuário ou grupo pode alocar e quantos arquivos eles podem "
+"criar. As alocações podem ser limitadas com base no espaço em disco (cotas "
+"de bloco), no número de arquivos (cotas de inode) ou em uma combinação de "
+"ambos. Cada limite é subdividido em duas categorias: limites rígidos e "
+"flexíveis."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1504
@@ -3242,6 +3329,12 @@ msgid ""
 "currently using 490 kbytes, the user can only allocate an additional 10 "
 "kbytes. Attempting to allocate an additional 11 kbytes will fail."
 msgstr ""
+"Um limite rígido não pode ser excedido. Quando um usuário atinge um limite "
+"rígido, nenhuma outra alocação pode ser feita nesse sistema de arquivos por "
+"esse usuário. Por exemplo, se o usuário tiver um limite rígido de 500 kbytes "
+"em um sistema de arquivos e estiver usando atualmente 490 kbytes, o usuário "
+"poderá alocar apenas 10 kbytes adicionais. A tentativa de alocar 11 kbytes "
+"adicionais falhará."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1506
@@ -3252,6 +3345,12 @@ msgid ""
 "further allocations are allowed. When the user drops back below the soft "
 "limit, the grace period is reset."
 msgstr ""
+"Os limites flexíveis podem ser excedidos por um período de tempo limitado, "
+"conhecido como período de tolerância, que é uma semana por padrão. Se um "
+"usuário permanecer acima do limite por mais tempo do que o período de "
+"carência, o limite flexível se tornará um limite rígido e nenhuma outra "
+"alocação será permitida. Quando o usuário cai abaixo do limite flexível, o "
+"período de carência é zerado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1508
@@ -3292,7 +3391,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1527
 msgid "The new quota limits take effect upon exiting the editor."
-msgstr ""
+msgstr "Os novos limites de cotas entram em vigor ao sair do editor."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1529
@@ -3319,7 +3418,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1537
 #, no-wrap
 msgid "Checking Quota Limits and Disk Usage"
-msgstr ""
+msgstr "Verificando Limites de Cota e Uso de Disco"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1540
@@ -3363,7 +3462,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1553
 #, no-wrap
 msgid "Quotas over NFS"
-msgstr ""
+msgstr "Quotas sobre o NFS"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1556
@@ -3401,7 +3500,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1572
 #, no-wrap
 msgid "Encrypting Disk Partitions"
-msgstr ""
+msgstr "Criptografando Partições de Disco"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1575
@@ -3481,6 +3580,8 @@ msgstr ""
 msgid ""
 "If using a custom kernel configuration file, ensure it contains this line:"
 msgstr ""
+"Se estiver usando um arquivo de configuração de kernel personalizado, "
+"certifique-se de que ele contenha esta linha:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1596
@@ -3504,7 +3605,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1602
 msgid "Add the New Hard Drive"
-msgstr ""
+msgstr "Adicione o Novo Disco Rígido"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1604
@@ -3607,7 +3708,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1650
 msgid "Attach the Encrypted Partition to the Kernel"
-msgstr ""
+msgstr "Anexando a Partição Criptografada ao Kernel"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1654
@@ -3636,7 +3737,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1667
 msgid "Create a File System on the Encrypted Device"
-msgstr ""
+msgstr "Criando um Sistema de Arquivos no Dispositivo Criptografado"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1669
@@ -3656,7 +3757,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1676
 msgid "Mount the Encrypted Partition"
-msgstr ""
+msgstr "Montando a Partição Criptografada"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1678
@@ -3674,7 +3775,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1686
 msgid "Verify That the Encrypted File System is Available"
-msgstr ""
+msgstr "Verificar se o sistema de arquivos criptografados está disponível"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1688
@@ -3771,16 +3872,19 @@ msgid ""
 "Allows the root partition to be encrypted. The passphrase used to access the "
 "encrypted root partition will be requested during system boot."
 msgstr ""
+"Permite que a partição raiz seja criptografada. A frase secreta usada para "
+"acessar a partição root criptografada será solicitada durante a "
+"inicialização do sistema."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1731
 msgid "Allows the use of two independent keys."
-msgstr ""
+msgstr "Permite o uso de duas chaves independentes."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1732
 msgid "It is fast as it performs simple sector-to-sector encryption."
-msgstr ""
+msgstr "É rápido, pois executa criptografia simples de setor a setor."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1733
@@ -3789,6 +3893,9 @@ msgid ""
 "is still possible to get access to the data by restoring keys from the "
 "backup."
 msgstr ""
+"Permite backup e restauração de chaves mestras. Se um usuário destruir suas "
+"chaves, ainda é possível obter acesso aos dados restaurando as chaves do "
+"backup."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1734
@@ -3796,6 +3903,8 @@ msgid ""
 "Allows a disk to attach with a random, one-time key which is useful for swap "
 "partitions and temporary file systems."
 msgstr ""
+"Permite que um disco seja anexado com uma chave única aleatória que é útil "
+"para partições swap e sistemas de arquivos temporários."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1736
@@ -3868,7 +3977,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1766
 msgid "Generate the Master Key"
-msgstr ""
+msgstr "Gerando a Chave Mestra"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1768
@@ -3916,7 +4025,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1787
 msgid "Attach the Provider with the Generated Key"
-msgstr ""
+msgstr "Anexando o Provedor com a Chave Gerada"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1789
@@ -3949,7 +4058,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1805
 msgid "Create the New File System"
-msgstr ""
+msgstr "Criando o Novo Sistema de Arquivos"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1807
@@ -4039,7 +4148,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1848
 #, no-wrap
 msgid "Encrypting Swap"
-msgstr ""
+msgstr "Criptografando Swap"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1851
@@ -4052,6 +4161,13 @@ msgid ""
 "to the disk unencrypted. Encrypting swap space can be a solution for this "
 "scenario."
 msgstr ""
+"Como a criptografia de partições de disco, a criptografia do espaço swap é "
+"usada para proteger informações confidenciais. Considere um aplicativo que "
+"lida com senhas. Contanto que essas senhas permaneçam na memória física, "
+"elas não serão gravadas no disco e serão apagadas após a reinicialização. No "
+"entanto, se o FreeBSD iniciar a troca de páginas de memória para liberar "
+"espaço, as senhas podem ser gravadas no disco não criptografadas. O espaço "
+"de troca de criptografia pode ser uma solução para esse cenário."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1853
@@ -4065,7 +4181,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1854
 #, no-wrap
 msgid "Configuring Encrypted Swap"
-msgstr ""
+msgstr "Configurando Swap Criptografada"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1857
@@ -4074,6 +4190,9 @@ msgid ""
 "sensitive data before continuing. To overwrite the current swap partition "
 "with random garbage, execute the following command:"
 msgstr ""
+"As partições de swap não são criptografadas por padrão e devem ser limpas de "
+"quaisquer dados confidenciais antes de continuar. Para sobrescrever a "
+"partição swap atual com lixo aleatório, execute o seguinte comando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1861
@@ -4124,7 +4243,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1881
 #, no-wrap
 msgid "aalgo"
-msgstr ""
+msgstr "aalgo"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1883
@@ -4138,7 +4257,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1884
 #, no-wrap
 msgid "ealgo"
-msgstr ""
+msgstr "ealgo"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1886
@@ -4151,7 +4270,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1887
 #, no-wrap
 msgid "keylen"
-msgstr ""
+msgstr "keylen"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1889
@@ -4164,7 +4283,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1890
 #, no-wrap
 msgid "sectorsize"
-msgstr ""
+msgstr "sectorsize"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1892
@@ -4173,6 +4292,9 @@ msgid ""
 "sector sizes increase performance at the cost of higher storage overhead. "
 "The recommended size is 4096 bytes."
 msgstr ""
+"O tamanho em que o blocos de dados é dividido antes de ser criptografado. "
+"Tamanhos de setor maiores aumentam o desempenho ao custo de maior sobrecarga "
+"de armazenamento. O tamanho recomendado é de 4096 bytes."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1894
@@ -4180,6 +4302,9 @@ msgid ""
 "This example configures an encrypted swap partition using the Blowfish "
 "algorithm with a key length of 128 bits and a sectorsize of 4 kilobytes:"
 msgstr ""
+"Este exemplo configura uma partição swap criptografada usando o algoritmo "
+"Blowfish com um comprimento de chave de 128 bits e um setor de tamanho de 4 "
+"kilobytes:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1899
@@ -4193,7 +4318,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1901
 #, no-wrap
 msgid "Encrypted Swap Verification"
-msgstr ""
+msgstr "Verificação de Swap Criptografada"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1904
@@ -4265,6 +4390,8 @@ msgstr ""
 msgid ""
 "File system agnostic as it works with any file system supported by FreeBSD."
 msgstr ""
+"Agnóstico a sistema de arquivos, pois funciona com qualquer sistema de "
+"arquivos suportado pelo FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1933
@@ -4272,12 +4399,16 @@ msgid ""
 "Efficient and quick resynchronization as only the blocks that were modified "
 "during the downtime of a node are synchronized."
 msgstr ""
+"Ressincronização eficiente e rápida, pois somente os blocos que foram "
+"modificados durante o tempo de inatividade de um nó são sincronizados."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1934
 msgid ""
 "Can be used in an already deployed environment to add additional redundancy."
 msgstr ""
+"Pode ser usado em um ambiente já implantado para adicionar redundância "
+"adicional."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1935
@@ -4289,7 +4420,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1937
 msgid "After reading this section, you will know:"
-msgstr ""
+msgstr "Depois de ler esta seção, você saberá:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1939
@@ -4309,7 +4440,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1943
 msgid "Before reading this section, you should:"
-msgstr ""
+msgstr "Antes de ler esta seção, você deve:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1945
@@ -4344,7 +4475,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1950
 #, no-wrap
 msgid "HAST Operation"
-msgstr ""
+msgstr "Operação HAST"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1953
@@ -4439,7 +4570,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1970
 #, no-wrap
 msgid "HAST Configuration"
-msgstr ""
+msgstr "Configuração do HAST"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1973
@@ -4635,7 +4766,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:2063
 #, no-wrap
 msgid "Failover Configuration"
-msgstr ""
+msgstr "Configuração de Failover"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:2066
@@ -4645,6 +4776,10 @@ msgid ""
 "secondary node is there to take over seamlessly, check and mount the file "
 "system, and continue to work without missing a single bit of data."
 msgstr ""
+"O objetivo deste exemplo é construir um sistema de armazenamento robusto que "
+"seja resistente à falha de qualquer nó. Se o nó primário falhar, o nó "
+"secundário estará lá para assumir o controle, verificar e montar o sistema "
+"de arquivos e continuar a trabalhar sem perder um único bit de dados."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:2068
@@ -4743,7 +4878,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:2107
 msgid "Here is an example of an automated failover script:"
-msgstr ""
+msgstr "Aqui está um exemplo de um script de failover automatizado:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:2111
@@ -4909,6 +5044,8 @@ msgstr ""
 msgid ""
 "In a nutshell, the script takes these actions when a node becomes master:"
 msgstr ""
+"Em poucas palavras, o script executa essas ações quando um nó se torna "
+"mestre:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:2197
@@ -4923,12 +5060,12 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:2199
 msgid "Mounts the pool."
-msgstr ""
+msgstr "Monta o pool."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:2201
 msgid "When a node becomes secondary:"
-msgstr ""
+msgstr "Quando um nó se torna secundário:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:2203
@@ -4947,6 +5084,10 @@ msgid ""
 "not handle all the possible scenarios and can be extended or altered in any "
 "way, for example, to start or stop required services."
 msgstr ""
+"Este é apenas um script de exemplo que serve como prova de conceito. Ele não "
+"manipula todos os cenários possíveis e pode ser estendido ou alterado de "
+"qualquer forma, por exemplo, para iniciar ou interromper os serviços "
+"necessários."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:2215
@@ -4967,7 +5108,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:2219
 #, no-wrap
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Solução de problemas"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:2222
@@ -4991,7 +5132,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:2226
 #, no-wrap
 msgid "Recovering from the Split-brain Condition"
-msgstr ""
+msgstr "Recuperando-se da Condição de Split-brain"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:2229
