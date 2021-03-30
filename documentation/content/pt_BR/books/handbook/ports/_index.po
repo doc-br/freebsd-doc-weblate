@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-03-30 23:19+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookports_index/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/ports/_index.adoc:1
@@ -31,13 +34,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:9
 #, no-wrap
 msgid "Installing Applications: Packages and Ports"
-msgstr ""
+msgstr "Instalando Aplicativos: Pacotes e Ports"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/ports/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "Sinopse"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:48
@@ -49,21 +52,29 @@ msgid ""
 "binaries. Either method may be used to install software from local media or "
 "from the network."
 msgstr ""
+"O FreeBSD tem uma grande coleção de ferramentas dentro do sistema base. Além "
+"disso, o FreeBSD fornece duas ferramentas complementares para a instalação "
+"de software de terceiros: o a Coleção de Ports do FreeBSD, para instalação a "
+"partir do código-fonte, e pacotes, para instalação de binários pré-"
+"compilados. Qualquer um dos métodos pode ser usado para instalar um software "
+"de uma mídia local ou da rede."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:50
 msgid "After reading this chapter, you will know:"
-msgstr ""
+msgstr "Depois de ler este capítulo, você saberá:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:52
 msgid "The difference between binary packages and ports."
-msgstr ""
+msgstr "A diferença entre pacotes binários e ports."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:53
 msgid "How to find third-party software that has been ported to FreeBSD."
 msgstr ""
+"Como encontrar softwares de terceiros que tenham sido portados para o "
+"FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:54
@@ -75,6 +86,8 @@ msgstr ""
 msgid ""
 "How to build third-party software from source using the Ports Collection."
 msgstr ""
+"Como compilar software de terceiros a partir do código-fonte usando a "
+"coleção de ports."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:56
@@ -82,17 +95,19 @@ msgid ""
 "How to find the files installed with the application for post-installation "
 "configuration."
 msgstr ""
+"Como encontrar os arquivos instalados do aplicativo para configuração pós-"
+"instalação."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:57
 msgid "What to do if a software installation fails."
-msgstr ""
+msgstr "O que fazer se a instalação do software falhar."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/ports/_index.adoc:59
 #, no-wrap
 msgid "Overview of Software Installation"
-msgstr ""
+msgstr "Visão geral sobre a Instalação de Software"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:62
@@ -107,6 +122,8 @@ msgid ""
 "Find and download the software, which might be distributed in source code "
 "format or as a binary."
 msgstr ""
+"Encontre e baixe o software, que pode ser distribuído no formato de código-"
+"fonte ou como um binário."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:66
@@ -134,7 +151,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:69
 msgid "Test and install the software."
-msgstr ""
+msgstr "Teste e instale o software."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:71
@@ -151,6 +168,8 @@ msgid ""
 "If the software has not already been adapted and tested on FreeBSD, the "
 "source code might need editing in order for it to install and run properly."
 msgstr ""
+"Se o software ainda não foi adaptado e testado no FreeBSD, o código-fonte "
+"pode precisar ser editado para que seja instalado e executado corretamente."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:75
@@ -165,6 +184,8 @@ msgstr ""
 msgid ""
 "Packages can be manipulated with the FreeBSD package management commands."
 msgstr ""
+"Pacotes podem ser manipulados com os comandos de gerenciamento de pacotes do "
+"FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:79
@@ -173,6 +194,9 @@ msgid ""
 "used to install an application and a dependent library is not already "
 "installed, the library will automatically be installed first."
 msgstr ""
+"Ambos, pacotes e ports, entendem dependências. Se um pacote ou port for "
+"usado para instalar um aplicativo, e uma biblioteca dependente ainda não "
+"estiver instalada, a biblioteca será instalada automaticamente primeiro."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:81
@@ -189,12 +213,15 @@ msgid ""
 "own strengths. Select the technology that meets your requirements for "
 "installing a particular application."
 msgstr ""
+"Mesmo as duas tecnologias sendo semelhantes, os pacotes e os ports têm seus "
+"próprios pontos fortes. Selecione a tecnologia que melhor atenda aos seus "
+"requisitos para instalar um aplicativo específico."
 
 #. type: Block title
 #: documentation/content/en/books/handbook/ports/_index.adoc:84
 #, no-wrap
 msgid "Package Benefits"
-msgstr ""
+msgstr "Benefícios dos Pacotes"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:86
@@ -202,6 +229,8 @@ msgid ""
 "A compressed package tarball is typically smaller than the compressed "
 "tarball containing the source code for the application."
 msgstr ""
+"Um tarball compactado de um pacote geralmente é menor que o tarball "
+"compactado que contém o código-fonte do aplicativo."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:87
@@ -216,12 +245,14 @@ msgid ""
 "Packages do not require any understanding of the process involved in "
 "compiling software on FreeBSD."
 msgstr ""
+"Pacotes não requerem nenhum entendimento do processo envolvido na compilação "
+"de software no FreeBSD."
 
 #. type: Block title
 #: documentation/content/en/books/handbook/ports/_index.adoc:89
 #, no-wrap
 msgid "Port Benefits"
-msgstr ""
+msgstr "Benefícios dos Ports"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:91
@@ -230,6 +261,9 @@ msgid ""
 "to run on the maximum number of systems. By compiling from the port, one can "
 "change the compilation options."
 msgstr ""
+"Os pacotes são normalmente compilados com opções conservadoras porque eles "
+"precisam ser executados no número máximo de sistemas. Ao compilar a partir "
+"do port, podem-se alterar as opções de compilação."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:92
@@ -257,6 +291,9 @@ msgid ""
 "software must be distributed as source code which must be compiled by the "
 "end-user."
 msgstr ""
+"As condições de licenciamento de alguns softwares proíbem sua distribuição "
+"em binário. Tais softwares devem ser distribuídos como código-fonte o qual "
+"deve ser compilado pelo usuário final."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:96
@@ -264,11 +301,13 @@ msgid ""
 "Some people do not trust binary distributions or prefer to read through "
 "source code in order to look for potential problems."
 msgstr ""
+"Algumas pessoas não confiam em distribuições binárias ou preferem ler o "
+"código-fonte para procurar possíveis problemas."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:97
 msgid "Source code is needed in order to apply custom patches."
-msgstr ""
+msgstr "O código-fonte é necessário para aplicar patches personalizados."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:99
@@ -291,12 +330,14 @@ msgid ""
 "The remainder of this chapter explains how to use packages and ports to "
 "install and manage third-party software on FreeBSD."
 msgstr ""
+"O restante deste capítulo explica como usar pacotes e ports para instalar e "
+"gerenciar software de terceiros no FreeBSD."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/ports/_index.adoc:109
 #, no-wrap
 msgid "Finding Software"
-msgstr ""
+msgstr "Encontrando Software"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:112
@@ -304,6 +345,8 @@ msgid ""
 "FreeBSD's list of available applications is growing all the time. There are "
 "a number of ways to find software to install:"
 msgstr ""
+"A lista de aplicativos disponíveis do FreeBSD está crescendo o tempo todo. "
+"Existem várias maneiras de encontrar softwares para instalar:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:114
@@ -336,7 +379,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:117
 msgid "To search the binary package repository for an application:"
-msgstr ""
+msgstr "Para pesquisar o repositório de pacotes binários por um aplicativo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:132
@@ -566,7 +609,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:230
 msgid "To bootstrap the system, run:"
-msgstr ""
+msgstr "Para inicializar o sistema, execute:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:234
@@ -580,11 +623,13 @@ msgid ""
 "You must have a working Internet connection for the bootstrap process to "
 "succeed."
 msgstr ""
+"Você deve ter uma conexão com a Internet para que o processo de "
+"inicialização seja bem-sucedido."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:239
 msgid "Otherwise, to install the port, run:"
-msgstr ""
+msgstr "Caso contrário, para instalar o port, execute:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:245
@@ -617,6 +662,8 @@ msgid ""
 "This step is not required for new installations that do not yet have any "
 "third-party software installed."
 msgstr ""
+"Esta etapa não é necessária para novas instalações que ainda não possuem "
+"nenhum software de terceiros instalado."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:262
@@ -701,7 +748,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:297
 #, no-wrap
 msgid "Quarterly and Latest Ports Branches"
-msgstr ""
+msgstr "Branches Ports Trimestrais e Mais Recentes"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:300
@@ -721,7 +768,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:302
 msgid "To switch from quarterly to latest run the following commands:"
-msgstr ""
+msgstr "Para alternar de trimestral para latest execute os seguintes comandos:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:307
@@ -741,7 +788,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:312
 msgid "The result should be similar to the following:"
-msgstr ""
+msgstr "O resultado deve ser semelhante ao seguinte:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:322
@@ -762,6 +809,8 @@ msgid ""
 "And finally run this command to update from the new (latest) repository "
 "metadata."
 msgstr ""
+"E finalmente rode este comando para atualizar do novo (ultimo) meta dado do "
+"repositório."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:329
@@ -773,7 +822,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:332
 #, no-wrap
 msgid "Obtaining Information About Installed Packages"
-msgstr ""
+msgstr "Obtendo informações sobre os pacotes instalados"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:335
@@ -800,7 +849,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:345
 #, no-wrap
 msgid "Installing and Removing Packages"
-msgstr ""
+msgstr "Instalando e removendo pacotes"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:348
@@ -883,6 +932,8 @@ msgid ""
 "The new package and any additional packages that were installed as "
 "dependencies can be seen in the installed packages list:"
 msgstr ""
+"O novo pacote e quaisquer pacotes adicionais que foram instalados como "
+"dependências podem ser vistos na lista de pacotes instalados:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:389
@@ -933,12 +984,14 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:407
 #, no-wrap
 msgid "Upgrading Installed Packages"
-msgstr ""
+msgstr "Atualizando os Pacotes Instalados"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:410
 msgid "Installed packages can be upgraded to their latest versions by running:"
 msgstr ""
+"Os pacotes instalados podem ser atualizados para as versões mais recentes "
+"executando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:414
@@ -952,12 +1005,14 @@ msgid ""
 "This command will compare the installed versions with those available in the "
 "repository catalogue and upgrade them from the repository."
 msgstr ""
+"Este comando irá comparar as versões instaladas com as disponíveis no "
+"catálogo do repositório e atualizá-las a partir do repositório."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/ports/_index.adoc:419
 #, no-wrap
 msgid "Auditing Installed Packages"
-msgstr ""
+msgstr "Auditando os Pacotes Instalados"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:422
@@ -978,7 +1033,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:429
 #, no-wrap
 msgid "Automatically Removing Unused Packages"
-msgstr ""
+msgstr "Removendo Pacotes Não Utilizados Automaticamente"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:432
@@ -987,6 +1042,9 @@ msgid ""
 "required. Unneeded packages that were installed as dependencies (leaf "
 "packages) can be automatically detected and removed using:"
 msgstr ""
+"Remover um pacote pode deixar dependências que não são mais necessárias. "
+"Pacotes desnecessários que foram instalados como dependências podem ser "
+"automaticamente detectados e removidos usando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:438
@@ -1059,7 +1117,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:468
 msgid "Marking an installed package as automatic can be done using:"
-msgstr ""
+msgstr "Marcar um pacote instalado como automático pode ser feito usando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:472
@@ -1089,7 +1147,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:484
 #, no-wrap
 msgid "Restoring the Package Database"
-msgstr ""
+msgstr "Restaurando o banco de dados de pacotes"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:487
@@ -1125,6 +1183,8 @@ msgid ""
 "If restoring a backup taken by the periodic script, it must be decompressed "
 "prior to being restored."
 msgstr ""
+"Se estiver restaurando um backup feito pelo script periódico, ele deve ser "
+"descompactado antes de ser restaurado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:507
@@ -1143,7 +1203,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:514
 #, no-wrap
 msgid "Removing Stale Packages"
-msgstr ""
+msgstr "Removendo Pacotes Obsoletos"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:517
@@ -1163,7 +1223,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:524
 msgid "The entire cache may be cleared by running:"
-msgstr ""
+msgstr "O cache inteiro pode ser limpo executando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:528
@@ -1175,7 +1235,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:531
 #, no-wrap
 msgid "Modifying Package Metadata"
-msgstr ""
+msgstr "Modificando Metadados de Pacotes"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:534
@@ -1190,7 +1250,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:536
 msgid "To change the package origin for the above example, run:"
-msgstr ""
+msgstr "Para alterar a origem do pacote para o exemplo acima, execute:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:540
@@ -1232,6 +1292,9 @@ msgid ""
 "are dependent on the package with the modified origin. To force a "
 "reinstallation of dependent packages, run:"
 msgstr ""
+"Ao alterar as origens do pacote, é importante reinstalar os pacotes que "
+"dependem do pacote com a origem modificada. Para forçar uma reinstalação dos "
+"pacotes dependentes, execute:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:563
@@ -1243,7 +1306,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:568
 #, no-wrap
 msgid "Using the Ports Collection"
-msgstr ""
+msgstr "Usando a Coleção de Ports"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:571
@@ -1267,6 +1330,9 @@ msgid ""
 "must first be installed. If it was not installed during the installation of "
 "FreeBSD, use one of the following methods to install it:"
 msgstr ""
+"Antes que um aplicativo possa ser compilado usando um port, a Coleção de "
+"Ports deve primeiro ser instalada. Se ela não foi instalada durante a "
+"instalação do FreeBSD, use um dos seguintes métodos para instalá-la:"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:580
@@ -1473,7 +1539,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:663
 #, no-wrap
 msgid "Installing Ports"
-msgstr ""
+msgstr "Instalando Ports"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:666
@@ -1502,6 +1568,8 @@ msgid ""
 "Using the Ports Collection assumes a working Internet connection. It also "
 "requires superuser privilege."
 msgstr ""
+"O uso da coleção de ports pressupõe uma conexão de Internet ativa. Também "
+"requer privilégios de superusuário."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:676
@@ -1581,6 +1649,10 @@ msgid ""
 "disk space and minimizes the chance of problems later when upgrading to the "
 "newer version of the port:"
 msgstr ""
+"Durante a instalação, é criado um subdiretório de trabalho que contém todos "
+"os arquivos temporários usados durante a compilação. A remoção desse "
+"diretório economiza espaço em disco e minimiza a possibilidade de problemas "
+"mais tarde ao atualizar para a versão mais recente do port:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:724
@@ -1602,7 +1674,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:731
 #, no-wrap
 msgid "Customizing Ports Installation"
-msgstr ""
+msgstr "Personalizando a instalação de ports"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:734
@@ -1722,7 +1794,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:778
 msgid "will combine the two."
-msgstr ""
+msgstr "vai combinar os dois."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:780
@@ -1730,12 +1802,15 @@ msgid ""
 "These can also be set as environmental variables. Refer to the manual page "
 "for your shell for instructions on how to set an environmental variable."
 msgstr ""
+"Estes também podem ser definidos como variáveis ambientais. Consulte a "
+"página de manual do seu shell para obter instruções sobre como definir uma "
+"variável de ambiente."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/ports/_index.adoc:782
 #, no-wrap
 msgid "Removing Installed Ports"
-msgstr ""
+msgstr "Removendo Ports Instalados"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:785
@@ -1782,12 +1857,16 @@ msgid ""
 "displayed but the uninstallation will proceed. In such cases, it may be "
 "better to reinstall the application in order to prevent broken dependencies."
 msgstr ""
+"Recomenda-se ler as mensagens quando o port for desinstalado. Se o port "
+"tiver algum aplicativo que dependa dele, essas informações serão exibidas, "
+"mas a desinstalação continuará. Nesses casos, talvez seja melhor reinstalar "
+"o aplicativo para evitar dependências quebradas."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/ports/_index.adoc:805
 #, no-wrap
 msgid "Upgrading Ports"
-msgstr ""
+msgstr "Atualizando os Ports"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:808
@@ -1796,6 +1875,9 @@ msgid ""
 "Collection. This section describes how to determine which software can be "
 "upgraded and how to perform the upgrade."
 msgstr ""
+"Com o tempo, novas versões de software ficam disponíveis na coleção de "
+"ports. Esta seção descreve como determinar qual software pode ser atualizado "
+"e como executar a atualização."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:810
@@ -1844,7 +1926,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:829
 #, no-wrap
 msgid "Tools to Upgrade and Manage Ports"
-msgstr ""
+msgstr "Ferramentas para atualizar e gerenciar ports"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:832
@@ -1852,6 +1934,8 @@ msgid ""
 "The Ports Collection contains several utilities to perform the actual "
 "upgrade. Each has its strengths and weaknesses."
 msgstr ""
+"A coleção de ports contém vários utilitários para executar a atualização "
+"real. Cada um tem seus pontos fortes e fracos."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:834
@@ -1867,6 +1951,9 @@ msgid ""
 "administrator. It is recommended practice to back up your data before using "
 "any of these tools."
 msgstr ""
+"A escolha da melhor ferramenta para um determinado sistema depende do "
+"administrador do sistema. Recomenda-se a prática de fazer backup de seus "
+"dados antes de usar qualquer uma dessas ferramentas."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/ports/_index.adoc:841
@@ -1901,26 +1988,27 @@ msgstr ""
 msgid ""
 "Root port: has no dependencies and is not a dependency of any other ports."
 msgstr ""
+"Port Root: não tem dependências e não é uma dependência de outros ports."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:855
 msgid "Trunk port: has no dependencies, but other ports depend upon it."
-msgstr ""
+msgstr "Port Trunk: não tem dependências, mas outros ports dependem dele."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:856
 msgid "Branch port: has dependencies and other ports depend upon it."
-msgstr ""
+msgstr "Port Branch: tem dependências e outros ports dependem dele."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:857
 msgid "Leaf port: has dependencies but no other ports depend upon it."
-msgstr ""
+msgstr "Port Leaf: tem dependências, mas nenhum outro port depende dele."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:859
 msgid "To list these categories and search for updates:"
-msgstr ""
+msgstr "Para listar essas categorias e procurar atualizações:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:880
@@ -1957,7 +2045,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:886
 msgid "This command is used to upgrade all outdated ports:"
-msgstr ""
+msgstr "Este comando é usado para atualizar todos os ports desatualizados:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:890
@@ -2015,7 +2103,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:914
 #, no-wrap
 msgid "Upgrading Ports Using Portupgrade"
-msgstr ""
+msgstr "Atualizando Ports Usando o Portupgrade"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:917
@@ -2105,7 +2193,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:952
 #, no-wrap
 msgid "Ports and Disk Space"
-msgstr ""
+msgstr "Ports e o Espaço em Disco"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:955
@@ -2169,6 +2257,8 @@ msgid ""
 "By default, this command is interactive and prompts the user to confirm if a "
 "distfile should be deleted."
 msgstr ""
+"Por padrão, esse comando é interativo e solicita que o usuário confirme se "
+"um distfile deve ser excluído."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:985
@@ -2230,7 +2320,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:998
 #, no-wrap
 msgid "Initialize Jails and Port Trees"
-msgstr ""
+msgstr "Inicializar Jails e o Port Trees"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1001
@@ -2342,7 +2432,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1072
 msgid "Options and dependencies for the specified ports are configured:"
-msgstr ""
+msgstr "Opções e dependências para os ports especificados são configuradas:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:1076
@@ -2354,6 +2444,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:1079
 msgid "Finally, packages are built and a package repository is created:"
 msgstr ""
+"Finalmente, os pacotes são compilados e um repositório de pacotes é criado:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:1083
@@ -2387,7 +2478,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:1091
 #, no-wrap
 msgid "Configuring pkg Clients to Use a Poudriere Repository"
-msgstr ""
+msgstr "Configurando Clientes do pkg para usar um repositório de Poudriere"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1094
@@ -2439,7 +2530,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:1115
 #, no-wrap
 msgid "Post-Installation Considerations"
-msgstr ""
+msgstr "Considerações pós-instalação"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1118
@@ -2449,6 +2540,11 @@ msgid ""
 "after installation. The following commands and locations can be used to help "
 "determine what was installed with the application."
 msgstr ""
+"Independentemente do software ter sido instalado a partir de um pacote "
+"binário ou de um port, a maioria dos aplicativos de terceiros requer algum "
+"nível de configuração após a instalação. Os seguintes comandos e locais "
+"podem ser usados para ajudar a determinar o que foi instalado com o "
+"aplicativo."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1120
@@ -2487,6 +2583,9 @@ msgid ""
 "nor do they run their stop script upon deinstallation or upgrade. This "
 "decision is left to the individual system administrator."
 msgstr ""
+"Por padrão, os aplicativos não executam o script de inicialização durante a "
+"instalação, nem executam o script de parada após a desinstalação ou "
+"atualização. Essa decisão é deixada para o administrador do sistema."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1129
@@ -2506,12 +2605,12 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:1132
 #, no-wrap
 msgid "Dealing with Broken Ports"
-msgstr ""
+msgstr "Lidando com ports quebrados"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1135
 msgid "When a port does not build or install, try the following:"
-msgstr ""
+msgstr "Quando um port não é compilado ou instalado, tente o seguinte:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1137
