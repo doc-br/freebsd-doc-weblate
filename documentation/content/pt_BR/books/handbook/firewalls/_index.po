@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-03-30 23:18+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookfirewalls_index/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1
@@ -31,13 +34,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:9
 #, no-wrap
 msgid "Firewalls"
-msgstr ""
+msgstr "Firewalls"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "Sinopse"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:48
@@ -56,6 +59,8 @@ msgid ""
 "Firewalls can enhance the security of a host or a network. They can be used "
 "to do one or more of the following:"
 msgstr ""
+"Os firewalls podem melhorar a segurança de um host ou de uma rede. Eles "
+"podem ser usados para fazer um ou mais dos seguintes procedimentos:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:52
@@ -63,6 +68,8 @@ msgid ""
 "Protect and insulate the applications, services, and machines of an internal "
 "network from unwanted traffic from the public Internet."
 msgstr ""
+"Proteger e isolar as aplicações, serviços e máquinas de uma rede interna "
+"contra tráfego indesejado da Internet pública."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:53
@@ -70,6 +77,8 @@ msgid ""
 "Limit or disable access from hosts of the internal network to services of "
 "the public Internet."
 msgstr ""
+"Limitar ou desabilitar o acesso de hosts da rede interna para serviços da "
+"Internet pública."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:54
@@ -99,21 +108,24 @@ msgid ""
 "requirements and preferences for a wide variety of users. Each user should "
 "evaluate which firewall best meets their needs."
 msgstr ""
+"O FreeBSD fornece vários firewalls para atender aos diferentes requisitos e "
+"preferências para uma ampla variedade de usuários. Cada usuário deve avaliar "
+"qual firewall atende melhor às suas necessidades."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:60
 msgid "After reading this chapter, you will know:"
-msgstr ""
+msgstr "Depois de ler este capítulo, você saberá:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:62
 msgid "How to define packet filtering rules."
-msgstr ""
+msgstr "Como definir regras de filtragem de pacotes."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:63
 msgid "The differences between the firewalls built into FreeBSD."
-msgstr ""
+msgstr "As diferenças entre os firewalls embutidos no FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:64
@@ -133,12 +145,12 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:68
 msgid "Before reading this chapter, you should:"
-msgstr ""
+msgstr "Antes de ler este capítulo, você deve:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:70
 msgid "Understand basic FreeBSD and Internet concepts."
-msgstr ""
+msgstr "Entender os conceitos básicos do FreeBSD e de Internet."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:74
@@ -155,7 +167,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:77
 #, no-wrap
 msgid "Firewall Concepts"
-msgstr ""
+msgstr "Conceitos de Firewall"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:80
@@ -219,6 +231,13 @@ msgid ""
 "than exclusive firewalls because they significantly reduce the risk of "
 "allowing unwanted traffic."
 msgstr ""
+"Um firewall inclusivo oferece melhor controle do tráfego de saída, tornando-"
+"o uma melhor escolha para sistemas que oferecem serviços à Internet pública. "
+"Também controla o tipo de tráfego originado da Internet pública que pode "
+"obter acesso a uma rede privada. Todo o tráfego que não corresponde às "
+"regras é bloqueado e registrado. Os firewalls inclusivos são geralmente mais "
+"seguros do que os firewalls exclusivos, pois reduzem significativamente o "
+"risco de permitir tráfego indesejado."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:94
@@ -226,6 +245,8 @@ msgid ""
 "Unless noted otherwise, all configuration and example rulesets in this "
 "chapter create inclusive firewall rulesets."
 msgstr ""
+"Salvo indicação contrária, todos os conjuntos de regras de configuração e "
+"exemplo neste capítulo criam conjuntos de regras de firewall inclusivos."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:97
@@ -245,11 +266,19 @@ msgid ""
 "to determine if a packet is valid for a session. Any packets that do not "
 "properly fit the session template are automatically rejected."
 msgstr ""
+"A filtragem stateful trata o tráfego como uma troca bidirecional de pacotes "
+"compondo uma sessão. Quando um estado é especificado em uma regra de "
+"correspondência, o firewall gera dinamicamente regras internas para cada "
+"pacote antecipado sendo trocado durante a sessão. Ele possui recursos de "
+"correspondência suficientes para determinar se um pacote é válido para uma "
+"sessão. Quaisquer pacotes que não se encaixem corretamente no modelo de "
+"sessão serão automaticamente rejeitados."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:101
 msgid "When the session completes, it is removed from the dynamic state table."
 msgstr ""
+"Quando a sessão é concluída, ela é removida da tabela de estados dinâmicos."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:103
@@ -261,6 +290,13 @@ msgid ""
 "filtering provides advanced matching abilities capable of defending against "
 "the flood of different attack methods employed by attackers."
 msgstr ""
+"A filtragem stateful permite dar foco no bloqueio/liberação de novas "
+"sessões. Se a nova sessão for passada, todos os seus pacotes subsequentes "
+"serão permitidos automaticamente e todos os pacotes de um impostor serão "
+"automaticamente rejeitados. Se uma nova sessão for bloqueada, nenhum dos "
+"seus pacotes subsequentes serão permitidos. A filtragem stateful fornece "
+"habilidades de correspondência avançadas capazes de se defender contra o "
+"flood de diferentes métodos de ataque empregados pelos invasores."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:105
@@ -288,6 +324,9 @@ msgid ""
 "private networks which will never be routed directly to the public Internet, "
 "and therefore are available for use with NAT:"
 msgstr ""
+"De acordo com a RFC 1918, os seguintes intervalos de endereços IP são "
+"reservados para redes privadas que nunca serão roteadas diretamente para a "
+"Internet pública e, portanto, estão disponíveis para uso com o NAT:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:111
@@ -317,7 +356,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:121
 #, no-wrap
 msgid "PF"
-msgstr ""
+msgstr "PF"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:124
@@ -575,6 +614,12 @@ msgid ""
 "traffic for those connections to pass back and should only be used on "
 "machines that can be trusted. The ruleset can be loaded with:"
 msgstr ""
+"A primeira regra nega todo o tráfego de entrada por padrão. A segunda regra "
+"permite que as conexões originadas por este sistema sejam liberadas, "
+"mantendo as informações de estado nessas conexões. Essas informações de "
+"estado permitem que o tráfego de retorno para essas conexões seja liberado e "
+"só deve ser usado em máquinas confiáveis. O conjunto de regras pode ser "
+"carregado com:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:244
@@ -636,6 +681,8 @@ msgid ""
 "Whenever an edit is made to a ruleset, the new rules must be loaded so they "
 "can be used:"
 msgstr ""
+"Sempre que uma edição é feita em um conjunto de regras, as novas regras "
+"devem ser carregadas para que possam ser usadas:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:272
@@ -678,7 +725,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:290
 #, no-wrap
 msgid "A Simple Gateway with NAT"
-msgstr ""
+msgstr "Um Gateway Simples com NAT"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:293
@@ -756,6 +803,9 @@ msgid ""
 "That rule only lets the traffic pass in to the gateway on the internal "
 "interface. To let the packets go further, a matching rule is needed:"
 msgstr ""
+"Essa regra só permite que o tráfego passe para o gateway na interface "
+"interna. Para deixar os pacotes irem mais longe, é necessária uma regra de "
+"correspondência:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:330
@@ -771,6 +821,12 @@ msgid ""
 "of this section demonstrates how to keep the rules as simple as possible for "
 "readability. For example, those two rules could be replaced with one rule:"
 msgstr ""
+"Embora essas duas regras funcionem, regras especificadas dessa forma "
+"raramente são necessárias. Para um administrador de rede ocupado, um "
+"conjunto de regras legível é um conjunto de regras mais seguro. O restante "
+"desta seção demonstra como manter as regras o mais simples possível para "
+"facilitar a leitura. Por exemplo, essas duas regras podem ser substituídas "
+"por uma regra:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:337
@@ -810,6 +866,9 @@ msgid ""
 "internal network. It first defines two macros to represent the external and "
 "internal 3COM interfaces of the gateway."
 msgstr ""
+"O conjunto de regras de exemplo a seguir libera todo o tráfego originado por "
+"máquinas na rede interna. Primeiro define duas macros para representar as "
+"interfaces externas e internas 3COM do gateway."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:353
@@ -851,6 +910,9 @@ msgid ""
 "Note that this ruleset probably allows more traffic to pass out of the "
 "network than is needed. One reasonable setup could create this macro:"
 msgstr ""
+"Observe que esse conjunto de regras provavelmente permite que mais tráfego "
+"seja transmitido para fora da rede do que o necessário. Uma configuração "
+"razoável poderia criar essa macro:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:374
@@ -863,7 +925,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:377
 msgid "to use in the main pass rule:"
-msgstr ""
+msgstr "para usar na regra principal de liberação:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:382
@@ -929,7 +991,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:407
 msgid "Passwords are transferred in the clear."
-msgstr ""
+msgstr "As senhas são transferidas em texto puro."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:408
@@ -944,6 +1006,8 @@ msgid ""
 "When a session is established, data is communicated using randomly selected "
 "ports."
 msgstr ""
+"Quando uma sessão é estabelecida, os dados são transmitidos usando portas "
+"selecionadas aleatoriamente."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:411
@@ -1018,7 +1082,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:441
 msgid "Finally, allow the redirected traffic to pass:"
-msgstr ""
+msgstr "Finalmente, permita que o tráfego redirecionado passe:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:445
@@ -1132,7 +1196,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:490
 msgid "and a rule which uses the macro:"
-msgstr ""
+msgstr "e uma regra que usa a macro:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:494
@@ -1231,7 +1295,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:530
 #, no-wrap
 msgid "Using Tables"
-msgstr ""
+msgstr "Usando Tabelas"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:533
@@ -1270,7 +1334,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:548
 msgid "To refer to the file, define the table like this:"
-msgstr ""
+msgstr "Para se referir ao arquivo, defina a tabela da seguinte forma:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:552
@@ -1282,6 +1346,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:555
 msgid "Once the table is defined, it can be referenced by a rule:"
 msgstr ""
+"Depois que a tabela é definida, ela pode ser referenciada por uma regra:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:559
@@ -1353,6 +1418,9 @@ msgid ""
 "trying to discover the user name and password which will let them into the "
 "system."
 msgstr ""
+"Isso indica um ataque de força bruta em que alguém ou algum programa está "
+"tentando descobrir o nome de usuário e senha que os permitirá entrar no "
+"sistema."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:593
@@ -1370,6 +1438,8 @@ msgstr ""
 msgid ""
 "To configure this, create this table in the tables section of the ruleset:"
 msgstr ""
+"Para configurar isso, crie esta tabela na seção de tabelas do conjunto de "
+"regras:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:599
@@ -1383,6 +1453,8 @@ msgid ""
 "Then, somewhere early in the ruleset, add rules to block brute access while "
 "allowing legitimate access:"
 msgstr ""
+"Então, em algum lugar no início do conjunto de regras, adicione regras para "
+"bloquear o acesso bruto, permitindo acesso legítimo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:610
@@ -1401,6 +1473,8 @@ msgid ""
 "The part in parentheses defines the limits and the numbers should be changed "
 "to meet local requirements. It can be read as follows:"
 msgstr ""
+"A parte entre parênteses define os limites e os valores devem ser alterados "
+"para atender aos requisitos locais. Isso pode ser lido da \\seguinte forma:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:615
@@ -1479,6 +1553,10 @@ msgid ""
 "offenders to a queue with a minimal bandwidth allocation or to redirect to a "
 "specific web page."
 msgstr ""
+"Por exemplo, uma regra de sobrecarga pode ser usada para proteger um serviço "
+"de email ou um serviço Web e a tabela de sobrecarga pode ser usada em uma "
+"regra para atribuir infratores a uma fila com uma alocação de largura de "
+"banda mínima ou redirecionar para uma página Web específica."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:647
@@ -1753,6 +1831,8 @@ msgid ""
 "On a typical gateway in front of a mail server, hosts will soon start "
 "getting trapped within a few seconds to several minutes."
 msgstr ""
+"Em um gateway típico na frente de um servidor de email, os hosts logo "
+"começam a ficar presos dentro de segundos ou alguns minutos."
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:762
@@ -1776,7 +1856,7 @@ msgstr ""
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:766
 msgid "The basic procedure for configuring greylisting is as follows:"
-msgstr ""
+msgstr "O procedimento básico para configurar o greylist é o seguinte:"
 
 #. type: Block title
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:768
@@ -1813,7 +1893,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:779
 msgid "To complete the greylisting setup:"
-msgstr ""
+msgstr "Para concluir a configuração da greylist:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:784
@@ -1836,7 +1916,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:789
 #, no-wrap
 msgid "Network Hygiene"
-msgstr ""
+msgstr "Higiene de Rede"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:792
@@ -1920,6 +2000,8 @@ msgid ""
 "These rules weed out spoofed traffic coming in from the rest of the world as "
 "well as any spoofed packets which originate in the local network:"
 msgstr ""
+"Essas regras eliminam tráfego falsificado do resto do mundo, bem como "
+"qualquer pacote falsificado originado na rede local:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:826
@@ -1933,7 +2015,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:829
 #, no-wrap
 msgid "Handling Non-Routable Addresses"
-msgstr ""
+msgstr "Manipulando Endereços Não-Roteados"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:832
@@ -1954,6 +2036,9 @@ msgid ""
 "used in blocking rules. Traffic to and from these addresses is quietly "
 "dropped on the gateway's external interface."
 msgstr ""
+"Neste exemplo, uma macro contendo endereços não roteáveis é definida e usada "
+"em regras de bloqueio. O tráfego de origem e destino para esses endereços é "
+"silenciosamente descartado na interface externa do gateway."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:840
@@ -2019,13 +2104,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:864
 msgid "The following scheduler algorithms are available:"
-msgstr ""
+msgstr "Os seguintes algoritmos de agendamento estão disponíveis:"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:865
 #, no-wrap
 msgid "CBQ"
-msgstr ""
+msgstr "CBQ"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:867
@@ -2038,7 +2123,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:868
 #, no-wrap
 msgid "RED"
-msgstr ""
+msgstr "RED"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:870
@@ -2053,7 +2138,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:871
 #, no-wrap
 msgid "RIO"
-msgstr ""
+msgstr "RIO"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:873
@@ -2066,7 +2151,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:874
 #, no-wrap
 msgid "HFSC"
-msgstr ""
+msgstr "HFSC"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:876
@@ -2080,7 +2165,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:877
 #, no-wrap
 msgid "PRIQ"
-msgstr ""
+msgstr "PRIQ"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:879
@@ -2101,7 +2186,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:883
 #, no-wrap
 msgid "IPFW"
-msgstr ""
+msgstr "IPFW"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:886
@@ -2169,6 +2254,8 @@ msgid ""
 "To use one of the default firewall types provided by FreeBSD, add another "
 "line which specifies the type:"
 msgstr ""
+"Para usar um dos tipos de firewall padrão fornecidos pelo FreeBSD, adicione "
+"outra linha que especifique o tipo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:910
@@ -2179,7 +2266,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:913
 msgid "The available types are:"
-msgstr ""
+msgstr "Os tipos disponíveis são:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:915
@@ -2376,7 +2463,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:992
 #, no-wrap
 msgid "CMD"
-msgstr ""
+msgstr "CMD"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:994
@@ -2387,7 +2474,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:995
 #, no-wrap
 msgid "RULE_NUMBER"
-msgstr ""
+msgstr "RULE_NUMBER"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:997
@@ -2402,7 +2489,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:998
 #, no-wrap
 msgid "SET_NUMBER"
-msgstr ""
+msgstr "SET_NUMBER"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1000
@@ -2418,7 +2505,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1617
 #, no-wrap
 msgid "ACTION"
-msgstr ""
+msgstr "ACTION"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1003
@@ -2427,6 +2514,8 @@ msgid ""
 "action will be executed when the packet matches the selection criterion of "
 "the rule."
 msgstr ""
+"Uma regra pode ser associada a uma das ações a seguir. A ação especificada "
+"será executada quando o pacote corresponder ao critério de seleção da regra."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1005
@@ -2468,7 +2557,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1014
 #, no-wrap
 msgid "LOG_AMOUNT"
-msgstr ""
+msgstr "LOG_AMOUNT"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1016
@@ -2490,12 +2579,15 @@ msgid ""
 "and before performing the final action on the packet. The administrator "
 "decides which rules to enable logging on."
 msgstr ""
+"O registro é feito depois que todas as outras condições de correspondência "
+"de pacote foram atendidas e antes de executar a ação final no pacote. O "
+"administrador decide quais regras habilitar o log."
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1022
 #, no-wrap
 msgid "PROTO"
-msgstr ""
+msgstr "PROTO"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1024
@@ -2508,7 +2600,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1025
 #, no-wrap
 msgid "SRC"
-msgstr ""
+msgstr "SRC"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1027
@@ -2527,7 +2619,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1670
 #, no-wrap
 msgid "SRC_PORT"
-msgstr ""
+msgstr "SRC_PORT"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1030
@@ -2540,7 +2632,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1031
 #, no-wrap
 msgid "DST"
-msgstr ""
+msgstr "DST"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1033
@@ -2555,7 +2647,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1680
 #, no-wrap
 msgid "DST_PORT"
-msgstr ""
+msgstr "DST_PORT"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1036
@@ -2569,7 +2661,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1645
 #, no-wrap
 msgid "OPTIONS"
-msgstr ""
+msgstr "OPTIONS"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1039
@@ -2611,7 +2703,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1695
 #, no-wrap
 msgid "Example Ruleset"
-msgstr ""
+msgstr "Exemplo de Conjunto de Regras"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1049
@@ -2628,6 +2720,8 @@ msgid ""
 "When first creating or testing a firewall ruleset, consider temporarily "
 "setting this tunable:"
 msgstr ""
+"Ao criar ou testar um conjunto de regras de firewall, considere esta "
+"configuração temporária:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1057
@@ -2677,6 +2771,8 @@ msgid ""
 "The first two rules allow all traffic on the trusted internal interface and "
 "on the loopback interface:"
 msgstr ""
+"As duas primeiras regras permitem todo o tráfego na interface interna e na "
+"interface de loopback:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1081
@@ -2700,6 +2796,8 @@ msgid ""
 "The next rule allows the packet through if it matches an existing entry in "
 "the dynamic rules table:"
 msgstr ""
+"A próxima regra permite que o pacote passe se corresponder a uma entrada "
+"existente na tabela de regras dinâmicas:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1091
@@ -2713,6 +2811,8 @@ msgid ""
 "The next set of rules defines which stateful connections internal systems "
 "can create to hosts on the Internet:"
 msgstr ""
+"O próximo conjunto de regras define quais conexões stateful os sistemas "
+"internos podem criar para hosts na Internet:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1102
@@ -2894,6 +2994,8 @@ msgid ""
 "The last rule logs all packets that do not match any of the rules in the "
 "ruleset:"
 msgstr ""
+"A última regra registra todos os pacotes que não correspondem a nenhuma das "
+"regras do conjunto de regras:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1183
@@ -3182,7 +3284,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1289
 #, no-wrap
 msgid "Port Redirection"
-msgstr ""
+msgstr "Redirecionamento de Portas"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1292
@@ -3224,7 +3326,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1305
 msgid "To configure the above example setup, the arguments should be:"
-msgstr ""
+msgstr "Para configurar o exemplo de instalação acima, os argumentos devem ser:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1310
@@ -3264,7 +3366,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1323
 #, no-wrap
 msgid "Address Redirection"
-msgstr ""
+msgstr "Redirecionamento de Endereços"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1326
@@ -3297,7 +3399,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1335
 msgid "In the example, the arguments would read:"
-msgstr ""
+msgstr "No exemplo, os argumentos seriam:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1340
@@ -3437,7 +3539,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1394
 msgid "To list all the running rules in sequence:"
-msgstr ""
+msgstr "Para listar todas as regras em execução em sequência:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1398
@@ -3451,6 +3553,8 @@ msgid ""
 "To list all the running rules with a time stamp of when the last time the "
 "rule was matched:"
 msgstr ""
+"Para listar todas as regras em execução com um registro de data e hora de "
+"quando a última vez em que a regra foi utilizada:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1405
@@ -3466,6 +3570,10 @@ msgid ""
 "number, followed by the number of matched packets and bytes, followed by the "
 "rule itself."
 msgstr ""
+"O próximo exemplo lista as informações contábeis e a contagem de pacotes das "
+"regras correspondentes, junto com as próprias regras. A primeira coluna é o "
+"número da regra, seguido pelo número de pacotes e bytes correspondidos, "
+"seguidos pela própria regra."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1412
@@ -3476,7 +3584,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1415
 msgid "To list dynamic rules in addition to static rules:"
-msgstr ""
+msgstr "Para listar regras dinâmicas além das regras estáticas:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1419
@@ -3487,7 +3595,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1422
 msgid "To also show the expired dynamic rules:"
-msgstr ""
+msgstr "Para mostrar também as regras dinâmicas expiradas:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1426
@@ -3498,7 +3606,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1429
 msgid "To zero the counters:"
-msgstr ""
+msgstr "Para zerar os contadores:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1433
@@ -3521,7 +3629,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1442
 #, no-wrap
 msgid "Logging Firewall Messages"
-msgstr ""
+msgstr "Mensagens de Log do Firewall"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1445
@@ -3575,7 +3683,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1458
 #, no-wrap
 msgid "Building a Rule Script"
-msgstr ""
+msgstr "Criando um Script de Regras"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1461
@@ -3601,7 +3709,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1465
 msgid "Start the rules file like this:"
-msgstr ""
+msgstr "Inicie o arquivo de regras assim:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1483
@@ -3630,6 +3738,8 @@ msgid ""
 "The rules are not important as the focus of this example is how the symbolic "
 "substitution fields are populated."
 msgstr ""
+"As regras não são importantes, pois o foco deste exemplo é como os campos de "
+"substituição simbólica são preenchidos."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1488
@@ -3654,7 +3764,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1497
 msgid "The same thing could be accomplished by running these commands by hand:"
-msgstr ""
+msgstr "A mesma coisa pode ser realizada executando esses comandos manualmente:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1507
@@ -3711,7 +3821,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1534
 #, no-wrap
 msgid "IPFILTER (IPF)"
-msgstr ""
+msgstr "IPFILTER (IPF)"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1537
@@ -3874,6 +3984,11 @@ msgid ""
 "system. This method is convenient for testing new rules as the procedure can "
 "be executed as many times as needed."
 msgstr ""
+"Isso fornece a capacidade de fazer alterações em um conjunto de regras "
+"personalizado e atualizar o firewall em execução com uma nova cópia das "
+"regras sem precisar reinicializar o sistema. Esse método é conveniente para "
+"testar novas regras, pois o procedimento pode ser executado quantas vezes "
+"forem necessárias."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1604
@@ -3918,6 +4033,13 @@ msgid ""
 "shown in uppercase represent a variable and the words shown in lowercase "
 "must precede the variable that follows it:"
 msgstr ""
+"As palavras-chave usadas nas regras devem ser escritas em uma ordem "
+"específica, da esquerda para a direita. Algumas palavras-chave são "
+"obrigatórias, enquanto outras são opcionais. Algumas palavras-chave têm sub-"
+"opções que podem ser palavras-chave e também incluem mais sub-opções. A "
+"ordem das palavras-chave é a seguinte, em que as palavras mostradas em "
+"maiúsculas representam uma variável e as palavras mostradas em minúsculas "
+"devem preceder a variável que a segue:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1614
@@ -3987,7 +4109,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1634
 #, no-wrap
 msgid "DIRECTION"
-msgstr ""
+msgstr "DIRECTION"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1636
@@ -3995,6 +4117,8 @@ msgid ""
 "Next, each rule must explicitly state the direction of traffic using one of "
 "these keywords:"
 msgstr ""
+"Em seguida, cada regra deve indicar explicitamente a direção do tráfego "
+"usando uma dessas palavras-chave:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1638
@@ -4024,6 +4148,8 @@ msgid ""
 "Options are optional. However, if multiple options are specified, they must "
 "be used in the order shown here."
 msgstr ""
+"Opções são opcionais. No entanto, se várias opções forem especificadas, elas "
+"deverão ser usadas na ordem apresentada aqui."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1649
@@ -4081,7 +4207,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1662
 #, no-wrap
 msgid "PROTO_TYPE"
-msgstr ""
+msgstr "PROTO_TYPE"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1664
@@ -4099,7 +4225,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1665
 #, no-wrap
 msgid "SRC_ADDR"
-msgstr ""
+msgstr "SRC_ADDR"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1667
@@ -4148,7 +4274,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1677
 #, no-wrap
 msgid "DST_ADDR"
-msgstr ""
+msgstr "DST_ADDR"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1679
@@ -4170,7 +4296,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1683
 #, no-wrap
 msgid "TCP_FLAG|ICMP_TYPE"
-msgstr ""
+msgstr "TCP_FLAG|ICMP_TYPE"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1685
@@ -4192,7 +4318,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1688
 #, no-wrap
 msgid "STATE"
-msgstr ""
+msgstr "STATE"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1690
@@ -4291,6 +4417,10 @@ msgid ""
 "rules, with the last rule in the section blocking and logging all packets "
 "for that interface and direction."
 msgstr ""
+"As regras para as seções de saída e entrada da interface pública devem ter "
+"as regras correspondidas com mais frequência antes das regras menos comuns, "
+"com a última regra na seção bloqueando e registrando todos os pacotes para "
+"essa interface e direção."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1722
@@ -4399,6 +4529,9 @@ msgid ""
 "blocks all undesirable packets first. This reduces the number of packets "
 "that are logged by the last rule."
 msgstr ""
+"Neste exemplo de regras na seção de entrada da interface pública todos os "
+"pacotes indesejáveis são bloqueados primeiro. Isso reduz o número de pacotes "
+"registrados pela última regra."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1781
@@ -4487,6 +4620,9 @@ msgid ""
 "connections which were not explicitly allowed by previous rules in this "
 "section."
 msgstr ""
+"O restante das regras na seção de entrada define quais conexões podem ser "
+"iniciadas a partir da Internet. A última regra nega todas as conexões que "
+"não foram explicitamente permitidas pelas regras anteriores desta seção."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1816
@@ -4786,6 +4922,8 @@ msgid ""
 "To turn verbose mode on and display information relating to rule processing "
 "and active rules and table entries:"
 msgstr ""
+"Para ativar o modo verbose e exibir informações relacionadas ao "
+"processamento de regras, regras ativas e registros nas tabelas:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1942
@@ -4924,6 +5062,9 @@ msgid ""
 "which packets were dropped, what addresses they came from, and where they "
 "were going. This information is useful in tracking down attackers."
 msgstr ""
+"O registro em log fornece a capacidade de revisar, após o fato, informações "
+"como quais pacotes foram descartados, de que endereços eles vieram e para "
+"onde estavam indo. Esta informação é útil para rastrear invasores."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2008
@@ -5004,7 +5145,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2040
 msgid "The date of packet receipt."
-msgstr ""
+msgstr "A data do recebimento do pacote."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2041
@@ -5012,11 +5153,13 @@ msgid ""
 "The time of packet receipt. This is in the form HH:MM:SS.F, for hours, "
 "minutes, seconds, and fractions of a second."
 msgstr ""
+"O horário do recebimento do pacote. Isto está no formato HH:MM:SS.F, para "
+"horas, minutos, segundos e frações de segundo."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2042
 msgid "The name of the interface that processed the packet."
-msgstr ""
+msgstr "O nome da interface que processou o pacote."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2043
@@ -5071,7 +5214,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2053
 #, no-wrap
 msgid "Blacklistd"
-msgstr ""
+msgstr "Blacklistd"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2056
@@ -5096,12 +5239,17 @@ msgid ""
 "in the examples, but other firewalls available on FreeBSD should be able to "
 "work with blacklistd, too."
 msgstr ""
+"Este capítulo descreve como instalar o blacklistd, configurá-lo e fornece "
+"exemplos de como usá-la. Os leitores devem estar familiarizados com os "
+"conceitos básicos de firewall, como regras. Para detalhes, consulte o "
+"capítulo sobre firewall. O PF é usado nos exemplos, mas outros firewalls "
+"disponíveis no FreeBSD também devem funcionar com o blacklistd."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2059
 #, no-wrap
 msgid "Enabling Blacklistd"
-msgstr ""
+msgstr "Habilitando a Blacklistd"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2062
@@ -5122,7 +5270,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2069
 msgid "To start the service manually, run this command:"
-msgstr ""
+msgstr "Para iniciar o serviço manualmente, execute este comando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2073
@@ -5134,7 +5282,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2075
 #, no-wrap
 msgid "Creating a Blacklistd Ruleset"
-msgstr ""
+msgstr "Criando um conjunto de regras no Blacklistd"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2078
@@ -5149,12 +5297,14 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2079
 #, no-wrap
 msgid "Local Rules"
-msgstr ""
+msgstr "Regras Locais"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2082
 msgid "An example blacklistd.conf entry for a local rule looks like this:"
 msgstr ""
+"Um exemplo de entrada blacklistd.conf para uma regra local se parece com "
+"isso:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2087
@@ -5290,6 +5440,8 @@ msgid ""
 "This rule defines that if any one host in that network is misbehaving, "
 "everything else on that network will be blocked, too."
 msgstr ""
+"Esta regra define que, se qualquer host dessa rede estiver se comportando "
+"mal, todo o resto da rede também será bloqueado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2139
@@ -5324,7 +5476,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2144
 #, no-wrap
 msgid "Remote Rules"
-msgstr ""
+msgstr "Regras Remotas"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2147
@@ -5334,6 +5486,11 @@ msgid ""
 "remote rule is the same as in a local rule. The only difference is in the "
 "way blacklistd is using them. To explain it, this example rule is used:"
 msgstr ""
+"As regras remotas são usadas para especificar como o blacklistd muda seu "
+"comportamento, dependendo do host remoto que está sendo avaliado no momento. "
+"Cada campo em uma regra remota é o mesmo que em uma regra local. A única "
+"diferença está na maneira como o blacklistd os usa. Para explicar, esta "
+"regra de exemplo é usada:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2152
@@ -5351,6 +5508,10 @@ msgid ""
 "in this example. The fields for type, protocol and owner are identically "
 "interpreted as in the local rule."
 msgstr ""
+"O campo de endereço pode ser um endereço IP (v4 ou v6), uma porta ou ambas. "
+"Isso permite definir regras especiais para um intervalo de endereços remotos "
+"específico, como neste exemplo. Os campos para tipo, protocolo e "
+"proprietário são identicamente interpretados como na regra local."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2157
@@ -5380,12 +5541,15 @@ msgid ""
 "Remote rules allow a stricter enforcement of limits on attempts to log in "
 "compared to attempts coming from a local network like an office."
 msgstr ""
+"As regras remotas permitem uma aplicação mais rigorosa dos limites das "
+"tentativas de logon, em comparação com as tentativas provenientes de uma "
+"rede local como um escritório."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2162
 #, no-wrap
 msgid "Blacklistd Client Configuration"
-msgstr ""
+msgstr "Configuração do cliente no Blacklistd"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2165
@@ -5406,6 +5570,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2172
 msgid "Restart sshd afterwards to make these changes take effect."
 msgstr ""
+"Reinicie o sshd posteriormente para que essas alterações entrem em vigor."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2174
@@ -5424,12 +5589,14 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2181
 msgid "That is all that is needed to make these programs talk to blacklistd."
 msgstr ""
+"Isso é tudo o que é necessário para que esses programas conversem com o "
+"blacklistd."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2182
 #, no-wrap
 msgid "Blacklistd Management"
-msgstr ""
+msgstr "Gerenciamento do Blacklistd"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2185
@@ -5482,12 +5649,13 @@ msgid ""
 "In this example, there are 36s seconds left until this host will not be "
 "blocked any more."
 msgstr ""
+"Neste exemplo, restam 36 segundos para que este host não seja mais bloqueado."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2206
 #, no-wrap
 msgid "Removing Hosts from the Block List"
-msgstr ""
+msgstr "Removendo hosts da lista de bloqueios"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2209
@@ -5521,6 +5689,8 @@ msgid ""
 "After identifying the address to be unblocked from the list, the following "
 "command removes it from the list:"
 msgstr ""
+"Depois de identificar o endereço a ser desbloqueado da lista, o seguinte "
+"comando o remove da lista:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2223
@@ -5537,3 +5707,8 @@ msgid ""
 "its output eventually. The entry will be added again if the host is matching "
 "one of the block rules in blacklistd again."
 msgstr ""
+"O endereço agora foi removido do PF, mas ainda será exibido no blacklistctl, "
+"pois ele não conhece nenhuma alteração feita no PF. A entrada no banco de "
+"dados do blacklistd expirará e será removida de sua saída eventualmente. A "
+"entrada será adicionada novamente se o host estiver correspondendo a uma das "
+"regras de bloqueio no blacklistd novamente."
