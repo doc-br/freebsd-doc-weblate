@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-14 11:02-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-03-30 23:19+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookzfs_index/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1
@@ -70,6 +73,11 @@ msgid ""
 "space is allocated from that shared pool. Space is available to all file "
 "systems, and can be increased by adding new storage devices to the pool."
 msgstr ""
+"Armazenamento em pool: os dispositivos de armazenamento físico são "
+"adicionados em um pool e o espaço de armazenamento é alocado a partir desse "
+"pool compartilhado. O espaço está disponível para todos os sistemas de "
+"arquivos e pode ser aumentado pela adição de novos dispositivos de "
+"armazenamento ao pool."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:53
@@ -121,7 +129,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:62
 #, no-wrap
 msgid "Quick Start Guide"
-msgstr ""
+msgstr "Guia de Início Rápido"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:65
@@ -140,7 +148,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:72
 msgid "Then start the service:"
-msgstr ""
+msgstr "Então inicie o serviço:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:76
@@ -160,12 +168,12 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:81
 #, no-wrap
 msgid "Single Disk Pool"
-msgstr ""
+msgstr "Pool de Disco Único"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:84
 msgid "To create a simple, non-redundant pool using a single disk device:"
-msgstr ""
+msgstr "Para criar um pool simples e não-redundante usando um único disco:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:88
@@ -237,7 +245,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:127
 msgid "Compression can be disabled with:"
-msgstr ""
+msgstr "A compactação pode ser desativada com:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:131
@@ -357,6 +365,8 @@ msgid ""
 "To destroy the file systems and then destroy the pool as it is no longer "
 "needed:"
 msgstr ""
+"Para destruir os sistemas de arquivos e, em seguida, destruir o pool, se ele "
+"não for mais necessário:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:203
@@ -371,7 +381,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:206
 #, no-wrap
 msgid "RAID-Z"
-msgstr ""
+msgstr "RAID-Z"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:209
@@ -422,6 +432,8 @@ msgstr ""
 msgid ""
 "Compression and keeping extra copies of directories and files can be enabled:"
 msgstr ""
+"A compressão e a criação de cópias extras de diretórios e arquivos podem ser "
+"ativadas:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:235
@@ -437,6 +449,8 @@ msgid ""
 "To make this the new home directory for users, copy the user data to this "
 "directory and create the appropriate symbolic links:"
 msgstr ""
+"Para tornar este o novo diretório home para usuários, copie os dados de "
+"usuários para este diretório e crie os links simbólicos apropriados:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:245
@@ -459,6 +473,8 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:250
 msgid "Try creating a file system snapshot which can be rolled back later:"
 msgstr ""
+"Tente criar um snapshot do sistema de arquivos que possa ser revertido "
+"posteriormente:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:254
@@ -472,6 +488,8 @@ msgid ""
 "Snapshots can only be made of a full file system, not a single directory or "
 "file."
 msgstr ""
+"Os snapshots só podem ser realizados de um sistema de arquivos completo, não "
+"de um único diretório ou arquivo."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:259
@@ -508,6 +526,9 @@ msgid ""
 "However, over time, snapshots can consume a great deal of disk space. The "
 "previous snapshot can be removed using the command:"
 msgstr ""
+"É possível escrever um script para criar snapshots frequentes dos dados do "
+"usuário. No entanto, com o tempo, os snapshots podem consumir muito espaço "
+"em disco. O snapshot anterior pode ser removido usando o comando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:277
@@ -662,6 +683,8 @@ msgid ""
 "This indicates that the device was previously taken offline by the "
 "administrator with this command:"
 msgstr ""
+"Isso indica que o dispositivo foi colocado off-line anteriormente pelo "
+"administrador com este comando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:358
@@ -716,13 +739,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:388
 msgid "In this example, everything is normal."
-msgstr ""
+msgstr "Neste exemplo, tudo está normal."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/zfs/_index.adoc:390
 #, no-wrap
 msgid "Data Verification"
-msgstr ""
+msgstr "Verificação de dados"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:393
@@ -780,6 +803,10 @@ msgid ""
 "when another scrub is required. Routine scrubs help protect data from silent "
 "corruption and ensure the integrity of the pool."
 msgstr ""
+"A data de conclusão da última operação de scrub é exibida para ajudar a "
+"rastrear quando outro scrub é necessário. Uma rotina recorrente de scrubs "
+"ajuda a proteger os dados contra corrupção silenciosa e garante a "
+"integridade do pool."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:430
@@ -806,7 +833,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:437
 #, no-wrap
 msgid "Creating and Destroying Storage Pools"
-msgstr ""
+msgstr "Criando e destruindo pools de armazenamento"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:440
@@ -828,7 +855,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:442
 msgid "Create a simple mirror pool:"
-msgstr ""
+msgstr "Crie um pool do tipo mirror simples:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:451
@@ -950,7 +977,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:513
 #, no-wrap
 msgid "Adding and Removing Devices"
-msgstr ""
+msgstr "Adicionando e Removendo Dispositivos"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:516
@@ -1118,6 +1145,8 @@ msgid ""
 "When attaching additional devices to a boot pool, remember to update the "
 "bootcode."
 msgstr ""
+"Ao anexar dispositivos adicionais a um pool de inicialização, lembre-se de "
+"atualizar o bootcode."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:586
@@ -1176,11 +1205,16 @@ msgid ""
 "disk in a mirror group remains, it ceases to be a mirror and reverts to "
 "being a stripe, risking the entire pool if that remaining disk fails."
 msgstr ""
+"Atualmente, os vdevs não podem ser removidos de um pool e os discos só podem "
+"ser removidos de um mirror se houver redundância restante suficiente. Se "
+"apenas um disco em um grupo de mirror's permanecer, ele deixará de ser um "
+"mirror e voltará a ser um srtipe, arriscando todo o pool se o disco restante "
+"falhar."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:628
 msgid "Remove a disk from a three-way mirror group:"
-msgstr ""
+msgstr "Remova um disco de um grupo de mirror's triplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:636
@@ -1222,7 +1256,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:662
 #, no-wrap
 msgid "Checking the Status of a Pool"
-msgstr ""
+msgstr "Verificando o status de um pool"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:665
@@ -1249,7 +1283,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:688
 #, no-wrap
 msgid "Clearing Errors"
-msgstr ""
+msgstr "Limpando Erros"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:691
@@ -1265,7 +1299,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:693
 #, no-wrap
 msgid "Replacing a Functioning Device"
-msgstr ""
+msgstr "Substituindo um dispositivo em funcionamento"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:696
@@ -1283,7 +1317,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:698
 msgid "Replace a functioning device in the pool:"
-msgstr ""
+msgstr "Substitua um dispositivo em funcionamento no pool:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:716
@@ -1361,7 +1395,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:761
 #, no-wrap
 msgid "Dealing with Failed Devices"
-msgstr ""
+msgstr "Lidando com dispositivos com falha"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:764
@@ -1473,7 +1507,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:827
 #, no-wrap
 msgid "Scrubbing a Pool"
-msgstr ""
+msgstr "Limpeza do Pool"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:830
@@ -1511,7 +1545,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:858
 #, no-wrap
 msgid "Self-Healing"
-msgstr ""
+msgstr "Auto Cura (Self-Healing)"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:861
@@ -1615,6 +1649,13 @@ msgid ""
 "certain that proper backups of the pool are created before running the "
 "command!"
 msgstr ""
+"Esta é uma operação perigosa que pode destruir dados vitais. Ele é mostrado "
+"aqui apenas para fins demonstrativos e não deve ser tentado durante a "
+"operação normal de um pool de armazenamento. Nem este exemplo de corrupção "
+"intencional deve ser executado em qualquer disco com um sistema de arquivos "
+"diferente. Não use outros nomes de dispositivos de disco diferentes daqueles "
+"que fazem parte do pool. Certifique-se de que os backups apropriados do pool "
+"sejam criados antes de executar o comando!"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:914
@@ -1791,12 +1832,14 @@ msgid ""
 "The pool is now back to a fully working state and all the errors have been "
 "cleared."
 msgstr ""
+"O pool está agora de volta a um estado totalmente funcional e todos os erros "
+"foram apagados."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1024
 #, no-wrap
 msgid "Growing a Pool"
-msgstr ""
+msgstr "Crescendo um Pool"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1027
@@ -1823,7 +1866,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1031
 #, no-wrap
 msgid "Importing and Exporting Pools"
-msgstr ""
+msgstr "Importando e exportando pools"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1034
@@ -1842,7 +1885,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1036
 msgid "Export a pool that is not in use:"
-msgstr ""
+msgstr "Exportar um pool que não está em uso:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1040
@@ -1866,7 +1909,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1045
 msgid "List all available pools for import:"
-msgstr ""
+msgstr "Listar todos os pools disponíveis para importação:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1054
@@ -1891,7 +1934,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1060
 msgid "Import the pool with an alternative root directory:"
-msgstr ""
+msgstr "Importe o pool com um diretório raiz alternativo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1068
@@ -1908,7 +1951,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1071
 #, no-wrap
 msgid "Upgrading a Storage Pool"
-msgstr ""
+msgstr "Atualizando um pool de armazenamento"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1074
@@ -2016,7 +2059,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1125
 msgid "Upgrade a pool to support additional feature flags:"
-msgstr ""
+msgstr "Atualize um pool para suportar feature flags adicionais:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1138
@@ -2093,7 +2136,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1183
 msgid "For legacy boot using GPT, use the following command:"
-msgstr ""
+msgstr "Para inicialização legada usando o GPT, use o seguinte comando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1187
@@ -2105,6 +2148,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1190
 msgid "For systems using EFI to boot, execute the following command:"
 msgstr ""
+"Para sistemas que usam o EFI para inicializar, execute o seguinte comando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1194
@@ -2123,7 +2167,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1200
 #, no-wrap
 msgid "Displaying Recorded Pool History"
-msgstr ""
+msgstr "Exibindo o histórico gravado do pool"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1203
@@ -2224,7 +2268,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1248
 #, no-wrap
 msgid "Performance Monitoring"
-msgstr ""
+msgstr "Monitoramento de Desempenho"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1251
@@ -2288,7 +2332,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1279
 #, no-wrap
 msgid "Splitting a Storage Pool"
-msgstr ""
+msgstr "Dividindo um pool de armazenamento"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1282
@@ -2319,7 +2363,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1289
 #, no-wrap
 msgid "Creating and Destroying Datasets"
-msgstr ""
+msgstr "Criando e destruindo conjuntos de dados"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1292
@@ -2394,11 +2438,15 @@ msgid ""
 "reside on the dataset, as it does not involve scanning all of the files and "
 "updating all of the corresponding metadata."
 msgstr ""
+"A destruição de um conjunto de dados é muito mais rápida que a exclusão de "
+"todos os arquivos que residem no conjunto de dados, pois não envolve a "
+"verificação de todos os arquivos e a atualização de todos os metadados "
+"correspondentes."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1334
 msgid "Destroy the previously-created dataset:"
-msgstr ""
+msgstr "Destrua o conjunto de dados criado anteriormente:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1369
@@ -2457,7 +2505,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1374
 #, no-wrap
 msgid "Creating and Destroying Volumes"
-msgstr ""
+msgstr "Criando e Destruindo Volumes"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1377
@@ -2504,12 +2552,15 @@ msgid ""
 "dataset. The operation is nearly instantaneous, but it may take several "
 "minutes for the free space to be reclaimed in the background."
 msgstr ""
+"Destruir um volume é o mesmo que destruir um conjunto de dados regular do "
+"sistema de arquivos. A operação é quase instantânea, mas pode levar vários "
+"minutos para que o espaço livre seja recuperado em segundo plano."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1398
 #, no-wrap
 msgid "Renaming a Dataset"
-msgstr ""
+msgstr "Renomeando um Conjunto de Dados"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1401
@@ -2526,6 +2577,8 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1403
 msgid "Rename a dataset and move it to be under a different parent dataset:"
 msgstr ""
+"Renomeie um conjunto de dados e mova-o para um conjunto de dados pai "
+"diferente:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1439
@@ -2592,7 +2645,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1455
 #, no-wrap
 msgid "Setting Dataset Properties"
-msgstr ""
+msgstr "Configurando Propriedades do Conjunto de Dados"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1458
@@ -2649,7 +2702,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1482
 #, no-wrap
 msgid "Getting and Setting Share Properties"
-msgstr ""
+msgstr "Obtendo e definindo propriedades de compartilhamento"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1485
@@ -2675,7 +2728,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1497
 msgid "To enable sharing of a dataset, enter:"
-msgstr ""
+msgstr "Para ativar o compartilhamento de um conjunto de dados, insira:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1501
@@ -2701,7 +2754,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1511
 #, no-wrap
 msgid "Managing Snapshots"
-msgstr ""
+msgstr "Gerenciando Snapshots"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1514
@@ -2749,7 +2802,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1518
 #, no-wrap
 msgid "Creating Snapshots"
-msgstr ""
+msgstr "Criando Snapshots"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1521
@@ -2761,7 +2814,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1523
 msgid "Create a recursive snapshot of the entire pool:"
-msgstr ""
+msgstr "Crie um Snapshot recursivo de todo o pool:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1561
@@ -2869,7 +2922,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1591
 #, no-wrap
 msgid "Comparing Snapshots"
-msgstr ""
+msgstr "Comparando Snapshots"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1594
@@ -2943,6 +2996,8 @@ msgid ""
 "Compare two snapshots by providing the full dataset name and snapshot name "
 "of both datasets:"
 msgstr ""
+"Compare dois snapshots fornecendo o nome completo do conjunto de dados e o "
+"nome do snapshot de ambos os conjuntos de dados:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1643
@@ -2971,7 +3026,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1648
 #, no-wrap
 msgid "Snapshot Rollback"
-msgstr ""
+msgstr "Reversão de um Snapshot"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1651
@@ -3099,7 +3154,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1709
 #, no-wrap
 msgid "Restoring Individual Files from Snapshots"
-msgstr ""
+msgstr "Restaurando arquivos individuais a partir de Snapshots"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1712
@@ -3182,6 +3237,10 @@ msgid ""
 "directories because that would change the state of the dataset they "
 "represent."
 msgstr ""
+"O erro lembra ao usuário que os snapshots são somente de leitura e não podem "
+"ser alterados após a criação. Os arquivos não podem ser copiados para ou "
+"removidos dos diretórios de snapshot porque isso alteraria o estado do "
+"conjunto de dados que eles representam."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1750
@@ -3206,7 +3265,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1754
 #, no-wrap
 msgid "Managing Clones"
-msgstr ""
+msgstr "Gerenciando Clones"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1757
@@ -3227,6 +3286,8 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1759
 msgid "To demonstrate the clone feature, this example dataset is used:"
 msgstr ""
+"Para demonstrar o recurso de clonagem, este conjunto de dados de exemplo é "
+"usado:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1767
@@ -3249,6 +3310,13 @@ msgid ""
 "promoted to a dataset and the old file system removed. This is not strictly "
 "necessary, as the clone and dataset can coexist without problems."
 msgstr ""
+"Um uso típico de clones é experimentar um conjunto de dados específico, "
+"mantendo o snapshot em volta, para o caso de algo dar errado. Como os "
+"snapshots não podem ser alterados, um clone de leitura/gravação de um "
+"snapshot é criado. Depois que o resultado desejado é alcançado no clone, o "
+"clone pode ser promovido para se tornar um conjunto de dados e o sistema de "
+"arquivos antigo é removido. Isso não é estritamente necessário, pois o clone "
+"e o conjunto de dados podem coexistir sem problemas."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1777
@@ -3341,7 +3409,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1816
 #, no-wrap
 msgid "Replication"
-msgstr ""
+msgstr "Replicação"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1819
@@ -3479,7 +3547,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1879
 #, no-wrap
 msgid "Incremental Backups"
-msgstr ""
+msgstr "Backups Incrementais"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1882
@@ -3612,7 +3680,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1936
 msgid "This configuration is required:"
-msgstr ""
+msgstr "Essa configuração é necessária:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1938
@@ -3634,7 +3702,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1940
 msgid "On the sending system:"
-msgstr ""
+msgstr "No sistema de envio:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1944
@@ -3648,6 +3716,9 @@ msgid ""
 "To mount the pool, the unprivileged user must own the directory, and regular "
 "users must be allowed to mount file systems. On the receiving system:"
 msgstr ""
+"Para montar o pool, o usuário não privilegiado deve ser o dono do diretório "
+"e os usuários regulares devem poder montar sistemas de arquivos. No sistema "
+"de recebimento:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1956
@@ -3696,7 +3767,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1969
 #, no-wrap
 msgid "Dataset, User, and Group Quotas"
-msgstr ""
+msgstr "Cotas para Datasets, Usuários e Grupos"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1972
@@ -3796,7 +3867,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2011
 msgid "To remove any quota:"
-msgstr ""
+msgstr "Para remover qualquer cota:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2015
@@ -3877,7 +3948,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2050
 #, no-wrap
 msgid "Reservations"
-msgstr ""
+msgstr "Reservas"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2053
@@ -3904,7 +3975,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2062
 msgid "To clear any reservation:"
-msgstr ""
+msgstr "Para cancelar qualquer reserva:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2066
@@ -3939,7 +4010,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2079
 #, no-wrap
 msgid "Compression"
-msgstr ""
+msgstr "Compressão"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2082
@@ -3974,6 +4045,8 @@ msgid ""
 "The administrator can monitor the effectiveness of compression using a "
 "number of dataset properties."
 msgstr ""
+"O administrador pode monitorar a eficácia da compactação usando várias "
+"propriedades do conjunto de dados."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2095
@@ -4019,6 +4092,11 @@ msgid ""
 "compression, more data may be written than would fit with uncompressed "
 "backups."
 msgstr ""
+"A compactação pode ter uma interação inesperada semelhante com backups. "
+"Muitas vezes, as cotas são usadas para limitar a quantidade de dados que "
+"podem ser armazenados para garantir que haja espaço de backup suficiente "
+"disponível. No entanto, uma vez que as cotas não consideram a compactação, "
+"mais dados podem ser gravados do que caberia com os backups descompactados."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2104
@@ -4088,7 +4166,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2117
 #, no-wrap
 msgid "Deduplication"
-msgstr ""
+msgstr "Desduplicação"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2120
@@ -4122,6 +4200,10 @@ msgid ""
 "activating this option. A pool with a freshly activated deduplication "
 "property will look like this example:"
 msgstr ""
+"Somente novos dados sendo gravados no pool serão desduplicados. Os dados que "
+"já foram gravados no pool não serão desduplicados simplesmente ativando essa "
+"opção. Um pool com uma propriedade de desduplicação ativada recentemente "
+"será semelhante a este exemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2135
@@ -4153,7 +4235,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2147
 msgid "Redundant data is detected and deduplicated:"
-msgstr ""
+msgstr "Dados redundantes são detectados e desduplicados:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2153
@@ -4255,7 +4337,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2191
 #, no-wrap
 msgid "Delegated Administration"
-msgstr ""
+msgstr "Administração Delegada"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2194
@@ -4274,7 +4356,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2196
 #, no-wrap
 msgid "Delegating Dataset Creation"
-msgstr ""
+msgstr "Delegando a criação de conjunto de dados"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2199
@@ -4292,7 +4374,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2201
 #, no-wrap
 msgid "Delegating Permission Delegation"
-msgstr ""
+msgstr "Delegando a delegação de permissão"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2204
@@ -4308,13 +4390,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2206
 #, no-wrap
 msgid "Advanced Topics"
-msgstr ""
+msgstr "Tópicos Avançados"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2209
 #, no-wrap
 msgid "Tuning"
-msgstr ""
+msgstr "Otimizações"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2212
@@ -4557,7 +4639,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2240
 #, no-wrap
 msgid "Memory"
-msgstr ""
+msgstr "Memória"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2243
@@ -4576,7 +4658,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2244
 #, no-wrap
 msgid "Kernel Configuration"
-msgstr ""
+msgstr "Configuração do Kernel"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2247
@@ -4605,7 +4687,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2255
 #, no-wrap
 msgid "Loader Tunables"
-msgstr ""
+msgstr "Ajustes do Carregador"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2258
@@ -4637,7 +4719,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2270
 #, no-wrap
 msgid "Additional Resources"
-msgstr ""
+msgstr "Recursos adicionais"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2273
