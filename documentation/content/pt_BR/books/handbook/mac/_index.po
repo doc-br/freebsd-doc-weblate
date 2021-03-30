@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-03-30 23:19+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookmac_index/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/mac/_index.adoc:1
@@ -31,13 +34,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:9
 #, no-wrap
 msgid "Mandatory Access Control"
-msgstr ""
+msgstr "Controle de acesso obrigatório"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/mac/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "Sinopse"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:48
@@ -65,7 +68,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:52
 msgid "After reading this chapter, you will know:"
-msgstr ""
+msgstr "Depois de ler este capítulo, você saberá:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:54
@@ -108,7 +111,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:61
 msgid "Before reading this chapter, you should:"
-msgstr ""
+msgstr "Antes de ler este capítulo, você deve:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:63
@@ -160,7 +163,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:76
 #, no-wrap
 msgid "Key Terms"
-msgstr ""
+msgstr "Termos chave"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:79
@@ -282,7 +285,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:94
 #, no-wrap
 msgid "Understanding MAC Labels"
-msgstr ""
+msgstr "Entendendo os rótulos MAC"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:97
@@ -303,6 +306,11 @@ msgid ""
 "the information necessary to make a decision. In other policies, the labels "
 "may be processed as part of a larger rule set."
 msgstr ""
+"O rótulo de segurança em um objeto é usado como parte de uma decisão de "
+"controle de acesso de segurança por uma política. Com algumas políticas, o "
+"rótulo contém todas as informações necessárias para tomar uma decisão. Em "
+"outras políticas, os rótulos podem ser processados como parte de um conjunto "
+"de regras maior."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:101
@@ -312,6 +320,10 @@ msgid ""
 "of the pros and cons of each in order to implement policies which meet the "
 "requirements of the system's security model."
 msgstr ""
+"Existem dois tipos de políticas de rótulos: rótulo único e rótulo múltiplo. "
+"Por padrão, o sistema usará rótulo único. O administrador deve estar ciente "
+"dos prós e contras de cada um para implementar políticas que atendam aos "
+"requisitos do modelo de segurança do sistema."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:103
@@ -323,6 +335,12 @@ msgid ""
 "However, in many environments, a single label policy may be all that is "
 "required."
 msgstr ""
+"Uma diretiva de segurança de rótulo único permite que apenas um rótulo seja "
+"usado para cada sujeito ou objeto. Como uma política de rótulo único impõe "
+"um conjunto de permissões de acesso em todo o sistema, ela fornece menor "
+"sobrecarga de administração, mas diminui a flexibilidade das políticas que "
+"suportam rotulagem. No entanto, em muitos ambientes, uma única diretiva de "
+"rótulo pode ser tudo o que é necessário."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:105
@@ -354,6 +372,10 @@ msgid ""
 "file system has a label. This includes directories, files, and even device "
 "nodes."
 msgstr ""
+"Usar uma política de rótulos múltiplos em uma partição e estabelecer um "
+"modelo de segurança de rótulos múltiplos pode aumentar a sobrecarga "
+"administrativa, já que tudo nesse sistema de arquivos tem um rótulo. Isso "
+"inclui diretórios, arquivos e até mesmo nós de dispositivos."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:111
@@ -392,7 +414,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:124
 #, no-wrap
 msgid "Label Configuration"
-msgstr ""
+msgstr "Configuração de rótulo"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:127
@@ -402,6 +424,10 @@ msgid ""
 "for object or subject configuration or the manipulation and verification of "
 "the configuration."
 msgstr ""
+"Praticamente todos os aspectos da configuração do módulo de política de "
+"rótulo serão executados usando os utilitários do sistema base. Esses "
+"comandos fornecem uma interface simples para a configuração de objeto ou "
+"sujeito ou a manipulação e verificação da configuração."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:129
@@ -466,7 +492,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:150
 #, no-wrap
 msgid "Predefined Labels"
-msgstr ""
+msgstr "Rótulos pré-definidos"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:153
@@ -510,7 +536,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:160
 #, no-wrap
 msgid "Numeric Labels"
-msgstr ""
+msgstr "Rótulos numéricos"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:163
@@ -543,6 +569,10 @@ msgid ""
 "one is the high grade. In most configurations, such fine-grained settings "
 "are not needed as they are considered to be advanced configurations."
 msgstr ""
+"Neste exemplo, o primeiro grau seria considerado o grau efetivo com "
+"compartimentos efetivos, o segundo grau é o grau baixo e o último é o grau "
+"alto. Na maioria das configurações, essas definições refinadas não são "
+"necessárias, pois são consideradas configurações avançadas."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:174
@@ -551,6 +581,9 @@ msgid ""
 "reflect the range of available rights in the system, and network interfaces, "
 "where they are used for access control."
 msgstr ""
+"Objetos do sistema possuem apenas um grau e compartimento atuais. Os "
+"sujeitos do sistema refletem o intervalo de direitos disponíveis no sistema "
+"e as interfaces de rede, onde são usados para controle de acesso."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:176
@@ -570,7 +603,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:177
 #, no-wrap
 msgid "User Labels"
-msgstr ""
+msgstr "Rótulos de usuários"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:180
@@ -645,12 +678,15 @@ msgid ""
 "classes. In depth planning is required as this can become difficult to "
 "manage."
 msgstr ""
+"Muitos sites têm um grande número de usuários que exigem várias classes de "
+"usuário diferentes. Um planejamento detalhado é necessário, pois isso pode "
+"dificultar o gerenciamento."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/mac/_index.adoc:216
 #, no-wrap
 msgid "Network Interface Labels"
-msgstr ""
+msgstr "Rótulos de interface de rede"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:219
@@ -697,7 +733,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:232
 #, no-wrap
 msgid "Planning the Security Configuration"
-msgstr ""
+msgstr "Planejando a configuração de segurança"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:235
@@ -712,6 +748,7 @@ msgstr ""
 msgid ""
 "How to classify information and resources available on the target systems."
 msgstr ""
+"Como classificar informações e recursos disponíveis nos sistemas de destino."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:238
@@ -719,6 +756,8 @@ msgid ""
 "Which information or resources to restrict access to along with the type of "
 "restrictions that should be applied."
 msgstr ""
+"Quais informações ou recursos para restringir o acesso, juntamente com o "
+"tipo de restrições que devem ser aplicadas."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:239
@@ -759,6 +798,14 @@ msgid ""
 "effectively implement the various security policy modules offered by the "
 "framework."
 msgstr ""
+"A sobrecarga é mínima quando comparada ao efeito duradouro de uma estrutura "
+"que fornece a capacidade de escolher quais políticas são necessárias para "
+"uma configuração específica e que reduzem a sobrecarga de desempenho. A "
+"redução do suporte a políticas desnecessárias pode aumentar o desempenho "
+"geral do sistema, além de oferecer flexibilidade de escolha. Uma boa "
+"implementação consideraria os requisitos gerais de segurança e implementaria "
+"efetivamente os vários módulos de política de segurança oferecidos pelo "
+"framework."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:247
@@ -815,6 +862,9 @@ msgid ""
 "and configuration, and in some cases, provides insight on applicable "
 "situations."
 msgstr ""
+"O restante deste capítulo aborda os módulos disponíveis, descreve seu uso e "
+"configuração e, em alguns casos, fornece informações sobre as situações "
+"aplicáveis."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:260
@@ -830,7 +880,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:263
 #, no-wrap
 msgid "Available MAC Policies"
-msgstr ""
+msgstr "Políticas MAC Disponíveis"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:266
@@ -850,12 +900,15 @@ msgid ""
 "requirements. Each policy is summarized below. The last three policies "
 "support integer settings in place of the three default labels."
 msgstr ""
+"O FreeBSD inclui um grupo de políticas que cobrirá a maioria dos requisitos "
+"de segurança. Cada política é resumida abaixo. As três últimas políticas "
+"suportam configurações inteiras no lugar dos três rótulos padrão."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/mac/_index.adoc:270
 #, no-wrap
 msgid "The MAC See Other UIDs Policy"
-msgstr ""
+msgstr "O MAC vê a Política de Outros UIDs"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:273
@@ -917,7 +970,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:287
 #, no-wrap
 msgid "The MAC BSD Extended Policy"
-msgstr ""
+msgstr "A Política Estendida do BSD MAC"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:290
@@ -1015,12 +1068,14 @@ msgid ""
 "Extreme caution should be taken when working with this module as incorrect "
 "use could block access to certain parts of the file system."
 msgstr ""
+"Deve-se ter extremo cuidado ao trabalhar com este módulo, pois o uso "
+"incorreto pode bloquear o acesso a certas partes do sistema de arquivos."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/mac/_index.adoc:330
 #, no-wrap
 msgid "The MAC Interface Silencing Policy"
-msgstr ""
+msgstr "A política de silenciamento da interface MAC"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:333
@@ -1086,7 +1141,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:349
 #, no-wrap
 msgid "The MAC Port Access Control List Policy"
-msgstr ""
+msgstr "A política de lista de controle de acesso da porta MAC"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:352
@@ -1209,7 +1264,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:397
 #, no-wrap
 msgid "The MAC Partition Policy"
-msgstr ""
+msgstr "A Política de Partição MAC"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:400
@@ -1268,7 +1323,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:419
 msgid "This command displays the partition label and the process list:"
-msgstr ""
+msgstr "Este comando exibe o rótulo da partição e a lista de processos:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:423
@@ -1282,6 +1337,8 @@ msgid ""
 "This command displays another user's process partition label and that user's "
 "currently running processes:"
 msgstr ""
+"Esse comando exibe o rótulo da partição de processo de outro usuário e os "
+"processos atualmente em execução desse usuário:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:430
@@ -1300,7 +1357,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:438
 #, no-wrap
 msgid "The MAC Multi-Level Security Module"
-msgstr ""
+msgstr "O módulo de segurança multinível MAC"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:441
@@ -1369,6 +1426,8 @@ msgstr ""
 msgid ""
 "A hierarchical security level with a set of non-hierarchical categories."
 msgstr ""
+"Um nível de segurança hierárquico com um conjunto de categorias não "
+"hierárquicas."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:458
@@ -1382,7 +1441,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:459
 msgid "Secrecy, or the prevention of inappropriate disclosure of data."
-msgstr ""
+msgstr "Sigilo, ou a prevenção de divulgação inadequada de dados."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:460
@@ -1391,6 +1450,9 @@ msgid ""
 "sensitivity levels without leaking information between secret and "
 "confidential."
 msgstr ""
+"Uma base para o projeto de sistemas que lidam simultaneamente com dados em "
+"múltiplos níveis de sensibilidade sem vazar informações entre secretas e "
+"confidenciais."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:462
@@ -1487,7 +1549,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:491
 #, no-wrap
 msgid "The MAC Biba Module"
-msgstr ""
+msgstr "O Módulo MAC Biba"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:494
@@ -1553,7 +1615,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:510
 msgid "Biba provides:"
-msgstr ""
+msgstr "O Biba fornece:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:512
@@ -1561,6 +1623,8 @@ msgid ""
 "Hierarchical integrity levels with a set of non-hierarchical integrity "
 "categories."
 msgstr ""
+"Níveis de integridade hierárquica com um conjunto de categorias de "
+"integridade não hierárquicas."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:513
@@ -1574,7 +1638,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:514
 msgid "Integrity by preventing inappropriate modification of data."
-msgstr ""
+msgstr "Integridade, impedindo a modificação inadequada de dados."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:515
@@ -1584,7 +1648,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:517
 msgid "The following tunables can be used to manipulate the Biba policy:"
-msgstr ""
+msgstr "Os seguintes ajustes podem ser usados para manipular a política Biba:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:519
@@ -1649,6 +1713,16 @@ msgid ""
 "utilities. Other users would be grouped into other categories such as "
 "testers, designers, or end users and would only be permitted read access."
 msgstr ""
+"Durante a fase de planejamento inicial, um administrador deve estar "
+"preparado para particionar os usuários em graus, níveis e áreas. O sistema "
+"terá como padrão um rótulo alto assim que esse módulo de política for "
+"ativado e cabe ao administrador configurar as diferentes classificações e "
+"níveis para os usuários. Em vez de usar níveis de liberação, um bom método "
+"de planejamento pode incluir tópicos. Por exemplo, permita apenas que os "
+"desenvolvedores modifiquem o acesso ao repositório do código-fonte, ao "
+"compilador do código-fonte e a outros utilitários de desenvolvimento. Outros "
+"usuários seriam agrupados em outras categorias, como testadores, designers "
+"ou usuários finais, e somente o acesso de leitura seria permitido."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:536
@@ -1661,12 +1735,20 @@ msgid ""
 "a source code repository. A less useful implementation would be a personal "
 "workstation, a machine used as a router, or a network firewall."
 msgstr ""
+"Um sujeito de integridade inferior é incapaz de escrever para um sujeito de "
+"integridade superior e um sujeito de integridade superior não pode listar ou "
+"ler um objeto de integridade inferior. Definir um rótulo com o grau mais "
+"baixo possível pode torná-lo inacessível aos sujeitos. Alguns ambientes em "
+"potencial para esse módulo de política de segurança incluiriam um servidor "
+"Web restrito, uma máquina de desenvolvimento e teste e um repositório de "
+"código-fonte. Uma implementação menos útil seria uma estação de trabalho "
+"pessoal, uma máquina usada como roteador ou um firewall de rede."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/mac/_index.adoc:538
 #, no-wrap
 msgid "The MAC Low-watermark Module"
-msgstr ""
+msgstr "O módulo MAC de marca d'água baixa"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:541
@@ -1736,7 +1818,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:563
 #, no-wrap
 msgid "User Lock Down"
-msgstr ""
+msgstr "Bloqueio do Usuário"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:566
@@ -1745,6 +1827,9 @@ msgid ""
 "fifty users. Users will have login capabilities and are permitted to store "
 "data and access resources."
 msgstr ""
+"Este exemplo considera um sistema de armazenamento relativamente pequeno com "
+"menos de cinquenta usuários. Os usuários terão recursos de login e terão "
+"permissão para armazenar dados e acessar recursos."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:568
@@ -1816,7 +1901,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:595
 #, no-wrap
 msgid "Nagios in a MAC Jail"
-msgstr ""
+msgstr "Nagios em Jail MAC"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:598
@@ -1841,7 +1926,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:601
 #, no-wrap
 msgid "Create an Insecure User Class"
-msgstr ""
+msgstr "Criar uma Classe de Usuário Insegura"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:604
@@ -1883,6 +1968,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:633
 msgid "Then, add the following line to the default user class section:"
 msgstr ""
+"Em seguida, adicione a seguinte linha a seção de classe de usuário padrão:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:637
@@ -1894,6 +1980,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:640
 msgid "Save the edits and issue the following command to rebuild the database:"
 msgstr ""
+"Salve as edições e rode o seguinte comando para reconstruir o banco de dados:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:644
@@ -1905,7 +1992,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:646
 #, no-wrap
 msgid "Configure Users"
-msgstr ""
+msgstr "Configurar usuários"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:649
@@ -1951,7 +2038,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:671
 #, no-wrap
 msgid "Create the Contexts File"
-msgstr ""
+msgstr "Crie o arquivo de contextos"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:674
@@ -2073,7 +2160,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:723
 #, no-wrap
 msgid "Loader Configuration"
-msgstr ""
+msgstr "Configuração do Inicializador"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:726
@@ -2109,7 +2196,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:741
 #, no-wrap
 msgid "Testing the Configuration"
-msgstr ""
+msgstr "Testando a Configuração"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:744
@@ -2171,13 +2258,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:769
 #, no-wrap
 msgid "Troubleshooting the MAC Framework"
-msgstr ""
+msgstr "Solução de problemas do framework MAC"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:772
 msgid ""
 "This section discusses common configuration errors and how to resolve them."
-msgstr ""
+msgstr "Esta seção discute erros de configuração comuns e como resolvê-los."
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/mac/_index.adoc:773
@@ -2188,7 +2275,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:775
 msgid "The following steps may resolve this transient error:"
-msgstr ""
+msgstr "As etapas a seguir podem resolver este erro transitório:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:779
@@ -2200,7 +2287,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:780
 msgid "Reboot into single user mode."
-msgstr ""
+msgstr "Reinicie no modo single user."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:781
@@ -2210,7 +2297,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:782
 msgid "Reboot the system."
-msgstr ""
+msgstr "Reinicie o sistema."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:783
