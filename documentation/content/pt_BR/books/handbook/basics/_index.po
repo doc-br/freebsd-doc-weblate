@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-03-30 23:19+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookbasics_index/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/basics/_index.adoc:1
@@ -37,7 +40,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "Sinopse"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:48
@@ -51,17 +54,17 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:50
 msgid "After reading this chapter, you will know:"
-msgstr ""
+msgstr "Depois de ler este capítulo, você saberá:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:52
 msgid "How to use and configure virtual consoles."
-msgstr ""
+msgstr "Como usar e configurar consoles virtuais."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:53
 msgid "How to create and manage users and groups on FreeBSD."
-msgstr ""
+msgstr "Como criar e gerenciar usuários e grupos no FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:54
@@ -71,48 +74,48 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:55
 msgid "The default FreeBSD file system layout."
-msgstr ""
+msgstr "O layout padrão do sistema de arquivos do FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:56
 msgid "The FreeBSD disk organization."
-msgstr ""
+msgstr "A organização do disco no FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:57
 msgid "How to mount and unmount file systems."
-msgstr ""
+msgstr "Como montar e desmontar sistemas de arquivos."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:58
 msgid "What processes, daemons, and signals are."
-msgstr ""
+msgstr "O que são processos, daemons e sinais."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:59
 msgid "What a shell is, and how to change the default login environment."
-msgstr ""
+msgstr "O que é um shell e como alterar o ambiente de login padrão."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:60
 msgid "How to use basic text editors."
-msgstr ""
+msgstr "Como usar editores de texto básicos."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:61
 msgid "What devices and device nodes are."
-msgstr ""
+msgstr "O que são devices e device nodes."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:62
 msgid "How to read manual pages for more information."
-msgstr ""
+msgstr "Como ler páginas de manual para obter maiores informações."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/basics/_index.adoc:64
 #, no-wrap
 msgid "Virtual Consoles and Terminals"
-msgstr ""
+msgstr "Consoles e Terminais Virtuais"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:67
@@ -121,6 +124,9 @@ msgid ""
 "environment during startup, the system will boot into a command line login "
 "prompt, as seen in this example:"
 msgstr ""
+"A menos que o FreeBSD tenha sido configurado para iniciar automaticamente um "
+"ambiente gráfico durante a inicialização, o sistema inicializará em um "
+"prompt de login da linha de comando, como visto neste exemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:71
@@ -176,7 +182,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:84
 #, no-wrap
 msgid "Virtual Consoles"
-msgstr ""
+msgstr "Consoles Virtuais"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:87
@@ -188,6 +194,13 @@ msgid ""
 "messages will appear over the command or file that the user is working on, "
 "making it difficult to concentrate on the work at hand."
 msgstr ""
+"Enquanto o console do sistema pode ser usado para interagir com o sistema, "
+"um usuário trabalhando a partir da linha de comando no teclado de um sistema "
+"FreeBSD normalmente irá efetuar login em um console virtual. Isso ocorre "
+"porque as mensagens do sistema são configuradas por padrão para serem "
+"exibidas no console do sistema. Essas mensagens serão exibidas por cima do "
+"comando ou arquivo em que o usuário estiver trabalhando, dificultando a "
+"concentração no trabalho em questão."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:89
@@ -198,6 +211,11 @@ msgid ""
 "the command line equivalent of having several windows open at the same time "
 "in a graphical environment."
 msgstr ""
+"Por padrão, o FreeBSD é configurado para fornecer vários consoles virtuais "
+"para a entrada de comandos. Cada console virtual tem seu próprio prompt de "
+"login e shell e é fácil alternar entre os consoles virtuais. Isso "
+"essencialmente fornece a linha de comando equivalente a ter várias janelas "
+"abertas ao mesmo tempo em um ambiente gráfico."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:91
@@ -220,6 +238,11 @@ msgid ""
 "that are launched in one virtual console do not stop running when the user "
 "switches to a different virtual console."
 msgstr ""
+"Ao mudar de um console para o próximo, o FreeBSD gerencia a saída da tela. O "
+"resultado é uma ilusão de ter várias telas virtuais e teclados que podem ser "
+"usados para digitar comandos para o FreeBSD rodar. Os programas executados "
+"em um console virtual não param de ser executados quando o usuário alterna "
+"para um console virtual diferente."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:95
@@ -279,7 +302,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:119
 #, no-wrap
 msgid "Single User Mode"
-msgstr ""
+msgstr "Modo \"Single User\""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:122
@@ -339,7 +362,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:142
 #, no-wrap
 msgid "Changing Console Video Modes"
-msgstr ""
+msgstr "Alterar os modos de vídeo do console"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:145
@@ -399,7 +422,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:173
 #, no-wrap
 msgid "Users and Basic Account Management"
-msgstr ""
+msgstr "Usuários e Gerenciamento Básico de Contas"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:176
@@ -409,21 +432,26 @@ msgid ""
 "time, any number of users can log in to the system through the network. To "
 "use the system, each user should have their own user account."
 msgstr ""
+"O FreeBSD permite que múltiplos usuários usem o computador ao mesmo tempo. "
+"Enquanto apenas um usuário pode se sentar em frente à tela e usar o teclado "
+"a qualquer momento, qualquer número de usuários pode efetuar o login no "
+"sistema através da rede. Para usar o sistema, cada usuário deve ter sua "
+"própria conta de usuário."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:178
 msgid "This chapter describes:"
-msgstr ""
+msgstr "Este capítulo descreve:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:180
 msgid "The different types of user accounts on a FreeBSD system."
-msgstr ""
+msgstr "Os diferentes tipos de contas de usuários em um sistema FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:181
 msgid "How to add, remove, and modify user accounts."
-msgstr ""
+msgstr "Como adicionar, remover e modificar contas de usuários."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:182
@@ -431,17 +459,19 @@ msgid ""
 "How to set limits to control the resources that users and groups are allowed "
 "to access."
 msgstr ""
+"Como definir limites para controlar os recursos que usuários e grupos podem "
+"acessar."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:183
 msgid "How to create groups and add users as members of a group."
-msgstr ""
+msgstr "Como criar grupos e adicionar usuários como membros de um grupo."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/basics/_index.adoc:185
 #, no-wrap
 msgid "Account Types"
-msgstr ""
+msgstr "Tipos de conta"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:188
@@ -449,6 +479,9 @@ msgid ""
 "Since all access to the FreeBSD system is achieved using accounts and all "
 "processes are run by users, user and account management is important."
 msgstr ""
+"Como todo acesso ao sistema FreeBSD é obtido usando contas e todos os "
+"processos são executados por usuários, o gerenciamento de usuários e contas "
+"é importante."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:190
@@ -456,12 +489,14 @@ msgid ""
 "There are three main types of accounts: system accounts, user accounts, and "
 "the superuser account."
 msgstr ""
+"Existem três tipos principais de contas: contas do sistema, contas de "
+"usuário e a conta de superusuário."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/basics/_index.adoc:192
 #, no-wrap
 msgid "System Accounts"
-msgstr ""
+msgstr "Contas do sistema"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:195
@@ -470,6 +505,9 @@ msgid ""
 "The reason for this is security; if all services ran as the superuser, they "
 "could act without restriction."
 msgstr ""
+"As contas do sistema são usadas para executar serviços como DNS, correio e "
+"servidores web. A razão para isso é a segurança; se todos os serviços fossem "
+"executados como superusuário, eles poderiam agir sem restrições."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:197
@@ -498,7 +536,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:207
 #, no-wrap
 msgid "User Accounts"
-msgstr ""
+msgstr "Contas de usuário"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:210
@@ -508,6 +546,11 @@ msgid ""
 "This allows the administrator to find out who is doing what and prevents "
 "users from clobbering the settings of other users."
 msgstr ""
+"As contas de usuários são atribuídas a pessoas reais e são usadas para "
+"efetuar login e usar o sistema. Todas as pessoas que acessam o sistema devem "
+"ter uma conta de usuário exclusiva. Isso permite que o administrador "
+"descubra quem está fazendo o que e impede que usuários alterem as "
+"configurações de outros usuários."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:212
@@ -516,6 +559,9 @@ msgid ""
 "system, by configuring their default shell, editor, key bindings, and "
 "language settings."
 msgstr ""
+"Cada usuário pode configurar seu próprio ambiente para adequar o sistema ao "
+"seu uso, utilizando suas opções padrão para o shell, editor, atalhos de "
+"teclado e idioma."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:214
@@ -523,12 +569,14 @@ msgid ""
 "Every user account on a FreeBSD system has certain information associated "
 "with it:"
 msgstr ""
+"Cada conta de usuário em um sistema FreeBSD tem certas informações "
+"associadas:"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/basics/_index.adoc:215
 #, no-wrap
 msgid "User name"
-msgstr ""
+msgstr "Nome de usuário"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:217
@@ -544,12 +592,12 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:218
 #, no-wrap
 msgid "Password"
-msgstr ""
+msgstr "Senha"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:220
 msgid "Each account has an associated password."
-msgstr ""
+msgstr "Cada conta tem uma senha associada."
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/basics/_index.adoc:221
@@ -587,7 +635,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:227
 #, no-wrap
 msgid "Login class"
-msgstr ""
+msgstr "Classe de login"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:229
@@ -602,7 +650,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:230
 #, no-wrap
 msgid "Password change time"
-msgstr ""
+msgstr "Tempo para mudança de senha"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:232
@@ -611,12 +659,15 @@ msgid ""
 "enabled on a per-user basis, forcing some or all users to change their "
 "passwords after a certain amount of time has elapsed."
 msgstr ""
+"Por padrão as senhas não expiram. No entanto, a expiração de senha pode ser "
+"ativada por usuário, forçando alguns ou todos os usuários a alterar suas "
+"senhas após um determinado período de tempo."
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/basics/_index.adoc:233
 #, no-wrap
 msgid "Account expiration time"
-msgstr ""
+msgstr "Tempo de expiração da conta"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:235
@@ -632,7 +683,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:236
 #, no-wrap
 msgid "User's full name"
-msgstr ""
+msgstr "Nome completo do usuário"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:238
@@ -642,12 +693,16 @@ msgid ""
 "information can contain spaces, uppercase characters, and be more than 8 "
 "characters long."
 msgstr ""
+"O nome de usuário identifica a conta de forma única para o FreeBSD, mas não "
+"reflete necessariamente o nome real do usuário. Semelhante a um comentário, "
+"essas informações podem conter espaços, caracteres maiúsculos e ter mais de "
+"oito caracteres."
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/basics/_index.adoc:239
 #, no-wrap
 msgid "Home directory"
-msgstr ""
+msgstr "Diretório Inicial (home)"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:241
@@ -663,7 +718,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:242
 #, no-wrap
 msgid "User shell"
-msgstr ""
+msgstr "Shell do usuário"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:244
@@ -672,12 +727,16 @@ msgid ""
 "system. There are many different kinds of shells and experienced users will "
 "have their own preferences, which can be reflected in their account settings."
 msgstr ""
+"O shell fornece o ambiente padrão do usuário para interagir com o sistema. "
+"Existem muitos tipos diferentes de shells e usuários experientes terão suas "
+"próprias preferências, que podem ser refletidas nas suas configurações da "
+"conta."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/basics/_index.adoc:246
 #, no-wrap
 msgid "The Superuser Account"
-msgstr ""
+msgstr "A conta de superusuário"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:249
@@ -697,6 +756,12 @@ msgid ""
 "recommended to login as a user account and to only become the superuser when "
 "a command requires extra privilege."
 msgstr ""
+"O superusuário, ao contrário de outras contas de usuário, pode operar sem "
+"limites, e o uso indevido da conta de superusuário pode resultar em "
+"desastres espetaculares. As contas de usuário não podem destruir o sistema "
+"operacional por engano, por isso é recomendável fazer o login como uma conta "
+"de usuário e se tornar o superusuário somente quando um comando exigir "
+"privilégios extras."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:253
@@ -704,6 +769,9 @@ msgid ""
 "Always double and triple-check any commands issued as the superuser, since "
 "an extra space or missing character can mean irreparable data loss."
 msgstr ""
+"Sempre cheque duas ou três vezes todos os comandos emitidos como "
+"superusuário, pois um espaço extra ou um caractere ausente pode causar uma "
+"perda de dados irreparável."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:255
@@ -735,7 +803,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:260
 #, no-wrap
 msgid "Install a Program As the Superuser"
-msgstr ""
+msgstr "Instalar um programa como superusuário"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:272
@@ -764,7 +832,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:278
 #, no-wrap
 msgid "Managing Accounts"
-msgstr ""
+msgstr "Gerenciando Contas"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:281
@@ -779,7 +847,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:283
 #, no-wrap
 msgid "Utilities for Managing User Accounts"
-msgstr ""
+msgstr "Utilitários para gerenciar contas de usuários"
 
 #. type: Table
 #: documentation/content/en/books/handbook/basics/_index.adoc:303
@@ -837,7 +905,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:313
 #, no-wrap
 msgid "Adding a User on FreeBSD"
-msgstr ""
+msgstr "Adicionando um usuário no FreeBSD"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:348
@@ -881,6 +949,8 @@ msgid ""
 "Since the password is not echoed when typed, be careful to not mistype the "
 "password when creating the user account."
 msgstr ""
+"Como a senha não é mostrada quando digitada, tenha cuidado para não digitar "
+"a senha incorretamente ao criar a conta do usuário."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/basics/_index.adoc:357
@@ -908,18 +978,20 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:365
 msgid "Kills all processes owned by the user."
-msgstr ""
+msgstr "Elimina todos os processos pertencentes ao usuário."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:366
 msgid "Removes the user from the system's local password file."
-msgstr ""
+msgstr "Remove o usuário do arquivo de senhas do sistema."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:367
 msgid ""
 "Optionally removes the user's home directory, if it is owned by the user."
 msgstr ""
+"Opcionalmente, remove o diretório pessoal do usuário, se ele for de "
+"propriedade do usuário."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:368
@@ -956,6 +1028,8 @@ msgstr ""
 msgid ""
 "By default, an interactive mode is used, as shown in the following example."
 msgstr ""
+"Por padrão, um modo interativo é usado, conforme mostrado no exemplo a "
+"seguir."
 
 #. type: Block title
 #: documentation/content/en/books/handbook/basics/_index.adoc:375
@@ -1004,6 +1078,8 @@ msgid ""
 "This utility will prompt for the user's password when exiting the editor, "
 "unless the utility is run as the superuser."
 msgstr ""
+"Este utilitário solicitará a senha do usuário ao sair do editor, a menos que "
+"o utilitário seja executado como superusuário."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:403
@@ -1088,7 +1164,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:454
 #, no-wrap
 msgid "Changing Your Password"
-msgstr ""
+msgstr "Alterando Sua Senha"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:466
@@ -1116,7 +1192,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:471
 #, no-wrap
 msgid "Changing Another User's Password as the Superuser"
-msgstr ""
+msgstr "Mudando a senha de outro usuário como superusuário"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:482
@@ -1157,7 +1233,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:496
 #, no-wrap
 msgid "Managing Groups"
-msgstr ""
+msgstr "Gerenciando Grupos"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:499
@@ -1290,7 +1366,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:558
 #, no-wrap
 msgid "Permissions"
-msgstr ""
+msgstr "Permissões"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:561
@@ -1302,6 +1378,12 @@ msgid ""
 "improperly access the files used by the operating system or owned by other "
 "users."
 msgstr ""
+"No FreeBSD, todo arquivo e diretório tem um conjunto associado de permissões "
+"e vários utilitários estão disponíveis para visualizar e modificar essas "
+"permissões. É necessário entender como as permissões funcionam para garantir "
+"que os usuários consigam acessar os arquivos que precisam e não consigam "
+"acessar os arquivos usados pelo sistema operacional ou de propriedade de "
+"outros usuários."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:563
@@ -1456,7 +1538,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:629
 #, no-wrap
 msgid "Symbolic Permissions"
-msgstr ""
+msgstr "Permissões simbólicas"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:632
@@ -1465,6 +1547,9 @@ msgid ""
 "permissions to files or directories. Symbolic permissions use the syntax of "
 "(who) (action) (permissions), where the following values are available:"
 msgstr ""
+"Permissões simbólicas usam caracteres em vez de valores octais para atribuir "
+"permissões a arquivos ou diretórios. Permissões simbólicas usam a sintaxe de "
+"(quem) (ação) (permissões), onde os seguintes valores estão disponíveis:"
 
 #. type: Table
 #: documentation/content/en/books/handbook/basics/_index.adoc:687
@@ -1556,7 +1641,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:703
 #, no-wrap
 msgid "FreeBSD File Flags"
-msgstr ""
+msgstr "Flags de arquivos no FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:706
@@ -1658,6 +1743,8 @@ msgid ""
 "The setuid permission may be set by prefixing a permission set with the "
 "number four (4) as shown in the following example:"
 msgstr ""
+"A permissão setuid pode ser definida prefixando um conjunto de permissões "
+"com o número quatro (4), conforme mostrado no exemplo a seguir:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:748
@@ -1704,7 +1791,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:767
 msgid "In terminal A:"
-msgstr ""
+msgstr "No terminal A:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:772
@@ -1717,7 +1804,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:775
 msgid "In terminal B:"
-msgstr ""
+msgstr "No terminal B:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:779
@@ -1829,7 +1916,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:832
 #, no-wrap
 msgid "Directory Structure"
-msgstr ""
+msgstr "Estrutura de Diretórios"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:835
@@ -1979,7 +2066,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:950
 #, no-wrap
 msgid "Disk Organization"
-msgstr ""
+msgstr "Organização dos Discos"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:953
@@ -1999,6 +2086,10 @@ msgid ""
 "directories, allowing a hierarchy of directories within one another in order "
 "to organize data."
 msgstr ""
+"Os arquivos são armazenados em diretórios. Um diretório pode não conter "
+"arquivos ou pode conter centenas deles. Um diretório também pode conter "
+"outros diretórios, permitindo uma hierarquia de diretórios entre si para "
+"organizar os dados."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:957
@@ -2122,12 +2213,15 @@ msgid ""
 "create any others. There are some drawbacks to this approach, and one "
 "advantage."
 msgstr ""
+"É perfeitamente possível ter um sistema de arquivos raiz grande e não "
+"precisar criar nenhum outro. Existem algumas desvantagens nessa abordagem e "
+"uma vantagem."
 
 #. type: Block title
 #: documentation/content/en/books/handbook/basics/_index.adoc:988
 #, no-wrap
 msgid "Benefits of Multiple File Systems"
-msgstr ""
+msgstr "Benefícios de vários sistemas de arquivos"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:990
@@ -2150,6 +2244,12 @@ msgid ""
 "optimization to one that contains fewer, larger files. By having one big "
 "file system this optimization breaks down."
 msgstr ""
+"O FreeBSD otimiza automaticamente o layout dos arquivos em um sistema de "
+"arquivos, dependendo de como o sistema de arquivos está sendo usado. "
+"Portanto, um sistema de arquivos que contém muitos arquivos pequenos que são "
+"gravados com freqüência terá uma otimização diferente para um que contenha "
+"menos arquivos maiores. Ao ter um sistema de arquivos maior, essa otimização "
+"é quebrada."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:992
@@ -2159,12 +2259,17 @@ msgid ""
 "splitting data over multiple file systems it is more likely that the system "
 "will still come up, making it easier to restore from backup as necessary."
 msgstr ""
+"Os sistemas de arquivos do FreeBSD são robustos se a energia for perdida. No "
+"entanto, uma perda de energia em um ponto crítico ainda pode danificar a "
+"estrutura do sistema de arquivos. Ao dividir dados em vários sistemas de "
+"arquivos, é mais provável que o sistema ainda inicialize, facilitando a "
+"restauração do backup conforme necessário."
 
 #. type: Block title
 #: documentation/content/en/books/handbook/basics/_index.adoc:993
 #, no-wrap
 msgid "Benefit of a Single File System"
-msgstr ""
+msgstr "Benefício de um sistema de arquivos único"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:995
@@ -2175,6 +2280,11 @@ msgid ""
 "up, recreating the file system with the new size, and then restoring the "
 "backed up data."
 msgstr ""
+"Os sistemas de arquivos são de tamanho fixo. Se você cria um sistema de "
+"arquivos quando instala o FreeBSD e dá a ele um tamanho específico, você "
+"pode descobrir mais tarde que precisa aumentar a partição. Isso não é "
+"facilmente realizado sem um backup, recriando o sistema de arquivos com o "
+"novo tamanho e, em seguida, restaurando os dados de backup."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:999
@@ -2208,7 +2318,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1006
 msgid "Some partitions have certain conventions associated with them."
-msgstr ""
+msgstr "Algumas partições possuem certas convenções associadas a elas."
 
 #. type: Table
 #: documentation/content/en/books/handbook/basics/_index.adoc:1024
@@ -2290,12 +2400,15 @@ msgid ""
 "the slice to be used for FreeBSD, create a file system or swap space in each "
 "partition, and decide where each file system will be mounted."
 msgstr ""
+"Ao instalar o FreeBSD, configure as slices de disco, crie partições dentro "
+"da slice a ser usada para o FreeBSD, crie um sistema de arquivos ou espaço "
+"de swap em cada partição e decida onde cada sistema de arquivos será montado."
 
 #. type: Block title
 #: documentation/content/en/books/handbook/basics/_index.adoc:1041
 #, no-wrap
 msgid "Disk Device Names"
-msgstr ""
+msgstr "Nomes de dispositivos de disco"
 
 #. type: Table
 #: documentation/content/en/books/handbook/basics/_index.adoc:1073
@@ -2336,7 +2449,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1078
 #, no-wrap
 msgid "Sample Disk, Slice, and Partition Names"
-msgstr ""
+msgstr "Exemplo de Nomes de Disco, Slice e Partição"
 
 #. type: Table
 #: documentation/content/en/books/handbook/basics/_index.adoc:1090
@@ -2356,7 +2469,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1094
 #, no-wrap
 msgid "Conceptual Model of a Disk"
-msgstr ""
+msgstr "Modelo conceitual de um disco"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1098
@@ -2388,7 +2501,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1105
 #, no-wrap
 msgid "Mounting and Unmounting File Systems"
-msgstr ""
+msgstr "Montando e Desmontando Sistemas de Arquivos"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1108
@@ -2460,7 +2573,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1128
 msgid "An existing directory on which to mount the file system."
-msgstr ""
+msgstr "Um diretório existente no qual montar o sistema de arquivos."
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/basics/_index.adoc:1129
@@ -2557,7 +2670,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1158
 #, no-wrap
 msgid "Mount Options"
-msgstr ""
+msgstr "Opções de montagem"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/basics/_index.adoc:1159
@@ -2600,6 +2713,9 @@ msgid ""
 "write access when downgrading a file system's mount status from read-write "
 "to read-only."
 msgstr ""
+"Força a montagem de um sistema de arquivos sujo (perigoso) ou a revogação do "
+"acesso de gravação ao fazer o downgrade do status de montagem de um sistema "
+"de arquivos de leitura/gravação para somente leitura."
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/basics/_index.adoc:1168
@@ -2634,7 +2750,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1176
 msgid "Update mount options on the file system."
-msgstr ""
+msgstr "Atualiza as opções de montagem no sistema de arquivos."
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/basics/_index.adoc:1177
@@ -2645,7 +2761,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1179
 msgid "Be verbose."
-msgstr ""
+msgstr "Fica verboso (mostra mais informações)."
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/basics/_index.adoc:1180
@@ -2656,7 +2772,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1182
 msgid "Mount the file system read-write."
-msgstr ""
+msgstr "Monta o sistema de arquivos para leitura/gravação."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1184
@@ -2667,7 +2783,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1185
 #, no-wrap
 msgid "nosuid"
-msgstr ""
+msgstr "nosuid"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1187
@@ -2675,6 +2791,8 @@ msgid ""
 "Do not interpret setuid or setgid flags on the file system. This is also a "
 "useful security option."
 msgstr ""
+"Não interprete flags setuid ou setgid no sistema de arquivos. Essa também é "
+"uma opção de segurança útil."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/basics/_index.adoc:1189
@@ -2709,7 +2827,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1198
 #, no-wrap
 msgid "Processes and Daemons"
-msgstr ""
+msgstr "Processos e Daemons"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1201
@@ -2760,7 +2878,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1208
 #, no-wrap
 msgid "Viewing Processes"
-msgstr ""
+msgstr "Visualizando Processos"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1211
@@ -2888,7 +3006,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1259
 #, no-wrap
 msgid "Killing Processes"
-msgstr ""
+msgstr "Matando Processos"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1262
@@ -3046,7 +3164,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1314
 #, no-wrap
 msgid "Shells"
-msgstr ""
+msgstr "Shells"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1317
@@ -3107,7 +3225,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1327
 #, no-wrap
 msgid "Common Environment Variables"
-msgstr ""
+msgstr "Variáveis de Ambiente Comuns"
 
 #. type: Table
 #: documentation/content/en/books/handbook/basics/_index.adoc:1365
@@ -3209,7 +3327,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1388
 #, no-wrap
 msgid "Changing the Shell"
-msgstr ""
+msgstr "Alterando a Shell"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1391
@@ -3258,7 +3376,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1411
 #, no-wrap
 msgid "Advanced Shell Techniques"
-msgstr ""
+msgstr "Técnicas Avançadas de Shell"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1414
@@ -3332,6 +3450,9 @@ msgid ""
 "be passed around through various commands and redirected to or from a file. "
 "Another method of redirection is the pipe operator."
 msgstr ""
+"Através do uso desses descritores, a shell permite que a saída e a entrada "
+"sejam passadas por vários comandos e redirecionadas para/ou a partir de um "
+"arquivo. Outro método de redirecionamento é o operador de pipe."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1441
@@ -3361,7 +3482,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1450
 #, no-wrap
 msgid "Text Editors"
-msgstr ""
+msgstr "Editores de Texto"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1453
@@ -3407,7 +3528,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1461
 #, no-wrap
 msgid "Devices and Device Nodes"
-msgstr ""
+msgstr "Dispositivos e nós de dispositivos"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1464
@@ -3436,7 +3557,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1470
 #, no-wrap
 msgid "Manual Pages"
-msgstr ""
+msgstr "Páginas de Manual"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1473
@@ -3472,51 +3593,53 @@ msgid ""
 "Manual pages are divided into sections which represent the type of topic. In "
 "FreeBSD, the following sections are available:"
 msgstr ""
+"As páginas de manual são divididas em seções que representam o tipo de "
+"tópico. No FreeBSD, as seguintes seções estão disponíveis:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1489
 msgid "User commands."
-msgstr ""
+msgstr "Comandos de usuário."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1490
 msgid "System calls and error numbers."
-msgstr ""
+msgstr "Chamadas do sistema e números de erro."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1491
 msgid "Functions in the C libraries."
-msgstr ""
+msgstr "Funções nas bibliotecas C."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1492
 msgid "Device drivers."
-msgstr ""
+msgstr "Drivers de dispositivos."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1493
 msgid "File formats."
-msgstr ""
+msgstr "Formatos de arquivo."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1494
 msgid "Games and other diversions."
-msgstr ""
+msgstr "Jogos e outras diversões."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1495
 msgid "Miscellaneous information."
-msgstr ""
+msgstr "Informações diversas."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1496
 msgid "System maintenance and operation commands."
-msgstr ""
+msgstr "Comandos de manutenção e operação do sistema."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1497
 msgid "System kernel interfaces."
-msgstr ""
+msgstr "Interfaces do kernel do sistema."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1499
@@ -3580,7 +3703,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1525
 msgid "or"
-msgstr ""
+msgstr "ou"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1530
@@ -3594,7 +3717,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1533
 #, no-wrap
 msgid "GNU Info Files"
-msgstr ""
+msgstr "Arquivos GNU Info"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1536
