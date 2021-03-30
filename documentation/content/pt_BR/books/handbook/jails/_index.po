@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:55-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-03-30 23:19+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookjails_index/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/jails/_index.adoc:1
@@ -31,13 +34,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:9
 #, no-wrap
 msgid "Jails"
-msgstr ""
+msgstr "Jails"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/jails/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "Sinopse"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:48
@@ -78,11 +81,21 @@ msgid ""
 "are available for tuning the access of a jailed environment. Jails can be "
 "considered as a type of operating system-level virtualization."
 msgstr ""
+"As jails aprimoram o conceito do ambiente chroot tradicional de várias "
+"maneiras. Em um ambiente chroot tradicional, os processos são limitados "
+"apenas na parte do sistema de arquivos que eles podem acessar. O restante "
+"dos recursos do sistema, os usuários, os processos em execução e o "
+"subsistema de rede são compartilhados pelos processos chroot e pelos "
+"processos do sistema host. As jails expandem esse modelo virtualizando o "
+"acesso ao sistema de arquivos, ao conjunto de usuários e ao subsistema de "
+"rede. Controles mais refinados estão disponíveis para ajustar o acesso de um "
+"ambiente em jail. As jails podem ser consideradas como um tipo de "
+"virtualização no nível do sistema operacional."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:54
 msgid "A jail is characterized by four elements:"
-msgstr ""
+msgstr "Uma jail é caracterizada por quatro elementos:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:56
@@ -91,11 +104,14 @@ msgid ""
 "inside the jail, a process is not permitted to escape outside of this "
 "subtree."
 msgstr ""
+"Uma subárvore de diretórios: o ponto de partida a partir do qual uma jail é "
+"inserida. Uma vez dentro da jail, não é permitido que um processo escape "
+"fora dessa subárvore."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:57
 msgid "A hostname: which will be used by the jail."
-msgstr ""
+msgstr "Um nome de host: que será usado pela jail."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:58
@@ -110,6 +126,8 @@ msgid ""
 "A command: the path name of an executable to run inside the jail. The path "
 "is relative to the root directory of the jail environment."
 msgstr ""
+"Um comando: o nome do caminho de um executável para ser executado dentro da "
+"jail. O caminho é relativo ao diretório raiz do ambiente da jail."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:61
@@ -127,27 +145,33 @@ msgid ""
 "managing FreeBSD jails. Jails are a powerful tool for both system "
 "administrators, and advanced users."
 msgstr ""
+"Este capítulo fornece uma visão geral da terminologia e dos comandos para "
+"gerenciar as jail do FreeBSD. As jails são uma ferramenta poderosa para "
+"administradores de sistemas e usuários avançados."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:65
 msgid "After reading this chapter, you will know:"
-msgstr ""
+msgstr "Depois de ler este capítulo, você saberá:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:67
 msgid "What a jail is and what purpose it may serve in FreeBSD installations."
 msgstr ""
+"O que é uma jail e qual finalidade ela pode servir nas instalações do "
+"FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:68
 msgid "How to build, start, and stop a jail."
-msgstr ""
+msgstr "Como compilar, iniciar e parar uma jail."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:69
 msgid ""
 "The basics of jail administration, both from inside and outside the jail."
 msgstr ""
+"Os fundamentos da administração de jails, tanto de dentro como fora da jail."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:73
@@ -158,6 +182,11 @@ msgid ""
 "privileged user inside the jail to obtain elevated privileges in the host "
 "environment."
 msgstr ""
+"As jails são uma ferramenta poderosa, mas não são uma panaceia de segurança. "
+"Embora não seja possível que um processo rodando em jail burle a segurança "
+"por conta própria, existem várias maneiras pelas quais um usuário não "
+"privilegiado fora da jail pode cooperar com um usuário privilegiado dentro "
+"da jail para obter privilégios elevados no ambiente host."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:75
@@ -167,12 +196,16 @@ msgid ""
 "untrusted users with privileged access to a jail should not be given access "
 "to the host environment."
 msgstr ""
+"A maioria desses ataques podem ser mitigados apenas garantindo que o root da "
+"jail não seja acessível a usuários não privilegiados no ambiente host. Como "
+"regra geral, usuários não confiáveis com acesso privilegiado a uma jail não "
+"devem ter acesso ao ambiente do host."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/jails/_index.adoc:78
 #, no-wrap
 msgid "Terms Related to Jails"
-msgstr ""
+msgstr "Termos Relacionados à Jails"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:81
@@ -181,6 +214,9 @@ msgid ""
 "jails, their internals and the way they interact with the rest of FreeBSD, "
 "the following terms are used further in this chapter:"
 msgstr ""
+"Para facilitar a compreensão de partes do sistema FreeBSD relacionadas a "
+"jails, seus componentes internos e a maneira como eles interagem com o resto "
+"do FreeBSD, os seguintes termos são usados mais adiante neste capítulo:"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/jails/_index.adoc:82
@@ -222,12 +258,14 @@ msgid ""
 "The system administration utility which allows launching of processes within "
 "a jail environment."
 msgstr ""
+"O utilitário de administração do sistema que permite o lançamento de "
+"processos dentro de um ambiente jail."
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/jails/_index.adoc:91
 #, no-wrap
 msgid "host (system, process, user, etc.)"
-msgstr ""
+msgstr "host (sistema, processo, usuário, etc.)"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:93
@@ -238,12 +276,17 @@ msgid ""
 "host system from a jail is that the limitations which apply to superuser "
 "processes inside a jail are not enforced for processes of the host system."
 msgstr ""
+"O sistema de controle de um ambiente jail. O sistema host tem acesso a todos "
+"os recursos de hardware disponíveis e pode controlar processos fora e dentro "
+"de um ambiente jail. Uma das diferenças importantes do sistema host de uma "
+"jail é que as limitações que se aplicam aos processos de super-usuário "
+"dentro de uma jail não são aplicadas aos processos do sistema host."
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/jails/_index.adoc:94
 #, no-wrap
 msgid "hosted (system, process, user, etc.)"
-msgstr ""
+msgstr "hosted (sistema, processo, usuário, etc.)"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:96
@@ -251,12 +294,14 @@ msgid ""
 "A process, user or other entity, whose access to resources is restricted by "
 "a FreeBSD jail."
 msgstr ""
+"Um processo, usuário ou outra entidade, cujo acesso a recursos é restrito "
+"por uma jail do FreeBSD."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/jails/_index.adoc:98
 #, no-wrap
 msgid "Creating and Controlling Jails"
-msgstr ""
+msgstr "Criando e Controlando Jails"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:101
@@ -274,13 +319,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:102
 #, no-wrap
 msgid "Installing a Jail"
-msgstr ""
+msgstr "Instalando uma Jail"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/jails/_index.adoc:105
 #, no-wrap
 msgid "To install a Jail from the Internet"
-msgstr ""
+msgstr "Para instalar uma Jail pela Internet"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:108
@@ -303,12 +348,14 @@ msgid ""
 "Once the command is complete, the next step is configuring the host to run "
 "the jail."
 msgstr ""
+"Uma vez que o comando finalize, o próximo passo é configurar o host para "
+"rodar a jail."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/jails/_index.adoc:117
 #, no-wrap
 msgid "To install a Jail from an ISO"
-msgstr ""
+msgstr "Instalar uma Jail por uma imagem ISO"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:120
@@ -353,11 +400,14 @@ msgid ""
 "declared destination. Minimally, only the base set needs to be extracted, "
 "but a complete install can be performed when preferred."
 msgstr ""
+"Extraia os binários dos tarballs na mídia de instalação dentro do destino "
+"declarado. Minimamente, apenas o conjunto base precisa ser extraído, mas uma "
+"instalação completa pode ser executada quando preferida."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:140
 msgid "To install just the base system:"
-msgstr ""
+msgstr "Para instalar apenas o sistema básico:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:144
@@ -368,7 +418,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:147
 msgid "To install everything except the kernel:"
-msgstr ""
+msgstr "Para instalar tudo, exceto o kernel:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:151
@@ -380,7 +430,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:154
 #, no-wrap
 msgid "To build and install a Jail from source"
-msgstr ""
+msgstr "Para compilar e instalar uma Jail a partir do código fonte"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:157
@@ -447,7 +497,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:178
 #, no-wrap
 msgid "Configuring the Host"
-msgstr ""
+msgstr "Configurando o Host"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:181
@@ -558,7 +608,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:236
 #, no-wrap
 msgid "Fine Tuning and Administration"
-msgstr ""
+msgstr "Tuning e Administração"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:239
@@ -567,6 +617,9 @@ msgid ""
 "combining a host FreeBSD system with jails, to produce higher level "
 "applications. This section presents:"
 msgstr ""
+"Existem várias opções que podem ser configuradas para qualquer jail, e "
+"várias maneiras de combinar um sistema host FreeBSD com jails, para produzir "
+"aplicações de alto nível. Esta seção apresenta:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:241
@@ -574,6 +627,8 @@ msgid ""
 "Some of the options available for tuning the behavior and security "
 "restrictions implemented by a jail installation."
 msgstr ""
+"Algumas das opções disponíveis para ajustar as restrições de comportamento e "
+"segurança implementadas pela instalação de uma jail."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:242
@@ -582,12 +637,15 @@ msgid ""
 "through the FreeBSD Ports Collection, and can be used to implement overall "
 "jail-based solutions."
 msgstr ""
+"Alguns das aplicações de alto nível para gerenciamento de jail, que estão "
+"disponíveis através da Coleção de Ports do FreeBSD, e que podem ser usados "
+"para implementar soluções globais baseadas em jails."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/jails/_index.adoc:244
 #, no-wrap
 msgid "System Tools for Jail Tuning in FreeBSD"
-msgstr ""
+msgstr "Ferramentas de Sistema para Tuning de Jail no FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:247
@@ -687,6 +745,7 @@ msgstr ""
 #, no-wrap
 msgid "High-Level Administrative Tools in the FreeBSD Ports Collection"
 msgstr ""
+"Ferramentas Administrativas de Alto Nível na Coleção de Ports do FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:272
@@ -701,7 +760,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:274
 #, no-wrap
 msgid "Keeping Jails Patched and up to Date"
-msgstr ""
+msgstr "Mantendo as Jails com Alterações e Atualizadas"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:277
@@ -720,6 +779,8 @@ msgid ""
 "To update the jail to the latest patch release of the version of FreeBSD it "
 "is already running, then execute the following commands on the host:"
 msgstr ""
+"Para atualizar a Jail para o último release patch da versão do FreeBSD que "
+"já está em execução, execute os seguintes comandos no host:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:284
@@ -756,6 +817,10 @@ msgid ""
 "and restart the jail again. This is required because the ABI version changes "
 "when upgrading between major versions of FreeBSD. From the host:"
 msgstr ""
+"Então, se foi uma atualização de versão principal, reinstale todos os "
+"pacotes instalados e reinicie a jail novamente. Isso é necessário porque a "
+"versão ABI muda ao atualizar entre as versões principais do FreeBSD. Pelo "
+"host:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:302
@@ -769,7 +834,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:305
 #, no-wrap
 msgid "Updating Multiple Jails"
-msgstr ""
+msgstr "Atualizando Múltiplas Jails"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:308
@@ -778,6 +843,10 @@ msgid ""
 "has to be rebuilt from scratch whenever it is upgraded. This can be time "
 "consuming and tedious if a lot of jails are created and manually updated."
 msgstr ""
+"O gerenciamento de várias jails pode se tornar problemático porque toda jail "
+"tem que ser recompilada a partir do zero sempre que for atualizada. Isso "
+"pode ser demorado e entediante se muitas jails forem criadas e atualizadas "
+"manualmente."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:310
@@ -800,7 +869,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:317
 msgid "The goals of the setup described in this section are:"
-msgstr ""
+msgstr "Os objetivos da configuração descrita nesta seção são:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:319
@@ -808,21 +877,23 @@ msgid ""
 "Create a simple and easy to understand jail structure that does not require "
 "running a full installworld on each and every jail."
 msgstr ""
+"Criar uma estrutura de jail simples e fácil de entender que não exija a "
+"execução de um installworld completo em todas as jails."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:320
 msgid "Make it easy to add new jails or remove existing ones."
-msgstr ""
+msgstr "Facilitar a adição de novas jails ou remoção das já existentes."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:321
 msgid "Make it easy to update or upgrade existing jails."
-msgstr ""
+msgstr "Facilitar a atualização ou upgrade de jails existentes."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:322
 msgid "Make it possible to run a customized FreeBSD branch."
-msgstr ""
+msgstr "Tornar possível a utilização de uma branch customizada do FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:323
@@ -830,11 +901,13 @@ msgid ""
 "Be paranoid about security, reducing as much as possible the possibility of "
 "compromise."
 msgstr ""
+"Seja paranoico com a segurança, reduzindo ao máximo a possibilidade de "
+"comprometimento."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:324
 msgid "Save space and inodes, as much as possible."
-msgstr ""
+msgstr "Economize espaço e inodes, tanto quanto possível."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:326
@@ -848,7 +921,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:328
 msgid "The file system layout is as follows:"
-msgstr ""
+msgstr "O layout do sistema de arquivos é o seguinte:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:330
@@ -898,12 +971,12 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:338
 #, no-wrap
 msgid "Creating the Template"
-msgstr ""
+msgstr "Criando o Template"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:341
 msgid "This section describes the steps needed to create the master template."
-msgstr ""
+msgstr "Esta seção descreve as etapas necessárias para criar o template master."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:343
@@ -923,6 +996,10 @@ msgid ""
 "FreeBSD source tree and install the read-only file system to the jail "
 "template:"
 msgstr ""
+"Primeiro, crie uma estrutura de diretório para o sistema de arquivo read-"
+"only que conterá os binários do FreeBSD para as jails. Em seguida, altere "
+"para o diretório de código-fonte do FreeBSD e instale o sistema de arquivos "
+"read-only no template das jails:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:352
@@ -953,7 +1030,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:365
 msgid "Create a skeleton for the read-write portion of the system:"
-msgstr ""
+msgstr "Crie um esqueleto para a parte de read-write do sistema:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:374
@@ -1034,7 +1111,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:411
 #, no-wrap
 msgid "Creating Jails"
-msgstr ""
+msgstr "Criando Jails"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:414
@@ -1113,6 +1190,8 @@ msgstr ""
 msgid ""
 "Create the required mount points for the read-only file system of each jail:"
 msgstr ""
+"Crie os pontos de montagem necessários para o sistema de arquivos read-only "
+"de cada jail:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:456
@@ -1143,6 +1222,9 @@ msgid ""
 "In this phase, the jails are built and prepared to run. First, mount the "
 "required file systems for each jail, and then start them:"
 msgstr ""
+"Nesta fase, as jails estão compiladas e preparadas para execução. Primeiro, "
+"monte os sistemas de arquivos necessários para cada jail e, em seguida, "
+"inicie-as:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:474
@@ -1190,7 +1272,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:495
 #, no-wrap
 msgid "Upgrading"
-msgstr ""
+msgstr "Fazendo Upgrade"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:498
@@ -1199,6 +1281,9 @@ msgid ""
 "while minimizing their downtime. Also, it provides a way to roll back to the "
 "older version should a problem occur."
 msgstr ""
+"O design dessa configuração fornece uma maneira fácil de atualizar as jails "
+"existentes, minimizando o tempo de downtime. Além disso, fornece uma maneira "
+"de reverter para a versão mais antiga, caso ocorra algum problema."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:501
@@ -1238,6 +1323,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:521
 msgid "Recreate the read-write symlinks for the master file system:"
 msgstr ""
+"Recrie os links simbólicos read-write para o sistema de arquivos master:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:531
@@ -1255,7 +1341,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:534
 msgid "Next, stop the jails:"
-msgstr ""
+msgstr "Em seguida, pare as jails:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:538
@@ -1291,6 +1377,12 @@ msgid ""
 "new read-only file system has been created. Move the original FreeBSD Ports "
 "Collection over to the new file system to save some space and inodes:"
 msgstr ""
+"Mova o antigo sistema de arquivos read-only e substitua-o pelo novo. Isso "
+"servirá como backup e arquivamento do antigo sistema de arquivos read-only "
+"se algo der errado. A convenção de nomenclatura usada aqui corresponde a "
+"quando um novo sistema de arquivos read-only foi criado. Mova a Coleção de "
+"Ports do FreeBSD original para o novo sistema de arquivos para economizar "
+"espaço e inodes:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:560
@@ -1308,6 +1400,8 @@ msgid ""
 "At this point the new read-only template is ready, so the only remaining "
 "task is to remount the file systems and start the jails:"
 msgstr ""
+"Neste ponto, o novo template read-only está pronto, então a única tarefa "
+"restante é remontar os sistemas de arquivos e iniciar as jails:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:571
@@ -1438,6 +1532,8 @@ msgid ""
 "The service will automatically start on system boot. It can be started "
 "immediately for the current session:"
 msgstr ""
+"O serviço será iniciado automaticamente na inicialização do sistema. Ele "
+"pode ser iniciado imediatamente na sessão atual:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:627
@@ -1449,7 +1545,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:630
 #, no-wrap
 msgid "Initial Setup"
-msgstr ""
+msgstr "Configuração inicial"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:633
@@ -1471,7 +1567,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:640
 msgid "To Populate the Jail with FreeBSD-RELEASE"
-msgstr ""
+msgstr "Preencher a Jail com o FreeBSD-RELEASE"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:642
@@ -1557,7 +1653,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:681
 #, no-wrap
 msgid "Creating and Starting a New Jail"
-msgstr ""
+msgstr "Criando e Iniciando uma Nova Jail"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:684
@@ -1618,11 +1714,13 @@ msgid ""
 "Do not enable raw network sockets unless services in the jail actually "
 "require them."
 msgstr ""
+"Não habilite raw network sockets, a menos que os serviços na jail realmente "
+"precisem deles."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:710
 msgid "Start the jail:"
-msgstr ""
+msgstr "Inicie a jail:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:714
@@ -1633,7 +1731,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:717
 msgid "Use a console on the jail:"
-msgstr ""
+msgstr "Use um console na jail:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:721
@@ -1647,6 +1745,8 @@ msgid ""
 "The jail is operating and additional configuration can be completed. Typical "
 "settings added at this point include:"
 msgstr ""
+"A jail está funcionando e configurações adicionais podem ser realizadas. "
+"Configurações típicas adicionadas neste momento incluem:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:727
@@ -1672,7 +1772,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:740
 msgid "Time Zone Configuration"
-msgstr ""
+msgstr "Configuração de Fuso Horário"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:742
@@ -1727,6 +1827,8 @@ msgid ""
 "With the jail configured, the applications for which the jail was created "
 "can be installed."
 msgstr ""
+"Com a jail configurada, os aplicativos para os quais a jail foi criada podem "
+"ser instalados."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:758
@@ -1741,13 +1843,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:761
 #, no-wrap
 msgid "Updating Jails"
-msgstr ""
+msgstr "Atualizando as Jails"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/jails/_index.adoc:764
 #, no-wrap
 msgid "Updating the Operating System"
-msgstr ""
+msgstr "Atualizando o Sistema Operacional"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:767
@@ -1756,6 +1858,9 @@ msgid ""
 "updating the basejail automatically updates all of the other jails. Either "
 "source or binary updates can be used."
 msgstr ""
+"Como a cópia do userland da basejail é compartilhada pelas outras jails, a "
+"atualização da basejail atualiza automaticamente todas as outras jails. "
+"Atualizações binárias ou por código fonte podem ser usadas."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:769
@@ -1763,6 +1868,8 @@ msgid ""
 "To build the world from source on the host, then install it in the basejail, "
 "use:"
 msgstr ""
+"Para compilar o world a partir do código fonte no host, e depois instala-lo "
+"na basejail, use:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:773
@@ -1776,6 +1883,7 @@ msgid ""
 "If the world has already been compiled on the host, install it in the "
 "basejail with:"
 msgstr ""
+"Se o world já estiver sido compilado no host, instale-o no basejail com:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:780
@@ -1798,6 +1906,8 @@ msgid ""
 "Update the basejail to the latest patched release of the version of FreeBSD "
 "on the host. For example, updating from RELEASE-p1 to RELEASE-p2."
 msgstr ""
+"Atualize a basejail para a última versão de patchs da versão do FreeBSD no "
+"host. Por exemplo, atualizando de RELEASE-p1 para RELEASE-p2."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:789
@@ -1880,7 +1990,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:824
 msgid "Get a console in the jail:"
-msgstr ""
+msgstr "Execute um console na jail:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:828
@@ -1948,13 +2058,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:873
 msgid "to upgrade or downgrade to the appropriate version."
-msgstr ""
+msgstr "para atualizar ou fazer o downgrade para a versão apropriada."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/jails/_index.adoc:876
 #, no-wrap
 msgid "Updating Ports"
-msgstr ""
+msgstr "Atualizando o Ports"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:879
@@ -1962,6 +2072,9 @@ msgid ""
 "The ports tree in the basejail is shared by the other jails. Updating that "
 "copy of the ports tree gives the other jails the updated version also."
 msgstr ""
+"A árvore de ports na basejail é compartilhada pelas outras jails. A "
+"atualização dessa cópia da árvore de ports fornece às outras jails a versão "
+"atualizada também."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:881
@@ -1978,13 +2091,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:888
 #, no-wrap
 msgid "Controlling Jails"
-msgstr ""
+msgstr "Controlando as Jails"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/jails/_index.adoc:891
 #, no-wrap
 msgid "Stopping and Starting Jails"
-msgstr ""
+msgstr "Parando e Iniciando Jails"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:894
@@ -2020,11 +2133,13 @@ msgid ""
 "This takes effect the next time the host computer is started. A jail that is "
 "already running will not be stopped."
 msgstr ""
+"Isso entrará em vigor na próxima vez em que o computador host for iniciado. "
+"Uma jail que já está em execução não será interrompida."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:911
 msgid "Enabling autostart is very similar:"
-msgstr ""
+msgstr "A ativação do início automático é muito semelhante:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:915
@@ -2036,7 +2151,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:918
 #, no-wrap
 msgid "Archiving and Restoring Jails"
-msgstr ""
+msgstr "Arquivando e Restaurando Jails"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:921
@@ -2126,7 +2241,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:953
 #, no-wrap
 msgid "Running BIND in a Jail"
-msgstr ""
+msgstr "Executando o BIND em uma Jail"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:958
@@ -2138,12 +2253,12 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:965
 msgid "Immediately create the new loopback interface:"
-msgstr ""
+msgstr "Imediatamente crie a nova interface de loopback:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:973
 msgid "Create the jail:"
-msgstr ""
+msgstr "Crie a jail:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:977
@@ -2157,6 +2272,8 @@ msgid ""
 "Start the jail, connect to a console running on it, and perform some basic "
 "configuration:"
 msgstr ""
+"Inicie a jail, conecte-se a ao seu console e realize algumas configurações "
+"básicas:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:992
@@ -2313,7 +2430,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:1068
 msgid "Start and test the name server:"
-msgstr ""
+msgstr "Inicie e teste o servidor de nomes:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:1075
@@ -2328,7 +2445,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:1078
 msgid "A response that includes"
-msgstr ""
+msgstr "Uma resposta que inclui"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:1082
