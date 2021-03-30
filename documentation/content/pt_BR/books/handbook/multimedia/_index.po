@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-03-30 23:18+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookmultimedia_index/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1
@@ -31,13 +34,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:9
 #, no-wrap
 msgid "Multimedia"
-msgstr ""
+msgstr "Multimídia"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "Sinopse"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:48
@@ -65,31 +68,34 @@ msgid ""
 "tuner cards, and scanners on FreeBSD. It also describes some of the "
 "applications which are available for using these devices."
 msgstr ""
+"Este capítulo descreve como configurar placas de som, reprodução de vídeo, "
+"placas sintonizadoras de TV e scanners no FreeBSD. Também descreve algumas "
+"das aplicações que estão disponíveis para usar esses dispositivos."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:54
 msgid "After reading this chapter, you will know how to:"
-msgstr ""
+msgstr "Depois de ler este capítulo, você irá saber como:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:56
 msgid "Configure a sound card on FreeBSD."
-msgstr ""
+msgstr "Configurar uma placa de som no FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:57
 msgid "Troubleshoot the sound setup."
-msgstr ""
+msgstr "Solucionar problemas de configuração de som."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:58
 msgid "Playback and encode MP3s and other audio."
-msgstr ""
+msgstr "Reproduzir e codificar MP3 e outros áudios."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:59
 msgid "Prepare a FreeBSD system for video playback."
-msgstr ""
+msgstr "Preparar um sistema FreeBSD para reprodução de vídeo."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:60
@@ -104,27 +110,27 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:62
 msgid "Configure a TV card."
-msgstr ""
+msgstr "Configurar uma placa de TV."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:63
 msgid "Install and setup MythTV on FreeBSD"
-msgstr ""
+msgstr "Instale e configure o MythTV no FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:64
 msgid "Configure an image scanner."
-msgstr ""
+msgstr "Configurar um scanner de imagem."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:65
 msgid "Configure a Bluetooth headset."
-msgstr ""
+msgstr "Configurar um headset Bluetooth."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:67
 msgid "Before reading this chapter, you should:"
-msgstr ""
+msgstr "Antes de ler este capítulo, você deve:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:69
@@ -137,7 +143,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:71
 #, no-wrap
 msgid "Setting Up the Sound Card"
-msgstr ""
+msgstr "Configurando a Placa de Som"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:74
@@ -210,7 +216,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:100
 #, no-wrap
 msgid "Configuring a Custom Kernel with Sound Support"
-msgstr ""
+msgstr "Configurando um kernel Personalizado com Suporte de Som"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:103
@@ -227,6 +233,9 @@ msgid ""
 "When using a custom kernel to provide sound support, make sure that the "
 "audio framework driver exists in the custom kernel configuration file:"
 msgstr ""
+"Ao usar um kernel personalizado para fornecer suporte ao som, verifique se o "
+"driver do framework de áudio existe no arquivo de configuração do kernel "
+"personalizado:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:109
@@ -241,6 +250,10 @@ msgid ""
 "in audio chipset based on the Intel specification from the previous section, "
 "use the following line in the custom kernel configuration file:"
 msgstr ""
+"Em seguida, adicione suporte para a placa de som. Para continuar o exemplo "
+"do chipset de áudio integrado baseado na especificação Intel da seção "
+"anterior, use a seguinte linha no arquivo de configuração do kernel "
+"personalizado:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:116
@@ -254,6 +267,8 @@ msgid ""
 "Be sure to read the manual page of the driver for the device name to use for "
 "the driver."
 msgstr ""
+"Certifique-se de ler a página de manual do driver para o nome do dispositivo "
+"a ser usado pelo driver."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:121
@@ -311,7 +326,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:144
 #, no-wrap
 msgid "Testing Sound"
-msgstr ""
+msgstr "Testando o Som"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:147
@@ -334,6 +349,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:156
 msgid "The status of the sound card may also be checked using this command:"
 msgstr ""
+"O status da placa de som também pode ser verificado usando este comando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:165
@@ -416,7 +432,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:199
 #, no-wrap
 msgid "Setting up Bluetooth Sound Devices"
-msgstr ""
+msgstr "Configurando Dispositivos de Som Bluetooth"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:202
@@ -491,7 +507,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:239
 #, no-wrap
 msgid "Troubleshooting Sound"
-msgstr ""
+msgstr "Solução de Problemas de Som"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:242
@@ -504,7 +520,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:244
 #, no-wrap
 msgid "Common Error Messages"
-msgstr ""
+msgstr "Mensagens de Erros Comuns"
 
 #. type: Table
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:269
@@ -600,7 +616,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:309
 #, no-wrap
 msgid "Utilizing Multiple Sound Sources"
-msgstr ""
+msgstr "Utilizando Múltiplas Fontes de Som"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:312
@@ -645,6 +661,9 @@ msgid ""
 "use. First, close any programs using the device, such as music players or "
 "sound daemons."
 msgstr ""
+"O número de canais virtuais para um dispositivo não pode ser alterado "
+"enquanto estiver em uso. Primeiramente, feche todos os programas usando o "
+"dispositivo, como players de música ou daemons de som."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:330
@@ -657,7 +676,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:331
 #, no-wrap
 msgid "Setting Default Values for Mixer Channels"
-msgstr ""
+msgstr "Configurando Valores Padrões para Canais de Mixer"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:334
@@ -687,7 +706,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:343
 #, no-wrap
 msgid "MP3 Audio"
-msgstr ""
+msgstr "Áudio MP3"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:346
@@ -700,7 +719,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:348
 #, no-wrap
 msgid "MP3 Players"
-msgstr ""
+msgstr "Players de MP3"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:351
@@ -801,6 +820,8 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:391
 msgid "To rip a range of tracks, such as track one to seven, specify a range:"
 msgstr ""
+"Para extrair um intervalo de trilhas, como as trilhas de um a sete, "
+"especifique um intervalo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:395
@@ -833,7 +854,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:407
 #, no-wrap
 msgid "Encoding and Decoding MP3s"
-msgstr ""
+msgstr "Codificação e Decodificação de MP3"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:410
@@ -929,7 +950,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:440
 msgid "Enter or browse to a directory to write the uncompressed files to."
-msgstr ""
+msgstr "Digite ou procure um diretório para gravar os arquivos descompactados."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:441
@@ -978,7 +999,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:454
 #, no-wrap
 msgid "Video Playback"
-msgstr ""
+msgstr "Reprodução de Vídeo"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:457
@@ -1045,7 +1066,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:483
 #, no-wrap
 msgid "Determining Video Capabilities"
-msgstr ""
+msgstr "Determinando os Recursos de Vídeo"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:486
@@ -1058,7 +1079,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:488
 msgid "Common video interfaces include:"
-msgstr ""
+msgstr "Interfaces de vídeo comuns incluem:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:490
@@ -1099,13 +1120,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:494
 msgid "SVGAlib: a low level console graphics layer."
-msgstr ""
+msgstr "SVGAlib: uma camada gráfica de console de baixo nível."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:496
 #, no-wrap
 msgid "XVideo"
-msgstr ""
+msgstr "XVideo"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:499
@@ -1122,6 +1143,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:506
 msgid "XVideo is supported for the card if the result is similar to:"
 msgstr ""
+"O XVideo é suportado pela placa de vídeo se o resultado for semelhante a:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:577
@@ -1203,11 +1225,13 @@ msgid ""
 "The formats listed, such as YUV2 and YUV12, are not present with every "
 "implementation of XVideo and their absence may hinder some players."
 msgstr ""
+"Os formatos listados, como YUV2 e YUV12, não estão presentes em todas as "
+"implementações do XVideo e sua ausência pode atrapalhar alguns players."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:582
 msgid "If the result instead looks like:"
-msgstr ""
+msgstr "Se o resultado, ao invés disso, se parecer com:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:588
@@ -1225,12 +1249,15 @@ msgid ""
 "more difficult for the display to meet the computational demands of "
 "rendering video, depending on the video card and processor."
 msgstr ""
+"O XVideo provavelmente não é compatível com a placa. Isso significa que será "
+"mais difícil para o monitor atender às demandas computacionais de "
+"renderização de vídeo, dependendo da placa de vídeo e do processador."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:593
 #, no-wrap
 msgid "Ports and Packages Dealing with Video"
-msgstr ""
+msgstr "Ports e Pacotes Lidando com Vídeo"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:596
@@ -1238,6 +1265,8 @@ msgid ""
 "This section introduces some of the software available from the FreeBSD "
 "Ports Collection which can be used for video playback."
 msgstr ""
+"Esta seção apresenta alguns dos softwares disponíveis na Coleção de Ports do "
+"FreeBSD, que podem ser usados para reprodução de vídeo."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:598
@@ -1295,6 +1324,8 @@ msgid ""
 "This section describes only a few common uses. Refer to mplayer(1) for a "
 "complete description of its numerous options."
 msgstr ""
+"Esta seção descreve apenas alguns usos comuns. Consulte o mplayer(1) para "
+"uma descrição completa de suas inúmeras opções."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:613
@@ -1339,6 +1370,8 @@ msgid ""
 "It is worth trying all of these options, as their relative performance "
 "depends on many factors and will vary significantly with hardware."
 msgstr ""
+"Vale a pena tentar todas essas opções, pois seu relativo desempenho depende "
+"de muitos fatores e varia significativamente com o hardware."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:642
@@ -1436,7 +1469,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:680
 msgid "Here is an example of a simple copy:"
-msgstr ""
+msgstr "Aqui está um exemplo de uma cópia simples:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:684
@@ -1562,6 +1595,8 @@ msgid ""
 "This example demonstrates how to convert a DivX file into a PAL MPEG-1 file "
 "(PAL VCD):"
 msgstr ""
+"Este exemplo demonstra como converter um arquivo DivX em um arquivo PAL MPEG-"
+"1 (PAL VCD):"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:731
@@ -1592,7 +1627,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:738
 #, no-wrap
 msgid "TV Cards"
-msgstr ""
+msgstr "Placas de TV"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:741
@@ -1615,7 +1650,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:744
 #, no-wrap
 msgid "Loading the Driver"
-msgstr ""
+msgstr "Carregando o Driver"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:747
@@ -1637,6 +1672,9 @@ msgid ""
 "custom kernel. In that case, add the following lines to the custom kernel "
 "configuration file:"
 msgstr ""
+"Como alternativa, pode-se compilar estaticamente o suporte para a placa de "
+"TV em um kernel personalizado. Nesse caso, adicione as seguintes linhas ao "
+"arquivo de configuração do kernel personalizado:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:761
@@ -1654,6 +1692,9 @@ msgid ""
 "These additional devices are necessary as the card components are "
 "interconnected via an I2C bus. Then, build and install a new kernel."
 msgstr ""
+"Esses dispositivos adicionais são necessários, pois os componentes da placa "
+"são interconectados por meio de um barramento I2C. Em seguida, crie e "
+"instale um novo kernel."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:766
@@ -1661,6 +1702,9 @@ msgid ""
 "To test that the tuner is correctly detected, reboot the system. The TV card "
 "should appear in the boot messages, as seen in this example:"
 msgstr ""
+"Para testar se o sintonizador foi detectado corretamente, reinicialize o "
+"sistema. A placa de TV deve aparecer nas mensagens de inicialização, "
+"conforme mostrado neste exemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:775
@@ -1712,12 +1756,12 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:793
 #, no-wrap
 msgid "Useful Applications"
-msgstr ""
+msgstr "Aplicações Úteis"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:796
 msgid "To use the TV card, install one of the following applications:"
-msgstr ""
+msgstr "Para usar a placa de TV, instale um dos seguintes aplicativos:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:798
@@ -1742,13 +1786,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:802
 msgid "More applications are available in the FreeBSD Ports Collection."
-msgstr ""
+msgstr "Mais aplicações estão disponíveis na Coleção de Ports do FreeBSD."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:803
 #, no-wrap
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Solução de problemas"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:806
@@ -1763,7 +1807,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:808
 #, no-wrap
 msgid "MythTV"
-msgstr ""
+msgstr "MythTV"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:811
@@ -1780,6 +1824,8 @@ msgid ""
 "MythTV requires a frontend and a backend. These components can either be "
 "installed on the same system or on different machines."
 msgstr ""
+"MythTV requer um frontend e um backend. Esses componentes podem ser "
+"instalados no mesmo sistema ou em máquinas diferentes."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:815
@@ -1805,7 +1851,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:818
 #, no-wrap
 msgid "Hardware"
-msgstr ""
+msgstr "Hardware"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:821
@@ -1834,12 +1880,12 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:824
 #, no-wrap
 msgid "Setting up the MythTV Backend"
-msgstr ""
+msgstr "Configurando o Backend MythTV"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:827
 msgid "To install MythTV using binary packages:"
-msgstr ""
+msgstr "Para instalar o MythTV usando pacotes binários:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:831
@@ -1850,7 +1896,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:834
 msgid "Alternatively, to install from the Ports Collection:"
-msgstr ""
+msgstr "Como alternativa, para instalar a partir da Coleção de Ports:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:839
@@ -1863,7 +1909,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:842
 msgid "Once installed, set up the MythTV database:"
-msgstr ""
+msgstr "Uma vez instalado, configure o banco de dados do MythTV:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:846
@@ -1874,7 +1920,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:849
 msgid "Then, configure the backend:"
-msgstr ""
+msgstr "Em seguida, configure o backend:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:853
@@ -1885,7 +1931,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:856
 msgid "Finally, start the backend:"
-msgstr ""
+msgstr "Finalmente, inicie o backend:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:861
@@ -1899,7 +1945,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:864
 #, no-wrap
 msgid "Image Scanners"
-msgstr ""
+msgstr "Scanners de Imagem"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:867
@@ -1931,7 +1977,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:873
 #, no-wrap
 msgid "Checking the Scanner"
-msgstr ""
+msgstr "Verificando o Scanner"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:876
@@ -1996,7 +2042,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:904
 msgid "Verify that the device is displayed in the system message buffer:"
-msgstr ""
+msgstr "Verifique se o dispositivo é exibido no buffer de mensagens do sistema:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:910
@@ -2069,7 +2115,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:941
 msgid "To install the backends from binary package:"
-msgstr ""
+msgstr "Para instalar os backends do pacote binário:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:945
@@ -2080,7 +2126,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:948
 msgid "Alternatively, to install from the Ports Collection"
-msgstr ""
+msgstr "Alternativamente, para instalar a partir da Coleção de Ports"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:953
@@ -2112,6 +2158,9 @@ msgid ""
 "used to attach the scanner to the system. The vendor and the product model "
 "may or may not appear."
 msgstr ""
+"A saída deve mostrar o tipo de interface do scanner e o nó do dispositivo "
+"usado para conectar o scanner ao sistema. O fornecedor e o modelo do produto "
+"podem ou não aparecer."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:968
@@ -2193,6 +2242,8 @@ msgid ""
 "Save the edits and verify that the scanner is identified with the right "
 "backend name and the device node:"
 msgstr ""
+"Salve as edições e verifique se o scanner está identificado com o nome do "
+"back-end correto e com o nó do dispositivo:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1010
@@ -2215,7 +2266,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1013
 #, no-wrap
 msgid "Scanner Permissions"
-msgstr ""
+msgstr "Permissões do Scanner"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1016
@@ -2266,6 +2317,9 @@ msgid ""
 "It happens the device node changes with the addition or removal of devices, "
 "so one may want to give access to all USB devices using this ruleset instead:"
 msgstr ""
+"Acontece do nó do dispositivo mudar com a adição ou remoção de dispositivos, "
+"então você pode querer dar acesso a todos os dispositivos USB usando esse "
+"conjunto de regas:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1042
@@ -2284,7 +2338,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1049
 msgid "Next, enable the ruleset in /etc/rc.conf:"
-msgstr ""
+msgstr "Em seguida, ative o conjunto de regras no arquivo /etc/rc.conf:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1053
