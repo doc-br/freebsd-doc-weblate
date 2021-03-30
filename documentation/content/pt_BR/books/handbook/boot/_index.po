@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-03-30 23:18+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookboot_index/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/boot/_index.adoc:1
@@ -31,13 +34,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:9
 #, no-wrap
 msgid "The FreeBSD Booting Process"
-msgstr ""
+msgstr "O processo de inicialização do FreeBSD"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/boot/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "Sinopse"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:48
@@ -63,12 +66,12 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:52
 msgid "After reading this chapter, you will recognize:"
-msgstr ""
+msgstr "Depois de ler este capítulo, você reconhecerá:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:54
 msgid "The components of the FreeBSD bootstrap system and how they interact."
-msgstr ""
+msgstr "Os componentes do sistema de boot do FreeBSD e como eles interagem."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:55
@@ -76,11 +79,13 @@ msgid ""
 "The options that can be passed to the components in the FreeBSD bootstrap in "
 "order to control the boot process."
 msgstr ""
+"As opções que podem ser passadas para os componentes no bootstrap do FreeBSD "
+"para controlar o processo de inicialização."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:56
 msgid "The basics of setting device hints."
-msgstr ""
+msgstr "O básico da configuração de device hints."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:57
@@ -88,6 +93,8 @@ msgid ""
 "How to boot into single- and multi-user mode and how to properly shut down a "
 "FreeBSD system."
 msgstr ""
+"Como inicializar no modo de usuário único e multiusuário e como encerrar "
+"corretamente um sistema FreeBSD."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:61
@@ -95,12 +102,14 @@ msgid ""
 "This chapter only describes the boot process for FreeBSD running on x86 and "
 "amd64 systems."
 msgstr ""
+"Este capítulo descreve apenas o processo de inicialização do FreeBSD rodando "
+"em sistemas x86 e amd64."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/boot/_index.adoc:64
 #, no-wrap
 msgid "FreeBSD Boot Process"
-msgstr ""
+msgstr "Processo de Inicialização do FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:67
@@ -112,6 +121,12 @@ msgid ""
 "operating system, and the operating system programs are on the disk, how is "
 "the operating system started?"
 msgstr ""
+"Ligar um computador e iniciar o sistema operacional representa um dilema "
+"interessante. Por definição, o computador não sabe como fazer nada até que o "
+"sistema operacional seja iniciado. Isso inclui executar programas a partir "
+"do disco. Se o computador não pode executar um programa a partir do disco "
+"sem o sistema operacional e os programas do sistema operacional estão no "
+"disco, como o sistema operacional é iniciado?"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:69
@@ -193,12 +208,14 @@ msgid ""
 "This section describes these stages in more detail and demonstrates how to "
 "interact with the FreeBSD boot process."
 msgstr ""
+"Esta seção descreve esses estágios em mais detalhes e demonstra como "
+"interagir com o processo de inicialização do FreeBSD."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/boot/_index.adoc:88
 #, no-wrap
 msgid "The Boot Manager"
-msgstr ""
+msgstr "O gerenciador de inicialização"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:91
@@ -264,7 +281,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:119
 #, no-wrap
 msgid "Stage One and Stage Two"
-msgstr ""
+msgstr "Estágio Um e Estágio Dois"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:122
@@ -345,7 +362,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:156
 #, no-wrap
 msgid "Stage Three"
-msgstr ""
+msgstr "Estágio três"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:159
@@ -397,7 +414,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:169
 #, no-wrap
 msgid "Loader Built-In Commands"
-msgstr ""
+msgstr "Comandos Internos do Loader"
 
 #. type: Table
 #: documentation/content/en/books/handbook/boot/_index.adoc:213
@@ -465,6 +482,8 @@ msgid ""
 "To unload the usual kernel and modules and then load the previous or "
 "another, specified kernel:"
 msgstr ""
+"Para descarregar o kernel e os módulos usuais e, em seguida, carregar o "
+"kernel anterior ou outro especificado:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:228
@@ -502,7 +521,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:242
 msgid "To load an automated kernel configuration script:"
-msgstr ""
+msgstr "Para carregar um script de configuração do kernel automatizado:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:246
@@ -514,7 +533,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:249
 #, no-wrap
 msgid "Last Stage"
-msgstr ""
+msgstr "Último estágio"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:252
@@ -529,7 +548,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:254
 #, no-wrap
 msgid "Kernel Interaction During Boot"
-msgstr ""
+msgstr "Interação do Kernel durante o Boot"
 
 #. type: Table
 #: documentation/content/en/books/handbook/boot/_index.adoc:271
@@ -574,7 +593,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:278
 #, no-wrap
 msgid "Single-User Mode"
-msgstr ""
+msgstr "Modo Single-User"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:281
@@ -617,6 +636,11 @@ msgid ""
 "user who can gain physical access to a system will have full control of that "
 "system after booting into single-user mode."
 msgstr ""
+"Embora o modo single-user seja útil para reparar um sistema, ele representa "
+"um risco de segurança, a menos que o sistema esteja em um local fisicamente "
+"seguro. Por padrão, qualquer usuário que possa obter acesso físico a um "
+"sistema terá controle total desse sistema após a inicialização no modo "
+"single-user."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:294
@@ -656,7 +680,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:313
 #, no-wrap
 msgid "Multi-User Mode"
-msgstr ""
+msgstr "Modo Multi-User"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:316
@@ -689,7 +713,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:322
 #, no-wrap
 msgid "Device Hints"
-msgstr ""
+msgstr "Sugestões de dispositivos"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:325
@@ -733,7 +757,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:338
 msgid "The syntax for the Stage 3 boot loader is:"
-msgstr ""
+msgstr "A sintaxe para o estágio 3 do boot loader é:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:342
@@ -796,7 +820,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:357
 #, no-wrap
 msgid "Shutdown Sequence"
-msgstr ""
+msgstr "Sequência de Desligamento"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:360
