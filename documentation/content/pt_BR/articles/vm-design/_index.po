@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-03-20 19:50+0000\n"
-"Last-Translator: Danilo G. Baio <dbaio@FreeBSD.org>\n"
+"PO-Revision-Date: 2021-03-30 23:20+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/articlesvm-design_index/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -15,14 +15,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.5.1\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: Title =
 #: documentation/content/en/articles/vm-design/_index.adoc:1
 #: documentation/content/en/articles/vm-design/_index.adoc:10
 #, no-wrap
 msgid "Design elements of the FreeBSD VM system"
-msgstr ""
+msgstr "Elementos de design do sistema de VM do FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/articles/vm-design/_index.adoc:34
@@ -119,6 +119,12 @@ msgid ""
 "tends to be easier to adapt to changing conditions and the heavily-optimized "
 "design winds up having to be thrown away."
 msgstr ""
+"Um design sólido e generalizado supera um projeto altamente otimizado a "
+"longo prazo. Enquanto um design generalizado pode acabar sendo mais lento do "
+"que um projeto altamente otimizado quando eles são implementados pela "
+"primeira vez, o design generalizado tende a ser mais fácil de se adaptar as "
+"mudanças de condições e o projeto altamente otimizado acaba tendo que ser "
+"descartado."
 
 #. type: Plain text
 #: documentation/content/en/articles/vm-design/_index.adoc:75
@@ -135,7 +141,7 @@ msgstr ""
 #: documentation/content/en/articles/vm-design/_index.adoc:77
 #, no-wrap
 msgid "VM Objects"
-msgstr ""
+msgstr "Objetos de VM"
 
 #. type: Plain text
 #: documentation/content/en/articles/vm-design/_index.adoc:87
@@ -339,7 +345,7 @@ msgstr ""
 #: documentation/content/en/articles/vm-design/_index.adoc:168
 #, no-wrap
 msgid "SWAP Layers"
-msgstr ""
+msgstr "Camadas de SWAP"
 
 #. type: Plain text
 #: documentation/content/en/articles/vm-design/_index.adoc:176
@@ -379,6 +385,8 @@ msgid ""
 "It requires kernel memory allocations to take place during the swap freeing "
 "process, and that creates low memory deadlock problems."
 msgstr ""
+"Requer que as alocações de memória do kernel ocorram durante o processo de "
+"troca de swap, e isto cria problemas de deadlock de pouca memória."
 
 #. type: Plain text
 #: documentation/content/en/articles/vm-design/_index.adoc:181
@@ -386,6 +394,8 @@ msgid ""
 "The problem is further exacerbated by holes created due to the interleaving "
 "algorithm."
 msgstr ""
+"O problema é ainda mais exacerbado por buracos criados devido ao algoritmo "
+"de intercalação."
 
 #. type: Plain text
 #: documentation/content/en/articles/vm-design/_index.adoc:182
@@ -393,6 +403,8 @@ msgid ""
 "Also, the swap block map can become fragmented fairly easily resulting in "
 "non-contiguous allocations."
 msgstr ""
+"Além disso, o mapa de blocos da swap pode se fragmentar com bastante "
+"facilidade, resultando em alocações não contíguas."
 
 #. type: Plain text
 #: documentation/content/en/articles/vm-design/_index.adoc:183
@@ -400,6 +412,8 @@ msgid ""
 "Kernel memory must also be allocated on the fly for additional swap "
 "management structures when a swapout occurs."
 msgstr ""
+"A memória do kernel também deve ser alocada dinamicamente para estruturas "
+"adicionais de gerenciamento da swap quando ocorre uma troca."
 
 #. type: Plain text
 #: documentation/content/en/articles/vm-design/_index.adoc:186
@@ -414,6 +428,9 @@ msgid ""
 "Swap management structures are allocated through a hash table rather than a "
 "linear array giving them a fixed allocation size and much finer granularity."
 msgstr ""
+"As estruturas de gerenciamento de swap são alocadas por meio de uma tabela "
+"de hash, em vez de um array linear, fornecendo um tamanho de alocação fixo e "
+"uma granularidade muito mais fina."
 
 #. type: Plain text
 #: documentation/content/en/articles/vm-design/_index.adoc:189
@@ -423,6 +440,11 @@ msgid ""
 "structure with free-space hinting in the radix node structures. This "
 "effectively makes swap allocation and freeing an O(1) operation."
 msgstr ""
+"Em vez de usar uma lista vinculada linearmente para acompanhar as reservas "
+"de espaço de troca, ele agora usa um bitmap de blocos de troca organizados "
+"em uma estrutura de árvores raiz com dicas de espaço livre nas estruturas do "
+"nó de origem. Isto efetivamente faz a alocação de swap e libera uma operação "
+"O(1)."
 
 #. type: Plain text
 #: documentation/content/en/articles/vm-design/_index.adoc:190
@@ -433,6 +455,11 @@ msgid ""
 "avoid allocating kernel memory at such times in order to avoid potential "
 "deadlocks."
 msgstr ""
+"Todo o bitmap da árvore raiz também é pré-alocado para evitar ter que alocar "
+"a memória do kernel durante operações críticas de troca com memória baixa. "
+"Afinal de contas, o sistema tende a trocar quando está com pouca memória, "
+"por isso devemos evitar a alocação da memória do kernel nesses momentos para "
+"evitar possíveis deadlocks."
 
 #. type: Plain text
 #: documentation/content/en/articles/vm-design/_index.adoc:191
@@ -440,6 +467,8 @@ msgid ""
 "To reduce fragmentation the radix tree is capable of allocating large "
 "contiguous chunks at once, skipping over smaller fragmented chunks."
 msgstr ""
+"Para reduzir a fragmentação, a árvore raiz é capaz de alocar grandes blocos "
+"contíguos de uma só vez, pulando pedaços menores e fragmentados."
 
 #. type: Plain text
 #: documentation/content/en/articles/vm-design/_index.adoc:193
@@ -454,7 +483,7 @@ msgstr ""
 #: documentation/content/en/articles/vm-design/_index.adoc:195
 #, no-wrap
 msgid "When to free a page"
-msgstr ""
+msgstr "Quando libertar uma página"
 
 #. type: Plain text
 #: documentation/content/en/articles/vm-design/_index.adoc:200
@@ -564,7 +593,7 @@ msgstr ""
 #: documentation/content/en/articles/vm-design/_index.adoc:237
 #, no-wrap
 msgid "Pre-Faulting and Zeroing Optimizations"
-msgstr ""
+msgstr "Otimizações de Pré-Falhas ou para Zerar"
 
 #. type: Plain text
 #: documentation/content/en/articles/vm-design/_index.adoc:247
@@ -607,7 +636,7 @@ msgstr ""
 #: documentation/content/en/articles/vm-design/_index.adoc:258
 #, no-wrap
 msgid "Page Table Optimizations"
-msgstr ""
+msgstr "Otimizações da Tabela de Páginas"
 
 #. type: Plain text
 #: documentation/content/en/articles/vm-design/_index.adoc:268
@@ -650,7 +679,7 @@ msgstr ""
 #: documentation/content/en/articles/vm-design/_index.adoc:275
 #, no-wrap
 msgid "Page Coloring"
-msgstr ""
+msgstr "Page Coloring"
 
 #. type: Plain text
 #: documentation/content/en/articles/vm-design/_index.adoc:285
@@ -905,6 +934,8 @@ msgstr ""
 #, no-wrap
 msgid "Finally, in the page coloring section, it might help to have a little more description of what you mean here. I did not quite follow it."
 msgstr ""
+"Finalmente, na seção de page coloring, pode ser útil descrever um pouco mais "
+"o que você quer dizer aqui. Eu não segui bem isso."
 
 #. type: Plain text
 #: documentation/content/en/articles/vm-design/_index.adoc:377
