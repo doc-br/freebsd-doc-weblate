@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-03-20 19:50+0000\n"
-"Last-Translator: Danilo G. Baio <dbaio@FreeBSD.org>\n"
+"PO-Revision-Date: 2021-04-01 00:52+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/articlesserial-uart_index/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -15,14 +15,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.5.1\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: Title =
 #: documentation/content/en/articles/serial-uart/_index.adoc:1
 #: documentation/content/en/articles/serial-uart/_index.adoc:10
 #, no-wrap
 msgid "Serial and UART Tutorial"
-msgstr ""
+msgstr "Tutorial sobre Comunicações Seriais e UART"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:25
@@ -32,7 +32,7 @@ msgstr "Sumário"
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:27
 msgid "This article talks about using serial hardware with FreeBSD."
-msgstr ""
+msgstr "Este artigo fala sobre o uso de hardware serial com o FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:29
@@ -43,7 +43,7 @@ msgstr "'''"
 #: documentation/content/en/articles/serial-uart/_index.adoc:33
 #, no-wrap
 msgid "The UART: What it is and how it works"
-msgstr ""
+msgstr "A UART: O que é e como funciona"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:36
@@ -66,6 +66,8 @@ msgid ""
 "Serial transmission is commonly used with modems and for non-networked "
 "communication between computers, terminals and other devices."
 msgstr ""
+"A transmissão serial é comumente usada com modems e para comunicação entre "
+"computadores, terminais e outros dispositivos sem rede."
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:46
@@ -80,23 +82,23 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:48
 msgid "Some common acronyms are:"
-msgstr ""
+msgstr "Algumas siglas comuns são:"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:51
 msgid "UART Universal Asynchronous Receiver/Transmitter"
-msgstr ""
+msgstr "UART Universal Asynchronous Receiver/Transmitter"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:54
 msgid "USART Universal Synchronous-Asynchronous Receiver/Transmitter"
-msgstr ""
+msgstr "USART Universal Synchronous-Asynchronous Receiver/Transmitter"
 
 #. type: Title ===
 #: documentation/content/en/articles/serial-uart/_index.adoc:55
 #, no-wrap
 msgid "Synchronous Serial Transmission"
-msgstr ""
+msgstr "Transmissão Serial Síncrona"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:60
@@ -137,7 +139,7 @@ msgstr ""
 #: documentation/content/en/articles/serial-uart/_index.adoc:68
 #, no-wrap
 msgid "Asynchronous Serial Transmission"
-msgstr ""
+msgstr "Transmissão Serial Assíncrona"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:72
@@ -221,6 +223,9 @@ msgid ""
 "If another word is ready for transmission, the Start Bit for the new word "
 "can be sent as soon as the Stop Bit for the previous word has been sent."
 msgstr ""
+"Se outra palavra estiver pronta para transmissão, o Start Bit da nova "
+"palavra pode ser enviado assim que o Stop Bit  da palavra anterior for "
+"enviado."
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:99
@@ -233,7 +238,7 @@ msgstr ""
 #: documentation/content/en/articles/serial-uart/_index.adoc:100
 #, no-wrap
 msgid "Other UART Functions"
-msgstr ""
+msgstr "Outras funções UART"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:105
@@ -254,7 +259,7 @@ msgstr ""
 #: documentation/content/en/articles/serial-uart/_index.adoc:106
 #, no-wrap
 msgid "The RS232-C and V.24 Standards"
-msgstr ""
+msgstr "Os padrões RS232-C e V.24"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:110
@@ -269,7 +274,7 @@ msgstr ""
 #: documentation/content/en/articles/serial-uart/_index.adoc:111
 #, no-wrap
 msgid "RS232-C Bit Assignments (Marks and Spaces)"
-msgstr ""
+msgstr "Atribuições de bit RS232-C (marcas e espaços)"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:115
@@ -297,6 +302,9 @@ msgid ""
 "multiple (including zero) of the bit rate of the communication link, but "
 "most UARTs are designed this way for simplicity."
 msgstr ""
+"O tempo inativo entre os bits de Stop e Start não precisa ser um múltiplo "
+"exato (incluindo zero) da taxa de bits do link de comunicação, mas a maioria "
+"dos UARTs é projetada dessa maneira para simplificar."
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:126
@@ -314,7 +322,7 @@ msgstr ""
 #: documentation/content/en/articles/serial-uart/_index.adoc:127
 #, no-wrap
 msgid "RS232-C Break Signal"
-msgstr ""
+msgstr "Sinal de quebra RS232-C"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:131
@@ -377,7 +385,7 @@ msgstr ""
 #: documentation/content/en/articles/serial-uart/_index.adoc:151
 #, no-wrap
 msgid "RS232-C DTE and DCE Devices"
-msgstr ""
+msgstr "Dispositivos RS232-C DTE e DCE"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:157
@@ -415,7 +423,7 @@ msgstr ""
 #: documentation/content/en/articles/serial-uart/_index.adoc:165
 #, no-wrap
 msgid "RS232-C Pin Assignments"
-msgstr ""
+msgstr "Atribuições de pinos RS232-C"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:168
@@ -424,6 +432,9 @@ msgid ""
 "twenty-five pin connector (usually a DB25) and defines the purpose of most "
 "of the pins in that connector."
 msgstr ""
+"A especificação EIA RS232-C (e o equivalente ITU, V.24) requer um conector "
+"de vinte e cinco pinos (geralmente um DB25) e define a finalidade da maioria "
+"dos pinos nesse conector."
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:171
@@ -450,6 +461,8 @@ msgid ""
 "Below is a table of the RS232-C signal assignments in the DB25 and DB9 "
 "connectors."
 msgstr ""
+"Abaixo está uma tabela das atribuições de sinal RS232-C nos conectores DB25 "
+"e DB9."
 
 #. type: Table
 #: documentation/content/en/articles/serial-uart/_index.adoc:387
@@ -668,7 +681,7 @@ msgstr ""
 #: documentation/content/en/articles/serial-uart/_index.adoc:389
 #, no-wrap
 msgid "Bits, Baud and Symbols"
-msgstr ""
+msgstr "Bits, Baud e Simbolos"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:393
@@ -698,6 +711,10 @@ msgid ""
 "falls to 27.27 words per second, because it now takes 11 bits to send the "
 "eight-bit words, and the modem still only sends 300 bits per second."
 msgstr ""
+"Se palavras de dados de 8 bits são usadas e bits de paridade também são "
+"usados, a taxa de dados cai para 27,27 palavras por segundo, porque agora "
+"leva 11 bits para enviar as palavras de oito bits, e o modem ainda envia "
+"apenas 300 bits por segundo."
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:406
@@ -790,7 +807,7 @@ msgstr ""
 #: documentation/content/en/articles/serial-uart/_index.adoc:427
 #, no-wrap
 msgid "The IBM Personal Computer UART"
-msgstr ""
+msgstr "O computador pessoal IBM e o UART"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:431
@@ -806,7 +823,7 @@ msgstr ""
 #: documentation/content/en/articles/serial-uart/_index.adoc:432
 #, no-wrap
 msgid "National Semiconductor UART Family Tree"
-msgstr ""
+msgstr "Árvore Genealógica da National Semiconductor UART"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:435
@@ -814,6 +831,8 @@ msgid ""
 "There have been several versions and subsequent generations of the INS8250 "
 "UART. Each major version is described below."
 msgstr ""
+"Houve várias versões e gerações subseqüentes do INSART50 UART. Cada versão "
+"principal está descrita abaixo."
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/serial-uart/_index.adoc:448
@@ -835,7 +854,7 @@ msgstr ""
 #: documentation/content/en/articles/serial-uart/_index.adoc:450
 #, no-wrap
 msgid "INS8250"
-msgstr ""
+msgstr "INS8250"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:453
@@ -860,7 +879,7 @@ msgstr ""
 #: documentation/content/en/articles/serial-uart/_index.adoc:457
 #, no-wrap
 msgid "INS8250-B"
-msgstr ""
+msgstr "INS8250-B"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:460
@@ -873,7 +892,7 @@ msgstr ""
 #: documentation/content/en/articles/serial-uart/_index.adoc:461
 #, no-wrap
 msgid "INS8250A"
-msgstr ""
+msgstr "INS8250A"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:465
@@ -889,7 +908,7 @@ msgstr ""
 #: documentation/content/en/articles/serial-uart/_index.adoc:466
 #, no-wrap
 msgid "INS82C50A"
-msgstr ""
+msgstr "INS82C50A"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:468
@@ -897,12 +916,14 @@ msgid ""
 "This is a CMOS version (low power consumption) of the INS8250A and has "
 "similar functional characteristics."
 msgstr ""
+"Esta é uma versão CMOS (baixo consumo de energia) do INS8250A e possui "
+"características funcionais semelhantes."
 
 #. type: Labeled list
 #: documentation/content/en/articles/serial-uart/_index.adoc:469
 #, no-wrap
 msgid "NS16450"
-msgstr ""
+msgstr "NS16450"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:472
@@ -916,18 +937,18 @@ msgstr ""
 #: documentation/content/en/articles/serial-uart/_index.adoc:473
 #, no-wrap
 msgid "NS16C450"
-msgstr ""
+msgstr "NS16C450"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:475
 msgid "This is a CMOS version (low power consumption) of the NS16450."
-msgstr ""
+msgstr "Esta é uma versão CMOS (baixo consumo de energia) do NS16450."
 
 #. type: Labeled list
 #: documentation/content/en/articles/serial-uart/_index.adoc:476
 #, no-wrap
 msgid "NS16550"
-msgstr ""
+msgstr "NS16550"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:478
@@ -935,12 +956,14 @@ msgid ""
 "Same as NS16450 with a 16-byte send and receive buffer but the buffer design "
 "was flawed and could not be reliably be used."
 msgstr ""
+"O mesmo que NS16450 com um buffer de envio e recebimento de 16 bytes, mas o "
+"design do buffer era falho e não podia ser usado com segurança."
 
 #. type: Labeled list
 #: documentation/content/en/articles/serial-uart/_index.adoc:479
 #, no-wrap
 msgid "NS16550A"
-msgstr ""
+msgstr "NS16550A"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:482
@@ -955,19 +978,19 @@ msgstr ""
 #: documentation/content/en/articles/serial-uart/_index.adoc:483
 #, no-wrap
 msgid "NS16C552"
-msgstr ""
+msgstr "NS16C552"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:485
 msgid ""
 "This component consists of two NS16C550A CMOS UARTs in a single package."
-msgstr ""
+msgstr "Este componente consiste em dois UARTs CMOS NS16C550A em um único chip."
 
 #. type: Labeled list
 #: documentation/content/en/articles/serial-uart/_index.adoc:486
 #, no-wrap
 msgid "PC16550D"
-msgstr ""
+msgstr "PC16550D"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:489
@@ -980,7 +1003,7 @@ msgstr ""
 #: documentation/content/en/articles/serial-uart/_index.adoc:490
 #, no-wrap
 msgid "The NS16550AF and the PC16550D are the same thing"
-msgstr ""
+msgstr "O NS16550AF e o PC16550D são a mesma coisa"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:496
@@ -1011,6 +1034,12 @@ msgid ""
 "as $5(US) in volume) as much as the NS16550AFN because they are readily "
 "available."
 msgstr ""
+"É importante entender que em algumas lojas, você pode pagar US$ 15 por um "
+"NS16550AFN fabricado em 1990 e no próximo bin encontrar as novas peças "
+"PC16550DN com pequenas correções que o National fez desde que a peça AFN "
+"estava em produção, o PC16550DN foi provavelmente feito nos últimos seis "
+"meses e custa metade (tão baixo quanto US$ 5 se comprado em volume) do "
+"NS16550AFN porque ele está prontamente disponível."
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:503
@@ -1019,12 +1048,15 @@ msgid ""
 "probably continue to increase until more people discover and accept that the "
 "PC16550DN really has the same function as the old part number."
 msgstr ""
+"Como o fornecimento de chips NS16550AFN continua encolhendo, o preço "
+"provavelmente continuará aumentando até que mais pessoas descubram e aceitem "
+"que o PC16550DN realmente tem a mesma função que o número de peça antigo."
 
 #. type: Title ====
 #: documentation/content/en/articles/serial-uart/_index.adoc:504
 #, no-wrap
 msgid "National Semiconductor Part Numbering System"
-msgstr ""
+msgstr "Sistema de Numeração de Peças da National Semiconductor"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:507
@@ -1077,12 +1109,14 @@ msgid ""
 "So what we used to call a NS16550AFN (DIP Package) is now called a PC16550DN "
 "or PC16550DIN."
 msgstr ""
+"Então, o que costumávamos chamar de NS16550AFN (Pacote DIP) agora é chamado "
+"de PC16550DN ou PC16550DIN."
 
 #. type: Title ===
 #: documentation/content/en/articles/serial-uart/_index.adoc:535
 #, no-wrap
 msgid "Other Vendors and Similar UARTs"
-msgstr ""
+msgstr "Outros fornecedores e UARTs semelhantes"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:540
@@ -1115,6 +1149,11 @@ msgid ""
 "product will compare favorably in market comparisons even though the "
 "effective performance may be lowered by this action."
 msgstr ""
+"Alguns fabricantes de modem são motivados pelas forças do mercado a "
+"abandonar um design que possui centenas de bytes de buffer e, em vez disso, "
+"usam uma UART 16550A para que o produto compare favoravelmente nas "
+"comparações de mercado, embora o desempenho efetivo possa ser reduzido por "
+"essa ação."
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:549
@@ -1273,6 +1312,10 @@ msgid ""
 "presence of potentially incompatible components that might cause problems or "
 "have to be handled as a special case."
 msgstr ""
+"O COMTEST pode ser usado como uma ferramenta de triagem para alertar o "
+"administrador sobre a presença de componentes potencialmente incompatíveis "
+"que podem causar problemas ou que precisam ser tratados como um caso "
+"especial."
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:629
@@ -1293,7 +1336,7 @@ msgstr ""
 #: documentation/content/en/articles/serial-uart/_index.adoc:635
 #, no-wrap
 msgid "8250/16450/16550 Registers"
-msgstr ""
+msgstr "Registradores 8250/16450/16550"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:641
@@ -1322,6 +1365,7 @@ msgid ""
 "A description of the I/O ports of the 8250/16450/16550 UART is provided "
 "below."
 msgstr ""
+"Uma descrição das portas I/O da UART 8250/16450/16550 é fornecida abaixo."
 
 #. type: Table
 #: documentation/content/en/articles/serial-uart/_index.adoc:795
@@ -1476,7 +1520,7 @@ msgstr ""
 #: documentation/content/en/articles/serial-uart/_index.adoc:797
 #, no-wrap
 msgid "Beyond the 16550A UART"
-msgstr ""
+msgstr "Além do UART 16550A"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:802
@@ -1493,7 +1537,7 @@ msgstr ""
 #: documentation/content/en/articles/serial-uart/_index.adoc:803
 #, no-wrap
 msgid "ST16650"
-msgstr ""
+msgstr "ST16650"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:806
@@ -1506,7 +1550,7 @@ msgstr ""
 #: documentation/content/en/articles/serial-uart/_index.adoc:807
 #, no-wrap
 msgid "TIL16660"
-msgstr ""
+msgstr "TIL16660"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:810
@@ -1520,7 +1564,7 @@ msgstr ""
 #: documentation/content/en/articles/serial-uart/_index.adoc:811
 #, no-wrap
 msgid "Hayes ESP"
-msgstr ""
+msgstr "Hayes ESP"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:814
@@ -1561,7 +1605,7 @@ msgstr ""
 #: documentation/content/en/articles/serial-uart/_index.adoc:827
 #, no-wrap
 msgid "Digi International (DigiBoard) PC/8"
-msgstr ""
+msgstr "Digi International (DigiBoard) PC/8"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:830
@@ -1597,12 +1641,14 @@ msgid ""
 "The trick in setting this up is that the MSB of the flags represent the last "
 "SIO port, in this case 11 so flags are 0xb05."
 msgstr ""
+"O truque para configurá-la é que o MSB dos flags representa a última porta "
+"SIO, neste caso 11, então as flags são 0xb05."
 
 #. type: Title ===
 #: documentation/content/en/articles/serial-uart/_index.adoc:849
 #, no-wrap
 msgid "Boca 16"
-msgstr ""
+msgstr "Boca 16"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:852
@@ -1615,6 +1661,9 @@ msgid ""
 "The procedures to make a Boca 16 port board with FreeBSD are pretty "
 "straightforward, but you will need a couple things to make it work:"
 msgstr ""
+"Os procedimentos para fazer uma placa multiporta Boca 16 funcionar com o "
+"FreeBSD são bastante diretos, mas você precisará de algumas coisas para fazê-"
+"la funcionar:"
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:856
@@ -1631,6 +1680,8 @@ msgid ""
 "Two, you will need to know the interrupt and IO setting for your Boca Board "
 "so you can set these options properly in the kernel."
 msgstr ""
+"Dois, você precisará saber a configuração de interrupção e de I/O da sua "
+"placa Boca para que você possa definir essas opções corretamente no kernel."
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:861
@@ -1727,6 +1778,11 @@ msgid ""
 "successful probe of the Boca ports as follows: (obviously the sio numbers, "
 "IO and IRQ could be different)"
 msgstr ""
+"Salve e complete a configuração do kernel, recompile, instale e "
+"reinicialize. Presumindo que você tenha instalado com sucesso o kernel "
+"recompilado e configurado para o endereço e IRQ correto, sua mensagem de "
+"boot deve indicar o teste bem-sucedido das portas Boca da seguinte forma: ("
+"obviamente os números sio, IO e IRQ podem ser diferentes)"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/serial-uart/_index.adoc:935
@@ -1847,7 +1903,7 @@ msgstr ""
 #: documentation/content/en/articles/serial-uart/_index.adoc:969
 #, no-wrap
 msgid "Support for Cheap Multi-UART Cards"
-msgstr ""
+msgstr "Suporte para cartões Multi-UART baratos"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/serial-uart/_index.adoc:972
@@ -1862,6 +1918,8 @@ msgid ""
 "Ever wondered about FreeBSD support for your 20$ multi-I/O card with two (or "
 "more) COM ports, sharing IRQs? Here is how:"
 msgstr ""
+"Já se perguntou se o FreeBSD suporta a sua placa multi-I/O de US$ 20 com "
+"duas (ou mais) portas COM, compartilhando IRQs? Aqui está como:"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/serial-uart/_index.adoc:978
@@ -1883,6 +1941,8 @@ msgid ""
 "Such cheap I/O boards commonly have a 4 by 3 jumper matrix for the COM "
 "ports, similar to the following:"
 msgstr ""
+"Essas placas de I/O baratas geralmente têm uma matriz de jumpers de 4 por 3 "
+"para as portas COM, semelhante à seguinte:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/serial-uart/_index.adoc:989
@@ -2043,7 +2103,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:1071
 msgid "Rebuild and install the new kernel."
-msgstr ""
+msgstr "Recompile e instale o novo kernel."
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:1072
@@ -2082,7 +2142,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:1090
 msgid "Reboot with the new kernel."
-msgstr ""
+msgstr "Reinicie com o novo kernel."
 
 #. type: Title ==
 #: documentation/content/en/articles/serial-uart/_index.adoc:1092
@@ -2106,27 +2166,27 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/serial-uart/_index.adoc:1101
 msgid "ISA SI/XIO host card (2 versions)"
-msgstr ""
+msgstr "ISA SI/XIO host card (2 versions)"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/serial-uart/_index.adoc:1102
 msgid "EISA SI/XIO host card"
-msgstr ""
+msgstr "EISA SI/XIO host card"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/serial-uart/_index.adoc:1103
 msgid "PCI SI/XIO host card"
-msgstr ""
+msgstr "PCI SI/XIO host card"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/serial-uart/_index.adoc:1104
 msgid "ISA SX host card"
-msgstr ""
+msgstr "ISA SX host card"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/serial-uart/_index.adoc:1105
 msgid "PCI SX host card"
-msgstr ""
+msgstr "PCI SX host card"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/serial-uart/_index.adoc:1111
@@ -2149,7 +2209,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/serial-uart/_index.adoc:1117
 msgid "SI 4 or 8 port modules. Up to 57600 bps on each port supported."
-msgstr ""
+msgstr "Módulos de portas SI 4 ou 8. Até 57600 bps em cada porta suportada."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/serial-uart/_index.adoc:1118
@@ -2157,6 +2217,8 @@ msgid ""
 "XIO 8 port modules. Up to 115200 bps on each port supported. One type of XIO "
 "module has 7 serial and 1 parallel port."
 msgstr ""
+"Módulos de porta XIO 8. Até 115.200 bps em cada porta suportada. Um tipo de "
+"módulo XIO possui 7 portas seriais e 1 porta paralela."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/serial-uart/_index.adoc:1119
@@ -2164,6 +2226,8 @@ msgid ""
 "SXDC 8 port modules. Up to 921600 bps on each port supported. Like XIO, a "
 "module is available with one parallel port as well."
 msgstr ""
+"Módulos de porta SXDC 8. Até 921.600 bps em cada porta suportada. Tal como "
+"no XIO, um módulo está disponível com uma porta paralela também."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/serial-uart/_index.adoc:1121
@@ -2171,6 +2235,8 @@ msgid ""
 "To configure an ISA host card, add the following line to your kernel "
 "configuration file, changing the numbers as appropriate:"
 msgstr ""
+"Para configurar uma placa de host ISA, adicione a seguinte linha ao seu "
+"arquivo de configuração do kernel, alterando os números conforme apropriado:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/serial-uart/_index.adoc:1125
@@ -2184,11 +2250,13 @@ msgid ""
 "Valid IRQ numbers are 9, 10, 11, 12 and 15 for SX ISA host cards and 11, 12 "
 "and 15 for SI/XIO ISA host cards."
 msgstr ""
+"Números de IRQ válidos são 9, 10, 11, 12 e 15 para placas host SX ISA e 11, "
+"12 e 15 para placas host ISA/XIO ISA."
 
 #. type: Plain text
 #: documentation/content/en/articles/serial-uart/_index.adoc:1130
 msgid "To configure an EISA or PCI host card, use this line:"
-msgstr ""
+msgstr "Para configurar uma placa de host EISA ou PCI, use esta linha:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/serial-uart/_index.adoc:1134
@@ -2201,6 +2269,8 @@ msgstr ""
 msgid ""
 "After adding the configuration entry, rebuild and install your new kernel."
 msgstr ""
+"Depois de adicionar a entrada de configuração, recompile e instale seu novo "
+"kernel."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/serial-uart/_index.adoc:1141
