@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-03-20 19:50+0000\n"
-"Last-Translator: Danilo G. Baio <dbaio@FreeBSD.org>\n"
+"PO-Revision-Date: 2021-04-01 00:52+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/articlesrc-scripting_index/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -15,14 +15,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.5.1\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: Title =
 #: documentation/content/en/articles/rc-scripting/_index.adoc:1
 #: documentation/content/en/articles/rc-scripting/_index.adoc:11
 #, no-wrap
 msgid "Practical rc.d scripting in BSD"
-msgstr ""
+msgstr "Scripts rc.d práticos no BSD"
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:25
@@ -173,7 +173,7 @@ msgstr ""
 #: documentation/content/en/articles/rc-scripting/_index.adoc:90
 #, no-wrap
 msgid "Outlining the task"
-msgstr ""
+msgstr "Esboçando a tarefa"
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:94
@@ -186,7 +186,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:96
 msgid "Is the service mandatory or optional?"
-msgstr ""
+msgstr "O serviço é obrigatório ou opcional?"
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:97
@@ -194,11 +194,13 @@ msgid ""
 "Will the script serve a single program, e.g., a daemon, or perform more "
 "complex actions?"
 msgstr ""
+"O script servirá um único programa, por exemplo, um daemon, ou realizará "
+"ações mais complexas?"
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:98
 msgid "Which other services will our service depend on, and vice versa?"
-msgstr ""
+msgstr "De quais outros serviços nosso serviço dependerá e vice-versa?"
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:100
@@ -206,18 +208,22 @@ msgid ""
 "From the examples that follow we will see why it is important to know the "
 "answers to these questions."
 msgstr ""
+"A partir dos exemplos que se seguem, veremos o porque é importante conhecer "
+"as respostas a essas perguntas."
 
 #. type: Title ==
 #: documentation/content/en/articles/rc-scripting/_index.adoc:102
 #, no-wrap
 msgid "A dummy script"
-msgstr ""
+msgstr "Um script fictício"
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:105
 msgid ""
 "The following script just emits a message each time the system boots up:"
 msgstr ""
+"O script a seguir apenas emite uma mensagem toda vez que o sistema é "
+"inicializado:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/rc-scripting/_index.adoc:109
@@ -261,7 +267,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:126
 msgid "Things to note are:"
-msgstr ""
+msgstr "Os pontos a serem observadas são:"
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:132
@@ -419,7 +425,7 @@ msgstr ""
 #: documentation/content/en/articles/rc-scripting/_index.adoc:207
 #, no-wrap
 msgid "A configurable dummy script"
-msgstr ""
+msgstr "Um script fictício configurável"
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:217
@@ -499,7 +505,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:243
 msgid "What changed in this example?"
-msgstr ""
+msgstr "O que mudou neste exemplo?"
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:245
@@ -609,7 +615,7 @@ msgstr ""
 #: documentation/content/en/articles/rc-scripting/_index.adoc:301
 #, no-wrap
 msgid "Startup and shutdown of a simple daemon"
-msgstr ""
+msgstr "Inicialização e desligamento de um daemon simples"
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:308
@@ -722,7 +728,7 @@ msgstr ""
 #: documentation/content/en/articles/rc-scripting/_index.adoc:360
 #, no-wrap
 msgid "Startup and shutdown of an advanced daemon"
-msgstr ""
+msgstr "Inicialização e desligamento de um daemon avançado"
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:365
@@ -1087,7 +1093,7 @@ msgstr ""
 #: documentation/content/en/articles/rc-scripting/_index.adoc:564
 #, no-wrap
 msgid "Connecting a script to the rc.d framework"
-msgstr ""
+msgstr "Conectando um script ao framework rc.d"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/rc-scripting/_index.adoc:571
@@ -1174,6 +1180,8 @@ msgid ""
 "With this general knowledge in mind, let us consider the simple daemon "
 "script enhanced with dependency stuff:"
 msgstr ""
+"Com este conhecimento geral em mente, vamos considerar o simples script "
+"daemon aprimorado com coisas de dependência:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/rc-scripting/_index.adoc:606
@@ -1210,7 +1218,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:629
 msgid "As before, detailed analysis follows:"
-msgstr ""
+msgstr "Como antes, a análise detalhada segue:"
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:632
@@ -1325,7 +1333,7 @@ msgstr ""
 #: documentation/content/en/articles/rc-scripting/_index.adoc:681
 #, no-wrap
 msgid "Giving more flexibility to an rc.d script"
-msgstr ""
+msgstr "Dando mais flexibilidade a um script rc.d"
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:690
@@ -1439,7 +1447,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:748
 msgid "What essential changes can we notice in the script?"
-msgstr ""
+msgstr "Quais mudanças essenciais podemos notar no script?"
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:753
@@ -1521,7 +1529,7 @@ msgstr ""
 #: documentation/content/en/articles/rc-scripting/_index.adoc:792
 #, no-wrap
 msgid "Further reading"
-msgstr ""
+msgstr "Leitura adicional"
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:796
