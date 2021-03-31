@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-01 00:53+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
+"projects/documentation/booksporters-handbookplistchapter/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:1
@@ -177,13 +180,13 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:84
 #, no-wrap
 msgid "Empty Directories"
-msgstr ""
+msgstr "Diretórios Vazios"
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:87
 #, no-wrap
 msgid "Cleaning Up Empty Directories"
-msgstr ""
+msgstr "Limpando Diretórios Vazios"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:90
@@ -209,7 +212,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:99
 #, no-wrap
 msgid "Creating Empty Directories"
-msgstr ""
+msgstr "Criando Diretórios Vazios"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:102
@@ -243,7 +246,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:117
 #, no-wrap
 msgid "Configuration Files"
-msgstr ""
+msgstr "Arquivos de Configuração"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:120
@@ -306,7 +309,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:146
 msgid "or"
-msgstr ""
+msgstr "ou"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:150
@@ -323,7 +326,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:156
 #, no-wrap
 msgid "Dynamic Versus Static Package List"
-msgstr ""
+msgstr "Lista de Pacotes Estática versus Dinâmica"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:159
@@ -366,7 +369,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:165
 #, no-wrap
 msgid "Automated Package List Creation"
-msgstr ""
+msgstr "Criação Automatizada da Lista de Pacotes"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:168
@@ -401,6 +404,9 @@ msgid ""
 "Strings to be replaced sometimes need to be very specific to avoid undesired "
 "replacements. This is a common problem with shorter values."
 msgstr ""
+"As strings a serem substituídas às vezes precisam ser muito específicas para "
+"evitar substituições indesejadas. Esse é um problema comum com valores mais "
+"curtos."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:177
@@ -414,7 +420,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:179
 #, no-wrap
 msgid "Using PLIST_SUB with Regular Expressions"
-msgstr ""
+msgstr "Usando PLIST_SUB com Expressões Regulares"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:184
@@ -462,7 +468,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:203
 msgid "The files installed by the port are:"
-msgstr ""
+msgstr "Os arquivos instalados pelo port são:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:211
@@ -524,7 +530,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:246
 #, no-wrap
 msgid "Expanding Package List with Keywords"
-msgstr ""
+msgstr "Expandindo a Lista de Pacotes com Keywords"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:249
@@ -534,6 +540,10 @@ msgid ""
 "referenced. To change the owner, group, and mode of a configuration file, "
 "use:"
 msgstr ""
+"Todas as keywords também podem ter argumentos opcionais entre parênteses. Os "
+"argumentos são owner, group e mode. Esse argumento é usado no arquivo ou "
+"diretório referenciado. Para alterar o dono, o grupo e o modo de um arquivo "
+"de configuração, use:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:253
@@ -547,6 +557,8 @@ msgid ""
 "The arguments are optional. If only the group and mode need to be changed, "
 "use:"
 msgstr ""
+"Os argumentos são opcionais. Se apenas o grupo e o modo precisarem ser "
+"alterados, use:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:260
@@ -686,6 +698,8 @@ msgid ""
 "Will remove the file on deinstallation, and not give an error if the file is "
 "not there."
 msgstr ""
+"O arquivo será removido na desinstalação, e não dará um erro se o arquivo "
+"não estiver lá."
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:316
@@ -734,7 +748,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:331
 msgid "Add the file passed as argument to the plist."
-msgstr ""
+msgstr "Adiciona o arquivo passado como argumento ao plist."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:333
@@ -769,7 +783,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:342
 #, no-wrap
 msgid "Base Keywords"
-msgstr ""
+msgstr "Keywords Básicas"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:345
@@ -981,7 +995,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:416
 msgid "This line is ignored when packing."
-msgstr ""
+msgstr "Esta linha é ignorada no momento de empacotar."
 
 #. type: Title ====
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:418
@@ -1045,7 +1059,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:438
 #, no-wrap
 msgid "Creating New Keywords"
-msgstr ""
+msgstr "Criando Novas Keywords"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:441
@@ -1121,6 +1135,8 @@ msgid ""
 "Defines what happens to the keyword's parameter. Contains an array where the "
 "possible values are:"
 msgstr ""
+"Define o que acontece com o parâmetro da keyword. Contém uma matriz onde os "
+"valores possíveis são:"
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:466
@@ -1131,7 +1147,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:468
 msgid "Set the prefix for the next plist entries."
-msgstr ""
+msgstr "Define o prefixo para as próximas entradas do plist."
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:469
@@ -1143,6 +1159,8 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:471
 msgid "Register a directory to be created on install and removed on deinstall."
 msgstr ""
+"Registra um diretório para ser criado na instalação e removido na "
+"desinstalação."
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:472
@@ -1153,7 +1171,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:474
 msgid "Register a directory to be deleted on deinstall. Deprecated."
-msgstr ""
+msgstr "Registra um diretório a ser excluído na desinstalação. Descontinuado."
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:475
@@ -1165,6 +1183,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:477
 msgid "Register a directory to try and deleted on deinstall. Deprecated."
 msgstr ""
+"Registra um diretório para tentar deletar na desinstalação. Descontinuado."
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:478
@@ -1175,7 +1194,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:480
 msgid "Register a file."
-msgstr ""
+msgstr "Registra um arquivo."
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:481
@@ -1186,7 +1205,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:483
 msgid "Set the mode for the next plist entries."
-msgstr ""
+msgstr "Define o modo para as próximas entradas do plist."
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:484
@@ -1197,7 +1216,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:486
 msgid "Set the owner for the next plist entries."
-msgstr ""
+msgstr "Define o dono para as próximas entradas do plist."
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:487
@@ -1208,7 +1227,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:489
 msgid "Set the group for the next plist entries."
-msgstr ""
+msgstr "Define o grupo para as próximas entradas do plist."
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:490
@@ -1230,7 +1249,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:495
 msgid "Ignore the next entry in the plist."
-msgstr ""
+msgstr "Ignora a próxima entrada no plist."
 
 #. type: Title ====
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:497
@@ -1297,7 +1316,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:527
 #, no-wrap
 msgid "Custom Keyword Examples"
-msgstr ""
+msgstr "Exemplos de Keywords Customizadas"
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:530
