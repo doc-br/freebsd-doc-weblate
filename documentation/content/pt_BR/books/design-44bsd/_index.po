@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-02-24 00:32+0000\n"
-"Last-Translator: Danilo G. Baio <dbaio@FreeBSD.org>\n"
+"PO-Revision-Date: 2021-04-01 00:53+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/booksdesign-44bsd_index/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -15,14 +15,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.5\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: Title =
 #: documentation/content/en/books/design-44bsd/_index.adoc:1
 #: documentation/content/en/books/design-44bsd/_index.adoc:13
 #, no-wrap
 msgid "The Design and Implementation of the 4.4BSD Operating System"
-msgstr ""
+msgstr "O Design e a Implementação do Sistema Operacional 4.4BSD"
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:62
@@ -33,13 +33,13 @@ msgstr "'''"
 #: documentation/content/en/books/design-44bsd/_index.adoc:66
 #, no-wrap
 msgid "Design Overview of 4.4BSD"
-msgstr ""
+msgstr "Visão geral do Design do 4.4BSD"
 
 #. type: Title ===
 #: documentation/content/en/books/design-44bsd/_index.adoc:69
 #, no-wrap
 msgid "4.4BSD Facilities and the Kernel"
-msgstr ""
+msgstr "O kernel e as facilidades do 4.4BSD"
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:72
@@ -48,6 +48,9 @@ msgid ""
 "communications, and system startup. This section outlines where each of "
 "these four basic services is described in this book."
 msgstr ""
+"O kernel 4.4BSD fornece quatro recursos básicos: processos, um sistema de "
+"arquivos, comunicações e inicialização do sistema. Esta seção descreve onde "
+"cada um desses quatro serviços básicos é descrito neste livro."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:74
@@ -57,6 +60,11 @@ msgid ""
 "Chapter 4. The system multiplexes separate virtual-address spaces for each "
 "process; this memory management is discussed in Chapter 5."
 msgstr ""
+"Processos constituem uma thread de controle em um endereço de memória. "
+"Mecanismos para criação, finalização, e outras formas de controle de "
+"processos são descritos no Capítulo 4. O sistema multiplexa separados "
+"espaços de endereços virtuais para cada processo; esse gerenciamento de "
+"memória é discutido no Capítulo 5."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:75
@@ -70,6 +78,15 @@ msgid ""
 "subject of Chapter 9. Terminals are used to access the system; their "
 "operation is the subject of Chapter 10."
 msgstr ""
+"A interface do usuário para o sistema de arquivos e dispositivos é similar; "
+"aspectos comuns são discutidos no Capítulo 6. O sistema de arquivos é um "
+"conjunto de arquivos nomeados, organizados em uma hierarquia de árvore-"
+"estruturada de diretórios, e de operações para manipulá-los, como "
+"apresentado no Capítulo 7. Arquivos residem em uma mídia física como discos. "
+"4.4BSD suporta diversas organizações de dados no disco, como mostrado em "
+"frente no Capítulo 8. Acesso a arquivos em máquinas remotas é o assunto do "
+"capítulo 9. Terminais são usados para acessar o sistema; a operação deles é "
+"o assunto do Capítulo 10."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:76
@@ -85,6 +102,16 @@ msgid ""
 "facility. Chapter 13 describes a particular networking implementation in "
 "detail."
 msgstr ""
+"Mecanismos de comunicação providos por sistemas tradicionais UNIX incluem "
+"confiáveis bytes streams simplex entre processos relacionados (veja pipes, "
+"Seção 11.1), e notificação de eventos excepcionais (veja signals, Seção 4.7)"
+". 4.4BSD também possui um mecanismo geral de comunicação interprocessual. "
+"Esse mecanismo, descrito no Capítulo 11, usa mecanismos de acessos distintos "
+"daqueles do sistema de arquivos, mas, uma  vez que uma conexão é realizada, "
+"um processo pode acessá-la como se fosse um pipe. Existe um framework geral "
+"de rede, discutido no capítulo 12, que é normalmente usado como uma camada "
+"de base para o mecanismo IPC. O Capítulo 13 descreve uma implementação de "
+"rede particular em detalhe."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:77
@@ -106,7 +133,7 @@ msgstr ""
 #: documentation/content/en/books/design-44bsd/_index.adoc:80
 #, no-wrap
 msgid "The Kernel"
-msgstr ""
+msgstr "O Kernel"
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:83
@@ -177,7 +204,7 @@ msgstr ""
 #: documentation/content/en/books/design-44bsd/_index.adoc:93
 #, no-wrap
 msgid "Kernel Organization"
-msgstr ""
+msgstr "Organização do Kernel"
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:96
@@ -1748,7 +1775,7 @@ msgstr ""
 #: documentation/content/en/books/design-44bsd/_index.adoc:420
 #, no-wrap
 msgid "Terminals"
-msgstr ""
+msgstr "Terminais"
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:423
@@ -1927,7 +1954,7 @@ msgstr ""
 #: documentation/content/en/books/design-44bsd/_index.adoc:457
 #, no-wrap
 msgid "Network Communication"
-msgstr ""
+msgstr "Comunicação de rede"
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:460
@@ -2035,7 +2062,7 @@ msgstr ""
 #: documentation/content/en/books/design-44bsd/_index.adoc:483
 #, no-wrap
 msgid "References"
-msgstr ""
+msgstr "Referências"
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:486
