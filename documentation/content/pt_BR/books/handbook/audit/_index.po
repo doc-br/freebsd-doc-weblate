@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-01 12:56+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookaudit_index/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/audit/_index.adoc:1
@@ -31,13 +34,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/audit/_index.adoc:9
 #, no-wrap
 msgid "Security Event Auditing"
-msgstr ""
+msgstr "Auditoria de Evento de Segurança"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/audit/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "Sinopse"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:48
@@ -59,32 +62,38 @@ msgid ""
 "auditing. It explains audit policies and provides an example audit "
 "configuration."
 msgstr ""
+"Este capítulo se concentra na instalação e configuração da auditoria de "
+"eventos. Ele explica as políticas de auditoria e fornece um exemplo de "
+"configuração de auditoria."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:52
 msgid "After reading this chapter, you will know:"
-msgstr ""
+msgstr "Depois de ler este capítulo, você saberá:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:54
 msgid "What event auditing is and how it works."
-msgstr ""
+msgstr "O que é auditoria de eventos e como funciona."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:55
 msgid "How to configure event auditing on FreeBSD for users and processes."
 msgstr ""
+"Como configurar a auditoria de eventos no FreeBSD para usuários e processos."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:56
 msgid ""
 "How to review the audit trail using the audit reduction and review tools."
 msgstr ""
+"Como revisar o caminho da auditoria usando as ferramentas de auditoria para "
+"redução e revisão."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:58
 msgid "Before reading this chapter, you should:"
-msgstr ""
+msgstr "Antes de ler este capítulo, você deve:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:60
@@ -133,12 +142,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/audit/_index.adoc:72
 #, no-wrap
 msgid "Key Terms"
-msgstr ""
+msgstr "Termos chave"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:75
 msgid "The following terms are related to security event auditing:"
 msgstr ""
+"Os termos a seguir estão relacionados a auditoria de eventos de segurança:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:77
@@ -211,7 +221,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/audit/_index.adoc:85
 #, no-wrap
 msgid "Audit Configuration"
-msgstr ""
+msgstr "Configuração de Auditoria"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:88
@@ -231,7 +241,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:95
 msgid "Then, start the audit daemon:"
-msgstr ""
+msgstr "Em seguida, inicie o daemon de auditoria:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:99
@@ -245,6 +255,8 @@ msgid ""
 "Users who prefer to compile a custom kernel must include the following line "
 "in their custom kernel configuration file:"
 msgstr ""
+"Usuários que preferem compilar um kernel personalizado devem incluir a "
+"seguinte linha em seu arquivo de configuração de kernel personalizado:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:106
@@ -256,7 +268,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/audit/_index.adoc:108
 #, no-wrap
 msgid "Event Selection Expressions"
-msgstr ""
+msgstr "Expressões de Seleção de Eventos"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:111
@@ -267,6 +279,11 @@ msgid ""
 "evaluated from left to right, and two expressions are combined by appending "
 "one onto the other."
 msgstr ""
+"Expressões de seleção são usadas em vários lugares na configuração de "
+"auditoria para determinar quais eventos devem ser auditados. Expressões "
+"contêm uma lista de classes de eventos para correspondência. As expressões "
+"de seleção são avaliadas da esquerda para a direita e duas expressões são "
+"combinadas, acrescentando uma à outra."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:113
@@ -277,7 +294,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/audit/_index.adoc:115
 #, no-wrap
 msgid "Default Audit Event Classes"
-msgstr ""
+msgstr "Classes de Eventos de Auditoria Padrão"
 
 #. type: Table
 #: documentation/content/en/books/handbook/audit/_index.adoc:201
@@ -388,7 +405,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/audit/_index.adoc:208
 #, no-wrap
 msgid "Prefixes for Audit Event Classes"
-msgstr ""
+msgstr "Prefixos para Classes de Eventos de Auditoria"
 
 #. type: Table
 #: documentation/content/en/books/handbook/audit/_index.adoc:228
@@ -419,6 +436,8 @@ msgid ""
 "If no prefix is present, both successful and failed instances of the event "
 "will be audited."
 msgstr ""
+"Se nenhum prefixo estiver presente, as instâncias com êxito e com falha do "
+"evento serão auditadas."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:233
@@ -426,6 +445,8 @@ msgid ""
 "The following example selection string selects both successful and failed "
 "login/logout events, but only successful execution events:"
 msgstr ""
+"O seguinte exemplo de sequência de seleção seleciona eventos de login/logout "
+"bem-sucedidos e com falha, mas apenas eventos de execução bem-sucedidos:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:237
@@ -437,7 +458,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/audit/_index.adoc:239
 #, no-wrap
 msgid "Configuration Files"
-msgstr ""
+msgstr "Arquivos de Configuração"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:242
@@ -489,6 +510,9 @@ msgid ""
 "Audit configuration files should be edited and maintained carefully, as "
 "errors in configuration may result in improper logging of events."
 msgstr ""
+"Os arquivos de configuração de auditoria devem ser editados e mantidos com "
+"cuidado, pois erros na configuração podem resultar no registro inadequado de "
+"eventos."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:256
@@ -631,7 +655,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/audit/_index.adoc:304
 #, no-wrap
 msgid "Working with Audit Trails"
-msgstr ""
+msgstr "Trabalhando com Trilhas de Auditoria"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:307
@@ -651,6 +675,8 @@ msgid ""
 "For example, to dump the entire contents of a specified audit log in plain "
 "text:"
 msgstr ""
+"Por exemplo, para baixar todo o conteúdo de um log de auditoria especificado "
+"em texto simples:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:313
@@ -737,7 +763,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/audit/_index.adoc:343
 #, no-wrap
 msgid "Live Monitoring Using Audit Pipes"
-msgstr ""
+msgstr "Monitoramento em Tempo Real Usando Pipes de Auditoria"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:346
@@ -750,6 +776,14 @@ msgid ""
 "log rotation interrupting the event stream. To track the live audit event "
 "stream:"
 msgstr ""
+"Pipes de auditoria são pseudo-dispositivos clones que permitem que os "
+"aplicativos acessem o fluxo de registro de auditoria em tempo real. Isto é "
+"principalmente de interesse para os autores de aplicações de detecção de "
+"intrusão e monitoramento de sistemas. No entanto, o dispositivo de canal de "
+"auditoria é uma maneira conveniente para o administrador permitir o "
+"monitoramento ao vivo sem incorrer em problemas com a propriedade do arquivo "
+"de trilha de auditoria ou a rotação de log interrompendo o fluxo de eventos. "
+"Para acompanhar o fluxo de eventos de auditoria em tempo real:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:350
@@ -794,7 +828,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/audit/_index.adoc:367
 #, no-wrap
 msgid "Rotating and Compressing Audit Trail Files"
-msgstr ""
+msgstr "Rotação e Compactação de Arquivos de Trilha de Auditoria"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:370
