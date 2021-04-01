@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: 2021-03-25 13:04+0000\n"
-"Last-Translator: Fernando  Apesteguía <fernando.apesteguia@gmail.com>\n"
+"PO-Revision-Date: 2021-04-02 12:02+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/booksdevelopers-handbooktoolschapter/es/>\n"
 "Language: es\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.5.1\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1
@@ -27,7 +27,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:11
 #, no-wrap
 msgid "Programming Tools"
-msgstr ""
+msgstr "Herramientas de programación"
 
 #. type: Title ==
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:38
@@ -88,7 +88,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:52
 #, no-wrap
 msgid "Introduction to Programming"
-msgstr ""
+msgstr "Introducción a la programación"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:55
@@ -107,7 +107,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:56
 #, no-wrap
 msgid "Interpreters"
-msgstr ""
+msgstr "Intérpretes"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:59
@@ -119,6 +119,12 @@ msgid ""
 "goes wrong, many interpreters will drop you into a debugger to help you "
 "track down the problem."
 msgstr ""
+"Con un intérprete, el lenguaje viene como un entorno, donde usted escribe "
+"comandos en un indicador y el entorno los ejecuta por usted. Para programas "
+"más complicados, puede escribir los comandos en un archivo y hacer que el "
+"intérprete cargue el archivo y ejecute los comandos en él. Si algo sale mal, "
+"muchos intérpretes lo enviarán a un depurador para ayudarlo a localizar el "
+"problema."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:61
@@ -132,6 +138,15 @@ msgid ""
 "view, interpreters can use up a lot of memory, and generally do not generate "
 "code as efficiently as compilers."
 msgstr ""
+"La ventaja de esto es que puede ver los resultados de sus comandos de "
+"inmediato y los errores se pueden corregir fácilmente. La mayor desventaja "
+"se produce cuando desea compartir sus programas con alguien. Deben tener el "
+"mismo intérprete, o usted debe tener alguna forma de dárselo, y ellos "
+"necesitan entender cómo usarlo. ¡Además, es posible que los usuarios no "
+"aprecien ser arrojados a un depurador si presionan la tecla incorrecta! "
+"Desde el punto de vista del rendimiento, los intérpretes pueden consumir "
+"mucha memoria y, por lo general, no generan código con tanta eficacia como "
+"los compiladores."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:63
@@ -150,7 +165,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:64
 #, no-wrap
 msgid "Interpreters Available with FreeBSD"
-msgstr ""
+msgstr "Intérpretes disponibles con FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:67
@@ -159,6 +174,9 @@ msgid ""
 "Collection, with a brief discussion of some of the more popular interpreted "
 "languages."
 msgstr ""
+"Aquí hay una lista de intérpretes que están disponibles en FreeBSD Ports "
+"Collection, con una breve discusión de algunos de los lenguajes "
+"interpretados más populares."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:69
@@ -214,6 +232,8 @@ msgid ""
 "Lisp is an extremely powerful and sophisticated language, but can be rather "
 "large and unwieldy."
 msgstr ""
+"Lisp es un lenguaje extremadamente poderoso y sofisticado, pero puede ser "
+"bastante extenso y difícil de manejar."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:81
@@ -251,7 +271,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:87
 #, no-wrap
 msgid "Scheme"
-msgstr ""
+msgstr "Esquema"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:89
@@ -261,6 +281,11 @@ msgid ""
 "a first language, while it has a high enough level of abstraction to be used "
 "in research work."
 msgstr ""
+"Un dialecto de Lisp que es bastante más compacto y limpio que Common Lisp. "
+"Popular en las universidades, ya que es lo suficientemente simple como para "
+"enseñar a los estudiantes universitarios como primer idioma, mientras que "
+"tiene un nivel de abstracción lo suficientemente alto como para ser "
+"utilizado en trabajos de investigación."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:91
@@ -274,7 +299,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:92
 #, no-wrap
 msgid "Icon"
-msgstr ""
+msgstr "Iconos"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:94
@@ -298,6 +323,10 @@ msgid ""
 "tool to work with when teaching programming to smaller age groups, as it "
 "makes creation of elaborate geometric shapes an easy task."
 msgstr ""
+"Logo es un lenguaje fácil de aprender y se ha utilizado como lenguaje de "
+"programación introductorio en varios cursos. Es una excelente herramienta "
+"para trabajar cuando se enseña programación a grupos de menor edad, ya que "
+"hace que la creación de formas geométricas elaboradas sea una tarea fácil."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:99
@@ -322,6 +351,12 @@ msgid ""
 "complex applications (Perl and Tcl are two other languages that are popular "
 "for such tasks)."
 msgstr ""
+"Python es un lenguaje interpretado orientado a objetos. Sus defensores "
+"argumentan que es uno de los mejores lenguajes para comenzar a programar, ya "
+"que es relativamente fácil de comenzar, pero no está limitado en comparación "
+"con otros lenguajes interpretados populares que se utilizan para el "
+"desarrollo de aplicaciones grandes y complejas (Perl y Tcl son otros dos "
+"lenguajes que son populares para tales tareas)."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:104
@@ -344,6 +379,10 @@ msgid ""
 "when writing code, and the ability to easily develop and maintain large, "
 "complex programs."
 msgstr ""
+"Ruby es un intérprete, puro lenguaje de programación orientado a objetos. Se "
+"ha vuelto muy popular debido a su sintaxis fácil de entender, flexibilidad "
+"al escribir código y la capacidad de desarrollar y mantener fácilmente "
+"programas grandes y complejos."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:109
@@ -364,6 +403,11 @@ msgid ""
 "be used both for quickly writing small, prototype applications, or (when "
 "combined with Tk, a GUI toolkit) fully-fledged, featureful programs."
 msgstr ""
+"Tcl es un lenguaje interpretado e integrable, que se ha vuelto ampliamente "
+"utilizado y popular principalmente debido a su portabilidad para muchas "
+"plataformas. Se puede usar tanto para escribir rápidamente aplicaciones "
+"pequeñas como prototipos o (cuando se combina con Tk, un conjunto de "
+"herramientas de GUI) programas completos y con funciones."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:114
@@ -376,7 +420,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:115
 #, no-wrap
 msgid "Compilers"
-msgstr ""
+msgstr "Compiladores"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:118
@@ -438,6 +482,10 @@ msgid ""
 "something that will (hopefully!) run on FreeBSD. This usually involves "
 "several steps, each of which is done by a separate program."
 msgstr ""
+"Una vez que haya escrito su obra maestra, el siguiente paso es convertirla "
+"en algo que (¡con suerte!) Se ejecutará en FreeBSD. Por lo general, esto "
+"implica varios pasos, cada uno de los cuales se realiza mediante un programa "
+"separado."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:132
@@ -445,6 +493,8 @@ msgid ""
 "Pre-process your source code to remove comments and do other tricks like "
 "expanding macros in C."
 msgstr ""
+"Procese previamente su código fuente para eliminar comentarios y hacer otros "
+"trucos como expandir macros en C."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:133
@@ -452,6 +502,8 @@ msgid ""
 "Check the syntax of your code to see if you have obeyed the rules of the "
 "language. If you have not, it will complain!"
 msgstr ""
+"Verifique la sintaxis de su código para ver si ha obedecido las reglas del "
+"lenguaje. Si no es así, ¡se quejará!"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:134
@@ -474,6 +526,9 @@ msgid ""
 "consistent way. For example, if you have called a non-existent function, it "
 "will complain."
 msgstr ""
+"Compruebe que ha utilizado elementos como funciones y variables globales de "
+"forma coherente. Por ejemplo, si ha llamado a una función que no existe, se "
+"quejará."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:137
@@ -481,6 +536,8 @@ msgid ""
 "If you are trying to produce an executable from several source code files, "
 "work out how to fit them all together."
 msgstr ""
+"Si está intentando producir un ejecutable a partir de varios archivos de "
+"código fuente, averigüe cómo encajarlos todos juntos."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:138
@@ -488,11 +545,13 @@ msgid ""
 "Work out how to produce something that the system's run-time loader will be "
 "able to load into memory and run."
 msgstr ""
+"Descubra cómo producir algo que el cargador en tiempo de ejecución del "
+"sistema pueda cargar en la memoria y ejecutar."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:139
 msgid "Finally, write the executable on the filesystem."
-msgstr ""
+msgstr "Finalmente, escriba el ejecutable en el sistema de archivos."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:141
@@ -743,6 +802,8 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:224
 msgid "Specify a function library to be used at link time."
 msgstr ""
+"Especifique una biblioteca de funciones que se utilizará en el momento del "
+"enlace."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:226
@@ -752,6 +813,10 @@ msgid ""
 "in a separate library from the standard C one and you have to tell the "
 "compiler to add it."
 msgstr ""
+"El ejemplo más común de esto es cuando se compila un programa que usa "
+"algunas de las funciones matemáticas en C. A diferencia de la mayoría de las "
+"otras plataformas, estas están en una biblioteca separada de la C estándar y "
+"debe decirle al compilador que la agregue."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:228
@@ -855,7 +920,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:277
 msgid "and I compiled it as:"
-msgstr ""
+msgstr "y lo compilé como:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:281
@@ -866,7 +931,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:284
 msgid "like you said I should, but I get this when I run it:"
-msgstr ""
+msgstr "como dijiste que debería, pero obtengo esto cuando lo ejecuto:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:289
@@ -893,7 +958,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:295
 #, no-wrap
 msgid "So how do I fix this?"
-msgstr ""
+msgstr "Entonces, ¿cómo soluciono esto?"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:298
@@ -922,7 +987,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:309
 msgid "After recompiling it as you did before, run it:"
-msgstr ""
+msgstr "Después de volver a compilarlo como lo hizo antes, ejecútelo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:314
@@ -996,7 +1061,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:341
 msgid "or choose a better name for your program!"
-msgstr ""
+msgstr "¡o elija un nombre mejor para su programa!"
 
 #. type: Title ====
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:342
@@ -1018,7 +1083,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:346
 #, no-wrap
 msgid "Fascinating stuff, but what I am supposed to do now?"
-msgstr ""
+msgstr "Cosas fascinantes, pero ¿qué se supone que debo hacer ahora?"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:349
@@ -1042,7 +1107,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:355
 msgid "Common causes for this are:"
-msgstr ""
+msgstr "Las causas comunes de esto son:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:357
@@ -1060,7 +1125,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:365
 msgid "Using a pointer that has not been initialized, eg"
-msgstr ""
+msgstr "Usando un puntero que no ha sido inicializado, p. Ej"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:370
@@ -1083,7 +1148,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:374
 msgid "Trying to access past the end of an array, eg"
-msgstr ""
+msgstr "Intentando acceder más allá del final de una matriz, p. Ej"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:379
@@ -1096,7 +1161,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:382
 msgid "Trying to store something in read-only memory, eg"
-msgstr ""
+msgstr "Intentando almacenar algo en la memoria de solo lectura, p. Ej"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:387
@@ -1148,6 +1213,10 @@ msgid ""
 "others, which is why programs that ran well on one system can crash when you "
 "try them on an another."
 msgstr ""
+"Cometer uno de estos errores no siempre conducirá a un error, pero siempre "
+"son una mala práctica. Algunos sistemas y compiladores son más tolerantes "
+"que otros, por lo que los programas que se ejecutaron bien en un sistema "
+"pueden fallar cuando los prueba en otro."
 
 #. type: Title ====
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:409
@@ -1168,11 +1237,14 @@ msgstr ""
 #, no-wrap
 msgid "This dumping core business sounds as though it could be quite useful, if I can make it happen when I want to. Can I do this, or do I have to wait until there is an error?"
 msgstr ""
+"Parece que este negocio central de dumping podría ser bastante útil, si "
+"puedo hacerlo cuando quiera. ¿Puedo hacer esto o tengo que esperar hasta que "
+"haya un error?"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:416
 msgid "Yes, just go to another console or xterm, do"
-msgstr ""
+msgstr "Sí, simplemente vaya a otra consola o xterm, haga"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:420
@@ -1183,7 +1255,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:423
 msgid "to find out the process ID of your program, and do"
-msgstr ""
+msgstr "para averiguar el ID de proceso de su programa y hacer"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:427
@@ -1238,6 +1310,8 @@ msgid ""
 "When you are working on a simple program with only one or two source files, "
 "typing in"
 msgstr ""
+"Cuando está trabajando en un programa simple con solo uno o dos archivos "
+"fuente, escribiendo"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:447
@@ -1258,6 +1332,9 @@ msgid ""
 "One way to get around this is to use object files and only recompile the "
 "source file if the source code has changed. So we could have something like:"
 msgstr ""
+"Una forma de evitar esto es usar archivos de objeto y solo recompilar el "
+"archivo fuente si el código fuente ha cambiado. Entonces podríamos tener "
+"algo como:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:456
@@ -1279,6 +1356,9 @@ msgid ""
 "Or we could write a shell script to solve the typing problem, but it would "
 "have to re-compile everything, making it very inefficient on a large project."
 msgstr ""
+"O podríamos escribir un script de shell para resolver el problema de "
+"mecanografía, pero tendría que volver a compilar todo, haciéndolo muy "
+"ineficiente en un proyecto grande."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:463
@@ -1287,6 +1367,9 @@ msgid ""
 "working in a team with other people who forget to tell us when they have "
 "changed one of their source files that we use?"
 msgstr ""
+"¿Qué sucede si tenemos cientos de archivos fuente por ahí? ¿Qué sucede si "
+"estamos trabajando en equipo con otras personas que se olvidan de "
+"informarnos cuando han cambiado uno de los archivos fuente que usamos?"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:465
@@ -1296,6 +1379,11 @@ msgid ""
 "file needs compiling. Now all we need now is a program that can understand "
 "these rules, as it is a bit too complicated for the shell."
 msgstr ""
+"Quizás podríamos unir las dos soluciones y escribir algo como un script de "
+"shell que contenga algún tipo de regla mágica que indique cuándo es "
+"necesario compilar un archivo fuente. Ahora todo lo que necesitamos ahora es "
+"un programa que pueda entender estas reglas, ya que es un poco complicado "
+"para el shell."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:467
@@ -1329,7 +1417,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:473
 msgid "Here is a very simple make file:"
-msgstr ""
+msgstr "Aquí hay un archivo make muy simple:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:478
@@ -1343,7 +1431,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:481
 msgid "It consists of two lines, a dependency line and a creation line."
-msgstr ""
+msgstr "Consta de dos líneas, una línea de dependencia y una línea de creación."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:483
@@ -1384,6 +1472,8 @@ msgid ""
 "Another useful property of makefiles is that the targets do not have to be "
 "programs. For instance, we could have a make file that looks like this:"
 msgstr ""
+"Otra propiedad útil de los archivos MAKE es que los destinos no tienen que "
+"ser programas. Por ejemplo, podríamos tener un archivo make con este aspecto:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:497
@@ -1396,7 +1486,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:500
 msgid "We can tell make which target we want to make by typing:"
-msgstr ""
+msgstr "Podemos saber qué objetivo queremos hacer escribiendo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:504
@@ -1447,7 +1537,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:514
 #, no-wrap
 msgid "Make and include-files"
-msgstr ""
+msgstr "Crear e incluir archivos"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:517
@@ -1456,6 +1546,9 @@ msgid ""
 "Some of these files are system-include files, some of them are from the "
 "project you are now working on:"
 msgstr ""
+"El código C a menudo comienza con una lista de archivos para incluir, por "
+"ejemplo, stdio.h. Algunos de estos archivos son archivos de inclusión del "
+"sistema, algunos de ellos son del proyecto en el que está trabajando ahora:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:522
@@ -1498,7 +1591,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:536
 msgid "If you add this to your Makefile:"
-msgstr ""
+msgstr "Si agrega esto a su Makefile:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:541
@@ -1539,7 +1632,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:554
 #, no-wrap
 msgid "FreeBSD Makefiles"
-msgstr ""
+msgstr "Makefiles de FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:557
@@ -1577,6 +1670,8 @@ msgid ""
 "A check is made to see if the source code for this port is already on the "
 "system."
 msgstr ""
+"Se realiza una verificación para ver si el código fuente de este puerto ya "
+"está en el sistema."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:571
@@ -1592,6 +1687,9 @@ msgid ""
 "known, good, copy of the source. This is to make sure that the source was "
 "not corrupted while in transit."
 msgstr ""
+"La suma de verificación de la fuente se calcula y se compara con una copia "
+"buena conocida de la fuente. Esto es para asegurarse de que la fuente no se "
+"corrompió mientras estaba en tránsito."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:573
@@ -1633,6 +1731,8 @@ msgstr ""
 msgid ""
 "Now I think you will agree that is rather impressive for a four line script!"
 msgstr ""
+"¡Ahora creo que estará de acuerdo en que es bastante impresionante para un "
+"guión de cuatro líneas!"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:580
@@ -1687,7 +1787,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:595
 msgid "in that directory."
-msgstr ""
+msgstr "en ese directorio."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:597
@@ -1723,13 +1823,13 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:608
 #, no-wrap
 msgid "Debugging"
-msgstr ""
+msgstr "Depuración"
 
 #. type: Title ===
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:610
 #, no-wrap
 msgid "Introduction to Available Debuggers"
-msgstr ""
+msgstr "Introducción a los depuradores disponibles"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:613
@@ -1743,6 +1843,14 @@ msgid ""
 "kernel, though that is a little trickier than the user applications we will "
 "be discussing in this section."
 msgstr ""
+"El uso de un depurador permite ejecutar el programa en circunstancias más "
+"controladas. Por lo general, es posible recorrer el programa una línea a la "
+"vez, inspeccionar el valor de las variables, cambiarlas, decirle al "
+"depurador que se ejecute hasta cierto punto y luego se detenga, y así "
+"sucesivamente. También es posible adjuntar a un programa que ya se está "
+"ejecutando o cargar un archivo principal para investigar por qué el programa "
+"falló. Incluso es posible depurar el kernel, aunque eso es un poco más "
+"complicado que las aplicaciones de usuario que discutiremos en esta sección."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:615
@@ -1794,18 +1902,18 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:627
 #, no-wrap
 msgid "Using lldb"
-msgstr ""
+msgstr "Usando lldb"
 
 #. type: Title ====
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:629
 #, no-wrap
 msgid "Starting lldb"
-msgstr ""
+msgstr "Iniciando lldb"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:632
 msgid "Start up lldb by typing"
-msgstr ""
+msgstr "Inicie lldb escribiendo"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:636
@@ -1817,7 +1925,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:638
 #, no-wrap
 msgid "Running a Program with lldb"
-msgstr ""
+msgstr "Ejecutando un programa con lldb"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:641
@@ -1924,7 +2032,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:684
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:932
 msgid "Compiling and running the program displays"
-msgstr ""
+msgstr "Compilar y ejecutar las pantallas del programa"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:691
@@ -1939,7 +2047,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:694
 msgid "That is not what was expected! Time to see what is going on!"
-msgstr ""
+msgstr "¡Eso no es lo que se esperaba! ¡Es hora de ver qué está pasando!"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:705
@@ -2068,7 +2176,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:778
 #, no-wrap
 msgid "Examining a Core File with lldb"
-msgstr ""
+msgstr "Examinar un archivo principal con lldb"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:781
@@ -2093,7 +2201,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:785
 msgid "The debugger will display something like this:"
-msgstr ""
+msgstr "El depurador mostrará algo como esto:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:792
@@ -2140,7 +2248,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:808
 #, no-wrap
 msgid "Attaching to a Running Program with lldb"
-msgstr ""
+msgstr "Adjuntar a un programa en ejecución con lldb"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:811
@@ -2281,18 +2389,18 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:872
 #, no-wrap
 msgid "Using gdb"
-msgstr ""
+msgstr "usando gdb"
 
 #. type: Title ====
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:874
 #, no-wrap
 msgid "Starting gdb"
-msgstr ""
+msgstr "Iniciando gdb"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:877
 msgid "Start up gdb by typing"
-msgstr ""
+msgstr "Inicie gdb escribiendo"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:881
@@ -2323,7 +2431,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:892
 #, no-wrap
 msgid "Running a Program with gdb"
-msgstr ""
+msgstr "Ejecutando un programa con gdb"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:895
@@ -2382,7 +2490,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:942
 msgid "That was not what we expected! Time to see what is going on!"
-msgstr ""
+msgstr "¡Eso no era lo que esperábamos! ¡Es hora de ver qué está pasando!"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:954
@@ -2451,7 +2559,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:993
 #, no-wrap
 msgid "Examining a Core File with gdb"
-msgstr ""
+msgstr "Examinar un archivo principal con gdb"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:998
@@ -2476,7 +2584,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1007
 msgid "The debugger should display something like this:"
-msgstr ""
+msgstr "El depurador debería mostrar algo como esto:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1021
@@ -2534,7 +2642,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1038
 #, no-wrap
 msgid "Attaching to a Running Program with gdb"
-msgstr ""
+msgstr "Adjuntar a un programa en ejecución con gdb"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1041
@@ -2574,7 +2682,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1071
 #, no-wrap
 msgid "Using Emacs as a Development Environment"
-msgstr ""
+msgstr "Usando Emacs como entorno de desarrollo"
 
 #. type: Title ===
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1073
@@ -2597,6 +2705,8 @@ msgid ""
 "It is impossible even to summarize everything Emacs can do here, but here "
 "are some of the features of interest to developers:"
 msgstr ""
+"Es imposible incluso resumir todo lo que Emacs puede hacer aquí, pero aquí "
+"están algunas de las características de interés para los desarrolladores:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1080
@@ -2605,32 +2715,37 @@ msgid ""
 "regular expressions (patterns), jumping to start/end of block expression, "
 "etc, etc."
 msgstr ""
+"Editor muy potente, que permite buscar y reemplazar tanto en cadenas como en "
+"expresiones regulares (patrones), saltar al inicio / final de la expresión "
+"de bloque, etc., etc."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1081
 msgid "Pull-down menus and online help."
-msgstr ""
+msgstr "Menús desplegables y ayuda en línea."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1082
 msgid "Language-dependent syntax highlighting and indentation."
-msgstr ""
+msgstr "Resaltado y sangría de sintaxis dependientes del idioma."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1083
 msgid "Completely customizable."
-msgstr ""
+msgstr "Totalmente personalizable."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1084
 msgid "You can compile and debug programs within Emacs."
-msgstr ""
+msgstr "Puede compilar y depurar programas dentro de Emacs."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1085
 msgid ""
 "On a compilation error, you can jump to the offending line of source code."
 msgstr ""
+"En caso de error de compilación, puede saltar a la línea de código fuente "
+"infractora."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1086
@@ -2649,7 +2764,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1089
 msgid "And doubtless many more that have been overlooked."
-msgstr ""
+msgstr "Y sin duda muchas más que se han pasado por alto."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1091
@@ -2687,6 +2802,11 @@ msgid ""
 "then try doing C-x C-f. When you are happy with that, move on to another "
 "menu command."
 msgstr ""
+"Afortunadamente, es bastante fácil recoger las combinaciones de teclas, ya "
+"que se muestran junto al elemento del menú. Mi consejo es usar el elemento "
+"del menú para, digamos, abrir un archivo hasta que comprenda cómo funciona y "
+"se sienta seguro con él, luego intente hacer C-x C-f. Cuando esté satisfecho "
+"con eso, pase a otro comando de menú."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1099
@@ -2734,7 +2854,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1106
 #, no-wrap
 msgid "Configuring Emacs"
-msgstr ""
+msgstr "Configurando Emacs"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1109
@@ -2742,6 +2862,8 @@ msgid ""
 "Emacs does many wonderful things; some of them are built in, some of them "
 "need to be configured."
 msgstr ""
+"Emacs hace muchas cosas maravillosas; algunos de ellos están integrados, "
+"algunos de ellos deben configurarse."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1111
@@ -2752,6 +2874,12 @@ msgid ""
 "something like Common Lisp. Emacs Lisp has many features of Common Lisp, "
 "although it is considerably smaller (and thus easier to master)."
 msgstr ""
+"En lugar de usar un lenguaje de macros propietario para la configuración, "
+"Emacs usa una versión de Lisp especialmente adaptada para editores, conocida "
+"como Emacs Lisp. Trabajar con Emacs Lisp puede ser muy útil si desea "
+"continuar y aprender algo como Common Lisp. Emacs Lisp tiene muchas "
+"características de Common Lisp, aunque es considerablemente más pequeño (y "
+"por lo tanto más fácil de dominar)."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1113
@@ -2783,6 +2911,8 @@ msgid ""
 "Unfortunately, there is far too much here to explain it in detail; however "
 "there are one or two points worth mentioning."
 msgstr ""
+"Desafortunadamente, hay demasiado aquí para explicarlo en detalle; sin "
+"embargo, hay uno o dos puntos que vale la pena mencionar."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1121
@@ -2813,6 +2943,8 @@ msgid ""
 "This file supports syntax highlighting for C, C++, Perl, Lisp and Scheme, by "
 "guessing the language from the filename."
 msgstr ""
+"Este archivo admite el resaltado de sintaxis para C, C ++, Perl, Lisp y "
+"Scheme, adivinando el idioma del nombre del archivo."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1125
@@ -2831,6 +2963,9 @@ msgid ""
 "We enable Emacs's ability to act as a server, so that if you are doing "
 "something outside Emacs and you want to edit a file, you can just type in"
 msgstr ""
+"Habilitamos la capacidad de Emacs para actuar como servidor, de modo que si "
+"está haciendo algo fuera de Emacs y desea editar un archivo, simplemente "
+"escriba"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1130
@@ -3315,7 +3450,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1424
 #, no-wrap
 msgid "Extending the Range of Languages Emacs Understands"
-msgstr ""
+msgstr "Ampliando la gama de lenguajes que comprende Emacs"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1427
@@ -3351,7 +3486,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1438
 msgid "So for example, if the output from the find command was"
-msgstr ""
+msgstr "Entonces, por ejemplo, si la salida del comando de búsqueda fue"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1442
@@ -3362,7 +3497,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1445
 msgid "we would do"
-msgstr ""
+msgstr "Nosotros hariamos"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1449
@@ -3441,7 +3576,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1481
 #, no-wrap
 msgid "Further Reading"
-msgstr ""
+msgstr "Otras lecturas"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/tools/chapter.adoc:1484
