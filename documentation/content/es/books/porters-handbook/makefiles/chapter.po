@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-14 11:02-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-02 12:03+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
+"documentation/booksporters-handbookmakefileschapter/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1
@@ -25,7 +28,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:8
 #, no-wrap
 msgid "Configuring the Makefile"
-msgstr ""
+msgstr "Configurar el Makefile"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:34
@@ -48,7 +51,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:38
 #, no-wrap
 msgid "The Original Source"
-msgstr ""
+msgstr "La fuente original"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:41
@@ -71,7 +74,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:45
 #, no-wrap
 msgid "Naming"
-msgstr ""
+msgstr "Nombrar"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:48
@@ -486,6 +489,8 @@ msgid ""
 "Addition of patches to correct security vulnerabilities, bugs, or to add new "
 "functionality to the port."
 msgstr ""
+"Adición de parches para corregir vulnerabilidades de seguridad, errores o "
+"para agregar nueva funcionalidad al puerto."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:267
@@ -510,6 +515,10 @@ msgid ""
 "dependency will fail since it will look for the old libfoo.x instead of "
 "libfoo.(x+1))."
 msgstr ""
+"Aumento de la versión de la dependencia de la biblioteca compartida de un "
+"puerto (en este caso, alguien que intente instalar el paquete antiguo "
+"después de instalar una versión más nueva de la dependencia fallará ya que "
+"buscará el antiguo libfoo.x en lugar de libfoo. (X + 1)) ."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:270
@@ -531,6 +540,8 @@ msgid ""
 "Style changes to the port skeleton with no functional change to what appears "
 "in the resulting package."
 msgstr ""
+"El estilo cambia en el esqueleto del puerto sin cambios funcionales en lo "
+"que aparece en el paquete resultante."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:275
@@ -546,6 +557,9 @@ msgid ""
 "important enough that users of the package have to go to the trouble of "
 "upgrading."
 msgstr ""
+"Parches triviales para el archivo dist, como la corrección de errores "
+"tipográficos, que no son lo suficientemente importantes como para que los "
+"usuarios del paquete tengan que tomarse la molestia de actualizar."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:277
@@ -592,6 +606,11 @@ msgid ""
 "foo-20000801 to foo-1.0 (the former will be incorrectly treated as a newer "
 "version since 20000801 is a numerically greater value than 1)."
 msgstr ""
+"De vez en cuando, un proveedor de software o un portero de FreeBSD hará algo "
+"tonto y lanzará una versión de su software que en realidad es numéricamente "
+"menor que la versión anterior. Un ejemplo de esto es un puerto que va de foo-"
+"20000801 a foo-1.0 (el primero se tratará incorrectamente como una versión "
+"más nueva ya que 20000801 es un valor numéricamente mayor que 1)."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:294
@@ -786,7 +805,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:369
 #, no-wrap
 msgid "Package Naming Conventions"
-msgstr ""
+msgstr "Convenciones de nomenclatura de paquetes"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:372
@@ -795,6 +814,9 @@ msgid ""
 "the package directory easy to scan, as there are already thousands of "
 "packages and users are going to turn away if they hurt their eyes!"
 msgstr ""
+"Estas son las convenciones a seguir al nombrar paquetes. Esto es para hacer "
+"que el directorio de paquetes sea fácil de escanear, ya que hay miles de "
+"paquetes y los usuarios se darán la vuelta si se lastiman los ojos!"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:374
@@ -940,7 +962,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:409
 #, no-wrap
 msgid "Package Naming Examples"
-msgstr ""
+msgstr "Ejemplos de nombres de paquetes"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:523
@@ -1081,7 +1103,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:534
 #, no-wrap
 msgid "Categorization"
-msgstr ""
+msgstr "Categorización"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:537
@@ -1115,7 +1137,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:544
 #, no-wrap
 msgid "Current List of Categories"
-msgstr ""
+msgstr "Lista actual de categorías"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:547
@@ -1529,7 +1551,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:945
 #, no-wrap
 msgid "Choosing the Right Category"
-msgstr ""
+msgstr "Elegir la categoría correcta"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:948
@@ -1539,6 +1561,10 @@ msgid ""
 "that govern this issue. Here is the list of priorities, in decreasing order "
 "of precedence:"
 msgstr ""
+"Como muchas de las categorías se superponen, elegir cuál de las categorías "
+"será la categoría principal del puerto puede resultar tedioso. Hay varias "
+"reglas que rigen este tema. Aquí está la lista de prioridades, en orden "
+"decreciente de precedencia:"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:950
@@ -1619,7 +1645,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:961
 #, no-wrap
 msgid "Proposing a New Category"
-msgstr ""
+msgstr "Proponer una nueva categoría"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:964
@@ -1641,6 +1667,11 @@ msgid ""
 "limited general interest (for instance, categories related to spoken human "
 "languages), or preferably both."
 msgstr ""
+"Nuestra práctica actual ha sido evitar la creación de una nueva categoría "
+"física a menos que una gran cantidad de puertos pertenezcan lógicamente a "
+"ella, o que los puertos que pertenezcan a ella sean un grupo lógicamente "
+"distinto que tenga un interés general limitado (por ejemplo, categorías "
+"relacionadas a los lenguajes humanos hablados), o preferiblemente ambos."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:968
@@ -1657,7 +1688,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:970
 msgid "Here is the procedure:"
-msgstr ""
+msgstr "Aquí está el procedimiento:"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:973
@@ -1673,7 +1704,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:974
 msgid "Participate in the discussion."
-msgstr ""
+msgstr "Participa en la discusión."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:975
@@ -1682,6 +1713,9 @@ msgid ""
 "both the rationale and the list of existing ports that need to be moved. "
 "Ideally, this PR would also include these patches:"
 msgstr ""
+"Si parece que hay apoyo para la idea, presente un PR que incluya tanto la "
+"justificación como la lista de puertos existentes que deben moverse. "
+"Idealmente, este RP también incluiría estos parches:"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:977
@@ -1709,6 +1743,8 @@ msgid ""
 "(for extra credit, include the other files that have to change, as per the "
 "procedure in the Committer's Guide.)"
 msgstr ""
+"(para obtener crédito adicional, incluya los otros archivos que tienen que "
+"cambiar, según el procedimiento en la Guía de confirmación.)"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:983
@@ -1739,7 +1775,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:988
 #, no-wrap
 msgid "Proposing Reorganizing All the Categories"
-msgstr ""
+msgstr "Proponer la reorganización de todas las categorías"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:991
@@ -1753,12 +1789,20 @@ msgid ""
 "posting this idea. Furthermore, be prepared to be challenged to offer a "
 "working prototype."
 msgstr ""
+"De vez en cuando, alguien propone reorganizar las categorías con una "
+"estructura de 2 niveles o con algún otro tipo de estructura de palabras "
+"clave. Hasta la fecha, ninguna de estas propuestas ha resultado porque, si "
+"bien son muy fáciles de hacer, el esfuerzo que implica modernizar toda la "
+"colección de puertos existente con cualquier tipo de reorganización es, como "
+"mínimo, abrumador. Lea el historial de estas propuestas en los archivos de "
+"la lista de correo antes de publicar esta idea. Además, prepárese para el "
+"desafío de ofrecer un prototipo funcional."
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:993
 #, no-wrap
 msgid "The Distribution Files"
-msgstr ""
+msgstr "Los archivos de distribución"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:996
@@ -1926,6 +1970,8 @@ msgid ""
 "From time to time, the distribution file name has little or no relation to "
 "the version of the software."
 msgstr ""
+"De vez en cuando, el nombre del archivo de distribución tiene poca o ninguna "
+"relación con la versión del software."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1065
@@ -1957,7 +2003,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1079
 #, no-wrap
 msgid "Exotic Case 1"
-msgstr ""
+msgstr "Caso exótico 1"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1083
@@ -1965,6 +2011,8 @@ msgid ""
 "Sometimes, there is no relation between the software name, its version, and "
 "the distribution file it is distributed in."
 msgstr ""
+"A veces, no existe relación entre el nombre del software, su versión y el "
+"archivo de distribución en el que se distribuye."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1085
@@ -1986,7 +2034,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1098
 #, no-wrap
 msgid "Exotic Case 2"
-msgstr ""
+msgstr "caso exótico número 2"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1102
@@ -2046,6 +2094,9 @@ msgid ""
 "from different continents. This will safeguard against wide-area network "
 "problems."
 msgstr ""
+"Se recomienda que se incluyan varios sitios en esta lista, preferiblemente "
+"de diferentes continentes. Esto protegerá contra problemas de red de área "
+"extensa."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1132
@@ -2083,6 +2134,8 @@ msgid ""
 "The older expanded format still works, but all ports have been converted to "
 "the compact format. The expanded format looks like this:"
 msgstr ""
+"El formato expandido más antiguo todavía funciona, pero todos los puertos se "
+"han convertido al formato compacto. El formato expandido tiene este aspecto:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1150
@@ -2204,7 +2257,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1225
 msgid "This can also be written as"
-msgstr ""
+msgstr "Esto también se puede escribir como"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1230
@@ -2640,6 +2693,9 @@ msgid ""
 "If the requested commit is the same as a tag, a shorter description is shown "
 "by default. The longer version is equivalent:"
 msgstr ""
+"Si la confirmación solicitada es la misma que una etiqueta, se muestra una "
+"descripción más corta de forma predeterminada. La versión más larga es "
+"equivalente:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1501
@@ -2661,7 +2717,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1511
 #, no-wrap
 msgid "Fetching Multiple Files from GitHub"
-msgstr ""
+msgstr "Obteniendo varios archivos de GitHub"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1514
@@ -2724,6 +2780,9 @@ msgid ""
 "file is not fetched from GitHub. To disable fetching the default "
 "distribution, set:"
 msgstr ""
+"Cuando se obtienen varios archivos de GitHub, a veces el archivo de "
+"distribución predeterminado no se obtiene de GitHub. Para deshabilitar la "
+"obtención de la distribución predeterminada, configure:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1537
@@ -2879,6 +2938,8 @@ msgid ""
 "The problem with submodules is that each is a separate repository. As such, "
 "they each must be fetched separately."
 msgstr ""
+"El problema con los submódulos es que cada uno es un repositorio separado. "
+"Como tal, cada uno debe buscarse por separado."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1615
@@ -2916,6 +2977,9 @@ msgid ""
 "The only information missing from that file is the commit hash or tag to use "
 "as a version. This information is found after cloning the repository:"
 msgstr ""
+"La única información que falta en ese archivo es el hash de confirmación o "
+"la etiqueta para usar como versión. Esta información se encuentra después de "
+"clonar el repositorio:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1663
@@ -3508,7 +3572,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1966
 #, no-wrap
 msgid "Multiple Distribution or Patches Files from Multiple Locations"
-msgstr ""
+msgstr "Múltiples archivos de distribución o parches de múltiples ubicaciones"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1969
@@ -3554,6 +3618,8 @@ msgid ""
 "This is a very interesting feature which can decrease that endless search "
 "for the correct download site."
 msgstr ""
+"Esta es una característica muy interesante que puede disminuir esa búsqueda "
+"interminable del sitio de descarga correcto."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1984
@@ -3579,6 +3645,8 @@ msgid ""
 "In the next sections, information will follow on the FreeBSD implementation "
 "of this idea. We improved a bit on OpenBSD's concept."
 msgstr ""
+"En las siguientes secciones, seguirá la información sobre la implementación "
+"de FreeBSD de esta idea. Mejoramos un poco el concepto de OpenBSD."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1992
@@ -3592,7 +3660,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1995
 #, no-wrap
 msgid "Simplified Information"
-msgstr ""
+msgstr "Información simplificada"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1998
@@ -3681,7 +3749,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2039
 #, no-wrap
 msgid "Detailed Information"
-msgstr ""
+msgstr "Información detallada"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2042
@@ -3756,6 +3824,9 @@ msgid ""
 "at the same time and a group can either have either several different "
 "elements or none at all."
 msgstr ""
+"Los grupos no son exclusivos, un elemento puede pertenecer a varios grupos "
+"diferentes al mismo tiempo y un grupo puede tener varios elementos "
+"diferentes o ninguno."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2069
@@ -3886,6 +3957,8 @@ msgid ""
 "The previous example results in this fine grained fetching. Sites are listed "
 "in the exact order they will be used."
 msgstr ""
+"El ejemplo anterior da como resultado esta búsqueda detallada. Los sitios se "
+"enumeran en el orden exacto en que se utilizarán."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2139
@@ -4066,7 +4139,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2222
 #, no-wrap
 msgid "What Does Change for Ports? What Does Not?"
-msgstr ""
+msgstr "¿Qué cambia para los puertos? ¿Que no?"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2226
@@ -4123,7 +4196,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2237
 msgid "New port targets"
-msgstr ""
+msgstr "Nuevos objetivos portuarios"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2238
@@ -4221,6 +4294,17 @@ msgid ""
 "members of other teams might modify ports to fix dependency issues or other "
 "problems, like a version bump for a shared library update."
 msgstr ""
+"Un encargado de mantenimiento se ofrece como voluntario para mantener un "
+"puerto en buen estado de funcionamiento. Los mantenedores tienen la "
+"responsabilidad principal de sus puertos, pero no la propiedad exclusiva. "
+"Los puertos existen para el beneficio de la comunidad y, en realidad, "
+"pertenecen a la comunidad. Lo que esto significa es que otras personas que "
+"no sean el mantenedor pueden realizar cambios en un puerto. Los cambios "
+"importantes en la colección de puertos pueden requerir cambios en muchos "
+"puertos. El equipo de administración de puertos de FreeBSD o los miembros de "
+"otros equipos pueden modificar los puertos para solucionar problemas de "
+"dependencia u otros problemas, como un salto de versión para una "
+"actualización de biblioteca compartida."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2268
@@ -4263,6 +4347,12 @@ msgid ""
 "changes can result in a port being modified without the maintainer's "
 "consent. These kinds of changes will never affect the port's functionality."
 msgstr ""
+"Nos reservamos el derecho de modificar el envío del mantenedor para que "
+"coincida mejor con las políticas existentes y el estilo de la Colección de "
+"Ports sin la aprobación explícita del remitente o del mantenedor. Además, "
+"los grandes cambios de infraestructura pueden resultar en la modificación de "
+"un puerto sin el consentimiento del mantenedor. Este tipo de cambios nunca "
+"afectarán la funcionalidad del puerto."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2277
@@ -4288,7 +4378,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2284
 msgid "The COMMENT string should be 70 characters or less."
-msgstr ""
+msgstr "La cadena COMMENT debe tener 70 caracteres o menos."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2285
@@ -4298,17 +4388,17 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2286
 msgid "The comment must begin with a capital and end without a period."
-msgstr ""
+msgstr "El comentario debe comenzar con mayúscula y terminar sin punto."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2287
 msgid "Do not start with an indefinite article (that is, A or An)."
-msgstr ""
+msgstr "No empiece con un artículo indefinido (es decir, A o An)."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2288
 msgid "Capitalize names such as Apache, JavaScript, or Perl."
-msgstr ""
+msgstr "Escriba con mayúscula nombres como Apache, JavaScript o Perl."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2289
@@ -4318,12 +4408,12 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2290
 msgid "Check for spelling errors."
-msgstr ""
+msgstr "Compruebe si hay errores de ortografía."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2292
 msgid "Here is an example:"
-msgstr ""
+msgstr "Aquí hay un ejemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2296
@@ -4342,7 +4432,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2301
 #, no-wrap
 msgid "Licenses"
-msgstr ""
+msgstr "Licencias"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2304
@@ -4351,6 +4441,9 @@ msgid ""
 "not an OSI approved license it must also document any restrictions on "
 "redistribution."
 msgstr ""
+"Cada puerto debe documentar la licencia bajo la cual está disponible. Si no "
+"es una licencia aprobada por OSI, también debe documentar las restricciones "
+"de redistribución."
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2306
@@ -4363,6 +4456,7 @@ msgstr ""
 msgid ""
 "A short name for the license or licenses if more than one license apply."
 msgstr ""
+"Un nombre corto para la licencia o las licencias si se aplica más de una."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2311
@@ -4391,7 +4485,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2317
 #, no-wrap
 msgid "Simplest Usage, Predefined Licenses"
-msgstr ""
+msgstr "Uso más simple, licencias predefinidas"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2322
@@ -4411,7 +4505,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2329
 msgid "When the software provides the license file, use this:"
-msgstr ""
+msgstr "Cuando el software proporcione el archivo de licencia, utilice esto:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2334
@@ -4432,7 +4526,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2341
 #, no-wrap
 msgid "Predefined License List"
-msgstr ""
+msgstr "Lista de licencias predefinidas"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2818
@@ -4929,7 +5023,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2825
 #, no-wrap
 msgid "License Permissions List"
-msgstr ""
+msgstr "Lista de permisos de licencia"
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2827
@@ -4971,6 +5065,8 @@ msgid ""
 "Selling of distribution files is permitted. The distribution files will be "
 "present on the installer images."
 msgstr ""
+"Se permite la venta de archivos de distribución. Los archivos de "
+"distribución estarán presentes en las imágenes del instalador."
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2839
@@ -5026,6 +5122,8 @@ msgid ""
 "Selling of package is permitted. The package will be present on the "
 "installer images."
 msgstr ""
+"Se permite la venta de paquetes. El paquete estará presente en las imágenes "
+"del instalador."
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2855
@@ -5068,6 +5166,9 @@ msgid ""
 "the acceptance of this license. This must be used if the license states that "
 "the user must accept its terms."
 msgstr ""
+"La licencia no se acepta de forma predeterminada. Siempre se le pedirá al "
+"usuario que confirme la aceptación de esta licencia. Esto debe usarse si la "
+"licencia establece que el usuario debe aceptar sus términos."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2867
@@ -5089,6 +5190,8 @@ msgid ""
 "Some missing permissions will prevent a port (and all ports depending on it) "
 "from being usable by package users:"
 msgstr ""
+"Algunos permisos faltantes evitarán que un puerto (y todos los puertos que "
+"dependen de él) sean utilizables por los usuarios del paquete:"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2875
@@ -5109,7 +5212,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2880
 #, no-wrap
 msgid "Nonstandard License"
-msgstr ""
+msgstr "Licencia no estándar"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2884
@@ -5117,6 +5220,8 @@ msgid ""
 "Read the terms of the license and translate those using the available "
 "permissions."
 msgstr ""
+"Lea los términos de la licencia y traduzca los que utilizan los permisos "
+"disponibles."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2892
@@ -5133,7 +5238,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2897
 #, no-wrap
 msgid "Standard and Nonstandard Licenses"
-msgstr ""
+msgstr "Licencias estándar y no estándar"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2902
@@ -5174,13 +5279,13 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2919
 msgid "Groups the license belongs."
-msgstr ""
+msgstr "Grupos a los que pertenece la licencia."
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2920
 #, no-wrap
 msgid "Predefined License Groups List"
-msgstr ""
+msgstr "Lista de grupos de licencias predefinidos"
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2922
@@ -5204,7 +5309,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2928
 msgid "GPL Compatible"
-msgstr ""
+msgstr "Compatible con GPL"
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2930
@@ -5241,7 +5346,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2940
 msgid "Font licenses"
-msgstr ""
+msgstr "Licencias de fuentes"
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2942
@@ -5252,7 +5357,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2945
 msgid "Full name of the license."
-msgstr ""
+msgstr "Nombre completo de la licencia."
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2947
@@ -5311,6 +5416,8 @@ msgid ""
 "Text to use as a license. Useful when the license is not in the distribution "
 "files and its text is short."
 msgstr ""
+"Texto para usar como licencia. Útil cuando la licencia no está en los "
+"archivos de distribución y su texto es corto."
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2985
@@ -5342,6 +5449,8 @@ msgid ""
 "The distribution files to which the licenses apply. Defaults to all the "
 "distribution files."
 msgstr ""
+"Los archivos de distribución a los que se aplican las licencias. Por "
+"defecto, todos los archivos de distribución."
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3006
@@ -5356,6 +5465,9 @@ msgid ""
 "example, one has a code license, and another has some artwork that cannot be "
 "redistributed:"
 msgstr ""
+"Se utiliza cuando los archivos de distribución no tienen todos la misma "
+"licencia. Por ejemplo, uno tiene una licencia de código y otro tiene alguna "
+"obra de arte que no se puede redistribuir:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3015
@@ -5395,7 +5507,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3033
 #, no-wrap
 msgid "Dual Licenses"
-msgstr ""
+msgstr "Licencias duales"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3038
@@ -5416,7 +5528,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3046
 msgid "If license files are provided, use this:"
-msgstr ""
+msgstr "Si se proporcionan archivos de licencia, utilice esto:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3053
@@ -5432,7 +5544,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3058
 #, no-wrap
 msgid "Multiple Licenses"
-msgstr ""
+msgstr "Varias licencias"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3063
@@ -5521,7 +5633,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3103
 #, no-wrap
 msgid "Dependencies"
-msgstr ""
+msgstr "Dependencias"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3106
@@ -5534,6 +5646,14 @@ msgid ""
 "some pre-supported dependency variables for common cases, plus a few more to "
 "control the behavior of dependencies."
 msgstr ""
+"Muchos puertos dependen de otros puertos. Esta es una característica muy "
+"conveniente de la mayoría de los sistemas operativos similares a Unix, "
+"incluido FreeBSD. Varios puertos pueden compartir una dependencia común, en "
+"lugar de agrupar esa dependencia con cada puerto o paquete que lo necesite. "
+"Hay siete variables que se pueden utilizar para garantizar que todos los "
+"bits necesarios estén en la máquina del usuario. También hay algunas "
+"variables de dependencia con soporte previo para casos comunes, además de "
+"algunas más para controlar el comportamiento de las dependencias."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3110
@@ -5606,7 +5726,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3132
 msgid "For example,"
-msgstr ""
+msgstr "Por ejemplo,"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3137
@@ -5990,7 +6110,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3302
 #, no-wrap
 msgid "Minimal Version of a Dependency"
-msgstr ""
+msgstr "Versión mínima de una dependencia"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3306
@@ -6012,7 +6132,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3314
 #, no-wrap
 msgid "Notes on Dependencies"
-msgstr ""
+msgstr "Notas sobre dependencias"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3322
@@ -6043,7 +6163,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3330
 #, no-wrap
 msgid "Circular Dependencies Are Fatal"
-msgstr ""
+msgstr "Las dependencias circulares son fatales"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3335
@@ -6069,7 +6189,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3340
 #, no-wrap
 msgid "Problems Caused by Automatic Dependencies"
-msgstr ""
+msgstr "Problemas causados por dependencias automáticas"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3344
@@ -6083,7 +6203,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3345
 #, no-wrap
 msgid "Wrong Declaration of an Optional Dependency"
-msgstr ""
+msgstr "Declaración incorrecta de una dependencia opcional"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3351
@@ -6182,12 +6302,20 @@ msgid ""
 "after rebuilding if other ports also determine their need for dependencies "
 "based on the existence of other files."
 msgstr ""
+"El problema de intentar agregar dependencias automáticamente es que los "
+"archivos y la configuración fuera de un puerto individual pueden cambiar en "
+"cualquier momento. Por ejemplo: se crea un índice y luego se instala un lote "
+"de puertos. Pero uno de los puertos instala el archivo probado. El índice "
+"ahora es incorrecto, porque un puerto instalado inesperadamente tiene una "
+"nueva dependencia. El índice puede seguir siendo incorrecto incluso después "
+"de la reconstrucción si otros puertos también determinan su necesidad de "
+"dependencias en función de la existencia de otros archivos."
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3363
 #, no-wrap
 msgid "Correct Declaration of an Optional Dependency"
-msgstr ""
+msgstr "Declaración correcta de una dependencia opcional"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3375
@@ -6212,6 +6340,11 @@ msgid ""
 "automate the building, installation, and updating of these ports and their "
 "packages."
 msgstr ""
+"Probar variables de opción es el método correcto. No causará inconsistencias "
+"en el índice de un lote de puertos, siempre que las opciones se hayan "
+"definido antes de la construcción del índice. Luego, se pueden usar scripts "
+"simples para automatizar la construcción, instalación y actualización de "
+"estos puertos y sus paquetes."
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3380
@@ -6343,7 +6476,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3423
 #, no-wrap
 msgid "Man Pages"
-msgstr ""
+msgstr "Páginas Man"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3427
@@ -6359,7 +6492,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3428
 #, no-wrap
 msgid "Info Files"
-msgstr ""
+msgstr "Archivos de información"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3432
@@ -6385,7 +6518,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3440
 #, no-wrap
 msgid "Makefile Options"
-msgstr ""
+msgstr "Opciones de Makefile"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3444
@@ -6398,6 +6531,14 @@ msgid ""
 "options properly will make users happy, and effectively provide two or more "
 "ports for the price of one."
 msgstr ""
+"Se pueden construir muchas aplicaciones con configuraciones opcionales o "
+"diferentes. Los ejemplos incluyen la elección de lenguaje natural (humano), "
+"GUI versus línea de comandos, o el tipo de base de datos para soportar. Los "
+"usuarios pueden necesitar una configuración diferente a la predeterminada, "
+"por lo que el sistema de puertos proporciona enlaces que el autor del puerto "
+"puede usar para controlar qué variante se construirá. El soporte adecuado de "
+"estas opciones hará felices a los usuarios y proporcionará dos o más puertos "
+"por el precio de uno."
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3445
@@ -6409,7 +6550,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3448
 #, no-wrap
 msgid "Background"
-msgstr ""
+msgstr "Fondo"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3458
@@ -6435,7 +6576,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3459
 #, no-wrap
 msgid "Syntax"
-msgstr ""
+msgstr "Sintaxis"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3463
@@ -6623,12 +6764,12 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3626
 #, no-wrap
 msgid "Default Options"
-msgstr ""
+msgstr "Opciones predeterminadas"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3630
 msgid "These options are always on by default."
-msgstr ""
+msgstr "Estas opciones están siempre activadas de forma predeterminada."
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3631
@@ -6662,7 +6803,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3641
 #, no-wrap
 msgid "Feature Auto-Activation"
-msgstr ""
+msgstr "Función de activación automática"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3645
@@ -6677,7 +6818,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3646
 #, no-wrap
 msgid "Wrong Handling of an Option"
-msgstr ""
+msgstr "Manejo incorrecto de una opción"
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3652
@@ -6706,7 +6847,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3663
 #, no-wrap
 msgid "Correct Handling of an Option"
-msgstr ""
+msgstr "Manejo correcto de una opción"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3674
@@ -6750,7 +6891,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3695
 #, no-wrap
 msgid "Options Helpers"
-msgstr ""
+msgstr "Ayudantes de opciones"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3699
@@ -6758,6 +6899,9 @@ msgid ""
 "There are some macros to help simplify conditional values which differ based "
 "on the options set. For easier access, a comprehensive list is provided:"
 msgstr ""
+"Hay algunas macros para ayudar a simplificar los valores condicionales que "
+"difieren según el conjunto de opciones. Para facilitar el acceso, se "
+"proporciona una lista completa:"
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3699
@@ -6892,7 +7036,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3739
 #, no-wrap
 msgid "Options dependencies"
-msgstr ""
+msgstr "Dependencias de opciones"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3742
