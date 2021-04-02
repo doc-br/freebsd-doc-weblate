@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-14 11:02-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-02 12:03+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
+"documentation/booksporters-handbooksecuritychapter/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:1
@@ -25,13 +28,13 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:8
 #, no-wrap
 msgid "Security"
-msgstr ""
+msgstr "Seguridad"
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:33
 #, no-wrap
 msgid "Why Security is So Important"
-msgstr ""
+msgstr "Por qué la seguridad es tan importante"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:36
@@ -42,6 +45,11 @@ msgid ""
 "the bugs that caused them. However, the policies for handling mere bugs and "
 "security vulnerabilities are very different."
 msgstr ""
+"Ocasionalmente se introducen errores en el software. Podría decirse que los "
+"más peligrosos son los que abren vulnerabilidades de seguridad. Desde el "
+"punto de vista técnico, estas vulnerabilidades deben cerrarse exterminando "
+"los errores que las causaron. Sin embargo, las políticas para manejar "
+"simples errores y vulnerabilidades de seguridad son muy diferentes."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:38
@@ -56,6 +64,16 @@ msgid ""
 "loss, and so they make backups of important data; in addition, a critical "
 "bug will be discovered really soon."
 msgstr ""
+"Un pequeño error típico afecta solo a aquellos usuarios que han habilitado "
+"alguna combinación de opciones que desencadenan el error. El desarrollador "
+"finalmente lanzará un parche seguido de una nueva versión del software, "
+"libre del error, pero la mayoría de los usuarios no se tomarán la molestia "
+"de actualizar de inmediato porque el error nunca los ha molestado. Un error "
+"crítico que puede causar la pérdida de datos representa un problema más "
+"grave. No obstante, los usuarios prudentes saben que muchos de los posibles "
+"accidentes, además de los errores de software, pueden provocar la pérdida de "
+"datos, por lo que realizan copias de seguridad de los datos importantes; "
+"Además, pronto se descubrirá un error crítico."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:40
@@ -71,12 +89,23 @@ msgid ""
 "manner, which will allow them to evaluate the danger and take appropriate "
 "action."
 msgstr ""
+"Una vulnerabilidad de seguridad es todo diferente. En primer lugar, puede "
+"pasar desapercibido durante años porque a menudo no provoca un mal "
+"funcionamiento del software. En segundo lugar, una parte malintencionada "
+"puede utilizarlo para obtener acceso no autorizado a un sistema vulnerable, "
+"para destruir o alterar datos confidenciales; y en el peor de los casos el "
+"usuario ni siquiera notará el daño causado. En tercer lugar, exponer un "
+"sistema vulnerable a menudo ayuda a los atacantes a entrar en otros sistemas "
+"que de otro modo no podrían verse comprometidos. Por lo tanto, cerrar una "
+"vulnerabilidad por sí solo no es suficiente: notificar a la audiencia de la "
+"misma de la manera más clara y completa, lo que les permitirá evaluar el "
+"peligro y tomar las medidas adecuadas."
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:42
 #, no-wrap
 msgid "Fixing Security Vulnerabilities"
-msgstr ""
+msgstr "Reparación de vulnerabilidades de seguridad"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:45
@@ -98,6 +127,9 @@ msgid ""
 "Being a ports committer is not enough to commit to an arbitrary port. "
 "Remember that ports usually have maintainers, must be respected."
 msgstr ""
+"Ser un confirmador de puertos no es suficiente para comprometerse con un "
+"puerto arbitrario. Recuerda que los puertos suelen tener mantenedores, hay "
+"que respetarlos."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:52
@@ -118,13 +150,13 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:54
 #, no-wrap
 msgid "Keeping the Community Informed"
-msgstr ""
+msgstr "Mantener a la comunidad informada"
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:57
 #, no-wrap
 msgid "The VuXML Database"
-msgstr ""
+msgstr "La base de datos VuXML"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:60
@@ -178,7 +210,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:68
 #, no-wrap
 msgid "A Short Introduction to VuXML"
-msgstr ""
+msgstr "Una breve introducción a VuXML"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:71
@@ -198,7 +230,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:73
 msgid "Now consider a realistic VuXML entry:"
-msgstr ""
+msgstr "Ahora considere una entrada VuXML realista:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:124
@@ -260,6 +292,8 @@ msgid ""
 "The tag names are supposed to be self-explanatory so we shall take a closer "
 "look only at fields which needs to be filled in:"
 msgstr ""
+"Se supone que los nombres de las etiquetas se explican por sí mismos, por lo "
+"que veremos más de cerca solo los campos que deben completarse:"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:129
@@ -415,7 +449,7 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:173
 #, no-wrap
 msgid "Testing Changes to the VuXML Database"
-msgstr ""
+msgstr "Prueba de cambios en la base de datos VuXML"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:176
@@ -448,6 +482,8 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:187
 msgid "If there is none found, add a new entry for this vulnerability."
 msgstr ""
+"Si no se encuentra ninguno, agregue una nueva entrada para esta "
+"vulnerabilidad."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:192
@@ -460,7 +496,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:195
 msgid "Verify its syntax and formatting:"
-msgstr ""
+msgstr "Verifique su sintaxis y formato:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:199
@@ -505,11 +541,14 @@ msgstr ""
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:222
 msgid "Make sure that the entry produces no spurious matches in the output."
 msgstr ""
+"Asegúrese de que la entrada no produzca coincidencias falsas en la salida."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:224
 msgid "Now check whether the right package versions are matched by the entry:"
 msgstr ""
+"Ahora verifique si las versiones correctas del paquete coinciden con la "
+"entrada:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:233
@@ -532,4 +571,4 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:237
 msgid "The former version matches while the latter one does not."
-msgstr ""
+msgstr "La primera versión coincide, mientras que la última no."
