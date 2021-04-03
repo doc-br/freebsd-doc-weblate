@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-03-25 13:05+0000\n"
-"Last-Translator: Fernando  Apesteguía <fernando.apesteguia@gmail.com>\n"
+"PO-Revision-Date: 2021-04-03 12:47+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/articlesgjournal-desktop_index/es/>\n"
 "Language: es\n"
@@ -15,14 +15,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.5.1\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: Title =
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:1
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:10
 #, no-wrap
 msgid "Implementing UFS Journaling on a Desktop PC"
-msgstr ""
+msgstr "Implementando UFS Journaling en un ordenador de escritorio"
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:38
@@ -76,6 +76,10 @@ msgid ""
 "checking, and ensuring that the file system is quickly restored to a "
 "consistent state."
 msgstr ""
+"La nueva función de journaling provista por GEOM puede ayudar en gran medida "
+"en esos escenarios, al eliminar, virtualmente, el tiempo requerido para la "
+"verificación del sistema de archivos, y garantizar que el sistema de "
+"archivos se restaure rápidamente a un estado consistente."
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:61
@@ -90,13 +94,14 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:63
 msgid "After reading this article, you will know:"
-msgstr ""
+msgstr "Después de leer este artículo, sabrás:"
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:65
 msgid ""
 "How to reserve space for journaling during a new installation of FreeBSD."
 msgstr ""
+"Cómo reservar espacio para el journaling en una instalación nueva de FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:66
@@ -115,17 +120,17 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:68
 msgid "How to implement journaling in new (empty) partitions."
-msgstr ""
+msgstr "Cómo implementar journaling en nuevas (vacías) particiones."
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:69
 msgid "How to troubleshoot common problems associated with journaling."
-msgstr ""
+msgstr "Cómo resolver problemas asociados con el journaling."
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:71
 msgid "Before reading this article, you should be able to:"
-msgstr ""
+msgstr "Antes de leer este artículo, debería poder:"
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:73
@@ -153,7 +158,7 @@ msgstr ""
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:83
 #, no-wrap
 msgid "Understanding Journaling in FreeBSD"
-msgstr ""
+msgstr "Entendiendo el journaling en FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:87
@@ -245,13 +250,13 @@ msgstr ""
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:118
 #, no-wrap
 msgid "Steps During the Installation of FreeBSD"
-msgstr ""
+msgstr "Pasos durante la instalación de FreeBSD"
 
 #. type: Title ===
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:120
 #, no-wrap
 msgid "Reserving Space for Journaling"
-msgstr ""
+msgstr "Reservando espacio para el journaling"
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:124
@@ -378,7 +383,7 @@ msgstr ""
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:172
 #, no-wrap
 msgid "Partitions and Journals"
-msgstr ""
+msgstr "Particiones y journals"
 
 #. type: Table
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:186
@@ -409,7 +414,7 @@ msgstr ""
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:192
 #, no-wrap
 msgid "Booting for the first time"
-msgstr ""
+msgstr "Arrancando por primera vez"
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:197
@@ -426,12 +431,14 @@ msgstr ""
 msgid ""
 "When the system comes up again, we will be ready to configure journaling."
 msgstr ""
+"Cuando el sistema vuelva a arrancar, entonces estaremos listos para "
+"configurar el journaling."
 
 #. type: Title ==
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:201
 #, no-wrap
 msgid "Setting Up Journaling"
-msgstr ""
+msgstr "Configurando el journaling"
 
 #. type: Title ===
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:204
@@ -472,7 +479,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:223
 msgid "Load the module required for journaling:"
-msgstr ""
+msgstr "Cargue el módulo requerido por el journaling:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:227
@@ -529,6 +536,8 @@ msgid ""
 "Since this is a new installation, it is highly unlikely that anything will "
 "be actually overwritten."
 msgstr ""
+"Dado que se trata de una instalación nueva, es poco probable que se "
+"sobrescriba algo."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:260
@@ -593,6 +602,8 @@ msgid ""
 "Make sure the above entries are correct, or you will have trouble starting "
 "up normally after you reboot!"
 msgstr ""
+"¡Asegúrese de que las entradas anteriores sean correctas, o tendrá problemas "
+"para arrancar después de reiniciar!"
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:294
@@ -632,6 +643,7 @@ msgstr ""
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:316
 msgid "After an unclean shutdown, the messages will vary slightly, i.e.:"
 msgstr ""
+"Después de un apagado forzoso, el mensaje variará ligeramente, por ejemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:320
@@ -650,7 +662,7 @@ msgstr ""
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:325
 #, no-wrap
 msgid "Journaling Newly Created Partitions"
-msgstr ""
+msgstr "Añadiendo journaling a las nuevas particiones"
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:330
@@ -683,6 +695,7 @@ msgstr ""
 msgid ""
 "For example, to create a 2 GB journal, you could use the following command:"
 msgstr ""
+"Por ejemplo, para crear un journal de 2 GB, puede usar el siguiente comando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:346
@@ -707,7 +720,7 @@ msgstr ""
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:356
 #, no-wrap
 msgid "Building Journaling into Your Custom Kernel"
-msgstr ""
+msgstr "Añadiendo soporte de journaling en un kernel personalizado"
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:360
@@ -747,7 +760,7 @@ msgstr ""
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:373
 #, no-wrap
 msgid "Troubleshooting Journaling"
-msgstr ""
+msgstr "Resolución de problemas del journaling"
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:376
@@ -755,12 +768,16 @@ msgid ""
 "The following section covers frequently asked questions regarding problems "
 "related to journaling."
 msgstr ""
+"En la siguiente sección se analizan las preguntas más frecuentes "
+"relacionadas con los problemas relacionados con el journaling."
 
 #. type: Title ===
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:377
 #, no-wrap
 msgid "I am getting kernel panics during periods of high disk activity. How is this related to journaling?"
 msgstr ""
+"Durante los periodos de mucha actividad en el disco estoy teniendo un kernel "
+"panic. ¿Está relacionado con el journaling?"
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:383
@@ -777,6 +794,8 @@ msgstr ""
 #, no-wrap
 msgid "I made some mistake during configuration, and I cannot boot normally now. Can this be fixed some way?"
 msgstr ""
+"Cometí algún error durante la configuración, y ahora no puedo arrancar. ¿Se "
+"puede arreglar esto de alguna manera?"
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:390
@@ -836,6 +855,8 @@ msgstr ""
 #, no-wrap
 msgid "Can I remove journaling and return to my standard file system with Soft Updates?"
 msgstr ""
+"¿Puedo eliminar el journaling y volver a mi sistema de archivos estándar con "
+"Soft Updates?"
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:424
@@ -853,12 +874,12 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:433
 msgid "Unmount the journaled partitions:"
-msgstr ""
+msgstr "Desmonte las particiones que tengan journaling:"
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:440
 msgid "Synchronize the journals:"
-msgstr ""
+msgstr "Sincronice los journals:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:444
@@ -869,7 +890,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:447
 msgid "Stop the journaling providers:"
-msgstr ""
+msgstr "Pare los journaling providers:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:452
@@ -883,6 +904,7 @@ msgstr ""
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:455
 msgid "Clear journaling metadata from all the devices used:"
 msgstr ""
+"Borre los metadatos de journaling de datos los dispositivos que utilice:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:462
@@ -899,6 +921,8 @@ msgstr ""
 msgid ""
 "Clear the file system journaling flag, and restore the Soft Updates flag:"
 msgstr ""
+"Borre el flag de journaling del sistema de archivos y restaure el flag de "
+"Soft Updates:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:471
@@ -921,7 +945,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:478
 msgid "Remount the old devices by hand:"
-msgstr ""
+msgstr "Vuelva a montar los dispositivos antiguos a mano:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:483
@@ -955,7 +979,7 @@ msgstr ""
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:496
 #, no-wrap
 msgid "Further Reading"
-msgstr ""
+msgstr "Lecturas adicionales"
 
 #. type: Plain text
 #: documentation/content/en/articles/gjournal-desktop/_index.adoc:500
