@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-04 12:57+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
+"documentation/booksarch-handbooklockingchapter/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:1
@@ -25,7 +28,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:8
 #, no-wrap
 msgid "Locking Notes"
-msgstr ""
+msgstr "Notas de bloqueo"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:33
@@ -57,6 +60,11 @@ msgid ""
 "obtain a mutex that is already owned, it must wait until the mutex is "
 "released. In the FreeBSD kernel, mutexes are owned by processes."
 msgstr ""
+"Un mutex es simplemente un bloqueo que se utiliza para garantizar la "
+"exclusión mutua. Específicamente, un mutex solo puede ser propiedad de una "
+"entidad a la vez. Si otra entidad desea obtener un mutex que ya es de su "
+"propiedad, debe esperar hasta que se libere el mutex. En el kernel de "
+"FreeBSD, las exclusiones mutuas son propiedad de los procesos."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:42
@@ -69,13 +77,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:44
 msgid "Each mutex has several properties of interest:"
-msgstr ""
+msgstr "Cada mutex tiene varias propiedades de interés:"
 
 #. type: Labeled list
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:45
 #, no-wrap
 msgid "Variable Name"
-msgstr ""
+msgstr "Nombre de la variable"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:47
@@ -86,7 +94,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:48
 #, no-wrap
 msgid "Logical Name"
-msgstr ""
+msgstr "nombre lógico"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:50
@@ -100,7 +108,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:51
 #, no-wrap
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:53
@@ -118,7 +126,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:56
 msgid "A sleep mutex"
-msgstr ""
+msgstr "Un mutex para dormir"
 
 #. type: Labeled list
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:57
@@ -129,7 +137,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:59
 msgid "A spin mutex"
-msgstr ""
+msgstr "Un mutex de giro"
 
 #. type: Labeled list
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:60
@@ -140,13 +148,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:62
 msgid "This mutex is allowed to recurse."
-msgstr ""
+msgstr "Se permite que este mutex sea recurrente."
 
 #. type: Labeled list
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:63
 #, no-wrap
 msgid "Protectees"
-msgstr ""
+msgstr "Protegidos"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:65
@@ -160,18 +168,18 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:66
 #, no-wrap
 msgid "Dependent Functions"
-msgstr ""
+msgstr "Funciones dependientes"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:68
 msgid "Functions that can only be called if this mutex is held."
-msgstr ""
+msgstr "Funciones a las que solo se puede llamar si se mantiene este mutex."
 
 #. type: Block title
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:69
 #, no-wrap
 msgid "Mutex List"
-msgstr ""
+msgstr "Lista de mutex"
 
 #. type: Table
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:101
@@ -212,7 +220,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:104
 #, no-wrap
 msgid "Shared Exclusive Locks"
-msgstr ""
+msgstr "Cerraduras exclusivas compartidas"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:107
@@ -225,7 +233,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:108
 #, no-wrap
 msgid "Shared Exclusive Lock List"
-msgstr ""
+msgstr "Lista de bloqueo exclusiva compartida"
 
 #. type: Table
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:119
@@ -245,7 +253,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:122
 #, no-wrap
 msgid "Atomically Protected Variables"
-msgstr ""
+msgstr "Variables protegidas atómicamente"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:125
