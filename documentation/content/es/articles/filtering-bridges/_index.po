@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-03-25 13:06+0000\n"
-"Last-Translator: Fernando  Apesteguía <fernando.apesteguia@gmail.com>\n"
+"PO-Revision-Date: 2021-04-04 12:57+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/articlesfiltering-bridges_index/es/>\n"
 "Language: es\n"
@@ -15,14 +15,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.5.1\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: Title =
 #: documentation/content/en/articles/filtering-bridges/_index.adoc:1
 #: documentation/content/en/articles/filtering-bridges/_index.adoc:10
 #, no-wrap
 msgid "Filtering Bridges"
-msgstr ""
+msgstr "Filtering Bridges"
 
 #. type: Plain text
 #: documentation/content/en/articles/filtering-bridges/_index.adoc:24
@@ -58,7 +58,7 @@ msgstr "'''"
 #: documentation/content/en/articles/filtering-bridges/_index.adoc:37
 #, no-wrap
 msgid "Why use a filtering bridge?"
-msgstr ""
+msgstr "¿Por qué utilizar un bridge que haga filtrado?"
 
 #. type: Plain text
 #: documentation/content/en/articles/filtering-bridges/_index.adoc:42
@@ -81,12 +81,15 @@ msgid ""
 "A bridge-based firewall can be configured and inserted between the xDSL "
 "router and your Ethernet hub/switch without any IP numbering issues."
 msgstr ""
+"Una buena solución sería configurar un firewall basado en un bridge. Lo "
+"instalaremos entre el router xDSL y su hub/switch Ethernet, evitando así "
+"problemas de numeración IP."
 
 #. type: Title ==
 #: documentation/content/en/articles/filtering-bridges/_index.adoc:46
 #, no-wrap
 msgid "How to Install"
-msgstr ""
+msgstr "Proceso de instalación"
 
 #. type: Plain text
 #: documentation/content/en/articles/filtering-bridges/_index.adoc:51
@@ -122,7 +125,7 @@ msgstr ""
 #: documentation/content/en/articles/filtering-bridges/_index.adoc:64
 #, no-wrap
 msgid "Kernel Configuration"
-msgstr ""
+msgstr "Configuración del kernel"
 
 #. type: Plain text
 #: documentation/content/en/articles/filtering-bridges/_index.adoc:68
@@ -147,6 +150,9 @@ msgid ""
 "The first line is to compile the bridge support, the second one is the "
 "firewall and the third one is the logging functions of the firewall."
 msgstr ""
+"La primera línea añade el soporte para el bridge, la segunda añade la "
+"compatibilidad con el firewall y la tercera se refiere a las funciones de "
+"logging del firewall."
 
 #. type: Plain text
 #: documentation/content/en/articles/filtering-bridges/_index.adoc:80
@@ -160,7 +166,7 @@ msgstr ""
 #: documentation/content/en/articles/filtering-bridges/_index.adoc:82
 #, no-wrap
 msgid "Modules Loading"
-msgstr ""
+msgstr "Carga de módulos"
 
 #. type: Plain text
 #: documentation/content/en/articles/filtering-bridges/_index.adoc:85
@@ -188,7 +194,7 @@ msgstr ""
 #: documentation/content/en/articles/filtering-bridges/_index.adoc:95
 #, no-wrap
 msgid "Final Preparation"
-msgstr ""
+msgstr "Preparación final"
 
 #. type: Plain text
 #: documentation/content/en/articles/filtering-bridges/_index.adoc:101
@@ -271,13 +277,13 @@ msgstr ""
 #: documentation/content/en/articles/filtering-bridges/_index.adoc:128
 msgid ""
 "If there are any problems, you should sort them out now before proceeding."
-msgstr ""
+msgstr "Si hay algún problema, debe solucionarlo ahora antes de continuar."
 
 #. type: Title ==
 #: documentation/content/en/articles/filtering-bridges/_index.adoc:130
 #, no-wrap
 msgid "Enabling the Bridge"
-msgstr ""
+msgstr "Habilitando el bridge"
 
 #. type: Plain text
 #: documentation/content/en/articles/filtering-bridges/_index.adoc:133
@@ -303,6 +309,9 @@ msgid ""
 "the second one will enable the firewall on the bridge and finally the third "
 "one will enable the bridge."
 msgstr ""
+"La primera línea especifica qué interfaces deben ser activadas por el "
+"bridge, la segunda habilitará el firewall en el bridge y finalmente la "
+"tercera habilitará el bridge."
 
 #. type: Plain text
 #: documentation/content/en/articles/filtering-bridges/_index.adoc:145
@@ -318,7 +327,7 @@ msgstr ""
 #: documentation/content/en/articles/filtering-bridges/_index.adoc:147
 #, no-wrap
 msgid "Configuring The Firewall"
-msgstr ""
+msgstr "Configurando el firewall"
 
 #. type: Plain text
 #: documentation/content/en/articles/filtering-bridges/_index.adoc:157
@@ -553,7 +562,7 @@ msgstr ""
 #: documentation/content/en/articles/filtering-bridges/_index.adoc:267
 #, no-wrap
 msgid "Contributors"
-msgstr ""
+msgstr "Colaboradores"
 
 #. type: Plain text
 #: documentation/content/en/articles/filtering-bridges/_index.adoc:271
@@ -570,6 +579,9 @@ msgid ""
 "FreeBSD and for the time he has dedicated to me answering all of my related "
 "questions."
 msgstr ""
+"Mi más sincero agradecimiento a Luigi Rizzo por la implementación del código "
+"de bridge en FreeBSD y por el tiempo que ha dedicado a responder todas mis "
+"preguntas."
 
 #. type: Plain text
 #: documentation/content/en/articles/filtering-bridges/_index.adoc:274
@@ -577,3 +589,5 @@ msgid ""
 "A thanks goes out also to Tom Rhodes who looked over my job of translation "
 "from Italian (the original language of this article) into English."
 msgstr ""
+"Un agradecimiento también a Tom Rhodes, quien revisó mi trabajo de "
+"traducción del italiano (el idioma original de este artículo) al inglés."
