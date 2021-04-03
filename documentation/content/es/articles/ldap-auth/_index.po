@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-03-25 13:06+0000\n"
-"Last-Translator: Fernando  Apesteguía <fernando.apesteguia@gmail.com>\n"
+"PO-Revision-Date: 2021-04-04 12:56+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/articlesldap-auth_index/es/>\n"
 "Language: es\n"
@@ -15,14 +15,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.5.1\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: Title =
 #: documentation/content/en/articles/ldap-auth/_index.adoc:1
 #: documentation/content/en/articles/ldap-auth/_index.adoc:11
 #, no-wrap
 msgid "LDAP Authentication"
-msgstr ""
+msgstr "Autenticación LDAP"
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:23
@@ -47,7 +47,7 @@ msgstr "'''"
 #: documentation/content/en/articles/ldap-auth/_index.adoc:32
 #, no-wrap
 msgid "Preface"
-msgstr ""
+msgstr "Prólogo"
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:36
@@ -65,6 +65,9 @@ msgid ""
 "server that can host an LDAP directory, and to configure and deploy a "
 "FreeBSD server which can authenticate against an LDAP directory."
 msgstr ""
+"Cuando termine, el lector debería poder configurar e implementar un servidor "
+"FreeBSD que pueda alojar un directorio LDAP, y configurar e implementar un "
+"servidor FreeBSD que pueda autenticarse en un directorio LDAP."
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:42
@@ -82,7 +85,7 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:44
 #, no-wrap
 msgid "Configuring LDAP"
-msgstr ""
+msgstr "Configurando LDAP"
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:49
@@ -117,7 +120,7 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:58
 #, no-wrap
 msgid "Setting Up the Server for Connections"
-msgstr ""
+msgstr "Configurar el servidor para las conexiones"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:64
@@ -248,7 +251,7 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:127
 #, no-wrap
 msgid "Generating an RSA Key"
-msgstr ""
+msgstr "Generar una clave RSA"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:138
@@ -281,13 +284,13 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:151
 msgid "Finally, the certificate signing request needs to be signed:"
-msgstr ""
+msgstr "Finalmente, el certificado debe firmarse:"
 
 #. type: Block title
 #: documentation/content/en/articles/ldap-auth/_index.adoc:153
 #, no-wrap
 msgid "Self-signing the Certificate"
-msgstr ""
+msgstr "Autofirmar el certificado"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:163
@@ -339,7 +342,7 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:188
 #, no-wrap
 msgid "Configuring the Client"
-msgstr ""
+msgstr "Configurar el cliente"
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:192
@@ -396,7 +399,7 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:221
 #, no-wrap
 msgid "Entries in the Database"
-msgstr ""
+msgstr "Entradas en la base de datos"
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:226
@@ -415,6 +418,8 @@ msgid ""
 "The first thing we have to do is figure out is where in the directory our "
 "users will live."
 msgstr ""
+"Lo primero que tenemos que hacer es averiguar en qué parte del directorio "
+"estarán nuestros usuarios."
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:232
@@ -444,6 +449,7 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:244
 msgid "All users will be created as subentries of this organizational unit."
 msgstr ""
+"Todos los usuarios se crearán como subentradas de esta unidad organizativa."
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:249
@@ -493,6 +499,9 @@ msgid ""
 "accounts; you can configure whatever number you wish here, as long as it is "
 "less than 65536."
 msgstr ""
+"Yo empiezo los UIDs de mis usuarios de LDAP en el 10000 para evitar "
+"conflictos con las cuentas del sistema; puede establecer el número que desee "
+"aquí, siempre que sea inferior a 65536."
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:274
@@ -542,7 +551,7 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:296
 #, no-wrap
 msgid "Client Configuration"
-msgstr ""
+msgstr "Configurar el cliente"
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:299
@@ -563,7 +572,7 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:303
 #, no-wrap
 msgid "Authentication"
-msgstr ""
+msgstr "Autenticación"
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:306
@@ -665,7 +674,7 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:360
 #, no-wrap
 msgid "PAM"
-msgstr ""
+msgstr "PAM"
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:364
@@ -687,7 +696,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:368
 msgid "To use PAM for authentication, add the line"
-msgstr ""
+msgstr "Para usar PAM para la autenticación, añada la línea"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:372
@@ -811,7 +820,7 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:436
 #, no-wrap
 msgid "Name Service Switch"
-msgstr ""
+msgstr "Name Service Switch"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:440
@@ -849,7 +858,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:455
 msgid "with"
-msgstr ""
+msgstr "por"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:460
@@ -863,17 +872,20 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:463
 msgid "This will allow you to map usernames to UIDs and UIDs to usernames."
 msgstr ""
+"Esto le permitirá asignar nombres de usuario a UIDs y UIDs a nombres de "
+"usuario."
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:465
 msgid "Congratulations! You should now have working LDAP authentication."
 msgstr ""
+"¡Felicidades! Ahora debería tener la autenticación de LDAP en funcionamiento."
 
 #. type: Title ===
 #: documentation/content/en/articles/ldap-auth/_index.adoc:467
 #, no-wrap
 msgid "Caveats"
-msgstr ""
+msgstr "Advertencias"
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:473
@@ -890,7 +902,7 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:475
 #, no-wrap
 msgid "Shell Script for Changing Passwords"
-msgstr ""
+msgstr "Shell Script para cambiar contraseñas"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:482
@@ -956,7 +968,7 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:520
 #, no-wrap
 msgid "Ruby Script for Changing Passwords"
-msgstr ""
+msgstr "Script en Ruby para cambiar las contraseñas"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:530
@@ -1052,7 +1064,7 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:569
 #, no-wrap
 msgid "Security Considerations"
-msgstr ""
+msgstr "Consideraciones de seguridad"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:572
@@ -1075,7 +1087,7 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:577
 #, no-wrap
 msgid "Setting Attributes Read-only"
-msgstr ""
+msgstr "Establecer atributos de solo lectura"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:581
@@ -1097,7 +1109,7 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:587
 #, no-wrap
 msgid "Hide Passwords"
-msgstr ""
+msgstr "Ocultar contraseñas"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:598
@@ -1141,7 +1153,7 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:613
 #, no-wrap
 msgid "Read-only Attributes"
-msgstr ""
+msgstr "Atributos de solo lectura"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:627
@@ -1154,7 +1166,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:636
 msgid "This will stop users from being able to masquerade as other users."
-msgstr ""
+msgstr "Esto evitará que los usuarios puedan hacerse pasar por otros usuarios."
 
 #. type: Title ===
 #: documentation/content/en/articles/ldap-auth/_index.adoc:638
@@ -1187,7 +1199,7 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:655
 #, no-wrap
 msgid "Creating a Management Group"
-msgstr ""
+msgstr "Crear un grupo de mantenimiendo"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:653
@@ -1219,7 +1231,7 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:675
 #, no-wrap
 msgid "ACLs for a Home Directory Management Group"
-msgstr ""
+msgstr "ACLs para el grupo de administración del directorio home"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:685
@@ -1250,7 +1262,7 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:696
 #, no-wrap
 msgid "Password Storage"
-msgstr ""
+msgstr "Almacenamiento de contraseña"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:700
@@ -1273,7 +1285,7 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:708
 #, no-wrap
 msgid "Useful Aids"
-msgstr ""
+msgstr "Consideraciones útiles"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:711
@@ -1281,6 +1293,8 @@ msgid ""
 "There are a few other programs that might be useful, particularly if you "
 "have many users and do not want to configure everything manually."
 msgstr ""
+"Hay otros programas que pueden ser útiles, especialmente si tiene muchos "
+"usuarios y no desea configurarlo todo manualmente."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:714
@@ -1354,7 +1368,7 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:741
 #, no-wrap
 msgid "Creating a Certificate"
-msgstr ""
+msgstr "Crear un certificado"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:750
@@ -1399,7 +1413,7 @@ msgstr ""
 #: documentation/content/en/articles/ldap-auth/_index.adoc:768
 #, no-wrap
 msgid "Signing as a Certificate Authority"
-msgstr ""
+msgstr "Firmar como autoridad de certificación"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:777
@@ -1416,6 +1430,8 @@ msgid ""
 "The resulting file will be the certificate that you can use on your LDAP "
 "servers."
 msgstr ""
+"El archivo resultante será el certificado que pueda utilizar en sus "
+"servidores LDAP."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:783
