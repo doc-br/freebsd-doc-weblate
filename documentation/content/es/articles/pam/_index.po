@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-03-25 13:05+0000\n"
-"Last-Translator: Fernando  Apesteguía <fernando.apesteguia@gmail.com>\n"
+"PO-Revision-Date: 2021-04-04 12:56+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/articlespam_index/es/>\n"
 "Language: es\n"
@@ -15,14 +15,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.5.1\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: Title =
 #: documentation/content/en/articles/pam/_index.adoc:1
 #: documentation/content/en/articles/pam/_index.adoc:10
 #, no-wrap
 msgid "Pluggable Authentication Modules"
-msgstr ""
+msgstr "Módulos de autentificación conectables"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:22
@@ -37,6 +37,9 @@ msgid ""
 "configure PAM, how to integrate PAM into applications, and how to write PAM "
 "modules."
 msgstr ""
+"Este artículo describe los principios y mecanismos subyacentes de la "
+"libreria Pluggable Authentication Modules (PAM), y explica cómo configurar "
+"PAM, cómo integrar PAM en aplicaciones y cómo escribir módulos PAM."
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:26
@@ -57,6 +60,11 @@ msgid ""
 "new authentication methods simply by installing new PAM modules, and to "
 "modify authentication policies by editing configuration files."
 msgstr ""
+"La libreria Pluggable Authentication Modules (PAM) es una API para servicios "
+"relacionados con la autenticación que permite al administrador del sistema "
+"añadir nuevos métodos de autenticación simplemente instalando nuevos módulos "
+"PAM y modificando las políticas de autenticación editando el archivo de "
+"configuración."
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:37
@@ -81,13 +89,13 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:41
 #, no-wrap
 msgid "Terms and Conventions"
-msgstr ""
+msgstr "Términos y convenciones"
 
 #. type: Title ===
 #: documentation/content/en/articles/pam/_index.adoc:44
 #, no-wrap
 msgid "Definitions"
-msgstr ""
+msgstr "Definiciones"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:51
@@ -108,29 +116,29 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:52
 #, no-wrap
 msgid "account"
-msgstr ""
+msgstr "account"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:54
 msgid "The set of credentials the applicant is requesting from the arbitrator."
-msgstr ""
+msgstr "El conjunto de credenciales que el applicant solicita al arbitrator."
 
 #. type: Labeled list
 #: documentation/content/en/articles/pam/_index.adoc:55
 #, no-wrap
 msgid "applicant"
-msgstr ""
+msgstr "applicant"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:57
 msgid "The user or entity requesting authentication."
-msgstr ""
+msgstr "El usuario o entidad que solicita la autenticación."
 
 #. type: Labeled list
 #: documentation/content/en/articles/pam/_index.adoc:58
 #, no-wrap
 msgid "arbitrator"
-msgstr ""
+msgstr "arbitrator"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:60
@@ -138,12 +146,15 @@ msgid ""
 "The user or entity who has the privileges necessary to verify the "
 "applicant's credentials and the authority to grant or deny the request."
 msgstr ""
+"El usuario o entidad que tiene los privilegios necesarios para verificar las "
+"credenciales del applicant y la autoridad para otorgar o denegar la "
+"solicitud."
 
 #. type: Labeled list
 #: documentation/content/en/articles/pam/_index.adoc:61
 #, no-wrap
 msgid "chain"
-msgstr ""
+msgstr "chain"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:64
@@ -157,7 +168,7 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:65
 #, no-wrap
 msgid "client"
-msgstr ""
+msgstr "client"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:67
@@ -166,12 +177,15 @@ msgid ""
 "behalf of the applicant and for obtaining the necessary authentication "
 "information from him."
 msgstr ""
+"La aplicación responsable de iniciar una solicitud de autenticación en "
+"nombre del applicant y de obtener la información de autenticación necesaria "
+"de él."
 
 #. type: Labeled list
 #: documentation/content/en/articles/pam/_index.adoc:68
 #, no-wrap
 msgid "facility"
-msgstr ""
+msgstr "facility"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:70
@@ -180,12 +194,15 @@ msgid ""
 "authentication, account management, session management and authentication "
 "token update."
 msgstr ""
+"Uno de los cuatro grupos básicos de funcionalidad proporcionados por PAM: "
+"authentication, account management, session management y authentication "
+"token update."
 
 #. type: Labeled list
 #: documentation/content/en/articles/pam/_index.adoc:71
 #, no-wrap
 msgid "module"
-msgstr ""
+msgstr "module"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:73
@@ -194,12 +211,15 @@ msgid ""
 "authentication facility, gathered into a single (normally dynamically "
 "loadable) binary file and identified by a single name."
 msgstr ""
+"Una colección de una o más funciones relacionadas que implementan una "
+"facility de autenticación particular, recogida en un único archivo binario ("
+"normalmente cargable dinámicamente) e identificado por un solo nombre."
 
 #. type: Labeled list
 #: documentation/content/en/articles/pam/_index.adoc:74
 #, no-wrap
 msgid "policy"
-msgstr ""
+msgstr "policy"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:77
@@ -214,7 +234,7 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:78
 #, no-wrap
 msgid "server"
-msgstr ""
+msgstr "server"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:80
@@ -223,12 +243,15 @@ msgid ""
 "client, retrieve authentication information, verify the applicant's "
 "credentials and grant or deny requests."
 msgstr ""
+"La aplicación que actúa en nombre del arbitrator para conversar con el "
+"client, recuperar información de autenticación, verificar las credenciales "
+"del applicant y otorgar o rechazar solicitudes."
 
 #. type: Labeled list
 #: documentation/content/en/articles/pam/_index.adoc:81
 #, no-wrap
 msgid "service"
-msgstr ""
+msgstr "service"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:84
@@ -243,7 +266,7 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:85
 #, no-wrap
 msgid "session"
-msgstr ""
+msgstr "session"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:88
@@ -257,7 +280,7 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:89
 #, no-wrap
 msgid "token"
-msgstr ""
+msgstr "token"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:91
@@ -265,12 +288,14 @@ msgid ""
 "A chunk of information associated with the account, such as a password or "
 "passphrase, which the applicant must provide to prove his identity."
 msgstr ""
+"Un chunk de información asociado con la cuenta, como una contraseña o frase, "
+"que el applicant debe proporcionar para probar su identidad."
 
 #. type: Labeled list
 #: documentation/content/en/articles/pam/_index.adoc:92
 #, no-wrap
 msgid "transaction"
-msgstr ""
+msgstr "transaction"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:94
@@ -279,12 +304,15 @@ msgid ""
 "same server, beginning with authentication and session set-up and ending "
 "with session tear-down."
 msgstr ""
+"Una secuencia de solicitudes del mismo applicant a la misma instancia del "
+"mismo servidor, comenzando con la autenticación y la configuración de la "
+"sesión y terminando con el desmantelamiento de la sesión."
 
 #. type: Title ===
 #: documentation/content/en/articles/pam/_index.adoc:96
 #, no-wrap
 msgid "Usage Examples"
-msgstr ""
+msgstr "Ejemplos de uso"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:99
@@ -292,12 +320,14 @@ msgid ""
 "This section aims to illustrate the meanings of some of the terms defined "
 "above by way of a handful of simple examples."
 msgstr ""
+"Esta sección tiene como objetivo ilustrar los significados de algunos de los "
+"términos definidos anteriormente mediante un puñado de ejemplos simples."
 
 #. type: Title ====
 #: documentation/content/en/articles/pam/_index.adoc:100
 #, no-wrap
 msgid "Client and Server Are One"
-msgstr ""
+msgstr "El cliente y el servidor son uno"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:103
@@ -359,7 +389,7 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:124
 #, no-wrap
 msgid "Client and Server Are Separate"
-msgstr ""
+msgstr "El cliente y el servidor están separados"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:128
@@ -432,7 +462,7 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:154
 #, no-wrap
 msgid "Sample Policy"
-msgstr ""
+msgstr "Política de ejemplo"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:157
@@ -477,13 +507,13 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:173
 #, no-wrap
 msgid "PAM Essentials"
-msgstr ""
+msgstr "PAM Essentials"
 
 #. type: Title ===
 #: documentation/content/en/articles/pam/_index.adoc:176
 #, no-wrap
 msgid "Facilities and Primitives"
-msgstr ""
+msgstr "Facilities y primitives"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:179
@@ -491,6 +521,8 @@ msgid ""
 "The PAM API offers six different authentication primitives grouped in four "
 "facilities, which are described below."
 msgstr ""
+"La API de PAM ofrece seis primitives de autenticación diferentes agrupadas "
+"en cuatro facilities, que se describen a continuación."
 
 #. type: Labeled list
 #: documentation/content/en/articles/pam/_index.adoc:180
@@ -594,7 +626,7 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:207
 #, no-wrap
 msgid "Modules"
-msgstr ""
+msgstr "Módulos"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:212
@@ -610,7 +642,7 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:214
 #, no-wrap
 msgid "Module Naming"
-msgstr ""
+msgstr "Nomenclatura de módulos"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:219
@@ -627,7 +659,7 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:221
 #, no-wrap
 msgid "Module Versioning"
-msgstr ""
+msgstr "Versionado de módulos"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:225
@@ -661,7 +693,7 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:232
 #, no-wrap
 msgid "Chains and Policies"
-msgstr ""
+msgstr "Chains y policies"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:237
@@ -802,7 +834,7 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:274
 #, no-wrap
 msgid "Transactions"
-msgstr ""
+msgstr "Transacciones"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:278
@@ -899,13 +931,13 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:292
 #, no-wrap
 msgid "PAM Configuration"
-msgstr ""
+msgstr "Configuración de PAM"
 
 #. type: Title ===
 #: documentation/content/en/articles/pam/_index.adoc:295
 #, no-wrap
 msgid "PAM Policy Files"
-msgstr ""
+msgstr "Archivos de configuración de PAM"
 
 #. type: Title ====
 #: documentation/content/en/articles/pam/_index.adoc:298
@@ -1001,6 +1033,9 @@ msgid ""
 "than specified in the policy file, so the same file can be used for multiple "
 "differently-named services."
 msgstr ""
+"Esto funciona porque el nombre del service se determina a partir del nombre "
+"del archivo en lugar de especificarse en el archivo de policy, por lo que el "
+"mismo archivo se puede usar para múltiples services con nombres diferentes."
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:343
@@ -1014,7 +1049,7 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:345
 #, no-wrap
 msgid "The Policy Search Order"
-msgstr ""
+msgstr "El orden de búsqueda del policy"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:349
@@ -1029,12 +1064,14 @@ msgid ""
 "It is essential to understand that PAM's configuration system is centered on "
 "chains."
 msgstr ""
+"Es esencial comprender que el sistema de configuración de PAM se centra en "
+"los chains."
 
 #. type: Title ===
 #: documentation/content/en/articles/pam/_index.adoc:353
 #, no-wrap
 msgid "Breakdown of a Configuration Line"
-msgstr ""
+msgstr "Desglose de una línea de configuración"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:356
@@ -1085,7 +1122,7 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:369
 #, no-wrap
 msgid "Policies"
-msgstr ""
+msgstr "Policies"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:372
@@ -1093,6 +1130,8 @@ msgid ""
 "To configure PAM correctly, it is essential to understand how policies are "
 "interpreted."
 msgstr ""
+"Para configurar PAM correctamente, es esencial comprender cómo se "
+"interpretan las policies."
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:375
@@ -1119,7 +1158,7 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:380
 #, no-wrap
 msgid "PAM Chain Execution Summary"
-msgstr ""
+msgstr "Resumen de la ejecución del chain en PAM"
 
 #. type: Table
 #: documentation/content/en/articles/pam/_index.adoc:412
@@ -1193,7 +1232,7 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:424
 #, no-wrap
 msgid "FreeBSD PAM Modules"
-msgstr ""
+msgstr "Módulos PAM de FreeBSD"
 
 #. type: Title ===
 #: documentation/content/en/articles/pam/_index.adoc:427
@@ -1527,25 +1566,25 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:563
 #, no-wrap
 msgid "PAM Application Programming"
-msgstr ""
+msgstr "Programación de aplicaciones PAM"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:566
 #: documentation/content/en/articles/pam/_index.adoc:571
 msgid "This section has not yet been written."
-msgstr ""
+msgstr "Esta sección aún no se ha escrito."
 
 #. type: Title ==
 #: documentation/content/en/articles/pam/_index.adoc:568
 #, no-wrap
 msgid "PAM Module Programming"
-msgstr ""
+msgstr "Programación del módulo PAM"
 
 #. type: Title ==
 #: documentation/content/en/articles/pam/_index.adoc:576
 #, no-wrap
 msgid "Sample PAM Application"
-msgstr ""
+msgstr "Ejemplo de aplicación PAM"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:583
@@ -1570,7 +1609,7 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:593
 #, no-wrap
 msgid "Sample PAM Module"
-msgstr ""
+msgstr "Ejemplo de módulo PAM"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:597
@@ -1592,7 +1631,7 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:607
 #, no-wrap
 msgid "Sample PAM Conversation Function"
-msgstr ""
+msgstr "Ejemplo de función de conversación PAM"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:612
@@ -1616,13 +1655,13 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:621
 #, no-wrap
 msgid "Further Reading"
-msgstr ""
+msgstr "Lecturas adicionales"
 
 #. type: Title ===
 #: documentation/content/en/articles/pam/_index.adoc:623
 #, no-wrap
 msgid "Papers"
-msgstr ""
+msgstr "Artículos"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:626
@@ -1650,7 +1689,7 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:631
 #, no-wrap
 msgid "User Manuals"
-msgstr ""
+msgstr "Manuales de usuario"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:634
@@ -1663,7 +1702,7 @@ msgstr ""
 #: documentation/content/en/articles/pam/_index.adoc:635
 #, no-wrap
 msgid "Related Web Pages"
-msgstr ""
+msgstr "Páginas web relacionadas"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:638
