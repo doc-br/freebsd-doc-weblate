@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-03-25 13:06+0000\n"
-"Last-Translator: Fernando  Apesteguía <fernando.apesteguia@gmail.com>\n"
+"PO-Revision-Date: 2021-04-04 12:56+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/articlesfreebsd-releng_index/es/>\n"
 "Language: es\n"
@@ -15,14 +15,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.5.1\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: Title =
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:1
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:14
 #, no-wrap
 msgid "FreeBSD Release Engineering"
-msgstr ""
+msgstr "Ingería de lanzamientos de FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:39
@@ -35,6 +35,8 @@ msgid ""
 "This article describes the release engineering process of the FreeBSD "
 "Project."
 msgstr ""
+"Este artículo describe el proceso detrás del modelo de ingeniería de "
+"lanzamientos adoptado por el proyecto FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:43
@@ -45,7 +47,7 @@ msgstr "'''"
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:47
 #, no-wrap
 msgid "Introduction to the FreeBSD Release Engineering Process"
-msgstr ""
+msgstr "Introducción al proceso de ingeniería de lanzamientos de FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:51
@@ -99,7 +101,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:66
 msgid "The following sections of this article describe:"
-msgstr ""
+msgstr "Las siguientes secciones de este artículo describen:"
 
 #. type: Labeled list
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:67
@@ -111,6 +113,7 @@ msgstr ""
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:69
 msgid "General information and preparation before starting the release cycle."
 msgstr ""
+"Información general y preparación antes de comenzar el ciclo de lanzamiento."
 
 #. type: Labeled list
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:70
@@ -123,7 +126,7 @@ msgstr ""
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:260
 #, no-wrap
 msgid "Website Changes During the Release Cycle"
-msgstr ""
+msgstr "Cambios en el sitio web durante el ciclo de liberación"
 
 #. type: Labeled list
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:73
@@ -171,6 +174,8 @@ msgstr ""
 msgid ""
 "Information related to the specific procedures to build installation medium."
 msgstr ""
+"Información relacionada con los procedimientos específicos para construir el "
+"medio de instalación."
 
 #. type: Labeled list
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:85
@@ -181,7 +186,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:87
 msgid "Procedures to publish installation medium."
-msgstr ""
+msgstr "Procedimientos para publicar un medio de instalación."
 
 #. type: Labeled list
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:88
@@ -192,13 +197,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:90
 msgid "Wrapping up the release cycle."
-msgstr ""
+msgstr "Terminando el ciclo de lanzamiento."
 
 #. type: Title ==
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:92
 #, no-wrap
 msgid "General Information and Preparation"
-msgstr ""
+msgstr "Información general y preparación"
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:97
@@ -281,6 +286,8 @@ msgstr ""
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:168
 msgid "Items marked with \"[*]\" are \"as needed\"."
 msgstr ""
+"Los elementos marcados con \"[*]\" identifican los pasos realizados solo "
+"\"cuando sean necesarios\"."
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:171
@@ -435,7 +442,7 @@ msgstr ""
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:224
 #, no-wrap
 msgid "Release Engineering Terminology"
-msgstr ""
+msgstr "Terminología de la ingeniería de lanzamientos"
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:227
@@ -443,12 +450,14 @@ msgid ""
 "This section describes some of the terminology used throughout the rest of "
 "this document."
 msgstr ""
+"Esta sección describe parte de la terminología utilizada en el resto de este "
+"documento."
 
 #. type: Title ===
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:229
 #, no-wrap
 msgid "The Code Slush"
-msgstr ""
+msgstr "El code slush"
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:232
@@ -460,13 +469,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:234
 msgid "The code slush does not enforce commit approvals to the branch."
-msgstr ""
+msgstr "El code slush no impone aprobaciones en los commits a la rama."
 
 #. type: Title ===
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:236
 #, no-wrap
 msgid "The Code Freeze"
-msgstr ""
+msgstr "La congelación del código"
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:239
@@ -531,6 +540,8 @@ msgid ""
 "This section describes the changes to the website that should occur as the "
 "release cycle progresses."
 msgstr ""
+"Esta sección describe los cambios que deberían de ocurrir en la web a medida "
+"que avanza el ciclo de lanzamiento."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:267
@@ -543,7 +554,7 @@ msgstr ""
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:270
 #, no-wrap
 msgid "Website Changes Before the Release Cycle Begins"
-msgstr ""
+msgstr "Cambios en la web antes de que empiece el ciclo de lanzamiento"
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:273
@@ -551,6 +562,9 @@ msgid ""
 "When the release cycle schedule is available, these files need to be updated "
 "to enable various different functionalities on the FreeBSD Project website:"
 msgstr ""
+"Cuando el programa del ciclo de lanzamientos está disponible, estos archivos "
+"deben actualizarse para habilitar varias funcionalidades diferentes en la "
+"web del proyecto FreeBSD:"
 
 #. type: Table
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:286
@@ -998,7 +1012,7 @@ msgstr ""
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:568
 #, no-wrap
 msgid "Building FreeBSD Installation Media"
-msgstr ""
+msgstr "Construir los medios de instalación de FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:571
@@ -1006,12 +1020,14 @@ msgid ""
 "This section describes the general procedures producing FreeBSD development "
 "snapshots and releases."
 msgstr ""
+"Esta sección describe los procedimientos generales que producen instantáneas "
+"y versiones del desarrollo de FreeBSD."
 
 #. type: Title ===
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:573
 #, no-wrap
 msgid "Release Build Scripts"
-msgstr ""
+msgstr "Liberar los Scripts de construcción"
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:576
@@ -1161,7 +1177,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:630
 msgid "There are two paths of file sourcing:"
-msgstr ""
+msgstr "Hay dos caminos para la obtención de archivos:"
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:632
@@ -1198,7 +1214,7 @@ msgstr ""
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:644
 #, no-wrap
 msgid "Building FreeBSD Development Snapshots"
-msgstr ""
+msgstr "Construyendo instantáneas del desarrollo de FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:647
@@ -1285,6 +1301,9 @@ msgid ""
 "The generated output should be double-checked for correctness, and the email "
 "itself should be PGP signed, in-line."
 msgstr ""
+"La salida generada debe ser verificada dos veces para comprobar que es "
+"correcta, y el correo electrónico en sí debe ser firmado mediante PGP, en "
+"línea."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:690
@@ -1299,7 +1318,7 @@ msgstr ""
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:693
 #, no-wrap
 msgid "Building FreeBSD Releases"
-msgstr ""
+msgstr "Construyendo versiones de FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:697
@@ -1347,6 +1366,8 @@ msgstr ""
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:708
 msgid "In preparation for the release build, several files need to be updated:"
 msgstr ""
+"En preparación para la construcción de la liberación, varios archivos "
+"necesitan ser actualizados:"
 
 #. type: Table
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:723
@@ -1386,7 +1407,7 @@ msgstr ""
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:736
 #, no-wrap
 msgid "Publishing FreeBSD Installation Media to Project Mirrors"
-msgstr ""
+msgstr "Publicar los medios de instalación de FreeBSD para el Proyecto Mirrors"
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:739
@@ -1394,17 +1415,21 @@ msgid ""
 "This section describes the procedure to publish FreeBSD development "
 "snapshots and releases to the Project mirrors."
 msgstr ""
+"Esta sección describe el procedimiento para publicar instantáneas del "
+"desarrollo de FreeBSD y las versiones en los Proyectos Mirrors."
 
 #. type: Title ===
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:741
 #, no-wrap
 msgid "Staging FreeBSD Installation Media Images"
-msgstr ""
+msgstr "Poner en marcha las imágenes de los medios de instalación de FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:744
 msgid "Staging FreeBSD snapshots and releases is a two part process:"
 msgstr ""
+"La puesta en marcha de las instantáneas y lanzamientos de FreeBSD es un "
+"proceso de dos partes:"
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:746
@@ -1464,7 +1489,7 @@ msgstr ""
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:766
 #, no-wrap
 msgid "Publishing FreeBSD Installation Media"
-msgstr ""
+msgstr "Publicación de los soportes de instalación de FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:770
@@ -1520,18 +1545,20 @@ msgstr ""
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:795
 #, no-wrap
 msgid "Wrapping up the Release Cycle"
-msgstr ""
+msgstr "Cerrando el ciclo de liberación"
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:798
 msgid "This section describes general post-release tasks."
 msgstr ""
+"En esta sección se describen las tareas generales posteriores a la "
+"liberación."
 
 #. type: Title ===
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:800
 #, no-wrap
 msgid "Post-Release Errata Notices"
-msgstr ""
+msgstr "Notificaciones de errores posteriores a la liberación"
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:804
@@ -1614,6 +1641,8 @@ msgid ""
 "When a release reaches End-of-Life, references to that release should be "
 "removed and/or updated on the website:"
 msgstr ""
+"Cuando un lanzamiento llega al final de la vida, las referencias a ese "
+"lanzamiento deben ser eliminadas y/o actualizadas en el sitio web:"
 
 #. type: Table
 #: documentation/content/en/articles/freebsd-releng/_index.adoc:862
