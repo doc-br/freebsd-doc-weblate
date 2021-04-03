@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-04 12:57+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
+"documentation/booksarch-handbookkobjchapter/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:1
@@ -25,7 +28,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:8
 #, no-wrap
 msgid "Kernel Objects"
-msgstr ""
+msgstr "Objetos del kernel"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:33
@@ -40,57 +43,57 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:35
 #, no-wrap
 msgid "Terminology"
-msgstr ""
+msgstr "Terminología"
 
 #. type: Labeled list
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:37
 #, no-wrap
 msgid "Object"
-msgstr ""
+msgstr "Objecto"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:39
 msgid "A set of data - data structure - data allocation."
-msgstr ""
+msgstr "Un conjunto de datos - estructura de datos - asignación de datos."
 
 #. type: Labeled list
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:40
 #, no-wrap
 msgid "Method"
-msgstr ""
+msgstr "Método"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:42
 msgid "An operation - function."
-msgstr ""
+msgstr "Una operación - función."
 
 #. type: Labeled list
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:43
 #, no-wrap
 msgid "Class"
-msgstr ""
+msgstr "Clase"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:45
 msgid "One or more methods."
-msgstr ""
+msgstr "Uno o más métodos."
 
 #. type: Labeled list
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:46
 #, no-wrap
 msgid "Interface"
-msgstr ""
+msgstr "Interfaz"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:48
 msgid "A standard set of one or more methods."
-msgstr ""
+msgstr "Un conjunto estándar de uno o más métodos."
 
 #. type: Title ==
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:50
 #, no-wrap
 msgid "Kobj Operation"
-msgstr ""
+msgstr "Operación Kobj"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:53
@@ -99,6 +102,10 @@ msgid ""
 "unique id as well as a default function. The description's address is used "
 "to uniquely identify the method within a class' method table."
 msgstr ""
+"Kobj funciona generando descripciones de métodos. Cada descripción tiene una "
+"identificación única, así como una función predeterminada. La dirección de "
+"la descripción se utiliza para identificar de forma única el método dentro "
+"de la tabla de métodos de una clase."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:55
@@ -117,11 +124,25 @@ msgid ""
 "associated function within the class is used; otherwise, the default "
 "function associated with the method description is used."
 msgstr ""
+"Una clase se construye creando una tabla de métodos que asocia una o más "
+"funciones con descripciones de métodos. Antes de su uso, se compila la "
+"clase. La compilación asigna un caché y lo asocia con la clase. Se asigna "
+"una identificación única a cada descripción de método dentro de la tabla de "
+"métodos de la clase si no lo ha hecho ya otra compilación de clases de "
+"referencia. Para cada método que se utilizará, el script genera una función "
+"para calificar los argumentos y hacer referencia automáticamente a la "
+"descripción del método para una búsqueda. La función generada busca el "
+"método utilizando la identificación única asociada con la descripción del "
+"método como un hash en la caché asociada con la clase del objeto. Si el "
+"método no está almacenado en caché, la función generada procede a usar la "
+"tabla de la clase para encontrar el método. Si se encuentra el método, se "
+"utiliza la función asociada dentro de la clase; de lo contrario, se utiliza "
+"la función predeterminada asociada con la descripción del método."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:57
 msgid "These indirections can be visualized as the following:"
-msgstr ""
+msgstr "Estas in direcciones se pueden visualizar de la siguiente manera:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:61
@@ -133,13 +154,13 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:64
 #, no-wrap
 msgid "Using Kobj"
-msgstr ""
+msgstr "Usando Kobj"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:66
 #, no-wrap
 msgid "Structures"
-msgstr ""
+msgstr "Estructuras"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:71
@@ -151,7 +172,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:73
 #, no-wrap
 msgid "Functions"
-msgstr ""
+msgstr "Funciones"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:83
@@ -185,7 +206,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:95
 #, no-wrap
 msgid "Headers"
-msgstr ""
+msgstr "Encabezados"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:101
@@ -199,7 +220,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:103
 #, no-wrap
 msgid "Creating an Interface Template"
-msgstr ""
+msgstr "Crear una plantilla de interfaz"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:106
@@ -232,7 +253,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:157
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:182
 msgid "For example:"
-msgstr ""
+msgstr "Por ejemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:116
@@ -324,7 +345,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:170
 msgid "Other complete examples:"
-msgstr ""
+msgstr "Otros ejemplos completos:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:175
@@ -338,7 +359,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:177
 #, no-wrap
 msgid "Creating a Class"
-msgstr ""
+msgstr "Crear una clase"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:180
@@ -382,7 +403,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:196
 #, no-wrap
 msgid "Creating an Object"
-msgstr ""
+msgstr "Crear un objeto"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:199
@@ -399,12 +420,12 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:201
 msgid "To integrate Kobj into the object you should use the macro KOBJ_FIELDS."
-msgstr ""
+msgstr "Para integrar Kobj en el objeto, debe utilizar la macro KOBJ_FIELDS."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:203
 msgid "For example"
-msgstr ""
+msgstr "Por ejemplo"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:211
@@ -421,7 +442,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:213
 #, no-wrap
 msgid "Calling Methods"
-msgstr ""
+msgstr "Métodos de llamada"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:216
@@ -432,6 +453,11 @@ msgid ""
 "name should be concatenated with the method name using a '_' between them, "
 "all in upper case."
 msgstr ""
+"El último paso para usar Kobj es simplemente usar las funciones generadas "
+"para usar el método deseado dentro de la clase del objeto. Esto es tan "
+"simple como usar el nombre de la interfaz y el nombre del método con algunas "
+"modificaciones. El nombre de la interfaz debe concatenarse con el nombre del "
+"método usando un '_' entre ellos, todo en mayúsculas."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:218
@@ -439,6 +465,8 @@ msgid ""
 "For example, if the interface name was foo and the method was bar then the "
 "call would be:"
 msgstr ""
+"Por ejemplo, si el nombre de la interfaz era foo y el método era bar, la "
+"llamada sería:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:222
@@ -450,7 +478,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:224
 #, no-wrap
 msgid "Cleaning Up"
-msgstr ""
+msgstr "Limpieza"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:226
