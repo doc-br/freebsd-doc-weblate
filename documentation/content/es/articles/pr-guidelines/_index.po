@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-03-25 13:05+0000\n"
-"Last-Translator: Fernando  Apesteguía <fernando.apesteguia@gmail.com>\n"
+"PO-Revision-Date: 2021-04-03 12:47+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/articlespr-guidelines_index/es/>\n"
 "Language: es\n"
@@ -15,14 +15,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.5.1\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: Title =
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:1
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:10
 #, no-wrap
 msgid "Problem Report Handling Guidelines"
-msgstr ""
+msgstr "Guía para el manejo de informes de problemas"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:25
@@ -72,7 +72,7 @@ msgstr ""
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:43
 #, no-wrap
 msgid "Problem Report Life-cycle"
-msgstr ""
+msgstr "Ciclo de vida de un informe de problemas"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:46
@@ -104,6 +104,9 @@ msgid ""
 "Joe has a brief exchange with the originator (making sure it all goes into "
 "the audit trail) and determines the cause of the problem."
 msgstr ""
+"Joe tiene una breve conversación con el usuario que ha enviado el informe "
+"del problema (asegurándose de que todo queda registrado) y determina la "
+"causa."
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:50
@@ -146,7 +149,7 @@ msgstr ""
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:60
 #, no-wrap
 msgid "Problem Report State"
-msgstr ""
+msgstr "Estados de los informes de problemas"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:64
@@ -159,7 +162,7 @@ msgstr ""
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:65
 #, no-wrap
 msgid "A small example on when to change PR state"
-msgstr ""
+msgstr "Un pequeño ejemplo de cuándo cambiar el estado de un PR"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:70
@@ -174,35 +177,35 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:73
 msgid "A Problem Report may be in one of the following states:"
-msgstr ""
+msgstr "Un informe de problemas puede estar en uno de los siguientes estados:"
 
 #. type: Labeled list
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:74
 #, no-wrap
 msgid "open"
-msgstr ""
+msgstr "Abrir"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:76
 msgid "Initial state; the problem has been pointed out and it needs reviewing."
-msgstr ""
+msgstr "Estado inicial; el problema ha sido indicado y necesita ser revisado."
 
 #. type: Labeled list
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:77
 #, no-wrap
 msgid "analyzed"
-msgstr ""
+msgstr "analizar"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:79
 msgid "The problem has been reviewed and a solution is being sought."
-msgstr ""
+msgstr "El problema ha sido revisado y se está buscando una solución."
 
 #. type: Labeled list
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:80
 #, no-wrap
 msgid "feedback"
-msgstr ""
+msgstr "retroalimentación"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:82
@@ -210,12 +213,15 @@ msgid ""
 "Further work requires additional information from the originator or the "
 "community; possibly information regarding the proposed solution."
 msgstr ""
+"Si hay que realizar trabajo adicional, esto requiere información adicional "
+"del usuario o de la comunidad; posiblemente información sobre la solución "
+"propuesta."
 
 #. type: Labeled list
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:83
 #, no-wrap
 msgid "patched"
-msgstr ""
+msgstr "patched"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:85
@@ -223,12 +229,14 @@ msgid ""
 "A patch has been committed, but something (MFC, or maybe confirmation from "
 "originator) is still pending."
 msgstr ""
+"Se ha realizado un commit con el parche, pero aún hay algo pendiente (MFC, o "
+"tal vez confirmación del usuario que lo creó)."
 
 #. type: Labeled list
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:86
 #, no-wrap
 msgid "suspended"
-msgstr ""
+msgstr "suspendido"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:91
@@ -245,7 +253,7 @@ msgstr ""
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:92
 #, no-wrap
 msgid "closed"
-msgstr ""
+msgstr "cerrado"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:94
@@ -253,6 +261,8 @@ msgid ""
 "A problem report is closed when any changes have been integrated, "
 "documented, and tested, or when fixing the problem is abandoned."
 msgstr ""
+"Un informe de problemas se cierra cuando se han integrado, documentado y "
+"probado los cambios, o cuando se abandona la solución del problema."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:98
@@ -266,7 +276,7 @@ msgstr ""
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:101
 #, no-wrap
 msgid "Types of Problem Reports"
-msgstr ""
+msgstr "Tipos de informes de problemas"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:104
@@ -276,6 +286,11 @@ msgid ""
 "and submits followups with patches, comments, suggestions or change "
 "requests, you will come across several different types of PRs."
 msgstr ""
+"Al tratar con informes de problemas, ya sea como desarrollador que tiene "
+"acceso directo a la base de datos de informes de problemas o como "
+"colaborador que navega por la base de datos y envía follow-ups con parches, "
+"comentarios, sugerencias o solicitudes de cambio, encontrará varios tipos "
+"diferentes de PRs."
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:106
@@ -309,12 +324,14 @@ msgid ""
 "when a PR belongs to one of these types, and what treatment each different "
 "type receives."
 msgstr ""
+"Las siguientes secciones describen para qué se usa cada tipo de PRs, cuándo "
+"un PR pertenece a uno de estos tipos y qué tratamiento recibe cada tipo."
 
 #. type: Title ==
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:114
 #, no-wrap
 msgid "Unassigned PRs"
-msgstr ""
+msgstr "PRs sin asignar"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:120
@@ -435,6 +452,8 @@ msgstr ""
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:196
 msgid "Here is a sample list of such entities; it is probably not complete."
 msgstr ""
+"Aquí hay un listado de ejemplo de dichas entidades; probablemente no esté "
+"completo."
 
 #. type: Block title
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:198
@@ -680,6 +699,11 @@ msgid ""
 "by anyone (but note that not every FreeBSD committer is necessarily a ports "
 "committer, so you cannot simply go by the email address alone.)"
 msgstr ""
+"Los PRs relacionados con los ports que tienen un maintainer que es a la vez "
+"un committer de ports pueden ser reasignados por cualquiera (pero tenga en "
+"cuenta que no todo committer de FreeBSD es necesariamente un committer de "
+"ports, por lo que no puede guiarse únicamente por la dirección de correo "
+"electrónico)."
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:426
@@ -721,7 +745,7 @@ msgstr ""
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:448
 #, no-wrap
 msgid "Assigned PRs"
-msgstr ""
+msgstr "PRs asignados"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:451
@@ -745,7 +769,7 @@ msgstr ""
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:458
 #, no-wrap
 msgid "Duplicate PRs"
-msgstr ""
+msgstr "PRs duplicados"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:462
@@ -762,7 +786,7 @@ msgstr ""
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:464
 #, no-wrap
 msgid "Stale PRs"
-msgstr ""
+msgstr "PRs obsoletos"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:467
@@ -770,6 +794,8 @@ msgid ""
 "A PR is considered stale if it has not been modified in more than six "
 "months. Apply the following procedure to deal with stale PRs:"
 msgstr ""
+"Un PR se considera obsoleto si no ha sido modificado en más de seis meses. "
+"Realice el siguiente procedimiento para tratar los PRs obsoletos:"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:469
@@ -819,7 +845,7 @@ msgstr ""
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:475
 #, no-wrap
 msgid "Non-Bug PRs"
-msgstr ""
+msgstr "PRs sin errores"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:478
@@ -841,7 +867,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:483
 msgid "Whenever you close one of these PRs, please do the following:"
-msgstr ""
+msgstr "Cuando cierre uno de estos PRs, haga lo siguiente:"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:485
@@ -870,7 +896,7 @@ msgstr ""
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:491
 #, no-wrap
 msgid "Further Reading"
-msgstr ""
+msgstr "Otras lecturas"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:495
