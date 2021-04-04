@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-03-25 13:06+0000\n"
-"Last-Translator: Fernando  Apesteguía <fernando.apesteguia@gmail.com>\n"
+"PO-Revision-Date: 2021-04-04 12:57+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/articlesreleng_index/es/>\n"
 "Language: es\n"
@@ -15,14 +15,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.5.1\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: Title =
 #: documentation/content/en/articles/releng/_index.adoc:1
 #: documentation/content/en/articles/releng/_index.adoc:10
 #, no-wrap
 msgid "FreeBSD Release Engineering"
-msgstr ""
+msgstr "Ingería de lanzamientos de FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:41
@@ -173,12 +173,12 @@ msgstr ""
 #: documentation/content/en/articles/releng/_index.adoc:100
 #, no-wrap
 msgid "What This Article Describes"
-msgstr ""
+msgstr "Lo que describe este artículo"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:103
 msgid "The following sections of this article describe:"
-msgstr ""
+msgstr "Las siguientes secciones de este artículo describen:"
 
 #. type: Labeled list
 #: documentation/content/en/articles/releng/_index.adoc:104
@@ -192,6 +192,8 @@ msgid ""
 "The different phases of the release engineering process leading up to the "
 "actual system build."
 msgstr ""
+"Las diferentes fases del proceso de ingeniería de liberación que conducen a "
+"la construcción del sistema real."
 
 #. type: Labeled list
 #: documentation/content/en/articles/releng/_index.adoc:107
@@ -202,7 +204,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:109
 msgid "The actual build process."
-msgstr ""
+msgstr "El proceso de construcción actual."
 
 #. type: Labeled list
 #: documentation/content/en/articles/releng/_index.adoc:110
@@ -213,7 +215,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:112
 msgid "How the base release may be extended by third parties."
-msgstr ""
+msgstr "Cómo la liberación de la base puede ser extendida por terceros."
 
 #. type: Labeled list
 #: documentation/content/en/articles/releng/_index.adoc:113
@@ -225,6 +227,7 @@ msgstr ""
 #: documentation/content/en/articles/releng/_index.adoc:115
 msgid "Some of the lessons learned through the release of FreeBSD 4.4."
 msgstr ""
+"Algunas de las lecciones aprendidas a través del lanzamiento de FreeBSD 4.4."
 
 #. type: Labeled list
 #: documentation/content/en/articles/releng/_index.adoc:116
@@ -235,13 +238,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:118
 msgid "Future directions of development."
-msgstr ""
+msgstr "Las futuras direcciones de desarrollo."
 
 #. type: Title ==
 #: documentation/content/en/articles/releng/_index.adoc:120
 #, no-wrap
 msgid "Release Process"
-msgstr ""
+msgstr "Proceso de liberación"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:125
@@ -273,7 +276,7 @@ msgstr ""
 #: documentation/content/en/articles/releng/_index.adoc:130
 #, no-wrap
 msgid "Code Review"
-msgstr ""
+msgstr "Revisión del código"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:136
@@ -288,27 +291,29 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:138
 msgid "Bug fixes."
-msgstr ""
+msgstr "Arreglos de errores."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:139
 msgid "Documentation updates."
-msgstr ""
+msgstr "Actualizaciones de la documentación."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:140
 msgid "Security-related fixes of any kind."
-msgstr ""
+msgstr "Arreglos de seguridad de cualquier tipo."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:141
 msgid "Minor changes to device drivers, such as adding new Device IDs."
 msgstr ""
+"Cambios menores en los controladores de los dispositivos, como la adición de "
+"nuevas identificaciones de dispositivos."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:142
 msgid "Driver updates from the vendors."
-msgstr ""
+msgstr "Actualizaciones de los controladores de los fabricantes."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:143
@@ -316,6 +321,8 @@ msgid ""
 "Any additional change that the release engineering team feels is justified, "
 "given the potential risk."
 msgstr ""
+"Cualquier cambio adicional que el equipo de ingeniería de lanzamiento "
+"considere justificado, dado el riesgo potencial."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:147
@@ -346,7 +353,7 @@ msgstr ""
 #: documentation/content/en/articles/releng/_index.adoc:151
 #, no-wrap
 msgid "Final Release Checklist"
-msgstr ""
+msgstr "Lista de control de liberación final"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:154
@@ -360,7 +367,7 @@ msgstr ""
 #: documentation/content/en/articles/releng/_index.adoc:156
 #, no-wrap
 msgid "Creating the Release Branch"
-msgstr ""
+msgstr "Creación de la rama de liberación"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/releng/_index.adoc:161
@@ -398,7 +405,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:179
 msgid "This branch can be checked out:"
-msgstr ""
+msgstr "Esta rama puede ser revisada:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/releng/_index.adoc:183
@@ -513,7 +520,7 @@ msgstr ""
 #: documentation/content/en/articles/releng/_index.adoc:207
 #, no-wrap
 msgid "Bumping up the Version Number"
-msgstr ""
+msgstr "Aumentar el número de versión"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:210
@@ -521,6 +528,9 @@ msgid ""
 "Before the final release can be tagged, built, and released, the following "
 "files need to be modified to reflect the correct version of FreeBSD:"
 msgstr ""
+"Antes de que la versión final pueda ser etiquetada, construida y liberada, "
+"los siguientes archivos deben ser modificados para reflejar la versión "
+"correcta de FreeBSD:"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:212
@@ -609,6 +619,9 @@ msgid ""
 "release (on the release branch) and truncated appropriately (on the stable/"
 "current branch):"
 msgstr ""
+"Las notas de lanzamiento y los archivos de erratas también deben ajustarse a "
+"la nueva versión (en la rama de lanzamiento) y truncarse adecuadamente (en "
+"la rama estable/actual):"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:231
@@ -676,7 +689,7 @@ msgstr ""
 #: documentation/content/en/articles/releng/_index.adoc:250
 #, no-wrap
 msgid "Creating the Release Tag"
-msgstr ""
+msgstr "Creación de la etiqueta de liberación"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:253
@@ -781,6 +794,9 @@ msgid ""
 "Checkout from Subversion of a clean version of the system source, "
 "documentation, and ports into the release build hierarchy."
 msgstr ""
+"Comprobación de la Subversión de una versión limpia de la fuente del "
+"sistema, la documentación y los puertos en la jerarquía de construcción de "
+"la liberación."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:295
@@ -804,7 +820,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:298
 msgid "Build of Kerberos-related binaries."
-msgstr ""
+msgstr "Construcción de binarios relacionados con Kerberos."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:299
@@ -817,6 +833,8 @@ msgid ""
 "Creation of a staging directory tree where the binary distributions will be "
 "built and packaged."
 msgstr ""
+"Creación de un árbol de directorios de etapas donde se construirán y "
+"empaquetarán las distribuciones binarias."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:301
@@ -825,6 +843,9 @@ msgid ""
 "documentation source (SGML) into HTML and text documents that will accompany "
 "the release."
 msgstr ""
+"Construcción e instalación de la cadena de herramientas de documentación "
+"necesaria para convertir la fuente de documentación (SGML) en documentos "
+"HTML y de texto que acompañarán a la liberación."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:302
@@ -832,16 +853,18 @@ msgid ""
 "Build and installation of the actual documentation (user manuals, tutorials, "
 "release notes, hardware compatibility lists, and so on.)"
 msgstr ""
+"La elaboración e instalación de la documentación real (manuales de usuario, "
+"tutoriales, notas de lanzamiento, listas de compatibilidad de hardware, etc.)"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:303
 msgid "Package up distribution tarballs of the binaries and sources."
-msgstr ""
+msgstr "Empaquetar las bases de distribución de los binarios y las fuentes."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:304
 msgid "Create FTP installation hierarchy."
-msgstr ""
+msgstr "Crear una jerarquía de instalación de FTP."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:305
@@ -883,7 +906,7 @@ msgstr ""
 #: documentation/content/en/articles/releng/_index.adoc:319
 #, no-wrap
 msgid "Release ISOs"
-msgstr ""
+msgstr "Lanzamiento de las ISO"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:324
@@ -908,12 +931,14 @@ msgstr ""
 #: documentation/content/en/articles/releng/_index.adoc:331
 msgid "The specific requirements of each CD are outlined below."
 msgstr ""
+"A continuación se exponen los requisitos específicos de cada disco "
+"compacto(CD)."
 
 #. type: Title ====
 #: documentation/content/en/articles/releng/_index.adoc:332
 #, no-wrap
 msgid "Disc 1"
-msgstr ""
+msgstr "Disco 1"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:338
@@ -944,7 +969,7 @@ msgstr ""
 #: documentation/content/en/articles/releng/_index.adoc:344
 #, no-wrap
 msgid "Disc 2"
-msgstr ""
+msgstr "Disco 2"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:349
@@ -961,7 +986,7 @@ msgstr ""
 #: documentation/content/en/articles/releng/_index.adoc:350
 #, no-wrap
 msgid "Multi-volume Support"
-msgstr ""
+msgstr "Soporte de múltiples volúmenes"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:356
@@ -980,13 +1005,13 @@ msgstr ""
 #: documentation/content/en/articles/releng/_index.adoc:358
 #, no-wrap
 msgid "Distribution"
-msgstr ""
+msgstr "Distribución"
 
 #. type: Title ===
 #: documentation/content/en/articles/releng/_index.adoc:361
 #, no-wrap
 msgid "FTP Sites"
-msgstr ""
+msgstr "Sitios FTP"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:367
@@ -1018,7 +1043,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:373
 msgid "The complete package build for this release."
-msgstr ""
+msgstr "El paquete completo construido para este lanzamiento."
 
 #. type: Labeled list
 #: documentation/content/en/articles/releng/_index.adoc:374
@@ -1087,7 +1112,7 @@ msgstr ""
 #: documentation/content/en/articles/releng/_index.adoc:395
 #, no-wrap
 msgid "CD-ROM Replication"
-msgstr ""
+msgstr "Replicación en CD-ROM"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:398
@@ -1095,12 +1120,14 @@ msgid ""
 "Coming soon: Tips for sending FreeBSD ISOs to a replicator and quality "
 "assurance measures to be taken."
 msgstr ""
+"Muy pronto: Consejos para enviar las ISO de FreeBSD a un replicador y las "
+"medidas de garantía de calidad que se deben tomar."
 
 #. type: Title ==
 #: documentation/content/en/articles/releng/_index.adoc:400
 #, no-wrap
 msgid "Extensibility"
-msgstr ""
+msgstr "Extensibilidad"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:407
@@ -1137,7 +1164,7 @@ msgstr ""
 #: documentation/content/en/articles/releng/_index.adoc:414
 #, no-wrap
 msgid "Lessons Learned from FreeBSD 4.4"
-msgstr ""
+msgstr "Lecciones aprendidas de FreeBSD 4.4"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:421
@@ -1167,7 +1194,7 @@ msgstr ""
 #: documentation/content/en/articles/releng/_index.adoc:427
 #, no-wrap
 msgid "Future Directions"
-msgstr ""
+msgstr "Direcciones futuras"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:431
@@ -1219,7 +1246,7 @@ msgstr ""
 #: documentation/content/en/articles/releng/_index.adoc:438
 #, no-wrap
 msgid "Acknowledgements"
-msgstr ""
+msgstr "Agradecimientos"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:443
