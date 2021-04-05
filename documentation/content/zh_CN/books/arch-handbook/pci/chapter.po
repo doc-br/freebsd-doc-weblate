@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 01:29+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
+"projects/documentation/booksarch-handbookpcichapter/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/arch-handbook/pci/chapter.adoc:1
@@ -25,27 +28,27 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/pci/chapter.adoc:8
 #, no-wrap
 msgid "PCI Devices"
-msgstr ""
+msgstr "PCI 设备"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/pci/chapter.adoc:33
 msgid ""
 "This chapter will talk about the FreeBSD mechanisms for writing a device "
 "driver for a device on a PCI bus."
-msgstr ""
+msgstr "本章将讨论FreeBSD为了给PCI总线上的设备编写驱动程序而提供的机制。"
 
 #. type: Title ==
 #: documentation/content/en/books/arch-handbook/pci/chapter.adoc:35
 #, no-wrap
 msgid "Probe and Attach"
-msgstr ""
+msgstr "探测与连接"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/pci/chapter.adoc:38
 msgid ""
 "Information here about how the PCI bus code iterates through the unattached "
 "devices and see if a newly loaded kld will attach to any of them."
-msgstr ""
+msgstr "这儿的信息是关于PCI总线代码如何迭代通过未连接的设备，并查看新加载的kld是否会连接其中一个。"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/pci/chapter.adoc:39
@@ -497,7 +500,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/pci/chapter.adoc:265
 #, no-wrap
 msgid "Additional Resources"
-msgstr ""
+msgstr "更多资源"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/pci/chapter.adoc:268
@@ -507,13 +510,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/pci/chapter.adoc:269
 msgid "PCI System Architecture, Fourth Edition by Tom Shanley, et al."
-msgstr ""
+msgstr "PCI System Architecture, Fourth Edition by Tom Shanley, et al."
 
 #. type: Title ==
 #: documentation/content/en/books/arch-handbook/pci/chapter.adoc:271
 #, no-wrap
 msgid "Bus Resources"
-msgstr ""
+msgstr "总线资源"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/pci/chapter.adoc:274
@@ -524,12 +527,14 @@ msgid ""
 "their parent bus (such as memory segments, interrupt lines, or DMA "
 "channels)."
 msgstr ""
+"FreeBSD为从父总线请求资源提供了一种面向对象的机制。几乎所有设备都是某种类型的总线（PCI, ISA, USB, "
+"SCSI等等）的孩子成员，并且这些设备需要从他们的父总线获取资源（例如内存段, 中断线, 或者DMA通道）。"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/pci/chapter.adoc:275
 #, no-wrap
 msgid "Base Address Registers"
-msgstr ""
+msgstr "基地址寄存器"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/pci/chapter.adoc:278
@@ -608,7 +613,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/pci/chapter.adoc:320
 msgid "Similarly, one could write to the registers with:"
-msgstr ""
+msgstr "类似的，可以用下面的函数写寄存器："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/pci/chapter.adoc:328
@@ -652,7 +657,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/pci/chapter.adoc:347
 #, no-wrap
 msgid "Interrupts"
-msgstr ""
+msgstr "中断"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/arch-handbook/pci/chapter.adoc:350
@@ -661,7 +666,7 @@ msgid ""
 "to the memory resources. First an IRQ resource must be allocated from the "
 "parent bus, and then the interrupt handler must be set up to deal with this "
 "IRQ."
-msgstr ""
+msgstr "中断按照和分配内存资源相似的方式从面向对象的总线代码分配。首先，必须从父总线分配IRQ资源，然后必须设置中断处理函数来处理这个IRQ。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/arch-handbook/pci/chapter.adoc:352
@@ -722,7 +727,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/pci/chapter.adoc:378
 #, no-wrap
 msgid "DMA"
-msgstr ""
+msgstr "DMA"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/pci/chapter.adoc:381
@@ -780,7 +785,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/pci/chapter.adoc:403
 #, no-wrap
 msgid "Deallocating Resources"
-msgstr ""
+msgstr "取消分配资源"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/pci/chapter.adoc:405
