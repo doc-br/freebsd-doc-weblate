@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 12:38+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
+"projects/documentation/booksarch-handbooknewbuschapter/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:1
@@ -25,7 +28,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:13
 #, no-wrap
 msgid "Newbus"
-msgstr ""
+msgstr "Newbus"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:38
@@ -37,19 +40,19 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:40
 msgid "This chapter explains the Newbus device framework in detail."
-msgstr ""
+msgstr "本章详细解释了Newbus设备框架。"
 
 #. type: Title ==
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:42
 #, no-wrap
 msgid "Device Drivers"
-msgstr ""
+msgstr "设备驱动"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:44
 #, no-wrap
 msgid "Purpose of a Device Driver"
-msgstr ""
+msgstr "设备驱动程序的目的"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:47
@@ -65,7 +68,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:48
 #, no-wrap
 msgid "Types of Device Drivers"
-msgstr ""
+msgstr "设备驱动程序的类型"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:51
@@ -77,22 +80,22 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:53
 msgid "block device drivers"
-msgstr ""
+msgstr "块设备驱动程序"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:54
 msgid "character device drivers"
-msgstr ""
+msgstr "字符设备驱动程序"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:55
 msgid "network device drivers"
-msgstr ""
+msgstr "网络设备驱动程序"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:56
 msgid "pseudo-device drivers"
-msgstr ""
+msgstr "伪设备驱动程序"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:58
@@ -109,20 +112,20 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:59
 #, no-wrap
 msgid "Character Devices"
-msgstr ""
+msgstr "字符设备"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:62
 msgid ""
 "However, in the versions of FreeBSD 4.0 and onward the distinction between "
 "block and character devices became non-existent."
-msgstr ""
+msgstr "然而，在FreeBSD 4.0版本以及后续版本中， 块设备和字符设备的区别变得不存在了。"
 
 #. type: Title ==
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:64
 #, no-wrap
 msgid "Overview of Newbus"
-msgstr ""
+msgstr "Newbus概览"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:67
@@ -138,29 +141,29 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:69
 msgid "Its main features include amongst others:"
-msgstr ""
+msgstr "其主要特点包括:"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:71
 msgid "dynamic attaching"
-msgstr ""
+msgstr "动态连接"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:72
 msgid "easy modularization of drivers"
-msgstr ""
+msgstr "驱动程序容易模块化"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:73
 msgid "pseudo-busses"
-msgstr ""
+msgstr "伪总线"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:75
 msgid ""
 "One of the most prominent changes is the migration from the flat and ad-hoc "
 "system to a device tree layout."
-msgstr ""
+msgstr "最显著的改变之一是从平面和特殊系统演变为设备树布局。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:77
@@ -204,6 +207,8 @@ msgid ""
 "reached. So, basically the nexus is the only part of the Newbus system which "
 "knows about all resources."
 msgstr ""
+"Newbus结构中的每个设备请求它的父设备来为其映射资源。父设备接着请求 它的父设备，直到到达nexus。因此，"
+"基本上nexus是Newbus系统中唯一知道所有 资源的部分。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:88
@@ -228,6 +233,9 @@ msgid ""
 "address space is managed by a single entity - nexus for IA-32 and the "
 "relevant chipset driver on Alpha (e.g., CIA or tsunami)."
 msgstr ""
+"资源分配可以在设备树的任何地方加以控制。例如，在很多Alpha平台上， ISA中断与PCI中断是单独管理的，"
+"对ISA中断的资源分配是由Alpha的ISA总线设备 管理的。在IA-32上，ISA和PCI中断都由顶层的nexus设备管理。对于两种移植， "
+"内存和端口地址空间由单个实体管理 - 在IA-32上是nexus，在Alpha（例如，CIA 或tsunami）上是相关的芯片组驱动程序。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:93
@@ -290,7 +298,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:104
 #, no-wrap
 msgid "Newbus Methods"
-msgstr ""
+msgstr "Newbus的方法"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:110
@@ -404,20 +412,20 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:146
 #, no-wrap
 msgid "Newbus API"
-msgstr ""
+msgstr "Newbus API"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:149
 msgid ""
 "As the Newbus API is huge, this section makes some effort at documenting "
 "it. More information to come in the next revision of this document."
-msgstr ""
+msgstr "由于Newbus API非常庞大，本节努力将它文档化。本文档的下一版本会 带来更多信息。"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:150
 #, no-wrap
 msgid "Important Locations in the Source Hierarchy"
-msgstr ""
+msgstr "源代码目录树中的重要位置"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:153
@@ -453,7 +461,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:160
 #, no-wrap
 msgid "Important Structures and Type Definitions"
-msgstr ""
+msgstr "重要结构和类型定义"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:163
