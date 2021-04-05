@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 22:57+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Persian <https://translate-dev.freebsd.org/projects/"
+"documentation/booksdevelopers-handbooksecurechapter/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:1
@@ -25,13 +28,13 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:10
 #, no-wrap
 msgid "Secure Programming"
-msgstr ""
+msgstr "برنامه‌نویسی ایمن"
 
 #. type: Title ==
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:35
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "چکیده"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:38
@@ -45,7 +48,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:40
 #, no-wrap
 msgid "Secure Design Methodology"
-msgstr ""
+msgstr "روش‌شناسی طراحی ایمن"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:43
@@ -72,7 +75,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:47
 #, no-wrap
 msgid "Buffer Overflows"
-msgstr ""
+msgstr "سرریز میان‌گیر"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:50
@@ -110,6 +113,8 @@ msgid ""
 "Although stack-based attacks are by far the most common, it would also be "
 "possible to overrun the stack with a heap-based (malloc/free) attack."
 msgstr ""
+"گرچه حملات مبتنی بر پشته با اختلاف رایج‌ترین آنها هستند، اما سرریز کردن پشته "
+"از طریق حملهٔ مبتنی بر هیپ (malloc/free) نیز ممکن است."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:56
@@ -118,6 +123,9 @@ msgid ""
 "arrays or pointers as many other languages do. In addition, the standard C "
 "library is filled with a handful of very dangerous functions."
 msgstr ""
+"زبان برنامه‌نویسی C به‌طور خودکار بررسی حدود را بر روی آرایه‌ها یا اشاره‌"
+"گرها چنانکه بسیاری از زبان‌ها انجام می‌دهند، انجام نمی‌دهد. همچنین، کتابخانهٔ"
+" استاندارد C پر است از تعداد انگشت‌شماری از توابع بسیار خطرناک."
 
 #. type: Table
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:95
@@ -163,7 +171,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:97
 #, no-wrap
 msgid "Example Buffer Overflow"
-msgstr ""
+msgstr "سرریز میان‌گیر نمونه"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:100
@@ -222,6 +230,8 @@ msgid ""
 "Let us examine what the memory image of this process would look like if we "
 "were to input 160 spaces into our little program before hitting return."
 msgstr ""
+"بگذارید بررسی کنیم نمای حافظهٔ این پردازش به چه شکل می‌شد چنانچه قرار بود "
+"۱۶۰ فاصله درون برنامهٔ کوچک خود وارد کنیم، قبل از زدن کلید return."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:129
@@ -229,12 +239,14 @@ msgid ""
 "Obviously more malicious input can be devised to execute actual compiled "
 "instructions (such as exec(/bin/sh))."
 msgstr ""
+"بدیهی است که ورودی‌های مخرب بیشتری می‌توان استفاده کرد که دستورالعمل‌های "
+"همگردانی شده واقعی (مانند exec(/bin/sh)) را اجرا کنند."
 
 #. type: Title ===
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:130
 #, no-wrap
 msgid "Avoiding Buffer Overflows"
-msgstr ""
+msgstr "جلوگیری از سرریز میان‌گیر"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:133
@@ -265,7 +277,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:136
 #, no-wrap
 msgid "Compiler based run-time bounds checking"
-msgstr ""
+msgstr "بررسی حدود زمان اجرا بر پایهٔ همگردان"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:139
@@ -304,12 +316,14 @@ msgid ""
 "Recompiling your application with ProPolice is an effective means of "
 "stopping most buffer-overflow attacks, but it can still be compromised."
 msgstr ""
+"همگردانی مجدد برنامهٔ خود با ProPolice شیوه‌ای مؤثر برای متوقف کردن بیشتر "
+"حملات سرریز میان‌گیر است، گرچه هنوز هم می‌تواند در معرض خطر قرار گیرد."
 
 #. type: Title ====
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:146
 #, no-wrap
 msgid "Library based run-time bounds checking"
-msgstr ""
+msgstr "بررسی حدود زمان اجرا بر پایهٔ کتابخانه"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:149
@@ -324,17 +338,17 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:151
 msgid "libsafe"
-msgstr ""
+msgstr "libsafe"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:152
 msgid "libverify"
-msgstr ""
+msgstr "libverify"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:153
 msgid "libparanoia"
-msgstr ""
+msgstr "libparanoia"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:155
@@ -346,12 +360,17 @@ msgid ""
 "-fomit-frame-pointer. Also, the LD_PRELOAD and LD_LIBRARY_PATH environment "
 "variables can be overwritten/unset by the user."
 msgstr ""
+"شوربختانه این دست محافظت‌های مبتنی‌بر کتابخانه دارای کاستی‌هایی هستند. این "
+"کتابخانه‌ها تنها در برابر تعداد بسیار کمی از مسائل امنیتی محافظت می‌کنند و "
+"در رفع مشکل اصلی ناتوان هستند. این دفاعیات ممکن است چنانچه برنامه با -fomit-"
+"frame-pointer همگردان شده باشد شکست بخورند. همچنین، متغیرهای محیطی ِ"
+"LD_PRELOAD و LD_LIBRARY_PATH می‌توانند توسط کاربر رونوشت/بازنشانده شوند."
 
 #. type: Title ==
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:157
 #, no-wrap
 msgid "SetUID issues"
-msgstr ""
+msgstr "مشکلات SetUID"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:160
@@ -383,7 +402,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:166
 #, no-wrap
 msgid "Limiting your program's environment"
-msgstr ""
+msgstr "محدودسازی محیط برنامه"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:169
@@ -416,7 +435,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:172
 #, no-wrap
 msgid "FreeBSD's jail functionality"
-msgstr ""
+msgstr "عملکرد زندان FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:175
@@ -439,7 +458,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:179
 msgid "A superuser process within a jailed environment has the power to:"
-msgstr ""
+msgstr "یک پردازش ابرکاربر در محیطی زندانی شده قدرت انجام موارد پیش‌رو را دارد:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:181
@@ -456,7 +475,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:183
 msgid "Modify some sysctl nodes (kern.hostname)"
-msgstr ""
+msgstr "ویرایش کردن برخی از گره‌های sysctl (kern.hostname)"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:184
@@ -474,6 +493,8 @@ msgid ""
 "Set attributes of a vnode such as file permission, owner, group, size, "
 "access time, and modification time."
 msgstr ""
+"نتظیم کردن صفات یک vnode مانند مجوز پرونده، مالک، گروه، اندازه، زمان دسترسی، "
+"زمان ویرایش."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:187
@@ -517,7 +538,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:197
 #, no-wrap
 msgid "Trust"
-msgstr ""
+msgstr "اعتماد"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:200
@@ -527,6 +548,10 @@ msgid ""
 "signals, environment variables, resources, IPC, mmaps, the filesystem "
 "working directory, file descriptors, the # of open files, etc."
 msgstr ""
+"یک برنامه هرگز نباید فرض کند که هر چیزی در ارتباط با محیط کاربران عاقلانه "
+"است. این شامل (اما مطمئناً نه محدود به): ورودی کاربر، سیگنال‌ها، متغیرهای "
+"محیطی، منابع، IPC، mmaps، مسیر کاری سامانهٔ پرونده، توصیف‌گرهای پرونده، # در "
+"پرونده‌های باز، و غیره است."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:202
@@ -538,6 +563,12 @@ msgid ""
 "on the world wide web. For filenames you need to be extra careful about "
 "paths (\"../\", \"/\"), symbolic links, and shell escape characters."
 msgstr ""
+"هرگز نباید فرض کنید که می‌توانید تمام اشکال ورودی نامعتبری که ممکن است کاربر "
+"عرضه کند را بگیرید. در عوض، برنامه شما باید از فیلتری قطعی برای قبول کردن "
+"مجموعهٔ خاص ورودی‌هایی که شما ایمن می‌دانید استفاده کند. اعتبارسنجی نامناسب "
+"دلیل سوءاستفاده‌های بسیاری بوده است، به‌ویژه اجرانامه‌های CGI بر روی تارِ "
+"جهان‌گستر. برای اسامی پرونده‌ها نیاز به دقت بسیار در مورد مسیرها (\"../\", \""
+"/\")، پیوندهای نمادین، و نویسه‌های رهایی پوسته دارید."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:204
@@ -553,7 +584,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:206
 #, no-wrap
 msgid "Race Conditions"
-msgstr ""
+msgstr "حالات تسابق"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:209
@@ -562,6 +593,9 @@ msgid ""
 "on the relative timing of events. In other words, a programmer incorrectly "
 "assumed that a particular event would always happen before another."
 msgstr ""
+"حالت تسابق، رفتار نامعمول برانگیخته از وابستگی نابه‌هنگام به زمان‌بندی نسبی "
+"رویدادها است. به بیان دیگر، یک برنامه‌نویس به اشتباه می‌پنداشت که یک رویداد "
+"بخصوص همیشه قبل از دیگری روی می‌دهد."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/secure/chapter.adoc:210
