@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 12:39+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookmac_index/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/mac/_index.adoc:1
@@ -31,13 +34,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:9
 #, no-wrap
 msgid "Mandatory Access Control"
-msgstr ""
+msgstr "强制访问控制"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/mac/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "简介"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:48
@@ -65,7 +68,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:52
 msgid "After reading this chapter, you will know:"
-msgstr ""
+msgstr "读完本章节，你将会知道："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:54
@@ -108,7 +111,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:61
 msgid "Before reading this chapter, you should:"
-msgstr ""
+msgstr "在阅读这个章节之前，您应当："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:63
@@ -160,7 +163,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:76
 #, no-wrap
 msgid "Key Terms"
-msgstr ""
+msgstr "本章出现的重要术语"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:79
@@ -282,7 +285,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:94
 #, no-wrap
 msgid "Understanding MAC Labels"
-msgstr ""
+msgstr "理解 MAC 标签"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:97
@@ -303,6 +306,8 @@ msgid ""
 "the information necessary to make a decision. In other policies, the labels "
 "may be processed as part of a larger rule set."
 msgstr ""
+"对象上的安全标签被策略作为安全访问控制决策的一部分。在某些策略中，标签包含了做出决定所需的所有信息。在其他策略中，标签可以作为一个更大的规则集的一部分来处"
+"理。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:101
@@ -311,7 +316,7 @@ msgid ""
 "default, the system will use single label. The administrator should be aware "
 "of the pros and cons of each in order to implement policies which meet the "
 "requirements of the system's security model."
-msgstr ""
+msgstr "标签策略有两种：单标签和多标签。默认情况下，系统将使用单个标签。管理员应了解每种策略的利弊，以便实施符合系统安全模型要求的策略。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:103
@@ -323,6 +328,8 @@ msgid ""
 "labeling. However, in many environments, a single label policy may be all "
 "that is required."
 msgstr ""
+"单标签安全策略只允许为每个主体或对象使用一个标签。由于单标签策略在整个系统中强制实施一组访问权限，因此可提供较低的管理开销，但降低了支持标记的策略的灵活性"
+"。但是，在许多环境中，可能需要单个标签策略。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:105
@@ -353,7 +360,7 @@ msgid ""
 "security model can increase administrative overhead as everything in that "
 "file system has a label. This includes directories, files, and even device "
 "nodes."
-msgstr ""
+msgstr "在分区上使用多标签策略并建立多标签安全模型可能会增加管理开销，因为该文件系统中的所有内容都有标签。这包括目录，文件，甚至设备节点。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:111
@@ -392,7 +399,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:124
 #, no-wrap
 msgid "Label Configuration"
-msgstr ""
+msgstr "配置标签"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:127
@@ -401,7 +408,7 @@ msgid ""
 "using the base system utilities. These commands provide a simple interface "
 "for object or subject configuration or the manipulation and verification of "
 "the configuration."
-msgstr ""
+msgstr "实际上，标签策略模块配置的所有方面都将使用基本系统实用程序执行。 这些命令为对象或主题配置或配置的操作和验证提供了简单的界面。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:129
@@ -466,7 +473,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:150
 #, no-wrap
 msgid "Predefined Labels"
-msgstr ""
+msgstr "预定义标签"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:153
@@ -510,7 +517,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:160
 #, no-wrap
 msgid "Numeric Labels"
-msgstr ""
+msgstr "数字标签"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:163
@@ -542,7 +549,7 @@ msgid ""
 "with effective compartments, the second grade is the low grade, and the last "
 "one is the high grade. In most configurations, such fine-grained settings "
 "are not needed as they are considered to be advanced configurations."
-msgstr ""
+msgstr "在此示例中，一年级将被视为有效隔间的有效等级，第二级为低等级，最后一级为高等级。在大多数配置中，不需要这种细粒度设置，因为它们被视为高级配置。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:174
@@ -550,7 +557,7 @@ msgid ""
 "System objects only have a current grade and compartment. System subjects "
 "reflect the range of available rights in the system, and network interfaces, "
 "where they are used for access control."
-msgstr ""
+msgstr "系统对象只有当前等级和区间。系统主体反映系统中可用权限的范围，以及用于访问控制的网络接口。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:176
@@ -570,7 +577,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:177
 #, no-wrap
 msgid "User Labels"
-msgstr ""
+msgstr "用户和标签设置"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:180
@@ -644,13 +651,13 @@ msgid ""
 "Many sites have a large number of users requiring several different user "
 "classes. In depth planning is required as this can become difficult to "
 "manage."
-msgstr ""
+msgstr "许多站点有大量用户需要多个不同的用户类。需要仔细规划，因为这可能变得难以管理。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/mac/_index.adoc:216
 #, no-wrap
 msgid "Network Interface Labels"
-msgstr ""
+msgstr "设置网口标签"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:219
@@ -697,7 +704,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:232
 #, no-wrap
 msgid "Planning the Security Configuration"
-msgstr ""
+msgstr "规划安全配置"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:235
@@ -710,14 +717,14 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:237
 msgid "How to classify information and resources available on the target systems."
-msgstr ""
+msgstr "如何在目标系统上对信息和资源进行分类。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:238
 msgid ""
 "Which information or resources to restrict access to along with the type of "
 "restrictions that should be applied."
-msgstr ""
+msgstr "需要限制哪类信息或资源的访问， 以及应采用何种限制。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:239
@@ -759,6 +766,8 @@ msgid ""
 "effectively implement the various security policy modules offered by the "
 "framework."
 msgstr ""
+"与框架的持久效果相比，开销最小，该框架提供了选择特定配置所需的策略和降低性能开销的能力。减少对不需要的政策的支持可以提高系统的整体性能，并提供选择的灵活性"
+"。良好的实施将考虑总体安全要求，并有效地实施框架提供的各种安全策略模块。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:247
@@ -814,7 +823,7 @@ msgid ""
 "The rest of this chapter covers the available modules, describes their use "
 "and configuration, and in some cases, provides insight on applicable "
 "situations."
-msgstr ""
+msgstr "本章的其余部分将介绍可用的模块，介绍其使用和配置，在某些情况下，提供有关适用情况的见解。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:260
@@ -830,7 +839,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:263
 #, no-wrap
 msgid "Available MAC Policies"
-msgstr ""
+msgstr "可用的MAC策略"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:266
@@ -849,13 +858,13 @@ msgid ""
 "FreeBSD includes a group of policies that will cover most security "
 "requirements. Each policy is summarized below. The last three policies "
 "support integer settings in place of the three default labels."
-msgstr ""
+msgstr "FreeBSD 包括一组策略，这些策略将涵盖大多数安全要求。每项策略概述如下。最后三个策略支持整数设置，以代替三个默认标签。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/mac/_index.adoc:270
 #, no-wrap
 msgid "The MAC See Other UIDs Policy"
-msgstr ""
+msgstr "MAC 其他 UID 可见策略"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:273
@@ -917,7 +926,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:287
 #, no-wrap
 msgid "The MAC BSD Extended Policy"
-msgstr ""
+msgstr "MAC BSD 扩展策略"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:290
@@ -1014,13 +1023,13 @@ msgstr ""
 msgid ""
 "Extreme caution should be taken when working with this module as incorrect "
 "use could block access to certain parts of the file system."
-msgstr ""
+msgstr "当使用这一模块模块时应极其小心； 不正确的使用将导致文件系统的某些部分无法访问。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/mac/_index.adoc:330
 #, no-wrap
 msgid "The MAC Interface Silencing Policy"
-msgstr ""
+msgstr "MAC 接口屏蔽策略"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:333
@@ -1085,7 +1094,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:349
 #, no-wrap
 msgid "The MAC Port Access Control List Policy"
-msgstr ""
+msgstr "MAC 端口访问控制表策略"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:352
@@ -1207,7 +1216,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:397
 #, no-wrap
 msgid "The MAC Partition Policy"
-msgstr ""
+msgstr "MAC 进程分区策略"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:400
@@ -1266,7 +1275,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:419
 msgid "This command displays the partition label and the process list:"
-msgstr ""
+msgstr "下面的命令将显示 partition 标签以及进程列表："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:423
@@ -1279,7 +1288,7 @@ msgstr ""
 msgid ""
 "This command displays another user's process partition label and that user's "
 "currently running processes:"
-msgstr ""
+msgstr "接下来的这个命令将允许察看其他用户的进程 partition 标签， 以及那个用户正在运行的进程："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:430
@@ -1298,7 +1307,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:438
 #, no-wrap
 msgid "The MAC Multi-Level Security Module"
-msgstr ""
+msgstr "MAC 多级 (Multi-Level) 安全模块"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:441
@@ -1365,7 +1374,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:457
 msgid "A hierarchical security level with a set of non-hierarchical categories."
-msgstr ""
+msgstr "提供了一些非层次分类的层次安全模型。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:458
@@ -1379,7 +1388,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:459
 msgid "Secrecy, or the prevention of inappropriate disclosure of data."
-msgstr ""
+msgstr "保密，防止不当披露数据。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:460
@@ -1387,7 +1396,7 @@ msgid ""
 "A basis for the design of systems that concurrently handle data at multiple "
 "sensitivity levels without leaking information between secret and "
 "confidential."
-msgstr ""
+msgstr "设计系统的基础，该系统可同时处理多个敏感度级别的数据，而不会泄露机密和机密之间的信息。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:462
@@ -1485,7 +1494,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:491
 #, no-wrap
 msgid "The MAC Biba Module"
-msgstr ""
+msgstr "MAC Biba 模块"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:494
@@ -1551,14 +1560,14 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:510
 msgid "Biba provides:"
-msgstr ""
+msgstr "Biba 提供了："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:512
 msgid ""
 "Hierarchical integrity levels with a set of non-hierarchical integrity "
 "categories."
-msgstr ""
+msgstr "层次式的完整性级别，并提供了一组非层次式的完整性分类。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:513
@@ -1572,7 +1581,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:514
 msgid "Integrity by preventing inappropriate modification of data."
-msgstr ""
+msgstr "完整性：防止对数据进行不正确的修改。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:515
@@ -1582,7 +1591,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:517
 msgid "The following tunables can be used to manipulate the Biba policy:"
-msgstr ""
+msgstr "下列 <command>sysctl</command> 参数可以用于维护 Biba 策略："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:519
@@ -1647,6 +1656,10 @@ msgid ""
 "utilities. Other users would be grouped into other categories such as "
 "testers, designers, or end users and would only be permitted read access."
 msgstr ""
+"在最初的规划阶段， 管理员必须做好将用户分成不同的等级、 级别和区域的准备。 在启动前后， 包括数据以及程序和使用工具在内的客体， 用户都会无法访问。 "
+"一旦启用了这个策略模块， 系统将默认使用高级别的标签， 而划分用户级别和等级的工作则交由管理员来进行配置。 与前面介绍的级别限界不同， "
+"好的规划方法可能还包括 topic。 例如， 只允许开发人员修改代码库、 使用源代码编译器， 以及其他开发工具， 而其他用户则分入其他类别， 如测试人员、"
+" 设计人员， 以及普通用户， 这些用户可能只拥有读这些资料的权限。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:536
@@ -1659,12 +1672,15 @@ msgid ""
 "machine, and a source code repository. A less useful implementation would be "
 "a personal workstation, a machine used as a router, or a network firewall."
 msgstr ""
+"通过其自然的安全控制， 完整性级别较低的主体， 就会无法向完整性级别高的主体进行写操作； 而完整性级别较高的主体， 也不能观察或读较低完整性级别的客体。 "
+"通过将客体的标签设为最低级， 可以阻止所有主体对其进行的访问操作。 这一安全策略模块预期的应用场合包括受限的 web 服务器、 开发和测试机， "
+"以及源代码库。 而对于个人终端、 作为路由器的计算机， 以及网络防火墙而言， 它的用处就不大了。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/mac/_index.adoc:538
 #, no-wrap
 msgid "The MAC Low-watermark Module"
-msgstr ""
+msgstr "MAC LOMAC 模块"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:541
@@ -1733,7 +1749,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:563
 #, no-wrap
 msgid "User Lock Down"
-msgstr ""
+msgstr "用户锁定"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:566
@@ -1741,7 +1757,7 @@ msgid ""
 "This example considers a relatively small storage system with fewer than "
 "fifty users. Users will have login capabilities and are permitted to store "
 "data and access resources."
-msgstr ""
+msgstr "此示例考虑一个用户少于 50 个的相对较小的存储系统。用户将具有登录功能，并被允许存储数据和访问资源。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:568
@@ -1813,7 +1829,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:595
 #, no-wrap
 msgid "Nagios in a MAC Jail"
-msgstr ""
+msgstr "MAC Jail 中的 Nagios"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:598
@@ -1838,7 +1854,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:601
 #, no-wrap
 msgid "Create an Insecure User Class"
-msgstr ""
+msgstr "创建一个 insecure (不安全) 用户 Class"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:604
@@ -1879,7 +1895,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:633
 msgid "Then, add the following line to the default user class section:"
-msgstr ""
+msgstr "并在 default 用户 class 中加入："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:637
@@ -1890,7 +1906,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:640
 msgid "Save the edits and issue the following command to rebuild the database:"
-msgstr ""
+msgstr "保存编辑并发出以下命令以重建数据库："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:644
@@ -1902,7 +1918,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:646
 #, no-wrap
 msgid "Configure Users"
-msgstr ""
+msgstr "配置用户"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:649
@@ -1948,7 +1964,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:671
 #, no-wrap
 msgid "Create the Contexts File"
-msgstr ""
+msgstr "创建上下文文件"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:674
@@ -2068,7 +2084,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:723
 #, no-wrap
 msgid "Loader Configuration"
-msgstr ""
+msgstr "载入配置文件"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:726
@@ -2104,7 +2120,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:741
 #, no-wrap
 msgid "Testing the Configuration"
-msgstr ""
+msgstr "测试配置"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:744
@@ -2167,12 +2183,12 @@ msgstr ""
 #: documentation/content/en/books/handbook/mac/_index.adoc:769
 #, no-wrap
 msgid "Troubleshooting the MAC Framework"
-msgstr ""
+msgstr "MAC 框架的故障排除"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:772
 msgid "This section discusses common configuration errors and how to resolve them."
-msgstr ""
+msgstr "本节讨论常见的配置错误以及如何解决这些问题。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/mac/_index.adoc:773
@@ -2185,7 +2201,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:775
 msgid "The following steps may resolve this transient error:"
-msgstr ""
+msgstr "以下步骤可以解决此暂时性错误："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:779
@@ -2197,7 +2213,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:780
 msgid "Reboot into single user mode."
-msgstr ""
+msgstr "重新启动到单用户模式。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:781
@@ -2207,7 +2223,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:782
 msgid "Reboot the system."
-msgstr ""
+msgstr "重启系统。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:783
