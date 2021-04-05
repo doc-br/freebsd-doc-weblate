@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 12:39+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
+"projects/documentation/booksarch-handbookpccardchapter/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/arch-handbook/pccard/chapter.adoc:1
@@ -25,7 +28,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/pccard/chapter.adoc:8
 #, no-wrap
 msgid "PC Card"
-msgstr ""
+msgstr "PC Card"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/pccard/chapter.adoc:33
@@ -34,12 +37,14 @@ msgid ""
 "driver for a PC Card or CardBus device. However, at present it just "
 "documents how to add a new device to an existing pccard driver."
 msgstr ""
+"本章将讨论FreeBSD为编写PC Card或CardBus设备的驱动程序而提供的机制。 "
+"但目前本文只记录了如何向现有的pccard驱动程序中添加驱动程序。"
 
 #. type: Title ==
 #: documentation/content/en/books/arch-handbook/pccard/chapter.adoc:35
 #, no-wrap
 msgid "Adding a Device"
-msgstr ""
+msgstr "添加设备"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/pccard/chapter.adoc:38
@@ -47,12 +52,15 @@ msgid ""
 "Device drivers know what devices they support. There is a table of supported "
 "devices in the kernel that drivers use to attach to a device."
 msgstr ""
+"向所支持的pccard设备列表中添加新设备的步骤已经与系统在FreeBSD 4 中使用的方法不同了。在以前的版本中，需要编辑 "
+"<filename>/etc</filename>中的一个文件来列出设备。从FreeBSD 5.0开始， "
+"设备驱动程序知道它们支持什么设备。现在内核中有一个受支持设备的表， 驱动程序用它来连接设备。"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/pccard/chapter.adoc:40
 #, no-wrap
 msgid "Overview"
-msgstr ""
+msgstr "总览"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/pccard/chapter.adoc:43
@@ -144,6 +152,8 @@ msgid ""
 "because we share it with NetBSD to help facilitate a common clearing house "
 "for this information. For example, here are the first few vendor IDs:"
 msgstr ""
+"文件的第一节包含供货商ID。请保持列表按数字排序。此外，为了 能有一个通用清晰的保存地来方便地保存这些信息，我们与NetBSD共享此 "
+"文件，因此请协调对此文件的任何更改。例如："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/pccard/chapter.adoc:65
@@ -178,7 +188,7 @@ msgstr ""
 msgid ""
 "The second section of the file contains the products. As shown in this "
 "example, the format is similar to the vendor lines:"
-msgstr ""
+msgstr "文件的第二节包含产品. 如你在下面例子中看到的:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/pccard/chapter.adoc:75
@@ -228,7 +238,7 @@ msgid ""
 "The final section contains the entries for those cards that must be "
 "identified by string entries. This section's format is a little different "
 "from the generic section:"
-msgstr ""
+msgstr "最后一节包含那些必须用字符串匹配的卡。这一节的格式与通用 节的格式有点不同："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/pccard/chapter.adoc:90
@@ -266,7 +276,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/pccard/chapter.adoc:95
 #, no-wrap
 msgid "Sample Probe Routine"
-msgstr ""
+msgstr "探测例程样例"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/pccard/chapter.adoc:98
@@ -277,6 +287,8 @@ msgid ""
 "for OLDCARD present as well. Since only the window-dressing is different, an "
 "idealized version will be presented here."
 msgstr ""
+"要懂得如何向所支持的设备列表中添加设备，就必须懂得很多驱动程序 都有的探测和/或匹配例程。由于也为老卡提供了一个兼容层，这在 FreeBSD 5."
+"x中有一点复杂。由于只是window-dressing不同，这儿给出了 一个理想化的版本。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/pccard/chapter.adoc:108
@@ -348,7 +360,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/pccard/chapter.adoc:130
 #, no-wrap
 msgid "Putting it All Together"
-msgstr ""
+msgstr "将它合在一起"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/pccard/chapter.adoc:133
@@ -387,6 +399,8 @@ msgid ""
 "purpose of this example. The vendor is BUFFALO, which we see already has an "
 "entry:"
 msgstr ""
+"由于我们首先想优先使用数字选项，因此首先尝试创建基于此的条目。 为了示例，上面的卡已经被稍稍虚构化了。我们看到的供货商为BUFFALO， "
+"它已经有一个条目了："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/pccard/chapter.adoc:149
@@ -397,7 +411,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/pccard/chapter.adoc:152
 msgid "But there is no entry for this particular card. Instead we find:"
-msgstr ""
+msgstr "这样我们就可以了。为这个卡查找一个条目，但我们没有发现。但我们 发现："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/pccard/chapter.adoc:160
@@ -427,6 +441,8 @@ msgid ""
 "Once these steps are complete, the card can be added to the driver. That is "
 "a simple operation of adding one line:"
 msgstr ""
+"目前，需要一个手动步骤来 重新产生<filename>pccarddevs.h</filename>，用来将这些标识符转换 "
+"到客户驱动程序。你在驱动程序中使用它们之前必须完成下面步骤："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/pccard/chapter.adoc:181
@@ -469,7 +485,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/pccard/chapter.adoc:188
 #, no-wrap
 msgid "Submitting a New Device"
-msgstr ""
+msgstr "提交新设备"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/pccard/chapter.adoc:190
