@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:55-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 12:38+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookserialcomms_index/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:1
@@ -31,13 +34,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:9
 #, no-wrap
 msgid "Serial Communications"
-msgstr ""
+msgstr "序列通信"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "简介"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:48
@@ -52,32 +55,32 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:50
 msgid "After reading this chapter, you will know:"
-msgstr ""
+msgstr "读完本章节，你将会知道："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:52
 msgid "How to connect terminals to a FreeBSD system."
-msgstr ""
+msgstr "如何联机终端机到FreeBSD系统。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:53
 msgid "How to use a modem to dial out to remote hosts."
-msgstr ""
+msgstr "如何使用调制解调器拨号给远端主机。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:54
 msgid "How to allow remote users to login to a FreeBSD system with a modem."
-msgstr ""
+msgstr "如何允许远端使用者透过调制解调器来登入FreeBSD系统。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:55
 msgid "How to boot a FreeBSD system from a serial console."
-msgstr ""
+msgstr "如何从序列Console启动FreeBSD系统。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:57
 msgid "Before reading this chapter, you should:"
-msgstr ""
+msgstr "在阅读这个章节之前，您应当："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:59
@@ -96,18 +99,18 @@ msgstr ""
 msgid ""
 "Have access to the technical manual for the serial hardware to be used with "
 "FreeBSD."
-msgstr ""
+msgstr "能够取得要在FreeBSD使用的序列硬件的技术手册。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:63
 #, no-wrap
 msgid "Serial Terminology and Hardware"
-msgstr ""
+msgstr "串行通信中的术语和硬件"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:66
 msgid "The following terms are often used in serial communications:"
-msgstr ""
+msgstr "以下术语通常用于串行通信："
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:67
@@ -174,13 +177,13 @@ msgid ""
 "computer and the proper cable to connect to the serial device are "
 "needed. Users who are already familiar with serial hardware and cabling can "
 "safely skip this section."
-msgstr ""
+msgstr "要将串行终端连接到 FreeBSD 系统，需要计算机上的串口和连接到串行设备的适当电缆。已经熟悉串行硬件和布线的用户可以跳过此部分。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:84
 #, no-wrap
 msgid "Serial Cables and Ports"
-msgstr ""
+msgstr "序列线与端口"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:87
@@ -263,7 +266,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:127
 #, no-wrap
 msgid "DB-25 to DB-25 Null-Modem Cable"
-msgstr ""
+msgstr "DB-25对DB-25 Null-Modem线"
 
 #. type: Table
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:189
@@ -334,7 +337,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:192
 #, no-wrap
 msgid "DB-9 to DB-9 Null-Modem Cable"
-msgstr ""
+msgstr "DB-9 对 DB-9 Null-Modem 线"
 
 #. type: Table
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:254
@@ -405,7 +408,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:257
 #, no-wrap
 msgid "DB-9 to DB-25 Null-Modem Cable"
-msgstr ""
+msgstr "DB-9 对 DB-25 Null-Modem线"
 
 #. type: Table
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:319
@@ -478,7 +481,7 @@ msgid ""
 "When one pin at one end connects to a pair of pins at the other end, it is "
 "usually implemented with one short wire between the pair of pins in their "
 "connector and a long wire to the other single pin."
-msgstr ""
+msgstr "当某一段连接器上的一个引脚需要连接到对端的一对引脚时， 通常是将那一对引脚使用一短线连接， 而使用长线接到另一端的那个引脚。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:327
@@ -488,6 +491,7 @@ msgid ""
 "exist. Before purchasing or constructing a cable, make sure it will fit the "
 "ports on the terminal and on the FreeBSD system."
 msgstr ""
+"串行端口是在 FreeBSD 主机和终端之间传输数据的设备。存在多种串行端口。在购买或构建电缆之前，请确保电缆适合终端和 FreeBSD 系统上的端口。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:329
@@ -547,7 +551,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:338
 #, no-wrap
 msgid "Serial Port Configuration"
-msgstr ""
+msgstr "串行端口设置"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:341
@@ -642,7 +646,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:375
 #, no-wrap
 msgid "Terminals"
-msgstr ""
+msgstr "终端机"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:378
@@ -651,6 +655,8 @@ msgid ""
 "when not at the computer's console or on a connected network. This section "
 "describes how to use terminals with FreeBSD."
 msgstr ""
+"当您在计算机控制台或是在一个连接的网络上时， 终端提供了一个方便和低成本的访问 FreeBSD 系统的方法。 这节描述了如何在 FreeBSD "
+"上使用终端。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:380
@@ -677,18 +683,18 @@ msgid ""
 "can be used as a terminal wired into a more powerful computer running "
 "FreeBSD. This can turn what might otherwise be a single-user computer into a "
 "powerful multiple-user system."
-msgstr ""
+msgstr "有许多终端可以连接到 FreeBSD 系统。较旧的计算机可作为终端连接到运行 FreeBSD 的更强大的计算机。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:386
 msgid "FreeBSD supports three types of terminals:"
-msgstr ""
+msgstr "FreeBSD 支持三类终端："
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:387
 #, no-wrap
 msgid "Dumb terminals"
-msgstr ""
+msgstr "哑终端"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:389
@@ -708,19 +714,20 @@ msgid ""
 "even display graphics, but only certain software packages can take advantage "
 "of these advanced features."
 msgstr ""
+"有许多制造商制造的数百种哑终端，而且任何种类都与 FreeBSD 配合使用。一些高端终端甚至可以显示图形，但只有某些软件包可以利用这些高级功能。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:393
 msgid ""
 "Dumb terminals are popular in work environments where workers do not need "
 "access to graphical applications."
-msgstr ""
+msgstr "哑终端在用户不需要访问图形应用程序的工作环境中很流行。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:394
 #, no-wrap
 msgid "Computers Acting as Terminals"
-msgstr ""
+msgstr "充当终端的计算机"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:396
@@ -738,6 +745,8 @@ msgid ""
 "the same time from a less powerful personal computer hooked up as a terminal "
 "to the FreeBSD system."
 msgstr ""
+"这种配置是很有用的。例如， 如果一个用户忙于在 FreeBSD 系统的控制台中工作， 另一个用户可以在同一时间从一台功能较弱的个人电脑作为终端连接到 "
+"FreeBSD 系统， 进行一些纯文本工作。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:400
@@ -751,7 +760,7 @@ msgstr ""
 msgid ""
 "For example, to connect from a client system that runs FreeBSD to the serial "
 "connection of another system:"
-msgstr ""
+msgstr "例如，客户端（使用 FreeBSD 操作系统）使用串口连接到另一个系统："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:406
@@ -777,7 +786,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:412
 #, no-wrap
 msgid "X Terminals"
-msgstr ""
+msgstr "X 终端（X Terminal）"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:414
@@ -791,13 +800,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:416
 msgid "This chapter does not cover the setup, configuration, or use of X terminals."
-msgstr ""
+msgstr "本章不介绍 X 终端的安装、配置或使用。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:418
 #, no-wrap
 msgid "Terminal Configuration"
-msgstr ""
+msgstr "终端机设定"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:421
@@ -807,6 +816,7 @@ msgid ""
 "serial port to which the terminal is connected and that the terminal is "
 "connected with the correct cable."
 msgstr ""
+"这节描述了您在一个终端上启用一个登录会话时， 需要在 FreeBSD 系统上进行的配置。 它假定系统识别终端所连接的串口，并且端子使用正确的线缆连接。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:423
@@ -862,7 +872,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:440
 #, no-wrap
 msgid "Configuring Terminal Entries"
-msgstr ""
+msgstr "设定终端机项目"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:447
@@ -875,7 +885,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:450
 msgid "The first field specifies the device name of the serial terminal."
-msgstr ""
+msgstr "第一个参数制定了串行终端的设备名。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:452
@@ -956,7 +966,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:472
 #, no-wrap
 msgid "Troubleshooting the Connection"
-msgstr ""
+msgstr "联机疑难排解"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:475
@@ -964,7 +974,7 @@ msgid ""
 "Even with the most meticulous attention to detail, something could still go "
 "wrong while setting up a terminal. Here is a list of common symptoms and "
 "some suggested fixes."
-msgstr ""
+msgstr "即使是最细心的人，在设置终端的时候也可能会出问题。以下是一些常见问题和解决办法。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:477
@@ -973,13 +983,16 @@ msgid ""
 "up. If it is a personal computer acting as a terminal, make sure it is "
 "running terminal emulation software on the correct serial port."
 msgstr ""
+"If no login prompt appears, make sure the terminal is plugged in and powered "
+"up. If it is a personal computer acting as a terminal, make sure it is "
+"running terminal emulation software on the correct serial port."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:479
 msgid ""
 "Make sure the cable is connected firmly to both the terminal and the FreeBSD "
 "computer. Make sure it is the right kind of cable."
-msgstr ""
+msgstr "确保连接线牢固地连接到终端和 FreeBSD 计算机上。确保它是正确的电缆。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:481
@@ -1049,7 +1062,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:499
 #, no-wrap
 msgid "Dial-in Service"
-msgstr ""
+msgstr "拨入服务"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:502
@@ -1057,7 +1070,7 @@ msgid ""
 "Configuring a FreeBSD system for dial-in service is similar to configuring "
 "terminals, except that modems are used instead of terminal devices. FreeBSD "
 "supports both external and internal modems."
-msgstr ""
+msgstr "为 FreeBSD 系统配置拨号服务类似于配置终端， 只是使用调制解调器代替了终端设备。FreeBSD 支持外部和内部调制解调器。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:504
@@ -1126,13 +1139,13 @@ msgid ""
 "The rest of this section demonstrates how to configure a modem to receive "
 "incoming connections, how to communicate with the modem, and offers some "
 "troubleshooting tips."
-msgstr ""
+msgstr "本节的其余部分演示了如何配置调制解调器接收传入连接，如何与调制解调器通信，并提供了一些故障排除技巧。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:518
 #, no-wrap
 msgid "Modem Configuration"
-msgstr ""
+msgstr "调制解调器设定"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:521
@@ -1219,7 +1232,7 @@ msgstr ""
 msgid ""
 "For a 28.8 Kbps modem, or to take advantage of compression on a 14.4 Kbps "
 "modem, use a higher communications rate, as seen in this example:"
-msgstr ""
+msgstr "对于 28.8 Kbps 调制解调器，或是启用压缩的 14.4 Kbps 调制解调器，请使用更高的通信速率，如下所示："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:563
@@ -1327,14 +1340,14 @@ msgstr ""
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:605
 #, no-wrap
 msgid "Troubleshooting"
-msgstr ""
+msgstr "故障排除"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:608
 msgid ""
 "This section provides a few tips for troubleshooting a dial-up modem that "
 "will not connect to a FreeBSD system."
-msgstr ""
+msgstr "本节提供了一些关于拨号调制解调器无法连接到FreeBSD系统的故障排除技巧。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:610
@@ -1436,7 +1449,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:635
 #, no-wrap
 msgid "Dial-out Service"
-msgstr ""
+msgstr "拨出服务"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:638
@@ -1444,7 +1457,7 @@ msgid ""
 "The following are tips for getting the host to connect over the modem to "
 "another computer. This is appropriate for establishing a terminal session "
 "with a remote host."
-msgstr ""
+msgstr "以下是让主机通过调制解调器连接到另一台计算机的技巧。这适用于与远程主机建立终端会话。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:640
@@ -1454,12 +1467,14 @@ msgid ""
 "session to FTP the needed file. Then use zmodem to transfer it to the "
 "machine."
 msgstr ""
+"如果使用 PPP 出现问题，这种连接方式可以帮助你在网上获取文件。如果 PPP 无法使用，使用终端会话将需要的文件通过 FTP 传输到机器上。然后使用 "
+"zmodem 将其传输到机器上。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:642
 #, no-wrap
 msgid "Using a Stock Hayes Modem"
-msgstr ""
+msgstr "使用Stock Hayes调制解调器"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:645
@@ -1555,7 +1570,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:682
 #, no-wrap
 msgid "Dialing from the Command Line"
-msgstr ""
+msgstr "从指令列拨号"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:685
@@ -1575,7 +1590,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:695
 msgid "This should now work:"
-msgstr ""
+msgstr "现在此命令应该能正常使用了："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:699
@@ -1599,7 +1614,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:710
 msgid "and type:"
-msgstr ""
+msgstr "并输入："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:714
@@ -1626,7 +1641,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:722
 #, no-wrap
 msgid "Accessing a Number of Hosts Through a Terminal Server"
-msgstr ""
+msgstr "透过终端服务器存取多个主机"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:725
@@ -1661,7 +1676,7 @@ msgstr ""
 msgid ""
 "This is often a problem where a university has several modem lines and "
 "several thousand students trying to use them."
-msgstr ""
+msgstr "这个问题经常碰到，常发生在类似大学这种有多个调制解调器，并且有许多学生需要使用的场合。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:742
@@ -1706,7 +1721,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:764
 #, no-wrap
 msgid "Using the Force Character"
-msgstr ""
+msgstr "使用强制字符"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:767
@@ -1743,7 +1758,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:778
 #, no-wrap
 msgid "Upper Case Characters"
-msgstr ""
+msgstr "大写字符"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:781
@@ -1794,7 +1809,7 @@ msgstr ""
 msgid ""
 "There is no error checking, so another protocol, like zmodem, should "
 "probably be used."
-msgstr ""
+msgstr "没有错误检查，因此应该使用另一个协议，如 zmodem。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:802
@@ -1820,7 +1835,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:809
 #, no-wrap
 msgid "Setting Up the Serial Console"
-msgstr ""
+msgstr "设置串行控制台"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:812
@@ -1830,6 +1845,8 @@ msgid ""
 "who wish to install FreeBSD on machines that have no keyboard or monitor "
 "attached, and developers who want to debug the kernel or device drivers."
 msgstr ""
+"FreeBSD 可以用串行端口上的傻瓜终端作为控制台来启动系统。这种配置对于希望在没有键盘或显示器的机器上安装FreeBSD的系统管理员，以及希望调试内核"
+"或设备驱动程序的开发人员来说是非常有用的。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:814
@@ -1846,13 +1863,13 @@ msgstr ""
 msgid ""
 "In order to set up booting from a serial console, the boot block code, the "
 "boot loader code, and the kernel need to be configured."
-msgstr ""
+msgstr "为了设置从串行控制台启动，需要配置引导块代码、引导加载器代码和内核。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:818
 #, no-wrap
 msgid "Quick Serial Console Configuration"
-msgstr ""
+msgstr "快速串行控制台配置"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:821
@@ -1878,7 +1895,7 @@ msgstr ""
 msgid ""
 "To configure boot messages to display on the serial console, issue the "
 "following command as the superuser:"
-msgstr ""
+msgstr "要配置引导信息显示在串行控制台上，请以超级用户的身份执行以下命令："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:830
@@ -1897,27 +1914,27 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:834
 msgid "Reboot the system to see if the changes took effect."
-msgstr ""
+msgstr "重启系统让配置生效。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:836
 msgid ""
 "If a different configuration is required, see the next section for a more "
 "in-depth configuration explanation."
-msgstr ""
+msgstr "若需进一步配置，请阅读下一章，有更深入的讲解。。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:838
 #, no-wrap
 msgid "In-Depth Serial Console Configuration"
-msgstr ""
+msgstr "深入序列Console设定"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:841
 msgid ""
 "This section provides a more detailed explanation of the steps needed to "
 "setup a serial console in FreeBSD."
-msgstr ""
+msgstr "本节更详细地介绍了在 FreeBSD 中设置串行控制台所需的步骤。"
 
 #. type: Block title
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:843
@@ -1928,7 +1945,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:845
 msgid "Prepare a serial cable."
-msgstr ""
+msgstr "准备串行电缆。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:847
@@ -1940,7 +1957,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:848
 msgid "Unplug the keyboard."
-msgstr ""
+msgstr "拔出键盘。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:850
@@ -2107,7 +2124,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:892
 msgid "Boot the machine."
-msgstr ""
+msgstr "启动计算机。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:894
@@ -2267,7 +2284,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:967
 #, no-wrap
 msgid "Setting a Faster Serial Port Speed"
-msgstr ""
+msgstr "设置更快的串行端口速度"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:970
@@ -2275,7 +2292,7 @@ msgid ""
 "By default, the serial port settings are 9600 baud, 8 bits, no parity, and 1 "
 "stop bit. To change the default console speed, use one of the following "
 "options:"
-msgstr ""
+msgstr "默认情况下，串行端口设置为 9600bps、8 位、无奇偶校验和 1 个停止位。这里有几个选项修改默认控制台速度："
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:972
@@ -2338,7 +2355,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:1000
 #, no-wrap
 msgid "Entering the DDB Debugger from the Serial Line"
-msgstr ""
+msgstr "从序列线路（Serial Line）进入DDB除错程序"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:1003
