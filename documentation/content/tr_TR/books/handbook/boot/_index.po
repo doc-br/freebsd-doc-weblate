@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 22:56+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Turkish <https://translate-dev.freebsd.org/projects/"
+"documentation/bookshandbookboot_index/tr_TR/>\n"
 "Language: tr_TR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/boot/_index.adoc:1
@@ -31,7 +34,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:9
 #, no-wrap
 msgid "The FreeBSD Booting Process"
-msgstr ""
+msgstr "FreeBSD Önyükleme İşlemi"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/boot/_index.adoc:45
@@ -63,12 +66,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:52
 msgid "After reading this chapter, you will recognize:"
-msgstr ""
+msgstr "Bu bölümü okuduktan sonra, anlayacaksınız:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:54
 msgid "The components of the FreeBSD bootstrap system and how they interact."
 msgstr ""
+"FreeBSD önyükleme sisteminin bileşenleri ve nasıl etkileşime girdikleri."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:55
@@ -76,11 +80,13 @@ msgid ""
 "The options that can be passed to the components in the FreeBSD bootstrap in "
 "order to control the boot process."
 msgstr ""
+"Önyükleme işlemini kontrol etmek için FreeBSD önyüklemesindeki bileşenlere "
+"aktarılabilen seçenekler."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:56
 msgid "The basics of setting device hints."
-msgstr ""
+msgstr "Cihaz ipuçlarını ayarlamanın temelleri."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:57
@@ -88,6 +94,8 @@ msgid ""
 "How to boot into single- and multi-user mode and how to properly shut down a "
 "FreeBSD system."
 msgstr ""
+"Tek ve çok kullanıcılı modunda nasıl önyükleme yapılır ve bir FreeBSD "
+"sistemini düzgün bir şekilde nasıl kapatılır."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:61
@@ -95,12 +103,14 @@ msgid ""
 "This chapter only describes the boot process for FreeBSD running on x86 and "
 "amd64 systems."
 msgstr ""
+"Bu bölüm sadece x86 ve amd64 sistemlerinde çalışan FreeBSD için önyükleme "
+"işlemini açıklar."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/boot/_index.adoc:64
 #, no-wrap
 msgid "FreeBSD Boot Process"
-msgstr ""
+msgstr "FreeBSD Önyükleme İşlemi"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:67
@@ -112,6 +122,11 @@ msgid ""
 "operating system, and the operating system programs are on the disk, how is "
 "the operating system started?"
 msgstr ""
+"Bir bilgisayarı açmak ve işletim sistemini başlatmak ilginç bir ikilem "
+"oluşturuyor. Tanım olarak, bilgisayar işletim sistemi başlatılıncaya kadar "
+"nasıl bir şey yapacağını bilmiyor. Bu, diskten çalışan programları içerir. "
+"Bilgisayar işletim sistemi olmadan diskten bir program çalışmazsa ve işletim "
+"sistemi programları diskte ise, işletim sistemi nasıl başlatılır?"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:69
@@ -193,12 +208,14 @@ msgid ""
 "This section describes these stages in more detail and demonstrates how to "
 "interact with the FreeBSD boot process."
 msgstr ""
+"Bu bölüm bu aşamaları daha ayrıntılı olarak açıklar ve FreeBSD önyükleme "
+"işlemi ile nasıl etkileşime girileceğini gösterir."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/boot/_index.adoc:88
 #, no-wrap
 msgid "The Boot Manager"
-msgstr ""
+msgstr "Önyükleme Yöneticisi"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:91
@@ -264,7 +281,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:119
 #, no-wrap
 msgid "Stage One and Stage Two"
-msgstr ""
+msgstr "Birinci Aşama ve İkinci Aşama"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:122
@@ -345,7 +362,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:156
 #, no-wrap
 msgid "Stage Three"
-msgstr ""
+msgstr "Üçüncü Aşama"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:159
@@ -397,7 +414,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:169
 #, no-wrap
 msgid "Loader Built-In Commands"
-msgstr ""
+msgstr "Yükleyici Yerleşik Komutlar"
 
 #. type: Table
 #: documentation/content/en/books/handbook/boot/_index.adoc:213
@@ -465,6 +482,8 @@ msgid ""
 "To unload the usual kernel and modules and then load the previous or "
 "another, specified kernel:"
 msgstr ""
+"Her zamanki çekirdek ve modülleri boşaltmak ve daha sonra önceki veya başka, "
+"belirtilen çekirdeği yüklemek için:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:228
@@ -502,7 +521,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:242
 msgid "To load an automated kernel configuration script:"
-msgstr ""
+msgstr "Otomatik çekirdek yapılandırması komut dosyasını yüklemek için:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:246
@@ -514,7 +533,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:249
 #, no-wrap
 msgid "Last Stage"
-msgstr ""
+msgstr "Son Aşama"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:252
@@ -529,7 +548,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:254
 #, no-wrap
 msgid "Kernel Interaction During Boot"
-msgstr ""
+msgstr "Önyükleme Sırasında Çekirdek Etkileşimi"
 
 #. type: Table
 #: documentation/content/en/books/handbook/boot/_index.adoc:271
@@ -574,7 +593,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:278
 #, no-wrap
 msgid "Single-User Mode"
-msgstr ""
+msgstr "Tek Kullanıcı Modu"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:281
@@ -617,6 +636,11 @@ msgid ""
 "user who can gain physical access to a system will have full control of that "
 "system after booting into single-user mode."
 msgstr ""
+"Tek kullanıcılı mod bir sistemi onarmak için yararlı olsa da, sistem "
+"fiziksel olarak güvenli bir konumda olmadığı sürece bir güvenlik riski "
+"oluşturur. Varsayılan olarak, bir sisteme fiziksel erişim kazanabilecek "
+"herhangi bir kullanıcı, tek kullanıcılı modda önyükleme yaptıktan sonra bu "
+"sistemin tam kontrolüne sahip olacaktır."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:294
@@ -656,7 +680,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:313
 #, no-wrap
 msgid "Multi-User Mode"
-msgstr ""
+msgstr "Çoklu Kullanıcı Modu"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:316
@@ -689,7 +713,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:322
 #, no-wrap
 msgid "Device Hints"
-msgstr ""
+msgstr "Cihaz Kullanım İpuçları"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:325
@@ -733,7 +757,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:338
 msgid "The syntax for the Stage 3 boot loader is:"
-msgstr ""
+msgstr "Üçüncü Aşama önyükleme yükleyicisinin söz dizimi şu şekildedir:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:342
@@ -796,7 +820,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:357
 #, no-wrap
 msgid "Shutdown Sequence"
-msgstr ""
+msgstr "Kapatma Sırası"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:360
