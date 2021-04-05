@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 12:40+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookboot_index/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/boot/_index.adoc:1
@@ -31,13 +34,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:9
 #, no-wrap
 msgid "The FreeBSD Booting Process"
-msgstr ""
+msgstr "FreeBSD开机程序"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/boot/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "简介"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:48
@@ -63,44 +66,44 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:52
 msgid "After reading this chapter, you will recognize:"
-msgstr ""
+msgstr "在阅读本章之后，您会了解："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:54
 msgid "The components of the FreeBSD bootstrap system and how they interact."
-msgstr ""
+msgstr "FreeBSD开机系统的元件以及它们如何互动。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:55
 msgid ""
 "The options that can be passed to the components in the FreeBSD bootstrap in "
 "order to control the boot process."
-msgstr ""
+msgstr "FreeBSD开机程序中各元件可使用的选项，用来控制开机程序。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:56
 msgid "The basics of setting device hints."
-msgstr ""
+msgstr "设定Device Hints的基础。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:57
 msgid ""
 "How to boot into single- and multi-user mode and how to properly shut down a "
 "FreeBSD system."
-msgstr ""
+msgstr "如何开机进入单人及多人模式以及如何正确关闭FreeBSD系统。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:61
 msgid ""
 "This chapter only describes the boot process for FreeBSD running on x86 and "
 "amd64 systems."
-msgstr ""
+msgstr "本章仅说明FreeBSD在x86及amd64系统上执行的开机流程。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/boot/_index.adoc:64
 #, no-wrap
 msgid "FreeBSD Boot Process"
-msgstr ""
+msgstr "FreeBSD开机程序"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:67
@@ -112,6 +115,8 @@ msgid ""
 "operating system, and the operating system programs are on the disk, how is "
 "the operating system started?"
 msgstr ""
+"打开电脑并启动操作系统的这个动作呈现了一个有趣的困境。照道理，电脑在启动操作系统之前并不知道要如何做任何事情，这些事情之中包括从磁盘执行程序。如果电脑无法"
+"在没有操作系统的情况下执行程序，而操作系统的程序本身又在磁盘上，那么操作系统要如何启动呢？"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:69
@@ -192,13 +197,13 @@ msgstr ""
 msgid ""
 "This section describes these stages in more detail and demonstrates how to "
 "interact with the FreeBSD boot process."
-msgstr ""
+msgstr "本章节将更详细介绍这些阶段并示范如何与FreeBSD开机程序互动。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/boot/_index.adoc:88
 #, no-wrap
 msgid "The Boot Manager"
-msgstr ""
+msgstr "开机管理程序"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:91
@@ -264,7 +269,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:119
 #, no-wrap
 msgid "Stage One and Stage Two"
-msgstr ""
+msgstr "阶段一与阶段二"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:122
@@ -345,7 +350,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:156
 #, no-wrap
 msgid "Stage Three"
-msgstr ""
+msgstr "阶段三"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:159
@@ -397,7 +402,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:169
 #, no-wrap
 msgid "Loader Built-In Commands"
-msgstr ""
+msgstr "加载程序内置指令"
 
 #. type: Table
 #: documentation/content/en/books/handbook/boot/_index.adoc:213
@@ -464,7 +469,7 @@ msgstr ""
 msgid ""
 "To unload the usual kernel and modules and then load the previous or "
 "another, specified kernel:"
-msgstr ""
+msgstr "要卸载一般的核心与模块，然后加载先前或另一个指定的核心可："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:228
@@ -488,7 +493,7 @@ msgstr ""
 msgid ""
 "Use the following to load the usual modules with another kernel. Note that "
 "in this case it is not necessary the qualified name:"
-msgstr ""
+msgstr "使用下面的方法来加载另一个内核的常用模块。注意，在这种情况下，不需要指定名称："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:239
@@ -502,7 +507,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:242
 msgid "To load an automated kernel configuration script:"
-msgstr ""
+msgstr "要加载一个已自动化的核心设置Script可："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:246
@@ -514,7 +519,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:249
 #, no-wrap
 msgid "Last Stage"
-msgstr ""
+msgstr "最终阶段"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:252
@@ -529,7 +534,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:254
 #, no-wrap
 msgid "Kernel Interaction During Boot"
-msgstr ""
+msgstr "开机时核心互动参数"
 
 #. type: Table
 #: documentation/content/en/books/handbook/boot/_index.adoc:271
@@ -574,7 +579,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:278
 #, no-wrap
 msgid "Single-User Mode"
-msgstr ""
+msgstr "单使用者模式"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:281
@@ -617,6 +622,8 @@ msgid ""
 "user who can gain physical access to a system will have full control of that "
 "system after booting into single-user mode."
 msgstr ""
+"虽然单使用者模式对修复系统很有帮助，但若系统放在不安全的场所便会有安全上的风险。预设，开机进入单使用者模式后，任何能够存取实体主机的使用者便拥有系统的完整"
+"控制权。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:294
@@ -656,7 +663,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:313
 #, no-wrap
 msgid "Multi-User Mode"
-msgstr ""
+msgstr "多使用者模式"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:316
@@ -689,7 +696,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:322
 #, no-wrap
 msgid "Device Hints"
-msgstr ""
+msgstr "装置提示"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:325
@@ -733,7 +740,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:338
 msgid "The syntax for the Stage 3 boot loader is:"
-msgstr ""
+msgstr "在阶段3开机加载程序的语法则为："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:342
@@ -796,7 +803,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/boot/_index.adoc:357
 #, no-wrap
 msgid "Shutdown Sequence"
-msgstr ""
+msgstr "关机程序"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:360
