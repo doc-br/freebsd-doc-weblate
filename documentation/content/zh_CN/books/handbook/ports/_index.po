@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 12:39+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookports_index/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/ports/_index.adoc:1
@@ -31,13 +34,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:9
 #, no-wrap
 msgid "Installing Applications: Packages and Ports"
-msgstr ""
+msgstr "使用 Package 和 Ports 安装应用程序"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/ports/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "简介"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:48
@@ -49,21 +52,24 @@ msgid ""
 "binaries. Either method may be used to install software from local media or "
 "from the network."
 msgstr ""
+"FreeBSD 将许多系统工具捆绑作为基本系统的一部分。 然而， 要完成实际的工作， 可能还需要安装更多的第三方应用。 FreeBSD "
+"提供了两种补充的技术， 用以在您的系统中安装第三方软件： FreeBSD Ports 套件 (用于从源代码安装)， 以及 packages "
+"(用以从预编译的二进制版本安装)。 这两种方法都可以用于从本地介质， 或从网上直接安装您喜欢的应用程序的最新版本。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:50
 msgid "After reading this chapter, you will know:"
-msgstr ""
+msgstr "读完本章节，你将会知道："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:52
 msgid "The difference between binary packages and ports."
-msgstr ""
+msgstr "二进制包和 ports 之间的差异。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:53
 msgid "How to find third-party software that has been ported to FreeBSD."
-msgstr ""
+msgstr "如何查找已移植到 FreeBSD 的第三方软件。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:54
@@ -73,25 +79,25 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:55
 msgid "How to build third-party software from source using the Ports Collection."
-msgstr ""
+msgstr "如何使用 Ports 集合从源构建第三方软件。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:56
 msgid ""
 "How to find the files installed with the application for post-installation "
 "configuration."
-msgstr ""
+msgstr "如何查找与应用程序一起安装的文件，以便进行安装后配置。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:57
 msgid "What to do if a software installation fails."
-msgstr ""
+msgstr "如果软件安装失败，该怎么办。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/ports/_index.adoc:59
 #, no-wrap
 msgid "Overview of Software Installation"
-msgstr ""
+msgstr "软件安装概览"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:62
@@ -105,7 +111,7 @@ msgstr ""
 msgid ""
 "Find and download the software, which might be distributed in source code "
 "format or as a binary."
-msgstr ""
+msgstr "下载这个软件，软件的发行版可能是源代码格式，或是一个二进制包。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:66
@@ -133,7 +139,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:69
 msgid "Test and install the software."
-msgstr ""
+msgstr "测试和安装软件。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:71
@@ -149,7 +155,7 @@ msgstr ""
 msgid ""
 "If the software has not already been adapted and tested on FreeBSD, the "
 "source code might need editing in order for it to install and run properly."
-msgstr ""
+msgstr "如果软件尚未在 FreeBSD 上进行了调整和测试，则源代码可能需要编辑才能安装并正常运行。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:75
@@ -162,7 +168,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:77
 msgid "Packages can be manipulated with the FreeBSD package management commands."
-msgstr ""
+msgstr "可以使用 FreeBSD 包管理命令管理软件包。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:79
@@ -171,6 +177,7 @@ msgid ""
 "used to install an application and a dependent library is not already "
 "installed, the library will automatically be installed first."
 msgstr ""
+"Packages 和 Ports 都能处理依赖关系。如果使用Packages 或 Ports安装应用程序，并且尚未安装依赖库，则将首先自动安装该库。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:81
@@ -186,20 +193,20 @@ msgid ""
 "While the two technologies are similar, packages and ports each have their "
 "own strengths. Select the technology that meets your requirements for "
 "installing a particular application."
-msgstr ""
+msgstr "虽然这两种技术相似，但 Packages 和 Ports 各有其优点。 使用哪一种完全取决于您自己的喜好。"
 
 #. type: Block title
 #: documentation/content/en/books/handbook/ports/_index.adoc:84
 #, no-wrap
 msgid "Package Benefits"
-msgstr ""
+msgstr "Package 优势"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:86
 msgid ""
 "A compressed package tarball is typically smaller than the compressed "
 "tarball containing the source code for the application."
-msgstr ""
+msgstr "一个压缩的 package 通常要比一个压缩的包含源代码的应用程序小得多。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:87
@@ -213,13 +220,13 @@ msgstr ""
 msgid ""
 "Packages do not require any understanding of the process involved in "
 "compiling software on FreeBSD."
-msgstr ""
+msgstr "Package 不需要您知道如何在 FreeBSD 上编译软件的详细过程。"
 
 #. type: Block title
 #: documentation/content/en/books/handbook/ports/_index.adoc:89
 #, no-wrap
 msgid "Port Benefits"
-msgstr ""
+msgstr "Port 优势"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:91
@@ -227,7 +234,7 @@ msgid ""
 "Packages are normally compiled with conservative options because they have "
 "to run on the maximum number of systems. By compiling from the port, one can "
 "change the compilation options."
-msgstr ""
+msgstr "package 通常使用较为保守的编译选项，因为它必须适配大多是系统。从 Port 编译，可以更改编译选项。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:92
@@ -254,19 +261,19 @@ msgid ""
 "The licensing conditions of some software forbid binary distribution. Such "
 "software must be distributed as source code which must be compiled by the "
 "end-user."
-msgstr ""
+msgstr "一些软件的许可条件禁止采用二进制形式发行。 它们必须带上源代码。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:96
 msgid ""
 "Some people do not trust binary distributions or prefer to read through "
 "source code in order to look for potential problems."
-msgstr ""
+msgstr "一些人不信任二进制发行形式。 至少有了源代码， (理论上) 可以亲自阅读它，寻找潜在的问题。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:97
 msgid "Source code is needed in order to apply custom patches."
-msgstr ""
+msgstr "如果您要自己对软件打补丁，您就需要有源代码。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:99
@@ -288,20 +295,20 @@ msgstr ""
 msgid ""
 "The remainder of this chapter explains how to use packages and ports to "
 "install and manage third-party software on FreeBSD."
-msgstr ""
+msgstr "这章的其余部分将介绍在 FreeBSD 上如何使用 packages 和 ports 来安装和管理第三方软件。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/ports/_index.adoc:109
 #, no-wrap
 msgid "Finding Software"
-msgstr ""
+msgstr "寻找您要的应用程序"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:112
 msgid ""
 "FreeBSD's list of available applications is growing all the time. There are "
 "a number of ways to find software to install:"
-msgstr ""
+msgstr "FreeBSD中可用的应用程序正在不断地增长着。有许多方法可以找到您所需要的软件:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:114
@@ -335,7 +342,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:117
 msgid "To search the binary package repository for an application:"
-msgstr ""
+msgstr "使用下列命令搜索 pkg 中的软件包："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:132
@@ -566,7 +573,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:230
 msgid "To bootstrap the system, run:"
-msgstr ""
+msgstr "要初始化（Bootstrap）系统请执行："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:234
@@ -579,12 +586,12 @@ msgstr ""
 msgid ""
 "You must have a working Internet connection for the bootstrap process to "
 "succeed."
-msgstr ""
+msgstr "您必须有可用的网络连接（注：正常访问 pkg.freebsd.org）供启动程序使用方可成功。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:239
 msgid "Otherwise, to install the port, run:"
-msgstr ""
+msgstr "否则，要安装Port套件，则须执行："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:245
@@ -616,7 +623,7 @@ msgstr ""
 msgid ""
 "This step is not required for new installations that do not yet have any "
 "third-party software installed."
-msgstr ""
+msgstr "新安装的版本因尚未安装任何第三方软件因此不须做这个步骤。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:262
@@ -702,7 +709,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:297
 #, no-wrap
 msgid "Quarterly and Latest Ports Branches"
-msgstr ""
+msgstr "Ports 分支：Quarterly 和 Latest"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:300
@@ -722,7 +729,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:302
 msgid "To switch from quarterly to latest run the following commands:"
-msgstr ""
+msgstr "要从 quarterly 切换到 latest，请执行："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:307
@@ -742,7 +749,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:312
 msgid "The result should be similar to the following:"
-msgstr ""
+msgstr "输出像这样："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:322
@@ -762,7 +769,7 @@ msgstr ""
 msgid ""
 "And finally run this command to update from the new (latest) repository "
 "metadata."
-msgstr ""
+msgstr "最后运行这个命令来强制刷新源的元数据。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:329
@@ -774,7 +781,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:332
 #, no-wrap
 msgid "Obtaining Information About Installed Packages"
-msgstr ""
+msgstr "取得有关已安装套件的信息"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:335
@@ -801,7 +808,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:345
 #, no-wrap
 msgid "Installing and Removing Packages"
-msgstr ""
+msgstr "安装和删除软件包"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:348
@@ -886,7 +893,7 @@ msgstr ""
 msgid ""
 "The new package and any additional packages that were installed as "
 "dependencies can be seen in the installed packages list:"
-msgstr ""
+msgstr "新的套件以及任何做为相依安装的额外套件可在已安装的套件清单中看到："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:389
@@ -938,12 +945,12 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:407
 #, no-wrap
 msgid "Upgrading Installed Packages"
-msgstr ""
+msgstr "升级已安装套件"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:410
 msgid "Installed packages can be upgraded to their latest versions by running:"
-msgstr ""
+msgstr "执行以下指令，可将已安装的套件升级到最新版本："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:414
@@ -956,13 +963,13 @@ msgstr ""
 msgid ""
 "This command will compare the installed versions with those available in the "
 "repository catalogue and upgrade them from the repository."
-msgstr ""
+msgstr "这个指令将会比对已安装的版本与在文件库分类中的版本，并从文件库升级这些套件。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/ports/_index.adoc:419
 #, no-wrap
 msgid "Auditing Installed Packages"
-msgstr ""
+msgstr "稽查已安装套件"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:422
@@ -983,7 +990,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:429
 #, no-wrap
 msgid "Automatically Removing Unused Packages"
-msgstr ""
+msgstr "自动删除未使用的软件包"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:432
@@ -991,7 +998,7 @@ msgid ""
 "Removing a package may leave behind dependencies which are no longer "
 "required. Unneeded packages that were installed as dependencies (leaf "
 "packages) can be automatically detected and removed using:"
-msgstr ""
+msgstr "删除软件包可能会留下不需要的依赖项。可以使用以下方法自动检测和删除不需要的依赖（leaf packages）："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:438
@@ -1065,7 +1072,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:468
 msgid "Marking an installed package as automatic can be done using:"
-msgstr ""
+msgstr "将已安装的软件包标记为自动包："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:472
@@ -1095,7 +1102,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:484
 #, no-wrap
 msgid "Restoring the Package Database"
-msgstr ""
+msgstr "还原套件数据库"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:487
@@ -1130,7 +1137,7 @@ msgstr ""
 msgid ""
 "If restoring a backup taken by the periodic script, it must be decompressed "
 "prior to being restored."
-msgstr ""
+msgstr "若要还原有周期Script所产生的备份必须在还原前先解压缩。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:507
@@ -1149,7 +1156,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:514
 #, no-wrap
 msgid "Removing Stale Packages"
-msgstr ""
+msgstr "移除过时的套件"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:517
@@ -1169,7 +1176,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:524
 msgid "The entire cache may be cleared by running:"
-msgstr ""
+msgstr "使用以下指令可清空全部的缓存："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:528
@@ -1181,7 +1188,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:531
 #, no-wrap
 msgid "Modifying Package Metadata"
-msgstr ""
+msgstr "修改套件Metadata"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:534
@@ -1196,7 +1203,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:536
 msgid "To change the package origin for the above example, run:"
-msgstr ""
+msgstr "要更改上述例子中的套件来源，可执行："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:540
@@ -1237,7 +1244,7 @@ msgid ""
 "When changing package origins, it is important to reinstall packages that "
 "are dependent on the package with the modified origin. To force a "
 "reinstallation of dependent packages, run:"
-msgstr ""
+msgstr "在更改套件来源之后，很重要的一件事是要重新安装套件，来让相依的套件也同时使用修改后的来源。要强制重新安装相依套件，可执行："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:563
@@ -1249,7 +1256,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:568
 #, no-wrap
 msgid "Using the Ports Collection"
-msgstr ""
+msgstr "使用Port套件集"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:571
@@ -1272,7 +1279,7 @@ msgid ""
 "Before an application can be compiled using a port, the Ports Collection "
 "must first be installed. If it was not installed during the installation of "
 "FreeBSD, use one of the following methods to install it:"
-msgstr ""
+msgstr "在应用程序可以使用Port编译之前，必须先安装Port套件集。若在安装FreeBSD时没有安装，可以使用以下其中一种方式安装："
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:580
@@ -1478,7 +1485,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:663
 #, no-wrap
 msgid "Installing Ports"
-msgstr ""
+msgstr "安装Port"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:666
@@ -1506,7 +1513,7 @@ msgstr ""
 msgid ""
 "Using the Ports Collection assumes a working Internet connection. It also "
 "requires superuser privilege."
-msgstr ""
+msgstr "使用Port套件集会假设您拥有可正常联机的网络，同时也会需要超级使用者的权限。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:676
@@ -1587,7 +1594,7 @@ msgid ""
 "the temporary files used during compilation. Removing this directory saves "
 "disk space and minimizes the chance of problems later when upgrading to the "
 "newer version of the port:"
-msgstr ""
+msgstr "安装过程中会建立工作用的子目录用来储存编译时暂存的文件。可移除此目录来节省磁盘空间并渐少往后升级新版Port时造成问题："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:724
@@ -1609,7 +1616,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:731
 #, no-wrap
 msgid "Customizing Ports Installation"
-msgstr ""
+msgstr "自定义Port安装"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:734
@@ -1729,20 +1736,20 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:778
 msgid "will combine the two."
-msgstr ""
+msgstr "来同时设定工作及目标目录。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:780
 msgid ""
 "These can also be set as environmental variables. Refer to the manual page "
 "for your shell for instructions on how to set an environmental variable."
-msgstr ""
+msgstr "这些变数也可做为环境变数设定，请参考您使用的Shell操作手册来取得如何设定环境变数的说明。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/ports/_index.adoc:782
 #, no-wrap
 msgid "Removing Installed Ports"
-msgstr ""
+msgstr "移除已安装的Port"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:785
@@ -1789,12 +1796,14 @@ msgid ""
 "displayed but the uninstallation will proceed. In such cases, it may be "
 "better to reinstall the application in order to prevent broken dependencies."
 msgstr ""
+"建议阅读Port解除安装后的信息，若有任何相依该Port的应用程序，这些信息会被显示出来，但卸载的程序仍会继续。在这种情况下最好重新安装应用程序来避免破坏"
+"相依性。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/ports/_index.adoc:805
 #, no-wrap
 msgid "Upgrading Ports"
-msgstr ""
+msgstr "升级Port"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:808
@@ -1802,7 +1811,7 @@ msgid ""
 "Over time, newer versions of software become available in the Ports "
 "Collection. This section describes how to determine which software can be "
 "upgraded and how to perform the upgrade."
-msgstr ""
+msgstr "随着时间推移，Port套件集中会有新版的软件可用。本节将说明如何检查是否有可以升级的软件及如何升级。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:810
@@ -1851,14 +1860,14 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:829
 #, no-wrap
 msgid "Tools to Upgrade and Manage Ports"
-msgstr ""
+msgstr "升级与管理Port的工具"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:832
 msgid ""
 "The Ports Collection contains several utilities to perform the actual "
 "upgrade. Each has its strengths and weaknesses."
-msgstr ""
+msgstr "Port套件集含有数个工具可以进行升级，每一种工具都有其优点及缺点。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:834
@@ -1873,7 +1882,7 @@ msgid ""
 "The choice of which tool is best for a particular system is up to the system "
 "administrator. It is recommended practice to back up your data before using "
 "any of these tools."
-msgstr ""
+msgstr "那一种工具对特定系统是最佳的选择取决于系统管理员。建议在使用任何这些工具之前先备份数据。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/ports/_index.adoc:841
@@ -1906,27 +1915,27 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:854
 msgid "Root port: has no dependencies and is not a dependency of any other ports."
-msgstr ""
+msgstr "根Port：没有相依且也不被任何其他Port相依。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:855
 msgid "Trunk port: has no dependencies, but other ports depend upon it."
-msgstr ""
+msgstr "主干Port：没有相依，但被其他Port相依。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:856
 msgid "Branch port: has dependencies and other ports depend upon it."
-msgstr ""
+msgstr "分支Port：有相依，且其被其他Port相依。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:857
 msgid "Leaf port: has dependencies but no other ports depend upon it."
-msgstr ""
+msgstr "枝Port：有相依，但没有被其他Port相依。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:859
 msgid "To list these categories and search for updates:"
-msgstr ""
+msgstr "要列出这几个分类并搜寻是否有新版："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:880
@@ -1963,7 +1972,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:886
 msgid "This command is used to upgrade all outdated ports:"
-msgstr ""
+msgstr "此指令用来升级所有过时的Port："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:890
@@ -2021,7 +2030,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:914
 #, no-wrap
 msgid "Upgrading Ports Using Portupgrade"
-msgstr ""
+msgstr "使用Portupgrade升级Port"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:917
@@ -2111,7 +2120,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:952
 #, no-wrap
 msgid "Ports and Disk Space"
-msgstr ""
+msgstr "Port与磁盘空间"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:955
@@ -2174,7 +2183,7 @@ msgstr ""
 msgid ""
 "By default, this command is interactive and prompts the user to confirm if a "
 "distfile should be deleted."
-msgstr ""
+msgstr "预设，若distfile应要被删除，这个指令会以互动的方式向使用者确认。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:985
@@ -2238,7 +2247,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:998
 #, no-wrap
 msgid "Initialize Jails and Port Trees"
-msgstr ""
+msgstr "初始化Jail与Port树"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1001
@@ -2359,7 +2368,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1072
 msgid "Options and dependencies for the specified ports are configured:"
-msgstr ""
+msgstr "可使用以下方式设定选项及相依："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:1076
@@ -2372,7 +2381,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1079
 msgid "Finally, packages are built and a package repository is created:"
-msgstr ""
+msgstr "最后，编译套件并建立套件文件库："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:1083
@@ -2409,7 +2418,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:1091
 #, no-wrap
 msgid "Configuring pkg Clients to Use a Poudriere Repository"
-msgstr ""
+msgstr "设定pkg客户端使用Poudriere文件库"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1094
@@ -2462,7 +2471,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:1115
 #, no-wrap
 msgid "Post-Installation Considerations"
-msgstr ""
+msgstr "安装后的注意事项"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1118
@@ -2471,7 +2480,7 @@ msgid ""
 "port, most third-party applications require some level of configuration "
 "after installation. The following commands and locations can be used to help "
 "determine what was installed with the application."
-msgstr ""
+msgstr "不论软件是从套件或Port安装，大部份的第三方应用程序安装完后需要做某种程度的设定，下列指令与位置可以用来协助找到应用程序安装了什么。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1120
@@ -2510,7 +2519,7 @@ msgid ""
 "By design, applications do not run their startup script upon installation, "
 "nor do they run their stop script upon deinstallation or upgrade. This "
 "decision is left to the individual system administrator."
-msgstr ""
+msgstr "依设计，应用程序不会在安装时执行其启动Script，也不会在卸载或升级时执行其中止Script，这留给各系统的管理者去做决定。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1129
@@ -2530,12 +2539,12 @@ msgstr ""
 #: documentation/content/en/books/handbook/ports/_index.adoc:1132
 #, no-wrap
 msgid "Dealing with Broken Ports"
-msgstr ""
+msgstr "处理损坏的Port"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1135
 msgid "When a port does not build or install, try the following:"
-msgstr ""
+msgstr "当发现某个Port无法顺利编译或安装，可以尝试以下几种方法解决："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1137
