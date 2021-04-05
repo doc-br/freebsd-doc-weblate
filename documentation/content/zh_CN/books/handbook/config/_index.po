@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 12:38+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookconfig_index/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/config/_index.adoc:1
@@ -31,13 +34,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:9
 #, no-wrap
 msgid "Configuration and Tuning"
-msgstr ""
+msgstr "设定与调校"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/config/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "简介"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:48
@@ -46,11 +49,12 @@ msgid ""
 "chapter explains much of the FreeBSD configuration process, including some "
 "of the parameters which can be set to tune a FreeBSD system."
 msgstr ""
+"在FreeBSD使用过程中，相当重要的环节之一就是如何正确设定系统。本章着重于介绍FreeBSD的设定流程，包括一些可以调整FreeBSD性能的参数设定。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:50
 msgid "After reading this chapter, you will know:"
-msgstr ""
+msgstr "读完本章节，你将会知道："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:52
@@ -62,12 +66,12 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:53
 msgid "How to configure and test a network card."
-msgstr ""
+msgstr "如何设定并测试网络卡。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:54
 msgid "How to configure virtual hosts on network devices."
-msgstr ""
+msgstr "如何在网络装置上设定虚拟主机。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:55
@@ -82,12 +86,12 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:57
 msgid "How to tune disk performance and modify kernel limitations."
-msgstr ""
+msgstr "如何调校磁盘性能及修改核心限制。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:59
 msgid "Before reading this chapter, you should:"
-msgstr ""
+msgstr "在阅读这个章节之前，您应当："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:61
@@ -107,7 +111,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:64
 #, no-wrap
 msgid "Starting Services"
-msgstr ""
+msgstr "启动服务"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:67
@@ -131,7 +135,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:70
 #, no-wrap
 msgid "Extended Application Configuration"
-msgstr ""
+msgstr "延伸应用程序设定"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:73
@@ -233,7 +237,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:112
 #, no-wrap
 msgid "Using Services to Start Services"
-msgstr ""
+msgstr "使用服务来启动其他服务"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:115
@@ -367,7 +371,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:154
 #, no-wrap
 msgid "Creating a User Crontab"
-msgstr ""
+msgstr "建立使用者的Crontab"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:157
@@ -387,6 +391,8 @@ msgid ""
 "time a user runs this command, it will open an empty file. Once a user "
 "creates a crontab, this command will open that file for editing."
 msgstr ""
+"这样会使用预设的文字编辑器来开启使用者的crontab，使用者第一次执行这个指令会开启一个空的文件，使用者建立crontab之后这个指令则会开启已建立的c"
+"rontab供编辑。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:166
@@ -394,7 +400,7 @@ msgid ""
 "It is useful to add these lines to the top of the crontab file in order to "
 "set the environment variables and to remember the meanings of the fields in "
 "the crontab:"
-msgstr ""
+msgstr "加入这些行到crontab档的最上方来设定环境变数以及备忘在crontab中字段的意思非常有用："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:173
@@ -428,6 +434,7 @@ msgid ""
 "the limited set of environment variables set by cron. To replicate the "
 "environment that would be used to run the above cron entry, use:"
 msgstr ""
+"在使用自定义的Script之前，请先确定该Script可以执行并且使用cron在有限的环境变数下测试。要复制一个用来执行上述cron项目的环境可以使用："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:190
@@ -464,7 +471,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:204
 msgid "To remove all of the cron jobs in a user crontab:"
-msgstr ""
+msgstr "要移除使用在使用者crontab中的cron job可："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:209
@@ -478,7 +485,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:212
 #, no-wrap
 msgid "Managing Services in FreeBSD"
-msgstr ""
+msgstr "管理FreeBSD中的服务"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:215
@@ -607,7 +614,7 @@ msgstr ""
 msgid ""
 "This script is used for background file system checks, which occur only "
 "during system initialization."
-msgstr ""
+msgstr "这个Script用来在背景做文件系统检查，只有在系统初始化时要执行。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:273
@@ -677,7 +684,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:288
 #, no-wrap
 msgid "Managing System-Specific Configuration"
-msgstr ""
+msgstr "管理系统特定的设定"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:291
@@ -759,7 +766,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:322
 #, no-wrap
 msgid "Setting Up Network Interface Cards"
-msgstr ""
+msgstr "设定网络界面卡"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:325
@@ -772,7 +779,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:326
 #, no-wrap
 msgid "Locating the Correct Driver"
-msgstr ""
+msgstr "找到正确的驱动程序"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:329
@@ -887,7 +894,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:367
 msgid "FreeBSD kernel sources."
-msgstr ""
+msgstr "FreeBSD核心源码。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:368
@@ -1012,7 +1019,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:418
 #, no-wrap
 msgid "Configuring the Network Card"
-msgstr ""
+msgstr "设定网络卡"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:421
@@ -1055,7 +1062,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:448
 msgid "In this example, the following devices were displayed:"
-msgstr ""
+msgstr "在这个例子中列出了以下装置："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:450
@@ -1148,7 +1155,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:477
 msgid "it would indicate the card has not been configured."
-msgstr ""
+msgstr "则代表尚未设定界面卡。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:479
@@ -1238,7 +1245,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:519
 #, no-wrap
 msgid "Testing and Troubleshooting"
-msgstr ""
+msgstr "测试和故障排除"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:522
@@ -1277,7 +1284,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:541
 #, no-wrap
 msgid "Testing the Ethernet Card"
-msgstr ""
+msgstr "测试以太网卡"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:544
@@ -1345,7 +1352,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:577
 #, no-wrap
 msgid "Troubleshooting"
-msgstr ""
+msgstr "故障排除"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:580
@@ -1417,7 +1424,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:594
 #, no-wrap
 msgid "Virtual Hosts"
-msgstr ""
+msgstr "虚拟主机"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:597
@@ -1425,7 +1432,7 @@ msgid ""
 "A common use of FreeBSD is virtual site hosting, where one server appears to "
 "the network as many servers. This is achieved by assigning multiple network "
 "addresses to a single interface."
-msgstr ""
+msgstr "FreeBSD最常见的用途之一就是虚拟网站代管，即以一台服务器在网路上扮演多台服务器，这可以透过指定多个网络位置到一个网络界面来做到。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:599
@@ -1511,7 +1518,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:634
 #, no-wrap
 msgid "Configuring System Logging"
-msgstr ""
+msgstr "设定系统日志"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:637
@@ -1523,6 +1530,8 @@ msgid ""
 "and incident response. Most system daemons and applications will generate "
 "log entries."
 msgstr ""
+"产生与读取系统日志对系统管理来说是一件非常重要的事，在系统日志中的信息可以用来侦测硬件与软件的问题，同样也可以侦测应用程序与系统设定的错误。这些信息在安全"
+"性稽查与事件响应也同样扮演了重要的角色，大多数系统Daemon与应用程序都会产生日志项目。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:639
@@ -1540,13 +1549,13 @@ msgstr ""
 msgid ""
 "This section describes how to configure the FreeBSD system logger for both "
 "local and remote logging and how to perform log rotation and log management."
-msgstr ""
+msgstr "此章节会介绍如何设定FreeBSD系统日志程序来做本地与远端日志并且介绍如何执行日志翻转（Log rotation）与日志管理。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/config/_index.adoc:642
 #, no-wrap
 msgid "Configuring Local Logging"
-msgstr ""
+msgstr "设定本地日志"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:645
@@ -1622,7 +1631,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:688
 msgid "In this example:"
-msgstr ""
+msgstr "在这个示例中："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:690
@@ -1696,7 +1705,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:707
 #, no-wrap
 msgid "Log Management and Rotation"
-msgstr ""
+msgstr "日志管理与翻转"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:710
@@ -1799,7 +1808,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:761
 #, no-wrap
 msgid "Configuring Remote Logging"
-msgstr ""
+msgstr "设定远端日志"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:764
@@ -1808,6 +1817,8 @@ msgid ""
 "of systems increases. Configuring centralized logging can reduce some of the "
 "administrative burden of log file administration."
 msgstr ""
+"处理系统日志对于系统安全和管理是一个重要方面。 当有多台分布在中型或大型网络的机器，再或者是处于各种不同类型的网络中， "
+"监视他们上面的日志文件则显得非常难以操作， 在这种情况下， 配置远程日志记录能使整个处理过程变得更加轻松。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:766
@@ -1824,7 +1835,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:767
 #, no-wrap
 msgid "Log Server Configuration"
-msgstr ""
+msgstr "日志服务器设定"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:770
@@ -1832,7 +1843,7 @@ msgid ""
 "A log server is a system that has been configured to accept logging "
 "information from other hosts. Before configuring a log server, check the "
 "following:"
-msgstr ""
+msgstr "日志服务器是接受来自其他主机的日志信息的系统。在配置日志服务器之前，请检查以下内容："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:772
@@ -1865,7 +1876,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:776
 #, no-wrap
 msgid "Sample Log Server Configuration"
-msgstr ""
+msgstr "日志服务器设定示例"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:784
@@ -1916,7 +1927,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:803
 msgid "Finally, create the log file:"
-msgstr ""
+msgstr "最后，创建日志文件："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:807
@@ -1949,14 +1960,14 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:819
 #, no-wrap
 msgid "Log Client Configuration"
-msgstr ""
+msgstr "日志客户端设定"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:822
 msgid ""
 "A logging client sends log entries to a logging server on the network. The "
 "client also keeps a local copy of its own logs."
-msgstr ""
+msgstr "日志客户端是一台发送日志信息到日志服务器的机器， 并在本地保存拷贝。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:824
@@ -2032,7 +2043,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:856
 #, no-wrap
 msgid "Debugging Log Servers"
-msgstr ""
+msgstr "调试日志服务器"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:859
@@ -2070,7 +2081,7 @@ msgstr ""
 msgid ""
 "Debugging data similar to the following will flash on the console "
 "immediately after the restart:"
-msgstr ""
+msgstr "重启后控制台上会显示调试信息："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:884
@@ -2124,13 +2135,13 @@ msgstr ""
 msgid ""
 "At this point, the messages are being properly received and placed in the "
 "correct file."
-msgstr ""
+msgstr "此时，消息正在正确接收并放置在正确的文件中。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/config/_index.adoc:907
 #, no-wrap
 msgid "Security Considerations"
-msgstr ""
+msgstr "安全注意事项"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:910
@@ -2160,7 +2171,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:914
 #, no-wrap
 msgid "Configuration Files"
-msgstr ""
+msgstr "配置文件"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/config/_index.adoc:916
@@ -2173,7 +2184,7 @@ msgstr ""
 msgid ""
 "There are a number of directories in which configuration information is "
 "kept. These include:"
-msgstr ""
+msgstr "有数个目录中储存着设定信息，这些目录有："
 
 #. type: Table
 #: documentation/content/en/books/handbook/config/_index.adoc:944
@@ -2207,7 +2218,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:946
 #, no-wrap
 msgid "Hostnames"
-msgstr ""
+msgstr "主机名称"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/config/_index.adoc:948
@@ -2341,7 +2352,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1032
 msgid "For example:"
-msgstr ""
+msgstr "例如："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1036
@@ -2380,7 +2391,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1048
 msgid "To view all readable variables:"
-msgstr ""
+msgstr "检视所有可读取的变数："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1052
@@ -2391,7 +2402,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1055
 msgid "To read a particular variable, specify its name:"
-msgstr ""
+msgstr "要读取特定变数只要指定其名称："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1060
@@ -2509,7 +2520,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:1107
 #, no-wrap
 msgid "Tuning Disks"
-msgstr ""
+msgstr "调校磁盘"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1110
@@ -2529,7 +2540,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:1111
 #, no-wrap
 msgid "Sysctl Variables"
-msgstr ""
+msgstr "Sysctl 参数"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/config/_index.adoc:1113
@@ -2671,7 +2682,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:1142
 #, no-wrap
 msgid "Soft Updates"
-msgstr ""
+msgstr "Soft Updates"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1145
@@ -2715,7 +2726,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:1156
 #, no-wrap
 msgid "More Details About Soft Updates"
-msgstr ""
+msgstr "更多关于 Soft Update 的信息"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1159
@@ -2723,7 +2734,7 @@ msgid ""
 "Meta-data updates are updates to non-content data like inodes or "
 "directories. There are two traditional approaches to writing a file system's "
 "meta-data back to disk."
-msgstr ""
+msgstr "元数据更新是对非内容数据的更新，如inode或目录。有两种传统的方法将文件系统的元数据写回磁盘。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1161
@@ -2841,13 +2852,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:1171
 #, no-wrap
 msgid "Tuning Kernel Limits"
-msgstr ""
+msgstr "调校内核限制"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/config/_index.adoc:1174
 #, no-wrap
 msgid "File/Process Limits"
-msgstr ""
+msgstr "文件/进程限制"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/config/_index.adoc:1177
@@ -2872,6 +2883,8 @@ msgid ""
 "production server may easily require many thousands of file descriptors, "
 "depending on the kind and number of services running concurrently."
 msgstr ""
+"每个打开的文件、 套接字和管道， 都会占用一个文件描述符。 在大型生产服务器上， 可能会轻易地用掉数千个文件描述符， "
+"具体用量取决于服务的类型和并行启动的服务数量。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1184
@@ -2952,7 +2965,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:1199
 #, no-wrap
 msgid "Network Limits"
-msgstr ""
+msgstr "网络限制"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1202
@@ -3083,7 +3096,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:1224
 #, no-wrap
 msgid "Virtual Memory"
-msgstr ""
+msgstr "虚拟內存"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/config/_index.adoc:1226
@@ -3105,7 +3118,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1231
 msgid "To see the current number of vnodes in use:"
-msgstr ""
+msgstr "要查看当前在用的 vnode 数量："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1236
@@ -3118,7 +3131,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1239
 msgid "To see the maximum vnodes:"
-msgstr ""
+msgstr "要查看最大可用的 vnode 数量："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1244
@@ -3142,7 +3155,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:1249
 #, no-wrap
 msgid "Adding Swap Space"
-msgstr ""
+msgstr "增加交换空间"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1252
@@ -3151,6 +3164,8 @@ msgid ""
 "methods to increase swap space: adding swap to an existing partition or new "
 "hard drive, and creating a swap file on an existing partition."
 msgstr ""
+"有时系统会需要更多的交换（Swap）空间，本章节会介绍两种增加交换空间的方式：一种是在既有的分割区或新的硬盘增加交换空间，另一种则是在既有的分割区中建立一"
+"个交换档。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1254
@@ -3164,7 +3179,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:1256
 #, no-wrap
 msgid "Swap on a New Hard Drive or Existing Partition"
-msgstr ""
+msgstr "使用新硬盘或既有分割区增加交换空间"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1259
@@ -3222,7 +3237,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:1290
 #, no-wrap
 msgid "Creating a Swap File"
-msgstr ""
+msgstr "建立交换档"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1286
@@ -3243,7 +3258,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1295
 msgid "Create the swap file:"
-msgstr ""
+msgstr "建立交换档："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1299
@@ -3254,7 +3269,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1302
 msgid "Set the proper permissions on the new file:"
-msgstr ""
+msgstr "在新文件设定适当的权限："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1306
@@ -3299,7 +3314,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:1326
 #, no-wrap
 msgid "Power and Resource Management"
-msgstr ""
+msgstr "电源与资源管理"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1329
@@ -3409,7 +3424,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:1353
 #, no-wrap
 msgid "Common Problems"
-msgstr ""
+msgstr "常见问题"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1356
@@ -3461,7 +3476,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:1363
 #, no-wrap
 msgid "Mouse Issues"
-msgstr ""
+msgstr "鼠标问题"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1366
@@ -3475,7 +3490,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:1367
 #, no-wrap
 msgid "Suspend/Resume"
-msgstr ""
+msgstr "待机/唤醒"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1370
@@ -3526,6 +3541,7 @@ msgid ""
 "save, restore, or reinitialize their firmware, registers, or device memory "
 "properly. As a first attempt at debugging the problem, try:"
 msgstr ""
+"休眠和唤醒操作最常见的问题是某些设备驱动程序不会保存、 恢复或正确地重新初始化其固件、 寄存器或设备内存。 尝试调试这些问题时， 首先可以尝试："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1390
@@ -3595,7 +3611,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:1402
 #, no-wrap
 msgid "System Hangs"
-msgstr ""
+msgstr "系统无响应"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1405
@@ -3627,7 +3643,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:1410
 #, no-wrap
 msgid "Panics"
-msgstr ""
+msgstr "崩溃"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1413
@@ -3654,7 +3670,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:1416
 #, no-wrap
 msgid "System Powers Up After Suspend or Shutdown"
-msgstr ""
+msgstr "系统在待机或关机后仍开机"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1419
@@ -3670,7 +3686,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:1421
 #, no-wrap
 msgid "BIOS Contains Buggy Bytecode"
-msgstr ""
+msgstr "BIOS含有有问题的Bytecode"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1424
@@ -3799,7 +3815,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:1468
 #, no-wrap
 msgid "Getting and Submitting Debugging Info"
-msgstr ""
+msgstr "获取和提交调试信息"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1471
@@ -3879,7 +3895,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1497
 msgid "When submitting a problem report, include the following information:"
-msgstr ""
+msgstr "提交问题报告时，请包括以下信息："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1499
@@ -3887,7 +3903,7 @@ msgid ""
 "Description of the buggy behavior, including system type, model, and "
 "anything that causes the bug to appear. Note as accurately as possible when "
 "the bug began occurring if it is new."
-msgstr ""
+msgstr "错误行为的描述，包括系统类型、模型以及导致出现 Bug 的任何内容。如果 Bug 是新的，则尽可能准确地记下该 Bug 何时开始发生。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1500
@@ -3945,7 +3961,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/config/_index.adoc:1514
 #, no-wrap
 msgid "References"
-msgstr ""
+msgstr "参考文献"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1517
