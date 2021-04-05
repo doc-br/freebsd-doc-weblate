@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 12:40+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookmultimedia_index/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1
@@ -31,13 +34,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:9
 #, no-wrap
 msgid "Multimedia"
-msgstr ""
+msgstr "多媒体"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "简介"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:48
@@ -64,32 +67,32 @@ msgid ""
 "This chapter describes how to configure sound cards, video playback, TV "
 "tuner cards, and scanners on FreeBSD. It also describes some of the "
 "applications which are available for using these devices."
-msgstr ""
+msgstr "本章会说明如何设定FreeBSD上的声卡、图像播放器、电视卡及扫描仪。同时会说明有那些应用程序可以使用这些装置。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:54
 msgid "After reading this chapter, you will know how to:"
-msgstr ""
+msgstr "读完这章，您将了解："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:56
 msgid "Configure a sound card on FreeBSD."
-msgstr ""
+msgstr "设定FreeBSD上的声卡。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:57
 msgid "Troubleshoot the sound setup."
-msgstr ""
+msgstr "音效设定疑难排解。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:58
 msgid "Playback and encode MP3s and other audio."
-msgstr ""
+msgstr "播放、录制MP3及其他声音文件格式。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:59
 msgid "Prepare a FreeBSD system for video playback."
-msgstr ""
+msgstr "FreeBSD系统播放图像的准备工具。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:60
@@ -104,27 +107,27 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:62
 msgid "Configure a TV card."
-msgstr ""
+msgstr "设定电视卡。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:63
 msgid "Install and setup MythTV on FreeBSD"
-msgstr ""
+msgstr "在 FreeBSD安装 MythTV"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:64
 msgid "Configure an image scanner."
-msgstr ""
+msgstr "配置图像扫描仪。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:65
 msgid "Configure a Bluetooth headset."
-msgstr ""
+msgstr "配置蓝牙耳机。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:67
 msgid "Before reading this chapter, you should:"
-msgstr ""
+msgstr "在阅读这个章节之前，您应当："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:69
@@ -137,7 +140,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:71
 #, no-wrap
 msgid "Setting Up the Sound Card"
-msgstr ""
+msgstr "设定声卡"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:74
@@ -210,7 +213,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:100
 #, no-wrap
 msgid "Configuring a Custom Kernel with Sound Support"
-msgstr ""
+msgstr "设定自定义核心支持音效"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:103
@@ -226,7 +229,7 @@ msgstr ""
 msgid ""
 "When using a custom kernel to provide sound support, make sure that the "
 "audio framework driver exists in the custom kernel configuration file:"
-msgstr ""
+msgstr "使用自定义内核提供声音支持时，请确保自定义内核配置文件中存在音频框架驱动程序:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:109
@@ -240,7 +243,7 @@ msgid ""
 "Next, add support for the sound card. To continue the example of the "
 "built-in audio chipset based on the Intel specification from the previous "
 "section, use the following line in the custom kernel configuration file:"
-msgstr ""
+msgstr "接下来就是加入对我们所用声卡的支持了。假设我们使用的是上节冲提到的 Intel 声卡芯片组，需要在内核编译配置文件中加入下面一行："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:116
@@ -254,6 +257,8 @@ msgid ""
 "Be sure to read the manual page of the driver for the device name to use for "
 "the driver."
 msgstr ""
+"一定要阅读驱动的联机手册了解如何使用它们。 关于内核配置文件中声卡驱动的具体写法， 也可以在 <filename>/usr/src/sys/conf/"
+"NOTES</filename> 文件中找到。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:121
@@ -311,7 +316,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:144
 #, no-wrap
 msgid "Testing Sound"
-msgstr ""
+msgstr "测试音效"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:147
@@ -334,7 +339,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:156
 msgid "The status of the sound card may also be checked using this command:"
-msgstr ""
+msgstr "声卡状态可以使用此命令查询："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:165
@@ -416,7 +421,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:199
 #, no-wrap
 msgid "Setting up Bluetooth Sound Devices"
-msgstr ""
+msgstr "设置蓝牙音箱"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:202
@@ -493,7 +498,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:239
 #, no-wrap
 msgid "Troubleshooting Sound"
-msgstr ""
+msgstr "疑难解答"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:242
@@ -506,7 +511,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:244
 #, no-wrap
 msgid "Common Error Messages"
-msgstr ""
+msgstr "常见错误讯息"
 
 #. type: Table
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:269
@@ -604,7 +609,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:309
 #, no-wrap
 msgid "Utilizing Multiple Sound Sources"
-msgstr ""
+msgstr "使用多个音效来源"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:312
@@ -647,7 +652,7 @@ msgid ""
 "The number of virtual channels for a device cannot be changed while it is in "
 "use. First, close any programs using the device, such as music players or "
 "sound daemons."
-msgstr ""
+msgstr "您不能在使用某个设备的时候改变其虚拟通道数。 首先需要关闭所有使用该设备的程序， 如音乐播放器或声音服务。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:330
@@ -660,7 +665,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:331
 #, no-wrap
 msgid "Setting Default Values for Mixer Channels"
-msgstr ""
+msgstr "设定混音器频道的预设值"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:334
@@ -690,7 +695,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:343
 #, no-wrap
 msgid "MP3 Audio"
-msgstr ""
+msgstr "MP3音乐"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:346
@@ -703,7 +708,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:348
 #, no-wrap
 msgid "MP3 Players"
-msgstr ""
+msgstr "MP3播放器"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:351
@@ -804,7 +809,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:391
 msgid "To rip a range of tracks, such as track one to seven, specify a range:"
-msgstr ""
+msgstr "这个实例用于抓取第七个音轨。要抓取一定范围的音轨，如从1到7："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:395
@@ -837,7 +842,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:407
 #, no-wrap
 msgid "Encoding and Decoding MP3s"
-msgstr ""
+msgstr "MP3编码与译码"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:410
@@ -935,7 +940,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:440
 msgid "Enter or browse to a directory to write the uncompressed files to."
-msgstr ""
+msgstr "输入或选择一个目录用于存放解压的文件。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:441
@@ -984,7 +989,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:454
 #, no-wrap
 msgid "Video Playback"
-msgstr ""
+msgstr "视频回放"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:457
@@ -1051,7 +1056,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:483
 #, no-wrap
 msgid "Determining Video Capabilities"
-msgstr ""
+msgstr "侦测图像处理能力"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:486
@@ -1064,7 +1069,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:488
 msgid "Common video interfaces include:"
-msgstr ""
+msgstr "常见图像接口列表："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:490
@@ -1105,13 +1110,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:494
 msgid "SVGAlib: a low level console graphics layer."
-msgstr ""
+msgstr "SVGAlib：底层图形库。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:496
 #, no-wrap
 msgid "XVideo"
-msgstr ""
+msgstr "XVideo"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:499
@@ -1127,7 +1132,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:506
 msgid "XVideo is supported for the card if the result is similar to:"
-msgstr ""
+msgstr "如果显示结果如下，那您的显卡就支持XVideo："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:577
@@ -1208,12 +1213,12 @@ msgstr ""
 msgid ""
 "The formats listed, such as YUV2 and YUV12, are not present with every "
 "implementation of XVideo and their absence may hinder some players."
-msgstr ""
+msgstr "同时注意：列出来的格式(YUV2, YUV12, 等等) 并不总是随着 XVdieo的每一次执行而存在。没有它们可能会迷惑某些人。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:582
 msgid "If the result instead looks like:"
-msgstr ""
+msgstr "如果结果看起来是这样："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:588
@@ -1230,13 +1235,13 @@ msgid ""
 "XVideo is probably not supported for the card. This means that it will be "
 "more difficult for the display to meet the computational demands of "
 "rendering video, depending on the video card and processor."
-msgstr ""
+msgstr "那么您的显卡可以可能不支持 XVideo。这意味着，根据显卡和处理器的不同，显示器将更难满足渲染视频的计算要求。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:593
 #, no-wrap
 msgid "Ports and Packages Dealing with Video"
-msgstr ""
+msgstr "可处理图像的Port与套件"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:596
@@ -1244,6 +1249,8 @@ msgid ""
 "This section introduces some of the software available from the FreeBSD "
 "Ports Collection which can be used for video playback."
 msgstr ""
+"这部份主要讨论在 FreeBSD Ports 集中提供的可用于视频回放的软件。 视频回放在软件发展中是个很活跃的领域， "
+"并且各种不同程序的功能可能与这里的描述不尽相同。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:598
@@ -1300,7 +1307,7 @@ msgstr ""
 msgid ""
 "This section describes only a few common uses. Refer to mplayer(1) for a "
 "complete description of its numerous options."
-msgstr ""
+msgstr "本节只描述了几个常见的用途。有关其众多选项的完整描述，请参阅mplayer(1)。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:613
@@ -1344,7 +1351,7 @@ msgstr ""
 msgid ""
 "It is worth trying all of these options, as their relative performance "
 "depends on many factors and will vary significantly with hardware."
-msgstr ""
+msgstr "所有这些选项都是值得一试的， 因为它们的性能依赖很多因素，并且都与硬件密切相关。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:642
@@ -1442,7 +1449,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:680
 msgid "Here is an example of a simple copy:"
-msgstr ""
+msgstr "下面是一个简单的示例:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:684
@@ -1567,7 +1574,7 @@ msgstr ""
 msgid ""
 "This example demonstrates how to convert a DivX file into a PAL MPEG-1 file "
 "(PAL VCD):"
-msgstr ""
+msgstr "此示例演示如何将 DivX 文件转换为 PAL MPEG-1 文件 （PAL VCD）："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:731
@@ -1598,7 +1605,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:738
 #, no-wrap
 msgid "TV Cards"
-msgstr ""
+msgstr "电视卡"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:741
@@ -1621,7 +1628,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:744
 #, no-wrap
 msgid "Loading the Driver"
-msgstr ""
+msgstr "加载驱动程序"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:747
@@ -1642,7 +1649,7 @@ msgid ""
 "Alternatively, one can statically compile support for the TV card into a "
 "custom kernel. In that case, add the following lines to the custom kernel "
 "configuration file:"
-msgstr ""
+msgstr "或者可以将电视卡支持静态编译到自定义的核心当中，若要这么做则可在自定义核心配置文件加入以下行："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:761
@@ -1659,14 +1666,14 @@ msgstr ""
 msgid ""
 "These additional devices are necessary as the card components are "
 "interconnected via an I2C bus. Then, build and install a new kernel."
-msgstr ""
+msgstr "之所以要加上这些额外的驱动程序，是因为卡的各组成部分都是透过I2C总线而相互连接的。接下来，请编译、安装新的核心。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:766
 msgid ""
 "To test that the tuner is correctly detected, reboot the system. The TV card "
 "should appear in the boot messages, as seen in this example:"
-msgstr ""
+msgstr "要测试调谐器（Tuner）是否被正确的侦测，请先重新启动系统。电视卡应该会出现在开机信息档中，如同此示例："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:775
@@ -1719,12 +1726,12 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:793
 #, no-wrap
 msgid "Useful Applications"
-msgstr ""
+msgstr "好用的应用程序"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:796
 msgid "To use the TV card, install one of the following applications:"
-msgstr ""
+msgstr "要使用您的电视卡，您需要安装下列应用程序之一："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:798
@@ -1748,13 +1755,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:802
 msgid "More applications are available in the FreeBSD Ports Collection."
-msgstr ""
+msgstr "更多的程序在FreeBSD Ports Collection(Ports 集)里。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:803
 #, no-wrap
 msgid "Troubleshooting"
-msgstr ""
+msgstr "故障排除"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:806
@@ -1769,7 +1776,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:808
 #, no-wrap
 msgid "MythTV"
-msgstr ""
+msgstr "MythTV"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:811
@@ -1785,7 +1792,7 @@ msgstr ""
 msgid ""
 "MythTV requires a frontend and a backend. These components can either be "
 "installed on the same system or on different machines."
-msgstr ""
+msgstr "MythTV 需要一个前端和一个后端。这些组件可以安装在同一系统上, 也可以安装在不同的计算机上。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:815
@@ -1812,7 +1819,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:818
 #, no-wrap
 msgid "Hardware"
-msgstr ""
+msgstr "硬件"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:821
@@ -1842,12 +1849,12 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:824
 #, no-wrap
 msgid "Setting up the MythTV Backend"
-msgstr ""
+msgstr "设定MythTV后端"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:827
 msgid "To install MythTV using binary packages:"
-msgstr ""
+msgstr "要使用Binary套件安装MythTV可："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:831
@@ -1858,7 +1865,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:834
 msgid "Alternatively, to install from the Ports Collection:"
-msgstr ""
+msgstr "或从Port套件集安装："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:839
@@ -1871,7 +1878,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:842
 msgid "Once installed, set up the MythTV database:"
-msgstr ""
+msgstr "安装完成后, 设置MythTV 数据库:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:846
@@ -1882,7 +1889,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:849
 msgid "Then, configure the backend:"
-msgstr ""
+msgstr "然后，配置后端："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:853
@@ -1893,7 +1900,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:856
 msgid "Finally, start the backend:"
-msgstr ""
+msgstr "最后，启动后端："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:861
@@ -1907,7 +1914,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:864
 #, no-wrap
 msgid "Image Scanners"
-msgstr ""
+msgstr "图像扫描仪"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:867
@@ -1939,7 +1946,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:873
 #, no-wrap
 msgid "Checking the Scanner"
-msgstr ""
+msgstr "检查扫描仪"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:876
@@ -2005,7 +2012,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:904
 msgid "Verify that the device is displayed in the system message buffer:"
-msgstr ""
+msgstr "验证设备是否显示在系统消息缓冲区中："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:910
@@ -2078,7 +2085,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:941
 msgid "To install the backends from binary package:"
-msgstr ""
+msgstr "使用二进制安装包安装后端："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:945
@@ -2089,7 +2096,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:948
 msgid "Alternatively, to install from the Ports Collection"
-msgstr ""
+msgstr "或由 Port 套件集安装"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:953
@@ -2120,7 +2127,7 @@ msgid ""
 "The output should show the interface type of the scanner and the device node "
 "used to attach the scanner to the system. The vendor and the product model "
 "may or may not appear."
-msgstr ""
+msgstr "输出显示了扫描仪的接口类型和扫描仪连接到系统上的设备节点。 生产厂家和产品型号可能没有显示，不过不重要。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:968
@@ -2201,7 +2208,7 @@ msgstr ""
 msgid ""
 "Save the edits and verify that the scanner is identified with the right "
 "backend name and the device node:"
-msgstr ""
+msgstr "保存编辑并验证扫描仪是否标识了正确的后端名称和设备节点："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1010
@@ -2224,7 +2231,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1013
 #, no-wrap
 msgid "Scanner Permissions"
-msgstr ""
+msgstr "扫描仪权限"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1016
@@ -2275,7 +2282,7 @@ msgid ""
 "It happens the device node changes with the addition or removal of devices, "
 "so one may want to give access to all USB devices using this ruleset "
 "instead:"
-msgstr ""
+msgstr "设备节点会随着设备的增加或删除而发生变化，因此，人们可能希望使用这个规则集来代替对所有USB设备的访问："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1042
@@ -2295,6 +2302,9 @@ msgstr ""
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1049
 msgid "Next, enable the ruleset in /etc/rc.conf:"
 msgstr ""
+"另外， 您还需要在 <filename>/etc/rc.conf</filename> 文件中， 启用 "
+"<citerefentry><refentrytitle>devfs."
+"rules</refentrytitle><manvolnum>5</manvolnum></citerefentry> 规则集："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1053
