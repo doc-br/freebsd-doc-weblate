@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:55-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 18:35+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Traditional) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookdisks_index/zh_TW/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/disks/_index.adoc:1
@@ -31,13 +34,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:9
 #, no-wrap
 msgid "Storage"
-msgstr ""
+msgstr "儲存設備"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/disks/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "概述"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:48
@@ -50,17 +53,17 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:50
 msgid "After reading this chapter, you will know:"
-msgstr ""
+msgstr "讀完這章，您將了解："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:52
 msgid "How to add additional hard disks to a FreeBSD system."
-msgstr ""
+msgstr "如何在 FreeBSD 系統加入額外的硬碟。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:53
 msgid "How to grow the size of a disk's partition on FreeBSD."
-msgstr ""
+msgstr "如何在 FreeBSD 擴增磁碟分割區的大小。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:54
@@ -75,37 +78,37 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:56
 msgid "How to use the backup programs available under FreeBSD."
-msgstr ""
+msgstr "如何使用在 FreeBSD 下可用的備份程式。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:57
 msgid "How to set up memory disks."
-msgstr ""
+msgstr "如何設定記憶體磁碟。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:58
 msgid "What file system snapshots are and how to use them efficiently."
-msgstr ""
+msgstr "什麼是檔案系統快照 (Snapshot) 以及如何有效使用。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:59
 msgid "How to use quotas to limit disk space usage."
-msgstr ""
+msgstr "如何使用配額 (Quota) 來限制磁碟空間使用量。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:60
 msgid "How to encrypt disks and swap to secure them against attackers."
-msgstr ""
+msgstr "如何加密磁碟及交換空間來防範攻擊者。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:61
 msgid "How to configure a highly available storage network."
-msgstr ""
+msgstr "如何設定高可用性 (Highly available) 的儲存網路。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:63
 msgid "Before reading this chapter, you should:"
-msgstr ""
+msgstr "在開始閱讀這章之前，您需要："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:65
@@ -118,7 +121,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:67
 #, no-wrap
 msgid "Adding Disks"
-msgstr ""
+msgstr "加入磁碟"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:70
@@ -160,6 +163,7 @@ msgid ""
 "improve performance on newer disks with larger hardware block sizes, the "
 "partition is aligned to one megabyte boundaries:"
 msgstr ""
+"建立完分割表格式後接著加入一個分割區，要在新的磁碟增進效能可使用較大的硬體區塊大小 (Block size)，此分割區會對齊 1 MB 的邊界："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:86
@@ -195,7 +199,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:102
 msgid "A file system is created in the new partition on the new disk:"
-msgstr ""
+msgstr "在新磁碟的新分割區上建立檔案系統："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:106
@@ -232,7 +236,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:123
 msgid "The new disk can be mounted manually, without restarting the system:"
-msgstr ""
+msgstr "新的磁碟也可手動掛載，無須重新啟動系統："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:127
@@ -244,7 +248,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:130
 #, no-wrap
 msgid "Resizing and Growing Disks"
-msgstr ""
+msgstr "重設大小與擴增磁碟"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:133
@@ -268,7 +272,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:137
 msgid "List the partitions on the disk to see the current configuration:"
-msgstr ""
+msgstr "列出在磁碟上的分割區來查看目前的設定："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:146
@@ -304,7 +308,7 @@ msgstr ""
 msgid ""
 "Now the additional space on the disk is available for use by a new "
 "partition, or an existing partition can be expanded:"
-msgstr ""
+msgstr "現在在磁碟上的額外空間已經可以被新的分割區使用，或者可以拿來擴充既有的分割區："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:170
@@ -327,11 +331,13 @@ msgid ""
 "so it can safely be unmounted, deleted, and then recreate the third "
 "partition after resizing the second partition."
 msgstr ""
+"分割區只能在連續的未使用空間上重設大小。在這個例子中，磁碟上最後的分割區為交換 (Swap) 分割區，而第二個分割區才是需要重設大小的分割區。由於交換分割"
+"區中只會有暫存的資料，所以此時可以安全的卸載、刪除，然後在重設第二個分割區大小之後再重建最後一個分割區。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:175
 msgid "Disable the swap partition:"
-msgstr ""
+msgstr "停用交換分割區："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:179
@@ -457,7 +463,7 @@ msgstr ""
 msgid ""
 "Both the partition and the file system on it have now been resized to use "
 "the newly-available disk space."
-msgstr ""
+msgstr "現在分割區與檔案系統已透過重設大小來使用新增加的磁碟空間。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/disks/_index.adoc:256
@@ -526,7 +532,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:285
 #, no-wrap
 msgid "Device Configuration"
-msgstr ""
+msgstr "裝置設定"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:288
@@ -735,7 +741,7 @@ msgstr ""
 msgid ""
 "After device removal, the system message buffer will show messages similar "
 "to the following:"
-msgstr ""
+msgstr "裝置移除之後，系統訊息緩衝區會顯示如下的訊息："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:400
@@ -751,7 +757,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:402
 #, no-wrap
 msgid "Automounting Removable Media"
-msgstr ""
+msgstr "自動掛載可移除的媒體"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:405
@@ -818,7 +824,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:440
 msgid "Start the services immediately with:"
-msgstr ""
+msgstr "立即啟動服務："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:447
@@ -844,7 +850,7 @@ msgid ""
 "The file system is transparently mounted on the first access, and unmounted "
 "after a period of inactivity. Automounted drives can also be unmounted "
 "manually:"
-msgstr ""
+msgstr "檔案系統會在第一次存取時自動掛載，並在一段時間未使用後自動卸載。自動掛載的磁碟也可手動卸載："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:456
@@ -890,7 +896,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:468
 #, no-wrap
 msgid "Supported Devices"
-msgstr ""
+msgstr "支援的裝置"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:471
@@ -1482,7 +1488,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:738
 #, no-wrap
 msgid "Configuration"
-msgstr ""
+msgstr "設定"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:741
@@ -1883,7 +1889,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:911
 #, no-wrap
 msgid "Multi-Session"
-msgstr ""
+msgstr "多階段燒錄 (Multi-Session)"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:914
@@ -1923,7 +1929,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:929
 #, no-wrap
 msgid "For More Information"
-msgstr ""
+msgstr "取得更多資訊"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:932
@@ -2007,7 +2013,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:971
 #, no-wrap
 msgid "Creating and Using Floppy Disks"
-msgstr ""
+msgstr "建立與使用軟碟"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:974
@@ -2234,7 +2240,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1096
 #, no-wrap
 msgid "Backup Basics"
-msgstr ""
+msgstr "備份基礎概念"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1099
@@ -2242,7 +2248,7 @@ msgid ""
 "Implementing a backup plan is essential in order to have the ability to "
 "recover from disk failure, accidental file deletion, random file corruption, "
 "or complete machine destruction, including destruction of on-site backups."
-msgstr ""
+msgstr "為了要能夠從磁碟故障、意外刪除文件、隨機文件損壞或完全機器毀壞，包含本地備份毀壞進行恢復，執行備份計劃是必要的。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1101
@@ -2250,7 +2256,7 @@ msgid ""
 "The backup type and schedule will vary, depending upon the importance of the "
 "data, the granularity needed for file restores, and the amount of acceptable "
 "downtime. Some possible backup techniques include:"
-msgstr ""
+msgstr "備份的類型與排程會依情況有所不同，取決於資料的重要性、檔案還原所需的程度以及可接受的停機時間。一些可用來備份的技術有："
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1103
@@ -2258,14 +2264,14 @@ msgid ""
 "Archives of the whole system, backed up onto permanent, off-site media. This "
 "provides protection against all of the problems listed above, but is slow "
 "and inconvenient to restore from, especially for non-privileged users."
-msgstr ""
+msgstr "封存整個檔案系統，備份至永久、異地媒體。這可在以上所列的所有問題發生時提供保護，但要還原會較慢且不方便，特別是對於沒有權限的使用者。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1104
 msgid ""
 "File system snapshots, which are useful for restoring deleted files or "
 "previous versions of files."
-msgstr ""
+msgstr "檔案系統快照 (Snapshot)，對於還原已刪除的檔案或先前版本的檔案非常有用。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1105
@@ -2290,19 +2296,21 @@ msgid ""
 "could make a manual backup of individual directories or files before making "
 "file edits or deletions."
 msgstr ""
+"通常會混合使用各種備份技術，例如，建立一個排程每週自動做儲存於異地的完整系統備份，並使用每小時的 ZFS "
+"快照來輔助備份。此外，在對檔案做編輯或刪除前手動備份各別目錄或檔案。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1110
 msgid ""
 "This section describes some of the utilities which can be used to create and "
 "manage backups on a FreeBSD system."
-msgstr ""
+msgstr "本章節會介紹一些可以用來在 FreeBSD 上建立與管理系統備份的工具。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/disks/_index.adoc:1111
 #, no-wrap
 msgid "File System Backups"
-msgstr ""
+msgstr "檔案系統備份"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1114
@@ -2403,14 +2411,14 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1149
 #, no-wrap
 msgid "Directory Backups"
-msgstr ""
+msgstr "目錄備份"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1152
 msgid ""
 "Several built-in utilities are available for backing up and restoring "
 "specified files and directories as needed."
-msgstr ""
+msgstr "系統已有內建數個工具可在需要時用來備份與還原指定的檔案與目錄。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1154
@@ -2532,7 +2540,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1206
 #, no-wrap
 msgid "Using Data Tapes for Backups"
-msgstr ""
+msgstr "使用資料磁帶備份"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1209
@@ -2629,7 +2637,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1250
 #, no-wrap
 msgid "Third-Party Backup Utilities"
-msgstr ""
+msgstr "第三方備份工具"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1253
@@ -2640,6 +2648,8 @@ msgid ""
 "client/server based and can be used to automate the backups of a single "
 "system or all of the computers in a network."
 msgstr ""
+"FreeBSD Port 套件集提供了許多第三方工具可用於排程建立備份，簡化磁帶備份並讓備份更簡單方便。許多這類的應用程式是以客戶端/伺服器為基礎，可用來"
+"自動化單一系統或網路上所有電腦的備份。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1255
@@ -2650,19 +2660,19 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1256
 #, no-wrap
 msgid "Emergency Recovery"
-msgstr ""
+msgstr "緊急還原"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1259
 msgid ""
 "In addition to regular backups, it is recommended to perform the following "
 "steps as part of an emergency preparedness plan."
-msgstr ""
+msgstr "除了正常的備份外，建議將下以步驟做為緊急準備計劃的一部份。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1261
 msgid "Create a print copy of the output of the following commands:"
-msgstr ""
+msgstr "替以下指令的輸出建立一份可列印的複本："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1263
@@ -2706,6 +2716,8 @@ msgid ""
 "backups. These notes may prevent the inadvertent destruction of the backups "
 "while under the stress of performing an emergency recovery."
 msgstr ""
+"然後，測試救援 Shell "
+"下的備份。記錄下整個程序，將這份記錄隨媒體、列印結果、備份檔一併保存，這份記錄可以避免在緊張壓力下做緊急還原時因不慎造成備份的毀壞。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1276
@@ -2713,13 +2725,13 @@ msgid ""
 "For an added measure of security, store the latest backup at a remote "
 "location which is physically separated from the computers and disk drives by "
 "a significant distance."
-msgstr ""
+msgstr "要再安全性一點，則可將最新的備份儲存在與實體電腦與磁碟機有一段明顯距離的遠端位置。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/disks/_index.adoc:1278
 #, no-wrap
 msgid "Memory Disks"
-msgstr ""
+msgstr "記憶體磁碟"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1281
@@ -2748,7 +2760,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1290
 #, no-wrap
 msgid "Attaching and Detaching Existing Images"
-msgstr ""
+msgstr "連接與解除連接既有的映象檔"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1293
@@ -2807,7 +2819,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1313
 #, no-wrap
 msgid "Creating a File- or Memory-Backed Memory Disk"
-msgstr ""
+msgstr "建立以檔案或記憶體為基底的磁碟"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1316
@@ -2927,7 +2939,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1377
 #, no-wrap
 msgid "File System Snapshots"
-msgstr ""
+msgstr "檔案系統快照"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1380
@@ -3069,7 +3081,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1431
 #, no-wrap
 msgid "Disk Quotas"
-msgstr ""
+msgstr "磁碟配額"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1434
@@ -3078,7 +3090,7 @@ msgid ""
 "files a user or members of a group may allocate on a per-file system "
 "basis. This prevents one user or group of users from consuming all of the "
 "available disk space."
-msgstr ""
+msgstr "磁碟配額可以用來限制使用者或群組成員能夠在各別檔案系統上使用的磁碟空間量或檔案數量。這個可避免一個使用者或群組成員耗盡所有磁碟的可用空間。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1436
@@ -3092,12 +3104,12 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1437
 #, no-wrap
 msgid "Enabling Disk Quotas"
-msgstr ""
+msgstr "開啟磁碟配額"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1440
 msgid "To determine if the FreeBSD kernel provides support for disk quotas:"
-msgstr ""
+msgstr "查看 FreeBSD 核心是否支援磁碟配額："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1445
@@ -3207,12 +3219,12 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1488
 #, no-wrap
 msgid "Setting Quota Limits"
-msgstr ""
+msgstr "設定配額限制"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1491
 msgid "To verify that quotas are enabled, run:"
-msgstr ""
+msgstr "要確認配額已經開啟，可執行："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1495
@@ -3225,7 +3237,7 @@ msgstr ""
 msgid ""
 "There should be a one line summary of disk usage and current quota limits "
 "for each file system that quotas are enabled on."
-msgstr ""
+msgstr "每個有開啟配額的檔案系統應該會有一行磁碟用量及目前配額限制的摘要。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1500
@@ -3241,6 +3253,8 @@ msgid ""
 "number of files (inode quotas), or a combination of both. Each limit is "
 "further broken down into two categories: hard and soft limits."
 msgstr ""
+"有數個選項可以強制限制使用者或群組對磁碟空間的使用量以及可以建立多少檔案。可以用磁碟空間 (block 配額)，檔案數量 (inode 配額) "
+"或同時使用來分配。每種限制又可進一步細分為兩個類型：硬性 (Hard) 及軟性 (Soft) 限制。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1504
@@ -3251,6 +3265,8 @@ msgid ""
 "currently using 490 kbytes, the user can only allocate an additional 10 "
 "kbytes. Attempting to allocate an additional 11 kbytes will fail."
 msgstr ""
+"硬性限制無法被超額使用。一旦使用者超出了硬性限制，該使用者在該檔案系統將無法再使用任何空間。舉例來說，若一個使用者在一個檔案系統上有 500 KB "
+"的硬性限制，且目前已經使用了  490 KB，該使用者只能再使用 10 KB 的空間，若嘗試使用 11 KB 的空間將會失敗。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1506
@@ -3261,6 +3277,8 @@ msgid ""
 "further allocations are allowed. When the user drops back below the soft "
 "limit, the grace period is reset."
 msgstr ""
+"軟性限制在有限的時間內可以被超額使用，即為寬限期 (Grace period)，預設為一週。若一個使用者超出限制並超過寬限期，則軟性限制將轉為硬性限制並且"
+"將不允許再使用空間。當使用者使用的空間回到低於軟性限制內，寬限期就會被重置。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1508
@@ -3301,7 +3319,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1527
 msgid "The new quota limits take effect upon exiting the editor."
-msgstr ""
+msgstr "新的配額限制將在離開編輯器後生效。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1529
@@ -3328,7 +3346,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1537
 #, no-wrap
 msgid "Checking Quota Limits and Disk Usage"
-msgstr ""
+msgstr "檢查配額限制與磁碟使用狀況"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1540
@@ -3373,7 +3391,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1553
 #, no-wrap
 msgid "Quotas over NFS"
-msgstr ""
+msgstr "NFS 上的配額"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1556
@@ -3413,7 +3431,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1572
 #, no-wrap
 msgid "Encrypting Disk Partitions"
-msgstr ""
+msgstr "磁碟分割區加密"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1575
@@ -4049,7 +4067,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1848
 #, no-wrap
 msgid "Encrypting Swap"
-msgstr ""
+msgstr "交換空間加密"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1851
@@ -4075,7 +4093,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1854
 #, no-wrap
 msgid "Configuring Encrypted Swap"
-msgstr ""
+msgstr "設定已加密的交換空間"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1857
@@ -4203,7 +4221,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1901
 #, no-wrap
 msgid "Encrypted Swap Verification"
-msgstr ""
+msgstr "加密的交換空間檢驗"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1904
@@ -4353,7 +4371,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1950
 #, no-wrap
 msgid "HAST Operation"
-msgstr ""
+msgstr "HAST 運作模式"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1953
@@ -4448,7 +4466,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:1970
 #, no-wrap
 msgid "HAST Configuration"
-msgstr ""
+msgstr "HAST 設定"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1973
@@ -4644,7 +4662,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:2063
 #, no-wrap
 msgid "Failover Configuration"
-msgstr ""
+msgstr "容錯移轉設定"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:2066
@@ -4983,7 +5001,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:2219
 #, no-wrap
 msgid "Troubleshooting"
-msgstr ""
+msgstr "疑難排解"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:2222
@@ -5007,7 +5025,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/disks/_index.adoc:2226
 #, no-wrap
 msgid "Recovering from the Split-brain Condition"
-msgstr ""
+msgstr "自 Split-brain 情況復原"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:2229
