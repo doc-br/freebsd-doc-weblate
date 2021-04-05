@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 12:39+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
+"projects/documentation/booksarch-handbookkobjchapter/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:1
@@ -25,7 +28,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:8
 #, no-wrap
 msgid "Kernel Objects"
-msgstr ""
+msgstr "内核对象"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:33
@@ -40,57 +43,57 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:35
 #, no-wrap
 msgid "Terminology"
-msgstr ""
+msgstr "术语"
 
 #. type: Labeled list
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:37
 #, no-wrap
 msgid "Object"
-msgstr ""
+msgstr "对象"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:39
 msgid "A set of data - data structure - data allocation."
-msgstr ""
+msgstr "数据集合-数据结构-数据分配的集合。"
 
 #. type: Labeled list
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:40
 #, no-wrap
 msgid "Method"
-msgstr ""
+msgstr "方法"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:42
 msgid "An operation - function."
-msgstr ""
+msgstr "某一种操作──函数。"
 
 #. type: Labeled list
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:43
 #, no-wrap
 msgid "Class"
-msgstr ""
+msgstr "类"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:45
 msgid "One or more methods."
-msgstr ""
+msgstr "一种或多种方法。"
 
 #. type: Labeled list
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:46
 #, no-wrap
 msgid "Interface"
-msgstr ""
+msgstr "接口"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:48
 msgid "A standard set of one or more methods."
-msgstr ""
+msgstr "一种或多种方法的一个标准集合。"
 
 #. type: Title ==
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:50
 #, no-wrap
 msgid "Kobj Operation"
-msgstr ""
+msgstr "Kobj的工作流程"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:53
@@ -98,7 +101,7 @@ msgid ""
 "Kobj works by generating descriptions of methods. Each description holds a "
 "unique id as well as a default function. The description's address is used "
 "to uniquely identify the method within a class' method table."
-msgstr ""
+msgstr "Kobj工作时，产生方法的描述。每个描述有一个唯一的标识和一个缺省函数。 某个描述的地址被用来在一个类的方法表里唯一的标识方法。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:55
@@ -117,11 +120,17 @@ msgid ""
 "associated function within the class is used; otherwise, the default "
 "function associated with the method description is used."
 msgstr ""
+"构建一个类，就是要建立一张方法表，并将这张表关联到一个或多个函数(方法)； "
+"这些函数(方法)都带有方法描述。使用前，类要被编译。编译时要为这个类分配一些缓存。 在方法表中的每个方法描述都会被指派一个唯一的标识， "
+"除非已经被其它引用它的类在编译时指派了标识。对于每个将要被使用的方法， 都会由脚本生成一个函数(方法查找函数)，以解析外来参数， "
+"并在被查询时给出方法描述的地址。被生成的函数(方法查找函数) 凭着那个方法描述的唯一标识按Hash的方法查找对象的类的缓存。 "
+"如果这个方法不在缓存中，函数会查找使用类的方法表。如果这个方法被找到了， 类里的相关函数(也就是某个方法的实现代码)就会被使用。 "
+"否则，这个方法描述的缺省函数将被使用。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:57
 msgid "These indirections can be visualized as the following:"
-msgstr ""
+msgstr "这些过程可被表示如下："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:61
@@ -133,13 +142,13 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:64
 #, no-wrap
 msgid "Using Kobj"
-msgstr ""
+msgstr "使用Kobj"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:66
 #, no-wrap
 msgid "Structures"
-msgstr ""
+msgstr "结构"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:71
@@ -151,7 +160,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:73
 #, no-wrap
 msgid "Functions"
-msgstr ""
+msgstr "结构"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:83
@@ -170,7 +179,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:85
 #, no-wrap
 msgid "Macros"
-msgstr ""
+msgstr "宏"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:93
@@ -186,7 +195,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:95
 #, no-wrap
 msgid "Headers"
-msgstr ""
+msgstr "头文件"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:101
@@ -200,7 +209,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:103
 #, no-wrap
 msgid "Creating an Interface Template"
-msgstr ""
+msgstr "建立一个接口的模板"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:106
@@ -233,7 +242,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:157
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:182
 msgid "For example:"
-msgstr ""
+msgstr "例如："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:116
@@ -325,7 +334,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:170
 msgid "Other complete examples:"
-msgstr ""
+msgstr "其它完整的例子:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:175
@@ -339,7 +348,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:177
 #, no-wrap
 msgid "Creating a Class"
-msgstr ""
+msgstr "创建类"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:180
@@ -383,7 +392,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:196
 #, no-wrap
 msgid "Creating an Object"
-msgstr ""
+msgstr "建立一个对象"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:199
@@ -400,12 +409,12 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:201
 msgid "To integrate Kobj into the object you should use the macro KOBJ_FIELDS."
-msgstr ""
+msgstr "将Kobj的数据集成到对象中要使用宏KOBJ_FIELDS。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:203
 msgid "For example"
-msgstr ""
+msgstr "例如"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:211
@@ -422,7 +431,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:213
 #, no-wrap
 msgid "Calling Methods"
-msgstr ""
+msgstr "调用方法"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:216
@@ -432,14 +441,14 @@ msgid ""
 "interface name and the method name with a few modifications. The interface "
 "name should be concatenated with the method name using a '_' between them, "
 "all in upper case."
-msgstr ""
+msgstr "使用Kobj的最后一部就是通过生成的函数调用对象类中的方法。调用时，接口名与方法名用'_'接合，而且全部使用大写字母。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:218
 msgid ""
 "For example, if the interface name was foo and the method was bar then the "
 "call would be:"
-msgstr ""
+msgstr "例如，接口名为foo，方法为bar，调用就是:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:222
@@ -451,7 +460,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:224
 #, no-wrap
 msgid "Cleaning Up"
-msgstr ""
+msgstr "善后处理"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:226
