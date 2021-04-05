@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-14 11:02-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 12:39+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookzfs_index/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1
@@ -70,6 +73,8 @@ msgid ""
 "space is allocated from that shared pool. Space is available to all file "
 "systems, and can be increased by adding new storage devices to the pool."
 msgstr ""
+"存储池：实体的储存设备都会先被加入到一个存储池（Pool），这个共用的存储池可用来配置储存空间，存储池的空间可被所有的文件系统使用且通过加入新的储存设备来"
+"增加空间。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:53
@@ -121,7 +126,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:62
 #, no-wrap
 msgid "Quick Start Guide"
-msgstr ""
+msgstr "快速入门"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:65
@@ -140,7 +145,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:72
 msgid "Then start the service:"
-msgstr ""
+msgstr "然后启动服务："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:76
@@ -160,12 +165,12 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:81
 #, no-wrap
 msgid "Single Disk Pool"
-msgstr ""
+msgstr "单磁盘存储池"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:84
 msgid "To create a simple, non-redundant pool using a single disk device:"
-msgstr ""
+msgstr "使用一个磁盘建立一个简单，无备份的存储池："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:88
@@ -237,7 +242,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:127
 msgid "Compression can be disabled with:"
-msgstr ""
+msgstr "可以使用以下命令关闭压缩功能："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:131
@@ -356,7 +361,7 @@ msgstr ""
 msgid ""
 "To destroy the file systems and then destroy the pool as it is no longer "
 "needed:"
-msgstr ""
+msgstr "当我们不再需要时可以删除卷和存储池："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:203
@@ -371,7 +376,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:206
 #, no-wrap
 msgid "RAID-Z"
-msgstr ""
+msgstr "RAID-Z"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:209
@@ -421,7 +426,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:230
 msgid ""
 "Compression and keeping extra copies of directories and files can be enabled:"
-msgstr ""
+msgstr "可以启用压缩功能和保留文件副本功能："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:235
@@ -436,7 +441,7 @@ msgstr ""
 msgid ""
 "To make this the new home directory for users, copy the user data to this "
 "directory and create the appropriate symbolic links:"
-msgstr ""
+msgstr "要让这个空间作为使用者的新 home 目录位置，需要复制使用者数据到这个目录并建立适合的符号链接（Symbolic link）："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:245
@@ -458,7 +463,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:250
 msgid "Try creating a file system snapshot which can be rolled back later:"
-msgstr ""
+msgstr "试着建立文件系统快照（Snapshot），稍后可用来还原（Rollback）："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:254
@@ -471,7 +476,7 @@ msgstr ""
 msgid ""
 "Snapshots can only be made of a full file system, not a single directory or "
 "file."
-msgstr ""
+msgstr "只可以对整个卷进行快照，无法对个别目录使用快照。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:259
@@ -507,7 +512,7 @@ msgid ""
 "It is possible to write a script to perform regular snapshots on user data. "
 "However, over time, snapshots can consume a great deal of disk space. The "
 "previous snapshot can be removed using the command:"
-msgstr ""
+msgstr "也可以写一个脚本对用户的文件进行定期快照，但随着时间推移可能消耗大量的磁盘空间。先前的快照可以使用以下指令删除："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:277
@@ -661,7 +666,7 @@ msgstr ""
 msgid ""
 "This indicates that the device was previously taken offline by the "
 "administrator with this command:"
-msgstr ""
+msgstr "这表示设备在之前已经被管理人员用以下命令下线："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:358
@@ -716,13 +721,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:388
 msgid "In this example, everything is normal."
-msgstr ""
+msgstr "在这个例子中，所有磁盘均正常工作。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/zfs/_index.adoc:390
 #, no-wrap
 msgid "Data Verification"
-msgstr ""
+msgstr "数据校验"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:393
@@ -779,7 +784,7 @@ msgid ""
 "The completion date of the last scrub operation is displayed to help track "
 "when another scrub is required. Routine scrubs help protect data from silent "
 "corruption and ensure the integrity of the pool."
-msgstr ""
+msgstr "查询结果会显示上次清理时间来协助判断是否还需要清理，定期清理可以确保数据完整性。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:430
@@ -806,7 +811,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:437
 #, no-wrap
 msgid "Creating and Destroying Storage Pools"
-msgstr ""
+msgstr "创建与删除存储池"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:440
@@ -828,7 +833,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:442
 msgid "Create a simple mirror pool:"
-msgstr ""
+msgstr "创建一个简单的存储池："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:451
@@ -950,7 +955,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:513
 #, no-wrap
 msgid "Adding and Removing Devices"
-msgstr ""
+msgstr "添加和移除设备"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:516
@@ -1117,7 +1122,7 @@ msgstr ""
 msgid ""
 "When attaching additional devices to a boot pool, remember to update the "
 "bootcode."
-msgstr ""
+msgstr "当连接额外的设备到一个可以开机的存储池，要记得更新 Bootcode。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:586
@@ -1176,11 +1181,13 @@ msgid ""
 "disk in a mirror group remains, it ceases to be a mirror and reverts to "
 "being a stripe, risking the entire pool if that remaining disk fails."
 msgstr ""
+"现在已无法从存储上移除 vdev，且磁盘只能够在有足够剩余空间的情况下从 mirror 移除，若在 mirror 群组中只剩下一个磁盘，便会取消 "
+"mirror 然后还原为 stripe，若剩下的那个磁盘故障，便会影响到整个存储池。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:628
 msgid "Remove a disk from a three-way mirror group:"
-msgstr ""
+msgstr "从一个三方 mirror 群组移除一个磁盘："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:636
@@ -1222,7 +1229,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:662
 #, no-wrap
 msgid "Checking the Status of a Pool"
-msgstr ""
+msgstr "检擦存储池状态"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:665
@@ -1249,7 +1256,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:688
 #, no-wrap
 msgid "Clearing Errors"
-msgstr ""
+msgstr "排除错误"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:691
@@ -1265,7 +1272,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:693
 #, no-wrap
 msgid "Replacing a Functioning Device"
-msgstr ""
+msgstr "更换正在运行的设备"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:696
@@ -1283,7 +1290,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:698
 msgid "Replace a functioning device in the pool:"
-msgstr ""
+msgstr "更换存储池中正在运行的设备："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:716
@@ -1361,7 +1368,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:761
 #, no-wrap
 msgid "Dealing with Failed Devices"
-msgstr ""
+msgstr "处理故障设备"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:764
@@ -1473,7 +1480,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:827
 #, no-wrap
 msgid "Scrubbing a Pool"
-msgstr ""
+msgstr "清理存储池"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:830
@@ -1511,7 +1518,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:858
 #, no-wrap
 msgid "Self-Healing"
-msgstr ""
+msgstr "自我修复"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:861
@@ -1615,6 +1622,8 @@ msgid ""
 "certain that proper backups of the pool are created before running the "
 "command!"
 msgstr ""
+"这是一个危险的操作，会破坏重要的数据。在这里使用仅为了示范用，不应在存储池正常运作时尝试使用，也不应将这个故意损坏数据的例子用在任何其他的文件系统上，所以"
+"请勿使用任何不属于该存储池的其他磁盘设备名称并确定在执行指令前已对存储池做正确的备份！"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:914
@@ -1791,12 +1800,14 @@ msgid ""
 "The pool is now back to a fully working state and all the errors have been "
 "cleared."
 msgstr ""
+"The pool is now back to a fully working state and all the errors have been "
+"cleared."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1024
 #, no-wrap
 msgid "Growing a Pool"
-msgstr ""
+msgstr "扩增存储池"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1027
@@ -1823,7 +1834,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1031
 #, no-wrap
 msgid "Importing and Exporting Pools"
-msgstr ""
+msgstr "导入与导出存储池"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1034
@@ -1842,7 +1853,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1036
 msgid "Export a pool that is not in use:"
-msgstr ""
+msgstr "导出未使用的存储池："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1040
@@ -1866,7 +1877,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1045
 msgid "List all available pools for import:"
-msgstr ""
+msgstr "列出所有可导入的存储池："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1054
@@ -1891,7 +1902,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1060
 msgid "Import the pool with an alternative root directory:"
-msgstr ""
+msgstr "使用替代的根目录导入存储池："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1068
@@ -1908,7 +1919,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1071
 #, no-wrap
 msgid "Upgrading a Storage Pool"
-msgstr ""
+msgstr "升级存储池"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1074
@@ -2016,7 +2027,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1125
 msgid "Upgrade a pool to support additional feature flags:"
-msgstr ""
+msgstr "升级存储池支持新版的功能旗标（Feature flags）："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1138
@@ -2093,7 +2104,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1183
 msgid "For legacy boot using GPT, use the following command:"
-msgstr ""
+msgstr "对使用GPT分区的boot，使用以下命令："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1187
@@ -2104,7 +2115,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1190
 msgid "For systems using EFI to boot, execute the following command:"
-msgstr ""
+msgstr "对使用EFI的启动方式，请执行以下命令："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1194
@@ -2123,7 +2134,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1200
 #, no-wrap
 msgid "Displaying Recorded Pool History"
-msgstr ""
+msgstr "显示已记录的存储池历史日志"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1203
@@ -2224,7 +2235,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1248
 #, no-wrap
 msgid "Performance Monitoring"
-msgstr ""
+msgstr "性能监控"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1251
@@ -2288,7 +2299,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1279
 #, no-wrap
 msgid "Splitting a Storage Pool"
-msgstr ""
+msgstr "分割存储池"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1282
@@ -2319,7 +2330,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1289
 #, no-wrap
 msgid "Creating and Destroying Datasets"
-msgstr ""
+msgstr "创建和删除数据集"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1292
@@ -2393,12 +2404,12 @@ msgid ""
 "Destroying a dataset is much quicker than deleting all of the files that "
 "reside on the dataset, as it does not involve scanning all of the files and "
 "updating all of the corresponding metadata."
-msgstr ""
+msgstr "摧毁数据集会比删除所有在数据集上所残留的文件来的快，由于摧毁数据集并不会扫描所有文件并更新所有相关的 Metadata。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1334
 msgid "Destroy the previously-created dataset:"
-msgstr ""
+msgstr "删除先前建立的数据集："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1369
@@ -2457,7 +2468,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1374
 #, no-wrap
 msgid "Creating and Destroying Volumes"
-msgstr ""
+msgstr "创建与删除卷"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1377
@@ -2504,12 +2515,14 @@ msgid ""
 "dataset. The operation is nearly instantaneous, but it may take several "
 "minutes for the free space to be reclaimed in the background."
 msgstr ""
+"摧毁一个磁盘区与摧毁一个一般的文件系统数据集差不多。操作上几乎是即时的，但在背景会需要花费数分钟来让摧毁一个磁盘区与摧毁一个一般的文件系统数据集差不多。操"
+"作上几乎是即时的，但在背景会需要花费数分钟来让释放空间再次可用。释放空间再次可用。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1398
 #, no-wrap
 msgid "Renaming a Dataset"
-msgstr ""
+msgstr "重命名数据集"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1401
@@ -2525,7 +2538,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1403
 msgid "Rename a dataset and move it to be under a different parent dataset:"
-msgstr ""
+msgstr "重新命名一个数据集并移动该数据集到另一个父数据集："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1439
@@ -2592,7 +2605,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1455
 #, no-wrap
 msgid "Setting Dataset Properties"
-msgstr ""
+msgstr "设定数据集属性"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1458
@@ -2649,7 +2662,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1482
 #, no-wrap
 msgid "Getting and Setting Share Properties"
-msgstr ""
+msgstr "取得与设定共享属性"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1485
@@ -2675,7 +2688,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1497
 msgid "To enable sharing of a dataset, enter:"
-msgstr ""
+msgstr "开启文件共享，输入："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1501
@@ -2701,7 +2714,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1511
 #, no-wrap
 msgid "Managing Snapshots"
-msgstr ""
+msgstr "管理快照（Snapshot）"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1514
@@ -2749,7 +2762,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1518
 #, no-wrap
 msgid "Creating Snapshots"
-msgstr ""
+msgstr "创建快照"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1521
@@ -2761,7 +2774,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1523
 msgid "Create a recursive snapshot of the entire pool:"
-msgstr ""
+msgstr "建立一个整个存储池的递回快照："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1561
@@ -2869,7 +2882,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1591
 #, no-wrap
 msgid "Comparing Snapshots"
-msgstr ""
+msgstr "对比快照"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1594
@@ -2942,7 +2955,7 @@ msgstr ""
 msgid ""
 "Compare two snapshots by providing the full dataset name and snapshot name "
 "of both datasets:"
-msgstr ""
+msgstr "比对两个快照需要提供两个数据集的完整数据集名称与快照名称："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1643
@@ -2971,7 +2984,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1648
 #, no-wrap
 msgid "Snapshot Rollback"
-msgstr ""
+msgstr "使用快照还原"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1651
@@ -3099,7 +3112,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1709
 #, no-wrap
 msgid "Restoring Individual Files from Snapshots"
-msgstr ""
+msgstr "从快照还原个别文件"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1712
@@ -3181,7 +3194,7 @@ msgid ""
 "changed after creation. Files cannot be copied into or removed from snapshot "
 "directories because that would change the state of the dataset they "
 "represent."
-msgstr ""
+msgstr "这个错误用来提醒使用者快照是只读的，在建立之后不能更改。无法复制文件进去或从该快照目录中移除，因为这会变更该数据集所代表的状态。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1750
@@ -3206,7 +3219,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1754
 #, no-wrap
 msgid "Managing Clones"
-msgstr ""
+msgstr "管理副本"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1757
@@ -3226,7 +3239,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1759
 msgid "To demonstrate the clone feature, this example dataset is used:"
-msgstr ""
+msgstr "要示范复本功能会用到这个范例数据集："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1767
@@ -3249,6 +3262,8 @@ msgid ""
 "promoted to a dataset and the old file system removed. This is not strictly "
 "necessary, as the clone and dataset can coexist without problems."
 msgstr ""
+"会使用到复本一般是要在可以保留快照以便出错时可还原的情况下使用指定的数据集做实验，由于快照并无法做更改，所以会建立一个可以读/写的快照复本。当在复本中做完"
+"想要执行的动作后，便可以提升复本成数据集，然后移除旧的文件系统。严格来说这并非必要，因为复本与数据集可同时存在，不会有任何问题。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1777
@@ -3341,7 +3356,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1816
 #, no-wrap
 msgid "Replication"
-msgstr ""
+msgstr "备份"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1819
@@ -3479,7 +3494,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1879
 #, no-wrap
 msgid "Incremental Backups"
-msgstr ""
+msgstr "增量备份"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1882
@@ -3612,7 +3627,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1936
 msgid "This configuration is required:"
-msgstr ""
+msgstr "必要的环境设定："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1938
@@ -3634,7 +3649,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1940
 msgid "On the sending system:"
-msgstr ""
+msgstr "在传送端系统上："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1944
@@ -3647,7 +3662,7 @@ msgstr ""
 msgid ""
 "To mount the pool, the unprivileged user must own the directory, and regular "
 "users must be allowed to mount file systems. On the receiving system:"
-msgstr ""
+msgstr "要挂载存储池，无权限的使用者必须拥有该目录且必须允许一般的使用者挂载文件系统。在接收端系统上："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1956
@@ -3696,7 +3711,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1969
 #, no-wrap
 msgid "Dataset, User, and Group Quotas"
-msgstr ""
+msgstr "数据集、用户和组配额"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1972
@@ -3796,7 +3811,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2011
 msgid "To remove any quota:"
-msgstr ""
+msgstr "要移除所有配额："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2015
@@ -3877,7 +3892,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2050
 #, no-wrap
 msgid "Reservations"
-msgstr ""
+msgstr "保留空间"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2053
@@ -3904,7 +3919,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2062
 msgid "To clear any reservation:"
-msgstr ""
+msgstr "要清除任何保留空间："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2066
@@ -3939,7 +3954,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2079
 #, no-wrap
 msgid "Compression"
-msgstr ""
+msgstr "压缩（Compression）"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2082
@@ -3973,7 +3988,7 @@ msgstr ""
 msgid ""
 "The administrator can monitor the effectiveness of compression using a "
 "number of dataset properties."
-msgstr ""
+msgstr "管理者可以使用数据集的属性来监视压缩的效果。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2095
@@ -4019,12 +4034,14 @@ msgid ""
 "compression, more data may be written than would fit with uncompressed "
 "backups."
 msgstr ""
+"压缩功能在与备份功能一起使用时也可能会有类似的问题，通常会使用配额功能来限制能够储存的资料量来确保有足够的备份空间可用。但是由于配额功能并不会考量压缩状况"
+"，可能会有比未压缩版本备份更多的资料量会被写入到数据集。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2104
 #, no-wrap
 msgid "Zstandard Compression"
-msgstr ""
+msgstr "Zstandard 压缩"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2107
@@ -4088,7 +4105,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2117
 #, no-wrap
 msgid "Deduplication"
-msgstr ""
+msgstr "去重复(Deduplication）"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2120
@@ -4122,6 +4139,7 @@ msgid ""
 "activating this option. A pool with a freshly activated deduplication "
 "property will look like this example:"
 msgstr ""
+"只有要被写入到存储池的新资料才会做去重复的动作，先前已被写入到存储池的资料不会因此启动了这个选项而做去重复。查看已开启去重复属性的存储池会如下："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2135
@@ -4153,7 +4171,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2147
 msgid "Redundant data is detected and deduplicated:"
-msgstr ""
+msgstr "已经侦测到重复的资料并做去重复："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2153
@@ -4255,7 +4273,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2191
 #, no-wrap
 msgid "Delegated Administration"
-msgstr ""
+msgstr "委托管理"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2194
@@ -4274,7 +4292,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2196
 #, no-wrap
 msgid "Delegating Dataset Creation"
-msgstr ""
+msgstr "委托数据集建立"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2199
@@ -4292,7 +4310,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2201
 #, no-wrap
 msgid "Delegating Permission Delegation"
-msgstr ""
+msgstr "委托权限委托"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2204
@@ -4308,13 +4326,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2206
 #, no-wrap
 msgid "Advanced Topics"
-msgstr ""
+msgstr "高级主题"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2209
 #, no-wrap
 msgid "Tuning"
-msgstr ""
+msgstr "优化调整"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2212
@@ -4557,7 +4575,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2240
 #, no-wrap
 msgid "Memory"
-msgstr ""
+msgstr "内存"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2243
@@ -4576,7 +4594,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2244
 #, no-wrap
 msgid "Kernel Configuration"
-msgstr ""
+msgstr "内核配置"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2247
@@ -4605,7 +4623,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2255
 #, no-wrap
 msgid "Loader Tunables"
-msgstr ""
+msgstr "载入程序可调参数"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2258
@@ -4637,7 +4655,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2270
 #, no-wrap
 msgid "Additional Resources"
-msgstr ""
+msgstr "更多资源"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2273
