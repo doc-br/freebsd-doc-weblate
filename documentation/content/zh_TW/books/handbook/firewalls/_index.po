@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 18:35+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Traditional) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookfirewalls_index/zh_TW/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1
@@ -31,13 +34,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:9
 #, no-wrap
 msgid "Firewalls"
-msgstr ""
+msgstr "防火牆"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "概述"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:48
@@ -55,21 +58,21 @@ msgstr ""
 msgid ""
 "Firewalls can enhance the security of a host or a network. They can be used "
 "to do one or more of the following:"
-msgstr ""
+msgstr "防火牆可以加強主機或網路的安全性，它可以用來完成下列事情："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:52
 msgid ""
 "Protect and insulate the applications, services, and machines of an internal "
 "network from unwanted traffic from the public Internet."
-msgstr ""
+msgstr "保護並隔離內部網路的應用程式、服務與主機，避免來自網際網路不必要的存取。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:53
 msgid ""
 "Limit or disable access from hosts of the internal network to services of "
 "the public Internet."
-msgstr ""
+msgstr "限制或者禁止內部網路的主機存取網際網路服務。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:54
@@ -98,22 +101,22 @@ msgid ""
 "FreeBSD provides multiple firewalls in order to meet the different "
 "requirements and preferences for a wide variety of users. Each user should "
 "evaluate which firewall best meets their needs."
-msgstr ""
+msgstr "FreeBSD 提供多個防火牆是為了滿足不同的需求與各種使用者的偏好，每位使用者應評估那一種防火牆最能滿足其需求。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:60
 msgid "After reading this chapter, you will know:"
-msgstr ""
+msgstr "讀完這章，您將了解："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:62
 msgid "How to define packet filtering rules."
-msgstr ""
+msgstr "如何定義封包過濾規則。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:63
 msgid "The differences between the firewalls built into FreeBSD."
-msgstr ""
+msgstr "FreeBSD 內建防火牆之間的差異。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:64
@@ -133,12 +136,12 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:68
 msgid "Before reading this chapter, you should:"
-msgstr ""
+msgstr "在開始閱讀這章之前，您需要："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:70
 msgid "Understand basic FreeBSD and Internet concepts."
-msgstr ""
+msgstr "了解 FreeBSD 基礎及網路概念。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:74
@@ -155,7 +158,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:77
 #, no-wrap
 msgid "Firewall Concepts"
-msgstr ""
+msgstr "防火牆概念"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:80
@@ -219,13 +222,15 @@ msgid ""
 "safer than exclusive firewalls because they significantly reduce the risk of "
 "allowing unwanted traffic."
 msgstr ""
+"內含式的防火牆對於外發的流量有較好的控制，使其成為提供網際網路服務的系統的最佳選擇，它同時可以控制可存取私有網路的網際網路連線，所有不符合該規則的連線會被"
+"封鎖並記錄。一般來說，內含式的防火牆會比排除式的防火牆安全，因為內含式的防火牆可以明顯的減少不必要連線所造成風險。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:94
 msgid ""
 "Unless noted otherwise, all configuration and example rulesets in this "
 "chapter create inclusive firewall rulesets."
-msgstr ""
+msgstr "除非另有說明，否則所有在此章節的範例規則集均為內含式防火牆規則集。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:97
@@ -245,11 +250,14 @@ msgid ""
 "to determine if a packet is valid for a session. Any packets that do not "
 "properly fit the session template are automatically rejected."
 msgstr ""
+"狀態過濾技術 (Stateful filtering) 將所有的流量當做是一個由雙向封包交換所組成的連線階段，當在符合的規則上指定狀態 (State) 時"
+"，防火牆會自動產生內部規則來處理該連線階段中每個預期會通過的封包，這種防火牆有足夠的比對能力可以辨別是否為同一個連線階段的封包，任何不符合連線階段樣板的封"
+"包都會被自動拒絕。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:101
 msgid "When the session completes, it is removed from the dynamic state table."
-msgstr ""
+msgstr "當連線階段結束時，該規則將會動態狀態表 (Dynamic state table) 中移除。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:103
@@ -261,6 +269,9 @@ msgid ""
 "filtering provides advanced matching abilities capable of defending against "
 "the flood of different attack methods employed by attackers."
 msgstr ""
+"Stateful filtering 讓管理者可以專注於封鎖/傳遞新的連線階段，若新的連線階段通過，那麼該連線階段後續的封包將會自動允許通過，且任何假冒的"
+"封包會自動被拒絕。若新的連線階最被封鎖，將不允許其任何後續的封包。Stateful filtering 提供了進階的比對能力，"
+"能夠抵禦不同種類由攻擊者發動的 flood 攻擊。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:105
@@ -287,7 +298,7 @@ msgid ""
 "According to RFC 1918, the following IP address ranges are reserved for "
 "private networks which will never be routed directly to the public Internet, "
 "and therefore are available for use with NAT:"
-msgstr ""
+msgstr "根據 RFC1918，會保留以下範圍的 IP 位址做為私有網路使用，永遠不會被傳送到網際網路，因此可供 NAT 使用："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:111
@@ -681,7 +692,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:290
 #, no-wrap
 msgid "A Simple Gateway with NAT"
-msgstr ""
+msgstr "使用 NAT 的簡單通訊閘"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:293
@@ -1236,7 +1247,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:530
 #, no-wrap
 msgid "Using Tables"
-msgstr ""
+msgstr "使用 Tables"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:533
@@ -1851,7 +1862,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:789
 #, no-wrap
 msgid "Network Hygiene"
-msgstr ""
+msgstr "網路保健"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:792
@@ -1950,7 +1961,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:829
 #, no-wrap
 msgid "Handling Non-Routable Addresses"
-msgstr ""
+msgstr "處理不可路由 (Non-Routable) 的位址"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:832
@@ -2628,7 +2639,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1695
 #, no-wrap
 msgid "Example Ruleset"
-msgstr ""
+msgstr "範例規則集"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1049
@@ -3209,7 +3220,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1289
 #, no-wrap
 msgid "Port Redirection"
-msgstr ""
+msgstr "Port 重新導向"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1292
@@ -3291,7 +3302,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1323
 #, no-wrap
 msgid "Address Redirection"
-msgstr ""
+msgstr "位址重新導向"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1326
@@ -3324,7 +3335,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1335
 msgid "In the example, the arguments would read:"
-msgstr ""
+msgstr "在這個例子中列出了以下裝置："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1340
@@ -3550,7 +3561,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1442
 #, no-wrap
 msgid "Logging Firewall Messages"
-msgstr ""
+msgstr "記錄防火牆訊息"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1445
@@ -3605,7 +3616,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1458
 #, no-wrap
 msgid "Building a Rule Script"
-msgstr ""
+msgstr "建立規則 Script"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1461
@@ -5160,7 +5171,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2059
 #, no-wrap
 msgid "Enabling Blacklistd"
-msgstr ""
+msgstr "開啟 Blacklistd"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2062
@@ -5182,7 +5193,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2069
 msgid "To start the service manually, run this command:"
-msgstr ""
+msgstr "要立即啟動服務可："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2073
@@ -5194,7 +5205,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2075
 #, no-wrap
 msgid "Creating a Blacklistd Ruleset"
-msgstr ""
+msgstr "建立 Blacklistd 規則集"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2078
@@ -5209,7 +5220,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2079
 #, no-wrap
 msgid "Local Rules"
-msgstr ""
+msgstr "本地規則"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2082
@@ -5384,7 +5395,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2144
 #, no-wrap
 msgid "Remote Rules"
-msgstr ""
+msgstr "遠端規則"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2147
@@ -5445,7 +5456,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2162
 #, no-wrap
 msgid "Blacklistd Client Configuration"
-msgstr ""
+msgstr "Blacklistd 客戶端設定"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2165
@@ -5465,7 +5476,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2172
 msgid "Restart sshd afterwards to make these changes take effect."
-msgstr ""
+msgstr "接著重新啟動 sshd 來使變更生效。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2174
@@ -5490,7 +5501,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2182
 #, no-wrap
 msgid "Blacklistd Management"
-msgstr ""
+msgstr "Blacklistd 管理"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2185
@@ -5548,7 +5559,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2206
 #, no-wrap
 msgid "Removing Hosts from the Block List"
-msgstr ""
+msgstr "從封鎖清單移除主機"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2209
