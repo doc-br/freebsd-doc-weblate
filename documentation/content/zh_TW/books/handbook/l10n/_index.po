@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 20:20+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Traditional) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookl10n_index/zh_TW/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/l10n/_index.adoc:1
@@ -37,7 +40,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/l10n/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "概述"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:48
@@ -48,6 +51,8 @@ msgid ""
 "can choose from most of the major languages, including, but not limited to: "
 "Chinese, German, Japanese, Korean, French, Russian, and Vietnamese."
 msgstr ""
+"FreeBSD 計劃的使用者及貢獻者分佈在世界各地，也因此 FreeBSD 支援多語系，讓使用者可以使用非英文語言來檢視、輸入或處理資料。使用者可以選擇大"
+"多數主要語言，包含但不限於以下語言：中文、德文、日文、韓文、法文、俄文及越南文。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:50
@@ -64,22 +69,22 @@ msgstr ""
 msgid ""
 "This chapter discusses the internationalization and localization features of "
 "FreeBSD. After reading this chapter, you will know:"
-msgstr ""
+msgstr "本章會討論 FreeBSD 的國際化及在地化功能。在閱讀本章之後，您會了解："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:54
 msgid "How locale names are constructed."
-msgstr ""
+msgstr "語系名稱如何組成。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:55
 msgid "How to set the locale for a login shell."
-msgstr ""
+msgstr "如何設定登入 Shell 的語系。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:56
 msgid "How to configure the console for non-English languages."
-msgstr ""
+msgstr "如何設定 Console 給非英文語言的使用者。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:57
@@ -94,12 +99,12 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:59
 msgid "Where to find more information for configuring specific languages."
-msgstr ""
+msgstr "那裡可以找到更多設定特定語言的資訊。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:61
 msgid "Before reading this chapter, you should:"
-msgstr ""
+msgstr "在開始閱讀這章之前，您需要："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:63
@@ -112,7 +117,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/l10n/_index.adoc:65
 #, no-wrap
 msgid "Using Localization"
-msgstr ""
+msgstr "使用語系"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:68
@@ -120,7 +125,7 @@ msgid ""
 "Localization settings are based on three components: the language code, "
 "country code, and encoding. Locale names are constructed from these parts as "
 "follows:"
-msgstr ""
+msgstr "語系設定值由三個元件所組成：語言代號、城市代號及編碼。語系名稱組成的方式如下："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:72
@@ -140,7 +145,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/l10n/_index.adoc:77
 #, no-wrap
 msgid "Common Language and Country Codes"
-msgstr ""
+msgstr "常用語言及城市代碼"
 
 #. type: Table
 #: documentation/content/en/books/handbook/l10n/_index.adoc:91
@@ -162,7 +167,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:94
 msgid "A complete listing of available locales can be found by typing:"
-msgstr ""
+msgstr "完整可用的語系清單可用以下指令查詢："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:98
@@ -173,7 +178,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:101
 msgid "To determine the current locale setting:"
-msgstr ""
+msgstr "查詢目前使用的語系設定："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:105
@@ -206,7 +211,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:114
 msgid "FreeBSD uses Xorg-compatible locale encodings."
-msgstr ""
+msgstr "FreeBSD 使用 Xorg 相容的語系編碼。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:117
@@ -220,7 +225,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/l10n/_index.adoc:119
 #, no-wrap
 msgid "Setting Locale for Login Shell"
-msgstr ""
+msgstr "設定登入 Shell 的語系"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:122
@@ -233,7 +238,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:124
 msgid "Two environment variables should be set:"
-msgstr ""
+msgstr "有兩個環境變數需要設定："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:126
@@ -265,7 +270,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/l10n/_index.adoc:133
 #, no-wrap
 msgid "Login Classes Method"
-msgstr ""
+msgstr "登入類別 (Login Class) 法"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:136
@@ -335,7 +340,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:170
 msgid "So, the previous Latin-1 example would look like this:"
-msgstr ""
+msgstr "若套用之前的 Latin-1 編碼範例如下："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:177
@@ -378,7 +383,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/l10n/_index.adoc:193
 #, no-wrap
 msgid "Utilities Which Change Login Classes"
-msgstr ""
+msgstr "變更登入類別的工具"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:196
@@ -419,7 +424,7 @@ msgstr ""
 msgid ""
 "To override this setting when creating a user, either input the required "
 "locale at this prompt:"
-msgstr ""
+msgstr "要在建立使用者時覆蓋預設的設定，可在出現此提示時輸入需要的語系："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:213
@@ -466,7 +471,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/l10n/_index.adoc:238
 #, no-wrap
 msgid "Shell Startup File Method"
-msgstr ""
+msgstr "Shell 啟動檔 (Startup File) 法"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:241
@@ -529,7 +534,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/l10n/_index.adoc:271
 #, no-wrap
 msgid "Console Setup"
-msgstr ""
+msgstr "Console 設定"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:274
@@ -605,7 +610,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/l10n/_index.adoc:299
 #, no-wrap
 msgid "Defined Terminal Types for Character Sets"
-msgstr ""
+msgstr "已定義供特定字元集使用的終端機類型"
 
 #. type: Table
 #: documentation/content/en/books/handbook/l10n/_index.adoc:325
@@ -650,7 +655,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/l10n/_index.adoc:330
 #, no-wrap
 msgid "Available Console from Ports Collection"
-msgstr ""
+msgstr "Port 套件集中可用的 Console"
 
 #. type: Table
 #: documentation/content/en/books/handbook/l10n/_index.adoc:353
@@ -698,7 +703,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/l10n/_index.adoc:362
 #, no-wrap
 msgid "Xorg Setup"
-msgstr ""
+msgstr "Xorg 設定"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:365
@@ -724,7 +729,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/l10n/_index.adoc:369
 #, no-wrap
 msgid "Available Input Methods"
-msgstr ""
+msgstr "可用的輸入法"
 
 #. type: Table
 #: documentation/content/en/books/handbook/l10n/_index.adoc:470
@@ -868,7 +873,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/l10n/_index.adoc:482
 #, no-wrap
 msgid "Locale Configuration for Specific Languages"
-msgstr ""
+msgstr "特定語言的語系設定"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:485
@@ -882,7 +887,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/l10n/_index.adoc:487
 #, no-wrap
 msgid "Russian Language (KOI8-R Encoding)"
-msgstr ""
+msgstr "俄語 (KOI8-R 編碼)"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:490
@@ -1060,7 +1065,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/l10n/_index.adoc:569
 #, no-wrap
 msgid "Additional Language-Specific Resources"
-msgstr ""
+msgstr "其他特定語言資源"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:572
