@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 12:38+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
+"projects/documentation/booksarch-handbookvmchapter/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:1
@@ -25,7 +28,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:8
 #, no-wrap
 msgid "Virtual Memory System"
-msgstr ""
+msgstr "虚拟内存系统"
 
 #. type: Title ==
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:33
@@ -49,6 +52,8 @@ msgid ""
 "representing the state that it is in. Wired pages are not placed on any "
 "queue."
 msgstr ""
+"一页可以处于在线(wired)、活动(active)，去活(inactive)、缓存(cache)、自由(free)状态。除了在线状态，页一般被放置在一个"
+"双向链表队列里，代表了它所处的状态。在线页不放置在任何队列里。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:40
@@ -60,6 +65,8 @@ msgid ""
 "one that is reasonably well aligned from the point of view of the L1 and L2 "
 "caches relative to the VM object the page is being allocated for."
 msgstr ""
+"FreeBSD为缓存页和自由页实现了一个更为复杂的页队列机制，以实现对页的分类管理。每一种状态都对应着多个队列，队列的安排对应着处理器的一级、二级缓存。当"
+"需要分配一个新页时，FreeBSD会试图把一个按一级、二级缓存对齐的页面分配给虚拟内存对象。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:42
@@ -83,6 +90,12 @@ msgid ""
 "free pages must be maintained in order to accommodate page allocation at "
 "interrupt time."
 msgstr ""
+"总之，每个页队列都按照LRU(Least-Recently Used)的原则工作。<tip><title>译者注</title><para"
+">短语Least-Recently Used有两种理解方式：1.将“least-"
+"recently”理解为反向比较级，意义为“最早”，整个短语理解为“最近的使用时间最早”；2.将“least”和“recently”理解为副词，都修饰“u"
+"sed”，整个短语理解为“最近最少使用”。这两种理解方式的实际意义基本相同。</para></tip>一个页常常最初处于在线或活动状态。在线时，页常常关联"
+"于某处的页表。虚拟内存系统通过扫描在一个较活跃的页队列(LRU)确定页的年龄，以便将他们移到一个较不活跃的页队列中。移动到缓存中的页依然与一个VM对象关联"
+"，但被作为立即再用的候选。在自由对列中的页是真正未被使用的。FreeBSD尽量不将页放在自由队列中，但是必须保持一定数量的自由页，以便响应中断时分配。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:46
@@ -94,6 +107,11 @@ msgid ""
 "memory at all, the process must block while the page is brought in from "
 "disk."
 msgstr ""
+"如果一个进程试图访问一个不在页表中而在某一队列中的页(例如去活队列或缓存队列)，一个相对耗费资源少的页错误发生，导致页被重激活。如果页根本不存在于系统内存"
+"之中，进程必须被阻塞，此时页被从磁盘中载入。<tip><title>译者注</title><para>Intel等厂商的CPU工作在保护模式时，可用来实现"
+"虚拟内存。当寻址的地址空间对应着真实内存时，则正常读写；当寻址的地址空间没有对应的真实内存时，CPU会产生一个“错误”，通知操作系统与磁盘等设备进行交换，"
+"读寻址则调入存储内容，写寻址则写出存储内容。这个“错误”并非操作系统或应用程序开发人员犯下的错误，尽管在CPU硬件实现中这与应用程序或操作系统内核崩溃的错"
+"误的发生机制相同。参见Intel的CPU保护模式开发手册。</para></tip>。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:48
@@ -111,6 +129,10 @@ msgid ""
 "idle a page actually is. This leads to better decisions being made as to "
 "when to launder or swap-out a page."
 msgstr ""
+"FreeBSD动态的调整页队列，试图将各个队列中的页数维护在一个适当的比例上，同时管理程序崩溃的已清理和未清理页。重新平衡的比例数值决定于系统内存的负担。"
+"这种重新平衡由pageout守护进程实现，包括清理未清理页(与他们的后备存储同步)、监视页被引用的活跃程度(重置它们在LRU队列中的位置或在不同活跃程度的"
+"页队列间移动)、当比例不平衡时在队列间迁移页，如此等等。FreeBSD的VM系统会将重激活页而产生的错误频率调低到一个合理的数值，由此确定某一页活跃/闲置"
+"的实际程度。这可以为更好的决定何时清理/分配一个页做出决策。"
 
 #. type: Title ==
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:50
@@ -163,6 +185,9 @@ msgid ""
 "store. Additionally, filesystems need to be able to map portions of a file "
 "or file metadata into KVM in order to operate on it."
 msgstr ""
+"vnode VM对象，比如文件VM对象，一般需要维护它们自己的清理(clean)/未清理(dirty)信息，而不依赖于文件系统的清理/未清理维护。例如，当"
+"VM系统要同步一个物理页和其对应的实际存储器，VM系统就需要在写入到实际存储器前将该页标记为已清理。另外，文件系统要能够将文件或文件元数据的各部分映射到内"
+"核虚拟内存(KVM)中以便操作。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:64
@@ -205,6 +230,8 @@ msgid ""
 "considered throwaway. Special page tables such as those managing KVM are "
 "typically permanently preallocated. These page tables are not throwaway."
 msgstr ""
+"FreeBSD将物理页表结构从VM系统中分离了出来。各进程的所有页表可以脱离进程(on the "
+"fly)重建，并且通常被认为是一次性的。特殊的页表，如内核虚拟内存(KVM)，常常是被永久性预分配的；这些页表不是一次性的。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:73
@@ -225,7 +252,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:75
 #, no-wrap
 msgid "KVM Memory Mapping"
-msgstr ""
+msgstr "KVM存储映射"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:78
@@ -260,7 +287,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:84
 #, no-wrap
 msgid "Tuning the FreeBSD VM System"
-msgstr ""
+msgstr "调整FreeBSD的虚拟内存系统"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:87
@@ -328,7 +355,7 @@ msgid ""
 "Sysctl provides a way to tune kernel parameters at run-time. You typically "
 "do not need to mess with any of the sysctl variables, especially the VM "
 "related ones."
-msgstr ""
+msgstr "Sysctl提供了在运行时调整内核的方式。你通常不需要指定任何sysctl变量，尤其是与VM相关的那些变量。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:105
@@ -358,4 +385,4 @@ msgstr ""
 msgid ""
 "NFS-based swap is perfectly acceptable on 4.X or later systems, but you must "
 "be aware that the NFS server will take the brunt of the paging load."
-msgstr ""
+msgstr "NFS上的交换分区可以很好的被4.X或后来的系统使用，但是你必须明白NFS服务器将要经受页装载操作很强的冲击。"
