@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 12:39+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
+"projects/documentation/booksarch-handbooksoundchapter/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:1
@@ -25,13 +28,13 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:8
 #, no-wrap
 msgid "Sound Subsystem"
-msgstr ""
+msgstr "声音子系统"
 
 #. type: Title ==
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:33
 #, no-wrap
 msgid "Introduction"
-msgstr ""
+msgstr "介绍"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:36
@@ -39,7 +42,7 @@ msgid ""
 "The FreeBSD sound subsystem cleanly separates generic sound handling issues "
 "from device-specific ones. This makes it easier to add support for new "
 "hardware."
-msgstr ""
+msgstr "FreeBSD声音子系统清晰地将通用声音处理问题与设备特定的问题分离 开来。这使得更容易加入对新设备的支持。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:38
@@ -62,19 +65,19 @@ msgstr ""
 msgid ""
 "Common code for processing sound data (format conversions, virtual "
 "channels)."
-msgstr ""
+msgstr "处理声音数据的公共代码（格式转换，虚拟通道）。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:42
 msgid "A uniform software interface to hardware-specific audio interface modules."
-msgstr ""
+msgstr "一个统一的软件接口，与硬件特定的音频接口模块接口"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:43
 msgid ""
 "Additional support for some common hardware interfaces (ac97), or shared "
 "hardware-specific code (ex: ISA DMA routines)."
-msgstr ""
+msgstr "对某些通用硬件接口（ac97）或共享的硬件特定代码 （例如：ISA DMA例程）的额外支持。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:45
@@ -100,6 +103,8 @@ msgid ""
 "to give an overview of the framework interface and answer some questions "
 "that may arise while adapting the existing code."
 msgstr ""
+"预期的驱动程序编写者当然希望从现有模块开始，并使用那些代码作为 最终参考。但是，由于声音代码十分简洁漂亮，这也基本上免除了注释。 "
+"本文档试图给出框架接口的一个概览，并回答改写现有代码时可能出现的 一些问题。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:51
@@ -114,7 +119,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:53
 #, no-wrap
 msgid "Files"
-msgstr ""
+msgstr "文件"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:56
@@ -137,7 +142,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:60
 #, no-wrap
 msgid "Probing, Attaching, etc."
-msgstr ""
+msgstr "探测，连接等"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:63
@@ -150,7 +155,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:65
 msgid "However, sound drivers differ in some ways:"
-msgstr ""
+msgstr "然而，声音驱动程序在某些方面又有些不同："
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:67
@@ -225,7 +230,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:87
 msgid "There are two possible methods to handle non-PnP devices:"
-msgstr ""
+msgstr "有两种可能的方法来处理非PnP设备："
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:89
@@ -255,7 +260,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:94
 #, no-wrap
 msgid "Interfaces"
-msgstr ""
+msgstr "网络接口"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:97
@@ -284,13 +289,13 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:102
 #, no-wrap
 msgid "The CHANNEL Interface"
-msgstr ""
+msgstr "CHANNEL接口"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:104
 #, no-wrap
 msgid "Common Notes for Function Parameters"
-msgstr ""
+msgstr "函数参数的通常注意事项"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:107
@@ -298,14 +303,14 @@ msgid ""
 "Sound drivers usually have a private data structure to describe their "
 "device, and one structure for each play and record data channel that it "
 "supports."
-msgstr ""
+msgstr "声音驱动程序通常用一个私有数据结构来描述他们的设备，驱动 程序所支持的播放和录音数据通道各有一个。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:109
 msgid ""
 "For all CHANNEL interface functions, the first parameter is an opaque "
 "pointer."
-msgstr ""
+msgstr "对于所有的CHANNEL接口函数，第一个参数是一个不透明的指针。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:111
@@ -320,7 +325,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:112
 #, no-wrap
 msgid "Overview of Data Transfer Operations"
-msgstr ""
+msgstr "数据传输操作概览"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:115
@@ -348,7 +353,7 @@ msgstr ""
 msgid ""
 "When playing, the general transfer mechanism is as follows (reverse the idea "
 "for recording):"
-msgstr ""
+msgstr "当播放时，常规的传输机制如下（将意思反过来就是录音）："
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:123
@@ -380,7 +385,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:127
 #, no-wrap
 msgid "channel_init"
-msgstr ""
+msgstr "channel_init"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:130
@@ -430,7 +435,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:148
 #, no-wrap
 msgid "channel_setformat"
-msgstr ""
+msgstr "channel_setformat"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:151
@@ -462,7 +467,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:165
 #, no-wrap
 msgid "channel_setspeed"
-msgstr ""
+msgstr "channel_setspeed"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:168
@@ -488,7 +493,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:180
 #, no-wrap
 msgid "channel_setblocksize"
-msgstr ""
+msgstr "channel_setblocksize"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:183
@@ -506,7 +511,7 @@ msgstr ""
 msgid ""
 "Most sound drivers only take note of the block size here, to be used when an "
 "actual transfer will be started."
-msgstr ""
+msgstr "大多数驱动程序只注意这儿的块大小，因为当实际传输开始时应该 使用这个值。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:195
@@ -534,7 +539,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:200
 #, no-wrap
 msgid "channel_trigger"
-msgstr ""
+msgstr "channel_trigger"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:203
@@ -573,7 +578,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:222
 #, no-wrap
 msgid "channel_getptr"
-msgstr ""
+msgstr "channel_getptr"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:225
@@ -587,7 +592,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:226
 #, no-wrap
 msgid "channel_free"
-msgstr ""
+msgstr "channel_free"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:229
@@ -602,7 +607,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:230
 #, no-wrap
 msgid "channel_getcaps"
-msgstr ""
+msgstr "channel_getcaps"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:239
@@ -628,7 +633,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:243
 #, no-wrap
 msgid "More Functions"
-msgstr ""
+msgstr "更多函数"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:246
@@ -647,13 +652,13 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:249
 #, no-wrap
 msgid "The MIXER Interface"
-msgstr ""
+msgstr "MIXER 接口"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:252
 #, no-wrap
 msgid "mixer_init"
-msgstr ""
+msgstr "mixer_init"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:255
@@ -750,7 +755,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:298
 #, no-wrap
 msgid "mixer_setrecsrc"
-msgstr ""
+msgstr "mixer_setrecsrc"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:301
@@ -794,7 +799,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:319
 #, no-wrap
 msgid "mixer_uninit, mixer_reinit"
-msgstr ""
+msgstr "mixer_uninit, mixer_reinit"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:322
@@ -815,7 +820,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:325
 #, no-wrap
 msgid "The AC97 Interface"
-msgstr ""
+msgstr "AC97接口"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:328
