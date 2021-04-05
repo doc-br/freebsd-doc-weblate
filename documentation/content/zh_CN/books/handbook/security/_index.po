@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-14 11:02-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 12:40+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbooksecurity_index/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/security/_index.adoc:1
@@ -31,13 +34,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:9
 #, no-wrap
 msgid "Security"
-msgstr ""
+msgstr "安全性"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/security/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "简介"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:48
@@ -47,6 +50,8 @@ msgid ""
 "authored about how to secure systems and networks, and as a user of FreeBSD, "
 "understanding how to protect against attacks and intruders is a must."
 msgstr ""
+"不论实体或虚拟，安全性这个主题大到有整个产业围绕着它，上百个标准案例已经被用来搛写如何确保系统与网络的安全性。身为FreeBSD必须了解如何避免攻击与入侵"
+"。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:50
@@ -54,27 +59,27 @@ msgid ""
 "In this chapter, several fundamentals and techniques will be discussed. The "
 "FreeBSD system comes with multiple layers of security, and many more third "
 "party utilities may be added to enhance security."
-msgstr ""
+msgstr "在此章会讨论几个基本原理及技术。FreeBSD系统的安全性有许多层面，且有许多第三方工具可以用来增加安全性。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:52
 msgid "After reading this chapter, you will know:"
-msgstr ""
+msgstr "读完本章节，你将会知道："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:54
 msgid "Basic FreeBSD system security concepts."
-msgstr ""
+msgstr "基础FreeBSD系统安全概念。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:55
 msgid "The various crypt mechanisms available in FreeBSD."
-msgstr ""
+msgstr "FreeBSD中的几种加密（Crypt）机制。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:56
 msgid "How to set up one-time password authentication."
-msgstr ""
+msgstr "如何设定一次性密码认证。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:57
@@ -111,29 +116,29 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:63
 msgid "How to utilize FreeBSD security advisories."
-msgstr ""
+msgstr "如何利用FreeBSD安全报告。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:64
 msgid "What Process Accounting is and how to enable it on FreeBSD."
-msgstr ""
+msgstr "什么是程序追踪（Process Accounting）以及如何在FreeBSD开启。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:65
 msgid ""
 "How to control user resources using login classes or the resource limits "
 "database."
-msgstr ""
+msgstr "如何使用登入类别或资源限制数据库控制使用者资源。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:67
 msgid "Before reading this chapter, you should:"
-msgstr ""
+msgstr "在阅读这个章节之前，您应当："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:69
 msgid "Understand basic FreeBSD and Internet concepts."
-msgstr ""
+msgstr "了解FreeBSD基础及网络概念。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:71
@@ -148,7 +153,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:73
 #, no-wrap
 msgid "Introduction"
-msgstr ""
+msgstr "介绍"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:76
@@ -192,6 +197,8 @@ msgid ""
 "software, unauthorized network devices, natural disasters, security "
 "vulnerabilities, and even competing corporations."
 msgstr ""
+"什么威胁影响到电脑安全性？威胁并不仅限于在远端尝试未经授权存取系统的远端攻击者，威胁也包含员工、恶意软件、未经许可的网络装置、天然灾害、安全性漏洞甚至是公"
+"司竞争对手。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:84
@@ -203,6 +210,8 @@ msgid ""
 "the security team. As an administrator, it is important to know of the "
 "threats and be prepared to mitigate them."
 msgstr ""
+"系统与网络可以被未经授权存取，有时是因为意外，或是因远端攻击者，或在某些案例中，是因商业间谍或者前员工。做为使用者，重要的是做好防范准备以及当有失误造成安"
+"全漏洞能够承认并回报可能的问题给安全团队。做为管理者，重要的是了解威胁并准备在发生时能够减缓威胁。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:86
@@ -226,12 +235,13 @@ msgid ""
 "describes some specific tools which can be used when implementing a security "
 "policy on a FreeBSD system."
 msgstr ""
+"简介接下来的部份将说明如何在FreeBSD系统上执行这些基础的安全设置。本章接下来的部份将介绍在FreeBSD系统执行安全性政策时会用到的特定工具。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:90
 #, no-wrap
 msgid "Preventing Logins"
-msgstr ""
+msgstr "防止登入"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:93
@@ -279,7 +289,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:111
 #, no-wrap
 msgid "Permitted Account Escalation"
-msgstr ""
+msgstr "帐号升级授权"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:114
@@ -326,7 +336,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:127
 #, no-wrap
 msgid "Password Hashes"
-msgstr ""
+msgstr "密码编码方式"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:130
@@ -387,7 +397,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:152
 msgid ""
 "To change the algorithm to Blowfish, modify that line to look like this:"
-msgstr ""
+msgstr "要更改算法为Blowfish，可修改该行如下："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:156
@@ -421,7 +431,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:163
 #, no-wrap
 msgid "Password Policy Enforcement"
-msgstr ""
+msgstr "强制密码政策"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:166
@@ -486,7 +496,7 @@ msgstr ""
 msgid ""
 "Once this file is saved, a user changing their password will see a message "
 "similar to the following:"
-msgstr ""
+msgstr "一这个文件储存之后，更改密码的使用者将会看到如下的信息："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:187
@@ -519,7 +529,7 @@ msgid ""
 "If a password that does not match the policy is entered, it will be rejected "
 "with a warning and the user will have an opportunity to try again, up to the "
 "configured number of retries."
-msgstr ""
+msgstr "若输入了一个不符何密码政策的密码，则会被拒绝并显示警告，然后使用者会有机会再重试，直到超过设定的允许重试次数。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:203
@@ -567,7 +577,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:221
 #, no-wrap
 msgid "Detecting Rootkits"
-msgstr ""
+msgstr "侦测Root工具（Rootkit）"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:224
@@ -630,7 +640,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:239
 #, no-wrap
 msgid "Binary Verification"
-msgstr ""
+msgstr "Binary检验"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:242
@@ -737,6 +747,7 @@ msgid ""
 "save the results to a file. This command requires the seed that was used to "
 "generate the original specification:"
 msgstr ""
+"要检验Binary签名是否有被变更过，可使用先前产生的规格档比对目前目录的内容，然后储存结果到文件。这个指令需要当初产生原规格档所使用的种子码："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:289
@@ -791,7 +802,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:307
 #, no-wrap
 msgid "System Tuning for Security"
-msgstr ""
+msgstr "系统安全性调校"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:310
@@ -884,7 +895,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:335
 #, no-wrap
 msgid "One-time Passwords"
-msgstr ""
+msgstr "一次性密码"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:338
@@ -1000,6 +1011,8 @@ msgid ""
 "account. It must be between 10 and 127 characters long. Remember this "
 "password."
 msgstr ""
+"提示出现后，输入用来产生一次性登入密钥的秘密密码，应使用一个不容易被猜出来的密码，且应与使用者登入帐号所使用的密码不同，密码必须介于10到127个字元长度"
+"之间，然后请记住这个密码。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:371
@@ -1016,7 +1029,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:372
 #, no-wrap
 msgid "Insecure Connection Initialization"
-msgstr ""
+msgstr "在不安全联机下做初始化"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:375
@@ -1081,13 +1094,13 @@ msgstr ""
 msgid ""
 "Switch back over to the insecure connection, and copy the generated one-time "
 "password over to the relevant program."
-msgstr ""
+msgstr "切换回不安全的联机，然后复制产生的一次性密码粘贴。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:406
 #, no-wrap
 msgid "Generating a Single One-time Password"
-msgstr ""
+msgstr "产生单组一次性密码"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:409
@@ -1143,18 +1156,18 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:429
 msgid "On the trusted system:"
-msgstr ""
+msgstr "在信任的系统上执行："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:440
 msgid "Once the one-time password is generated, continue to log in."
-msgstr ""
+msgstr "在产生一次性密码后，回到登入画面继续登入。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:441
 #, no-wrap
 msgid "Generating Multiple One-time Passwords"
-msgstr ""
+msgstr "产生多组一次性密码"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:444
@@ -1234,7 +1247,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:476
 #, no-wrap
 msgid "TCP Wrapper"
-msgstr ""
+msgstr "TCP Wrapper"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:479
@@ -1260,7 +1273,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:482
 #, no-wrap
 msgid "Initial Configuration"
-msgstr ""
+msgstr "初始设定初始配置"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:485
@@ -1341,7 +1354,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:518
 #, no-wrap
 msgid "Advanced Configuration"
-msgstr ""
+msgstr "高级配置"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:521
@@ -1390,7 +1403,7 @@ msgstr ""
 msgid ""
 "It may be possible to launch a denial of service attack on the server if an "
 "attacker floods these daemons with connection requests."
-msgstr ""
+msgstr "如果攻击者向服务程序发送大量的连接请求， 则可能发动一次成功的拒绝服务攻击。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:541
@@ -1780,7 +1793,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:722
 msgid "The temporary ticket can be destroyed when the test is finished:"
-msgstr ""
+msgstr "测试完成后，临时票证可以销毁："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:726
@@ -2121,6 +2134,8 @@ msgid ""
 "hours, the user cache will have an expired host principal and the ticket "
 "cache will not work as expected."
 msgstr ""
+"主机本体的票据的有效期可以更长。如果用户委托人的有效期是一周，但被连接的主机的有效期是9个小时，那么用户缓存中的主机委托人就会过期，票据缓存将无法正常工作"
+"。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:823
@@ -2191,7 +2206,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:836
 #, no-wrap
 msgid "Resources and Further Information"
-msgstr ""
+msgstr "相关资源和信息"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:839
@@ -2228,7 +2243,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:845
 #, no-wrap
 msgid "OpenSSL"
-msgstr ""
+msgstr "OpenSSL"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:848
@@ -2301,7 +2316,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:864
 #, no-wrap
 msgid "Generating Certificates"
-msgstr ""
+msgstr "生成证书"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:867
@@ -2394,7 +2409,7 @@ msgstr ""
 msgid ""
 "Use this key to create a self-signed certificate. Follow the usual prompts "
 "for creating a certificate:"
-msgstr ""
+msgstr "使用此密钥来创建自签名证书："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:932
@@ -2431,7 +2446,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:936
 #, no-wrap
 msgid "Using Certificates"
-msgstr ""
+msgstr "使用证书"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:939
@@ -2446,7 +2461,7 @@ msgid ""
 "Some mail clients will display an error if the user has not installed a "
 "local copy of the certificate. Refer to the documentation included with the "
 "software for more information on certificate installation."
-msgstr ""
+msgstr "如果用户尚未安装证书的本地副本，则某些邮件客户端将显示错误。有关证书安装的详细信息，请参阅软件随附的文档。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:946
@@ -2575,7 +2590,7 @@ msgstr ""
 msgid ""
 "These protocols can either be used together or separately, depending on the "
 "environment."
-msgstr ""
+msgstr "这些协议可以一起使用，也可以单独使用，具体取决于环境。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1003
@@ -2629,7 +2644,7 @@ msgstr ""
 msgid ""
 "Both sites are connected to the Internet through a gateway that is running "
 "FreeBSD."
-msgstr ""
+msgstr "双方都能连接上 Internet，且都使用 FreeBSD。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1023
@@ -2702,7 +2717,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1049
 msgid "Here is the output from Gateway 2:"
-msgstr ""
+msgstr "这是 Gateway 2 的配置："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1056
@@ -2961,7 +2976,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1207
 msgid "The output should be similar to the following:"
-msgstr ""
+msgstr "输出像这样："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1222
@@ -3000,7 +3015,7 @@ msgstr ""
 msgid ""
 "Data similar to the following should appear on the console. If not, there is "
 "an issue and debugging the returned data will be required."
-msgstr ""
+msgstr "控制台上应显示类似于以下内容的数据。如果没有，则出现问题，需要调试返回的数据。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1238
@@ -3036,7 +3051,7 @@ msgstr ""
 msgid ""
 "The rule numbers may need to be altered depending on the current host "
 "configuration."
-msgstr ""
+msgstr "可能需要根据当前主机配置更改规则编号。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1256
@@ -3082,7 +3097,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1282
 #, no-wrap
 msgid "OpenSSH"
-msgstr ""
+msgstr "OpenSSH"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1285
@@ -3125,7 +3140,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1292
 #, no-wrap
 msgid "Using the SSH Client Utilities"
-msgstr ""
+msgstr "使用SSH客户端工具"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1295
@@ -3195,7 +3210,7 @@ msgstr ""
 msgid ""
 "Since the fingerprint was already verified for this host, the server's key "
 "is automatically checked before prompting for the user's password."
-msgstr ""
+msgstr "由于这个主机的指纹已验证过，在提示用者输入密码之前服务器的密钥已自动检查。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1324
@@ -3218,7 +3233,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1328
 #, no-wrap
 msgid "Key-based Authentication"
-msgstr ""
+msgstr "以密钥为基础的认证"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1331
@@ -3386,7 +3401,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1410
 msgid "This example uses the following options:"
-msgstr ""
+msgstr "这个例子使用了以下选项："
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/security/_index.adoc:1411
@@ -3526,7 +3541,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1461
 #, no-wrap
 msgid "Bypassing a Firewall"
-msgstr ""
+msgstr "跳过防火墙"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1465
@@ -3564,7 +3579,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1477
 #, no-wrap
 msgid "Enabling the SSH Server"
-msgstr ""
+msgstr "开启SSH服务器"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1480
@@ -3638,7 +3653,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1508
 #, no-wrap
 msgid "SSH Server Security"
-msgstr ""
+msgstr "SSH服务器安全性"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1511
@@ -3680,7 +3695,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1527
 msgid "Multiple users should be listed on the same line, like so:"
-msgstr ""
+msgstr "有多位使用者也应列在同一行，例如："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1531
@@ -3743,7 +3758,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1559
 #, no-wrap
 msgid "Access Control Lists"
-msgstr ""
+msgstr "文件系统访问控制表"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1562
@@ -3927,7 +3942,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1633
 #, no-wrap
 msgid "Monitoring Third Party Security Issues"
-msgstr ""
+msgstr "监视第三方安全性问题"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1636
@@ -3937,6 +3952,7 @@ msgid ""
 "increases as third party utilities are installed and configured for "
 "virtually any operating system available today."
 msgstr ""
+"近年来， 安全领域在如何处理漏洞的评估方面取得了长足的进步。 几乎每一个操作系统都越来越多地安装和配置了第三方工具， 而系统被入侵的威胁也随之增加。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1638
@@ -3980,6 +3996,7 @@ msgid ""
 "Collection at any time, an administrator may choose to update the database "
 "and view known vulnerabilities of installed packages by invoking:"
 msgstr ""
+"安装后，并随时审计第三方实用程序作为 Ports Collection 的一部分，管理员可以选择通过调用更新数据库和查看已安装的软件包的已知漏洞："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1650
@@ -4034,7 +4051,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1670
 #, no-wrap
 msgid "FreeBSD Security Advisories"
-msgstr ""
+msgstr "FreeBSD 安全公告"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1673
@@ -4063,18 +4080,18 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1677
 msgid "This section describes the format of a FreeBSD security advisory."
-msgstr ""
+msgstr "本节介绍 FreeBSD 安全公告的格式。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:1678
 #, no-wrap
 msgid "Format of a Security Advisory"
-msgstr ""
+msgstr "安全报告的格式"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1681
 msgid "Here is an example of a FreeBSD security advisory:"
-msgstr ""
+msgstr "这里有个 FreeBSD 安全公告的例子："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1687
@@ -4403,7 +4420,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1828
 msgid "Every security advisory uses the following format:"
-msgstr ""
+msgstr "每条安全通报建议都使用以下格式："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1830
@@ -4541,7 +4558,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1848
 #, no-wrap
 msgid "Process Accounting"
-msgstr ""
+msgstr "进程记帐"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1851
@@ -4550,6 +4567,7 @@ msgid ""
 "track of system resources used and their allocation among users, provide for "
 "system monitoring, and minimally track a user's commands."
 msgstr ""
+"进程记帐是一种管理员可以使用的跟踪系统资源使用情况的手段， 包括它们分配给了哪些用户、 提供系统监视手段， 并且可以精细到用户执行的每一个命令。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1853
@@ -4560,6 +4578,8 @@ msgid ""
 "space they may require. This section walks an administrator through the "
 "basics of process accounting."
 msgstr ""
+"当然， 这种做法是兼有利弊的。 它的好处是， 查找入侵时可以迅速把范围缩小到攻击者进入的时刻； 而这样做的缺点， 则是记帐会产生大量的日志， "
+"因而需要很多磁盘空间来存储它们。 这一节将带领管理员一步一步地配置基本的进程记帐。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1857
@@ -4572,14 +4592,14 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1859
 #, no-wrap
 msgid "Enabling and Utilizing Process Accounting"
-msgstr ""
+msgstr "启用和使用进程记帐"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1862
 msgid ""
 "Before using process accounting, it must be enabled using the following "
 "commands:"
-msgstr ""
+msgstr "在使用进程记帐之前， 必须先启用它。 要完成这项工作， 需要运行下面的命令："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1867
@@ -4638,7 +4658,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1883
 #, no-wrap
 msgid "Resource Limits"
-msgstr ""
+msgstr "资源限制"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1886
@@ -4675,13 +4695,13 @@ msgstr ""
 msgid ""
 "This section demonstrates both methods for controlling resources, beginning "
 "with the traditional method."
-msgstr ""
+msgstr "本节从传统方法开始，演示两种控制资源的方法。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:1894
 #, no-wrap
 msgid "Configuring Login Classes"
-msgstr ""
+msgstr "设置登入类别"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1897
@@ -4731,7 +4751,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1913
 #, no-wrap
 msgid "Login Class Resource Limits"
-msgstr ""
+msgstr "登入类别限制资源类型"
 
 #. type: Table
 #: documentation/content/en/books/handbook/security/_index.adoc:1945
@@ -4771,7 +4791,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1948
 msgid "There are a few other things to remember when setting resource limits:"
-msgstr ""
+msgstr "在设置资源限制时， 有一些其他的事需要注意。 下面是一些通常的技巧、 建议和注意事项："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1950
@@ -4818,7 +4838,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:1956
 #, no-wrap
 msgid "Enabling and Configuring Resource Limits"
-msgstr ""
+msgstr "启用和配置资源限制"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1959
@@ -4847,7 +4867,7 @@ msgstr ""
 msgid ""
 "Rule syntax is controlled through the use of a subject, subject-id, "
 "resource, and action, as seen in this example rule:"
-msgstr ""
+msgstr "语法规则：主体：主体-ID：要限制的资源：动作。示例规则如下："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1973
@@ -4889,7 +4909,7 @@ msgstr ""
 msgid ""
 "As another example, a jail can be prevented from exceeding a memory limit. "
 "This rule could be written as:"
-msgstr ""
+msgstr "另一个例子：限制 jail 的最大使用内存。该规则可以写为："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1991
@@ -4948,7 +4968,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:2018
 #, no-wrap
 msgid "Shared Administration with Sudo"
-msgstr ""
+msgstr "使用Sudo分享管理权限"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2021
@@ -4962,6 +4982,9 @@ msgid ""
 "superuser access. Thankfully, there is no reason to provide such access to "
 "end users because tools exist to manage this exact requirement."
 msgstr ""
+"系统管理者通常会要能够授予额外的权限给其他使用者，以让这些使用者可以执行需权限的工作。要让团队成员可以存取FreeBSD系统来完成其特定的工作对所有管理者"
+"都会带来挑战，这些团队成员通常只需要比一般使用者多出一些存取权限便可作业，但他们总是会告诉管理者若没有超级使用者的存取权便无法完成其工作。幸好，有工具可以"
+"管理这类的需求，这样便不需提供这么大的权限给一般使用者。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2023
@@ -5106,7 +5129,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/security/_index.adoc:2085
 #, no-wrap
 msgid "Logging Output"
-msgstr ""
+msgstr "记录输出"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:2088
