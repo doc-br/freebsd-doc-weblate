@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 12:38+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookaudit_index/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/audit/_index.adoc:1
@@ -31,13 +34,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/audit/_index.adoc:9
 #, no-wrap
 msgid "Security Event Auditing"
-msgstr ""
+msgstr "安全事件审计"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/audit/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "简介"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:48
@@ -58,32 +61,32 @@ msgid ""
 "This chapter focuses on the installation and configuration of event "
 "auditing. It explains audit policies and provides an example audit "
 "configuration."
-msgstr ""
+msgstr "这一章的重点是安装和配置事件审计。 它介绍了事件策略， 并提供了一个审计的配置例子。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:52
 msgid "After reading this chapter, you will know:"
-msgstr ""
+msgstr "读完本章节，你将会知道："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:54
 msgid "What event auditing is and how it works."
-msgstr ""
+msgstr "事件审计是什么， 以及它如何工作。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:55
 msgid "How to configure event auditing on FreeBSD for users and processes."
-msgstr ""
+msgstr "如何在 FreeBSD 上为用户和进程配置事件审计。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:56
 msgid "How to review the audit trail using the audit reduction and review tools."
-msgstr ""
+msgstr "如何使用审计记录摘要和复审工具来对审计记录进行复审。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:58
 msgid "Before reading this chapter, you should:"
-msgstr ""
+msgstr "在阅读这个章节之前，您应当："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:60
@@ -132,12 +135,12 @@ msgstr ""
 #: documentation/content/en/books/handbook/audit/_index.adoc:72
 #, no-wrap
 msgid "Key Terms"
-msgstr ""
+msgstr "本章出现的重要术语"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:75
 msgid "The following terms are related to security event auditing:"
-msgstr ""
+msgstr "本章中的一些关键术语："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:77
@@ -210,7 +213,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/audit/_index.adoc:85
 #, no-wrap
 msgid "Audit Configuration"
-msgstr ""
+msgstr "对审计进行配置"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:88
@@ -230,7 +233,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:95
 msgid "Then, start the audit daemon:"
-msgstr ""
+msgstr "在后台启动审计程序："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:99
@@ -243,7 +246,7 @@ msgstr ""
 msgid ""
 "Users who prefer to compile a custom kernel must include the following line "
 "in their custom kernel configuration file:"
-msgstr ""
+msgstr "如果您使用的是定制内核， 就必须在内核配置文件中明确指定希望添加这一支持："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:106
@@ -255,7 +258,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/audit/_index.adoc:108
 #, no-wrap
 msgid "Event Selection Expressions"
-msgstr ""
+msgstr "事件筛选表达式"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:111
@@ -266,6 +269,9 @@ msgid ""
 "evaluated from left to right, and two expressions are combined by appending "
 "one onto the other."
 msgstr ""
+"在审计配置文件中的许多地方会用到筛选表达式来确定哪些事件是需要审计的。 表达式中需要指定要匹配的事件类型， 并使用前缀指定是否应接受或忽略匹配的事件， "
+"此外， 还可以指定一个可选项指明匹配成功或失败的操作。 选择表达式是按从左到右的顺序计算的， 而对于两个表达式的情形， "
+"则是通过将后一个追加到前一个之后来实现的。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:113
@@ -276,7 +282,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/audit/_index.adoc:115
 #, no-wrap
 msgid "Default Audit Event Classes"
-msgstr ""
+msgstr "默认审计类别"
 
 #. type: Table
 #: documentation/content/en/books/handbook/audit/_index.adoc:201
@@ -393,7 +399,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/audit/_index.adoc:208
 #, no-wrap
 msgid "Prefixes for Audit Event Classes"
-msgstr ""
+msgstr "审计类的前缀"
 
 #. type: Table
 #: documentation/content/en/books/handbook/audit/_index.adoc:228
@@ -423,14 +429,14 @@ msgstr ""
 msgid ""
 "If no prefix is present, both successful and failed instances of the event "
 "will be audited."
-msgstr ""
+msgstr "如果不存在前缀，则将审核事件的成功实例和失败实例。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:233
 msgid ""
 "The following example selection string selects both successful and failed "
 "login/logout events, but only successful execution events:"
-msgstr ""
+msgstr "下面例子中的筛选字符串表示筛选成功和失败的登录/注销事件， 而对执行事件， 则只审计成功的："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:237
@@ -442,7 +448,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/audit/_index.adoc:239
 #, no-wrap
 msgid "Configuration Files"
-msgstr ""
+msgstr "配置文件"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:242
@@ -492,7 +498,7 @@ msgstr ""
 msgid ""
 "Audit configuration files should be edited and maintained carefully, as "
 "errors in configuration may result in improper logging of events."
-msgstr ""
+msgstr "在编辑和维护审计配置文件时一定要小心， 因为配置文件中的错误会导致记录事件不正确。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:256
@@ -635,7 +641,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/audit/_index.adoc:304
 #, no-wrap
 msgid "Working with Audit Trails"
-msgstr ""
+msgstr "管理审计子系统"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:307
@@ -654,7 +660,7 @@ msgstr ""
 msgid ""
 "For example, to dump the entire contents of a specified audit log in plain "
 "text:"
-msgstr ""
+msgstr "例如， <command>praudit</command> 工具会将指定的审计记帐转存为简单文本格式的审计日志："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:313
@@ -740,7 +746,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/audit/_index.adoc:343
 #, no-wrap
 msgid "Live Monitoring Using Audit Pipes"
-msgstr ""
+msgstr "通过审计管道来实时监控"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:346
@@ -753,6 +759,9 @@ msgid ""
 "log rotation interrupting the event stream. To track the live audit event "
 "stream:"
 msgstr ""
+"审计管道是位于设备文件系统中的自动复制 (cloning) 的虚拟设备， 用于让应用程序控制正在运行的审计记录流， "
+"这主要是为了满足入侵检测和系统监控软件作者的需要。 不过， 对管理员而言， 审计管道设备也提供了一种无需冒审计记帐文件属主出现问题的麻烦， "
+"或由于日志翻转而打断事件流的麻烦， 而实现实时监控的方便途径。 要跟踪实时事件流， 使用下面的命令行："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:350
@@ -797,7 +806,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/audit/_index.adoc:367
 #, no-wrap
 msgid "Rotating and Compressing Audit Trail Files"
-msgstr ""
+msgstr "审计记帐文件的轮转"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:370
@@ -884,3 +893,5 @@ msgid ""
 "are cleanly terminated. It will not be run on trails left unterminated "
 "following an improper shutdown."
 msgstr ""
+"其它存档操作也包括将审计记帐复制到一个中央的服务器， 删除旧的记帐文件， 或浓缩审计记帐并删除不需要的记录等。 "
+"这个脚本会在审计记帐文件正常关闭时执行一次， 因此在非正常关闭系统时， 就不会执行它了。"
