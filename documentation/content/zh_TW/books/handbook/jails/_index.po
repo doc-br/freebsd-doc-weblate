@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:55-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 18:35+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Traditional) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookjails_index/zh_TW/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/jails/_index.adoc:1
@@ -31,13 +34,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:9
 #, no-wrap
 msgid "Jails"
-msgstr ""
+msgstr "Jail"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/jails/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "概述"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:48
@@ -78,11 +81,14 @@ msgid ""
 "are available for tuning the access of a jailed environment. Jails can be "
 "considered as a type of operating system-level virtualization."
 msgstr ""
+"Jail 用許多方式改進了傳統 chroot 環境的概念。在傳統 chroot 環境，程序僅限制在一部份檔案系統可存取的地方。其餘的系統資源、系統使用者、"
+"執行的程序以及網路子系統被 chroot 的程序及主機系統的程序所共享。Jail 透過虛擬化存取檔案系統、使用者及網路子系統來擴展這個模型，"
+"可使用更多細微的控制參數來調校 Jail 的環境存取方式，Jail 可算是一種作業系統層級的虛擬化。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:54
 msgid "A jail is characterized by four elements:"
-msgstr ""
+msgstr "Jail 的四個要素："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:56
@@ -90,12 +96,12 @@ msgid ""
 "A directory subtree: the starting point from which a jail is entered. Once "
 "inside the jail, a process is not permitted to escape outside of this "
 "subtree."
-msgstr ""
+msgstr "一個子樹狀目錄：進入 Jail 的起點目錄，一但在 Jail 中，程序便沒有權限離開此目錄之外。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:57
 msgid "A hostname: which will be used by the jail."
-msgstr ""
+msgstr "一個主機名稱：將會由 Jail 所使用。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:58
@@ -109,7 +115,7 @@ msgstr ""
 msgid ""
 "A command: the path name of an executable to run inside the jail. The path "
 "is relative to the root directory of the jail environment."
-msgstr ""
+msgstr "一個指令：要在 Jail 中可執行的執行檔路徑名稱。該路徑是 Jail 環境根目錄的相對路徑。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:61
@@ -126,27 +132,27 @@ msgid ""
 "This chapter provides an overview of the terminology and commands for "
 "managing FreeBSD jails. Jails are a powerful tool for both system "
 "administrators, and advanced users."
-msgstr ""
+msgstr "本章將提供 FreeBSD Jail 術語及管理指令的概述，Jail 對系統管理者及進階的使用者來二者來說皆是強大的工具。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:65
 msgid "After reading this chapter, you will know:"
-msgstr ""
+msgstr "讀完這章，您將了解："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:67
 msgid "What a jail is and what purpose it may serve in FreeBSD installations."
-msgstr ""
+msgstr "Jail 是什麼及它在 FreeBSD 中提供的目的。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:68
 msgid "How to build, start, and stop a jail."
-msgstr ""
+msgstr "如何建立、啟動及停止 Jail。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:69
 msgid "The basics of jail administration, both from inside and outside the jail."
-msgstr ""
+msgstr "Jail 管理基礎，不論從內部或外部。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:73
@@ -157,6 +163,8 @@ msgid ""
 "privileged user inside the jail to obtain elevated privileges in the host "
 "environment."
 msgstr ""
+"Jail 是強大的工具，但它不是安全性問題的萬靈丹。雖然 Jail 的程序不可能自己獨自打破規則，但有許多方法可以讓在 Jail 之外無權限的使用者與在 "
+"Jail 之內有權限的使用者串通來取得主機環境的更高權限。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:75
@@ -166,12 +174,13 @@ msgid ""
 "untrusted users with privileged access to a jail should not be given access "
 "to the host environment."
 msgstr ""
+"大多數這類型的攻擊者可以由確保 Jail 根目錄不會被無權限使用者存取來減少。基本上，不受信任的使用者有 Jail 的存取權限並不會讓其可存取主機環境。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/jails/_index.adoc:78
 #, no-wrap
 msgid "Terms Related to Jails"
-msgstr ""
+msgstr "Jail 相關術語"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:81
@@ -179,7 +188,7 @@ msgid ""
 "To facilitate better understanding of parts of the FreeBSD system related to "
 "jails, their internals and the way they interact with the rest of FreeBSD, "
 "the following terms are used further in this chapter:"
-msgstr ""
+msgstr "為協助更容易理解 FreeBSD 系統有關 Jail 部份， 以及它們與 FreeBSD 其他部分的相互作用關係， 以下列出本章將使用的術語："
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/jails/_index.adoc:82
@@ -220,13 +229,13 @@ msgstr ""
 msgid ""
 "The system administration utility which allows launching of processes within "
 "a jail environment."
-msgstr ""
+msgstr "允許在 Jail 環境下執行程序的系統管理工具。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/jails/_index.adoc:91
 #, no-wrap
 msgid "host (system, process, user, etc.)"
-msgstr ""
+msgstr "主機 (系統、程序、使用者等)"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:93
@@ -237,25 +246,27 @@ msgid ""
 "host system from a jail is that the limitations which apply to superuser "
 "processes inside a jail are not enforced for processes of the host system."
 msgstr ""
+"Jail 環境的控制系統。 主機系統可以存取所有可用的硬體資源，並能控制 Jail 環境內外的程序。主機系統與 Jail 最大的差別在於："
+"在主機系統中的超級使用者程序並不像在 Jail 環境那樣受到限制。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/jails/_index.adoc:94
 #, no-wrap
 msgid "hosted (system, process, user, etc.)"
-msgstr ""
+msgstr "託管 (主機、程序、使用者等)"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:96
 msgid ""
 "A process, user or other entity, whose access to resources is restricted by "
 "a FreeBSD jail."
-msgstr ""
+msgstr "存取資源受到 FreeBSD Jail 限制的託管程序、使用者或其他實體。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/jails/_index.adoc:98
 #, no-wrap
 msgid "Creating and Controlling Jails"
-msgstr ""
+msgstr "建立和控制 Jail"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:101
@@ -351,12 +362,12 @@ msgid ""
 "Extract the binaries from the tarballs on the install media into the "
 "declared destination. Minimally, only the base set needs to be extracted, "
 "but a complete install can be performed when preferred."
-msgstr ""
+msgstr "從安裝媒體上的 Tarball 中取出 Binary 並放到宣告的位置，至少需要取出 Base set 的部份，若需要也可完整安裝。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:140
 msgid "To install just the base system:"
-msgstr ""
+msgstr "只安裝基礎系統 (Base system)："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:144
@@ -367,7 +378,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:147
 msgid "To install everything except the kernel:"
-msgstr ""
+msgstr "安裝全部不含核心："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:151
@@ -558,7 +569,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:236
 #, no-wrap
 msgid "Fine Tuning and Administration"
-msgstr ""
+msgstr "調校與管理"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:239
@@ -567,6 +578,7 @@ msgid ""
 "combining a host FreeBSD system with jails, to produce higher level "
 "applications. This section presents:"
 msgstr ""
+"還有許多選項可以對所有 Jail 做設定，以及各種可讓 Jail 與主機 FreeBSD 系統結合的方法來提供更高層級的應用程式使用。 本節將介紹："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:241
@@ -587,7 +599,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:244
 #, no-wrap
 msgid "System Tools for Jail Tuning in FreeBSD"
-msgstr ""
+msgstr "在 FreeBSD 中調校 Jail 的系統工具"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:247
@@ -686,7 +698,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:269
 #, no-wrap
 msgid "High-Level Administrative Tools in the FreeBSD Ports Collection"
-msgstr ""
+msgstr "在 FreeBSD Port 套件集中的高層級管理工具"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:272
@@ -701,7 +713,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:274
 #, no-wrap
 msgid "Keeping Jails Patched and up to Date"
-msgstr ""
+msgstr "持續 Jail 的修補與更新"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:277
@@ -771,7 +783,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:305
 #, no-wrap
 msgid "Updating Multiple Jails"
-msgstr ""
+msgstr "更新多個 Jail"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:308
@@ -902,7 +914,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:338
 #, no-wrap
 msgid "Creating the Template"
-msgstr ""
+msgstr "建立範本"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:341
@@ -1040,7 +1052,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:411
 #, no-wrap
 msgid "Creating Jails"
-msgstr ""
+msgstr "建立 Jail"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:414
@@ -1196,7 +1208,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:495
 #, no-wrap
 msgid "Upgrading"
-msgstr ""
+msgstr "升級"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:498
@@ -1454,7 +1466,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:630
 #, no-wrap
 msgid "Initial Setup"
-msgstr ""
+msgstr "初始設定"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:633
@@ -1562,7 +1574,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:681
 #, no-wrap
 msgid "Creating and Starting a New Jail"
-msgstr ""
+msgstr "建立並啟動新的 Jail"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:684
@@ -1747,13 +1759,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:761
 #, no-wrap
 msgid "Updating Jails"
-msgstr ""
+msgstr "更新 Jail"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/jails/_index.adoc:764
 #, no-wrap
 msgid "Updating the Operating System"
-msgstr ""
+msgstr "更新作業系統"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:767
@@ -1962,7 +1974,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:876
 #, no-wrap
 msgid "Updating Ports"
-msgstr ""
+msgstr "更新 Port"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:879
@@ -1986,13 +1998,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:888
 #, no-wrap
 msgid "Controlling Jails"
-msgstr ""
+msgstr "控制 Jail"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/jails/_index.adoc:891
 #, no-wrap
 msgid "Stopping and Starting Jails"
-msgstr ""
+msgstr "停止與啟動 Jail"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:894
@@ -2044,7 +2056,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:918
 #, no-wrap
 msgid "Archiving and Restoring Jails"
-msgstr ""
+msgstr "封存與還原 Jail"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:921
@@ -2136,7 +2148,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/jails/_index.adoc:953
 #, no-wrap
 msgid "Running BIND in a Jail"
-msgstr ""
+msgstr "在 Jail 中執行 BIND"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:958
