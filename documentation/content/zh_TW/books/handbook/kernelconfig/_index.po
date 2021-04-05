@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:55-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 18:35+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Traditional) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookkernelconfig_index/zh_TW/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:1
@@ -31,13 +34,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:9
 #, no-wrap
 msgid "Configuring the FreeBSD Kernel"
-msgstr ""
+msgstr "設定 FreeBSD 核心"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "概述"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:48
@@ -47,41 +50,43 @@ msgid ""
 "and much more. While much of FreeBSD is dynamically configurable, it is "
 "still occasionally necessary to configure and compile a custom kernel."
 msgstr ""
+"核心 (Kernel) 是 FreeBSD 作業系統最重要的部份之一。它負責記憶體管理、安全控管、網路、硬碟存取等等。 儘管目前 FreeBSD "
+"大多可以用動態設定， 但有時仍需要設定並編譯自訂的核心。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:50
 msgid "After reading this chapter, you will know:"
-msgstr ""
+msgstr "讀完這章，您將了解："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:52
 msgid "When to build a custom kernel."
-msgstr ""
+msgstr "何時需要編譯自訂核心。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:53
 msgid "How to take a hardware inventory."
-msgstr ""
+msgstr "如何取得硬體資訊。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:54
 msgid "How to customize a kernel configuration file."
-msgstr ""
+msgstr "如何量身訂做核心設定檔。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:55
 msgid "How to use the kernel configuration file to create and build a new kernel."
-msgstr ""
+msgstr "如何使用核心設定檔來建立並編譯新的核心。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:56
 msgid "How to install the new kernel."
-msgstr ""
+msgstr "如何安裝新的核心。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:57
 msgid "How to troubleshoot if things go wrong."
-msgstr ""
+msgstr "發生錯誤時如何排除問題。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:59
@@ -94,7 +99,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:61
 #, no-wrap
 msgid "Why Build a Custom Kernel?"
-msgstr ""
+msgstr "為何要編譯自訂的核心?"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:64
@@ -103,6 +108,8 @@ msgid ""
 "program, supported a fixed list of devices, and in order to change the "
 "kernel's behavior, one had to compile and then reboot into a new kernel."
 msgstr ""
+"早期的 FreeBSD 的核心 (Kernel) 被戲稱為 "
+"“巨石”。因為當時的核心是一個非常大的程式，且只支援固定的硬體裝置，如果您想改變核心的設定，就必須編譯一個新核心並重新開機，才能使用。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:66
@@ -113,6 +120,8 @@ msgid ""
 "hardware and for new functionality to be brought into the kernel. This is "
 "known as a modular kernel."
 msgstr ""
+"現今，大多數在 FreeBSD 核心的功能已採用模組 (Module) 的方式包裝，並可依需求動態從核心載入或卸載。 "
+"這使得執行中的核心能夠快速適應新硬體環境並在核心開啟新的功能，這就是所謂模組化核心 (Modular Kernel)。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:68
@@ -123,6 +132,8 @@ msgid ""
 "prevent the loading and unloading of kernel modules and require that only "
 "needed functionality is statically compiled into the kernel."
 msgstr ""
+"儘管如此，還是有一些功能因使用到靜態的核心設定須要編譯，因為這些功能與核心緊密結合，無法將做成可動態載入的模組。且部份強調安全性的環境會盡量避免載入與卸載"
+"核心模組，且只要將需要的功能靜態的編譯到核心當中。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:70
@@ -140,7 +151,7 @@ msgstr ""
 msgid ""
 "Faster boot time. Since the kernel will only probe the hardware on the "
 "system, the time it takes the system to boot can decrease."
-msgstr ""
+msgstr "加速開機，因為自訂的核心只需要偵測您系統上存在的硬體，所以讓啟動所花的過程更流暢快速。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:73
@@ -165,7 +176,7 @@ msgstr ""
 msgid ""
 "Before building a custom kernel, consider the reason for doing so. If there "
 "is a need for specific hardware support, it may already exist as a module."
-msgstr ""
+msgstr "在編譯自訂核心之前，請思考要這麼做的原因，若是因為需要特定硬體的支援，很可能已有既有的模組可以使用。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:78
@@ -208,7 +219,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:92
 #, no-wrap
 msgid "Finding the System Hardware"
-msgstr ""
+msgstr "偵測系統硬體"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:95
@@ -251,7 +262,7 @@ msgstr ""
 msgid ""
 "Since this hardware exists, this driver should not be removed from a custom "
 "kernel configuration file."
-msgstr ""
+msgstr "因為該硬體存在，此驅動程式便不應該從自訂核心設定檔中移除。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:114
@@ -310,20 +321,20 @@ msgid ""
 "Once the hardware inventory list is created, refer to it to ensure that "
 "drivers for installed hardware are not removed as the custom kernel "
 "configuration is edited."
-msgstr ""
+msgstr "準備好硬體清單之後，參考該清單來確認已安裝的硬體驅動程式在編輯自訂核心設定時沒有被移除。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:141
 #, no-wrap
 msgid "The Configuration File"
-msgstr ""
+msgstr "設定檔"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:144
 msgid ""
 "In order to create a custom kernel configuration file and build a custom "
 "kernel, the full FreeBSD source tree must first be installed."
-msgstr ""
+msgstr "為了要建立自訂核心設定檔並編譯自訂核心，必須先安裝完整的 FreeBSD 原始碼樹。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:146
@@ -416,7 +427,7 @@ msgstr ""
 msgid ""
 "Alternately, keep the kernel configuration file elsewhere and create a "
 "symbolic link to the file:"
-msgstr ""
+msgstr "或者，將核心設定檔放在其他地方，然後建立一個符號連結 (Symbolic link) 至該檔案："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:182
@@ -485,14 +496,14 @@ msgstr ""
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:213
 #, no-wrap
 msgid "Building and Installing a Custom Kernel"
-msgstr ""
+msgstr "編譯與安裝自訂核心"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:216
 msgid ""
 "Once the edits to the custom configuration file have been saved, the source "
 "code for the kernel can be compiled using the following steps:"
-msgstr ""
+msgstr "完成自訂設定檔的編輯並儲存之後，便可依據以下步驟編譯核心的原始碼："
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:219
@@ -517,7 +528,7 @@ msgstr ""
 msgid ""
 "Compile the new kernel by specifying the name of the custom kernel "
 "configuration file:"
-msgstr ""
+msgstr "指定自訂核心設定檔的名稱來編譯新的核心："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:231
@@ -560,7 +571,7 @@ msgstr ""
 msgid ""
 "For example, this variable specifies the list of modules to build instead of "
 "using the default of building all modules:"
-msgstr ""
+msgstr "例如，使用以下變數可指定要編譯的模組清單來替代預設編譯所有模組的設定："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:249
@@ -573,7 +584,7 @@ msgstr ""
 msgid ""
 "Alternately, this variable lists which modules to exclude from the build "
 "process:"
-msgstr ""
+msgstr "或者，可使用以下變數來從編譯程序中排除要編譯的模組："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:256
@@ -590,14 +601,14 @@ msgstr ""
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:261
 #, no-wrap
 msgid "If Something Goes Wrong"
-msgstr ""
+msgstr "如果發生錯誤"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:264
 msgid ""
 "There are four categories of trouble that can occur when building a custom "
 "kernel:"
-msgstr ""
+msgstr "當編譯自訂核心時可能發生以下四種類型的問題："
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:265
@@ -638,7 +649,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:276
 #, no-wrap
 msgid "The kernel does not boot"
-msgstr ""
+msgstr "無法使用核心開機"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:278
