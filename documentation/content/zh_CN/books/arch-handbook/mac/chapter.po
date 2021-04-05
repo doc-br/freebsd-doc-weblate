@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 01:29+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
+"projects/documentation/booksarch-handbookmacchapter/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:1
@@ -25,13 +28,13 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:13
 #, no-wrap
 msgid "The TrustedBSD MAC Framework"
-msgstr ""
+msgstr "TrustedBSD MAC 框架"
 
 #. type: Title ==
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:38
 #, no-wrap
 msgid "MAC Documentation Copyright"
-msgstr ""
+msgstr "MAC 文档版权声明"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:41
@@ -50,6 +53,9 @@ msgid ""
 "HTML, PDF, PostScript, RTF and so forth) with or without modification, are "
 "permitted provided that the following conditions are met:"
 msgstr ""
+"Redistribution and use in source (SGML DocBook) and 'compiled' forms (SGML, "
+"HTML, PDF, PostScript, RTF and so forth) with or without modification, are "
+"permitted provided that the following conditions are met:"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:45
@@ -58,6 +64,9 @@ msgid ""
 "copyright notice, this list of conditions and the following disclaimer as "
 "the first lines of this file unmodified."
 msgstr ""
+"Redistributions of source code (SGML DocBook) must retain the above "
+"copyright notice, this list of conditions and the following disclaimer as "
+"the first lines of this file unmodified."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:46
@@ -67,6 +76,8 @@ msgid ""
 "notice, this list of conditions and the following disclaimer in the "
 "documentation and/or other materials provided with the distribution."
 msgstr ""
+"以编译形式重新分发（转换为其他DTD，转换为PDF，PostScript，RTF和其他格式）必须在随分发提供的文档和/或其他材料中复制上述版权声明，此条件"
+"列表和以下免责声明。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:50
@@ -83,12 +94,23 @@ msgid ""
 "ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF ADVISED OF "
 "THE POSSIBILITY OF SUCH DAMAGE."
 msgstr ""
+"THIS DOCUMENTATION IS PROVIDED BY THE NETWORKS ASSOCIATES TECHNOLOGY, INC "
+"\"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED "
+"TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR "
+"PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL NETWORKS ASSOCIATES TECHNOLOGY, "
+"INC BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR "
+"CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF "
+"SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS "
+"INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN "
+"CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) "
+"ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF ADVISED OF "
+"THE POSSIBILITY OF SUCH DAMAGE."
 
 #. type: Title ==
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:53
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "简介"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:56
@@ -114,7 +136,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:60
 #, no-wrap
 msgid "Introduction"
-msgstr ""
+msgstr "介绍"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:63
@@ -128,6 +150,9 @@ msgid ""
 "policy-agnostic object security labels. This support is currently considered "
 "experimental."
 msgstr ""
+"TrustedBSD MAC 框架提供的机制,允许在其上运行的内核模块在内核编译或者运行时，对内核的访问控制模型进行扩展。新的系统安全策略作为一个内核模块"
+"实现,并被链接到内核中；如果系统中同时存在多个安全策略模块，则它们的决策结果将以某种确定的方式组合。为了给简化新安全策略的开发，MAC "
+"向上提供了大量用于访问控制的基础设施，特别是，对临时的或者持久的、策略无关的对象安全标记的支持。该支持目前仍是试验性质的。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:65
@@ -137,12 +162,13 @@ msgid ""
 "learn about how the MAC Framework supports access control extension of the "
 "kernel."
 msgstr ""
+"本章所提供的信息不仅将使在 MAC 使能环境下工作的潜在用户受益，也可以为需要了解 MAC 框架是如何支持对内核访问控制进行扩展的策略模块开发人员所用。"
 
 #. type: Title ==
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:67
 #, no-wrap
 msgid "Policy Background"
-msgstr ""
+msgstr "安全策略背景知识"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:70
@@ -162,6 +188,12 @@ msgid ""
 "security labels on objects representing concepts such as data sensitivity "
 "and integrity."
 msgstr ""
+"强制访问控制（简称 MAC），是指由操作系统强制实施的一组针对用户的访问控制策略。在某些情况下,强制访问控制的策略可能会与自主访问控制（简称 "
+"DAC）所提供的保护措施发生冲突，后者是用来向非管理员用户对数据采取保护措施提供支持的。在传统的 UNIX 系统中，DAC "
+"保护措施包括文件访问模式和访问控制列表；而 MAC 则提供进程控制和防火墙等。操作系统设计者和安全机制研究人员对许多经典的 MAC "
+"安全策略作了形式化的表述，比如，多级安全（MLS)机密性策略，Biba 完整性策略，基于角色的访问控制策略（RBAC），域和型裁决策略(DTE),以及型裁"
+"决策略(TE)。安全策略的形式化表述被称为安全模型。每个模型根据一系列条件做出安全相关的决策，这些条件包括，用户的身份、角色和安全信任状，以及对象的安全标"
+"记(用来代表该对象数据的机密性/完整性级别)。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:72
@@ -174,12 +206,14 @@ msgid ""
 "used to implement purely discretionary policies, as policy modules are given "
 "substantial flexibility in how they authorize protections."
 msgstr ""
+"TrustedBSD MAC 框架所提供的对策略模块的支持，不仅可以用来实现上述所有策略，还能用于实现其他利用已有安全属性(如，用户和组ID、文件扩展属性"
+"等）决策的系统安全强化策略。此外，因为具体策略模块在访问授权方面所拥有的高度灵活性和自主性，所以MAC 框架同样可以用来实现完全自主式的安全策略."
 
 #. type: Title ==
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:74
 #, no-wrap
 msgid "MAC Framework Kernel Architecture"
-msgstr ""
+msgstr "MAC 框架的内核体系结构"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:77
@@ -190,69 +224,72 @@ msgid ""
 "simultaneously loaded, the MAC Framework will usefully (for some definition "
 "of useful) compose the results of the policies."
 msgstr ""
+"TrustedBSD MAC "
+"框架为大多数的访问控制模块提供基本设施，允许它们以内核模块的形式灵活地扩展系统中实施的安全策略。如果系统中同时加载了多个策略，MAC "
+"框架将负责将各个策略的授权结果以一种（某种程度上）有意义的方式组合，形成最后的决策。"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:79
 #, no-wrap
 msgid "Kernel Elements"
-msgstr ""
+msgstr "内核元素"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:82
 msgid "The MAC Framework contains a number of kernel elements:"
-msgstr ""
+msgstr "MAC 框架由下列内核元素组成："
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:84
 msgid "Framework management interfaces"
-msgstr ""
+msgstr "框架管理接口"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:85
 msgid "Concurrency and synchronization primitives."
-msgstr ""
+msgstr "并发与同步原语。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:86
 msgid "Policy registration"
-msgstr ""
+msgstr "策略注册"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:87
 msgid "Extensible security label for kernel objects"
-msgstr ""
+msgstr "内核对象的扩展性安全标记"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:88
 msgid "Policy entry point composition operators"
-msgstr ""
+msgstr "策略入口函数的组合操作"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:89
 msgid "Label management primitives"
-msgstr ""
+msgstr "标记管理原语"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:90
 msgid "Entry point API invoked by kernel services"
-msgstr ""
+msgstr "由内核服务调用的入口函数 API"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:91
 msgid "Entry point API to policy modules"
-msgstr ""
+msgstr "策略模块的入口函数 API"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:92
 msgid ""
 "Entry points implementations (policy life cycle, object life cycle/label "
 "management, access control checks)."
-msgstr ""
+msgstr "入口函数的实现（包括策略生命周期管理、标记管理和访问控制检查三部分）。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:93
 msgid "Policy-agnostic label-management system calls"
-msgstr ""
+msgstr "管理策略无关标记的系统调用"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:94
@@ -262,20 +299,20 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:95
 msgid "Various security policies implemented as MAC policy modules"
-msgstr ""
+msgstr "以 MAC 的策略加载模块形式实现的各种安全策略"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:97
 #, no-wrap
 msgid "Framework Management Interfaces"
-msgstr ""
+msgstr "框架管理接口"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:100
 msgid ""
 "The TrustedBSD MAC Framework may be directly managed using sysctl's, loader "
 "tunables, and system calls."
-msgstr ""
+msgstr "对 TrustedBSD MAC 框架进行直接管理的方式有三种:通过 sysctl 子系统、通过 loader 配置, 或者使用系统调用。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:102
@@ -290,6 +327,10 @@ msgid ""
 "per-policy controls should be preferred, as they provide greater granularity "
 "and greater operational consistency for policy modules."
 msgstr ""
+"多数情况下，与同一个内核内部变量相关联的 sysctl 变量和 loader "
+"参数的名字是相同的，通过设置它们，可以控制保护措施的实施细节，比如，某个策略在各个内核子系统中的实施与否等等。另外，如果在内核编译时选择支持 MAC 调试"
+"选项，内核将维护若干计数器以跟踪标记的分配使用情况。通常不建议在实用环境下通过在不同子系统上设置不同的变量或参数来实施控制，因为这种方法将会作用于系统中所"
+"有的活跃策略。如果希望对具体策略实施管理而不相影响其他活跃策略,则应当使用策略级别的控制，因为这种方法的控制粒度更细，并能更好地保证策略模块的功能一致性。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:104
@@ -299,12 +340,14 @@ msgid ""
 "variables; policy modules will have the opportunity to influence load and "
 "unload events, including preventing undesired unloading of the policy."
 msgstr ""
+"与其他内核模块一样，系统管理员可以通过系统的模块管理系统调用和其他系统接口，包括 boot loader "
+"变量，对策略模块执行加载与卸载操作；策略模块可以在加载时,设置加载标志,来指示系统对其加载、卸载操作进行相应控制，比如阻止非期望的卸载操作。"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:106
 #, no-wrap
 msgid "Policy List Concurrency and Synchronization"
-msgstr ""
+msgstr "策略链表的并发与同步"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:109
@@ -323,6 +366,12 @@ msgid ""
 "recursion into the MAC Framework from within a policy module is permitted, "
 "although not generally used."
 msgstr ""
+"在运行时,系统中活跃的策略集合可能发生变化，然而对策略入口函数的使用操作并不是原子性的，因此，当某一个入口函数正被使用时，\n"
+"        系统需要提供额外的同步机制来阻止对该策略模块的加载与卸载，以确保当前活跃的策略集合不会在此过程中发生改变。\n"
+"        通过使用\"框架忙”计数器,就可以做到这一点：一旦某个入口函数被调用，计数器的值被增加1；而每当一个入口函数调用结束时，计数器的值被减少1"
+"。检查计数器的值，如果其值为正，框架将阻止对策略链表的修改操作，请求操作的线程将被迫进入睡眠，直到计数器的值重新减少到0为止。计数器本身由一个互斥锁保护，"
+"同时结合一个条件变量(用于唤醒等待对策略链表进行修改操作的睡眠线程)。采用这种同步模型的一个副作用是，在同一个策略模块内部，允许嵌套地调用框架，不过这种情"
+"况其实很少出现。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:111
@@ -336,6 +385,9 @@ msgid ""
 "supporting dynamically loaded and unloaded policies as synchronization is no "
 "longer required."
 msgstr ""
+"为了减少由于采用计数器引入的额外开销，设计者采用了各种优化措施。其中包括，当策略链表为空或者其中仅含有静态表项（那些只能在系统运行之前加载而且不能动态卸载"
+"的策略）时，框架不对计数器进行操作，其值总是为0，从而将此时的同步开销减到0。另一个极端的办法是，使用一个编译选项来禁止在运行时对加载的策略链表进行修改，"
+"此时不再需要对策略链表的使用进行同步保护。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:113
@@ -344,13 +396,13 @@ msgid ""
 "normal sleep lock cannot be used; as a result, it is possible for the load "
 "or unload attempt to block for a substantial period of time waiting for the "
 "framework to become idle."
-msgstr ""
+msgstr "因为 MAC 框架不允许在某些入口函数之内阻塞，所以不能使用普通的睡眠锁。故而，加载或卸载操作可能会为等待框架空闲而被阻塞相当长的一段时间。"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:115
 #, no-wrap
 msgid "Label Synchronization"
-msgstr ""
+msgstr "标记同步"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:118
@@ -372,12 +424,20 @@ msgid ""
 "point, only read operations are permitted on the label state attached to the "
 "credential."
 msgstr ""
+"MAC 框架必须对其负责维护的安全属性标记的存储访问提供同步保护。下列两种情形，可能导致对安全属性标记的不一致访问：第一，作为安全属性标记的持有者，内核对"
+"象本身可能同时被多个线程访问；第二，MAC 框架代码是可重入的，即允许多个线程同时在框架内执行。通常，MAC "
+"框架使用内核对象数据上已有的内核同步机制来保护该其上附加的 MAC 安全标记。例如，套接字上的 MAC "
+"标记由已有的套接字互斥锁保护。类似的，对于安全标记的并发访问的过程与对其所在对象进行的并发访问在语义上是一样的，例如，信任状安全标记,"
+"将保持与该数据结构中其他内容一致的\"写时复制\"的更新过程。MAC "
+"框架在引用一个内核对象时，将首先对访问该对象上的标记需要用到的锁进行断言。策略模块的编写者必须了解这些同步语义， "
+"因为它们可能会限制对安全标记所能进行的访问类型。 "
+"举个例子，如果通过入口函数传给策略模块的是对某个信任状的只读引用，那么在策略内部，只能读该结构对应的标记状态。"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:120
 #, no-wrap
 msgid "Policy Synchronization and Concurrency"
-msgstr ""
+msgstr "策略间的同步与并发"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:123
@@ -395,6 +455,10 @@ msgid ""
 "entry points are not permitted to sleep, limiting the use of primitives in "
 "those entry points to mutexes and wakeup operations."
 msgstr ""
+"FreeBSD 内核是一个可抢占式的内核，因此，作为内核一部分的策略模块也必须是可重入的，也就是说，在开发策略模块时必须假设多个内核线程可以同时通过不同的"
+"入口函数进入该模块。如果策略模块使用可被修改的内核状态，那么还需要在策略内部使用恰当的同步原语，确保在策略内部的多个线程不会因此观察到不一致的内核状态，从"
+"而避免由此产生的策略误操作。为此，策略可以使用 FreeBSD 现有的同步原语，包括互斥锁、睡眠锁、条件变量和计数信号量。对这些同步原语的使用必须慎重，需"
+"要特别注意两点：第一，保持现有的内核上锁次序；第二，在非睡眠的入口函数之内不要使用互斥锁和唤醒操作。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:125
@@ -404,12 +468,14 @@ msgid ""
 "lock order or risking lock recursion. This will maintain policy locks as "
 "leaf locks in the global lock order, helping to avoid deadlock."
 msgstr ""
+"为避免违反内核上锁次序或造成递归上锁，策略模块在调用其他内核子系统之前，通常要释放所有在策略内部申请的锁。这样做的结果是，在全局上锁次序形成的拓朴结构中，"
+"策略内部的锁总是作为叶子节点，从而保证了这些锁的使用不会导致由于上锁次序混乱造成的死锁。"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:127
 #, no-wrap
 msgid "Policy Registration"
-msgstr ""
+msgstr "策略注册"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:130
@@ -432,7 +498,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:132
 #, no-wrap
 msgid "Entry Points"
-msgstr ""
+msgstr "入口函数"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:135
@@ -454,12 +520,19 @@ msgid ""
 "such as packet matching for sockets and label transition at program "
 "execution."
 msgstr ""
+"内核服务与 MAC 框架之间进行交互有两种途径：一是，内核服务调用一系列 API 通知 MAC 框架安全事件的发生；二是，内核服务向 MAC "
+"框架提供一个指向安全对象的策略无关安全标记数据结构的指针。标记指针由 MAC "
+"框架经由标记管理入口函数进行维护，并且，只要对管理相关对象的内核子系统稍作修改，就可以允许 MAC "
+"框架向策略模块提供标记服务。例如，在进程、进程信任状、套接字、管道、Mbuf、网络接口、IP "
+"重组队列和其他各种安全相关的数据结构中均增加了指向安全标记的指针。另外，当需要做出重要的安全决策时，内核服务也会调用 MAC 框架，以便各个策略模块根据其"
+"自己的标准（可以使用存储在安全标记中的数据）完善这些决策。绝大多数安全相关的关键决策是显式的访问控制检查；也有少数涉及更加一般的决策函数，比如，套接字的数"
+"据包匹配和程序执行时刻的标记转换。"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:137
 #, no-wrap
 msgid "Policy Composition"
-msgstr ""
+msgstr "策略组合"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:140
@@ -478,12 +551,16 @@ msgid ""
 "trusted systems often ship with two or more policies using a similar "
 "composition."
 msgstr ""
+"如果内核中同时加载了多个策略模块，这些策略的决策结果将由框架使用一个合成运算子来进行组合汇总，得出最终的结果。目前，该算子是硬编码的，并且只有当所有的活跃"
+"策略均对请求表示同意时才会返回成功。由于各个策略返回的出错条件可能并不相同（成功、访问被拒绝、请求对象不存在等等），需要使用一个选择子先从各个策略返回的错"
+"误条件集合中选择出一个作为最终返回结果。一般情况下，与“访问被拒绝”相比，将更倾向于选择“请求对象不存在”。尽管不能从理论上保证合成结果的有效性与安全性，"
+"但试验结果表明，对于许多实用的策略集合来说，事实的确如此。例如，传统的可信系统常常采用类似的方法对多个安全策略进行组合。"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:142
 #, no-wrap
 msgid "Labeling Support"
-msgstr ""
+msgstr "标记支持"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:145
@@ -498,6 +575,10 @@ msgid ""
 "and externalization of string-based labels provides by user applications, "
 "and can expose multiple label elements to applications if desired."
 msgstr ""
+"与许多需要给对象添加安全标记的访问控制扩展一样，MAC 框架为各种用户可见的对象提供了一组用于管理策略无关标记的系统调用。常用的标记类型有，partiti"
+"on标识符、机密性标记、完整性标记、区间（非等级类别）、域、角色和型。“策略无关”的意思是指，标记的语法与使用它的具体策略模块无关，而同时策略模块能够完全"
+"独立地定义和使用与对象相关联的元数据的语义。用户应用程序提供统一格式的基于字符串的标记，由使用它的策略模块负责解析其内在含义并决定其外在表示。如果需要，应"
+"用程序可以使用多重标记元素。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:147
@@ -537,6 +618,12 @@ msgid ""
 "policies must also be able to handle a NULL label pointer for Mbufs if they "
 "have been loaded dynamically."
 msgstr ""
+"初始化入口函数通常有一个睡眠标志位，用来表明一个初始化操作是否允许中途睡眠等待；如果不允许，则可能会失败返回，并要求撤销此次标记分配操作（乃至对象分配操作"
+"）。例如，如果在网络栈上处理中断时因为不允许睡眠或者调用者持有一个互斥锁，就可能出现这种情况。考虑到在处理中的网络数据包（Mbufs）上维护标记的性能损失"
+"太大，策略必须就自己对 Mbuf 进行标记的要求向 MAC 框架做出特别声明。动态加载到系统中而又使用标记的策略必须为处理未被其初始化函数处理过的对象作好"
+"准备，这些对象在策略加载之前就已经存在,故而无法在初始化时调用策略的相关函数进行处理。MAC 框架向策略保证，没有被初始化的标记 slot "
+"的值必为0或者 NULL，策略可以借此检测到未初始化的标记。需要注意的是，因为对 Mbuf 标记的存储分配是有条件的，"
+"因此需要使用其标记的动态加载策略还可能需要处理 Mbuf 中值为 NULL 的标记指针。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:151
@@ -561,12 +648,14 @@ msgid ""
 "cannot be reclaimed, which places a strict (and relatively low) bound on the "
 "number of unload-reload operations for labeled policies."
 msgstr ""
+"目前，如果一个使用标记的策略允许被动态卸载，则卸载该模块之后,其状态 slot 尚无法被系统回收重用，由此导致了 MAC "
+"框架对标记策略卸载－重载操作数目上的严格限制。"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:158
 #, no-wrap
 msgid "System Calls"
-msgstr ""
+msgstr "相关系统调用"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:161
@@ -574,7 +663,7 @@ msgid ""
 "The MAC Framework implements a number of system calls: most of these calls "
 "support the policy-agnostic label retrieval and manipulation APIs exposed to "
 "user applications."
-msgstr ""
+msgstr "MAC 框架向应用程序提供了一组系统调用：其中大多数用于向进行查询和修改策略无关标记操作的应用 API提供支持。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:163
@@ -594,7 +683,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:165
 msgid "The following MAC-related system calls are present in the FreeBSD kernel:"
-msgstr ""
+msgstr "目前的FreeBSD 内核提供了下列 MAC 相关的系统调用："
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:167
@@ -695,7 +784,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:182
 #, no-wrap
 msgid "MAC Policy Architecture"
-msgstr ""
+msgstr "MAC策略模块体系结构"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:185
@@ -707,55 +796,57 @@ msgid ""
 "a stream of system events and permitting the policy to influence access "
 "control decisions. Each policy contains a number of elements:"
 msgstr ""
+"安全策略可以直接编入内核，也可以编译成独立的内核模块，在系统引导时或者运行时使用模块加载命令加载。策略模块通过一组预先定义好的入口函数与系统交互。通过它们"
+"，策略模块能够掌握某些系统事件的发生，并且在必要的时候影响系统的访问控制决策。每个策略模块包含下列组成部分："
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:187
 msgid "Optional configuration parameters for policy."
-msgstr ""
+msgstr "可选：策略配置参数。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:188
 msgid "Centralized implementation of the policy logic and parameters."
-msgstr ""
+msgstr "策略逻辑和参数的集中实现。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:189
 msgid ""
 "Optional implementation of policy life cycle events, such as initialization "
 "and destruction."
-msgstr ""
+msgstr "可选：策略生命周期事件的实现，比如，策略的初始化和销毁。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:190
 msgid ""
 "Optional support for initializing, maintaining, and destroying labels on "
 "selected kernel objects."
-msgstr ""
+msgstr "可选：对所选内核对象的安全标记进行初始化、维护和销毁的支持。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:191
 msgid ""
 "Optional support for user process inspection and modification of labels on "
 "selected objects."
-msgstr ""
+msgstr "可选：对所选对象的使用进程进行监控以及修改对象安全标记的支持。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:192
 msgid ""
 "Implementation of selected access control entry points that are of interest "
 "to the policy."
-msgstr ""
+msgstr "策略相关的访问控制入口函数的实现。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:193
 msgid "Declaration of policy identity, module entry points, and policy properties."
-msgstr ""
+msgstr "对策略标志、模块入口函数和策略特性的声明。"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:195
 #, no-wrap
 msgid "Policy Declaration"
-msgstr ""
+msgstr "策略注销"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:198
@@ -813,12 +904,14 @@ msgid ""
 "to the user via the kernel log during load and unload events, and also "
 "exported when providing status information to userland processes."
 msgstr ""
+"之所以向策略声明提供模块名字域，是为了能够唯一标识该模块，以便解析模块依赖关系。选择使用恰当的字符串作为名字。在策略加载和卸载时，策略的完整字符串名字将经"
+"由内核日志显示给用户。另外，当向用户进程报告状态信息时也会包含该字符串。"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:219
 #, no-wrap
 msgid "Policy Flags"
-msgstr ""
+msgstr "策略标志"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:222
@@ -826,13 +919,13 @@ msgid ""
 "The policy declaration flags field permits the module to provide the "
 "framework with information about its capabilities at the time the module is "
 "loaded. Currently, three flags are defined:"
-msgstr ""
+msgstr "在声明时提供标志参数域的机制，允许策略模块在作为模块被加载时，就自身特性向 MAC 框架提供说明。目前，已经定义的标志有三个："
 
 #. type: Labeled list
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:223
 #, no-wrap
 msgid "MPC_LOADTIME_FLAG_UNLOADOK"
-msgstr ""
+msgstr "MPC_LOADTIME_FLAG_UNLOADOK"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:225
@@ -842,12 +935,13 @@ msgid ""
 "module. This flag might be used by modules that allocate label state and are "
 "unable to free that state at runtime."
 msgstr ""
+"表示该策略模块可以被卸载。如果未提供该标志，则表示该策略模块拒绝被卸载。那些使用安全标记的状态，而又不能在运行时释放该状态的模块可能会设置该标志。"
 
 #. type: Labeled list
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:226
 #, no-wrap
 msgid "MPC_LOADTIME_FLAG_NOTLATE"
-msgstr ""
+msgstr "MPC_LOADTIME_FLAG_NOTLATE"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:228
@@ -857,13 +951,13 @@ msgid ""
 "the module following boot will be rejected. The flag may be used by policies "
 "that require pervasive labeling of all system objects, and cannot handle "
 "objects that have not been properly initialized by the policy."
-msgstr ""
+msgstr "表示该策略模块必须在系统引导过程时进行加载和初始化。如果该标志被设置，那么在系统引导之后注册该模块的请求将被。"
 
 #. type: Labeled list
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:229
 #, no-wrap
 msgid "MPC_LOADTIME_FLAG_LABELMBUFS"
-msgstr ""
+msgstr "MPC_LOADTIME_FLAG_LABELMBUFS"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:231
@@ -894,7 +988,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:238
 #, no-wrap
 msgid "Policy Entry Points"
-msgstr ""
+msgstr "策略入口函数"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:241
@@ -922,6 +1016,9 @@ msgid ""
 "entry points. Locking information for arguments is documented in the MAC "
 "framework entry point document."
 msgstr ""
+"策略模块的编写人员除了必须清楚在进入特定入口函数之后，哪些对象锁是可用的之外，还应该熟知内核所采用的加锁策略。编程人员在入口函数之内应该避免使用非叶节点锁"
+"，并且遵循访问和修改对象时的加锁规程，以降低导致死锁的可能性。特别地，程序员应该清楚，虽然在通常情况下，进入入口函数之后，已经上了一些锁，可以安全地访问对"
+"象及其安全标记，但是这并不能保证对它们进行修改（包括对象本身和其安全标记）也是安全的。相关的上锁信息，可以参考 MAC 框架入口函数的相关文档。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:245
@@ -932,18 +1029,20 @@ msgid ""
 "this is the process credential, which is assumed to be understood by "
 "policies as a first class security object in the kernel."
 msgstr ""
+"策略入口函数把两个分别指向对象本身和其安全标记的指针传递给策略模块。这样一来，即使策略并不熟悉对象内部结构，也能基于标记作出正确决策。只有进程信任状这个对"
+"象例外：MAC 框架总是假设所有的策略模块是理解其内部结构的。"
 
 #. type: Title ==
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:247
 #, no-wrap
 msgid "MAC Policy Entry Point Reference"
-msgstr ""
+msgstr "MAC策略入口函数参考"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:250
 #, no-wrap
 msgid "General-Purpose Module Entry Points"
-msgstr ""
+msgstr "通用的模块入口函数"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:253
@@ -982,6 +1081,8 @@ msgid ""
 "policy initialization, they should be made using a separate module "
 "SYSINIT()."
 msgstr ""
+"策略加载事件。当前进程正持有策略链表上的互斥锁，因此是非睡眠的，对其他内核子系统的调用也须慎重。如果需要在策略初始化阶段进行可能造成睡眠阻塞的存储分配操作"
+"，可以将它们放在一个单独的模块 SYSINIT()过程中集中进行。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:276
@@ -1002,7 +1103,7 @@ msgstr ""
 msgid ""
 "Policy load event. The policy list mutex is held, so caution should be "
 "applied."
-msgstr ""
+msgstr "策略加载事件。必须持有策略链表互斥锁，因此需要慎重行事。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:299
@@ -1056,6 +1157,10 @@ msgid ""
 "functionality, it should call the necessary signal access control checks to "
 "invoke the MAC framework and other registered policies."
 msgstr ""
+"该入口函数提供策略复用的系统调用，这样策略模块不需要为其向用户进程提供的每一个额外服务而注册专用的系统调用。由应用程序提供的策略注册名字来确定提供其所申请"
+"服务的特定策略，所有参数将通过该入口函数传递给被调用的策略。当实现新服务时，安全模块必须在必要时通过 MAC "
+"框架调用相应的访问控制检查机制。比方说，假如一个策略实现了某种额外的信号功能，那么它应该调用相关的信号访问控制检查，以接受 MAC "
+"框架中注册的其他策略的检查。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:336
@@ -1114,7 +1219,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:362
 #, no-wrap
 msgid "Label Operations"
-msgstr ""
+msgstr "操作标记"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:365
@@ -1150,7 +1255,7 @@ msgstr ""
 msgid ""
 "Initialize the label on a newly instantiated bpfdesc (BPF "
 "descriptor). Sleeping is permitted."
-msgstr ""
+msgstr "为一个新近实例化的 bpfdesc（BPF 描述子）初始化标记。可以睡眠。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:388
@@ -1186,7 +1291,7 @@ msgstr ""
 msgid ""
 "Initialize the label for a newly instantiated user credential. Sleeping is "
 "permitted."
-msgstr ""
+msgstr "为一个新近实例化的用户信任状初始化标记。可以睡眠。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:411
@@ -1207,7 +1312,7 @@ msgstr ""
 msgid ""
 "Initialize the label on a newly instantiated devfs entry. Sleeping is "
 "permitted."
-msgstr ""
+msgstr "为一个新近实例化的用户信任状初始化标记。可以睡眠。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:434
@@ -1228,7 +1333,7 @@ msgstr ""
 msgid ""
 "Initialize the label on a newly instantiated network interface. Sleeping is "
 "permitted."
-msgstr ""
+msgstr "为一个新近实例化的用户信任状初始化标记。可以睡眠。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:457
@@ -1359,7 +1464,7 @@ msgstr ""
 msgid ""
 "Initialize the labels on a newly instantiated mount point. Sleeping is "
 "permitted."
-msgstr ""
+msgstr "为一个新近实例化的 mount 点初始化标记。可以睡眠。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:544
@@ -1391,7 +1496,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:565
 msgid "Initialize the label on a newly mounted file system. Sleeping is permitted"
-msgstr ""
+msgstr "为一个新近加载的文件系统初始化标记。可以睡眠"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:567
@@ -1423,7 +1528,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:588
 msgid "Initialize a label for a newly instantiated pipe. Sleeping is permitted."
-msgstr ""
+msgstr "为一个刚刚实例化的管道初始化安全标记。可以睡眠。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:590
@@ -1510,7 +1615,7 @@ msgstr ""
 msgid ""
 "Initialize the label for a newly instantiated process. Sleeping is "
 "permitted."
-msgstr ""
+msgstr "为一个刚刚实例化的进程初始化安全标记。可以睡眠。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:671
@@ -1529,7 +1634,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:692
 msgid "Initialize the label on a newly instantiated vnode. Sleeping is permitted."
-msgstr ""
+msgstr "为一个刚刚实例化的 vnode 初始化安全标记。可以睡眠。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:694
@@ -2320,7 +2425,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:1537
 #, no-wrap
 msgid "Label Events"
-msgstr ""
+msgstr "标记事件"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:1540
@@ -2335,6 +2440,9 @@ msgid ""
 "reassembly. A typical labeled object will have the following life cycle of "
 "entry points:"
 msgstr ""
+"策略模块使用MAC 框架提供的“标记事件”类入口函数，对内核对象的标记进行操作。策略模块将感兴趣的被标记内核对象的相关生命周期事件注册在恰当的入口点上。对"
+"象的初始化、创建和销毁事件均提供了钩子点。在某些对象上还可以实现重新标记，即，允许用户进程改变对象上的标记值。对某些对象可以实现其特定的对象事件，比如与 "
+"IP 重组相关的标记事件。一个典型的被标记对象在其生命周期中将拥有下列入口函数："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:1552
@@ -2391,7 +2499,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:1561
 msgid "Access control events are discussed in detail in the following section."
-msgstr ""
+msgstr "访问控制事件将在后续章节中详细讨论。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:1563
@@ -2416,7 +2524,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:1567
 #, no-wrap
 msgid "File System Object Labeling Event Operations"
-msgstr ""
+msgstr "文件系统对象标记事件操作"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:1570
@@ -2610,7 +2718,7 @@ msgid ""
 "Fill out the label on a devfs_dirent being created for the passed "
 "device. This call will be made when the device file system is mounted, "
 "regenerated, or a new device is made available."
-msgstr ""
+msgstr "为传入设备新建的 devfs_dirent 填写标记。该函数将在设备文件系统加载、重构或添加新设备时被调用。"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:1740
@@ -2660,7 +2768,7 @@ msgid ""
 "directory. This call will be made when the device file system is mounted, "
 "regenerated, or a new device requiring a specific directory hierarchy is "
 "made available."
-msgstr ""
+msgstr "为传入目录参数的新建 devfs_dirent 填写标记。该函数将在加载、重构设备文件系统，或者添加一个需要指定目录结构的新设备时被调用。"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:1777
@@ -2853,7 +2961,7 @@ msgstr ""
 msgid ""
 "Fill out the labels on the mount point being created by the passed subject "
 "credential. This call will be made when a new file system is mounted."
-msgstr ""
+msgstr "为传入的主体信任状所创建的挂载点填写标记。该函数将在文件系统挂载时被调用。"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:1936
@@ -2892,7 +3000,7 @@ msgid ""
 "Fill out the labels on the mount point being created by the passed subject "
 "credential. This call will be made when the root file system is mounted, "
 "after mpo_create_mount;."
-msgstr ""
+msgstr "为传入的主体信任状所创建的挂载点填写标记。该函数将在挂载根文件系统时，在.mpo;_create_mount; 之后被调用。"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:1963
@@ -2944,7 +3052,7 @@ msgstr ""
 msgid ""
 "Update the label on the passed vnode given the passed update vnode label and "
 "the passed subject credential."
-msgstr ""
+msgstr "根据传入的新标记和主体信任状，更新参数 vnode 的标记。"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2004
@@ -3058,7 +3166,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2087
 #, no-wrap
 msgid "IPC Object Labeling Event Operations"
-msgstr ""
+msgstr "IPC 对象标记事件操作"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2090
@@ -3111,7 +3219,7 @@ msgid ""
 "Set the label on a newly created mbuf header from the passed socket "
 "label. This call is made when a new datagram or message is generated by the "
 "socket and stored in the passed mbuf."
-msgstr ""
+msgstr "根据传入的套接字标记为新创建的mbuf头部设置标记。每当套接字产生一个新的数据报或者消息，并将其存储在参数 mbuf 中时，将调用该函数。"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2131
@@ -3161,7 +3269,7 @@ msgstr ""
 msgid ""
 "Set the label on a newly created pipe from the passed subject "
 "credential. This call is made when a new pipe is created."
-msgstr ""
+msgstr "根据传入的主体信任状参数，设置新建管道的标记。每当一个新管道被创建，该函数将被调用。"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2166
@@ -3207,7 +3315,7 @@ msgstr ""
 msgid ""
 "Set the label on a newly created socket from the passed subject "
 "credential. This call is made when a socket is created."
-msgstr ""
+msgstr "根据传入的主体信任状参数，设置新建套接字的标记。每当新建一个套接字，该函数将被调用。"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2201
@@ -3359,7 +3467,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2322
 msgid "Update the label on a socket from the passed socket label update."
-msgstr ""
+msgstr "根据传入的标记参数，对套接字的当前标记进行更新。"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2324
@@ -3413,6 +3521,8 @@ msgid ""
 "will be made when the first datagram is received by the stream socket, with "
 "the exception of Unix domain sockets."
 msgstr ""
+"根据传入的 mbuf 标记，设置某个 stream 套接字的对等标志。除Unix域的套接字之外，每当一个 stream "
+"套接字接收到第一个数据报时，该函数将被调用。"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2365
@@ -3465,7 +3575,7 @@ msgid ""
 "Set the peer label on a stream UNIX domain socket from the passed remote "
 "socket endpoint. This call will be made when the socket pair is connected, "
 "and will be made for both endpoints."
-msgstr ""
+msgstr "根据传入的远程套接字端点，为一个 stream UNIX 与套接字设置对等标记。每当相应的套接字对之间进行连接时，该函数将在两端分别被调用。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2406
@@ -3518,7 +3628,7 @@ msgid ""
 "Set the label on a newly created BPF descriptor from the passed subject "
 "credential. This call will be made when a BPF device node is opened by a "
 "process with the passed subject credential."
-msgstr ""
+msgstr "根据传入的主体信任状参数，为新建的 BPF 描述子设置标记。当进程打开 BPF 设备节点时，该函数将被调用。"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2444
@@ -3560,7 +3670,7 @@ msgid ""
 "physical interface becomes available to the system, or when a "
 "pseudo-interface is instantiated during the boot or as a result of a user "
 "action."
-msgstr ""
+msgstr "为新建的网络接口设置标记。该函数在以下情况下被调用：当一个新的物理接口变为可用时，或者当一个伪接口在引导时或由于某个用户操作而实例化时。"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2473
@@ -3612,7 +3722,7 @@ msgstr ""
 msgid ""
 "Set the label on a newly created IP fragment reassembly queue from the mbuf "
 "header of the first received fragment."
-msgstr ""
+msgstr "根据第一个接收到的分片的 mbuf 头部信息，为新建的 IP 分片重组队列设置标记。"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2514
@@ -3664,7 +3774,7 @@ msgstr ""
 msgid ""
 "Set the label on a newly reassembled IP datagram from the IP fragment "
 "reassembly queue from which it was generated."
-msgstr ""
+msgstr "根据 IP 分片重组队列，为刚刚重组完毕的 IP 数据报设置标记。"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2555
@@ -3716,7 +3826,7 @@ msgstr ""
 msgid ""
 "Set the label on the mbuf header of a newly created IP fragment from the "
 "label on the mbuf header of the datagram it was generate from."
-msgstr ""
+msgstr "根据数据报所对应的 mbuf 头部信息，为其新建的分片的 mbuf 头部设置标记。"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2596
@@ -3770,6 +3880,8 @@ msgid ""
 "header of an existing datagram. This call may be made in a number of "
 "situations, including when an mbuf is re-allocated for alignment purposes."
 msgstr ""
+"根据某个现有数据报的 mbuf 头部信息，为新建数据报的 mbuf 头部设置标记。在许多条件下将会调用该函数，比如，由于对齐要求而重新分配某个 mbuf "
+"时。"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2637
@@ -3824,6 +3936,7 @@ msgid ""
 "may be made in a number of situations, including for ARP or ND6 responses in "
 "the IPv4 and IPv6 stacks."
 msgstr ""
+"为在给定接口上由于某个链路层响应而新建的数据报的mbuf头部设置标记。该函数将在若干条件下被调用，比如当IPv4和IPv6协议栈在响应ARP或者ND6时。"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2678
@@ -3877,6 +3990,7 @@ msgid ""
 "the passed BPF descriptor. This call is made when a write is performed to "
 "the BPF device associated with the passed BPF descriptor."
 msgstr ""
+"为使用参数 BPF 描述子创建的新数据报的 mbuf 头部设置标记。当对参数 BPF 描述子所关联的 BPF 设备进行写操作时，该函数将被调用。"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2719
@@ -3928,7 +4042,7 @@ msgstr ""
 msgid ""
 "Set the label on the mbuf header of a newly created datagram generated from "
 "the passed network interface."
-msgstr ""
+msgstr "为从网络接口参数创建的数据报的 mbuf 头部设置标记。"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2760
@@ -3995,6 +4109,8 @@ msgid ""
 "encapsulation interface. This call is made when an mbuf is to be delivered "
 "using the virtual interface."
 msgstr ""
+"当传入的已有数据报被给定多播封装接口（multicast encapsulation interface）处理时被调用，为新创建的数据报所在 mbuf "
+"头部设置标记。每当使用该虚拟接口传递一个mbuf时，将调用该函数。"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2813
@@ -4217,7 +4333,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2977
 #, no-wrap
 msgid "Process Labeling Event Operations"
-msgstr ""
+msgstr "进程标记事件操作"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2980
@@ -4404,7 +4520,7 @@ msgstr ""
 msgid ""
 "Create the subject credential of process 0, the parent of all kernel "
 "processes."
-msgstr ""
+msgstr "为进程0，所有内核进程的祖先，创建主体信任状。"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:3109
@@ -4425,7 +4541,7 @@ msgstr ""
 msgid ""
 "Create the subject credential of process 1, the parent of all user "
 "processes."
-msgstr ""
+msgstr "为进程1，所有用户进程的祖先，创建主体信任状。"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:3132
@@ -4463,13 +4579,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:3159
 msgid "Update the label on a subject credential from the passed update label."
-msgstr ""
+msgstr "根据传入的新标记，对主体信任状上的标记进行更新。"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:3161
 #, no-wrap
 msgid "Access Control Checks"
-msgstr ""
+msgstr "访问控制检查"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:3164
@@ -4517,6 +4633,8 @@ msgid ""
 "following order: kernel failures, invalid arguments, object not present, "
 "access not permitted, other."
 msgstr ""
+"如果所有策略模块返回的错误编码均没有出现在上述优先级序列表中，则任意选择一个返回。选择错误编码的一般次序为：内核错误，无效的参数，对象不存在，访问被拒绝，"
+"和其他错误。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:3188
@@ -4650,7 +4768,7 @@ msgstr ""
 msgid ""
 "Determine whether the subject should be allowed to retrieve the value of the "
 "specified kernel environment variable."
-msgstr ""
+msgstr "决定相关主体是否可以查询内核中给定环境变量的状态。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:3281
@@ -4673,7 +4791,7 @@ msgstr ""
 msgid ""
 "Determine whether the subject should be allowed to set the specified kernel "
 "environment variable."
-msgstr ""
+msgstr "决定相关主体是否有权设置给定内核环境变量的值。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:3310
@@ -4742,7 +4860,7 @@ msgstr ""
 msgid ""
 "Determine whether the subject should be allowed to load the specified module "
 "file."
-msgstr ""
+msgstr "决定相关主体是否有权加载给定的模块文件。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:3374
@@ -4763,7 +4881,7 @@ msgstr ""
 msgid ""
 "Determine whether the subject should be allowed to retrieve a list of loaded "
 "kernel module files and associated statistics."
-msgstr ""
+msgstr "决定相关主体是否有权访问内核的加载模块文件链表以及相关的统计数据。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:3397
@@ -4782,7 +4900,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:3418
 msgid "Determine whether the subject should be allowed to unload a kernel module."
-msgstr ""
+msgstr "决定相关主体是否有权卸载一个内核模块。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:3420
@@ -5292,7 +5410,7 @@ msgstr ""
 msgid ""
 "Determine whether the subject credential can relabel the passed network "
 "interface to the passed label update."
-msgstr ""
+msgstr "决定该主体信任状是否有权使用传入的标记更新参数对给定的网络接口的标记进行重新设置。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:3901
@@ -5344,7 +5462,7 @@ msgstr ""
 msgid ""
 "Determine whether the subject credential can relabel the passed socket to "
 "the passed label update."
-msgstr ""
+msgstr "决定该主体信任状是否有权采用传入的标记对套接字参数的标记进行重新设置。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:3942
@@ -5384,7 +5502,7 @@ msgstr ""
 msgid ""
 "Determine whether the subject credential can relabel itself to the passed "
 "label update."
-msgstr ""
+msgstr "决定该主体信任状是否有权将自己的标记重新设置为给定的更新标记。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:3971
@@ -5436,7 +5554,7 @@ msgstr ""
 msgid ""
 "Determine whether the subject credential can relabel the passed vnode to the "
 "passed label update."
-msgstr ""
+msgstr "决定该主体信任状是否有权将参数 vnode 的标记重新设置为指定标记。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:4012
@@ -6205,7 +6323,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:4590
 msgid "Downgrade the mmap protections based on the subject and object labels."
-msgstr ""
+msgstr "根据主体和客体标记，降低 mmap protections。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:4592
@@ -7359,7 +7477,7 @@ msgstr ""
 msgid ""
 "Determine whether the subject should be allowed to enable accounting, based "
 "on its label and the label of the accounting log file."
-msgstr ""
+msgstr "根据主体标记和审计日志文件的标记，确定该主体是否有权启动审计。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:5547
@@ -7418,7 +7536,7 @@ msgstr ""
 msgid ""
 "Determine whether the subject should be allowed to reboot the system in the "
 "specified manner."
-msgstr ""
+msgstr "确定相关主体是否有权以指定方式重启系统。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:5599
@@ -7437,7 +7555,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:5620
 msgid "Determine whether the user should be allowed to set the system clock."
-msgstr ""
+msgstr "确定相关用户是否有权设置系统时钟。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:5622
@@ -7565,7 +7683,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:5722
 #, no-wrap
 msgid "Label Management Calls"
-msgstr ""
+msgstr "标记管理调用"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:5725
@@ -7579,12 +7697,15 @@ msgid ""
 "during relabel is discouraged, as relabel calls are not permitted to fail "
 "(failure should be reported earlier in the relabel check)."
 msgstr ""
+"当用户进程请求对某个对象的标记进行修改时，将引发重新标记事件。对应的更新操作分两步进行：首先，进行访问控制检查，确认此次更新操作是有效且被允许的；然后，调"
+"用另一个独立的入口函数对标记进行修改。重新标记入口函数通常接收由请求进程提交的对象、对象标记指针和请求新标记，作为输入参数。对象重新标记操作的失败将由先期"
+"的标记检查报告，所以，不允许在接下来的标记修改过程中报告失败，故而不提倡在此过程中新分配内存。"
 
 #. type: Title ==
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:5727
 #, no-wrap
 msgid "Userland Architecture"
-msgstr ""
+msgstr "应用层体系结构"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:5730
@@ -7596,12 +7717,17 @@ msgid ""
 "and modify labels on processes, files, and network interfaces. More details "
 "on the user architecture will be added to this section in the near future."
 msgstr ""
+"TrustedBSD MAC 框架包含了一组策略无关的组成元素，包括管理抽象标记的 MAC 接口库，对系统信任状管理体系的修改, 为用户分配 MAC "
+"标记提供支持的 login "
+"库函数，以及若干负责维护和更新内核对象(进程、文件和网络接口等)安全标记的工具。不久，将有更多关于应用层体系结构的详细信息被包含进来。"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:5732
 #, no-wrap
 msgid "APIs for Policy-Agnostic Label Management"
 msgstr ""
+".ps.1;，使用这些策略无关的接口查询网络结构、文件和进程的标记信息。\n"
+"       这些 API 也被用于支持 MAC 管理工具"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:5735
@@ -7647,12 +7773,14 @@ msgid ""
 "is not supported by the MAC library. Such interfaces may be added in the "
 "future if they prove necessary for application writers."
 msgstr ""
+"目前的 MAC 库不支持直接修改内部形式的标记元素，所有的修改必须按照下列的步骤进行：将内部形式的标记转换成文本字符串，对字符串进行编辑，最后将其转换成内"
+"部形式标记。如果应用程序的作者证明确实有需要，可以在将来的版本中加入对内部形式标记进行直接修改的接口。"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:5744
 #, no-wrap
 msgid "Binding of Labels to Users"
-msgstr ""
+msgstr "为用户指定标记"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:5747
@@ -7677,7 +7805,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:5754
 #, no-wrap
 msgid "Conclusion"
-msgstr ""
+msgstr "结论"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:5756
@@ -7692,3 +7820,7 @@ msgid ""
 "documentation as well as existing security modules when implementing a new "
 "security service."
 msgstr ""
+"TrustedBSD MAC 框架使得内核模块能以一种集中的方式，完善系统的安全策略。它们既可利用现有的内核对象属性，又能使用由 MAC "
+"框架协助维护的安全标记数据，来实施访问控制。框架提供的灵活性使得开发人员可以在其上实现各种策略，如利用 BSD "
+"现有的信任状（credential）与文件保护机制的策略，以及信息流安全策略（如 MLS 和 "
+"Biba）。实现新安全服务的策略编程人员，可以参考本文档，以了解现有安全模块的信息。"
