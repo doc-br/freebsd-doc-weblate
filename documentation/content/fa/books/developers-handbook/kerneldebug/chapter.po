@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 22:57+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Persian <https://translate-dev.freebsd.org/projects/"
+"documentation/booksdevelopers-handbookkerneldebugchapter/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:1
@@ -25,13 +28,13 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:12
 #, no-wrap
 msgid "Kernel Debugging"
-msgstr ""
+msgstr "اشکال‌زدایی هسته"
 
 #. type: Title ==
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:37
 #, no-wrap
 msgid "Obtaining a Kernel Crash Dump"
-msgstr ""
+msgstr "دست‌یابی به روگرفت خرابی هسته"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:40
@@ -69,35 +72,37 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:49
 msgid "Several types of kernel crash dumps are available:"
-msgstr ""
+msgstr "برخی از انواع روگرفت‌های خرابی هسته موجود هستند:"
 
 #. type: Labeled list
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:50
 #, no-wrap
 msgid "Full memory dumps"
-msgstr ""
+msgstr "روگرفت‌های حافظهٔ کامل"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:52
 msgid "Hold the complete contents of physical memory."
-msgstr ""
+msgstr "محتوای کامل حافظهٔ فیزیکی را نگه می‌دارد."
 
 #. type: Labeled list
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:53
 #, no-wrap
 msgid "Minidumps"
-msgstr ""
+msgstr "روگرفت‌های کوچک (Minidumps)"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:55
 msgid "Hold only memory pages in use by the kernel (FreeBSD 6.2 and higher)."
 msgstr ""
+"تنها صفحات حافظه‌ای که توسط هسته در حال استفاده هستند را نگه می‌دارد ("
+"FreeBSD 6.2 و بالاتر)."
 
 #. type: Labeled list
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:56
 #, no-wrap
 msgid "Textdumps"
-msgstr ""
+msgstr "روگرفت‌های متنی (Textdumps)"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:58
@@ -105,6 +110,8 @@ msgid ""
 "Hold captured, scripted, or interactive debugger output (FreeBSD 7.1 and "
 "higher)."
 msgstr ""
+"خروجی اشکال‌زدای گرفته‌شده، نوشته‌شده، یا تعاملی را نگه می‌دارد (FreeBSD 7.1 "
+"و بالاتر)."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:60
@@ -113,12 +120,15 @@ msgid ""
 "will capture all necessary information present in a full memory dump, as "
 "most problems can be isolated only using kernel state."
 msgstr ""
+"روگرفت‌های کوچک (Minidumps) پس از FreeBSD 7.0 حالت پیش‌فرضِ روگرفت هستند، و "
+"در اکثر موارد تمامی اطلاعات ضروریِ ارائه شده در یک روگرفت کامل را می‌گیرد، "
+"چنانکه بیشتر مشکلات ممکن است تنها با استفاده از حالت هسته مجزا شوند."
 
 #. type: Title ===
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:62
 #, no-wrap
 msgid "Configuring the Dump Device"
-msgstr ""
+msgstr "پیکربندی دستگاه روگرفت"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:65
@@ -168,7 +178,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:86
 #, no-wrap
 msgid "Extracting a Kernel Dump"
-msgstr ""
+msgstr "استخراج روگرفت هسته"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:89
@@ -238,7 +248,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:110
 #, no-wrap
 msgid "Testing Kernel Dump Configuration"
-msgstr ""
+msgstr "آزمودن پیکربندی روگرفت هسته"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:113
@@ -289,6 +299,7 @@ msgid ""
 "To enter into the debugger and begin getting information from the dump, "
 "start kgdb:"
 msgstr ""
+"برای ورود به محیط اشکال‌زدا و دریافت اطلاعات از روگرفت، kgdb را شروع کنید:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:140
@@ -329,6 +340,8 @@ msgid ""
 "You can debug the crash dump using the kernel sources just like you can for "
 "any other program."
 msgstr ""
+"می‌توانید روگرفت خرابی را با استفاده از منابع هسته اشکال‌زدایی کنید، درست "
+"همانطور که برای هر برنامهٔ دیگری می‌توانید."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:159
@@ -467,7 +480,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:261
 #, no-wrap
 msgid "On-Line Kernel Debugging Using DDB"
-msgstr ""
+msgstr "اشکال‌زدایی برخط هسته با DDB"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:264
@@ -529,6 +542,9 @@ msgid ""
 "booted. There are two simple ways to accomplish this. If you would like to "
 "break to the debugger from the command prompt, simply type the command:"
 msgstr ""
+"حالت دوم زمانی است که سامانه هنگام بالا آمدن وارد اشکال‌زدا ‌شود. دو روش "
+"ساده برای رسیدن به این ‌منظور وجود دارد. چنانچه تمایل به خروج از اشکال‌زدا "
+"از طریق خط فرمان را دارید، به‌سادگی این دستور را وارد کنید:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:287
@@ -557,11 +573,14 @@ msgid ""
 "is configured to use it. For this reason, it is not wise to configure a "
 "kernel with DDB for a machine running unattended."
 msgstr ""
+"روش سوم از این قرار است که چنانچه هسته بدین منظور پیکربندی شده باشد، هر کدام "
+"از شروط وحشت به DDB انشعاب کنند. به‌همین دلیل، پیکربندی هسته با DDB برای "
+"دستگاهی‌که در حالت اجرای بی‌متصدی است عاقلانه نیست."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:294
 msgid "To obtain the unattended functionality, add:"
-msgstr ""
+msgstr "برای بدست آوردن عملکرد بی‌متصدی، این را:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:298
@@ -572,7 +591,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:301
 msgid "to the kernel configuration file and rebuild/reinstall."
-msgstr ""
+msgstr "به پروندهٔ پیکربندی هسته اضافه کنید و مجدداً بسازید/نصب کنید."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:303
@@ -599,7 +618,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:312
 msgid "To exit the debugger and continue execution, type:"
-msgstr ""
+msgstr "به‌منظور خروج از اشکال‌زدا و ادامهٔ اجرا، بنویسید:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:316
@@ -610,7 +629,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:319
 msgid "To get a stack trace of the current thread, use:"
-msgstr ""
+msgstr "برای بدست آوردن رد پشتهٔ بند جاری، از این استفاده کنید:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:323
@@ -628,7 +647,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:328
 msgid "If you want to remove a breakpoint, use"
-msgstr ""
+msgstr "چنانچه می‌خواهید نقطهٔ توقف را حذف کنید، وارد کنید"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:333
@@ -645,6 +664,9 @@ msgid ""
 "deletes the current breakpoint. The second form can remove any breakpoint, "
 "but you need to specify the exact address; this can be obtained from:"
 msgstr ""
+"اولین قالب پس از اصابت نقطهٔ توقف به‌سرعت پذیرفته می‌شود، و نقطهٔ توقف جاری "
+"را حذف می‌کند. دومین قالب می‌تواند هر نقطهٔ توقفی را حذف کند، اما لازم است "
+"که نشانی دقیق را تعیین کنید؛ این امر را می‌توان بدین شکل بدست آورد:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:340
@@ -655,7 +677,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:343
 msgid "or:"
-msgstr ""
+msgstr "یا:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:347
@@ -666,7 +688,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:350
 msgid "To single-step the kernel, try:"
-msgstr ""
+msgstr "برای تک مرحله‌ای کردن هسته، وارد کنید:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:354
@@ -680,6 +702,8 @@ msgid ""
 "This will step into functions, but you can make DDB trace them until the "
 "matching return statement is reached by:"
 msgstr ""
+"این مرحله وارد توابع می‌شود، اما می‌توانید DDB را وادار به ردیابی آنها کنید "
+"تا زمانی‌که عبارت بازگشتِ تطابق‌یافته برسد به:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:361
@@ -744,7 +768,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:395
 msgid "To modify memory, use the write command:"
-msgstr ""
+msgstr "برای ایجاد تغییر در حافظه، از دستور write استفاده کنید:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:400
@@ -765,7 +789,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:405
 msgid "If you need to know the current registers, use:"
-msgstr ""
+msgstr "چنانچه نیاز به دانستن ثبات‌های جاری دارید، وارد کنید:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:409
@@ -799,6 +823,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:426
 msgid "Should you need to call some kernel functions from DDB, simply say:"
 msgstr ""
+"درصورت نیاز به فراخوانی برخی از توابع هسته توسط DDB، به‌سادگی وارد کنید:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:430
@@ -809,7 +834,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:433
 msgid "The return value will be printed."
-msgstr ""
+msgstr "مقدار بازگشتی چاپ می‌شود."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:435
@@ -830,6 +855,10 @@ msgid ""
 "not all parts of the kernel might still be working as expected. Perform one "
 "of the following actions to shut down and reboot your system:"
 msgstr ""
+"حال، دلیل خراب شدن هستهٔ خود را مورد بررسی قرار دادید و می‌توانید سامانه را "
+"مجدد راه‌اندازی کنید. به‌یاد داشته باشید که با توجه به شدت خرابی پیشین، ممکن "
+"است تمام بخش‌های هسته همانطور که انتظار می‌رود کار نکنند. یک کدام از اعمال "
+"پیش رو را انجام دهید تا سامانه را خاموش و مجدد راه‌اندازی کنید:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:446
@@ -871,11 +900,13 @@ msgid ""
 "This is the final way out of disaster and almost the same as hitting the Big "
 "Red Button."
 msgstr ""
+"این آخرین راه برای خروج از فاجعه است و تقریباً مانند فشردن دکمهٔ قرمز بزرگ "
+"است."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:465
 msgid "If you need a short command summary, simply type:"
-msgstr ""
+msgstr "اگر نیاز به خلاصه‌ای کوتاه از دستور دارید، به‌سادگی بنویسید:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:469
@@ -895,7 +926,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:474
 #, no-wrap
 msgid "On-Line Kernel Debugging Using Remote GDB"
-msgstr ""
+msgstr "اشکال‌زدایی برخط هسته با GDB از راه دور"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:477
@@ -903,6 +934,8 @@ msgid ""
 "This feature has been supported since FreeBSD 2.2, and it is actually a very "
 "neat one."
 msgstr ""
+"این امکان از زمان FreeBSD 2.2 پشتیبانی می‌شود، و در واقع یک امکان بسیار "
+"هوشمندانه است."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:479
@@ -952,6 +985,8 @@ msgid ""
 "Initialize the remote debugging session (assuming the first serial port is "
 "being used) by:"
 msgstr ""
+"نشست اشکال‌زدایی از راه دور را آغاز کنید (با این نظرداشت که اولین درگاه در "
+"حال استفاده است):"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:498
@@ -965,6 +1000,8 @@ msgid ""
 "Now, on the target host (the one that entered DDB right before even starting "
 "the device probe), type:"
 msgstr ""
+"حال، در میزبان مورد نظر (همان که درست قبل از آغاز کاوشِ (probe) دستگاه وارد "
+"DDB شد)، وارد کنید:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:507
@@ -978,7 +1015,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:510
 msgid "DDB will respond with:"
-msgstr ""
+msgstr "DDB چنین پاسخ می‌دهد:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:514
@@ -1011,12 +1048,15 @@ msgid ""
 "access to the source, running it in gud-mode inside an Emacs window (which "
 "gives you an automatic source code display in another Emacs window), etc."
 msgstr ""
+"می‌توانید این جلسه را تقریباً مانند هر جلسهٔ دیگرِ GDB استفاده کنید، از جمله "
+"دسترسی کامل به منبع، اجرای آن در حالت gud درون یک پنجرهٔ Emacs (که به شما یک "
+"کد منبع خودکار در پنجرهٔ Emacs دیگر نمایش می‌دهد)، و غیره ... ."
 
 #. type: Title ==
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:529
 #, no-wrap
 msgid "Debugging a Console Driver"
-msgstr ""
+msgstr "اشکال‌زدایی گردانندهٔ پیشانه"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:532
@@ -1033,7 +1073,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:534
 #, no-wrap
 msgid "Debugging Deadlocks"
-msgstr ""
+msgstr "اشکال‌زدایی بن‌بست‌ها (Deadlocks)"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:537
@@ -1051,6 +1091,9 @@ msgid ""
 "especially useful if you suspect that a deadlock occurs in the VFS "
 "layer. Add these options to the kernel configuration file."
 msgstr ""
+"اگر ممکن است، تحقیقات بیشتری را مد نظر قرار دهید. اگر مشکوک به رخ دادن بن‌"
+"بست در لایهٔ VFS هستید، رهنمود زیر به‌طور خاص مناسب است. این گزینه‌ها را به "
+"پروندهٔ پیکربندیِ هسته اضافه کنید."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:550
@@ -1085,7 +1128,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:557
 #, no-wrap
 msgid "Kernel debugging with Dcons"
-msgstr ""
+msgstr "اشکال‌زدایی هسته با Dcons"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:560
@@ -1157,7 +1200,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:574
 msgid "Add options for debugging."
-msgstr ""
+msgstr "گزینه‌هایی به‌منظور اشکال‌زدایی اضافه کنید."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:575
@@ -1209,6 +1252,8 @@ msgid ""
 "Here are a few configuration examples. A sample kernel configuration file "
 "would contain:"
 msgstr ""
+"در اینجا چند نمونه پیکربندی آمده است. یک نمونه پروندهٔ پیکربندی هستهٔ ساده "
+"شامل:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:599
@@ -1311,12 +1356,12 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:656
 #, no-wrap
 msgid "Some general tips"
-msgstr ""
+msgstr "برخی نکات کلی"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:659
 msgid "Here are some general tips:"
-msgstr ""
+msgstr "در اینجا چند نکتهٔ کلی هست:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:661
@@ -1369,7 +1414,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:688
 #, no-wrap
 msgid "Dcons with KVM"
-msgstr ""
+msgstr "Dcons با KVM"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:691
@@ -1384,7 +1429,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:692
 #, no-wrap
 msgid "Using Dcons with KVM"
-msgstr ""
+msgstr "استفاده از Dcons با KVM"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:695
@@ -1416,7 +1461,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:711
 msgid "Live core debugging can be done via:"
-msgstr ""
+msgstr "اشکال‌زداییِ هستهٔ زنده را می‌توان بدین شکل انجام داد:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:716
@@ -1430,7 +1475,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:719
 #, no-wrap
 msgid "Glossary of Kernel Options for Debugging"
-msgstr ""
+msgstr "واژه‌نامهٔ گزینه‌های هسته برای اشکال‌زدایی"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:722
@@ -1438,6 +1483,8 @@ msgid ""
 "This section provides a brief glossary of compile-time kernel options used "
 "for debugging:"
 msgstr ""
+"این بخش واژه‌نامه‌ای مختصر از گزینه‌های هسته که برای اشکال‌زدایی در هنگام "
+"همگردانی استفاده می‌شوند را ارائه می‌دهد:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/kerneldebug/chapter.adoc:724
