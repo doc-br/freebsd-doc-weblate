@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 22:57+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Persian <https://translate-dev.freebsd.org/projects/"
+"documentation/booksdevelopers-handbookx86chapter/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1
@@ -25,7 +28,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:9
 #, no-wrap
 msgid "x86 Assembly Language Programming"
-msgstr ""
+msgstr "برنامه‌نویسیِ زبان همگذاریِ x86"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:34
@@ -36,7 +39,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:36
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "چکیده"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:39
@@ -93,13 +96,13 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:51
 #, no-wrap
 msgid "The Tools"
-msgstr ""
+msgstr "ابزارها"
 
 #. type: Title ===
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:54
 #, no-wrap
 msgid "The Assembler"
-msgstr ""
+msgstr "همگذار"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:57
@@ -107,6 +110,8 @@ msgid ""
 "The most important tool for assembly language programming is the assembler, "
 "the software that converts assembly language code into machine language."
 msgstr ""
+"مهم‌ترین ابزار برای برنامه‌نویسیٰ زبان همگذاری (اسمبلی) همگذار است، نرم‌"
+"افزاری که کد زبان همگذاری را به زبان ماشین تبدیل می‌کند."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:59
@@ -136,7 +141,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:65
 #, no-wrap
 msgid "The Linker"
-msgstr ""
+msgstr "پیوند دهنده"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:68
@@ -144,6 +149,8 @@ msgid ""
 "The output of the assembler, like that of any compiler, needs to be linked "
 "to form an executable file."
 msgstr ""
+"خروجیِ همگذار، مانند سایر همگردان‌ها، برای شکل گرفتن یک پروندهٔ اجراپذیر "
+"نیاز به پیوند دادن دارد."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:70
@@ -156,13 +163,13 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:72
 #, no-wrap
 msgid "System Calls"
-msgstr ""
+msgstr "فراخوان‌های سامانه"
 
 #. type: Title ===
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:75
 #, no-wrap
 msgid "Default Calling Convention"
-msgstr ""
+msgstr "رویهٔ فراخوانیِ پیش‌فرض"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:78
@@ -187,6 +194,8 @@ msgid ""
 "An assembly language program can do that as well. For example, we could open "
 "a file:"
 msgstr ""
+"یک برنامهٔ نوشته شده در زبان همگذاری هم می‌تواند چنین کاری را انجام دهد. "
+"برای مثال، می‌توانیم یک پرونده را باز کنیم:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:88
@@ -252,7 +261,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:118
 #, no-wrap
 msgid "Alternate Calling Convention"
-msgstr ""
+msgstr "رویهٔ فراخوانیِ جایگزین"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:121
@@ -261,6 +270,9 @@ msgid ""
 "kernel. For it to work, however, the system must have Linux emulation "
 "installed."
 msgstr ""
+"FreeBSD یک سامانهٔ به‌شدت منعطف است و روش‌های دیگری برای فراخوانیِ هسته "
+"ارائه می‌دهد. گرچه، برای آنکه بتواند کار کند، شبیه‌ساز Linux باید بر روی "
+"سامانه نصب شده باشد."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:123
@@ -300,6 +312,9 @@ msgid ""
 "it. After your program is assembled and linked, you need to brand the "
 "executable:"
 msgstr ""
+"اگر شما رویهٔ Linux را انتخاب کردید، باید سامانه را متوجه آن کنید. پس از "
+"آنکه برنامهٔ شما همگذاری و پیوند داده شد، نیاز دارید تا اجراپذیر را نشانه‌"
+"گذاری کنید:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:141
@@ -311,7 +326,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:144
 #, no-wrap
 msgid "Which Convention Should You Use?"
-msgstr ""
+msgstr "از کدام رویه باید استفاده کنید؟"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:147
@@ -330,12 +345,16 @@ msgid ""
 "possible. I will show you how you can accomplish that after I have explained "
 "the basics."
 msgstr ""
+"اگر می‌خواهید کد انتقال‌پذیری بسازید که بتواند در Linux هم اجرا شود، احتمالاً"
+" هنوز بخواهید به ‌کاربران FreeBSD تا آنجا که ممکن است یک کد بهینه تحویل "
+"دهید. پس از آنکه مبانی را توضیح دادم، به شما نشان خواهم داد که چطور می‌"
+"توانید این کار را انجام دهید."
 
 #. type: Title ===
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:151
 #, no-wrap
 msgid "Call Numbers"
-msgstr ""
+msgstr "شماره‌های فراخوانی"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:154
@@ -373,6 +392,8 @@ msgid ""
 "Not only do FreeBSD and Linux use different calling conventions, they "
 "sometimes use different numbers for the same functions."
 msgstr ""
+"نه تنها FreeBSD و Linux از رویه‌های فراخوانیِ متفاوتی استفاده می‌کنند، بلکه "
+"گاهی اوقات از شماره‌های متفاوت برای یک تابع استفاده می‌کنند."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:168
@@ -416,7 +437,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:188
 #, no-wrap
 msgid "Return Values"
-msgstr ""
+msgstr "مقادیر بازگشتی"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:191
@@ -425,6 +446,9 @@ msgid ""
 "kind of a value: The file descriptor of an open file, the number of bytes "
 "read to a buffer, the system time, etc."
 msgstr ""
+"یک فراخوان سامانه چنانچه نوعی مقدار را بازگشت ندهد فایده‌ای ندارد: توصیف‌گر "
+"پروندهٔ یک پروندهٔ باز، تعداد بایت‌هایی که در میان‌گیر خوانده می‌شوند، زمان "
+"سامانه، ... ."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:193
@@ -433,12 +457,14 @@ msgid ""
 "not exist, system resources are exhausted, we passed an invalid parameter, "
 "etc."
 msgstr ""
+"افزون بر این، سامانه در صورت بروز خطا نیازمند آگاه‌سازیِ ما هست: یک پرونده "
+"وجود ندارد، منابع سامانه خسته شده‌اند، یک پارامتر نامعتبر را پذیرفتیم، ... ."
 
 #. type: Title ===
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:195
 #, no-wrap
 msgid "Man Pages"
-msgstr ""
+msgstr "صفحات راهنما (Man)"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:198
@@ -474,12 +500,14 @@ msgid ""
 "The information presented in the manual pages applies to C programs. The "
 "assembly language programmer needs additional information."
 msgstr ""
+"اطلاعات ارائه شده در صفحات راهنما در مورد برنامه‌های C صدق می‌کنند. برنامه‌"
+"نویس زبان همگذاری نیازمند به اطلاعات اضافی است."
 
 #. type: Title ===
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:212
 #, no-wrap
 msgid "Where Are the Return Values?"
-msgstr ""
+msgstr "مقادیر بازگشتی کجا هستند؟"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:215
@@ -514,7 +542,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:231
 msgid "Actually, nowhere..."
-msgstr ""
+msgstr "در واقع، هیچ کجا ..."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:233
@@ -531,12 +559,15 @@ msgid ""
 "there is an error, there is no return value. One register can contain "
 "either."
 msgstr ""
+"با عقل جور در می‌آید. اگر هیچ خطایی نباشد، یعنی هیچ کد خطایی وجود ندارد. اگر "
+"خطایی باشد، یعنی هیچ مقدار بازگشتی‌ای وجود ندارد. یک ثبات می‌تواند هر دو را "
+"شامل شود."
 
 #. type: Title ===
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:237
 #, no-wrap
 msgid "Determining an Error Occurred"
-msgstr ""
+msgstr "تعیین خطای رخ داده"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:240
@@ -557,7 +588,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:244
 #, no-wrap
 msgid "Creating Portable Code"
-msgstr ""
+msgstr "ایجاد کد انتقال‌پذیر"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:247
@@ -574,6 +605,8 @@ msgid ""
 "It is all the more possible when you want your code to run on two platforms "
 "which, while different, are based on similar architectures."
 msgstr ""
+"این امکان وجود دارد که بخواهید کدتان را بر روی دو بستر اجرا کنید، که در عین "
+"تفاوت، بر مبنای یک معماری هستند."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:251
@@ -588,7 +621,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:253
 #, no-wrap
 msgid "Dealing with Function Numbers"
-msgstr ""
+msgstr "کار با شماره‌های توابع"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:256
@@ -598,6 +631,9 @@ msgid ""
 "code, use constants which you have declared differently depending on the "
 "target architecture:"
 msgstr ""
+"در بسیاری موارد شماره‌های توابع یکی هستند. گرچه، حتی زمانی‌که نیستند، کنار "
+"آمدن با این مشکل آسان است:‌ به جای استفاده از شماره‌‌ها در کد خود، از مقادیر "
+"ثابتی که بسته به معماری هدف، متفاوت اعلان کرده‌اید استفاده کنید:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:264
@@ -614,7 +650,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:267
 #, no-wrap
 msgid "Dealing with Conventions"
-msgstr ""
+msgstr "کار با رویه‌ها"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:270
@@ -721,7 +757,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:322
 #, no-wrap
 msgid "Dealing with Other Portability Issues"
-msgstr ""
+msgstr "پرداختن به سایر مسائل انتقال‌پذیری"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:325
@@ -730,6 +766,8 @@ msgid ""
 "FreeBSD and Linux. Nevertheless, with some kernel services the differences "
 "are deeper."
 msgstr ""
+"راهبردهای بالا می‌توانند به بیشتر موارد کد نویسیِ انتقال‌پذیر بین FreeBSD و "
+"Linux رسیدگی کنند. با این حال، با برخی از سرویس‌های هسته تفاوت‌ها عمیق‌ترند."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:327
@@ -739,12 +777,16 @@ msgid ""
 "something other than calling the kernel, so usually you will only need a few "
 "such conditional sections in your code."
 msgstr ""
+"در آن صورت، شما باید دو مدیر مختلف برای آن فراخوان‌های سامانهٔ ویژه بنویسید، "
+"و از همگذاریِ شرطی استفاده کنید. خوشبختانه، بیشتر کد شما کاری به غیر از "
+"فراخوانی تابع انجام می‌دهد، پس معمولاً تنها به چند بخش‌ شرطی در کدتان نیاز "
+"خواهید داشت."
 
 #. type: Title ===
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:329
 #, no-wrap
 msgid "Using a Library"
-msgstr ""
+msgstr "استفاده از کتابخانه"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:332
@@ -753,6 +795,10 @@ msgid ""
 "library of system calls. Create a separate library for FreeBSD, a different "
 "one for Linux, and yet other libraries for more operating systems."
 msgstr ""
+"می‌توانید با نوشتن کتابخانه برای فراخوان‌های سامانه، از مسائل انتقال‌پذیری "
+"در کد اصلیِ خود به‌طور کلی اجتناب کنید. یک کتابخانهٔ جداگانه برای FreeBSD "
+"ایجاد کنید، یکی برای Linux، و حتی کتابخانه‌های دیگری برای سامانه‌های عامل "
+"بیشتر."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:334
@@ -781,6 +827,8 @@ msgid ""
 "Your Linux library will require more different functions. But even here you "
 "can group system calls using the same number of parameters:"
 msgstr ""
+"کتابخانهٔ Linux شما نیازمند دو تابع متفاوت است. اما حتی در اینجا نیز می‌"
+"توانید فراخوان‌های تابع را با استفاده از همان تعداد پارامترها گروه‌بندی کنید:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:356
@@ -835,6 +883,14 @@ msgid ""
 "other programmers, by simply writing a new library without any changes to "
 "your code."
 msgstr ""
+"روش کتابخانه ممکن است در ابتدا به‌نظر نامناسب باشد زیرا شما را ملزم به ایجاد "
+"پرونده‌ای جدا می‌كند که کدتان بدان وابسته باشد. اما مزایای بسیاری دارد: برای "
+"مثال، تنها کافیست یکبار بنویسیدش و برای تمام برنامه‌هایتان از آن استفاده "
+"کنید. حتی می‌توانید به سایر برنامه‌نویسان زبان اسمبلی اجازهٔ استفاده از آن "
+"را بدهید، یا شاید از چیزی که شخص دیگری نوشته است استفاده کنید. اما احتمالا ً‌"
+"بزرگترین مزیت کتابخانه آن است که کد شما امکان پورت شدن به سایر سامانه‌ها را "
+"دارد، حتی توسط سایر برنامه‌نویسان، از طریق نوشتن کتابخانه‌ای جدید بدون ایجاد "
+"هیچ تغییری در کد شما."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:374
@@ -844,12 +900,16 @@ msgid ""
 "main program. Here, again, all porters have to do is create a new object "
 "file to link with your main program."
 msgstr ""
+"اگر ایدهٔ داشتن کتابخانه را دوست ندارید، حداقل می‌توانید تمام فراخوان‌های "
+"سامانهٔ خود را درون یک پروندهٔ‌ زبان اسمبلی مجزا قرار دهید و آن را با برنامهٔ"
+" اصلی خود پیوند دهید. در اینجا، دوباره، تمام آنچه که پورت‌کنندگان باید انجام "
+"دهند ساخت یک پروندهٔ هدف برای پیوند‌دهی با برنامهٔ اصلی است."
 
 #. type: Title ===
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:376
 #, no-wrap
 msgid "Using an Include File"
-msgstr ""
+msgstr "استفاده از پروندهٔ Include"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:379
@@ -857,6 +917,9 @@ msgid ""
 "If you are releasing your software as (or with) source code, you can use "
 "macros and place them in a separate file, which you include in your code."
 msgstr ""
+"چنانچه برنامهٔ خود را به‌عنوان (یا به‌همراه) کد منبع عرضه می‌کنید، می‌توانید "
+"از ماکروها استفاده کنید و آنها در یک پروندهٔ جدا قرار دهید، که در کدتان قرار "
+"می‌دهید."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:381
@@ -865,6 +928,9 @@ msgid ""
 "external object file is necessary, yet your code is portable without any "
 "need to edit the code."
 msgstr ""
+"پورت‌کنندگان برنامهٔ شما به‌سادگی یک پروندهٔ جدید include می‌نویسند. هیچ "
+"کتابخانه یا پروندهٔ هدفی لازم نیست، با این حال کد شما بدون نیاز به هیچ "
+"ویرایشی انتقال‌پذیر است."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:385
@@ -893,7 +959,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:397
 msgid "Next, we create a symbolic name for each system call:"
-msgstr ""
+msgstr "سپس، یک نام نمایدن برای هر کدام از فراخوان‌های سامانه ایجاد می‌کنیم:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:406
@@ -913,6 +979,8 @@ msgid ""
 "We add a short, non-global procedure with a long name, so we do not "
 "accidentally reuse the name in our code:"
 msgstr ""
+"ما یک روش کوتاه و غیرجهانی با نامی بلند اضافه می‌کنیم، در نتیجه به‌طور "
+"تصادفی از همان نام در کدمان استفادهٔ مجدد نمی‌کنیم:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:417
@@ -929,6 +997,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:420
 msgid "We create a macro which takes one argument, the syscall number:"
 msgstr ""
+"یک ماکرو ایجاد می‌کنیم که تنها یک برهان می‌پذیرد، شمارهٔ فراخوان سامانه:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:427
@@ -944,6 +1013,8 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:430
 msgid "Finally, we create macros for each syscall. These macros take no arguments."
 msgstr ""
+"در انتها، برای هر فراخوان سامانه یک ماکرو می‌سازیم. این ماکروها هیچ برهانی "
+"را نمی‌پذیرند."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:436
@@ -998,7 +1069,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:455
 #, no-wrap
 msgid "Our First Program"
-msgstr ""
+msgstr "نخستین برنامهٔ ما"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:458
@@ -1082,7 +1153,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:495
 #, no-wrap
 msgid "Assembling the Code"
-msgstr ""
+msgstr "همگذاریِ کد"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:498
@@ -1139,7 +1210,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:524
 msgid "Now you can assemble, link, and run the code:"
-msgstr ""
+msgstr "حال می‌توانید کد را همگذاری، پیوند و اجرا کنید:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:532
@@ -1270,6 +1341,8 @@ msgid ""
 "a hexadecimal number, writing the result, and eventually exiting the "
 "program."
 msgstr ""
+"بخش کد شامل چهار قسمت است: خواندن بایت، تبدیل آن به یک عدد شانزده‌شانزدهی، "
+"نوشتن نتیجه، و در انتها خروج از برنامه."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:589
@@ -1287,7 +1360,7 @@ msgstr ""
 msgid ""
 "For simplicity sake, we are ignoring the possibility of an error condition "
 "at this time."
-msgstr ""
+msgstr "به‌خاطر سادگی، ما در اینجا از احتمال وجود خطا چشم‌پوشی می کنیم."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:596
@@ -1314,6 +1387,9 @@ msgid ""
 "returning a zero, which is the traditional value meaning the program was "
 "successful."
 msgstr ""
+"همین‌که هیچ ورودی‌ای باقی نماند، از سامانه درخواست خروج به برنامه‌مان را می "
+"دهیم، مقدار صفر را برمی‌گرداند که مقدار مرسوم است، بدین معنا که برنامه با "
+"موفقیت اجرا شده است."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:602
@@ -1461,12 +1537,15 @@ msgid ""
 "system call for every single byte twice (once to read it, another time to "
 "write the output)."
 msgstr ""
+"به‌نظر بهتر شد. اما این کد کاملاً‌ ناکارآمد است! ما برای هر یک بایت دوبار "
+"فراخوان سامانه را ایجاد می‌کنیم (یک‌بار برای خواندنش، بار دیگر برای نوشتن "
+"خروجی)."
 
 #. type: Title ==
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:693
 #, no-wrap
 msgid "Buffered Input and Output"
-msgstr ""
+msgstr "ورودی و خروجی میان‌گیردار"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:696
@@ -1475,6 +1554,9 @@ msgid ""
 "output. We create an input buffer and read a whole sequence of bytes at one "
 "time. Then we fetch them one by one from the buffer."
 msgstr ""
+"می‌توانیم کاراییِ کدمان را با میان‌گیریِ ورودی و خروجی‌مان بهبود ببخشیم. یک "
+"میان‌گیر ورودی می‌سازیم و ترتیبی کامل از بایت‌ها را به‌یکباره می‌خوانیم. سپس "
+"آنها را یک به یک از میان‌گیر می‌گیریم."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:698
@@ -1732,7 +1814,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:805
 msgid "Let us see how it works now:"
-msgstr ""
+msgstr "اکنون بیایید ببینیم چطور کار می‌کند:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:816
@@ -1772,12 +1854,12 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:921
 msgid "Now, let us see how it works:"
-msgstr ""
+msgstr "اکنون، بیایید ببینیم چطور کار می‌کند:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:935
 msgid "Not bad for a 644-byte executable, is it!"
-msgstr ""
+msgstr "برای یک اجراپذیر ۶۴۴-بایتی بد نیست!"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:939
@@ -1791,7 +1873,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:942
 #, no-wrap
 msgid "How to Unread a Character"
-msgstr ""
+msgstr "چگونه یک نویسه را نخوانیم"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:948
@@ -1810,6 +1892,10 @@ msgid ""
 "certain value, it is part of the token currently being processed. Otherwise, "
 "it is not."
 msgstr ""
+"با اینکه برنامهٔ سادهٔ ما به آن نیاز ندارد، فیلترهای پیشرفته‌تر معمولاً نیاز "
+"به تدبیر دارند. به بیان دیگر، ممکن است بخواهند نویسهٔ بعدی را ببینند (یا حتی "
+"چندین نویسه‌). اگر نویسهٔ بعدی دارای مقدار مشخصی هست، این بخشی از نشانه‌ایست "
+"که در حال پردازش است. در غیر اینصورت چنین نیست."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:953
@@ -1820,6 +1906,10 @@ msgid ""
 "processing. If it is followed by white space, or some other value, then it "
 "is not part of the current token."
 msgstr ""
+"برای مثال، ممکن است شما جریان ورودیِ رشتهٔ متنی را تجزیه کنید (برای مثال، "
+"هنگام پیاده‌سازیِ همگردان یک زبان):‌ چنانچه یک نویسه توسط نویسه‌ای دیگر، یا "
+"شاید یک رقم دنبال شود، این بخشی از نشانه‌ایست که شما در حال پردازش هستید. "
+"چنانچه با یک فضای سفید، یا مقدار‌ دیگری دنبال شود، بخشی از نشانهٔ جاری نیست."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:955
@@ -1827,6 +1917,8 @@ msgid ""
 "This presents an interesting problem: How to return the next character back "
 "to the input stream, so it can be read again later?"
 msgstr ""
+"این مسئلهٔ جالبی را ارائه می‌دهد: چگونه نویسهٔ بعدی را به جریان ورودی "
+"بازگردانیم، تا بعدتر امکان خواندن آن باشد؟"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:957
@@ -1853,6 +1945,8 @@ msgid ""
 "The key to returning a character back to the stream is in how we are getting "
 "the characters to start with:"
 msgstr ""
+"نکتهٔ اصلی در برگرداندن یک نویسه به جریان در نحوهٔ دریافت کردن نویسه‌ها برای "
+"شروع است:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:963
@@ -1927,6 +2021,8 @@ msgid ""
 "If your program reads more than one byte ahead, you have at least two "
 "choices:"
 msgstr ""
+"اگر برنامهٔ شما بیش از یک بایت جلوتر را می‌خواند، حداقل دو انتخاب پیش رو "
+"دارید:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:991
@@ -1934,6 +2030,8 @@ msgid ""
 "If possible, modify the program so it only reads one byte ahead. This is the "
 "simplest solution."
 msgstr ""
+"اگر امکان دارد، برنامه را تغییر دهید تا تنها یک بایت جوتر را بخواند. این "
+"ساده‌ترین راه‌حل است."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:993
@@ -1986,7 +2084,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1016
 #, no-wrap
 msgid "Command Line Arguments"
-msgstr ""
+msgstr "براهین خط فرمان"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1019
@@ -2050,6 +2148,8 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1036
 msgid "First, we need to add two new entries to our list of system call numbers:"
 msgstr ""
+"ابتدا، نیاز داریم تا دو ورودی به فهرست شماره‌های فراخوان سامانهٔ خود اضافه "
+"کنیم:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1041
@@ -2062,7 +2162,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1044
 msgid "Then we add two new macros at the end of the file:"
-msgstr ""
+msgstr "سپس دو ماکروی جدید به انتهای پرونده اضافه می‌کنیم:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1050
@@ -2085,7 +2185,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1057
 msgid "Here, then, is our modified source code:"
-msgstr ""
+msgstr "اکنون، کد منبع اصلاح شدهٔ ما چنین است:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1068
@@ -2338,7 +2438,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1219
 msgid "Our executable is now a whopping 768 bytes long."
-msgstr ""
+msgstr "اجراپذیر ما اکنون به‌طرز عجیبی ۷۶۸ بایت طول دارد."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1221
@@ -2346,6 +2446,8 @@ msgid ""
 "Can we still improve it? Of course! Every program can be improved. Here are "
 "a few ideas of what we could do:"
 msgstr ""
+"آیا هنوز هم می‌توانیم آن را بهبود ببخشیم؟ البته! هر برنامه‌ای قابل بهبود "
+"است. در اینجا چند ایده از آنچه می‌توانیم انجام دهیم آورده شده است:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1223
@@ -2375,7 +2477,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1227
 msgid "Print a usage message if command line arguments are incorrect."
-msgstr ""
+msgstr "درصورت نادرست بودم براهین خط فرمان یک پیام استفاده چاپ کنید."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1229
@@ -2383,6 +2485,8 @@ msgid ""
 "I shall leave these enhancements as an exercise to the reader: You already "
 "know everything you need to know to implement them."
 msgstr ""
+"من این بهینه‌سازی‌ها را به‌عنوان تمرین برای خواننده می‌گذارم: شما تمام آنچه "
+"که برای پیاده‌سازی آنها لازم است را می‌دانید."
 
 #. type: Title ==
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1231
@@ -2402,7 +2506,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1236
 #, no-wrap
 msgid "How to Find Environment Variables"
-msgstr ""
+msgstr "چگونه متغیرهای محیطی را بیابیم"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1239
@@ -2433,7 +2537,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1245
 #, no-wrap
 msgid "webvars"
-msgstr ""
+msgstr "webvars"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1248
@@ -2447,7 +2551,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1250
 #, no-wrap
 msgid "CGI: a Quick Overview"
-msgstr ""
+msgstr "CGI: مروری سریع"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1253
@@ -2494,7 +2598,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1265
 #, no-wrap
 msgid "The Code"
-msgstr ""
+msgstr "کد"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1268
@@ -2507,7 +2611,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1270
 msgid "The code follows. I placed comments and explanations right inside the code:"
-msgstr ""
+msgstr "این کد در پایین آمده است. من توضیحات را مستقیم درون کد قرار داده‌ام:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1307
@@ -2807,7 +2911,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1459
 msgid "Assemble and link it as usual:"
-msgstr ""
+msgstr "آن را مانند همیشه همگذاری و پیوند دهید:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1464
@@ -2842,7 +2946,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1471
 #, no-wrap
 msgid "Working with Files"
-msgstr ""
+msgstr "کار با پرونده‌ها"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1474
@@ -2860,6 +2964,9 @@ msgid ""
 "utility. It always makes programming easier when we know from the start what "
 "the end product is supposed to do."
 msgstr ""
+"در واقع، بیایید از پایان شروع کنیم، یعنی، با ابزار تبدیل پرونده. آگاهی "
+"ابتدایی نسبت به این امر که محصول پایانی قرار است چه کند برنامه‌نویسی را "
+"همیشه آسان‌تر می‌کند."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1478
@@ -2914,6 +3021,8 @@ msgid ""
 "At first sight, such a file conversion is very simple: All you have to do is "
 "strip the carriage returns, right?"
 msgstr ""
+"در نگاه اول، چنین تبدیل پرونده‌ای بسیار ساده است: تمام آنچه که باید انجام "
+"دهید حذف سرسطرها (carriage returns) است، صحیح؟"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1499
@@ -2937,26 +3046,28 @@ msgid ""
 "A text file converter, then, must be able to handle any possible line "
 "endings:"
 msgstr ""
+"یک مبدل پروندهٔ متنی، سپس، باید بتواند به هر نوع پایان سطر احتمالی رسیدگی "
+"کند:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1505
 msgid "carriage return / line feed"
-msgstr ""
+msgstr "carriage return / line feed"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1506
 msgid "carriage return"
-msgstr ""
+msgstr "carriage return"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1507
 msgid "line feed / carriage return"
-msgstr ""
+msgstr "line feed / carriage return"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1508
 msgid "line feed"
-msgstr ""
+msgstr "line feed"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1510
@@ -2964,12 +3075,15 @@ msgid ""
 "It should also handle files that use some kind of a combination of the above "
 "(e.g., carriage return followed by several line feeds)."
 msgstr ""
+"همچنین باید بتواند به پرونده‌هایی که از نوع خاصی از ترکیب‌های بالا استفاده "
+"می‌کنند نیز رسیدگی کند (برای مثال، carriage return به‌همراه تعدادی line "
+"feed)."
 
 #. type: Title ===
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1512
 #, no-wrap
 msgid "Finite State Machine"
-msgstr ""
+msgstr "دستگاه حالت متناهی"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1515
@@ -3032,6 +3146,8 @@ msgid ""
 "If the input is anything other than a carriage return or line feed, the "
 "input is simply passed on to the output. The state remains unchanged."
 msgstr ""
+"اگر ورودی چیزی جز سرسطر یا نوسطر باشد، به‌سادگی به خروجی منتقل می‌شود. حالت "
+"بدون تغییر می‌ماند."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1528
@@ -3069,6 +3185,8 @@ msgid ""
 "returns in a row. We discard the input, we output a line feed, and leave the "
 "state unchanged."
 msgstr ""
+"اگر ورودی یک سرسطر باشد، ما دو (یا بیشتر) سرسطر پشت سر هم دریافت کرده‌ایم. "
+"ورودی را حذف می‌کنیم، یک نوسطر ایجاد می‌کنیم، و حالت را تغییر نمی‌دهیم."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1535
@@ -3111,12 +3229,13 @@ msgid ""
 "If the input is a line feed, we output the line feed, and leave the state "
 "unchanged."
 msgstr ""
+"چنانچه ورودی نوسطر باشد، نوسطر را ایجاد می‌کنیم، و حالت را تغییر نمی‌دهیم."
 
 #. type: Title ====
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1543
 #, no-wrap
 msgid "The Final State"
-msgstr ""
+msgstr "حالت نهایی"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1546
@@ -3149,7 +3268,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1555
 #, no-wrap
 msgid "The Output Counter"
-msgstr ""
+msgstr "شمارندهٔ خروجی"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1558
@@ -3164,7 +3283,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1560
 #, no-wrap
 msgid "Implementing FSM in Software"
-msgstr ""
+msgstr "پیاده‌سازی FSM در نرم‌افزار"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1563
@@ -3205,7 +3324,7 @@ msgstr ""
 msgid ""
 "Another approach is by using an array of function pointers, something like "
 "this:"
-msgstr ""
+msgstr "روشی دیگر استفاده از یک آرایه از اشاره‌گرهای تابع است، چیزی مانند این:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1587
@@ -3253,7 +3372,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1606
 #, no-wrap
 msgid "Memory Mapped Files"
-msgstr ""
+msgstr "پرونده‌های حافظه نگاشت‌شده"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1609
@@ -3262,6 +3381,9 @@ msgid ""
 "worked for us before, i.e., to read from an input file and to write to an "
 "output file."
 msgstr ""
+"از آنجه که برنامهٔ ما در یک پروندهٔ واحد کار می‌کند، نمی‌توانیم از روشی که "
+"پیش‌تر به ما جواب داده است استفاده کنیم، برای مثال، خواندن از یک پروندهٔ "
+"ورودی و نوشتن در یک پروندهٔ خروجی."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1611
@@ -3353,7 +3475,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1639
 #, no-wrap
 msgid "Determining File Size"
-msgstr ""
+msgstr "تعیین اندازهٔ پرونده"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1642
@@ -3405,7 +3527,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1657
 #, no-wrap
 msgid "Changing the File Size"
-msgstr ""
+msgstr "تغییر اندازهٔ پرونده"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1660
@@ -3415,6 +3537,10 @@ msgid ""
 "since we are placing our output into the same file we read the input from, "
 "we may have to change the size of the file."
 msgstr ""
+"از آنجا که برنامهٔ ما ممکن است توالی سرسطر / نوسطر را درون نوسطرهای مستقیم "
+"ترکیب ‌کند، ممکن است خروجی ما کوچک‌تر از ورودی‌مان باشد. گرچه، از آنجا که "
+"خروجی خود را در همان پرونده‌ای که ورودی را از آن می‌خوانیم قرار می‌دهیم، "
+"ممکن است مجبور به تغییر اندازهٔ پرونده باشیم."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1662
@@ -3447,7 +3573,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1673
 #, no-wrap
 msgid "ftuc"
-msgstr ""
+msgstr "ftuc"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1676
@@ -3513,7 +3639,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1719
 msgid "We define the new syscalls:"
-msgstr ""
+msgstr "فراخوان‌های سامانهٔ جدید را تعریف می‌کنیم:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1726
@@ -3528,7 +3654,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1729
 msgid "We add the macros for their use:"
-msgstr ""
+msgstr "ماکروها را برای استفادهٔ آنها اضافه می‌کنیم:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1735
@@ -3569,7 +3695,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1750
 msgid "And here is our code:"
-msgstr ""
+msgstr "و این کد ما هست:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1763
@@ -4036,7 +4162,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1998
 #, no-wrap
 msgid "One-Pointed Mind"
-msgstr ""
+msgstr "ذهن تک هدفی"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2001
@@ -4044,6 +4170,8 @@ msgid ""
 "As a student of Zen, I like the idea of a one-pointed mind: Do one thing at "
 "a time, and do it well."
 msgstr ""
+"به‌عنوان یک دانش‌آموز ذن، ایدهٔ ذهن تک هدفی را دوست دارم: یک کار را در لحظه "
+"انجام دهید، و آن را به‌خوبی انجام دهید."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2003
@@ -4075,7 +4203,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2009
 #, no-wrap
 msgid "CSV"
-msgstr ""
+msgstr "CSV"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2012
@@ -4083,6 +4211,7 @@ msgid ""
 "I will illustrate this principle with a specific real-life example I was "
 "faced with recently:"
 msgstr ""
+"من این اصل را با یک مثال واقعی که چندی پیش با آن برخورد کردم نشان می‌دهم:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2014
@@ -4100,6 +4229,9 @@ msgid ""
 "commas. The rest of the file contains the data listed line by line, with "
 "values separated by commas."
 msgstr ""
+"اولین سطر از پرونده شامل فهرستی از رشته‌های گوناگون جدا شده توسط ویرگول است. "
+"باقی پرونده شامل داده‌ای است که به‌همراه مقادیر جدا شده‌ توسط ویرگول، سطر به "
+"سطر فهرست شده است."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2018
@@ -4120,17 +4252,17 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2022
 msgid "Remove the first line from the file;"
-msgstr ""
+msgstr "سطر نخست را از پرونده حذف کنید؛"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2023
 msgid "Change all unquoted commas to a different character;"
-msgstr ""
+msgstr "تمام ویرگول‌های نقل قول نشده را به یک نویسهٔ متفاوت تغییر دهید؛"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2024
 msgid "Remove all quotation marks."
-msgstr ""
+msgstr "تمام نشان‌های نقل قول را حذف کنید."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2026
@@ -4155,26 +4287,28 @@ msgid ""
 "This time I decided to let it do a little more work than a typical tutorial "
 "program would:"
 msgstr ""
+"این بار تصمیم گرفتم بگذارم کمی بیشتر از یک برنامهٔ آموزشی معمولی کار انجام "
+"دهد:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2032
 msgid "It parses its command line for options;"
-msgstr ""
+msgstr "خط فرمان خود را برای گزینه‌ها تجزیه می‌کند؛"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2033
 msgid "It displays proper usage if it finds wrong arguments;"
-msgstr ""
+msgstr "در صورت پیدا کردن براهین غلط، کاربرد صحیح را نمایش می‌دهد؛"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2034
 msgid "It produces meaningful error messages."
-msgstr ""
+msgstr "پیغام‌های خطای معنادار ایجاد می‌کند."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2036
 msgid "Here is its usage message:"
-msgstr ""
+msgstr "در اینجا پیام نحوهٔ استفاده از آن آورده شده است:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2040
@@ -4185,7 +4319,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2043
 msgid "All parameters are optional, and can appear in any order."
-msgstr ""
+msgstr "تمامی مؤلفه‌ها اختیاری هستند، و می‌توانند به هر ترتیبی آورده شوند."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2045
@@ -4230,7 +4364,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2055
 msgid "To get the 11th field of each record, I can now do:"
-msgstr ""
+msgstr "برای گرفتن یازدهمین رشته از هر پیشینه، می‌توانم چنین کنم:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2059
@@ -4250,7 +4384,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2064
 msgid "Here is the code:"
-msgstr ""
+msgstr "کد این است:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2078
@@ -4680,6 +4814,10 @@ msgid ""
 "separately only when needed. After all, there is no need to flush out every "
 "line when used non-interactively."
 msgstr ""
+"از هنگامی‌که شروع به نوشتن این فصل کرده ام راه حل بهتری برای مشکل تعاملی "
+"یافته‌ام. می‌خواستم مطمئن شوم هر سطر تنها زمانی جداگانه چاپ می‌شود که نیاز "
+"باشد. به هر حال، در هنگام استفادهٔ غیرتعاملی هیچ نیازی به بسط دادن هر سطر "
+"نیست."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2345
@@ -4694,7 +4832,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2347
 #, no-wrap
 msgid "The Dark Side of Buffering"
-msgstr ""
+msgstr "نیمهٔ تاریک میان‌گیری"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2350
@@ -4720,6 +4858,8 @@ msgid ""
 "all the other filters we have written so far, so I am only going to show you "
 "its inner loop:"
 msgstr ""
+"نوشتن چنین فیلتری بسیار ساده است. اکثر آن شبیه به تمام فیلترهایی است که "
+"تابحال نوشته‌ایم، در نتیجه من فقط حلقه‌های درونی آن را نشان شما خواهم داد:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2362
@@ -4738,6 +4878,8 @@ msgid ""
 "Because this filter works with raw data, it is unlikely to be used "
 "interactively."
 msgstr ""
+"چنانکه این فیلتر با داده‌های خام کار می‌کند، بعید است از آن به‌صورت تعاملی "
+"استفاده شود."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2367
@@ -4749,7 +4891,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2369
 msgid "Here is what might happen:"
-msgstr ""
+msgstr "آنچه که ممکن است روی دهد:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2372
@@ -4759,7 +4901,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2373
 msgid "It will read the first row of pixels from a bitmap or pixmap."
-msgstr ""
+msgstr "اولین ردیف از پیکسل‌ها را از یک bitmap یا pixmap می‌خواند."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2374
@@ -4774,6 +4916,8 @@ msgid ""
 "Our filter will read each pixel from its input, turn it to a negative, and "
 "write it to its output buffer."
 msgstr ""
+"فیلتر ما هر پیکسل را از ورودی خود می‌خواند، آن را به یک نگاتیو تبدیل می‌کند، "
+"و در میان‌گیر ورودی‌اش می‌نویسد."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2376
@@ -4962,7 +5106,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2423
 #, no-wrap
 msgid "The Packed Decimal Format"
-msgstr ""
+msgstr "قالب ده‌دهی بسته‌بندی شده"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2426
@@ -4989,7 +5133,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2436
 msgid "The remaining 9 bytes store the 18 digits of the number: 2 digits per byte."
-msgstr ""
+msgstr "۹ بایت باقی‌مانده ۱۸ رقم را ذخیره می‌کنند: ۲ رقم به ازای هر بایت."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2438
@@ -5033,6 +5177,8 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2456
 msgid "Remember that, or you will be pulling your hair out in desperation!"
 msgstr ""
+"این را به خاطر داشته باشید، در غیر اینصورت موهای خود را از سر ناامیدی بیرون "
+"می‌کشید!"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2460
@@ -5050,7 +5196,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2463
 #, no-wrap
 msgid "Excursion to Pinhole Photography"
-msgstr ""
+msgstr "گشتی در عکس برداری Pinhole (روزنه)"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2466
@@ -5058,6 +5204,8 @@ msgid ""
 "To write meaningful software, we must not only understand our programming "
 "tools, but also the field we are creating software for."
 msgstr ""
+"برای نوشتن نرم‌افزار معنادار، ما نه تنها باید ابزار برنامه‌نویسی‌مان را، "
+"بلکه زمینه‌ای که نرم افزار را برای آن می‌سازیم نیز بفهمیم."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2468
@@ -5070,7 +5218,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2470
 #, no-wrap
 msgid "The Camera"
-msgstr ""
+msgstr "دوربین"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2473
@@ -5078,6 +5226,8 @@ msgid ""
 "The easiest way to describe any camera ever built is as some empty space "
 "enclosed in some lightproof material, with a small hole in the enclosure."
 msgstr ""
+"ساده‌ترین راه برای تشریح هر دوربینی که تابحال ساخته شده است فضای خالی محصور "
+"در برخی مواد ضد نور، و یک سوراخ کوچک در محفظه است."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2475
@@ -5095,6 +5245,8 @@ msgid ""
 "If some light sensitive material (such as film) is placed inside the camera, "
 "it can capture the image."
 msgstr ""
+"چنانچه برخی مواد حساس به نور (مانند فیلم) داخل دوربین قرار داده شود، می‌"
+"تواند تصویر را بگیرد."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2479
@@ -5107,7 +5259,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2481
 #, no-wrap
 msgid "The Pinhole"
-msgstr ""
+msgstr "روزنه"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2484
@@ -5129,7 +5281,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2488
 #, no-wrap
 msgid "Focal Length"
-msgstr ""
+msgstr "فاصلهٔ کانونی"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2491
@@ -5277,18 +5429,20 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2541
 #, no-wrap
 msgid "Designing the Pinhole Software"
-msgstr ""
+msgstr "طراحی نرم‌افزار روزنه"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2544
 msgid "We are now ready to decide what exactly we want our pinhole software to do."
 msgstr ""
+"ما اکنون آماده‌ایم تا تصمیم بگیریم دقیقاً چه انتظاری از نرم‌افزار روزنهٔ خود "
+"داریم."
 
 #. type: Title ====
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2546
 #, no-wrap
 msgid "Processing Program Input"
-msgstr ""
+msgstr "پردازش ورودی برنامه"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2549
@@ -5391,7 +5545,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2580
 msgid "There is no reason for the computer to spit out a number of complaints:"
-msgstr ""
+msgstr "هیچ دلیلی برای شکایت کردن رایانه وجود ندارد:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2587
@@ -5406,7 +5560,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2590
 msgid "Et cetera, et cetera, et cetera."
-msgstr ""
+msgstr "و غیره، و غیره، و غیره."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2592
@@ -5446,7 +5600,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2600
 #, no-wrap
 msgid "Offering Options"
-msgstr ""
+msgstr "گزینه‌های پیشنهادی"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2603
@@ -5469,7 +5623,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2607
 msgid "Why have two ways of choosing?"
-msgstr ""
+msgstr "چرا دو روش برای انتخاب داریم؟"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2609
@@ -5526,7 +5680,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2621
 msgid "This type of choice is usually done with command line parameters."
-msgstr ""
+msgstr "این نوع انتخاب معمولاً‌ توسط پارامترهای خط فرمان صورت می‌گیرد."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2623
@@ -5544,6 +5698,8 @@ msgid ""
 "Given this system, the program may find conflicting options, and handle them "
 "this way:"
 msgstr ""
+"با توجه به این سامانه، برنامه ممکن است گزینه‌هایی متعارض پیدا کند، و بدین "
+"شکل به آنها رسیدگی کند:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2628
@@ -5591,6 +5747,8 @@ msgid ""
 "It may crash the program because we have not designed it to handle huge "
 "numbers."
 msgstr ""
+"ممکن است برنامه را خراب کند زیرا آن را به گونه‌ای طراحی نکرده‌ایم تا اعداد "
+"بزرگ را سامان‌دهی کند."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2640
@@ -5632,7 +5790,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2650
 #, no-wrap
 msgid "The Output"
-msgstr ""
+msgstr "خروجی"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2653
@@ -5729,12 +5887,12 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2680
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2820
 msgid "But..."
-msgstr ""
+msgstr "اما..."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2682
 msgid "What if the user types something like this:"
-msgstr ""
+msgstr "اگر کاربر چیزی شبیه به این بنویسد چه:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2686
@@ -5777,7 +5935,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2697
 msgid "What will we do?"
-msgstr ""
+msgstr "چه خواهیم کرد؟"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2699
@@ -5801,7 +5959,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2709
 msgid "Send the digit to the output."
-msgstr ""
+msgstr "ارسال رقم به خروجی."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2710
@@ -5813,7 +5971,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2711
 msgid "Increase the counter."
-msgstr ""
+msgstr "افزایش شمارنده."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2713
@@ -5975,7 +6133,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2759
 msgid "Output the result."
-msgstr ""
+msgstr "نمایش نتیجه."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:2760
@@ -7486,6 +7644,8 @@ msgid ""
 "The code follows the same format as all the other filters we have seen "
 "before, with one subtle exception:"
 msgstr ""
+"این کد همانند تمام فیلترهایی که از پیش دیده‌ایم، همان قالب همیشگی را دنبال "
+"می‌کند، با یک استثنای جزئی:"
 
 #. type: delimited block _ 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:3602
@@ -7504,12 +7664,12 @@ msgstr ""
 #. type: delimited block _ 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:3606
 msgid "When we have no more input, it can mean one of two things:"
-msgstr ""
+msgstr "هنگامی‌که دیگر هیچ ورودی‌ای نداریم، می تواند دو مفهوم داشته باشد:"
 
 #. type: delimited block _ 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:3608
 msgid "We are done and can quit. This is the same as before."
-msgstr ""
+msgstr "کار ما تمام شده است و می‌توانیم خارج شویم. این همانند قبل است."
 
 #. type: delimited block _ 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:3609
@@ -7615,6 +7775,8 @@ msgid ""
 "Everything else in this code should be quit eclear, providing you have read "
 "the entire chapter that precedes it."
 msgstr ""
+"هر چیز دیگری که در این کد است باید کاملاً واضح باشد، مشروط بر آنکه فصل قبل "
+"از آن را کامل خوانده باشید."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:3636
@@ -7623,6 +7785,9 @@ msgid ""
 "thought and only a little coding. Once we have thought through every tiny "
 "detail, the code almost writes itself."
 msgstr ""
+"این یک مثال کلاسیک از این ضرب‌المثل است که برنامه‌نویسی نیازمند مقدار زیادی "
+"فکر و تنها کمی کد زدن است. همین‌که تمام جزئیات ریز را در نظر گرفتیم، کد "
+"تقریباً‌ خودش را می‌نویسد."
 
 #. type: Title ===
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:3638
@@ -7644,6 +7809,8 @@ msgid ""
 "In my humble opinion, forming a textual query, instead of having to follow a "
 "very strict syntax, makes software much more user friendly."
 msgstr ""
+"به نظر حقیرانهٔ من، تشکیل یک جست‌و‌جوی متنی، به‌ جای آنکه مجبور به پیروی از "
+"قواعد نحوی بسیار محدود باشیم، برنامه را بسیار کاربرپسندتر می‌کند."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:3645
@@ -7659,7 +7826,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:3647
 msgid "Our session might look like this:"
-msgstr ""
+msgstr "ممکن است جلسهٔ ما بدین شکل باشد:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:3651
@@ -7704,7 +7871,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:3671
 #, no-wrap
 msgid "Scripting"
-msgstr ""
+msgstr "اجرانامه‌نویسی"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:3674
@@ -7727,7 +7894,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:3683
 msgid "...or..."
-msgstr ""
+msgstr "...یا..."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:3687
@@ -7759,7 +7926,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:3696
 msgid "The script might look something like this:"
-msgstr ""
+msgstr "ممکن است که اجرانامه چیزی شبیه به این باشد:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:3702
@@ -7803,6 +7970,8 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:3716
 msgid "We can set its permissions to execute, and run it as if it were a program:"
 msgstr ""
+"می‌توانیم مجوزهای اجرانامه را به‌گونه‌ای تنظیم کنیم تا اجرا شود، و آن را "
+"مانند یک برنامه اجرا کنیم:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:3721
@@ -7826,7 +7995,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:3731
 msgid "It will run that command and display:"
-msgstr ""
+msgstr "آن دستور را اجرا می‌کند و خروجی زیر را نمایش می‌دهد:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:3743
@@ -7846,7 +8015,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:3746
 msgid "Now, let us enter:"
-msgstr ""
+msgstr "اکنون، بیایید چنین وارد کنیم:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:3750
