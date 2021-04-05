@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 12:39+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
+"projects/documentation/booksarch-handbooklockingchapter/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:1
@@ -25,7 +28,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:8
 #, no-wrap
 msgid "Locking Notes"
-msgstr ""
+msgstr "内核中的锁"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:33
@@ -46,7 +49,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:37
 #, no-wrap
 msgid "Mutexes"
-msgstr ""
+msgstr "Mutex"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:40
@@ -56,6 +59,8 @@ msgid ""
 "obtain a mutex that is already owned, it must wait until the mutex is "
 "released. In the FreeBSD kernel, mutexes are owned by processes."
 msgstr ""
+"Mutex就是一种用来解决共享/排它矛盾的锁。 一个mutex在一个时刻只可以被一个实体拥有。如果另一个实体要获得已经被拥有的mutex， "
+"就会进入等待，直到这个mutex被释放。在FreeBSD内核中，mutex被进程所拥有。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:42
@@ -68,13 +73,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:44
 msgid "Each mutex has several properties of interest:"
-msgstr ""
+msgstr "每个mutex有几个令人感兴趣的属性："
 
 #. type: Labeled list
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:45
 #, no-wrap
 msgid "Variable Name"
-msgstr ""
+msgstr "变量名"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:47
@@ -85,7 +90,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:48
 #, no-wrap
 msgid "Logical Name"
-msgstr ""
+msgstr "逻辑名"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:50
@@ -99,7 +104,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:51
 #, no-wrap
 msgid "Type"
-msgstr ""
+msgstr "类型"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:53
@@ -117,7 +122,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:56
 msgid "A sleep mutex"
-msgstr ""
+msgstr "一个睡眠 mutex"
 
 #. type: Labeled list
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:57
@@ -128,7 +133,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:59
 msgid "A spin mutex"
-msgstr ""
+msgstr "一个循环 mutex"
 
 #. type: Labeled list
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:60
@@ -139,13 +144,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:62
 msgid "This mutex is allowed to recurse."
-msgstr ""
+msgstr "这个 mutex 允许递归。"
 
 #. type: Labeled list
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:63
 #, no-wrap
 msgid "Protectees"
-msgstr ""
+msgstr "保护对象"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:65
@@ -159,18 +164,18 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:66
 #, no-wrap
 msgid "Dependent Functions"
-msgstr ""
+msgstr "依赖函数"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:68
 msgid "Functions that can only be called if this mutex is held."
-msgstr ""
+msgstr "仅当mutex被持有时才可以被调用的函数。"
 
 #. type: Block title
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:69
 #, no-wrap
 msgid "Mutex List"
-msgstr ""
+msgstr "Mutex列表"
 
 #. type: Table
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:101
@@ -226,7 +231,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:104
 #, no-wrap
 msgid "Shared Exclusive Locks"
-msgstr ""
+msgstr "共享互斥锁"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:107
@@ -239,7 +244,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:108
 #, no-wrap
 msgid "Shared Exclusive Lock List"
-msgstr ""
+msgstr "共享互斥锁列表"
 
 #. type: Table
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:119
@@ -260,7 +265,7 @@ msgstr ""
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:122
 #, no-wrap
 msgid "Atomically Protected Variables"
-msgstr ""
+msgstr "原子保护变量"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/locking/chapter.adoc:125
