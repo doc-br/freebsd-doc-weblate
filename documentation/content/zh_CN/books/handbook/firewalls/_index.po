@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 12:40+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookfirewalls_index/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1
@@ -31,13 +34,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:9
 #, no-wrap
 msgid "Firewalls"
-msgstr ""
+msgstr "防火墙"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "简介"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:48
@@ -55,21 +58,21 @@ msgstr ""
 msgid ""
 "Firewalls can enhance the security of a host or a network. They can be used "
 "to do one or more of the following:"
-msgstr ""
+msgstr "防火墙可以大幅度地改善主机或网络的安全。 它可以用来完成下面的任务："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:52
 msgid ""
 "Protect and insulate the applications, services, and machines of an internal "
 "network from unwanted traffic from the public Internet."
-msgstr ""
+msgstr "保护和隔离应用程序、 服务程序， 以及您内部网络上的机器， 不受那些来自公共的 Internet 网络上您所不希望的数据流量的干扰。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:53
 msgid ""
 "Limit or disable access from hosts of the internal network to services of "
 "the public Internet."
-msgstr ""
+msgstr "限制或禁止从内部网访问公共的 Internet 上的服务。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:54
@@ -98,22 +101,22 @@ msgid ""
 "FreeBSD provides multiple firewalls in order to meet the different "
 "requirements and preferences for a wide variety of users. Each user should "
 "evaluate which firewall best meets their needs."
-msgstr ""
+msgstr "FreeBSD提供多个防火墙是为了满足不同的需求与各种使用者的偏好，每位使用者应评价那一种防火墙最能满足其需求。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:60
 msgid "After reading this chapter, you will know:"
-msgstr ""
+msgstr "读完本章节，你将会知道："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:62
 msgid "How to define packet filtering rules."
-msgstr ""
+msgstr "如何正确地定义包过滤规则。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:63
 msgid "The differences between the firewalls built into FreeBSD."
-msgstr ""
+msgstr "FreeBSD 中内建的几种防火墙之间的差异。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:64
@@ -133,12 +136,12 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:68
 msgid "Before reading this chapter, you should:"
-msgstr ""
+msgstr "在阅读这个章节之前，您应当："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:70
 msgid "Understand basic FreeBSD and Internet concepts."
-msgstr ""
+msgstr "了解FreeBSD基础及网络概念。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:74
@@ -155,7 +158,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:77
 #, no-wrap
 msgid "Firewall Concepts"
-msgstr ""
+msgstr "防火墙的概念"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:80
@@ -219,13 +222,15 @@ msgid ""
 "safer than exclusive firewalls because they significantly reduce the risk of "
 "allowing unwanted traffic."
 msgstr ""
+"内含式的防火墙对于外发的流量有较好的控制，使其成为提供网际网络服务的系统的最佳选择，它同时可以控制可存取私有网络的网际网络联机，所有不符合该规则的联机会被"
+"封锁并记录。一般来说，内含式的防火墙会比排除式的防火墙安全，因为内含式的防火墙可以明显的减少不必要联机所造成风险。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:94
 msgid ""
 "Unless noted otherwise, all configuration and example rulesets in this "
 "chapter create inclusive firewall rulesets."
-msgstr ""
+msgstr "除非另有说明，否则所有在此章节的示例规则集均为内含式防火墙规则集。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:97
@@ -245,11 +250,14 @@ msgid ""
 "to determine if a packet is valid for a session. Any packets that do not "
 "properly fit the session template are automatically rejected."
 msgstr ""
+"状态过滤技术（Stateful filtering）将所有的流量当做是一个由双向封包交换所组成的联机阶段，当在符合的规则上指定状态（State）时，防火墙"
+"会自动产生内部规则来处理该联机阶段中每个预期会通过的封包，这种防火墙有足够的比对能力可以辨别是否为同一个联机阶段的封包，任何不符合联机阶段样板的封包都会被"
+"自动拒绝。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:101
 msgid "When the session completes, it is removed from the dynamic state table."
-msgstr ""
+msgstr "当联机阶段结束时，该规则将会动态状态表（Dynamic state table）中移除。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:103
@@ -261,6 +269,9 @@ msgid ""
 "filtering provides advanced matching abilities capable of defending against "
 "the flood of different attack methods employed by attackers."
 msgstr ""
+"Stateful filtering让管理者可以专注于封锁/传递新的联机阶段，若新的联机阶段通过，那么该联机阶段后续的封包将会自动允许通过，且任何假冒的封"
+"包会自动被拒绝。若新的联机阶最被封锁，将不允许其任何后续的封包。Stateful "
+"filtering提供了进阶的比对能力，能够抵御不同种类由攻击者发动的flood攻击。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:105
@@ -287,7 +298,7 @@ msgid ""
 "According to RFC 1918, the following IP address ranges are reserved for "
 "private networks which will never be routed directly to the public Internet, "
 "and therefore are available for use with NAT:"
-msgstr ""
+msgstr "根据RFC1918，会保留以下范围的IP位址做为私有网络使用，永远不会被传送到网际网络，因此可供NAT使用："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:111
@@ -317,7 +328,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:121
 #, no-wrap
 msgid "PF"
-msgstr ""
+msgstr "PF"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:124
@@ -578,6 +589,8 @@ msgid ""
 "traffic for those connections to pass back and should only be used on "
 "machines that can be trusted. The ruleset can be loaded with:"
 msgstr ""
+"第一个规则默认拒绝所有传入的流量。第二个规则允许该系统创建的连接传出，同时保留这些连接的状态信息。这个状态信息允许这些连接的回传流量，并且只应在可以信任的"
+"机器上使用。该规则集可以装载的有："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:244
@@ -638,7 +651,7 @@ msgstr ""
 msgid ""
 "Whenever an edit is made to a ruleset, the new rules must be loaded so they "
 "can be used:"
-msgstr ""
+msgstr "每当对规则集进行编辑时，都必须加载新规则，以使这些规则生效："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:272
@@ -681,7 +694,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:290
 #, no-wrap
 msgid "A Simple Gateway with NAT"
-msgstr ""
+msgstr "使用NAT的简单通信闸"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:293
@@ -758,7 +771,7 @@ msgstr ""
 msgid ""
 "That rule only lets the traffic pass in to the gateway on the internal "
 "interface. To let the packets go further, a matching rule is needed:"
-msgstr ""
+msgstr "该规则仅允许流量传递到内部接口上的网关。为了让数据包走得更远，需要匹配规则："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:330
@@ -774,6 +787,8 @@ msgid ""
 "of this section demonstrates how to keep the rules as simple as possible for "
 "readability. For example, those two rules could be replaced with one rule:"
 msgstr ""
+"虽然这两个规则会起作用，但很少需要这么具体的规则。对于一个忙碌的网络管理员来说，可读的规则集是一个比较安全的规则集。本节的其余部分将演示如何保持规则的可读"
+"性。例如，这两条规则可以用一条规则来代替："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:337
@@ -812,7 +827,7 @@ msgid ""
 "The following sample ruleset allows all traffic initiated by machines on the "
 "internal network. It first defines two macros to represent the external and "
 "internal 3COM interfaces of the gateway."
-msgstr ""
+msgstr "下面的示例规则集允许内部网络上的机器发起流量。它首先定义了两个宏来表示内部和外部的3COM接口。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:353
@@ -853,7 +868,7 @@ msgstr ""
 msgid ""
 "Note that this ruleset probably allows more traffic to pass out of the "
 "network than is needed. One reasonable setup could create this macro:"
-msgstr ""
+msgstr "请注意，这个规则集可能允许更多的流量从网络中传出。可以创建这样的宏："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:374
@@ -866,7 +881,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:377
 msgid "to use in the main pass rule:"
-msgstr ""
+msgstr "在 pass 规则中使用："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:382
@@ -932,7 +947,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:407
 msgid "Passwords are transferred in the clear."
-msgstr ""
+msgstr "密码明文传输。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:408
@@ -946,7 +961,7 @@ msgstr ""
 msgid ""
 "When a session is established, data is communicated using randomly selected "
 "ports."
-msgstr ""
+msgstr "会话（session）创建后，数据使用随机端口传输。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:411
@@ -1023,7 +1038,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:441
 msgid "Finally, allow the redirected traffic to pass:"
-msgstr ""
+msgstr "最后，让重定向的流量通过："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:445
@@ -1137,7 +1152,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:490
 msgid "and a rule which uses the macro:"
-msgstr ""
+msgstr "和使用宏的规则："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:494
@@ -1236,7 +1251,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:530
 #, no-wrap
 msgid "Using Tables"
-msgstr ""
+msgstr "使用 Tables"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:533
@@ -1275,7 +1290,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:548
 msgid "To refer to the file, define the table like this:"
-msgstr ""
+msgstr "要引用该文件，请像这样定义表："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:552
@@ -1286,7 +1301,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:555
 msgid "Once the table is defined, it can be referenced by a rule:"
-msgstr ""
+msgstr "表定义完成后，规则可以使用以下方式引用表："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:559
@@ -1364,7 +1379,7 @@ msgid ""
 "This is indicative of a brute force attack where somebody or some program is "
 "trying to discover the user name and password which will let them into the "
 "system."
-msgstr ""
+msgstr "这表明有人或某些程序试图穷举用户名和密码来进入系统。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:593
@@ -1380,7 +1395,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:595
 msgid "To configure this, create this table in the tables section of the ruleset:"
-msgstr ""
+msgstr "要配置此功能，请在规则的表单元（tables section）中创建表："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:599
@@ -1393,7 +1408,7 @@ msgstr ""
 msgid ""
 "Then, somewhere early in the ruleset, add rules to block brute access while "
 "allowing legitimate access:"
-msgstr ""
+msgstr "然后，在规则集的早期，添加规则以阻止暴力访问，同时允许合法访问："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:610
@@ -1411,7 +1426,7 @@ msgstr ""
 msgid ""
 "The part in parentheses defines the limits and the numbers should be changed "
 "to meet local requirements. It can be read as follows:"
-msgstr ""
+msgstr "括号内的部分确定了限制，数字应根据当地的要求进行修改。其内容如下："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:615
@@ -1489,7 +1504,7 @@ msgid ""
 "web service, and the overload table could be used in a rule to assign "
 "offenders to a queue with a minimal bandwidth allocation or to redirect to a "
 "specific web page."
-msgstr ""
+msgstr "例如，过载规则可以用来保护邮件服务或Web服务，而过载表可以在规则中用于将违规者分配到一个队列中，以最小的带宽分配或重定向到一个特定的网页。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:647
@@ -1765,7 +1780,7 @@ msgstr ""
 msgid ""
 "On a typical gateway in front of a mail server, hosts will soon start "
 "getting trapped within a few seconds to several minutes."
-msgstr ""
+msgstr "在邮件服务器前的典型网关上，主机很快就会在几秒到几分钟内被困住。"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:762
@@ -1790,7 +1805,7 @@ msgstr ""
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:766
 msgid "The basic procedure for configuring greylisting is as follows:"
-msgstr ""
+msgstr "配置灰名单的基本过程如下："
 
 #. type: Block title
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:768
@@ -1828,7 +1843,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:779
 msgid "To complete the greylisting setup:"
-msgstr ""
+msgstr "完成灰名单设置："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:784
@@ -1851,7 +1866,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:789
 #, no-wrap
 msgid "Network Hygiene"
-msgstr ""
+msgstr "网络保健"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:792
@@ -1936,7 +1951,7 @@ msgstr ""
 msgid ""
 "These rules weed out spoofed traffic coming in from the rest of the world as "
 "well as any spoofed packets which originate in the local network:"
-msgstr ""
+msgstr "这些规则排除了来自世界其他地区和本地的所有欺骗（spoofed）数据包："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:826
@@ -1950,7 +1965,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:829
 #, no-wrap
 msgid "Handling Non-Routable Addresses"
-msgstr ""
+msgstr "处理不可路由（Non-Routable）的位址"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:832
@@ -1970,7 +1985,7 @@ msgid ""
 "In this example, a macro containing non-routable addresses is defined, then "
 "used in blocking rules. Traffic to and from these addresses is quietly "
 "dropped on the gateway's external interface."
-msgstr ""
+msgstr "在这个例子中，定义了一个包含不可转发地址的宏，然后在拦截规则中使用。这些地址的流量在网关的外部接口上被悄悄地丢弃。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:840
@@ -2036,13 +2051,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:864
 msgid "The following scheduler algorithms are available:"
-msgstr ""
+msgstr "可以使用以下调度算法："
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:865
 #, no-wrap
 msgid "CBQ"
-msgstr ""
+msgstr "CBQ"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:867
@@ -2055,7 +2070,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:868
 #, no-wrap
 msgid "RED"
-msgstr ""
+msgstr "RED"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:870
@@ -2070,7 +2085,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:871
 #, no-wrap
 msgid "RIO"
-msgstr ""
+msgstr "RIO"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:873
@@ -2083,7 +2098,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:874
 #, no-wrap
 msgid "HFSC"
-msgstr ""
+msgstr "HFSC"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:876
@@ -2096,7 +2111,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:877
 #, no-wrap
 msgid "PRIQ"
-msgstr ""
+msgstr "PRIQ"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:879
@@ -2118,7 +2133,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:883
 #, no-wrap
 msgid "IPFW"
-msgstr ""
+msgstr "IPFW"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:886
@@ -2187,6 +2202,8 @@ msgid ""
 "To use one of the default firewall types provided by FreeBSD, add another "
 "line which specifies the type:"
 msgstr ""
+"要选择由 FreeBSD 提供的几种防火墙类型中的一种来作为默认配置， 您需要阅读 <filename>/etc/rc.firewall</"
+"filename> 文件并选出合适的类型， 然后在 <filename>/etc/rc.conf</filename> 中加入类似下面的配置："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:910
@@ -2197,7 +2214,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:913
 msgid "The available types are:"
-msgstr ""
+msgstr "可用的类型有："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:915
@@ -2394,7 +2411,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:992
 #, no-wrap
 msgid "CMD"
-msgstr ""
+msgstr "CMD"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:994
@@ -2405,7 +2422,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:995
 #, no-wrap
 msgid "RULE_NUMBER"
-msgstr ""
+msgstr "RULE_NUMBER"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:997
@@ -2420,7 +2437,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:998
 #, no-wrap
 msgid "SET_NUMBER"
-msgstr ""
+msgstr "SET_NUMBER"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1000
@@ -2436,7 +2453,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1617
 #, no-wrap
 msgid "ACTION"
-msgstr ""
+msgstr "ACTION"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1003
@@ -2444,7 +2461,7 @@ msgid ""
 "A rule can be associated with one of the following actions. The specified "
 "action will be executed when the packet matches the selection criterion of "
 "the rule."
-msgstr ""
+msgstr "每一个规则可以与下列的动作之一相关联， 所指定的动作将在进入的数据包与规则所指定的选择标准相匹配时执行。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1005
@@ -2485,7 +2502,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1014
 #, no-wrap
 msgid "LOG_AMOUNT"
-msgstr ""
+msgstr "LOG_AMOUNT"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1016
@@ -2506,13 +2523,13 @@ msgid ""
 "Logging is done after all other packet matching conditions have been met, "
 "and before performing the final action on the packet. The administrator "
 "decides which rules to enable logging on."
-msgstr ""
+msgstr "日志是在所有其他匹配条件都验证成功之后， 在针对包实施最终动作 (accept, deny) 之前进行的。 您可以自行决定哪些规则应启用日志。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1022
 #, no-wrap
 msgid "PROTO"
-msgstr ""
+msgstr "PROTO"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1024
@@ -2525,7 +2542,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1025
 #, no-wrap
 msgid "SRC"
-msgstr ""
+msgstr "SRC"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1027
@@ -2544,7 +2561,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1670
 #, no-wrap
 msgid "SRC_PORT"
-msgstr ""
+msgstr "SRC_PORT"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1030
@@ -2557,7 +2574,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1031
 #, no-wrap
 msgid "DST"
-msgstr ""
+msgstr "DST"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1033
@@ -2572,7 +2589,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1680
 #, no-wrap
 msgid "DST_PORT"
-msgstr ""
+msgstr "DST_PORT"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1036
@@ -2586,7 +2603,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1645
 #, no-wrap
 msgid "OPTIONS"
-msgstr ""
+msgstr "OPTIONS"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1039
@@ -2628,7 +2645,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1695
 #, no-wrap
 msgid "Example Ruleset"
-msgstr ""
+msgstr "规则集示例"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1049
@@ -2644,7 +2661,7 @@ msgstr ""
 msgid ""
 "When first creating or testing a firewall ruleset, consider temporarily "
 "setting this tunable:"
-msgstr ""
+msgstr "若您第一次创建防火墙规则，请把下面这个 sysctl 变量暂时设为 1："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1057
@@ -2693,7 +2710,7 @@ msgstr ""
 msgid ""
 "The first two rules allow all traffic on the trusted internal interface and "
 "on the loopback interface:"
-msgstr ""
+msgstr "前两个规则允许受信任内部接口和环回接口上的所有流量："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1081
@@ -2716,7 +2733,7 @@ msgstr ""
 msgid ""
 "The next rule allows the packet through if it matches an existing entry in "
 "the dynamic rules table:"
-msgstr ""
+msgstr "这条规则表示允许所有符合规则的流量通过："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1091
@@ -2729,7 +2746,7 @@ msgstr ""
 msgid ""
 "The next set of rules defines which stateful connections internal systems "
 "can create to hosts on the Internet:"
-msgstr ""
+msgstr "下一条规则说明系统中的哪些服务能与 Internet 创建有状态连接："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1102
@@ -2918,7 +2935,7 @@ msgstr ""
 msgid ""
 "The last rule logs all packets that do not match any of the rules in the "
 "ruleset:"
-msgstr ""
+msgstr "最后一条规则拒绝所有不符合规则的流量："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1183
@@ -3209,7 +3226,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1289
 #, no-wrap
 msgid "Port Redirection"
-msgstr ""
+msgstr "端口重定向"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1292
@@ -3251,7 +3268,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1305
 msgid "To configure the above example setup, the arguments should be:"
-msgstr ""
+msgstr "要配置上述示例设置，参数应为："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1310
@@ -3291,7 +3308,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1323
 #, no-wrap
 msgid "Address Redirection"
-msgstr ""
+msgstr "地址重定向"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1326
@@ -3324,7 +3341,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1335
 msgid "In the example, the arguments would read:"
-msgstr ""
+msgstr "在此示例中，参数效果等同于："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1340
@@ -3466,7 +3483,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1394
 msgid "To list all the running rules in sequence:"
-msgstr ""
+msgstr "按顺序列出所有正在运行的规则："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1398
@@ -3479,7 +3496,7 @@ msgstr ""
 msgid ""
 "To list all the running rules with a time stamp of when the last time the "
 "rule was matched:"
-msgstr ""
+msgstr "列出所有正在运行的规则，并带有上次匹配规则的时间戳："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1405
@@ -3495,6 +3512,7 @@ msgid ""
 "number, followed by the number of matched packets and bytes, followed by the "
 "rule itself."
 msgstr ""
+"下一个示例列出所有的记账信息、 匹配规则的包的数量， 以及规则本身。 第一列是规则的编号， 随后是发出包匹配的数量， 进入包的匹配数量， 最后是规则本身。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1412
@@ -3505,7 +3523,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1415
 msgid "To list dynamic rules in addition to static rules:"
-msgstr ""
+msgstr "除了静态规则之外，还列出动态规则："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1419
@@ -3516,7 +3534,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1422
 msgid "To also show the expired dynamic rules:"
-msgstr ""
+msgstr "显示已过期的动态规则："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1426
@@ -3527,7 +3545,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1429
 msgid "To zero the counters:"
-msgstr ""
+msgstr "将计数器归零："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1433
@@ -3550,7 +3568,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1442
 #, no-wrap
 msgid "Logging Firewall Messages"
-msgstr ""
+msgstr "记录防火墙信息"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1445
@@ -3605,7 +3623,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1458
 #, no-wrap
 msgid "Building a Rule Script"
-msgstr ""
+msgstr "构建规则脚本"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1461
@@ -3632,7 +3650,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1465
 msgid "Start the rules file like this:"
-msgstr ""
+msgstr "像这样启动规则文件："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1483
@@ -3660,7 +3678,7 @@ msgstr ""
 msgid ""
 "The rules are not important as the focus of this example is how the symbolic "
 "substitution fields are populated."
-msgstr ""
+msgstr "规则并不重要，重点是演示符号替换字段的填充方式。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1488
@@ -3685,7 +3703,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1497
 msgid "The same thing could be accomplished by running these commands by hand:"
-msgstr ""
+msgstr "通过手动运行这些命令也可以完成同样的事情："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1507
@@ -3748,7 +3766,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1534
 #, no-wrap
 msgid "IPFILTER (IPF)"
-msgstr ""
+msgstr "IPFILTER (IPF)"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1537
@@ -3914,6 +3932,8 @@ msgid ""
 "system. This method is convenient for testing new rules as the procedure can "
 "be executed as many times as needed."
 msgstr ""
+"这提供了对自定义规则集进行更改的能力，并以新的规则副本更新运行中的防火墙，不需要重新启动系统。这种方法对于测试新规则很方便，因为该过程可以根据需要多次执行"
+"。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1604
@@ -3958,6 +3978,8 @@ msgid ""
 "the words shown in uppercase represent a variable and the words shown in "
 "lowercase must precede the variable that follows it:"
 msgstr ""
+"规则中使用的关键词必须按照特定的顺序，从左到右写。有些关键词是强制性的，而有些是可选的。有些关键字有子选项，这些关键字本身可能是关键字，也包括更多的子选项"
+"。关键字的顺序如下，其中大写的单词代表变量，小写的单词必须在后面的变量前面："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1614
@@ -4028,14 +4050,14 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1634
 #, no-wrap
 msgid "DIRECTION"
-msgstr ""
+msgstr "DIRECTION"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1636
 msgid ""
 "Next, each rule must explicitly state the direction of traffic using one of "
 "these keywords:"
-msgstr ""
+msgstr "接下来，每个规则必须使用以下关键字之一显式指出流量方向："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1638
@@ -4064,7 +4086,7 @@ msgstr ""
 msgid ""
 "Options are optional. However, if multiple options are specified, they must "
 "be used in the order shown here."
-msgstr ""
+msgstr "选项是可选的。但是，如果指定了多个选项，必须按照这里显示的顺序使用。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1649
@@ -4122,7 +4144,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1662
 #, no-wrap
 msgid "PROTO_TYPE"
-msgstr ""
+msgstr "PROTO_TYPE"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1664
@@ -4140,7 +4162,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1665
 #, no-wrap
 msgid "SRC_ADDR"
-msgstr ""
+msgstr "SRC_ADDR"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1667
@@ -4189,7 +4211,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1677
 #, no-wrap
 msgid "DST_ADDR"
-msgstr ""
+msgstr "DST_ADDR"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1679
@@ -4211,7 +4233,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1683
 #, no-wrap
 msgid "TCP_FLAG|ICMP_TYPE"
-msgstr ""
+msgstr "TCP_FLAG|ICMP_TYPE"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1685
@@ -4233,7 +4255,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1688
 #, no-wrap
 msgid "STATE"
-msgstr ""
+msgstr "STATE"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1690
@@ -4331,7 +4353,7 @@ msgid ""
 "have the most frequently matched rules placed before less commonly matched "
 "rules, with the last rule in the section blocking and logging all packets "
 "for that interface and direction."
-msgstr ""
+msgstr "公共接口的出站段和入站段的规则应该将匹配频率最高的规则放在匹配频率较低的规则之前，该段中的最后一条规则会拦截并记录所有通过该接口的数据包。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1722
@@ -4447,7 +4469,7 @@ msgid ""
 "This example of the rules in the inbound section of the public interface "
 "blocks all undesirable packets first. This reduces the number of packets "
 "that are logged by the last rule."
-msgstr ""
+msgstr "示例规则在公共接口的入站部分首先阻止了所有不受欢迎的数据包。这样可以减少最后一个规则记录的数据包的数量。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1781
@@ -4536,7 +4558,7 @@ msgid ""
 "allowed to be initiated from the Internet. The last rule denies all "
 "connections which were not explicitly allowed by previous rules in this "
 "section."
-msgstr ""
+msgstr "入站部分的其余规则定义了允许从互联网发起的连接。最后一条规则拒绝了本节中以前的规则不允许的所有连接。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1816
@@ -4842,7 +4864,7 @@ msgstr ""
 msgid ""
 "To turn verbose mode on and display information relating to rule processing "
 "and active rules and table entries:"
-msgstr ""
+msgstr "要打开详细模式并显示与规则处理和活动规则和表条目相关的信息，请执行："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1942
@@ -4980,7 +5002,7 @@ msgid ""
 "Logging provides the ability to review, after the fact, information such as "
 "which packets were dropped, what addresses they came from, and where they "
 "were going. This information is useful in tracking down attackers."
-msgstr ""
+msgstr "日志提供了事后审查信息的能力，例如哪些数据包被丢弃了，它们来自什么地址，以及它们要去哪里。这些信息对追踪攻击者很有用。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2008
@@ -5063,19 +5085,19 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2040
 msgid "The date of packet receipt."
-msgstr ""
+msgstr "数据包接收的日期。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2041
 msgid ""
 "The time of packet receipt. This is in the form HH:MM:SS.F, for hours, "
 "minutes, seconds, and fractions of a second."
-msgstr ""
+msgstr "数据包的接收时间。其形式为 HH:MM:SS.F，为时、分、秒、分、秒、秒的分数。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2042
 msgid "The name of the interface that processed the packet."
-msgstr ""
+msgstr "处理数据包的接口的名称。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2043
@@ -5130,7 +5152,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2053
 #, no-wrap
 msgid "Blacklistd"
-msgstr ""
+msgstr "Blacklistd"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2056
@@ -5155,12 +5177,14 @@ msgid ""
 "in the examples, but other firewalls available on FreeBSD should be able to "
 "work with blacklistd, too."
 msgstr ""
+"本章介绍如何设置黑名单、配置它，并提供如何使用它的示例。读者应该熟悉基本的防火墙概念，如规则。有关详细信息，请参阅防火墙章节。示例中使用了 PF，但 "
+"FreeBSD 上提供的其他防火墙也应该能够使用黑名单。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2059
 #, no-wrap
 msgid "Enabling Blacklistd"
-msgstr ""
+msgstr "启用黑名单"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2062
@@ -5182,7 +5206,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2069
 msgid "To start the service manually, run this command:"
-msgstr ""
+msgstr "手动启动服务，运行以下命令："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2073
@@ -5194,7 +5218,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2075
 #, no-wrap
 msgid "Creating a Blacklistd Ruleset"
-msgstr ""
+msgstr "创建黑名单规则集"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2078
@@ -5209,12 +5233,12 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2079
 #, no-wrap
 msgid "Local Rules"
-msgstr ""
+msgstr "本地规则"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2082
 msgid "An example blacklistd.conf entry for a local rule looks like this:"
-msgstr ""
+msgstr "blacklistd.conf 中的本地规则类似这样："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2087
@@ -5349,7 +5373,7 @@ msgstr ""
 msgid ""
 "This rule defines that if any one host in that network is misbehaving, "
 "everything else on that network will be blocked, too."
-msgstr ""
+msgstr "这条规则规定，如果该网络中的任何一台主机行有异常行为，该网络上的其他所有主机也会被屏蔽。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2139
@@ -5384,7 +5408,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2144
 #, no-wrap
 msgid "Remote Rules"
-msgstr ""
+msgstr "远程规则"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2147
@@ -5394,6 +5418,8 @@ msgid ""
 "remote rule is the same as in a local rule. The only difference is in the "
 "way blacklistd is using them. To explain it, this example rule is used:"
 msgstr ""
+"远程规则用于指定 blacklistd 如何根据当前被评估的远程主机改变其行为。远程规则中的每个字段和本地规则中的字段是一样的。唯一的区别在于 "
+"blacklistd 使用这些规则的方式。为了解释它，来看这个示例规则："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2152
@@ -5411,6 +5437,8 @@ msgid ""
 "like in this example. The fields for type, protocol and owner are "
 "identically interpreted as in the local rule."
 msgstr ""
+"地址字段可以是一个IP地址（v4或v6）、一个端口或两者都可以。这样就可以为特定的远程地址范围设置特殊的规则，就像这个例子一样。类型、协议和所有者字段的解"
+"释与本地规则中的相同。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2157
@@ -5439,13 +5467,13 @@ msgstr ""
 msgid ""
 "Remote rules allow a stricter enforcement of limits on attempts to log in "
 "compared to attempts coming from a local network like an office."
-msgstr ""
+msgstr "与办公室等本地网络的登录尝试相比，远程规则允许对登录尝试进行更严格的限制。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2162
 #, no-wrap
 msgid "Blacklistd Client Configuration"
-msgstr ""
+msgstr "黑名单客户端配置"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2165
@@ -5465,7 +5493,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2172
 msgid "Restart sshd afterwards to make these changes take effect."
-msgstr ""
+msgstr "之后重新启动 sshd，使这些更改生效。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2174
@@ -5484,13 +5512,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2181
 msgid "That is all that is needed to make these programs talk to blacklistd."
-msgstr ""
+msgstr "这就是该程序配置黑名单的全部步骤。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2182
 #, no-wrap
 msgid "Blacklistd Management"
-msgstr ""
+msgstr "管理 Blacklistd"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2185
@@ -5542,13 +5570,13 @@ msgstr ""
 msgid ""
 "In this example, there are 36s seconds left until this host will not be "
 "blocked any more."
-msgstr ""
+msgstr "在这个例子中，该主机还有 36 秒解除屏蔽。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2206
 #, no-wrap
 msgid "Removing Hosts from the Block List"
-msgstr ""
+msgstr "从阻止列表中删除主机"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2209
@@ -5581,7 +5609,7 @@ msgstr ""
 msgid ""
 "After identifying the address to be unblocked from the list, the following "
 "command removes it from the list:"
-msgstr ""
+msgstr "在确定了要从列表中解除封禁的地址后，用下面的命令将其从列表中删除："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2223
@@ -5598,3 +5626,5 @@ msgid ""
 "its output eventually. The entry will be added again if the host is matching "
 "one of the block rules in blacklistd again."
 msgstr ""
+"该地址现在已从PF中删除，但仍将显示在blacklistctl列表中，因为它不知道PF中的任何变化。blacklistd数据库中的条目最终会过期，最终会从"
+"其输出中删除。如果主机再次匹配了blacklistd中的某个块规则，该条目将再次被添加。"
