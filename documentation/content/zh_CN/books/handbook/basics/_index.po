@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-05 12:40+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
+"projects/documentation/bookshandbookbasics_index/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: part
 #: documentation/content/en/books/handbook/basics/_index.adoc:1
@@ -37,7 +40,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:45
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "简介"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:48
@@ -51,17 +54,17 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:50
 msgid "After reading this chapter, you will know:"
-msgstr ""
+msgstr "读完本章节，你将会知道："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:52
 msgid "How to use and configure virtual consoles."
-msgstr ""
+msgstr "如何使用和配置虚拟终端。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:53
 msgid "How to create and manage users and groups on FreeBSD."
-msgstr ""
+msgstr "如何在 FreeBSD 上管理和创建用户组。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:54
@@ -71,48 +74,48 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:55
 msgid "The default FreeBSD file system layout."
-msgstr ""
+msgstr "FreeBSD 默认文件系统布局。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:56
 msgid "The FreeBSD disk organization."
-msgstr ""
+msgstr "FreeBSD 磁盘管理。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:57
 msgid "How to mount and unmount file systems."
-msgstr ""
+msgstr "如何挂载和卸载文件系统。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:58
 msgid "What processes, daemons, and signals are."
-msgstr ""
+msgstr "进程，守护进程，和信号是什么。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:59
 msgid "What a shell is, and how to change the default login environment."
-msgstr ""
+msgstr "Shell 是什么？如何修改默认登入 shell。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:60
 msgid "How to use basic text editors."
-msgstr ""
+msgstr "如何使用文件编辑器。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:61
 msgid "What devices and device nodes are."
-msgstr ""
+msgstr "设备，设备节点是什么。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:62
 msgid "How to read manual pages for more information."
-msgstr ""
+msgstr "如何从 man 手册中获取信息。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/basics/_index.adoc:64
 #, no-wrap
 msgid "Virtual Consoles and Terminals"
-msgstr ""
+msgstr "虚拟控制台和终端"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:67
@@ -120,7 +123,7 @@ msgid ""
 "Unless FreeBSD has been configured to automatically start a graphical "
 "environment during startup, the system will boot into a command line login "
 "prompt, as seen in this example:"
-msgstr ""
+msgstr "在没有配置其他图形界面时，FreeBSD 开机时将自动进入命令行登入界面，就像下面这样："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:71
@@ -176,7 +179,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:84
 #, no-wrap
 msgid "Virtual Consoles"
-msgstr ""
+msgstr "虚拟控制台"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:87
@@ -188,6 +191,8 @@ msgid ""
 "messages will appear over the command or file that the user is working on, "
 "making it difficult to concentrate on the work at hand."
 msgstr ""
+"虽然系统控制台可用于与系统交互， 但从 FreeBSD 系统键盘上的命令行工作的用户通常会改为登录到虚拟控制台。这是因为默认情况下, "
+"系统消息配置为显示在系统控制台上。这些消息将出现在用户正在处理的命令或文件上, 因此很难专注于手头的工作。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:89
@@ -198,6 +203,8 @@ msgid ""
 "the command line equivalent of having several windows open at the same time "
 "in a graphical environment."
 msgstr ""
+"默认情况下，FreeBSD 配置为提供多个虚拟控制台用于输入命令。每个虚拟控制台都有自己的登录提示和 "
+"shell，很容易在虚拟控制台之间切换。这实质上提供了相当于在图形环境中同时打开多个窗口的命令行。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:91
@@ -220,6 +227,8 @@ msgid ""
 "that are launched in one virtual console do not stop running when the user "
 "switches to a different virtual console."
 msgstr ""
+"同样地, 您正在从其中某个控制台切换到另一个控制台的时候, FreeBSD 会保存正在使用和恢复将要使用屏幕传输通道。 这种结果形成一种 “错觉”， "
+"您拥有许多“虚拟”屏幕和键盘可以输入很多的命令。 这些程序需要在一个虚拟控制台不能停止运行而又不需要观察它， 它继续运行而您可以切换到其他的虚拟控制台。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:95
@@ -279,7 +288,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:119
 #, no-wrap
 msgid "Single User Mode"
-msgstr ""
+msgstr "单用户模式"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:122
@@ -340,7 +349,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:142
 #, no-wrap
 msgid "Changing Console Video Modes"
-msgstr ""
+msgstr "改变控制台的显示模式"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:145
@@ -401,7 +410,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:173
 #, no-wrap
 msgid "Users and Basic Account Management"
-msgstr ""
+msgstr "基础账户管理"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:176
@@ -411,59 +420,61 @@ msgid ""
 "time, any number of users can log in to the system through the network. To "
 "use the system, each user should have their own user account."
 msgstr ""
+"FreeBSD 允许多个用户同时使用计算机。虽然只有一个用户可以坐在屏幕前面，并随时使用键盘，但任意数量的用户可以通过网络登录到系统。要使用系统，每个用户"
+"都应有自己的用户帐户。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:178
 msgid "This chapter describes:"
-msgstr ""
+msgstr "本章将介绍："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:180
 msgid "The different types of user accounts on a FreeBSD system."
-msgstr ""
+msgstr "FreeBSD 系统上不同的用户账号类型。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:181
 msgid "How to add, remove, and modify user accounts."
-msgstr ""
+msgstr "如何添加、删除、修改用户账户。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:182
 msgid ""
 "How to set limits to control the resources that users and groups are allowed "
 "to access."
-msgstr ""
+msgstr "如何设置限制以控制允许用户和组访问的资源。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:183
 msgid "How to create groups and add users as members of a group."
-msgstr ""
+msgstr "如何创建组并向组中添加用户。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/basics/_index.adoc:185
 #, no-wrap
 msgid "Account Types"
-msgstr ""
+msgstr "账户类型"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:188
 msgid ""
 "Since all access to the FreeBSD system is achieved using accounts and all "
 "processes are run by users, user and account management is important."
-msgstr ""
+msgstr "由于对 FreeBSD 系统的所有访问都是使用帐户实现的，并且所有进程都由用户运行，因此用户和帐户管理非常重要。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:190
 msgid ""
 "There are three main types of accounts: system accounts, user accounts, and "
 "the superuser account."
-msgstr ""
+msgstr "有三种主要类型：系统账户，用户账户，及超级用户账户。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/basics/_index.adoc:192
 #, no-wrap
 msgid "System Accounts"
-msgstr ""
+msgstr "系统账户"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:195
@@ -471,7 +482,7 @@ msgid ""
 "System accounts are used to run services such as DNS, mail, and web "
 "servers. The reason for this is security; if all services ran as the "
 "superuser, they could act without restriction."
-msgstr ""
+msgstr "系统账户用于运行服务，例如 DNS，邮件，及网络服务器。这么做是为了安全：如果所有服务都以超级用户运行，它们的行为将没有限制。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:197
@@ -501,7 +512,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:207
 #, no-wrap
 msgid "User Accounts"
-msgstr ""
+msgstr "用户账户"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:210
@@ -511,6 +522,7 @@ msgid ""
 "account. This allows the administrator to find out who is doing what and "
 "prevents users from clobbering the settings of other users."
 msgstr ""
+"用户帐户分配给实际人员，用于登录和使用系统。访问系统的每个人都应该有一个唯一的用户帐户。这允许管理员知道谁在做什么，并防止用户破坏其他用户的设置。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:212
@@ -518,20 +530,20 @@ msgid ""
 "Each user can set up their own environment to accommodate their use of the "
 "system, by configuring their default shell, editor, key bindings, and "
 "language settings."
-msgstr ""
+msgstr "每个用户都可以自定义默认 shell、编辑器、按键设置和语言设置。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:214
 msgid ""
 "Every user account on a FreeBSD system has certain information associated "
 "with it:"
-msgstr ""
+msgstr "FreeBSD 系统上的每个用户账户都有一些相关联的信息："
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/basics/_index.adoc:215
 #, no-wrap
 msgid "User name"
-msgstr ""
+msgstr "用户名"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:217
@@ -547,12 +559,12 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:218
 #, no-wrap
 msgid "Password"
-msgstr ""
+msgstr "密码"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:220
 msgid "Each account has an associated password."
-msgstr ""
+msgstr "每个账户有个相关联的密码。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/basics/_index.adoc:221
@@ -590,7 +602,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:227
 #, no-wrap
 msgid "Login class"
-msgstr ""
+msgstr "登入类"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:229
@@ -605,7 +617,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:230
 #, no-wrap
 msgid "Password change time"
-msgstr ""
+msgstr "密码修改时间"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:232
@@ -613,13 +625,13 @@ msgid ""
 "By default, passwords do not expire. However, password expiration can be "
 "enabled on a per-user basis, forcing some or all users to change their "
 "passwords after a certain amount of time has elapsed."
-msgstr ""
+msgstr "默认情况下，密码不会过期。但是用户可以设置密码过去时间，从而强制部分或全部用户在经过一段时间后更改其密码。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/basics/_index.adoc:233
 #, no-wrap
 msgid "Account expiration time"
-msgstr ""
+msgstr "账户过期时间"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:235
@@ -635,7 +647,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:236
 #, no-wrap
 msgid "User's full name"
-msgstr ""
+msgstr "用户全名"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:238
@@ -644,13 +656,13 @@ msgid ""
 "necessarily reflect the user's real name. Similar to a comment, this "
 "information can contain spaces, uppercase characters, and be more than 8 "
 "characters long."
-msgstr ""
+msgstr "用户名唯一地将帐户标识为 FreeBSD，但不一定反映用户的真实姓名。与注释类似, 此信息可以包含空格、大写字符，并且长度超过8个字符。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/basics/_index.adoc:239
 #, no-wrap
 msgid "Home directory"
-msgstr ""
+msgstr "Home 目录"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:241
@@ -666,7 +678,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:242
 #, no-wrap
 msgid "User shell"
-msgstr ""
+msgstr "用户 shell"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:244
@@ -675,13 +687,13 @@ msgid ""
 "system. There are many different kinds of shells and experienced users will "
 "have their own preferences, which can be reflected in their account "
 "settings."
-msgstr ""
+msgstr "Shell 提供了用户与系统交互的默认环境。有许多不同类型的 Shell。有经验的用户将有自己的喜好, 这可以反映在他们的帐户设置。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/basics/_index.adoc:246
 #, no-wrap
 msgid "The Superuser Account"
-msgstr ""
+msgstr "超级账户"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:249
@@ -701,13 +713,15 @@ msgid ""
 "recommended to login as a user account and to only become the superuser when "
 "a command requires extra privilege."
 msgstr ""
+"与其他用户帐户不同，超级用户可以不受限制地运行程序。滥用超级用户帐户可能会导致壮观的灾难。用户帐户无法错误地销毁操作系统，因此建议以普通用户帐户身份登录，"
+"并且仅在命令需要额外权限时才使用超级用户。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:253
 msgid ""
 "Always double and triple-check any commands issued as the superuser, since "
 "an extra space or missing character can mean irreparable data loss."
-msgstr ""
+msgstr "使用超级使用者下指令时永远要再三检查，由于一个多余的空白或缺少的字元可能意味着无法挽回的数据遗失。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:255
@@ -739,7 +753,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:260
 #, no-wrap
 msgid "Install a Program As the Superuser"
-msgstr ""
+msgstr "使用超级账户安装程序"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:272
@@ -768,7 +782,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:278
 #, no-wrap
 msgid "Managing Accounts"
-msgstr ""
+msgstr "管理用户"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:281
@@ -783,7 +797,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:283
 #, no-wrap
 msgid "Utilities for Managing User Accounts"
-msgstr ""
+msgstr "管理用户账户的程序"
 
 #. type: Table
 #: documentation/content/en/books/handbook/basics/_index.adoc:303
@@ -841,7 +855,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:313
 #, no-wrap
 msgid "Adding a User on FreeBSD"
-msgstr ""
+msgstr "在 FreeBSD 上添加用户"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:348
@@ -884,7 +898,7 @@ msgstr ""
 msgid ""
 "Since the password is not echoed when typed, be careful to not mistype the "
 "password when creating the user account."
-msgstr ""
+msgstr "密码输入时不会有任何提示，注意别输错了。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/basics/_index.adoc:357
@@ -912,17 +926,17 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:365
 msgid "Kills all processes owned by the user."
-msgstr ""
+msgstr "终止用户拥有的所有进程。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:366
 msgid "Removes the user from the system's local password file."
-msgstr ""
+msgstr "从系统的本地密码文件中删除用户。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:367
 msgid "Optionally removes the user's home directory, if it is owned by the user."
-msgstr ""
+msgstr "(可选) 删除用户的主目录（如果该目录为用户所拥有）。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:368
@@ -957,7 +971,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:374
 msgid "By default, an interactive mode is used, as shown in the following example."
-msgstr ""
+msgstr "默认情况下使用交互模式，就像下面这样。"
 
 #. type: Block title
 #: documentation/content/en/books/handbook/basics/_index.adoc:375
@@ -1005,7 +1019,7 @@ msgstr ""
 msgid ""
 "This utility will prompt for the user's password when exiting the editor, "
 "unless the utility is run as the superuser."
-msgstr ""
+msgstr "离开编辑器时，此工具会提示使用者输入密码，除非使用超级使用者执行此工具。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:403
@@ -1090,7 +1104,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:454
 #, no-wrap
 msgid "Changing Your Password"
-msgstr ""
+msgstr "改变您的密码"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:466
@@ -1118,7 +1132,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:471
 #, no-wrap
 msgid "Changing Another User's Password as the Superuser"
-msgstr ""
+msgstr "作为超级用户修改另一个用户的密码"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:482
@@ -1159,7 +1173,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:496
 #, no-wrap
 msgid "Managing Groups"
-msgstr ""
+msgstr "管理用户组"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:499
@@ -1293,7 +1307,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:558
 #, no-wrap
 msgid "Permissions"
-msgstr ""
+msgstr "权限"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:561
@@ -1305,6 +1319,8 @@ msgid ""
 "improperly access the files used by the operating system or owned by other "
 "users."
 msgstr ""
+"在 FreeBSD 中，每个文件和目录都有一组关联的权限，并且有几个实用程序可用于查看和修改这些权限。了解权限的工作方式是必要的，以确保用户能够访问他们所"
+"需的文件，并且无法不正确地访问操作系统使用或其他用户拥有的文件。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:563
@@ -1459,7 +1475,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:629
 #, no-wrap
 msgid "Symbolic Permissions"
-msgstr ""
+msgstr "符号权限"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:632
@@ -1467,7 +1483,7 @@ msgid ""
 "Symbolic permissions use characters instead of octal values to assign "
 "permissions to files or directories. Symbolic permissions use the syntax of "
 "(who) (action) (permissions), where the following values are available:"
-msgstr ""
+msgstr "符号权限使用字符而非八进制值来分配文件或目录的权限。符号权限使用 （谁）（操作）（权限）的语法，其中以下值可用："
 
 #. type: Table
 #: documentation/content/en/books/handbook/basics/_index.adoc:687
@@ -1559,7 +1575,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:703
 #, no-wrap
 msgid "FreeBSD File Flags"
-msgstr ""
+msgstr "FreeBSD 文件标志"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:706
@@ -1660,7 +1676,7 @@ msgstr ""
 msgid ""
 "The setuid permission may be set by prefixing a permission set with the "
 "number four (4) as shown in the following example:"
-msgstr ""
+msgstr "Setuid 权限可以透过在权限集前加上数字（4）来设定，如下示例所示："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:748
@@ -1706,7 +1722,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:767
 msgid "In terminal A:"
-msgstr ""
+msgstr "在终端 A 中："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:772
@@ -1719,7 +1735,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:775
 msgid "In terminal B:"
-msgstr ""
+msgstr "在终端 B 中："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:779
@@ -1832,7 +1848,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:832
 #, no-wrap
 msgid "Directory Structure"
-msgstr ""
+msgstr "目录结构"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:835
@@ -2002,7 +2018,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:950
 #, no-wrap
 msgid "Disk Organization"
-msgstr ""
+msgstr "磁盘组织"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:953
@@ -2022,6 +2038,8 @@ msgid ""
 "directories, allowing a hierarchy of directories within one another in order "
 "to organize data."
 msgstr ""
+"各种文件存放在目录里。 一个目录可以为空， 也可以含有多个的文件。一个目录同样可以包含其他的目录， 允许您在一个目录里建立多个不同层次的目录。 "
+"这将帮助您轻松地组织您的数据。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:957
@@ -2144,13 +2162,13 @@ msgid ""
 "It is entirely possible to have one large root file system, and not need to "
 "create any others. There are some drawbacks to this approach, and one "
 "advantage."
-msgstr ""
+msgstr "完全有可能有一个大型根文件系统，并且不需要创建任何其他系统。这种方法有一些缺点，还有一个优点。"
 
 #. type: Block title
 #: documentation/content/en/books/handbook/basics/_index.adoc:988
 #, no-wrap
 msgid "Benefits of Multiple File Systems"
-msgstr ""
+msgstr "多个文件系统的益处"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:990
@@ -2173,6 +2191,8 @@ msgid ""
 "optimization to one that contains fewer, larger files. By having one big "
 "file system this optimization breaks down."
 msgstr ""
+"FreeBSD 能根据一个文件系统使用的情况自动优化 这个文件系统上的文件布局。 "
+"所以对一个存储了大量小文件并会被频繁写入文件系统的优化与一个存储了少量大文件的优化是不同的。 而在一个大的单一文件系统上则无法体现这样的优化。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:992
@@ -2182,12 +2202,14 @@ msgid ""
 "splitting data over multiple file systems it is more likely that the system "
 "will still come up, making it easier to restore from backup as necessary."
 msgstr ""
+"FreeBSD 的文件系统能够在断电时尽可能避免损失。 然而， 在关键点时的电源失效仍然可能会破坏文件系统的结构。 将您的文件系统分成多个有助于分散风险，"
+" 并方便备份和恢复。"
 
 #. type: Block title
 #: documentation/content/en/books/handbook/basics/_index.adoc:993
 #, no-wrap
 msgid "Benefit of a Single File System"
-msgstr ""
+msgstr "单一文件系统的益处"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:995
@@ -2198,6 +2220,8 @@ msgid ""
 "up, recreating the file system with the new size, and then restoring the "
 "backed up data."
 msgstr ""
+"文件系统是固定大小的。当安装FreeBSD时新建一个文件系统并设定一个大小，您会在稍后发觉到必须去建一个大的分区。如果配置不当，则需要备份、重新创建文件系"
+"统，然后再恢复数据。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:999
@@ -2231,7 +2255,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1006
 msgid "Some partitions have certain conventions associated with them."
-msgstr ""
+msgstr "某些 partitions 的用途是确定的。"
 
 #. type: Table
 #: documentation/content/en/books/handbook/basics/_index.adoc:1024
@@ -2316,12 +2340,14 @@ msgid ""
 "the slice to be used for FreeBSD, create a file system or swap space in each "
 "partition, and decide where each file system will be mounted."
 msgstr ""
+"在安装FreeBSD时，您首先要配置好磁盘slices， 然后在FreeBSD使用的slice上建立partitions。 "
+"并在每个partition上建立一个文件系统(或交换分区)， 和指定文件系统的挂接位置。"
 
 #. type: Block title
 #: documentation/content/en/books/handbook/basics/_index.adoc:1041
 #, no-wrap
 msgid "Disk Device Names"
-msgstr ""
+msgstr "磁盘设备名字"
 
 #. type: Table
 #: documentation/content/en/books/handbook/basics/_index.adoc:1073
@@ -2364,7 +2390,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1078
 #, no-wrap
 msgid "Sample Disk, Slice, and Partition Names"
-msgstr ""
+msgstr "示例磁盘、Slice 和分区名称"
 
 #. type: Table
 #: documentation/content/en/books/handbook/basics/_index.adoc:1090
@@ -2386,7 +2412,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1094
 #, no-wrap
 msgid "Conceptual Model of a Disk"
-msgstr ""
+msgstr "磁盘的概念模型"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1098
@@ -2418,7 +2444,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1105
 #, no-wrap
 msgid "Mounting and Unmounting File Systems"
-msgstr ""
+msgstr "挂载和卸载文件系统"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1108
@@ -2490,7 +2516,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1128
 msgid "An existing directory on which to mount the file system."
-msgstr ""
+msgstr "目录 (目录必须存在)，用在那个挂接上的文件系统上。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/basics/_index.adoc:1129
@@ -2587,7 +2613,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1158
 #, no-wrap
 msgid "Mount Options"
-msgstr ""
+msgstr "挂载选项"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/basics/_index.adoc:1159
@@ -2629,7 +2655,7 @@ msgid ""
 "Force the mount of an unclean file system (dangerous), or the revocation of "
 "write access when downgrading a file system's mount status from read-write "
 "to read-only."
-msgstr ""
+msgstr "强制去挂接一个未知的文件系统(会有危险)， 或当把一个文件系统挂接状态由可读写降为只读时，强制撤消可写通道。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/basics/_index.adoc:1168
@@ -2664,7 +2690,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1176
 msgid "Update mount options on the file system."
-msgstr ""
+msgstr "在文件系统上修改挂接选项。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/basics/_index.adoc:1177
@@ -2675,7 +2701,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1179
 msgid "Be verbose."
-msgstr ""
+msgstr "输出详细信息。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/basics/_index.adoc:1180
@@ -2686,7 +2712,7 @@ msgstr ""
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1182
 msgid "Mount the file system read-write."
-msgstr ""
+msgstr "以可读写方式挂接文件系统。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1184
@@ -2697,14 +2723,14 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1185
 #, no-wrap
 msgid "nosuid"
-msgstr ""
+msgstr "nosuid"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1187
 msgid ""
 "Do not interpret setuid or setgid flags on the file system. This is also a "
 "useful security option."
-msgstr ""
+msgstr "不允许文件系统上的二进制程序执行。这也是一个有用的安全选项。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/basics/_index.adoc:1189
@@ -2739,7 +2765,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1198
 #, no-wrap
 msgid "Processes and Daemons"
-msgstr ""
+msgstr "进程和守护进程"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1201
@@ -2790,7 +2816,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1208
 #, no-wrap
 msgid "Viewing Processes"
-msgstr ""
+msgstr "查看进程"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1211
@@ -2928,7 +2954,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1259
 #, no-wrap
 msgid "Killing Processes"
-msgstr ""
+msgstr "关闭进程"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1262
@@ -3086,7 +3112,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1314
 #, no-wrap
 msgid "Shells"
-msgstr ""
+msgstr "Shell"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1317
@@ -3149,7 +3175,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1327
 #, no-wrap
 msgid "Common Environment Variables"
-msgstr ""
+msgstr "常见环境变量"
 
 #. type: Table
 #: documentation/content/en/books/handbook/basics/_index.adoc:1365
@@ -3253,7 +3279,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1388
 #, no-wrap
 msgid "Changing the Shell"
-msgstr ""
+msgstr "切换 Shell"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1391
@@ -3302,7 +3328,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1411
 #, no-wrap
 msgid "Advanced Shell Techniques"
-msgstr ""
+msgstr "高级 Shell 使用技巧"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1414
@@ -3376,6 +3402,8 @@ msgid ""
 "be passed around through various commands and redirected to or from a "
 "file. Another method of redirection is the pipe operator."
 msgstr ""
+"透过使用这些文件描述符，Shell能够让输出与输入在各种指令间传递与重新导向到或自文件。另一种重新导向的方式是使用管线运算子（Pipe "
+"operator）。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1441
@@ -3405,7 +3433,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1450
 #, no-wrap
 msgid "Text Editors"
-msgstr ""
+msgstr "文本编辑器"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1453
@@ -3451,7 +3479,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1461
 #, no-wrap
 msgid "Devices and Device Nodes"
-msgstr ""
+msgstr "设备和设备节点"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1464
@@ -3480,7 +3508,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1470
 #, no-wrap
 msgid "Manual Pages"
-msgstr ""
+msgstr "手册页"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1473
@@ -3515,52 +3543,52 @@ msgstr ""
 msgid ""
 "Manual pages are divided into sections which represent the type of topic. In "
 "FreeBSD, the following sections are available:"
-msgstr ""
+msgstr "这些在线手册分下列章节:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1489
 msgid "User commands."
-msgstr ""
+msgstr "用户命令。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1490
 msgid "System calls and error numbers."
-msgstr ""
+msgstr "系统调用以及错误代码。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1491
 msgid "Functions in the C libraries."
-msgstr ""
+msgstr "C 库文件里的函数说明。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1492
 msgid "Device drivers."
-msgstr ""
+msgstr "设备驱动。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1493
 msgid "File formats."
-msgstr ""
+msgstr "文件格式。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1494
 msgid "Games and other diversions."
-msgstr ""
+msgstr "游戏以及其他娱乐。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1495
 msgid "Miscellaneous information."
-msgstr ""
+msgstr "各种资讯。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1496
 msgid "System maintenance and operation commands."
-msgstr ""
+msgstr "系统维护以及命令。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1497
 msgid "System kernel interfaces."
-msgstr ""
+msgstr "系统内核接口。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1499
@@ -3625,7 +3653,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1525
 msgid "or"
-msgstr ""
+msgstr "或"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1530
@@ -3639,7 +3667,7 @@ msgstr ""
 #: documentation/content/en/books/handbook/basics/_index.adoc:1533
 #, no-wrap
 msgid "GNU Info Files"
-msgstr ""
+msgstr "GNU Info 文件"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1536
