@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-06 03:05+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Persian <https://translate-dev.freebsd.org/projects/"
+"documentation/booksdevelopers-handbooktestingchapter/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:1
@@ -25,7 +28,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:9
 #, no-wrap
 msgid "Regression and Performance Testing"
-msgstr ""
+msgstr "آزمون پسرفت (رگرسیون) و عملکرد"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:34
@@ -34,6 +37,9 @@ msgid ""
 "check that it works as expected, and to make sure that old bugs are not "
 "reintroduced."
 msgstr ""
+"از آزمون‌های پسرفت برای استفاده از بخشی از یک سامانه در جهت بررسی عملکرد "
+"مورد انتظار آن و حصول اطمینان از عدم پیدایش دوبارهٔ مشکلات قبلی استفاده "
+"می‌شود."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:36
@@ -46,7 +52,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:38
 #, no-wrap
 msgid "Micro Benchmark Checklist"
-msgstr ""
+msgstr "مستلزمات ریز-محک‌زنی"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:41
@@ -54,6 +60,8 @@ msgid ""
 "This section contains hints for doing proper micro-benchmarking on FreeBSD "
 "or of FreeBSD itself."
 msgstr ""
+"این بخش شامل رهنمودهای لازم برای انجام صحیح ریز-محک‌زنی (micro-benchmarking) "
+"بر روی FreeBSD یا برای خود FreeBSD است."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:43
@@ -62,6 +70,8 @@ msgid ""
 "but the more used, the better the benchmark's ability to test small "
 "differences will be."
 msgstr ""
+"ممکن نیست از تمامی پیشنهادات زیر همیشه استفاده کرد، اما هرچه بیشتر استفاده "
+"شوند، توانایی محک‌زنی در آزمایشِ اختلافات ریز بهتر خواهد بود."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:45
@@ -93,11 +103,12 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:49
 msgid "Minimize disk-I/O, avoid it entirely if possible."
 msgstr ""
+"دیسک-I/O را به‌حداقل برسانید، در صورت امکان آن را به‌طور کامل نادیده بگیرید."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:50
 msgid "Do not mount file systems that are not needed."
-msgstr ""
+msgstr "سامانه پرونده‌هایی که نیاز نیستند را سوار نکنید."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:51
@@ -130,6 +141,8 @@ msgid ""
 "Reboot between individual iterations of the test, this gives a more "
 "consistent state."
 msgstr ""
+"بین هر تکرار در آزمایش، برای حالتی با ثبات بیشتر، سامانهٔ خود را بازراه‌"
+"اندازی (ریبوت) کنید."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:55
@@ -138,6 +151,9 @@ msgid ""
 "is not needed for the test, do not put USB in the kernel. Drivers which "
 "attach often have timeouts ticking away."
 msgstr ""
+"تمام درایورهای مختص به دستگاه‌های غیرضروری را از هسته حذف کنید. برای مثال، "
+"اگر برای آزمایش USB نیاز نیست، USB را در هسته نگذارید. درایورهایی که اضافه "
+"می‌شوند بعضاً به مرور زمان وقفه‌هایی دارند."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:56
@@ -153,6 +169,8 @@ msgid ""
 "Do not configure the network unless it is being tested, or wait until after "
 "the test has been performed to ship the results off to another computer."
 msgstr ""
+"شبکه را پیکربندی نکنید مگر آنکه آزمایش شود، یا برای انتقال نتایج به رایانه‌"
+"ای دیگر تا اتمام آزمایش صبر کنید."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:59
@@ -168,6 +186,8 @@ msgid ""
 "Put each file system on its own disk. This minimizes jitter from head-seek "
 "optimizations."
 msgstr ""
+"هر سامانهٔ پرونده را بر روی دیسک مخصوص به خود قرار دهید. این jitter را از "
+"بهینه‌سازی‌های head-seek به‌حداقل می‌رساند."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:61
@@ -186,6 +206,10 @@ msgid ""
 "drift will affect the frequency of the quartz crystals in the computer. Rule "
 "of thumb: more than a minute, less than an hour."
 msgstr ""
+"مطمئن شوید آزمایش به‌اندازه کافی طولانی باشد، اما نه خیلی طولانی. اگر خیلی "
+"کوتاه باشد، مشکل از نشان‌گر زمان است. اگر خیلی طولانی باشد، تغییرات در درجه "
+"و خروجی مدار بر روی فرکانس کریستال‌های کوارتز در رایانه تأثیر می‌گذارد. "
+"قانون کلی: بیش از یک دقیقه، کمتر از یک ساعت."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:63
@@ -253,6 +277,9 @@ msgid ""
 "userspace, likewise debugging. It is easy to let something slip through and "
 "realize later the test was not comparing the same thing."
 msgstr ""
+"مطمئن شوید مراقب بهینه‌سازی مؤلفه‌های هسته و فضای کاربر باشید، همچنین اشکال‌"
+"زدایی. این آسان است که اجازه دهید خطایی رخ دهد و بعد متوجه شوید که آزمایش "
+"همان مورد را مقایسه نمی‌کرده است."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:71
@@ -268,12 +295,12 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:73
 #, no-wrap
 msgid "The FreeBSD Source Tinderbox"
-msgstr ""
+msgstr "Tinderbox منبع در FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:76
 msgid "The source Tinderbox consists of:"
-msgstr ""
+msgstr "Tinderbox منبع متشکل است از:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:78
@@ -302,6 +329,8 @@ msgid ""
 "A set of build servers that continually test the tip of the most important "
 "FreeBSD code branches."
 msgstr ""
+"مجموعی از کارسازهای build که رأس مهم‌ترین انشعابات کد FreeBSD را به‌طور مکرر "
+"مورد آزمایش قرار می‌دهد."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:82
@@ -309,6 +338,8 @@ msgid ""
 "A webserver that keeps a complete set of Tinderbox logs and displays an "
 "up-to-date summary."
 msgstr ""
+"یک کارساز وب که مجموعه‌ای کامل ازموارد ثبت‌شدهٔ Tinderbox را نگه می‌دارد و "
+"خلاصه‌ای به‌روز شده را نمایش می‌دهد."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:84
@@ -325,6 +356,8 @@ msgid ""
 "For more information about the tinderbox and tbmaster scripts at this stage, "
 "see their respective man pages: tinderbox(1) and tbmaster(1)."
 msgstr ""
+"برای اطلاعات بیشتر در مورد اجرانامه‌های tinderbox و tbmaster در این مرحله، "
+"صفحات راهنمای آنها را ببینید: tinderbox(1) و tbmaster(1)."
 
 #. type: Title ==
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:87
@@ -362,6 +395,11 @@ msgid ""
 "columns. This information is derived from the names of the log files "
 "matching the following pattern:"
 msgstr ""
+"سپس، مسیر لاگ ها را بررسی می‌کند تا فهرستی از پیکربندی‌ها، انشعاب‌ها و "
+"معماری‌هایی را که برای آنها پرونده‌های لاگ وجود دارند بدست آورد، و جلوی سخت‌"
+"نویسی (hard-coding) فهرست در اجرانامه و به‌طور بالقوه منتهی شدن به ردیف‌ها و "
+"ستون‌های خالی را بگیرد. این اطلاعات از نام‌های پرونده‌های لاگی که با الگوهای "
+"زیر همخوانی دارند دریافت شده است:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:98
@@ -398,21 +436,24 @@ msgid ""
 "build with the specified configuration, producing a single row of results "
 "for each in the following manner:"
 msgstr ""
+"این کار ابتدا با ایجاد یک ردیف سرآمد انجام می‌شود، سپس روی هر build انشعاب "
+"با پیکربندی بخصوص تکرار می‌شود، و یک ردیف از نتایج برای هر کدام از انشعاب‌ها "
+"طبق روش زیر ایجاد می‌کند:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:109
 msgid "For each item:"
-msgstr ""
+msgstr "به‌ازای هر مورد:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:111
 msgid "For each machine within that architecture:"
-msgstr ""
+msgstr "به‌ازای هر دستگاه داخل آن معماری:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:113
 msgid "If a brief log file exists, then:"
-msgstr ""
+msgstr "اگر یک پروندهٔ لاگ مختصر وجود داشته باشد، سپس:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:115
@@ -422,32 +463,32 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:116
 msgid "Output the modification size."
-msgstr ""
+msgstr "اندازهٔ تغییرات را ارائه دهید."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:117
 msgid "Output the size of the brief log file with a link to the log file itself."
-msgstr ""
+msgstr "اندازهٔ پروندهٔ لاگ مختصر را به‌همراه پیوند به خود پرونده ارائه دهید."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:118
 msgid "If a full log file also exists, then:"
-msgstr ""
+msgstr "اگر یک پروندهٔ لاگ کامل نیز وجود دارد، سپس:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:120
 msgid "Output the size of the full log file with a link to the log file itself."
-msgstr ""
+msgstr "اندازهٔ پروندهٔ لاگ کامل را به‌همراه پیوند به خود پرونده ارائه دهید."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:122
 msgid "Otherwise:"
-msgstr ""
+msgstr "در غیر اینصورت:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:124
 msgid "No output."
-msgstr ""
+msgstr "خروجی ندارد."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:126
@@ -463,6 +504,8 @@ msgid ""
 "Configurations and branches are sorted according to their branch rank. This "
 "is computed as follows:"
 msgstr ""
+"پیکربندی‌ها و انشعاب‌ها با توجه به رتبه‌بندی انشعابشان مرتب می‌شوند. این "
+"چنین محاسبه می‌شود:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:130
@@ -527,7 +570,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:143
 #, no-wrap
 msgid "Official Build Servers"
-msgstr ""
+msgstr "کارسازهای ساخت (build) رسمی"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:146
@@ -540,7 +583,7 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:148
 msgid "Three build servers currently exist:"
-msgstr ""
+msgstr "سه کارساز ساخت در حال حاضر وجود دارند:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:150
@@ -589,7 +632,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:162
 #, no-wrap
 msgid "Official Summary Site"
-msgstr ""
+msgstr "پایگاه خلاصهٔ رسمی"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:165
