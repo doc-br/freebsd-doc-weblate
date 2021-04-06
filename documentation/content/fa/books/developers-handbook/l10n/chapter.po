@@ -7,13 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-06 03:05+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Persian <https://translate-dev.freebsd.org/projects/"
+"documentation/booksdevelopers-handbookl10nchapter/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:1
@@ -25,13 +28,13 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:9
 #, no-wrap
 msgid "Localization and Internationalization - L10N and I18N"
-msgstr ""
+msgstr "بین‌المللی‌سازی و محلی‌سازی - L10N و I18N"
 
 #. type: Title ==
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:34
 #, no-wrap
 msgid "Programming I18N Compliant Applications"
-msgstr ""
+msgstr "برنامه‌نویسی سازگار با I18N"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:37
@@ -43,6 +46,12 @@ msgid ""
 "contributors to port your application to other languages quickly. Refer to "
 "the library specific I18N documentation for more details."
 msgstr ""
+"برای آنکه برنامهٔ خود را برای زبان‌های دیگر کاربردی‌تر کنید، ما امیدواریم که "
+"شما سازگار با I18N برنامه‌نویسی کنید. همگرادان GNU gcc و کتابخانه‌های GUI "
+"همچون QT و GTK از طریق بررسی ویژهٔ رشته‌ها از I18N پشتیبانی می‌کنند. "
+"سازگارسازی یک برنامه با I18N بسیار آسان است. این اجازه را می‌دهد تا مشارکت‌"
+"کنندگان برنامهٔ شما را به‌سرعت به زبان‌های دیگر پورت کنند. برای جزئیات بیشتر "
+"به مستندات مخصوص کتابخانهٔ I18N رجوع کنید."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:39
@@ -52,12 +61,15 @@ msgid ""
 "functions. In addition, please be sure to allow for wide or multibyte "
 "character support."
 msgstr ""
+"برخلاف برداشت‌های رایج، نوشتن کد سازگار با I18N آسان است. به‌طور معمول، تنها "
+"شامل پیچیدن رشته‌های شما با توابع مخصوص کتابخانه است. به‌علاوه، خواهشمند است "
+"از پشتیبانی نویسه‌های بسیط یا چندبایتی اطمینان پیدا کنید."
 
 #. type: Title ===
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:40
 #, no-wrap
 msgid "A Call to Unify the I18N Effort"
-msgstr ""
+msgstr "فراخوانی برای متحد کردن اهتمام I18N"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:43
@@ -68,6 +80,10 @@ msgid ""
 "major groups in I18N could congregate into a group effort similar to the "
 "Core Team's responsibility."
 msgstr ""
+"این مسئله که تلاش‌های مستقلِ I18N/L10N برای هر کشور تکرار کارهای یکدیگر است "
+"توجه ما را به خود جلب کرده است. بسیاری از ما در حال اختراع دوباره و ناکارآمد "
+"چرج بوده‌ایم. امیدواریم که گروه‌های بزرگ مختلف در I18N بتوانند در یک گروه "
+"شبیه به وظایف تیم اصلی جمع شوند."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:45
@@ -77,6 +93,10 @@ msgid ""
 "the future, we hope to create applications that work in all the languages "
 "out-of-the-box without dirty hacks."
 msgstr ""
+"در حال حاضر، امیدواریم زمانی‌که شما برنامه‌های I18N را می‌نویسید یا پورت "
+"می‌کنید، آن را جداگانه برای آزمایش به فهرست پست‌سپاریِ FreeBSD مرتبط با همان "
+"کشور ارسال کنید. در آینده، امیدواریم برنامه‌هایی بسازیم تا آماده و بدون نیاز "
+"به کثیف‌کاری در تمام زبان‌ها کار کنند."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:47
@@ -90,7 +110,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:48
 #, no-wrap
 msgid "Perl and Python"
-msgstr ""
+msgstr "Perl و Python"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:51
@@ -98,12 +118,14 @@ msgid ""
 "Perl and Python have I18N and wide character handling libraries. Please use "
 "them for I18N compliance."
 msgstr ""
+"Perl و Python کتابخانه‌های رسیدگی به I18N و نویسه‌های بسیط دارند. خواهشمند "
+"است برای سازگاری با I18N از آنها استفاده کنید."
 
 #. type: Title ==
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:53
 #, no-wrap
 msgid "Localized Messages with POSIX.1 Native Language Support (NLS)"
-msgstr ""
+msgstr "پیام‌های بومی‌شده با پشتیبانی زبان بومی (NLS) POSIX.1"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:56
@@ -115,12 +137,17 @@ msgid ""
 "the POSIX.1 NLS functions, which are provided as a part of the FreeBSD base "
 "system."
 msgstr ""
+"فراتر از کارکردهای ابتدایی I18N، مانند پشتیبانی کدگذاری‌های ورودی یا "
+"قراردادهای ملی، شامل جداکننده‌های دهدهی گوناگون، در مرحلهٔ بالاتری از I18N، "
+"بومی‌سازی پیام‌های نوشته شده در خروجی توسط برنامه‌های مختلف ممکن است. یکی از "
+"راه‌های متداول برای انجام آن استفاده از توابع POSIX.1 NLS است، که به‌عنون "
+"بخشی از سامانهٔ پایهٔ FreeBSD ارائه می‌شوند."
 
 #. type: Title ===
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:58
 #, no-wrap
 msgid "Organizing Localized Messages into Catalog Files"
-msgstr ""
+msgstr "ساماندهی پیام‌های محلی‌شده درون پرونده‌های فهرست"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:61
@@ -178,7 +205,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:79
 #, no-wrap
 msgid "Using the Catalog Files from the Source Code"
-msgstr ""
+msgstr "استفاده از پرونده‌های فهرست از کد منبع"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:82
@@ -237,7 +264,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:93
 #, no-wrap
 msgid "A Practical Example"
-msgstr ""
+msgstr "یک مثال کاربردی"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:96
@@ -245,6 +272,8 @@ msgid ""
 "The following example will demonstrate an easy solution on how to use NLS "
 "catalogs in a flexible way."
 msgstr ""
+"مثال پیش‌رو راه حلی ساده برای استفاده از فهرست‌های NLS را به‌طریقی انعطاف‌"
+"پذیر نشان می‌دهد."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:98
@@ -253,6 +282,9 @@ msgid ""
 "which is included into all source files where localized messages are "
 "necessary:"
 msgstr ""
+"سطور پیش‌رو باید در یک پروندهٔ سرایند مشترک از برنامه قرار بگیرند، چیزی که "
+"در تمامی پرونده‌های منبع در جایی که پیامهای محلی‌سازی شده لازم است شامل "
+"می‌شود:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:105
@@ -284,7 +316,7 @@ msgstr ""
 msgid ""
 "Next, put these lines into the global declaration part of the main source "
 "file:"
-msgstr ""
+msgstr "سپس، این خطوط را در بخش متغیر سراسریِ پروندهٔ منبع اصلی قرار دهید:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:121
@@ -315,6 +347,8 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:134
 msgid "Next come the real code snippets, which open, read, and close the catalog:"
 msgstr ""
+"سپس نوبت به تکه کدهای واقعی می‌رسد، که فهرست را باز می‌کند، می‌خواند و "
+"می‌بندد:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:140
@@ -351,7 +385,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:152
 #, no-wrap
 msgid "Reducing Strings to Localize"
-msgstr ""
+msgstr "کاستن رشته‌ها به محلی‌سازی"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/l10n/chapter.adoc:155
