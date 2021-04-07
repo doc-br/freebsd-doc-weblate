@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-03-29 15:21+0000\n"
+"PO-Revision-Date: 2021-04-08 00:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/booksporters-handbooktestingchapter/pt_BR/>\n"
@@ -219,6 +219,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/testing/chapter.adoc:96
+#, fuzzy
 msgid ""
 "These tests will not find hard-coded paths inside the port's files, nor will "
 "it verify that `LOCALBASE` is being used to correctly refer to files from "
@@ -226,6 +227,12 @@ msgid ""
 "PORTNAME`# must be tested for proper operation to make sure there are no "
 "problems with paths."
 msgstr ""
+"Esses testes não encontrarão caminhos codificados dentro dos arquivos do "
+"port, nem verificarão se o <varname>LOCALBASE</varname> está sendo usado "
+"para se referir corretamente a arquivos de outros ports. O port  instalado "
+"temporariamente em <filename>/var/tmp/`make -V PORTNAME`</filename> deve ser "
+"testado quanto à operação correta para garantir que não haja problemas com "
+"os caminhos."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/testing/chapter.adoc:98
@@ -246,17 +253,21 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/testing/chapter.adoc:104
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "-DPAGER=\\\"${LOCALBASE}/bin/less\\\"\n"
-msgstr ""
+msgstr "-DPAGER=\\\"${LOCALBASE}/bin/less\\\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/testing/chapter.adoc:107
+#, fuzzy
 msgid ""
 "The path with `LOCALBASE` is more likely to still work if the system "
 "administrator has moved the whole [.filename]#/usr/local# tree somewhere "
 "else."
 msgstr ""
+"O caminho com <varname>LOCALBASE</varname> é muito provável que ainda "
+"funcione se o administrador do sistema mudou toda a arvore <filename>/usr/"
+"local</filename> para algum outro lugar."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/testing/chapter.adoc:112
@@ -350,12 +361,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/testing/chapter.adoc:133
+#, fuzzy
 msgid ""
 "It is also quite straightforward to set up and use, has no dependencies, and "
 "will run on any supported FreeBSD release. This section shows how to "
 "install, configure, and run Poudriere as part of the normal workflow of a "
 "ports contributor."
 msgstr ""
+"Ele também é muito simples de configurar e usar, não tem dependências e será "
+"executado em qualquer versão suportada do FreeBSD. Esta seção mostra como "
+"instalar, configurar e executar o <application>Poudriere</application> como "
+"parte do fluxo de trabalho normal de um contribuidor de ports."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/testing/chapter.adoc:135
@@ -399,6 +415,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/testing/chapter.adoc:154
+#, fuzzy
 msgid ""
 "There is also a work-in-progress version of Poudriere which will eventually "
 "become the next release. It is available in package:ports-mgmt/poudriere-"
@@ -414,6 +431,21 @@ msgid ""
 "Those optimizations will not matter a lot when building ports on a desktop "
 "machine."
 msgstr ""
+"Há também uma versão de trabalho em andamento do <application>Poudriere</"
+"application> que acabará por se tornar o próximo release. Ele está "
+"disponível em <package role=\"port\">ports-mgmt/poudriere-devel</package>. "
+"Esta versão de desenvolvimento é usada para as compilações oficiais de "
+"pacotes do FreeBSD, então é bem testada. Muitas vezes tem novos recursos "
+"interessantes. Um committer de ports desejará usar a versão de "
+"desenvolvimento porque é o que é usado na produção e possui todos os novos "
+"recursos que farão com que tudo esteja exatamente correto. Um colaborador "
+"não precisará necessariamente deles, pois as correções mais importantes são "
+"sempre incorporadas na versão release. A principal razão para o uso da "
+"versão de desenvolvimento para compilar os pacotes oficiais é porque é mais "
+"rápido, de uma forma que encurtará uma compilação completa de 18 horas para "
+"17 horas ao usar um servidor de 32 <acronym>CPUs</acronym> high-end com "
+"128GB de <acronym>RAM</acronym>. Essas otimizações não terão muita "
+"importância ao compilar ports em uma máquina desktop."
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/testing/chapter.adoc:156
@@ -431,7 +463,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/testing/chapter.adoc:169
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "ZPOOL=tank\n"
 "ZROOTFS=/poudriere\n"
@@ -441,6 +473,13 @@ msgid ""
 "FREEBSD_HOST=ftp://ftp.freebsd.org\n"
 "SVN_HOST=svn.FreeBSD.org\n"
 msgstr ""
+"ZPOOL=tank\n"
+"ZROOTFS=/poudriere\n"
+"BASEFS=/poudriere\n"
+"DISTFILES_CACHE=/usr/ports/distfiles\n"
+"RESOLV_CONF=/etc/resolv.conf\n"
+"FREEBSD_HOST=ftp://ftp.freebsd.org\n"
+"SVN_HOST=svn.FreeBSD.org\n"
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/testing/chapter.adoc:171
@@ -781,11 +820,16 @@ msgstr "Usando Árvores de Ports Gerenciadas Manualmente com o Poudriere"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/testing/chapter.adoc:328
+#, fuzzy
 msgid ""
 "Depending on the workflow, it can be extremely helpful to use ports trees "
 "which are maintained manually. For instance, if there is a local copy of the "
 "ports tree in [.filename]#/work/ports#, point Poudriere to the location:"
 msgstr ""
+"Dependendo do fluxo de trabalho, pode ser extremamente útil usar árvores de "
+"ports que são mantidas manualmente. Por exemplo, se houver uma cópia local "
+"da árvore de ports em <filename>/work/ports</filename>, aponte o "
+"<application>Poudriere</application> para o local:"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/testing/chapter.adoc:330
@@ -1035,9 +1079,12 @@ msgstr "Isso irá procurar pela existência desses diretórios nesta ordem:"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/testing/chapter.adoc:446
+#, fuzzy
 msgid ""
 "[.filename]#/usr/local/etc/poudriere.d/113Ramd64-development-devset-options#"
 msgstr ""
+"<filename>/usr/local/etc/poudriere.d/113Ramd64-development-devset-"
+"options</filename>"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/testing/chapter.adoc:447
@@ -1046,8 +1093,10 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/testing/chapter.adoc:448
+#, fuzzy
 msgid "[.filename]#/usr/local/etc/poudriere.d/113Ramd64-development-options#"
 msgstr ""
+"<filename>/usr/local/etc/poudriere.d/113Ramd64-development-options</filename>"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/testing/chapter.adoc:449
@@ -1151,8 +1200,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/testing/chapter.adoc:486
+#, fuzzy
 msgid "[.filename]#/usr/local/etc/poudriere.d/113Ramd64-development-make.conf#"
 msgstr ""
+"<filename>/usr/local/etc/poudriere.d/113Ramd64-development-make."
+"conf</filename>"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/testing/chapter.adoc:487
@@ -1161,13 +1213,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/testing/chapter.adoc:488
+#, fuzzy
 msgid ""
 "[.filename]#/usr/local/etc/poudriere.d/113Ramd64-development-devset-make."
 "conf#"
 msgstr ""
+"<filename>/usr/local/etc/poudriere.d/113Ramd64-development-devset-make."
+"conf</filename>"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/testing/chapter.adoc:490
+#, fuzzy
 msgid ""
 "Unlike with sets, all of the found files will be appended, _in that order_, "
 "into one [.filename]#make.conf# inside the build jails. It is hence possible "
@@ -1177,6 +1233,14 @@ msgid ""
 "filename]#make.conf# files, such as [.filename]#/usr/local/etc/poudriere."
 "d/113Ramd64-development-devset-make.conf#."
 msgstr ""
+"Ao contrário dos conjuntos, todos os arquivos encontrados serão anexados, "
+"<emphasis>naquela ordem</emphasis>, em um <filename>make.conf</filename> "
+"dentro das jails de compilação. Assim, é possível ter variáveis gerais, "
+"destinadas a afetar todas as compilações <filename>/usr/local/etc/poudriere."
+"d/make.conf</filename>. Variáveis especiais, destinadas a afetar apenas "
+"determinadas jails ou conjuntos, podem ser setadas em arquivos especiais "
+"como <filename>make.conf</filename>, assim como <filename>/usr/local/etc/"
+"poudriere.d/113Ramd64-development-devset-make.conf</filename>."
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/testing/chapter.adoc:492
@@ -1194,9 +1258,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/testing/chapter.adoc:501
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "DEFAULT_VERSIONS+= perl=5.20\n"
-msgstr ""
+msgstr "DEFAULT_VERSIONS+= perl=5.20\n"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/porters-handbook/testing/chapter.adoc:505
