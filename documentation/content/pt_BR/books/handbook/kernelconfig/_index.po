@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:55-0300\n"
-"PO-Revision-Date: 2021-03-29 22:55+0000\n"
+"PO-Revision-Date: 2021-04-08 00:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookkernelconfig_index/pt_BR/>\n"
@@ -151,6 +151,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:70
+#, fuzzy
 msgid ""
 "Building a custom kernel is often a rite of passage for advanced BSD users. "
 "This process, while time consuming, can provide benefits to the FreeBSD "
@@ -158,6 +159,12 @@ msgid ""
 "range of hardware, a custom kernel can be stripped down to only provide "
 "support for that computer's hardware. This has a number of benefits, such as:"
 msgstr ""
+"Construir um kernel personalizado é muitas vezes um rito de passagem para "
+"usuários avançados do BSD. Este processo, embora consuma tempo, pode "
+"fornecer benefícios ao sistema FreeBSD. Ao contrário do kernel "
+"<filename>GENERIC</filename>, que deve suportar uma ampla gama de hardware, "
+"um kernel personalizado pode ser reduzido para fornecer suporte apenas para "
+"o hardware desse computador. Isso tem vários benefícios, tais como:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:72
@@ -171,6 +178,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:73
+#, fuzzy
 msgid ""
 "Lower memory usage. A custom kernel often uses less memory than the [."
 "filename]#GENERIC# kernel by omitting unused features and device drivers. "
@@ -179,13 +187,23 @@ msgid ""
 "For this reason, a custom kernel is useful on a system with a small amount "
 "of RAM."
 msgstr ""
+"Diminuir o uso de memória. Um kernel personalizado geralmente usa menos "
+"memória que o kernel <filename>GENERIC</filename> ao omitir recursos e "
+"drivers de dispositivo que não são utilizados. Isso é importante porque o "
+"código do kernel permanece residente na memória física o tempo todo, "
+"impedindo que a memória seja usada pelos aplicativos. Por esse motivo, um "
+"kernel personalizado é útil em um sistema com uma pequena quantidade de RAM."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:74
+#, fuzzy
 msgid ""
 "Additional hardware support. A custom kernel can add support for devices "
 "which are not present in the [.filename]#GENERIC# kernel."
 msgstr ""
+"Suporte adicional de hardware. Um kernel personalizado pode adicionar "
+"suporte para dispositivos que não estão presentes no kernel "
+"<filename>GENERIC</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:76
@@ -229,10 +247,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:90
+#, fuzzy
 msgid ""
 "In some cases, there is no associated module in [.filename]#/boot/kernel#. "
 "This is mostly true for certain subsystems."
 msgstr ""
+"Em alguns casos, não há nenhum módulo associado em <filename>/boot/kernel</"
+"filename>. Isso é verdade principalmente para certos subsistemas."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:92
@@ -313,10 +334,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:128
+#, fuzzy
 msgid ""
 "This output shows that the [.filename]#ath# driver located a wireless "
 "Ethernet device."
 msgstr ""
+"Esta saída mostra que o driver <filename>ath</filename> localizou um "
+"dispositivo Ethernet sem fio."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:130
@@ -386,6 +410,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:150
+#, fuzzy
 msgid ""
 "Do not make edits to [.filename]#GENERIC#. Instead, copy the file to a "
 "different name and make edits to the copy. The convention is to use a name "
@@ -394,6 +419,13 @@ msgid ""
 "hostname. This example creates a copy, named [.filename]#MYKERNEL#, of the [."
 "filename]#GENERIC# configuration file for the `amd64` architecture:"
 msgstr ""
+"Não faça edições no <filename>GENERIC</filename>. Em vez disso, copie o "
+"arquivo para um nome diferente e faça edições na cópia. A convenção é usar "
+"um nome do host com todas as letras maiúsculas. Ao manter várias máquinas "
+"FreeBSD com hardware diferente, é uma boa idéia nomeá-lo com o nome do host "
+"da máquina. Este exemplo cria uma cópia, denominada <filename>MYKERNEL</"
+"filename>, do arquivo de configuração <filename>GENERIC</filename> para a "
+"arquitetura <literal>amd64</literal>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:155
@@ -413,6 +445,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:160
+#, fuzzy
 msgid ""
 "The format of the kernel configuration file is simple. Each line contains a "
 "keyword that represents a device or subsystem, an argument, and a brief "
@@ -421,6 +454,13 @@ msgid ""
 "of the line representing that device or subsystem. Do not add or remove a "
 "`#` for any line that you do not understand."
 msgstr ""
+"O formato do arquivo de configuração do kernel é simples. Cada linha contém "
+"uma palavra-chave que representa um dispositivo ou subsistema, um argumento "
+"e uma breve descrição. Qualquer texto depois de um <literal>#</literal> é "
+"considerado um comentário e ignorado. Para remover o suporte do kernel para "
+"um dispositivo ou subsistema, coloque um <literal>#</literal> no início da "
+"linha que representa esse dispositivo ou subsistema. Não adicione ou remova "
+"um <literal>#</literal> para qualquer linha que você não entenda."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:165
@@ -433,6 +473,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:168
+#, fuzzy
 msgid ""
 "In addition to the brief descriptions provided in this file, additional "
 "descriptions are contained in [.filename]#NOTES#, which can be found in the "
@@ -440,13 +481,21 @@ msgid ""
 "architecture independent options, refer to [.filename]#/usr/src/sys/conf/"
 "NOTES#."
 msgstr ""
+"Além das breves descrições fornecidas neste arquivo, descrições adicionais "
+"estão contidas no arquivo <filename>NOTES</filename>, o qual pode ser "
+"encontrado no mesmo diretório que o <filename>GENERIC</filename> para aquela "
+"arquitetura. Para opções independentes de arquitetura, consulte <filename>/"
+"usr/src/sys/conf/NOTES</filename>."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:173
+#, fuzzy
 msgid ""
 "When finished customizing the kernel configuration file, save a backup copy "
 "to a location outside of [.filename]#/usr/src#."
 msgstr ""
+"Quando terminar de personalizar o arquivo de configuração do kernel, salve "
+"uma cópia de backup em um local fora do <filename>/usr/src</filename>."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:175
@@ -469,6 +518,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:187
+#, fuzzy
 msgid ""
 "An `include` directive is available for use in configuration files. This "
 "allows another configuration file to be included in the current one, making "
@@ -477,6 +527,13 @@ msgid ""
 "delta to be maintained with respect to [.filename]#GENERIC#, as seen in this "
 "example:"
 msgstr ""
+"Uma diretiva <literal>include</literal> está disponível para uso em arquivos "
+"de configuração. Isso permite que outro arquivo de configuração seja "
+"incluído no arquivo atual, facilitando a manutenção de pequenas alterações "
+"em relação a um arquivo existente. Se apenas um pequeno número de opções ou "
+"drivers adicionais forem necessários, isso permitirá que um delta seja "
+"mantido com relação ao <filename>GENERIC</filename>, conforme mostrado neste "
+"exemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:192
@@ -543,9 +600,9 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:220
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Change to this directory:\n"
-msgstr ""
+msgstr "Mude para este diretório:\n"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:224
@@ -608,9 +665,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:249
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "MODULES_OVERRIDE = linux acpi\n"
-msgstr ""
+msgstr "MODULES_OVERRIDE = linux acpi\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:252
@@ -623,9 +680,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:256
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "WITHOUT_MODULES = linux acpi sound\n"
-msgstr ""
+msgstr "WITHOUT_MODULES = linux acpi sound\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:259
@@ -664,9 +721,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:271
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "config: line 17: syntax error\n"
-msgstr ""
+msgstr "config: line 17: syntax error\n"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:273
