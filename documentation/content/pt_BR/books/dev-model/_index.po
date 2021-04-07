@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:55-0300\n"
-"PO-Revision-Date: 2021-03-28 20:54+0000\n"
+"PO-Revision-Date: 2021-04-08 00:51+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/booksdev-model_index/pt_BR/>\n"
@@ -246,12 +246,17 @@ msgstr "Hat (Definição/função especifica para algumas pessoas)"
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:114
+#, fuzzy
 msgid ""
 "A \"hat\" is synonymous with role. A hat has certain responsibilities in a "
 "process and for the process outcome. The hat executes activities. It is well "
 "defined what issues the hat should be contacted about by the project members "
 "and people outside the project."
 msgstr ""
+"Uma <quote>hat</quote> é um sinônimo de função. Uma hat tem certas "
+"responsabilidades em um processo e para o resultado do processo. O hat "
+"executa atividades. Está bem definido por quais problemas o hat deve ser "
+"contatado pelos membros do projeto e pessoas fora do projeto."
 
 #. type: Title ===
 #: documentation/content/en/books/dev-model/_index.adoc:116
@@ -368,12 +373,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:155
+#, fuzzy
 msgid ""
 "The project can be grouped into four distinct separate parts, and most "
 "developers will focus their involvement in one part of FreeBSD.  The four "
 "parts are kernel development, userland development, ports and documentation. "
 "When referring to the base system, both kernel and userland is meant."
 msgstr ""
+"O projeto pode ser agrupado em quatro partes separadas distintas, e a "
+"maioria dos desenvolvedores focará seu envolvimento em uma parte do FreeBSD. "
+"As quatro partes são desenvolvimento de kernel, desenvolvimento de userland, "
+"ports e documentação. Ao se referir ao sistema base, nos referimos tanto o "
+"kernel quanto o userland."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:157
@@ -467,6 +478,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:203
+#, fuzzy
 msgid ""
 "The core utilities, known as userland, provide the interface that identifies "
 "FreeBSD, both user interface, shared libraries and external interfaces to "
@@ -475,6 +487,12 @@ msgid ""
 "the code. Maintainership will be discussed in the <<role-maintainer>> "
 "section."
 msgstr ""
+"Os principais utilitários, conhecidos como userland, fornecem a interface "
+"que identifica o FreeBSD, interface do usuário, bibliotecas compartilhadas e "
+"interfaces externas para conectar clientes. Atualmente, 162 pessoas estão "
+"envolvidas no desenvolvimento e manutenção da userland, muitas delas sendo "
+"mantenedoras de sua própria parte do código. A manutenção será discutida na "
+"seção <xref linkend=\"role-maintainer\"/>."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:205
@@ -626,6 +644,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:259
+#, fuzzy
 msgid ""
 "Within the \"code\" bracket in Jørgensen's model, each programmer has their "
 "own working style and follows their own development models. The bracket "
@@ -634,6 +653,12 @@ msgid ""
 "verification. However, the only output from these stages is the source code "
 "or system documentation."
 msgstr ""
+"Dentro do processo <quote>code</quote> no modelo de Jørgensen, cada "
+"programador tem seus próprios estilos de trabalho e segue seus próprios "
+"modelos de desenvolvimento. O suporte poderia muito bem ter sido chamado de "
+"<quote>desenvolvimento</quote>, pois inclui coleta e análise de requisitos, "
+"sistema e projeto detalhados, implementação e verificação. No entanto, a "
+"única saída desses estágios é o código-fonte ou a documentação do sistema."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:261
@@ -817,6 +842,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:316
+#, fuzzy
 msgid ""
 "A \"major release\" is always made from the -CURRENT branch. However, the -"
 "CURRENT branch does not need to fork at that point in time, but can focus on "
@@ -828,6 +854,17 @@ msgid ""
 "forked off 5.0-CURRENT at around 5.3-RELEASE. It is not until 5-STABLE is "
 "forked that the development branch will be branded 6.0-CURRENT."
 msgstr ""
+"Um <quote>lançamento principal</quote> é sempre feito a partir da branch -"
+"CURRENT. No entanto, a branch -CURRENT não precisa ser feito fork nesse "
+"momento, mas pode concentrar-se na estabilização. Um exemplo disso é que, "
+"após 3.0-RELEASE, 3.1-RELEASE também era uma continuação da branch -CURRENT, "
+"e -CURRENT não se tornou uma branch de desenvolvimento verdadeira até que "
+"esta versão fosse lançada e fosse feito o fork da branch 3-STABLE. Quando -"
+"CURRENT retorna para se tornar uma branch de desenvolvimento, ele só pode "
+"ser seguido por um lançamento principal. Prevê-se que seja feito o fork do 5-"
+"STABLE a partir da branch 5.0-CURRENT em torno da 5.3-RELEASE. Não é feito "
+"até que seja feito o fork da 5-STABLE, então a branch de desenvolvimento "
+"será marcada como 6.0-CURRENT."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:318
@@ -855,6 +892,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:322
+#, fuzzy
 msgid ""
 "Each update to a security branch is called a \"patchlevel\". For every "
 "security enhancement that is done, the patchlevel number is increased, "
@@ -863,6 +901,13 @@ msgid ""
 "especially serious security flaws, an entire new release can be made from a "
 "security branch. An example of this is 4.6.2-RELEASE."
 msgstr ""
+"Cada atualização para uma branch de segurança é chamada de <quote>patchlevel "
+"(à nível de correção)</quote>. Para cada aprimoramento de segurança que é "
+"feito, o número de patchlevel é aumentado, tornando mais fácil para as "
+"pessoas rastrearem a branch para ver quais melhorias de segurança "
+"implementaram. Nos casos em que houve falhas graves de segurança, uma nova "
+"versão inteira pode ser feita a partir de uma branch de segurança. Um "
+"exemplo disso é a 4.6.2-RELEASE."
 
 #. type: Title ===
 #: documentation/content/en/books/dev-model/_index.adoc:324
@@ -1807,6 +1852,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:572
+#, fuzzy
 msgid ""
 "When a change is committed to a part of the source that has been contributed "
 "from an outside <<role-vendor>>, the maintainer should ensure that the patch "
@@ -1814,6 +1860,12 @@ msgid ""
 "philosophy and makes it easier to stay in sync with outside projects as the "
 "patches do not have to be reapplied every time a new release is made."
 msgstr ""
+"Quando uma alteração é \"committed\" em uma parte do código fonte que foi "
+"contribuída por um <xref linkend=\"role-vendor\"/> externo, o mantenedor "
+"deve garantir que o patch seja repassado ao fornecedor. Isso está de acordo "
+"com a filosofia de código aberto e facilita a sincronização com os projetos "
+"externos, pois os patches não precisam ser reaplicados sempre que uma nova "
+"versão é feita."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:574
@@ -1830,12 +1882,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:576
+#, fuzzy
 msgid ""
 "Delaying the commit to -STABLE and other branches allows for \"parallel "
 "debugging\" where the committed code is tested on a wide range of "
 "configurations. This makes changes to -STABLE to contain fewer faults and "
 "thus giving the branch its name."
 msgstr ""
+"Atrasar o commit para -STABLE e outras branches permite <quote>depuração "
+"paralela</quote> onde o código \"committed\" é testado em uma ampla gama de "
+"configurações. Isso faz alterações no -STABLE para conter menos falhas e, "
+"assim, dar seu nome à branch."
 
 #. type: Block title
 #: documentation/content/en/books/dev-model/_index.adoc:577
@@ -1938,6 +1995,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:604
+#, fuzzy
 msgid ""
 "Only committers can be elected into core. The candidates need to submit "
 "their candidacy at least one week before the election starts, but can refine "
@@ -1946,6 +2004,13 @@ msgid ""
 "election statements, the candidates must answer a few standard questions "
 "submitted by the election manager."
 msgstr ""
+"Somente committers podem ser eleitos para o core. Os candidatos precisam "
+"apresentar sua candidatura pelo menos uma semana antes do início das "
+"eleições, mas podem refinar suas declarações até o início da votação. Eles "
+"são apresentados na <link xlink:href=\"http://election.uk.freebsd.org/"
+"candidates.html\">lista de candidatos</link>. Ao escrever suas declarações "
+"eleitorais, os candidatos devem responder a algumas perguntas padrões "
+"submetidas pelo gerente eleitoral."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:606
@@ -1960,11 +2025,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:608
+#, fuzzy
 msgid ""
 "When voting, the committer may vote once in support of up to nine nominees. "
 "The voting is done over a period of four weeks with reminders being posted "
 "on \"developers\" mailing list that is available to all committers."
 msgstr ""
+"Ao votar, o committer pode votar uma vez em apoio de até nove candidatos. A "
+"votação é feita durante um período de quatro semanas com lembretes sendo "
+"postados na lista de discussão <quote>developers</quote> que está disponível "
+"para todos os committers."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:610
@@ -2144,6 +2214,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:683
+#, fuzzy
 msgid ""
 "Here \"development release\" refers to the -CURRENT branch while "
 "\"production release\" refers to the -STABLE branch. The \"pre-commit test\" "
@@ -2152,6 +2223,13 @@ msgid ""
 "\" is the functional testing that can trigger more review, and debugging "
 "when the code is included in the -CURRENT branch."
 msgstr ""
+"Aqui, <quote>desenvolvimento de release (versão)</quote> refere-se a branch -"
+"CURRENT, enquanto o <quote>release em produção</quote> refere-se a branch -"
+"STABLE. O <quote>teste de pré-commit</quote> é o teste funcional feito por "
+"desenvolvedores de peers quando solicitado a fazê-lo ou a testar o código "
+"para determinar o status do subprojeto. <quote>Debug paralelo</quote> é o "
+"teste funcional que pode acionar mais revisões e debugs quando o código é "
+"incluído na branch -CURRENT."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:685
@@ -2208,6 +2286,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:694
+#, fuzzy
 msgid ""
 "Problem reports are sent to an email address where it is inserted into the "
 "Problem Reports maintenance database. A <<role-bugbuster>> classifies the "
@@ -2225,6 +2304,22 @@ msgid ""
 "for when the task would require so much work that nobody is working on it at "
 "the moment."
 msgstr ""
+"Os relatórios de problemas são enviados para um endereço de e-mail, onde são "
+"inseridos no banco de dados de manutenção de Relatórios de Problemas. Um "
+"<xref linkend=\"role-bugbuster\"/> classifica o problema e o envia ao grupo "
+"ou mantenedor correto dentro do projeto. Depois que alguém assume a "
+"responsabilidade pelo relatório, o relatório estará sendo analisado. Esta "
+"análise inclui verificar o problema e pensar em uma solução para o problema. "
+"Muitas vezes é necessário feedback do criador do relatório ou até mesmo da "
+"comunidade do FreeBSD. Uma vez que um patch para o problema é feito, o "
+"criador pode ser solicitado a testá-lo. Finalmente, o patch de trabalhado é "
+"integrado ao projeto e documentado, se aplicável. Ele passa pelo ciclo de "
+"manutenção regular, conforme descrito na seção <xref linkend=\"model-"
+"maintenance\"/>. Estes são os estados em que um relatório de problemas pode "
+"estar: aberto, analisado, feedback, corrigido, suspenso e fechado. O estado "
+"suspenso é para quando um progresso adicional não é possível devido à falta "
+"de informação ou quando a tarefa exigiria tanto trabalho que ninguém está "
+"trabalhando nela no momento."
 
 #. type: Block title
 #: documentation/content/en/books/dev-model/_index.adoc:695
@@ -2446,6 +2541,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:745
+#, fuzzy
 msgid ""
 "The releases of the -CURRENT-branch (that is, all releases that end with "
 "\".0\") are very similar, but with twice as long timeframe. It starts 8 "
@@ -2459,6 +2555,18 @@ msgid ""
 "development on the main development branch can continue. Other than these "
 "differences, the release engineering processes are alike."
 msgstr ""
+"Os lançamentos da branch -CURRENT (ou seja, todas as releases que terminam "
+"com <quote>.0</quote>) são muito semelhantes, mas com o dobro do prazo. "
+"Começa 8 semanas antes do lançamento com o anúncio da linha do tempo da "
+"release. Duas semanas após o processo de release, o congelamento de recursos "
+"é iniciado e os ajustes de desempenho devem ser mantidos ao mínimo. Quatro "
+"semanas antes do lançamento, uma versão beta oficial é disponibilizada. Duas "
+"semanas antes do lançamento, o código é oficialmente transformado em uma "
+"nova versão. Esta versão recebe status de release candidate e, como na "
+"engenharia de release do -STABLE, o congelamento de código do release "
+"candidate é endurecido. No entanto, o desenvolvimento na branch principal de "
+"desenvolvimento pode continuar. Além dessas diferenças, os processos de "
+"engenharia de release são semelhantes."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:747
@@ -2930,11 +3038,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:935
+#, fuzzy
 msgid ""
 "The main tasks in the Documentation project are to work on current projects "
 "in the \"FreeBSD Documentation Set\", and translate the documentation to "
 "other languages."
 msgstr ""
+"As principais tarefas no projeto de Documentação são trabalhar em projetos "
+"atuais no <quote>Conjunto de Documentação do FreeBSD</quote>, e traduzir a "
+"documentação para outros idiomas."
 
 #. type: Plain text
 #: documentation/content/en/books/dev-model/_index.adoc:937
