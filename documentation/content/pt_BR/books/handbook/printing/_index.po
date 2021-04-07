@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: 2021-03-29 22:55+0000\n"
+"PO-Revision-Date: 2021-04-08 00:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookprinting_index/pt_BR/>\n"
@@ -108,9 +108,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:81
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ":lp=/dev/lpt0:\\\n"
-msgstr ""
+msgstr ":lp=/dev/lpt0:\\\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:84
@@ -138,14 +138,15 @@ msgstr ""
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:97
 #: documentation/content/en/books/handbook/printing/_index.adoc:307
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "lpd_enable=\"YES\"\n"
-msgstr ""
+msgstr "lpd_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:100
+#, fuzzy
 msgid "  Start the service:"
-msgstr ""
+msgstr "  Inicie o serviço:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:105
@@ -240,10 +241,14 @@ msgstr ""
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:144
+#, fuzzy
 msgid ""
 "The parallel port device is [.filename]#/dev/lpt0#. This device appears "
 "whether a printer is attached or not, it is not autodetected."
 msgstr ""
+"O dispositivo da porta paralela é o <filename>/dev/lpt0</filename>. Este "
+"dispositivo aparece independentemente se uma impressora está ou não "
+"conectada, ela não é autodetectada."
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:146
@@ -337,6 +342,7 @@ msgstr "Resumo"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:167
+#, fuzzy
 msgid ""
 "Wired network connections are usually the easiest to set up and give the "
 "fastest printing. For direct connection to the computer, `USB` is preferred "
@@ -346,6 +352,14 @@ msgid ""
 "rate and parity bits must add to the complexity. Fortunately, serial "
 "printers are rare."
 msgstr ""
+"As conexões de rede com fio geralmente são as mais fáceis de configurar e "
+"oferecem a impressão mais rápida. Para conexão direta com o computador, a "
+"conexão <acronym>USB</acronym> é preferida em função da velocidade e da  "
+"simplicidade. As conexões paralelas funcionam, mas têm limitações no "
+"comprimento do cabo e na velocidade. Conexões seriais são mais difíceis de "
+"configurar. A configuração do cabo difere entre os modelos, e os parâmetros "
+"de comunicação, como taxa de transmissão e bits de paridade, se somam a "
+"complexidade. Felizmente, as impressoras seriais são raras."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/printing/_index.adoc:169
@@ -368,6 +382,7 @@ msgstr ""
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:175
+#, fuzzy
 msgid ""
 "Plain `ASCII` text is the simplest way to send data to a printer. Characters "
 "correspond one to one with what will be printed: an `A` in the data prints "
@@ -377,6 +392,14 @@ msgid ""
 "little or no encoding or translation. The printed output corresponds "
 "directly with what was sent."
 msgstr ""
+"Texto <acronym>ASCII</acronym> simples é a maneira mais simples de enviar "
+"dados para uma impressora. Os caracteres correspondem um a um com o que será "
+"impresso: um <literal>A</literal> nos dados imprime um <literal>A</literal> "
+"na página. Muito pouca formatação está disponível. Não há como selecionar "
+"uma fonte ou espaçamento proporcional. A simplicidade forçada do texto "
+"<acronym>ASCII</acronym> simples significa que o texto pode ser impresso "
+"diretamente do computador com pouca ou nenhuma codificação ou tradução. A "
+"saída impressa corresponde diretamente ao que foi enviado."
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:177
@@ -432,6 +455,7 @@ msgstr "Baseado em Host"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:189
+#, fuzzy
 msgid ""
 "Manufacturers can reduce the cost of a printer by giving it a simple "
 "processor and very little memory. These printers are not capable of printing "
@@ -439,6 +463,12 @@ msgid ""
 "the host computer and then sent to the printer. These are called _host-"
 "based_ printers."
 msgstr ""
+"Os fabricantes podem reduzir o custo de uma impressora, oferecendo um "
+"processador simples e muito pouca memória. Essas impressoras não são capazes "
+"de imprimir texto simples. Em vez disso, bitmaps de texto e gráficos são "
+"desenhados por um driver no computador host e, em seguida, enviados para a "
+"impressora. Estas são chamadas de impressoras <emphasis>baseadas em "
+"host</emphasis>."
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:191
@@ -637,32 +667,43 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:284
+#, fuzzy
 msgid ""
 "<.> The device where the printer is connected. Replace this line with the "
 "appropriate one for the connection type shown here."
 msgstr ""
+"O dispositivo em que a impressora está conectada. Substitua esta linha pela "
+"apropriada para o tipo de conexão mostrado aqui."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:286
+#, fuzzy
 msgid "<.> Suppress the printing of a header page at the start of a print job."
 msgstr ""
+"Suprimir a impressão de uma página de cabeçalho no início de um trabalho de "
+"impressão."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:288
+#, fuzzy
 msgid "<.> Do not limit the maximum size of a print job."
-msgstr ""
+msgstr "Não limite o tamanho máximo de um trabalho de impressão."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:290
+#, fuzzy
 msgid ""
 "<.> The path to the spooling directory for this printer. Each printer uses "
 "its own spooling directory."
 msgstr ""
+"O caminho para o diretório de spooling desta impressora. Cada impressora usa "
+"seu próprio diretório de spooling."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:292
+#, fuzzy
 msgid "<.> The log file where errors on this printer will be reported."
-msgstr ""
+msgstr "O arquivo de log no qual os erros nesta impressora serão relatados."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:294
@@ -706,12 +747,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:320
+#, fuzzy
 msgid ""
 "Documents are sent to the printer with `lpr`. A file to be printed can be "
 "named on the command line or piped into `lpr`. These two commands are "
 "equivalent, sending the contents of [.filename]#doc.txt# to the default "
 "printer:"
 msgstr ""
+"Os documentos são enviados para a impressora com o <command>lpr</command>. "
+"Um arquivo a ser impresso pode ser nomeado na linha de comando ou canalizado "
+"para o <command>lpr</command>. Esses dois comandos são equivalentes, "
+"enviando o conteúdo de <filename>doc.txt</filename> para a impressora padrão:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:325
@@ -806,18 +852,26 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:364
+#, fuzzy
 msgid ""
 "The backslash _line continuation_ characters at the end of the lines in [."
 "filename]#printcap# entries reveal that an entry for a printer is really "
 "just one long line with entries delimited by colon characters. An earlier "
 "example can be rewritten as a single less-readable line:"
 msgstr ""
+"Os caracteres backslash de <emphasis>continuação de linha</emphasis> no "
+"final das linhas nas entradas do <filename>printcap</filename> revelam que "
+"uma entrada para uma impressora é na verdade apenas uma linha longa com "
+"entradas delimitadas por dois pontos. O exemplo anterior pode ser reescrito "
+"como uma única linha menos legível:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:368
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "lp:lp=/dev/unlpt0:sh:mx#0:sd=/var/spool/lpd/lp:if=/usr/local/libexec/lf2crlf:lf=/var/log/lpd-errs:\n"
 msgstr ""
+"lp:lp=/dev/unlpt0:sh:mx#0:sd=/var/spool/lpd/lp:if=/usr/local/libexec/"
+"lf2crlf:lf=/var/log/lpd-errs:\n"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/printing/_index.adoc:373
@@ -834,30 +888,41 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:382
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "A printed file looks\n"
 "                    like the steps of a staircase\n"
 "                                                 scattered by the wind\n"
 msgstr ""
+"Um arquivo impresso parece\n"
+"                    como os degraus de uma escada\n"
+"                                              espalhados pelo vento\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:385
+#, fuzzy
 msgid ""
 "A filter can convert the newline characters into carriage returns and "
 "newlines. The carriage returns make the printer return to the left after "
 "each line. Create [.filename]#/usr/local/libexec/lf2crlf# with these "
 "contents:"
 msgstr ""
+"Um filtro pode converter os caracteres de nova linha em retornos de carro e "
+"novas linhas. Os retornos de carro fazem a impressora retornar para a "
+"esquerda após cada linha. Crie o <filename>/usr/local/libexec/lf2crlf</"
+"filename> com este conteúdo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:391
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "#!/bin/sh\n"
 "CR=$'\\r'\n"
 "/usr/bin/sed -e \"s/$/${CR}/g\"\n"
 msgstr ""
+"#!/bin/sh\n"
+"CR=$'\\r'\n"
+"/usr/bin/sed -e \"s/$/${CR}/g\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:394
@@ -881,9 +946,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:405
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ":if=/usr/local/libexec/lf2crlf:\\\n"
-msgstr ""
+msgstr ":if=/usr/local/libexec/lf2crlf:\\\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:408
@@ -913,16 +978,20 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:415
+#, fuzzy
 msgid "Create [.filename]#/usr/local/libexec/enscript# with these contents:"
 msgstr ""
+"Crie o <filename>/usr/local/libexec/enscript</filename> com este conteúdo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:420
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "#!/bin/sh\n"
 "/usr/local/bin/enscript -o -\n"
 msgstr ""
+"#!/bin/sh\n"
+"/usr/local/bin/enscript -o -\n"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:427
@@ -932,9 +1001,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:434
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ":if=/usr/local/libexec/enscript:\\\n"
-msgstr ""
+msgstr ":if=/usr/local/libexec/enscript:\\\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:437
@@ -969,11 +1038,14 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:451
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "#!/bin/sh\n"
 "/usr/local/bin/gs -dSAFER -dNOPAUSE -dBATCH -q -sDEVICE=ljet4 -sOutputFile=- -\n"
 msgstr ""
+"#!/bin/sh\n"
+"/usr/local/bin/gs -dSAFER -dNOPAUSE -dBATCH -q -sDEVICE=ljet4 -sOutputFile=- "
+"-\n"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:458
@@ -996,9 +1068,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:467
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ":if=/usr/local/libexec/ps2pcl:\\\n"
-msgstr ""
+msgstr ":if=/usr/local/libexec/ps2pcl:\\\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:470
@@ -1069,9 +1141,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:517
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ":if=/usr/local/libexec/psif:\\\n"
-msgstr ""
+msgstr ":if=/usr/local/libexec/psif:\\\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:520
@@ -1509,6 +1581,7 @@ msgstr "Páginas de cabeçalho"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:734
+#, fuzzy
 msgid ""
 "It can be difficult for users to locate their documents in the stack of "
 "pages produced by a busy shared printer. _Header pages_ were created to "
@@ -1516,6 +1589,13 @@ msgid ""
 "printed before each print job. These pages are also sometimes called "
 "_banner_ or _separator_ pages."
 msgstr ""
+"Pode ser difícil para os usuários localizarem seus documentos na pilha de "
+"páginas produzidas por uma impressora compartilhada ocupada. "
+"<emphasis>Páginas de cabeçalho</emphasis> foram criadas para resolver este "
+"problema. Uma página de cabeçalho com o nome de usuário e o nome do "
+"documento é impressa antes de cada trabalho de impressão. Estas páginas são "
+"por vezes chamadas de páginas <emphasis>banner</emphasis> ou "
+"<emphasis>separadoras</emphasis>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:736
