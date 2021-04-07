@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-03-30 23:18+0000\n"
+"PO-Revision-Date: 2021-04-08 00:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookboot_index/pt_BR/>\n"
@@ -44,6 +44,7 @@ msgstr "Sinopse"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:48
+#, fuzzy
 msgid ""
 "The process of starting a computer and loading the operating system is "
 "referred to as \"the bootstrap process\", or \"booting\". FreeBSD's boot "
@@ -52,6 +53,13 @@ msgid ""
 "operating systems installed on the same computer, different versions of the "
 "same operating system, or a different installed kernel."
 msgstr ""
+"O processo de iniciar um computador e carregar o sistema operacional é "
+"chamado de <quote>processo de bootstrap</quote>, ou de <quote>inicialização</"
+"quote>. O processo de boot do FreeBSD fornece uma grande flexibilidade na "
+"personalização do que acontece quando o sistema é iniciado, incluindo a "
+"capacidade de selecionar diferentes sistemas operacionais instalados no "
+"mesmo computador, diferentes versões do mesmo sistema operacional ou um "
+"kernel instalado diferente."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:50
@@ -171,6 +179,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:80
+#, fuzzy
 msgid ""
 "If only one operating system is installed, the MBR searches for the first "
 "bootable (active) slice on the disk, and then runs the code on that slice to "
@@ -178,9 +187,17 @@ msgid ""
 "are present, a different boot manager can be installed to display a list of "
 "operating systems so the user can select one to boot."
 msgstr ""
+"Se apenas um sistema operacional estiver instalado, o <acronym>MBR</acronym> "
+"procura pelo primeiro slice inicializável (ativo) no disco e, em seguida, "
+"executa o código nesse slice para carregar o restante do sistema "
+"operacional. Quando vários sistemas operacionais estão presentes, um "
+"gerenciador de inicialização diferente pode ser instalado para exibir uma "
+"lista de sistemas operacionais para que o usuário possa selecionar um para "
+"inicializar."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:82
+#, fuzzy
 msgid ""
 "The remainder of the FreeBSD bootstrap system is divided into three stages. "
 "The first stage knows just enough to get the computer into a specific state "
@@ -190,6 +207,14 @@ msgid ""
 "limits on the size of the programs that can be run at stages one and two. "
 "Chaining the tasks together allows FreeBSD to provide a more flexible loader."
 msgstr ""
+"O restante do sistema de boot do FreeBSD é dividido em três estágios. O "
+"primeiro estágio sabe apenas o suficiente para colocar o computador em um "
+"estado específico e executar o segundo estágio. O segundo estágio pode fazer "
+"um pouco mais, antes de executar o terceiro estágio. O terceiro estágio "
+"termina a tarefa de carregar o sistema operacional. O trabalho é dividido em "
+"três etapas porque o <acronym>MBR</acronym> coloca limites no tamanho dos "
+"programas que podem ser executados nos estágios um e dois. Encadear as "
+"tarefas juntas permite que o FreeBSD forneça um carregador mais flexível."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:84
@@ -311,6 +336,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:128
+#, fuzzy
 msgid ""
 "Stage two, [.filename]#boot2#, is slightly more sophisticated, and "
 "understands the FreeBSD file system enough to find files. It can provide a "
@@ -319,6 +345,13 @@ msgid ""
 "the boot process is interrupted at stage two, the following interactive "
 "screen is displayed:"
 msgstr ""
+"O estágio dois, <filename>boot2</filename>, é um pouco mais sofisticado, e "
+"entende o sistema de arquivos do FreeBSD o suficiente para encontrar "
+"arquivos. Ele pode fornecer uma interface simples para escolher o kernel ou "
+"loader para ser executado. Ele executa o <application>loader</application>, "
+"que é muito mais sofisticado e fornece um arquivo de configuração de "
+"inicialização. Se o processo de inicialização for interrompido no estágio "
+"dois, a seguinte tela interativa será exibida:"
 
 #. type: Block title
 #: documentation/content/en/books/handbook/boot/_index.adoc:130
@@ -381,12 +414,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:163
+#, fuzzy
 msgid ""
 "During initialization, loader will probe for a console and for disks, and "
 "figure out which disk it is booting from. It will set variables accordingly, "
 "and an interpreter is started where user commands can be passed from a "
 "script or interactively."
 msgstr ""
+"Durante a inicialização, o <application>loader</application> procurará por "
+"um console e por discos, e descobrirá de qual disco está sendo inicializado. "
+"Ele irá definir as variáveis de acordo, e um interpretador é iniciado onde "
+"os comandos do usuário podem ser passados a partir de um script ou usados "
+"interativamente."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:165
@@ -606,9 +645,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:285
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Enter full pathname of shell or RETURN for /bin/sh:\n"
-msgstr ""
+msgstr "Enter full pathname of shell or RETURN for /bin/sh:\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:288
@@ -659,7 +698,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:306
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# name  getty                           type    status          comments\n"
 "#\n"
@@ -667,6 +706,12 @@ msgid ""
 "# when going to single-user mode.\n"
 "console none                            unknown off insecure\n"
 msgstr ""
+"# name  getty                           type  status  comments\n"
+"#\n"
+"# If console is marked \"insecure\", then init will ask for the root "
+"password\n"
+"# when going to single-user mode.\n"
+"console none                            unknown  off  secure\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:311
@@ -684,12 +729,18 @@ msgstr "Modo Multi-User"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:316
+#, fuzzy
 msgid ""
 "If init finds the file systems to be in order, or once the user has finished "
 "their commands in single-user mode and has typed `exit` to leave single-user "
 "mode, the system enters multi-user mode, in which it starts the resource "
 "configuration of the system."
 msgstr ""
+"Se o <application>init</application> encontrar os sistemas de arquivos em "
+"ordem, ou quando o usuário tiver concluído seus comandos no modo de usuário "
+"único e tiver digitado <command>exit</command> para deixar o modo single-"
+"user, o sistema entra no modo multi-user, no qual inicia a configuração de "
+"recursos do sistema."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:318
@@ -743,10 +794,14 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:331
+#, fuzzy
 msgid ""
 "The syntax for [.filename]#/boot/device.hints# is one variable per line, "
 "using the hash \"#\" as comment markers. Lines are constructed as follows:"
 msgstr ""
+"A sintaxe para o arquivo <filename>/boot/device.hints</filename> é uma "
+"variável por linha, usando o hash <quote>#</quote> como marcadores de "
+"comentário. As linhas são construídas da seguinte forma:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:335
