@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: 2021-03-30 23:18+0000\n"
+"PO-Revision-Date: 2021-04-08 00:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookadvanced-networking_index/pt_BR/>\n"
@@ -208,6 +208,7 @@ msgstr "padrão"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:102
+#, fuzzy
 msgid ""
 "The first route in this table specifies the `default` route. When the local "
 "system needs to make a connection to a remote host, it checks the routing "
@@ -215,9 +216,15 @@ msgid ""
 "entry in the table, the system checks to see if it can connect using the "
 "interface specified in that entry."
 msgstr ""
+"A primeira rota nesta tabela especifica a rota <literal>padrão</literal>. "
+"Quando o sistema local precisa estabelecer uma conexão com um host remoto, "
+"ele verifica a tabela de roteamento para determinar se existe um caminho "
+"conhecido. Se o host remoto corresponder a uma entrada na tabela, o sistema "
+"verificará se pode se conectar usando a interface especificada nessa entrada."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:104
+#, fuzzy
 msgid ""
 "If the destination does not match an entry, or if all known paths fail, the "
 "system uses the entry for the default route. For hosts on a local area "
@@ -225,6 +232,12 @@ msgid ""
 "has a direct connection to the Internet. When reading this entry, verify "
 "that the `Flags` column indicates that the gateway is usable (`UG`)."
 msgstr ""
+"Se o destino não corresponder a uma entrada ou se todos os caminhos "
+"conhecidos falharem, o sistema usará a entrada para a rota padrão. Para "
+"hosts em uma rede local, o campo <literal>Gateway</literal> na rota padrão é "
+"definido para o sistema que possui uma conexão direta com a internet. Ao ler "
+"esta entrada, verifique se a coluna <literal>Flags</literal> indica que o "
+"gateway é utilizável (<literal>UG</literal>)."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:106
@@ -378,9 +391,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:162
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "defaultrouter=\"10.20.30.1\"\n"
-msgstr ""
+msgstr "defaultrouter=\"10.20.30.1\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:165
@@ -409,6 +422,7 @@ msgstr "Configurando um roteador com rotas estáticas"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:177
+#, fuzzy
 msgid ""
 "A FreeBSD system can be configured as the default gateway, or router, for a "
 "network if it is a dual-homed system. A dual-homed system is a host which "
@@ -417,9 +431,16 @@ msgid ""
 "bind multiple addresses, each on a different subnet, to one physical "
 "interface."
 msgstr ""
+"Um sistema FreeBSD pode ser configurado como o gateway padrão, ou roteador, "
+"para uma rede se for um sistema dual-homed. Um sistema dual-homed é um host "
+"que reside em pelo menos duas redes diferentes. Normalmente, cada rede é "
+"conectada a uma interface de rede separada, embora o aliasing <acronym>IP</"
+"acronym> possa ser usado para vincular vários endereços, cada um em uma sub-"
+"rede diferente, a uma interface física."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:179
+#, fuzzy
 msgid ""
 "In order for the system to forward packets between interfaces, FreeBSD must "
 "be configured as a router. Internet standards and good engineering practice "
@@ -427,12 +448,18 @@ msgid ""
 "can be configured to start at boot by adding this line to [.filename]#/etc/"
 "rc.conf#:"
 msgstr ""
+"Para que o sistema encaminhe os pacotes entre as interfaces, o FreeBSD deve "
+"ser configurado como um roteador. Padrões da Internet e boas práticas de "
+"engenharia impedem o Projeto FreeBSD de habilitar esse recurso por padrão, "
+"mas ele pode ser configurado para iniciar na inicialização adicionando esta "
+"linha ao <filename>/etc/rc.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:183
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "gateway_enable=\"YES\"          # Set to YES if this host will be a gateway\n"
 msgstr ""
+"gateway_enable=\"YES\"          # Set to YES if this host will be a gateway\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:186
@@ -538,12 +565,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:229
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# Add Internal Net 2 as a persistent static route\n"
 "static_routes=\"internalnet2\"\n"
 "route_internalnet2=\"-net 192.168.2.0/24 192.168.1.2\"\n"
 msgstr ""
+"# Add Internal Net 2 as a persistent static route\n"
+"static_routes=\"internalnet2\"\n"
+"route_internalnet2=\"-net 192.168.2.0/24 192.168.1.2\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:232
@@ -563,12 +593,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:240
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "static_routes=\"net1 net2\"\n"
 "route_net1=\"-net 192.168.0.0/24 192.168.0.1\"\n"
 "route_net2=\"-net 192.168.1.0/24 192.168.1.1\"\n"
 msgstr ""
+"static_routes=\"net1 net2\"\n"
+"route_net1=\"-net 192.168.0.0/24 192.168.0.1\"\n"
+"route_net2=\"-net 192.168.1.0/24 192.168.1.1\"\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:243
@@ -580,12 +613,17 @@ msgstr "Solução de problemas"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:246
+#, fuzzy
 msgid ""
 "When an address space is assigned to a network, the service provider "
 "configures their routing tables so that all traffic for the network will be "
 "sent to the link for the site. But how do external sites know to send their "
 "packets to the network's ISP?"
 msgstr ""
+"Quando um espaço de endereçamento é atribuído a uma rede, o provedor de "
+"serviços configura suas tabelas de roteamento para que todo o tráfego da "
+"rede seja enviado para o link do site. Mas como os sites externos sabem "
+"enviar seus pacotes para a rede do <acronym>ISP</acronym>?"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:248
@@ -619,12 +657,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:252
+#, fuzzy
 msgid ""
 "Sometimes, there is a problem with route propagation and some sites are "
 "unable to connect. Perhaps the most useful command for trying to figure out "
 "where routing is breaking down is `traceroute`. It is useful when `ping` "
 "fails."
 msgstr ""
+"Às vezes, há um problema com a propagação de rotas e alguns sites não "
+"conseguem se conectar. Talvez o comando mais útil para tentar descobrir onde "
+"o roteamento está quebrando seja o <command>traceroute</command>. Ele é  "
+"útil quando o <command>ping</command> falha."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:254
@@ -657,9 +700,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:263
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "options MROUTING\n"
-msgstr ""
+msgstr "options MROUTING\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:266
@@ -730,6 +773,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:284
+#, fuzzy
 msgid ""
 "Separate from the underlying transmission techniques, 802.11 networks have a "
 "variety of security mechanisms. The original 802.11 specifications defined a "
@@ -751,9 +795,35 @@ msgid ""
 "encrypting data. The AES cipher was not required in WPA because it was "
 "deemed too computationally costly to be implemented on legacy hardware."
 msgstr ""
+"Separadas das técnicas de transmissão básicas, as redes 802.11 possuem uma "
+"variedade de mecanismos de segurança. As especificações originais do 802.11 "
+"definiam um protocolo de segurança simples chamado <acronym>WEP</acronym>. "
+"Este protocolo usa uma chave pré-compartilhada fixa e a criptografia "
+"criptográfica RC4 para codificar dados transmitidos em uma rede. Todas as "
+"estações devem concordar com a chave fixa para se comunicar. Esse esquema "
+"mostrou-se de fácil quebra e agora raramente é usado, exceto para "
+"desencorajar usuários transitórios a se juntarem a uma rede. A prática atual "
+"de segurança é dada pela especificação 802.11i do <trademark class="
+"\"registered\">IEEE</trademark> que define novas cifras criptográficas e um "
+"protocolo adicional para autenticar estações para um ponto de acesso e para "
+"trocar chaves para comunicação de dados. As chaves criptográficas são "
+"atualizadas periodicamente e existem mecanismos para detectar e combater "
+"tentativas de invasão. Outra especificação de protocolo de segurança "
+"comumente usada em redes sem fio é denominada <acronym>WPA</acronym>, que "
+"foi um precursor do 802.11i. O <acronym>WPA</acronym> especifica um "
+"subconjunto dos requisitos encontrados no 802.11i e foi projetado para "
+"implementação em hardware legado. Especificamente, o <acronym>WPA</acronym> "
+"requer apenas a codificação <acronym>TKIP</acronym> derivada da codificação "
+"original <acronym>WEP</acronym>. O 802.11i permite o uso do <acronym>TKIP</"
+"acronym>, mas também requer suporte para uma criptografia mais forte, o AES-"
+"CCM, para criptografar os dados. A codificação \n"
+"<acronym>AES</acronym> não era exigida no <acronym>WPA</acronym> porque foi "
+"considerada demasiadamente  cara computacionalmente para ser executada em "
+"hardware legado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:286
+#, fuzzy
 msgid ""
 "The other standard to be aware of is 802.11e. It defines protocols for "
 "deploying multimedia applications, such as streaming video and voice over IP "
@@ -767,9 +837,23 @@ msgid ""
 "implementation of these protocols enables high speed bursting of data and "
 "prioritized traffic flow."
 msgstr ""
+"Um outro padrão a se ter em conta é o 802.11e. Ele define protocolos para a "
+"implantação de aplicativos multimídia, como streaming de vídeo e voz sobre "
+"IP (<acronym>VoIP</acronym>), em uma rede 802.11. Como o 802.11i, o 802.11e "
+"também tem uma especificação de precursor denominada <acronym>WME</acronym> ("
+"posteriormente renomeada como <acronym>WMM</acronym>) que foi definida por "
+"um grupo industrial como um subconjunto do 802.11e que pode ser implantado "
+"agora para habilitar aplicativos multimídia enquanto aguarda a ratificação "
+"final do 802.11e. O mais importante a saber sobre o 802.11e e o "
+"<acronym>WME</acronym>/<acronym>WMM</acronym> é que ele permite o tráfego "
+"prioritário através de uma rede sem fio através de protocolos de Qualidade "
+"de Serviço (<acronym>QoS</acronym>) e protocolos de acesso de mídia "
+"aprimorados. A implementação adequada desses protocolos permite o aumento "
+"rápido de dados e o fluxo de tráfego priorizado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:288
+#, fuzzy
 msgid ""
 "FreeBSD supports networks that operate using 802.11a, 802.11b, and 802.11g. "
 "The WPA and 802.11i security protocols are likewise supported (in "
@@ -777,6 +861,12 @@ msgid ""
 "prioritization required by the WME/WMM protocols are supported for a limited "
 "set of wireless devices."
 msgstr ""
+"O FreeBSD suporta redes que operam usando 802.11a, 802.11b e 802.11g. Os "
+"protocolos de segurança <acronym>WPA</acronym> e 802.11i também são "
+"suportados (em conjunto com qualquer um dos 11a, 11b e 11g) e o "
+"<acronym>QoS</acronym> e priorização de tráfego exigidos pelo protocolo  "
+"<acronym>WME</acronym>/<acronym>WMM</acronym> são suportados por um conjunto "
+"limitado de dispositivos sem fio."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:290
@@ -816,8 +906,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:304
+#, fuzzy
 msgid "  On FreeBSD 11 or higher, use this command instead:"
-msgstr ""
+msgstr "  No FreeBSD 11 ou superior, use este comando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:308
@@ -827,10 +918,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:311
+#, fuzzy
 msgid ""
 "  If a wireless adapter is not listed, an additional kernel module might be "
 "required, or it might be a model not supported by FreeBSD."
 msgstr ""
+"  Se um adaptador sem fio não estiver listado, um módulo adicional do kernel "
+"pode ser necessário, ou pode ser um modelo não suportado pelo FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:313
@@ -857,17 +951,22 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:324
+#, fuzzy
 msgid ""
 "Add entries to [.filename]#/etc/rc.conf# to configure the network on startup:"
 msgstr ""
+"Adicione entradas ao <filename>/etc/rc.conf</filename> para configurar a "
+"rede na inicialização:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:329
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "wlans_ath0=\"wlan0\"\n"
 "ifconfig_wlan0=\"WPA SYNCDHCP\"\n"
 msgstr ""
+"wlans_ath0=\"wlan0\"\n"
+"ifconfig_wlan0=\"WPA DHCP\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:332
@@ -918,9 +1017,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:350
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "if_ath_load=\"YES\"\n"
-msgstr ""
+msgstr "if_ath_load=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:353
@@ -936,9 +1035,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:357
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "if_wi_load=\"YES\"\n"
-msgstr ""
+msgstr "if_wi_load=\"YES\"\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:362
@@ -969,12 +1068,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:371
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "wlan_wep_load=\"YES\"\n"
 "wlan_ccmp_load=\"YES\"\n"
 "wlan_tkip_load=\"YES\"\n"
 msgstr ""
+"wlan_wep_load=\"YES\"\n"
+"wlan_ccmp_load=\"YES\"\n"
+"wlan_tkip_load=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:374
@@ -997,7 +1099,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:390
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "device wlan              # 802.11 support\n"
 "device wlan_wep          # 802.11 WEP support\n"
@@ -1009,6 +1111,15 @@ msgid ""
 "options AH_SUPPORT_AR5416 # enable AR5416 tx/rx descriptors\n"
 "device ath_rate_sample   # SampleRate tx rate control for ath\n"
 msgstr ""
+"device wlan              # 802.11 support\n"
+"device wlan_wep          # 802.11 WEP support\n"
+"device wlan_ccmp         # 802.11 CCMP support\n"
+"device wlan_tkip         # 802.11 TKIP support\n"
+"device wlan_amrr         # AMRR transmit rate control algorithm\n"
+"device ath               # Atheros pci/cardbus NIC's\n"
+"device ath_hal           # pci/cardbus chip support\n"
+"options AH_SUPPORT_AR5416 # enable AR5416 tx/rx descriptors\n"
+"device ath_rate_sample   # SampleRate tx rate control for ath\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:393
@@ -1086,12 +1197,17 @@ msgstr "Modo de Infraestrutura"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:425
+#, fuzzy
 msgid ""
 "Infrastructure (BSS) mode is the mode that is typically used. In this mode, "
 "a number of wireless access points are connected to a wired network. Each "
 "wireless network has its own name, called the SSID. Wireless clients connect "
 "to the wireless access points."
 msgstr ""
+"O modo de infra-estrutura (<acronym>BSS</acronym>) é o modo normalmente "
+"usado. Neste modo, vários pontos de acesso sem fio são conectados a uma rede "
+"com fio. Cada rede sem fio tem seu próprio nome, chamado de <acronym>SSID</"
+"acronym>. Os clientes sem fio se conectam aos pontos de acesso sem fio."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:426
@@ -1184,11 +1300,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:478
+#, fuzzy
 msgid ""
 "This information may be updated automatically by the adapter or manually "
 "with a `scan` request. Old data is automatically removed from the cache, so "
 "over time this list may shrink unless more scans are done."
 msgstr ""
+"Essas informações podem ser atualizadas automaticamente pelo adaptador ou "
+"manualmente com uma solicitação de <option>scan</option>. Dados antigos são "
+"automaticamente removidos do cache, então com o tempo essa lista pode "
+"diminuir a menos que mais varreduras sejam feitas."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:479
@@ -1199,20 +1320,29 @@ msgstr "Configurações básicas"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:482
+#, fuzzy
 msgid ""
 "This section provides a simple example of how to make the wireless network "
 "adapter work in FreeBSD without encryption. Once familiar with these "
 "concepts, it is strongly recommend to use <<network-wireless-wpa,WPA>> to "
 "set up the wireless network."
 msgstr ""
+"Esta seção fornece um exemplo simples de como fazer com que o adaptador de "
+"rede sem fio funcione no FreeBSD sem criptografia. Uma vez familiarizado com "
+"esses conceitos, é altamente recomendável usar o <link linkend=\"network-"
+"wireless-wpa\">WPA</link> para configurar a rede sem fio."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:484
+#, fuzzy
 msgid ""
 "There are three basic steps to configure a wireless network: select an "
 "access point, authenticate the station, and configure an IP address. The "
 "following sections discuss each step."
 msgstr ""
+"Existem três etapas básicas para configurar uma rede sem fio: selecionar um "
+"ponto de acesso, autenticar a estação e configurar um endereço <acronym>IP</"
+"acronym>. As seções a seguir discutem cada etapa."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:486
@@ -1221,20 +1351,27 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:488
+#, fuzzy
 msgid ""
 "Most of the time, it is sufficient to let the system choose an access point "
 "using the builtin heuristics. This is the default behavior when an interface "
 "is marked as up or it is listed in [.filename]#/etc/rc.conf#:"
 msgstr ""
+"Na maioria das vezes, é suficiente deixar o sistema escolher um ponto de "
+"acesso usando a heurística integrada. Este é o comportamento padrão quando "
+"uma interface é marcada como up ou está listada em <filename>/etc/rc."
+"conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:493
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:546
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "wlans_ath0=\"wlan0\"\n"
 "ifconfig_wlan0=\"DHCP\"\n"
 msgstr ""
+"wlans_ath0=\"wlan0\"\n"
+"ifconfig_wlan0=\"DHCP\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:496
@@ -1253,12 +1390,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:504
+#, fuzzy
 msgid ""
 "In an environment where there are multiple access points with the same SSID, "
 "which is often done to simplify roaming, it may be necessary to associate to "
 "one specific device. In this case, the BSSID of the access point can be "
 "specified, with or without the SSID:"
 msgstr ""
+"Em um ambiente em que há vários pontos de acesso com o mesmo <acronym>SSID</"
+"acronym>, o que geralmente é feito para simplificar o roaming, talvez seja "
+"necessário associá-lo a um dispositivo específico. Neste caso, o "
+"<acronym>BSSID</acronym> do ponto de acesso pode ser especificado, com ou "
+"sem o <acronym>SSID</acronym>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:509
@@ -1270,6 +1413,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:512
+#, fuzzy
 msgid ""
 "There are other ways to constrain the choice of an access point, such as "
 "limiting the set of frequencies the system will scan on. This may be useful "
@@ -1277,6 +1421,11 @@ msgid ""
 "time-consuming. To limit operation to a specific band, use the `mode` "
 "parameter:"
 msgstr ""
+"Existem outras maneiras de restringir a escolha de um ponto de acesso, como "
+"limitar o conjunto de freqüências que o sistema fará a varredura. Isso pode "
+"ser útil para uma placa sem fio de banda múltipla, pois a varredura de todos "
+"os canais possíveis pode consumir muito tempo. Para limitar a operação a uma "
+"banda específica, use o parâmetro <option>mode</option>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:517
@@ -1304,6 +1453,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:524
+#, fuzzy
 msgid ""
 "Once an access point is selected, the station needs to authenticate before "
 "it can pass data. Authentication can happen in several ways. The most common "
@@ -1316,6 +1466,18 @@ msgid ""
 "next most common setup is WPA-PSK, also known as WPA Personal, which is "
 "described in <<network-wireless-wpa-wpa-psk>>."
 msgstr ""
+"Quando um ponto de acesso é selecionado, a estação precisa se autenticar "
+"antes de poder transmitir dados. A autenticação pode acontecer de várias "
+"maneiras. O esquema mais comum, autenticação aberta, permite que qualquer "
+"estação entre na rede e se comunique. Essa é a autenticação a ser usada para "
+"fins de teste na primeira vez em que uma rede sem fio é configurada. Outros "
+"esquemas exigem que os handshakes criptográficos sejam concluídos antes que "
+"o tráfego de dados possa fluir, usando chaves ou segredos pré-compartilhados "
+"ou esquemas mais complexos que envolvam serviços de back-end, como o "
+"<acronym>RADIUS</acronym>. Autenticação aberta é a configuração padrão. A "
+"próxima configuração mais comum é o <acronym>WPA-PSK</acronym>, também "
+"conhecido como <acronym>WPA</acronym> Pessoal, que é descrito em <xref "
+"linkend=\"network-wireless-wpa-wpa-psk\"/>."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:528
@@ -1476,6 +1638,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:596
+#, fuzzy
 msgid ""
 "WPA-PSK, also known as WPA Personal, is based on a pre-shared key (PSK) "
 "which is generated from a given password and used as the master key in the "
@@ -1483,6 +1646,12 @@ msgid ""
 "WPA-PSK is intended for small networks where the use of an authentication "
 "server is not possible or desired."
 msgstr ""
+"O <acronym>WPA-PSK</acronym>, também conhecido como <acronym>WPA</acronym> "
+"Pessoal, é baseado em uma chave pré-compartilhada (<acronym>PSK</acronym>) "
+"que é gerada a partir de uma determinada senha e usado como chave mestra na "
+"rede sem fio. Isso significa que todos os usuários sem fio compartilharão a "
+"mesma chave. O <acronym>WPA-PSK</acronym> destina-se a redes pequenas em que "
+"o uso de um servidor de autenticação não é possível ou desejado."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:601
@@ -1502,13 +1671,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:611
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "network={\n"
 "  ssid=\"freebsdap\"\n"
 "  psk=\"freebsdmall\"\n"
 "}\n"
 msgstr ""
+"network={\n"
+"  ssid=\"freebsdap\"\n"
+"  psk=\"freebsdmall\"\n"
+"}\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:614
@@ -1523,11 +1696,13 @@ msgstr ""
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:750
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:809
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:876
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "wlans_ath0=\"wlan0\"\n"
 "ifconfig_wlan0=\"WPA DHCP\"\n"
 msgstr ""
+"wlans_ath0=\"wlan0\"\n"
+"ifconfig_wlan0=\"WPA DHCP\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:622
@@ -1537,7 +1712,7 @@ msgstr "Então, suba a interface:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:643
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# service netif start\n"
 "Starting wpa_supplicant.\n"
@@ -1558,13 +1733,34 @@ msgid ""
 "      bgscanintvl 300 bgscanidle 250 roam:rssi 7 roam:rate 5 protmode CTS\n"
 "      wme burst roaming MANUAL\n"
 msgstr ""
+"<prompt>#</prompt> <userinput>service netif start</userinput>\n"
+"Starting wpa_supplicant.\n"
+"DHCPDISCOVER on wlan0 to 255.255.255.255 port 67 interval 5\n"
+"DHCPDISCOVER on wlan0 to 255.255.255.255 port 67 interval 6\n"
+"DHCPOFFER from 192.168.0.1\n"
+"DHCPREQUEST on wlan0 to 255.255.255.255 port 67\n"
+"DHCPACK from 192.168.0.1\n"
+"bound to 192.168.0.254 -- renewal in 300 seconds.\n"
+"wlan0: flags=8843&lt;UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST&gt; mtu 1500\n"
+"      ether 00:11:95:d5:43:62\n"
+"      inet 192.168.0.254 netmask 0xffffff00 broadcast 192.168.0.255\n"
+"      media: IEEE 802.11 Wireless Ethernet OFDM/36Mbps mode 11g\n"
+"      status: associated\n"
+"      ssid freebsdap channel 1 (2412 Mhz 11g) bssid 00:11:95:c3:0d:ac\n"
+"      country US ecm authmode WPA2/802.11i privacy ON deftxkey UNDEF\n"
+"      AES-CCM 3:128-bit txpower 21.5 bmiss 7 scanvalid 450 bgscan\n"
+"      bgscanintvl 300 bgscanidle 250 roam:rssi 7 roam:rate 5 protmode CTS\n"
+"      wme burst roaming MANUAL\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:646
+#, fuzzy
 msgid ""
 "Or, try to configure the interface manually using the information in [."
 "filename]#/etc/wpa_supplicant.conf#:"
 msgstr ""
+"Ou, tente configurar a interface manualmente usando as informações em "
+"<filename>/etc/wpa_supplicant.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:654
@@ -1691,10 +1887,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:718
+#, fuzzy
 msgid ""
 "As previously, the configuration is done via [.filename]#/etc/wpa_supplicant."
 "conf#:"
 msgstr ""
+"Como anteriormente, a configuração é feita através do <filename>/etc/"
+"wpa_supplicant.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:732
@@ -1742,7 +1941,7 @@ msgstr "O próximo passo é subir a interface:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:772
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# service netif start\n"
 "Starting wpa_supplicant.\n"
@@ -1761,6 +1960,22 @@ msgid ""
 "      bgscanintvl 300 bgscanidle 250 roam:rssi 7 roam:rate 5 protmode CTS\n"
 "      wme burst roaming MANUAL\n"
 msgstr ""
+"<prompt>#</prompt> <userinput>service netif start</userinput>\n"
+"Starting wpa_supplicant.\n"
+"DHCPREQUEST on wlan0 to 255.255.255.255 port 67 interval 7\n"
+"DHCPREQUEST on wlan0 to 255.255.255.255 port 67 interval 15\n"
+"DHCPACK from 192.168.0.20\n"
+"bound to 192.168.0.254 -- renewal in 300 seconds.\n"
+"wlan0: flags=8843&lt;UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST&gt; mtu 1500\n"
+"      ether 00:11:95:d5:43:62\n"
+"      inet 192.168.0.254 netmask 0xffffff00 broadcast 192.168.0.255\n"
+"      media: IEEE 802.11 Wireless Ethernet DS/11Mbps mode 11g\n"
+"      status: associated\n"
+"      ssid freebsdap channel 1 (2412 Mhz 11g) bssid 00:11:95:c3:0d:ac\n"
+"      country US ecm authmode WPA2/802.11i privacy ON deftxkey UNDEF\n"
+"      AES-CCM 3:128-bit txpower 21.5 bmiss 7 scanvalid 450 bgscan\n"
+"      bgscanintvl 300 bgscanidle 250 roam:rssi 7 roam:rate 5 protmode CTS\n"
+"      wme burst roaming MANUAL\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:775
@@ -1786,10 +2001,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:782
+#, fuzzy
 msgid ""
 "The required configuration can be added to [.filename]#/etc/wpa_supplicant."
 "conf#:"
 msgstr ""
+"A configuração necessária pode ser adicionada ao <filename>/etc/"
+"wpa_supplicant.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:795
@@ -1828,7 +2046,7 @@ msgstr ""
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:832
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:899
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# service netif start\n"
 "Starting wpa_supplicant.\n"
@@ -1848,6 +2066,23 @@ msgid ""
 "      bgscanintvl 300 bgscanidle 250 roam:rssi 7 roam:rate 5 protmode CTS\n"
 "      wme burst roaming MANUAL\n"
 msgstr ""
+"<prompt>#</prompt> <userinput>service netif start</userinput>\n"
+"Starting wpa_supplicant.\n"
+"DHCPREQUEST on wlan0 to 255.255.255.255 port 67 interval 7\n"
+"DHCPREQUEST on wlan0 to 255.255.255.255 port 67 interval 15\n"
+"DHCPREQUEST on wlan0 to 255.255.255.255 port 67 interval 21\n"
+"DHCPACK from 192.168.0.20\n"
+"bound to 192.168.0.254 -- renewal in 300 seconds.\n"
+"wlan0: flags=8843&lt;UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST&gt; mtu 1500\n"
+"      ether 00:11:95:d5:43:62\n"
+"      inet 192.168.0.254 netmask 0xffffff00 broadcast 192.168.0.255\n"
+"      media: IEEE 802.11 Wireless Ethernet DS/11Mbps mode 11g\n"
+"      status: associated\n"
+"      ssid freebsdap channel 1 (2412 Mhz 11g) bssid 00:11:95:c3:0d:ac\n"
+"      country US ecm authmode WPA2/802.11i privacy ON deftxkey UNDEF\n"
+"      AES-CCM 3:128-bit txpower 21.5 bmiss 7 scanvalid 450 bgscan\n"
+"      bgscanintvl 300 bgscanidle 250 roam:rssi 7 roam:rate 5 protmode CTS\n"
+"      wme burst roaming MANUAL\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:836
@@ -1935,11 +2170,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:905
+#, fuzzy
 msgid ""
 "Wired Equivalent Privacy (WEP) is part of the original 802.11 standard. "
 "There is no authentication mechanism, only a weak form of access control "
 "which is easily cracked."
 msgstr ""
+"A privacidade equivalente com fio (<acronym>WEP</acronym>) faz parte do "
+"padrão 802.11 original. Não há mecanismo de autenticação, apenas uma forma "
+"fraca de controle de acesso que é facilmente quebrada."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:907
@@ -1994,7 +2233,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:935
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "network={\n"
 "  ssid=\"my_net\"\n"
@@ -2003,6 +2242,12 @@ msgid ""
 "  wep_tx_keyidx=3\n"
 "}\n"
 msgstr ""
+"network={\n"
+"  ssid=\"my_net\"\n"
+"  key_mgmt=NONE\n"
+"  wep_key3=3456789012\n"
+"  wep_tx_keyidx=3\n"
+"}\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:938
@@ -2111,12 +2356,18 @@ msgstr "Pontos de Acesso com um host FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1001
+#, fuzzy
 msgid ""
 "FreeBSD can act as an Access Point (AP) which eliminates the need to buy a "
 "hardware AP or run an ad-hoc network. This can be particularly useful when a "
 "FreeBSD machine is acting as a gateway to another network such as the "
 "Internet."
 msgstr ""
+"O FreeBSD pode atuar como um Access Point (<acronym>AP</acronym>), o que "
+"elimina a necessidade de comprar um hardware <acronym>AP</acronym> ou "
+"executar uma rede ad-hoc. Isso pode ser particularmente útil quando uma "
+"máquina FreeBSD está atuando como um gateway para outra rede, como a "
+"Internet."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1006
@@ -2227,10 +2478,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1057
+#, fuzzy
 msgid ""
 "The interface configuration can be done automatically at boot time by adding "
 "the following lines to [.filename]#/etc/rc.conf#:"
 msgstr ""
+"A configuração da interface pode ser feita automaticamente no momento da "
+"inicialização, adicionando as seguintes linhas ao <filename>/etc/rc."
+"conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1063
@@ -2249,11 +2504,16 @@ msgstr "Ponto de acesso baseado em host sem autenticação ou criptografia"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1068
+#, fuzzy
 msgid ""
 "Although it is not recommended to run an AP without any authentication or "
 "encryption, this is a simple way to check if the AP is working. This "
 "configuration is also important for debugging client issues."
 msgstr ""
+"Embora não seja recomendado executar um <acronym>AP</acronym> sem nenhuma "
+"autenticação ou criptografia, esta é uma maneira simples de verificar se o "
+"<acronym>AP</acronym> está funcionando. Essa configuração também é "
+"importante para depurar problemas do cliente."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1070
@@ -2325,9 +2585,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1108
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "hostapd_enable=\"YES\"\n"
-msgstr ""
+msgstr "hostapd_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1111
@@ -2539,12 +2799,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1215
+#, fuzzy
 msgid ""
 "On FreeBSD, it is possible to combine two or even more network interfaces "
 "together in a \"failover\" fashion. This type of configuration uses the most "
 "preferred and available connection from a group of network interfaces, and "
 "the operating system switches automatically when the link state changes."
 msgstr ""
+"No FreeBSD, é possível combinar duas ou mais interfaces de rede em um "
+"<quote>failover</quote>. Esse tipo de configuração usa a conexão mais "
+"prioritária e disponível de um grupo de interfaces de rede, e o sistema "
+"operacional alterna automaticamente quando o estado do link é alterado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1217
@@ -2576,6 +2841,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1224
+#, fuzzy
 msgid ""
 "If the device cannot associate with an access point, verify that the "
 "configuration matches the settings on the access point. This includes the "
@@ -2584,6 +2850,13 @@ msgid ""
 "configure the access point for open authentication and no security to see if "
 "traffic will pass."
 msgstr ""
+"Se o dispositivo não puder se associar a um ponto de acesso, verifique se a "
+"configuração corresponde às configurações no ponto de acesso. Isso inclui o "
+"esquema de autenticação e qualquer protocolo de segurança. Simplifique a "
+"configuração tanto quanto possível. Se estiver usando um protocolo de "
+"segurança, como o <acronym>WPA</acronym> ou o <acronym>WEP</acronym>, "
+"configure o ponto de acesso para autenticação aberta e nenhuma segurança "
+"para ver se o tráfego irá passar."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1226
@@ -2618,6 +2891,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1236
+#, fuzzy
 msgid ""
 "  Many useful statistics are maintained by the 802.11 layer and `wlanstats`, "
 "found in [.filename]#/usr/src/tools/tools/net80211#, will dump this "
@@ -2626,6 +2900,13 @@ msgid ""
 "lie below the 802.11 layer so they may not show up. To diagnose device-"
 "specific problems, refer to the drivers' documentation."
 msgstr ""
+"  Muitas estatísticas úteis são mantidas pela camada 802.11 e o "
+"<command>wlanstats</command>, encontrado em <filename>/usr/src/tools/tools/"
+"net80211</filename>, vai despejar esta informação. Essas estatísticas devem "
+"exibir todos os erros identificados pela camada 802.11. No entanto, alguns "
+"erros são identificados nos drivers de dispositivo que estão abaixo da "
+"camada 802.11, portanto eles podem não aparecer. Para diagnosticar problemas "
+"específicos do dispositivo, consulte a documentação do driver."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1238
@@ -2690,11 +2971,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1260
+#, fuzzy
 msgid ""
 "To make this change permanent and load the driver as a module at boot time, "
 "place the appropriate line of the following in [.filename]#/boot/loader."
 "conf#:"
 msgstr ""
+"Para tornar essa alteração permanente e carregar o driver como um módulo no "
+"momento da inicialização, coloque a linha apropriada abaixo em <filename>/"
+"boot/loader.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1266
@@ -2713,6 +2998,7 @@ msgstr "Bluetooth"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1272
+#, fuzzy
 msgid ""
 "Bluetooth is a wireless technology for creating personal networks operating "
 "in the 2.4 GHz unlicensed band, with a range of 10 meters. Networks are "
@@ -2721,6 +3007,14 @@ msgid ""
 "higher level service profiles, such as FTP-like file servers, file pushing, "
 "voice transport, serial line emulation, and more."
 msgstr ""
+"O bluetooth é uma tecnologia sem fio para a criação de redes pessoais que "
+"operam na faixa não licenciada de 2,4 GHz, com um alcance de 10 metros. As "
+"redes geralmente são formadas em modo ad-hoc a partir de dispositivos "
+"portáteis, como telefones celulares, computadores de mão e laptops. Ao "
+"contrário da tecnologia sem fio Wi-Fi, o Bluetooth oferece perfis de "
+"serviços de nível superior, como servidores de arquivos semelhantes ao "
+"<acronym>FTP</acronym>, envio de arquivos, transporte de voz, emulação de "
+"linha serial e muito mais."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1274
@@ -2762,17 +3056,22 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1287
+#, fuzzy
 msgid ""
 "If the Bluetooth device will be attached to the system during system "
 "startup, the system can be configured to load the module at boot time by "
 "adding the driver to [.filename]#/boot/loader.conf#:"
 msgstr ""
+"Se o dispositivo Bluetooth for conectado ao sistema durante a inicialização "
+"do sistema, o sistema pode ser configurado para carregar o módulo no momento "
+"da inicialização, adicionando o driver ao <filename>/boot/loader."
+"conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1291
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ng_ubt_load=\"YES\"\n"
-msgstr ""
+msgstr "ng_ubt_load=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1294
@@ -2784,13 +3083,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1301
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "ubt0: vendor 0x0a12 product 0x0001, rev 1.10/5.25, addr 2\n"
 "ubt0: Interface 0 endpoints: interrupt=0x81, bulk-in=0x82, bulk-out=0x2\n"
 "ubt0: Interface 1 (alt.config 5) endpoints: isoc-in=0x83, isoc-out=0x3,\n"
 "      wMaxPacketSize=49, nframes=6, buffer size=294\n"
 msgstr ""
+"ubt0: vendor 0x0a12 product 0x0001, rev 1.10/5.25, addr 2\n"
+"ubt0: Interface 0 endpoints: interrupt=0x81, bulk-in=0x82, bulk-out=0x2\n"
+"ubt0: Interface 1 (alt.config 5) endpoints: isoc-in=0x83, isoc-out=0x3,\n"
+"      wMaxPacketSize=49, nframes=6, buffer size=294\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1304
@@ -2882,11 +3185,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1351
+#, fuzzy
 msgid ""
 "If an inquiry is performed on a remote Bluetooth device, it will find the "
 "computer as \"your.host.name (ubt0)\". The name assigned to the local device "
 "can be changed at any time."
 msgstr ""
+"Se uma consulta for realizada em um dispositivo Bluetooth remoto, ele "
+"encontrará o computador como <quote>your.host.name (ubt0)</quote>. O nome "
+"atribuído ao dispositivo local pode ser alterado a qualquer momento."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1353
@@ -2972,6 +3279,7 @@ msgstr "Emparelhamento de dispositivos"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1386
+#, fuzzy
 msgid ""
 "By default, Bluetooth communication is not authenticated, and any device can "
 "talk to any other device. A Bluetooth device, such as a cellular phone, may "
@@ -2984,6 +3292,20 @@ msgid ""
 "previously generated link key. This procedure is called _pairing_. Note that "
 "if the link key is lost by either device, the pairing must be repeated."
 msgstr ""
+"Por padrão, a comunicação Bluetooth não é autenticada e qualquer dispositivo "
+"pode conversar com qualquer outro dispositivo. Um dispositivo Bluetooth, "
+"como um telefone celular, pode optar por exigir autenticação para fornecer "
+"um serviço específico. A autenticação Bluetooth é normalmente feita com um "
+"<emphasis><acronym>PIN</acronym> code</emphasis>, uma string ASCII com até "
+"16 caracteres de comprimento. O usuário é obrigado a digitar o mesmo código "
+"de <acronym>PIN</acronym> em ambos os dispositivos. Depois que o usuário "
+"inserir o código de <acronym>PIN</acronym>, ambos os dispositivos gerarão "
+"uma <emphasis>chave de link</emphasis>. Depois disso, a chave de link pode "
+"ser armazenada nos dispositivos ou em um armazenamento persistente. Na "
+"próxima vez, os dois dispositivos usarão a chave de link gerada "
+"anteriormente. Este procedimento é chamado de <emphasis>emparelhamento</"
+"emphasis>. Observe que, se a chave de link for perdida por um dos "
+"dispositivos, o emparelhamento deverá ser repetido."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1388
@@ -2996,7 +3318,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1397
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "device {\n"
 "        bdaddr  00:80:37:29:19:a4;\n"
@@ -3005,6 +3327,12 @@ msgid ""
 "        pin     \"1234\";\n"
 "      }\n"
 msgstr ""
+"device {\n"
+"        bdaddr  00:80:37:29:19:a4;\n"
+"        name    \"Pav's T39\";\n"
+"        key     nokey;\n"
+"        pin     \"1234\";\n"
+"      }\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1400
@@ -3028,9 +3356,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1406
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "hcsecd_enable=\"YES\"\n"
-msgstr ""
+msgstr "hcsecd_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1409
@@ -3039,7 +3367,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1418
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "hcsecd[16484]: Got Link_Key_Request event from 'ubt0hci', remote bdaddr 0:80:37:29:19:a4\n"
 "hcsecd[16484]: Found matching entry, remote bdaddr 0:80:37:29:19:a4, name 'Pav's T39', link key doesn't exist\n"
@@ -3048,6 +3376,18 @@ msgid ""
 "hcsecd[16484]: Found matching entry, remote bdaddr 0:80:37:29:19:a4, name 'Pav's T39', PIN code exists\n"
 "hcsecd[16484]: Sending PIN_Code_Reply to 'ubt0hci' for remote bdaddr 0:80:37:29:19:a4\n"
 msgstr ""
+"hcsecd[16484]: Got Link_Key_Request event from 'ubt0hci', remote bdaddr "
+"0:80:37:29:19:a4\n"
+"hcsecd[16484]: Found matching entry, remote bdaddr 0:80:37:29:19:a4, name "
+"'Pav's T39', link key doesn't exist\n"
+"hcsecd[16484]: Sending Link_Key_Negative_Reply to 'ubt0hci' for remote "
+"bdaddr 0:80:37:29:19:a4\n"
+"hcsecd[16484]: Got PIN_Code_Request event from 'ubt0hci', remote bdaddr "
+"0:80:37:29:19:a4\n"
+"hcsecd[16484]: Found matching entry, remote bdaddr 0:80:37:29:19:a4, name "
+"'Pav's T39', PIN code exists\n"
+"hcsecd[16484]: Sending PIN_Code_Reply to 'ubt0hci' for remote bdaddr "
+"0:80:37:29:19:a4\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1420
@@ -3057,12 +3397,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1423
+#, fuzzy
 msgid ""
 "A Dial-Up Networking (DUN) profile can be used to configure a cellular phone "
 "as a wireless modem for connecting to a dial-up Internet access server. It "
 "can also be used to configure a computer to receive data calls from a "
 "cellular phone."
 msgstr ""
+"Um perfil de rede dial-up (<acronym>DUN</acronym>) pode ser usado para "
+"configurar um telefone celular como um modem sem fio para a conexão a um "
+"servidor de acesso à Internet dial-up. Também pode ser usado para configurar "
+"um computador para receber chamadas de dados de um telefone celular."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1425
@@ -3143,12 +3488,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1451
+#, fuzzy
 msgid ""
 "The Logical Link Control and Adaptation Protocol (L2CAP) provides connection-"
 "oriented and connectionless data services to upper layer protocols. L2CAP "
 "permits higher level protocols and applications to transmit and receive "
 "L2CAP data packets up to 64 kilobytes in length."
 msgstr ""
+"O Protocolo de Adaptação e Controle de Link Lógico (<acronym>L2CAP</acronym>)"
+" fornece serviços de dados orientados a conexão e sem conexão para "
+"protocolos de camada superior. O <acronym>L2CAP</acronym> permite que "
+"protocolos e aplicativos de alto nível transmitam e recebam pacotes de dados "
+"<acronym>L2CAP</acronym> de até 64 kilobytes de comprimento."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1453
@@ -3243,6 +3594,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1500
+#, fuzzy
 msgid ""
 "The RFCOMM protocol provides emulation of serial ports over the L2CAP "
 "protocol. RFCOMM is a simple transport protocol, with additional provisions "
@@ -3250,9 +3602,16 @@ msgid ""
 "supports up to 60 simultaneous connections (RFCOMM channels) between two "
 "Bluetooth devices."
 msgstr ""
+"O protocolo <acronym>RFCOMM</acronym> fornece emulação de portas seriais "
+"sobre o protocolo <acronym>L2CAP</acronym>. O <acronym>RFCOMM</acronym> é um "
+"protocolo de transporte simples, com disposições adicionais para emular os 9 "
+"circuitos das portas seriais RS-232 (EIATIA-232-E). Suporta até 60 conexões "
+"simultâneas (canais <acronym>RFCOMM</acronym>) entre dois dispositivos "
+"Bluetooth."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1502
+#, fuzzy
 msgid ""
 "For the purposes of RFCOMM, a complete communication path involves two "
 "applications running on the communication endpoints with a communication "
@@ -3260,9 +3619,16 @@ msgid ""
 "of the serial ports of the devices in which they reside. The communication "
 "segment is a direct connect Bluetooth link from one device to another."
 msgstr ""
+"Para fins do <acronym>RFCOMM</acronym>, um caminho de comunicação completo "
+"envolve dois aplicativos em execução nos terminais de comunicação com um "
+"segmento de comunicação entre eles. O <acronym>RFCOMM</acronym> destina-se a "
+"abranger aplicativos que fazem uso das portas seriais dos dispositivos em "
+"que residem. O segmento de comunicação é um link Bluetooth de conexão direta "
+"de um dispositivo para outro."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1504
+#, fuzzy
 msgid ""
 "RFCOMM is only concerned with the connection between the devices in the "
 "direct connect case, or between the device and a modem in the network case. "
@@ -3270,6 +3636,11 @@ msgid ""
 "via Bluetooth wireless technology on one side and provide a wired interface "
 "on the other side."
 msgstr ""
+"O <acronym>RFCOMM</acronym> está relacionado apenas com a conexão entre os "
+"dispositivos no caso de conexão direta ou entre o dispositivo e um modem no "
+"caso de rede. O <acronym>RFCOMM</acronym> pode suportar outras "
+"configurações, como módulos que se comunicam via tecnologia sem fio "
+"Bluetooth de um lado e fornecem uma interface com fio no outro lado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1506
@@ -3284,6 +3655,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1510
+#, fuzzy
 msgid ""
 "The Service Discovery Protocol (SDP) provides the means for client "
 "applications to discover the existence of services provided by server "
@@ -3291,9 +3663,16 @@ msgid ""
 "a service include the type or class of service offered and the mechanism or "
 "protocol information needed to utilize the service."
 msgstr ""
+"O Protocolo de Descoberta de Serviços (<acronym>SDP</acronym>) fornece os "
+"meios para os aplicativos clientes descobrirem a existência de serviços "
+"fornecidos por aplicativos de servidor, bem como os atributos desses "
+"serviços. Os atributos de um serviço incluem o tipo ou classe de serviço "
+"oferecido e as informações de mecanismo ou protocolo necessárias para "
+"utilizar o serviço."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1512
+#, fuzzy
 msgid ""
 "SDP involves communication between a SDP server and a SDP client. The server "
 "maintains a list of service records that describe the characteristics of "
@@ -3306,6 +3685,17 @@ msgid ""
 "and their attributes, but it does not provide a mechanism for utilizing "
 "those services."
 msgstr ""
+"O <acronym>SDP</acronym> envolve a comunicação entre um servidor "
+"<acronym>SDP</acronym> e um cliente <acronym>SDP</acronym>. O servidor "
+"mantém uma lista de registros de serviço que descrevem as características "
+"dos serviços associados ao servidor. Cada registro de serviço contém "
+"informações sobre um único serviço. Um cliente pode recuperar informações de "
+"um registro de serviço mantido pelo servidor <acronym>SDP</acronym> emitindo "
+"uma solicitação <acronym>SDP</acronym>. Se o cliente, ou um aplicativo "
+"associado ao cliente, decidir usar um serviço, ele deverá abrir uma conexão "
+"separada com o provedor de serviços para utilizar o serviço. O <acronym>SDP</"
+"acronym> fornece um mecanismo para descobrir serviços e seus atributos, mas "
+"não fornece um mecanismo para utilizar esses serviços."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1514
@@ -3365,6 +3755,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1544
+#, fuzzy
 msgid ""
 "Note that each service has a list of attributes, such as the RFCOMM channel. "
 "Depending on the service, the user might need to make note of some of the "
@@ -3373,6 +3764,13 @@ msgid ""
 "specific service. The example below shows how to search for the OBEX Object "
 "Push (OPUSH) service:"
 msgstr ""
+"Observe que cada serviço tem uma lista de atributos, como o canal "
+"<acronym>RFCOMM</acronym>. Dependendo do serviço, o usuário pode precisar "
+"anotar alguns dos atributos. Algumas implementações Bluetooth não suportam a "
+"navegação de serviço e podem retornar uma lista vazia. Nesse caso, é "
+"possível procurar pelo serviço específico. O exemplo abaixo mostra como "
+"pesquisar o serviço <acronym>OBEX</acronym> Object Push "
+"(<acronym>OPUSH</acronym>) :"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1548
@@ -3389,9 +3787,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1555
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "sdpd_enable=\"YES\"\n"
-msgstr ""
+msgstr "sdpd_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1558
@@ -3434,6 +3832,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1576
+#, fuzzy
 msgid ""
 "Object Exchange (OBEX) is a widely used protocol for simple file transfers "
 "between mobile devices. Its main use is in infrared communication, where it "
@@ -3441,6 +3840,13 @@ msgid ""
 "sending business cards or calendar entries between cellular phones and other "
 "devices with Personal Information Manager (PIM) applications."
 msgstr ""
+"Object Exchange (<acronym>OBEX</acronym>) é um protocolo amplamente "
+"utilizado para transferências de arquivos simples entre dispositivos móveis. "
+"Seu principal uso é na comunicação por infravermelho, onde é usado para "
+"transferências de arquivos genéricos entre notebooks ou <acronym>PDA</"
+"acronym>s, e para enviar cartões de visita ou entradas de calendário entre "
+"telefones celulares e outros dispositivos com Personal Information Manager "
+"(<acronym>PIM</acronym>)."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1578
@@ -3501,11 +3907,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1602
+#, fuzzy
 msgid ""
 "The Serial Port Profile (SPP) allows Bluetooth devices to perform serial "
 "cable emulation. This profile allows legacy applications to use Bluetooth as "
 "a cable replacement, through a virtual serial port abstraction."
 msgstr ""
+"O perfil de porta serial (<acronym>SPP</acronym>) permite que dispositivos "
+"Bluetooth executem emulação de cabo serial. Este perfil permite que "
+"aplicativos legados usem o Bluetooth como um substituto de cabos, através de "
+"uma abstração de porta serial virtual."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1604
@@ -3545,14 +3956,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1625
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "PTS=`rfcomm_sppd -a 00:07:E0:00:0B:CA -t`\n"
 "cu -l $PTS\n"
 msgstr ""
+"PTS=`rfcomm_sppd -a 00:07:E0:00:0B:CA -t`\n"
+"cu -l $PTS\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1630
+#, fuzzy
 msgid ""
 "By default, when FreeBSD is accepting a new connection, it tries to perform "
 "a role switch and become master. Some older Bluetooth devices which do not "
@@ -3561,6 +3975,13 @@ msgid ""
 "ask the remote device if it supports role switching. However, there is a HCI "
 "option to disable role switching on the local side:"
 msgstr ""
+"Por padrão, quando o FreeBSD está aceitando uma nova conexão, ele tenta "
+"executar uma troca de função e se tornar o mestre. Alguns dispositivos "
+"Bluetooth mais antigos que não suportam a troca de função não poderão se "
+"conectar. Como a troca de função é executada quando uma nova conexão está "
+"sendo estabelecida, não é possível perguntar ao dispositivo remoto se ele "
+"suporta a troca de função. No entanto, há uma opção <acronym>HCI</acronym> "
+"para desativar a alternância de funções no lado local:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1634
@@ -3595,6 +4016,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1644
+#, fuzzy
 msgid ""
 "A bridge works by learning the MAC addresses of the devices on each of its "
 "network interfaces. It forwards traffic between networks only when the "
@@ -3602,6 +4024,12 @@ msgid ""
 "respects, a bridge is like an Ethernet switch with very few ports. A FreeBSD "
 "system with multiple network interfaces can be configured to act as a bridge."
 msgstr ""
+"Uma bridge funciona aprendendo os endereços <acronym>MAC</acronym> dos "
+"dispositivos em cada uma das suas interfaces de rede. Ele encaminha o "
+"tráfego entre as redes somente quando os endereços de origem e destino "
+"<acronym>MAC</acronym> estão em redes diferentes. Em muitos aspectos, uma "
+"brifge é como um switch Ethernet com poucas portas. Um sistema FreeBSD com "
+"múltiplas interfaces de rede pode ser configurado para atuar como uma bridge."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1646
@@ -3787,13 +4215,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1708
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "cloned_interfaces=\"bridge0\"\n"
 "ifconfig_bridge0=\"addm fxp0 addm fxp1 up\"\n"
 "ifconfig_fxp0=\"up\"\n"
 "ifconfig_fxp1=\"up\"\n"
 msgstr ""
+"cloned_interfaces=\"bridge0\"\n"
+"ifconfig_bridge0=\"addm fxp0 addm fxp1 up\"\n"
+"ifconfig_fxp0=\"up\"\n"
+"ifconfig_fxp1=\"up\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1711
@@ -3848,6 +4280,7 @@ msgstr "Ativando o Spanning Tree"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1729
+#, fuzzy
 msgid ""
 "For an Ethernet network to function properly, only one active path can exist "
 "between two devices. The STP protocol detects loops and puts redundant links "
@@ -3855,6 +4288,12 @@ msgid ""
 "different tree and enables one of the blocked paths to restore connectivity "
 "to all points in the network."
 msgstr ""
+"Para que uma rede Ethernet funcione corretamente, somente um caminho ativo "
+"pode existir entre dois dispositivos. O protocolo <acronym>STP</acronym> "
+"detecta loops e coloca links redundantes em um estado bloqueado. Se um dos "
+"links ativos falhar, o <acronym>STP</acronym> calcula uma árvore diferente e "
+"habilita um dos caminhos bloqueados para restaurar a conectividade a todos "
+"os pontos da rede."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1731
@@ -3876,7 +4315,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1748
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# ifconfig bridge0 stp fxp0 stp fxp1\n"
 "bridge0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500\n"
@@ -3891,6 +4330,20 @@ msgid ""
 "                port 4 priority 128 path cost 200000 proto rstp\n"
 "                role designated state forwarding\n"
 msgstr ""
+"bridge0: flags=8843&lt;UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST&gt; metric 0 "
+"mtu 1500\n"
+"        ether 96:3d:4b:f1:79:7a\n"
+"        id 00:13:d4:9a:06:7a priority 32768 hellotime 2 fwddelay 15\n"
+"        maxage 20 holdcnt 6 proto rstp maxaddr 100 timeout 1200\n"
+"        root id 00:01:02:4b:d4:50 priority 32768 ifcost 400000 port 4\n"
+"        member: fxp0 "
+"flags=1c7&lt;LEARNING,DISCOVER,STP,AUTOEDGE,PTP,AUTOPTP&gt;\n"
+"                port 4 priority 128 path cost 200000 proto rstp\n"
+"                role root state forwarding\n"
+"        member: fxp1 "
+"flags=1c7&lt;LEARNING,DISCOVER,STP,AUTOEDGE,PTP,AUTOPTP&gt;\n"
+"                port 5 priority 128 path cost 200000 proto rstp\n"
+"                role designated state forwarding\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1751
@@ -3907,7 +4360,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1767
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "bridge0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500\n"
 "        ether 96:3d:4b:f1:79:7a\n"
@@ -3921,6 +4374,20 @@ msgid ""
 "                port 5 priority 128 path cost 200000 proto rstp\n"
 "                role designated state forwarding\n"
 msgstr ""
+"bridge0: flags=8843&lt;UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST&gt; metric 0 "
+"mtu 1500\n"
+"        ether 96:3d:4b:f1:79:7a\n"
+"        id 00:13:d4:9a:06:7a priority 32768 hellotime 2 fwddelay 15\n"
+"        maxage 20 holdcnt 6 proto rstp maxaddr 100 timeout 1200\n"
+"        root id 00:01:02:4b:d4:50 priority 32768 ifcost 400000 port 4\n"
+"        member: fxp0 "
+"flags=1c7&lt;LEARNING,DISCOVER,STP,AUTOEDGE,PTP,AUTOPTP&gt;\n"
+"                port 4 priority 128 path cost 200000 proto rstp\n"
+"                role root state forwarding\n"
+"        member: fxp1 "
+"flags=1c7&lt;LEARNING,DISCOVER,STP,AUTOEDGE,PTP,AUTOPTP&gt;\n"
+"                port 5 priority 128 path cost 200000 proto rstp\n"
+"                role designated state forwarding\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1770
@@ -3953,6 +4420,7 @@ msgstr "privado"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1777
+#, fuzzy
 msgid ""
 "A private interface does not forward any traffic to any other port that is "
 "also designated as a private interface. The traffic is blocked "
@@ -3960,6 +4428,11 @@ msgid ""
 "packets. If traffic needs to be selectively blocked, a firewall should be "
 "used instead."
 msgstr ""
+"Uma interface privada não encaminha qualquer tráfego para qualquer outra "
+"porta que também seja designada como uma interface privada. O tráfego é "
+"bloqueado incondicionalmente para que nenhum quadro Ethernet seja "
+"encaminhado, incluindo pacotes <acronym>ARP</acronym>. Se o tráfego precisar "
+"ser bloqueado seletivamente, um firewall deve ser usado no lugar."
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1778
@@ -3969,6 +4442,7 @@ msgstr "span"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1780
+#, fuzzy
 msgid ""
 "A span port transmits a copy of every Ethernet frame received by the bridge. "
 "The number of span ports configured on a bridge is unlimited, but if an "
@@ -3977,6 +4451,13 @@ msgid ""
 "another host connected to one of the span ports of the bridge. For example, "
 "to send a copy of all frames out the interface named [.filename]#fxp4#:"
 msgstr ""
+"Uma porta span transmite uma cópia de cada quadro Ethernet recebido pela "
+"bridge. O número de portas de span configuradas em uma bridge é ilimitado, "
+"mas se uma interface for designada como uma porta de span, ela também não "
+"poderá ser usada como uma porta de bridge comum. Isso é mais útil para "
+"espionar passivamente uma rede em bridge a partir de outro host conectado a "
+"uma das portas da bridge. Por exemplo, para enviar uma cópia de todos os "
+"quadros para fora da interface denominada <filename>fxp4</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1784
@@ -4057,11 +4538,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1809
+#, fuzzy
 msgid ""
 "The number of unique source MAC addresses behind an interface can be "
 "limited. Once the limit is reached, packets with unknown source addresses "
 "are dropped until an existing host cache entry expires or is removed."
 msgstr ""
+"O número de endereços <acronym>MAC</acronym> de origem exclusivos por trás "
+"de uma interface pode ser limitado. Quando o limite é atingido, os pacotes "
+"com endereços de origem desconhecidos são descartados até que uma entrada de "
+"cache do host existente expire ou seja removida."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1811
@@ -4119,9 +4605,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1834
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "begemotSnmpdModulePath.\"bridge\" = \"/usr/lib/snmp_bridge.so\"\n"
-msgstr ""
+msgstr "begemotSnmpdModulePath.\"bridge\" = \"/usr/lib/snmp_bridge.so\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1837
@@ -4134,9 +4620,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1841
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "bsnmpd_enable=\"YES\"\n"
-msgstr ""
+msgstr "bsnmpd_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1844
@@ -4161,11 +4647,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1856
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "mibdirs +/usr/share/snmp/mibs\n"
 "mibs +BRIDGE-MIB:RSTP-MIB:BEGEMOT-MIB:BEGEMOT-BRIDGE-MIB\n"
 msgstr ""
+"mibdirs +/usr/share/snmp/mibs\n"
+"mibs +BRIDGE-MIB:RSTP-MIB:BEGEMOT-MIB:BEGEMOT-BRIDGE-MIB\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1859
@@ -4174,7 +4662,7 @@ msgstr "Para monitorar uma única bridge usando o IETF BRIDGE-MIB (RFC4188):"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1878
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "% snmpwalk -v 2c -c public bridge1.example.com mib-2.dot1dBridge\n"
 "BRIDGE-MIB::dot1dBaseBridgeAddress.0 = STRING: 66:fb:9b:6e:5c:44\n"
@@ -4193,6 +4681,26 @@ msgid ""
 "BRIDGE-MIB::dot1dStpPortForwardTransitions.3 = Counter32: 1\n"
 "RSTP-MIB::dot1dStpVersion.0 = INTEGER: rstp(2)\n"
 msgstr ""
+"<prompt>%</prompt> <userinput>snmpwalk -v 2c -c public bridge1.example.com "
+"mib-2.dot1dBridge</userinput>\n"
+"BRIDGE-MIB::dot1dBaseBridgeAddress.0 = STRING: 66:fb:9b:6e:5c:44\n"
+"BRIDGE-MIB::dot1dBaseNumPorts.0 = INTEGER: 1 ports\n"
+"BRIDGE-MIB::dot1dStpTimeSinceTopologyChange.0 = Timeticks: (189959) 0:31:"
+"39.59 centi-seconds\n"
+"BRIDGE-MIB::dot1dStpTopChanges.0 = Counter32: 2\n"
+"BRIDGE-MIB::dot1dStpDesignatedRoot.0 = Hex-STRING: 80 00 00 01 02 4B D4 50\n"
+"...\n"
+"BRIDGE-MIB::dot1dStpPortState.3 = INTEGER: forwarding(5)\n"
+"BRIDGE-MIB::dot1dStpPortEnable.3 = INTEGER: enabled(1)\n"
+"BRIDGE-MIB::dot1dStpPortPathCost.3 = INTEGER: 200000\n"
+"BRIDGE-MIB::dot1dStpPortDesignatedRoot.3 = Hex-STRING: 80 00 00 01 02 4B D4 "
+"50\n"
+"BRIDGE-MIB::dot1dStpPortDesignatedCost.3 = INTEGER: 0\n"
+"BRIDGE-MIB::dot1dStpPortDesignatedBridge.3 = Hex-STRING: 80 00 00 01 02 4B "
+"D4 50\n"
+"BRIDGE-MIB::dot1dStpPortDesignatedPort.3 = Hex-STRING: 03 80\n"
+"BRIDGE-MIB::dot1dStpPortForwardTransitions.3 = Counter32: 1\n"
+"RSTP-MIB::dot1dStpVersion.0 = INTEGER: rstp(2)\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:1881
@@ -4516,10 +5024,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2007
+#, fuzzy
 msgid ""
 "To retain this configuration across reboots, add the following entries to [."
 "filename]#/etc/rc.conf# on the FreeBSD system:"
 msgstr ""
+"Para manter esta configuração através de reinicializações, adicione as "
+"seguintes entradas ao <filename>/etc/rc.conf</filename> no sistema FreeBSD:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2014
@@ -4591,10 +5102,13 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2052
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2147
+#, fuzzy
 msgid ""
 "To retain this configuration across reboots, add the following entries to [."
 "filename]#/etc/rc.conf#:"
 msgstr ""
+"Para manter essa configuração através de reinicializações, adicione as "
+"seguintes entradas ao <filename>/etc/rc.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2059
@@ -4884,9 +5398,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2205
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "nfs_server_enable=\"YES\"\n"
-msgstr ""
+msgstr "nfs_server_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2208
@@ -4897,9 +5411,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2212
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "/b -ro -alldirs -maproot=root\n"
-msgstr ""
+msgstr "/b -ro -alldirs -maproot=root\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2215
@@ -4921,9 +5435,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2226
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "inetd_enable=\"YES\"\n"
-msgstr ""
+msgstr "inetd_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2229
@@ -4934,9 +5448,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2233
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "tftp dgram udp wait root /usr/libexec/tftpd tftpd -l -s /b/tftpboot\n"
-msgstr ""
+msgstr "tftp dgram udp wait root /usr/libexec/tftpd tftpd -l -s /b/tftpboot\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2238
@@ -5172,9 +5686,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2331
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "dhcpd_enable=\"YES\"\n"
-msgstr ""
+msgstr "dhcpd_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2334
@@ -5195,12 +5709,19 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2343
+#, fuzzy
 msgid ""
 "Once all of the services are configured and started, PXE clients should be "
 "able to automatically load FreeBSD over the network. If a particular client "
 "is unable to connect, when that client machine boots up, enter the BIOS "
 "configuration menu and confirm that it is set to boot from the network."
 msgstr ""
+"Uma vez que todos os serviços estejam configurados e iniciados, os clientes "
+"de <acronym>PXE</acronym> devem poder carregar automaticamente o FreeBSD "
+"pela rede. Se um determinado cliente não conseguir se conectar, quando a "
+"máquina cliente inicializar, entre no menu de configuração da <acronym>BIOS</"
+"acronym> e confirme se ela está configurada para inicializar a partir da "
+"rede."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2345
@@ -5320,6 +5841,7 @@ msgstr ""
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2388
+#, fuzzy
 msgid ""
 "Routers only store network aggregation addresses in their routing tables, "
 "thus reducing the average space of a routing table to 8192 entries. This "
@@ -5327,6 +5849,13 @@ msgid ""
 "allocated block of IPv4 addresses to be exchanged between Internet routers, "
 "causing their routing tables to become too large to allow efficient routing."
 msgstr ""
+"Os roteadores armazenam apenas endereços de agregação de rede em suas "
+"tabelas de roteamento, reduzindo assim o espaço médio de uma tabela de "
+"roteamento para 8192 entradas. Isso resolve os problemas de escalabilidade "
+"associados ao <acronym>IPv4</acronym>, que exigia que cada bloco alocado de "
+"endereços <acronym>IPv4</acronym> fossem trocados entre roteadores da "
+"Internet, fazendo com que suas tabelas de roteamento ficassem muito grandes "
+"para permitir um roteamento eficiente ."
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2390
@@ -5466,7 +5995,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2432
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "rl0: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500\n"
 "         inet 10.0.0.10 netmask 0xffffff00 broadcast 10.0.0.255\n"
@@ -5475,6 +6004,13 @@ msgid ""
 "         media: Ethernet autoselect (100baseTX )\n"
 "         status: active\n"
 msgstr ""
+"rl0: flags=8943&lt;UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST&gt; mtu "
+"1500\n"
+"         inet 10.0.0.10 netmask 0xffffff00 broadcast 10.0.0.255\n"
+"         inet6 fe80::200:21ff:fe03:8e1%rl0 prefixlen 64 scopeid 0x1\n"
+"         ether 00:00:21:03:08:e1\n"
+"         media: Ethernet autoselect (100baseTX )\n"
+"         status: active\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2435
@@ -5634,17 +6170,24 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2525
+#, fuzzy
 msgid ""
 "Install the package:net/freenet6[] package or port for a dial-up connection."
 msgstr ""
+"Instale o pacote ou port <package>net/freenet6</package> para uma conexão "
+"dial-up."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2528
+#, fuzzy
 msgid ""
 "This section demonstrates how to take the directions from a tunnel provider "
 "and convert them into [.filename]#/etc/rc.conf# settings that will persist "
 "through reboots."
 msgstr ""
+"Esta seção demonstra como obter as direções de um provedor de túneis e "
+"convertê-las em configurações do  <filename>/etc/rc.conf</filename> que "
+"persistirão durante as reinicializações."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2530
@@ -5710,9 +6253,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2562
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ipv6_gateway_enable=\"YES\"\n"
-msgstr ""
+msgstr "ipv6_gateway_enable=\"YES\"\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2564
@@ -5735,9 +6278,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2573
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "rtadvd_enable=\"YES\"\n"
-msgstr ""
+msgstr "rtadvd_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2576
@@ -5748,24 +6291,29 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2580
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "rtadvd_interfaces=\"rl0\"\n"
-msgstr ""
+msgstr "rtadvd_interfaces=\"rl0\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2583
+#, fuzzy
 msgid ""
 "Next, create the configuration file, [.filename]#/etc/rtadvd.conf# as seen "
 "in this example:"
 msgstr ""
+"Em seguida, crie o arquivo de configuração, <filename>/etc/rtadvd.conf</"
+"filename> como visto neste exemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2588
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "rl0:\\\n"
 "\t:addrs#1:addr=\"2001:db8:1f11:246::\":prefixlen#64:tc=ether:\n"
 msgstr ""
+"rl0:\\\n"
+"\t:addrs#1:addr=\"2001:db8:1f11:246::\":prefixlen#64:tc=ether:\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2591
@@ -5798,6 +6346,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2599
+#, fuzzy
 msgid ""
 "This option may not be required in most cases and is available only for "
 "compatibility. This option will allow IPv6-only applications to work with "
@@ -5805,12 +6354,19 @@ msgid ""
 "applications which may not support an IPv6-only environment. To enable this "
 "feature, add the following to [.filename]#/etc/rc.conf#:"
 msgstr ""
+"Essa opção pode não ser necessária na maioria dos casos e está disponível "
+"apenas para compatibilidade. Esta opção permitirá que os aplicativos que "
+"suportam apenas o <acronym>IPv6</acronym> funcionem com <acronym>IPv4</"
+"acronym> em um ambiente de pilha dupla. Isso é mais útil para aplicativos de "
+"terceiros que podem não suportar um ambiente somente de <acronym>IPv6</"
+"acronym>. Para habilitar esse recurso, adicione o seguinte ao <filename>/etc/"
+"rc.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2603
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ipv6_ipv4mapping=\"YES\"\n"
-msgstr ""
+msgstr "ipv6_ipv4mapping=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2606
@@ -5846,12 +6402,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2615
+#, fuzzy
 msgid ""
 "High availability using CARP is built into FreeBSD, though the steps to "
 "configure it vary slightly depending upon the FreeBSD version. This section "
 "provides the same example configuration for versions before and equal to or "
 "after FreeBSD 10."
 msgstr ""
+"A alta disponibilidade usando o <acronym>CARP</acronym> é nativa no FreeBSD, "
+"embora os passos para configurá-lo variem um pouco dependendo da versão do "
+"FreeBSD. Esta seção fornece a mesma configuração de exemplo para versões "
+"anteriores, iguais ou posteriores ao FreeBSD 10."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2617
@@ -5864,6 +6425,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2619
+#, fuzzy
 msgid ""
 "These machines are load balanced with a Round Robin DNS configuration. The "
 "master and backup machines are configured identically except for their "
@@ -5875,6 +6437,18 @@ msgid ""
 "addresses. When a failure occurs, the backup server will pick up the failed "
 "master machine's IP address."
 msgstr ""
+"O balanceamento de carga destas máquinas é feito por meio de uma "
+"configuração de <acronym>DNS</acronym> Round Robin. As máquinas principais e "
+"de backup são configuradas de forma idêntica, exceto por seus nomes de host "
+"e endereços de gerenciamento <acronym>IP</acronym>. Esses servidores devem "
+"ter a mesma configuração e executar os mesmos serviços. Quando o failover "
+"ocorre, as solicitações para o serviço no endereço <acronym>IP</acronym> "
+"compartilhado só podem ser respondidas corretamente se o servidor de backup "
+"tiver acesso ao mesmo conteúdo. A máquina de backup tem duas interfaces "
+"<acronym>CARP</acronym> adicionais, uma para cada endereço <acronym>IP</"
+"acronym> do servidor de conteúdo mestre. Quando ocorre uma falha, o servidor "
+"de backup selecionará o endereço <acronym>IP</acronym> da máquina mestre com "
+"falha."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2621
@@ -5891,9 +6465,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2628
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "carp_load=\"YES\"\n"
-msgstr ""
+msgstr "carp_load=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2631
@@ -5920,9 +6494,9 @@ msgstr ""
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2642
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2713
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "device\tcarp\n"
-msgstr ""
+msgstr "device\tcarp\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2645
@@ -6047,9 +6621,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2699
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "if_carp_load=\"YES\"\n"
-msgstr ""
+msgstr "if_carp_load=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2716
@@ -6132,10 +6706,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2763
+#, fuzzy
 msgid ""
 "This should be done on the [.filename]#carp# interface which corresponds to "
 "the correct host."
 msgstr ""
+"Isso deve ser feito na interface <filename>carp</filename>, que corresponde "
+"ao host correto."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2768
@@ -6145,11 +6722,16 @@ msgstr "VLANs"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2771
+#, fuzzy
 msgid ""
 "VLANs are a way of virtually dividing up a network into many different "
 "subnetworks, also referred to as segmenting. Each segment will have its own "
 "broadcast domain and be isolated from other VLANs."
 msgstr ""
+"As <acronym>VLANs</acronym> são uma forma de dividir virtualmente uma rede "
+"em várias sub-redes diferentes, também conhecida como segmentação. Cada "
+"segmento terá seu próprio domínio de broadcast e será isolado de outras "
+"<acronym>VLANs</acronym>."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2773
@@ -6247,10 +6829,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2815
+#, fuzzy
 msgid ""
 "To apply the changes at boot time, add the following lines to [.filename]#/"
 "etc/rc.conf#:"
 msgstr ""
+"Para aplicar as mudanças no momento da inicialização, adicione as seguintes "
+"linhas ao <filename>/etc/rc.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/advanced-networking/_index.adoc:2821
