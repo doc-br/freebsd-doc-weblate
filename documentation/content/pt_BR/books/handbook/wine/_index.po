@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-03-29 22:55+0000\n"
+"PO-Revision-Date: 2021-04-08 00:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookwine_index/pt_BR/>\n"
@@ -63,6 +63,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:52
+#, fuzzy
 msgid ""
 "However, it is not an emulator in the traditional sense. Many of these "
 "solutions operate by constructing an entire other computer using software "
@@ -77,6 +78,19 @@ msgid ""
 "machine (the _host_), and holds on to those resources for as long as it is "
 "running."
 msgstr ""
+"Entretanto, ele não é um emulador no sentido tradicional da palavra. Muitas "
+"dessas soluções operam construindo um computador completo usando processos "
+"de software no lugar da Virtualização de hardware (como o que é provido pelo "
+"port <package>emulators/qemu</package>) que opera dessa maneira. Um dos "
+"benefícios dessa abordagem é a habilidade de instalar uma versão completa do "
+"SO em contraponto ao emulador. Isso significa que o ambiente não parecerá "
+"diferente de uma maquina real para as aplicações, e as chances são boas que "
+"tudo irá funcionar nele. O ponto fraco dessa abordagem é o fato que o "
+"software atuando como hardware é inerentemente mais lento que o hardware "
+"real. O computador criado pelo software (chamado de "
+"<emphasis>guest</emphasis>) requer recursos da maquina real (o "
+"<emphasis>host</emphasis>), e mantém esses recursos durante todo tempo que "
+"estiver rodando."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:54
@@ -355,6 +369,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:125
+#, fuzzy
 msgid ""
 "This solution provides a simplified \"one-click\" installation of WINE, "
 "which contains additional enhancements and optimizations (although the "
@@ -362,6 +377,11 @@ msgid ""
 "area of focus for Codeweavers is to make the most popular applications "
 "install and run smoothly."
 msgstr ""
+"Essa solução prove um instalação <quote>em-um-clique</quote> simplificada do "
+"WINE, que contém melhorias adicionais e otimizações (apesar da companhia "
+"contribuir muitos desses fluxos próprios para o projeto WINE). Uma área de "
+"foco para o Codeweavers é fazer as mais populares aplicações instalar e "
+"rodar suavemente."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:127
@@ -421,8 +441,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:142
+#, fuzzy
 msgid "winetricks"
-msgstr ""
+msgstr "Winetricks"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/wine/_index.adoc:143
@@ -526,6 +547,7 @@ msgstr "wine-gecko"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:170
+#, fuzzy
 msgid ""
 "The Windows(R) operating system has for some time had a default web browser "
 "pre-installed: Internet Explorer. As a result, some applications work under "
@@ -537,6 +559,15 @@ msgid ""
 "chapter). But they can also install it prior to installing WINE, or "
 "alongside the install of WINE proper."
 msgstr ""
+"O sistema operacional <trademark class=\"registered\">Windows</trademark> "
+"tem por vezes um navegador web padrão pré instalado: Internet Explorer. Como "
+"resultado, algumas aplicações trabalham assumindo que haverá algo capaz de "
+"mostrar paginas da web. Para prover essa funcionalidade, o camada do WINE "
+"inclui um componente de um navegador web usando o motor do projeto Mozilla "
+"Gecko. Quanto o WINE é iniciado pela primeira vez irá oferecer para fazer "
+"download e o instalar, e há razões para os usuários querer fazer isso (isso "
+"será coberto no ultimo capitulo). Mas eles podem também instalar antes de "
+"instalar o WINE, ou durante a própria instalação do WINE."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:172
@@ -755,12 +786,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:259
+#, fuzzy
 msgid ""
 "There are two different methods to launch a Windows program from the "
 "terminal. The first, and most straightforward is to navigate to the "
 "directory containing the program's executable ([.filename]#.EXE#) and issue "
 "the following:"
 msgstr ""
+"Há dois diferentes métodos para iniciar programas Windows de um terminal. A "
+"primeira, e mais integra é navegar ate o diretório contendo os executáveis "
+"dos programas (<filename>.EXE</filename>) e seguir o seguinte:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/wine/_index.adoc:263
@@ -806,6 +841,7 @@ msgstr "Rodando um programa a partir de uma GUI"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:283
+#, fuzzy
 msgid ""
 "After installation graphical shells should be updated with new associations "
 "for Windows executable ([.filename]#.EXE#) files. It will now be possible to "
@@ -813,6 +849,11 @@ msgid ""
 "in the same way as other files and programs (either a single- or double-"
 "click, depending on the desktop's settings)."
 msgstr ""
+"Depois da instalação gráfica, o shell deve ser atualizado com as novas "
+"associações para arquivos executáveis Windows (<filename>.EXE</filename>). "
+"Será possível agora navegar no sistema usando um gerenciador de arquivos, e "
+"iniciar aplicações Windows da mesma maneira que outros arquivos e programas ("
+"tanto dando um duplo clique ou único, depende das configurações do desktop)."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:285
@@ -842,11 +883,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:291
+#, fuzzy
 msgid ""
 "In the event WINE is not the default application for [.filename]#.EXE# files "
 "after install, check the MIME associate for this extension in the current "
 "desktop environment, graphical shell, or file manager."
 msgstr ""
+"No caso do WINE não ser a aplicação padrão para arquivos <filename>.EXE</"
+"filename> depois da instalação, verifique se a associação do MIME para essa "
+"aplicação está correta no ambiente do desktop, shell gráfico, ou gerenciador "
+"de arquivo."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/wine/_index.adoc:293
@@ -856,6 +902,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:296
+#, fuzzy
 msgid ""
 "With an understanding of what WINE is and how it works at a high level, the "
 "next step to effectively using it on FreeBSD is becoming familiar with its "
@@ -863,6 +910,11 @@ msgid ""
 "_WINE prefix_, and illustrate how it is used to control the behavior of "
 "applications run through WINE."
 msgstr ""
+"Com um entendimento do que o WINE é e como ele trabalha em alto nível, o "
+"próximo passo para efetivamente usar ele no FreeBSD é se familiarizar com "
+"sua configuração. As seguintes seções irá descrever os conceitos chaves do "
+"<emphasis>prefixo WINE</emphasis>, e ilustrar como ele é usado para "
+"controlar o comportamento das aplicações rodando através do WINE."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/wine/_index.adoc:298
@@ -883,11 +935,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:303
+#, fuzzy
 msgid ""
 "[.filename]#.update-timestamp#: contains the last modified date of [."
 "filename]#file /usr/share/wine/wine.inf#. It is used by WINE to determine if "
 "a prefix is out of date, and automatically update it if needed."
 msgstr ""
+"<filename>.update-timestamp</filename>: contém a ultima data de modificação "
+"do arquivo <filename>/usr/share/wine/wine.inf</filename>. Ele é usado pelo "
+"WINE para determinar se um prefixo está desatualizado, e automaticamente o "
+"atualiza se for preciso."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:304
@@ -930,18 +987,25 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:311
+#, fuzzy
 msgid ""
 "[.filename]#user.reg#: This Registry file contains the current user's "
 "personal configurations, made either by varous software or through the use "
 "of the Registry Editor."
 msgstr ""
+"<filename>user.reg</filename>: Esse arquivo de Registro contém as "
+"configurações pessoais do usuário, feitas tanto pelos mais diversos "
+"softwares ou através do Editor de Registro."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:312
+#, fuzzy
 msgid ""
 "[.filename]#userdef.reg#: This Registry file is a default set of "
 "configurations for newly-created users."
 msgstr ""
+"<filename>userdef.reg</filename>: Esse arquivo de Registro é um conjunto "
+"padrão de configurações pra usuários recém criados."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/wine/_index.adoc:314
@@ -951,11 +1015,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:317
+#, fuzzy
 msgid ""
 "While WINE will create a default prefix in the user's [.filename]#$HOME/."
 "wine/#, it is possible to set up multiple prefixes. There are a few reasons "
 "to do this:"
 msgstr ""
+"Enquanto o WINE irá criar um prefixo padrão no diretório de usuário "
+"<filename>$HOME/.wine/</filename>, é possível configurar múltiplos prefixos. "
+"Aqui há algumas razões para fazer isso:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:319
@@ -1213,11 +1281,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:388
+#, fuzzy
 msgid ""
 "Create an emulated virtual desktop, within which all WINE programs will run. "
 "If this item is selected, the size of the virtual desktop can be specified "
 "using the _Desktop size_ input boxes."
 msgstr ""
+"Cria e emula um desktop virtual, dentro do qual todos os programas WINE irão "
+"rodar. Se esse item estiver selecionado, o tamanho do desktop virtual pode "
+"ser especificado usando as caixas de entradas <emphasis>Tamanho de "
+"Desktop</emphasis>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:389
@@ -1322,12 +1395,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:416
+#, fuzzy
 msgid ""
 "By default WINE will autodetect the type of resource linked, but this can be "
 "manually overridden. See https://wiki.winehq.org/Wine_User"
 "%27s_Guide#Drive_Settings[the section in the WINE Wiki] for more detail on "
 "advanced options."
 msgstr ""
+"Por padrão o WINE irá detectar automaticamente os tipos de recursos "
+"linkados, mas isso pode ser refeito manualmente. Veja <link xlink:href="
+"\"https://wiki.winehq.org/Wine_User%27s_Guide#Drive_Settings\">the section "
+"in the WINE Wiki</link> para mais detalhes na opção avançada."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/wine/_index.adoc:418
@@ -1395,6 +1473,7 @@ msgstr "GUIs de gerenciamento do WINE"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:439
+#, fuzzy
 msgid ""
 "While the base install of WINE comes with a GUI configuration tool in "
 "winecfg, it is main purpose is just that: strictly configuring an existing "
@@ -1402,6 +1481,12 @@ msgid ""
 "in the initial installation of applications as well as optimizing their WINE "
 "environments. The below sections include a selection of the most popular."
 msgstr ""
+"Enquanto a instalação base do WINE vem com uma ferramenta GUI de "
+"configuração no <application>winecfg</application>, a proposta principal é "
+"apenas essa: configurar estritamente apenas o prefixo do WINE. Há, "
+"entretanto, mais aplicações avançadas que irá auxiliar na instalação inicial "
+"assim como otimizar os ambientes do WINE. As seções abaixo incluem uma "
+"seleção das mais populares."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/wine/_index.adoc:441
@@ -1411,6 +1496,7 @@ msgstr "Winetricks"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:444
+#, fuzzy
 msgid ""
 "winetricks is a cross-platform, general purpose helper program for WINE. It "
 "is not developed by the WINE project proper, but rather maintained on "
@@ -1419,6 +1505,13 @@ msgid ""
 "work on WINE, both by optimizing the settings as well as acquiring some DLL "
 "libraries automatically."
 msgstr ""
+"<application>winetricks</application> é uma aplicação cross-plataforma, "
+"normalmente se propõe como programa de ajuda para o WINE. Ele não é "
+"desenvolvido pelo projeto WINE propriamente, em vez disso mantido no <link "
+"xlink:href=\"https://github.com/Winetricks/winetricks\">Github</link> por um "
+"grupo de colaboradores. Ele contem algumas \"formulas\" automatizadas para "
+"fazer funcionar algumas aplicações no WINE, ambos otimizando as "
+"configurações assim como adquirindo algumas bibliotecas DLL automaticamente."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/wine/_index.adoc:446
@@ -1509,12 +1602,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:486
+#, fuzzy
 msgid ""
 "Selecting one or more items and clicking _OK_ will start their installation "
 "process(es). Initially, some messages that appear to be errors may show up, "
 "but they're actually informational alerts as winetricks configures the WINE "
 "environment to get around known issues for the application:"
 msgstr ""
+"Selecionando um ou mais itens e clicando em <emphasis>OK</emphasis> irá "
+"iniciar o(s) processo(s) de instalação. Inicialmente, algumas mensagens que "
+"aparentam ser erros podem ser mostradas, mas elas são alertas informacionais "
+"sobre como o <application>winetricks</application> configura o ambiente do "
+"WINE para pegar problemas conhecidos para a aplicação:"
 
 #. type: Target for macro image
 #: documentation/content/en/books/handbook/wine/_index.adoc:487
@@ -1702,6 +1801,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:555
+#, fuzzy
 msgid ""
 "The application's window should then appear, which amounts to a \"main menu"
 "\" with all its options. Many of the items are the same as winetricks, "
@@ -1709,6 +1809,12 @@ msgid ""
 "data folder (_Open Homura Folder_) or running a specified program (_Run a "
 "executable in prefix_)."
 msgstr ""
+"A janela de aplicações deveria então aparecer, com uma quantidade para o "
+"\"menu principal\" com todas opções. Muitos desses itens são como o "
+"<application>winetricks</application>, apesar do Homura oferecer alguns "
+"opcionais, opções auxiliares como abrir seu diretório de dados ("
+"<emphasis>Abrir Diretório do Homura</emphasis>) ou rodar um programa "
+"especifico (<emphasis>Rodar um executável no prefixo</emphasis>)."
 
 #. type: Target for macro image
 #: documentation/content/en/books/handbook/wine/_index.adoc:556
@@ -1792,12 +1898,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:579
+#, fuzzy
 msgid ""
 "The installation may end with a simple desktop notification or message in "
 "the terminal, depending on how Homura was launched. But in either case "
 "Homura should return to the main screen. To confirm the installation was "
 "successful, select _Launcher_, and click _OK_."
 msgstr ""
+"A instalação deve terminar com uma simples notificação no desktop ou "
+"mensagem no terminal, dependendo de como o Homura foi iniciado. Mas em ambos "
+"casos, Homura deve retornar a tela principal. Para confirmar se a instalação "
+"foi bem sucedida, selecione <emphasis>Iniciar</emphasis>, e click em "
+"<emphasis>OK</emphasis>."
 
 #. type: Target for macro image
 #: documentation/content/en/books/handbook/wine/_index.adoc:580
@@ -1850,6 +1962,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:596
+#, fuzzy
 msgid ""
 "However, it is wise to ensure that they do not access any of the same WINE "
 "prefixes. Each of these solutions applies workarounds and makes changes to "
@@ -1859,6 +1972,13 @@ msgid ""
 "overwritten, with the result being some or all applications do not work as "
 "expected."
 msgstr ""
+"Entretanto, é inteligente garantir que eles não acessem qualquer um dos "
+"prefixos do WINE. Cada uma dessas soluções aplicam soluções alternativas "
+"para fazer mudanças nos registros baseados em soluções alternativas baseados "
+"em problemas existentes do WINE com propósito de fazer as aplicações rodar "
+"suavemente. Permitindo ambos, <application>winetricks</application> e Homura "
+"acessar o mesmo prefixo poderia levar um desses ser sobrescrito, com o "
+"resultado sendo algumas ou todas aplicações não rodar como esperado."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/wine/_index.adoc:598
@@ -2200,6 +2320,7 @@ msgstr "Programas DOS Podem Rodar no WINE?"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/wine/_index.adoc:706
+#, fuzzy
 msgid ""
 "They can, as \"Console User Interface\" applications as mentioned eariler in "
 "this section. However, there is an arguably better method for running DOS "
@@ -2207,6 +2328,11 @@ msgid ""
 "try it. Simply create a new prefix, install the software, and if it does not "
 "work delete the prefix."
 msgstr ""
+"Eles podem, como aplicações \"Interface Console de Usuário\" mencionadas "
+"anteriormente nessa seção. Entretanto, há um método indiscutivelmente melhor "
+"para rodar software DOS: <application>DOSBox</application>. Por outro lado, "
+"não há nenhuma razão para não tentar. Simplesmente crie um novo prefixo, "
+"instale o software, e se ele não funcionar, delete o prefixo."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/wine/_index.adoc:708
