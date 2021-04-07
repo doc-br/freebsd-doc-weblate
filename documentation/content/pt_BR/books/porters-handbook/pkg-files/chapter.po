@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-03-29 15:21+0000\n"
+"PO-Revision-Date: 2021-04-08 00:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/booksporters-handbookpkg-fileschapter/pt_BR/>\n"
@@ -251,7 +251,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/pkg-files/chapter.adoc:110
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "[\n"
 "{ type: install\n"
@@ -259,6 +259,11 @@ msgid ""
 "}\n"
 "]\n"
 msgstr ""
+"[\n"
+"{ type: install\n"
+"  message: \"Simple message\"\n"
+"}\n"
+"]\n"
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/pkg-files/chapter.adoc:115
@@ -278,7 +283,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/pkg-files/chapter.adoc:130
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "[\n"
 "{ type: install\n"
@@ -288,6 +293,11 @@ msgid ""
 "}\n"
 "]\n"
 msgstr ""
+"[\n"
+"{ type: install\n"
+"  message: \"Simple message\"\n"
+"}\n"
+"]\n"
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/pkg-files/chapter.adoc:135
@@ -306,7 +316,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/pkg-files/chapter.adoc:150
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "[\n"
 "{\n"
@@ -316,6 +326,13 @@ msgid ""
 "{ type: install, message: \"package being installed.\"}\n"
 "]\n"
 msgstr ""
+"[\n"
+"{\n"
+"  type: remove\n"
+"  message: \"package being removed.\"\n"
+"}\n"
+"{ type: install, message: \"package being installed.\"}\n"
+"]\n"
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/pkg-files/chapter.adoc:155
@@ -334,7 +351,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/pkg-files/chapter.adoc:185
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "[\n"
 "{\n"
@@ -359,15 +376,42 @@ msgid ""
 "}\n"
 "]\n"
 msgstr ""
+"[\n"
+"{\n"
+"  type: upgrade\n"
+"  message: \"Package is being upgraded.\"\n"
+"}\n"
+"{\n"
+"  type: upgrade\n"
+"  maximum_version: \"1.0\"\n"
+"  message: \"Upgrading from before 1.0 need to do this.\"\n"
+"}\n"
+"{\n"
+"  type: upgrade\n"
+"  minimum_version: \"1.0\"\n"
+"  message: \"Upgrading from after 1.0 should do that.\"\n"
+"}\n"
+"{\n"
+"  type: upgrade\n"
+"  maximum_version: \"3.0\"\n"
+"  minimum_version: \"1.0\"\n"
+"  message: \"Upgrading from &gt; 1.0 and &lt; 3.0 remove that file.\"\n"
+"}\n"
+"]\n"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/porters-handbook/pkg-files/chapter.adoc:190
+#, fuzzy
 msgid ""
 "When displaying a message on upgrade, it is important to limit when it is "
 "being shown to the user. Most of the time it is by using `maximum_version` "
 "to limit its usage to upgrades from before a certain version when something "
 "specific needs to be done."
 msgstr ""
+"Ao exibir uma mensagem na atualização, é importante limitar até quando ela "
+"será mostrada ao usuário. Na maioria das vezes, é usado o "
+"<literal>maximum_version</literal> para limitar seu uso a atualizações "
+"anteriores a uma certa versão, quando algo específico precisa ser feito."
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/pkg-files/chapter.adoc:195
@@ -391,11 +435,17 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/pkg-files/chapter.adoc:202
 #: documentation/content/en/books/porters-handbook/pkg-files/chapter.adoc:214
+#, fuzzy
 msgid ""
 "This script is here to help you set up the package so that it is as ready to "
 "use as possible. It _must not_ be abused to start services, stop services, "
 "or run any other commands that will modify the currently running system."
 msgstr ""
+"Este script está aqui para ajudá-lo a configurar o pacote para que ele "
+"esteja tão pronto quanto possível para ser usado. Ele <emphasis>não deve</"
+"emphasis> ser abusado para iniciar serviços, interromper serviços ou "
+"executar quaisquer outros comandos que modificarão o sistema em execução no "
+"momento."
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/pkg-files/chapter.adoc:205
@@ -512,11 +562,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/pkg-files/chapter.adoc:260
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "SUB_FILES=\tpkg-message\n"
 "SUB_LIST=\tARCH=${ARCH}\n"
 msgstr ""
+"SUB_FILES=\tpkg-message\n"
+"SUB_LIST=\tARCH=${ARCH}\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/pkg-files/chapter.adoc:263
@@ -532,9 +584,12 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/pkg-files/chapter.adoc:271
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Now it is time to configure this package.\n"
 "Copy %%PREFIX%%/shared/examples/putsy/%%ARCH%%.conf into your home directory\n"
 "as .putsy.conf and edit it.\n"
 msgstr ""
+"Now it is time to configure this package.\n"
+"Copy %%PREFIX%%/share/examples/putsy/%%ARCH%%.conf into your home directory\n"
+"as .putsy.conf and edit it.\n"
