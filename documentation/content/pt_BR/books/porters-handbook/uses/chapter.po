@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-14 11:02-0300\n"
-"PO-Revision-Date: 2021-03-29 15:21+0000\n"
+"PO-Revision-Date: 2021-04-08 00:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/booksporters-handbookuseschapter/pt_BR/>\n"
@@ -38,11 +38,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:37
+#, fuzzy
 msgid ""
 "`USES` macros make it easy to declare requirements and settings for a port. "
 "They can add dependencies, change building behavior, add metadata to "
 "packages, and so on, all by selecting simple, preset values."
 msgstr ""
+"As macros <varname>USES</varname> facilitam declarar requisitos e "
+"configurações de um port. Elas podem adicionar dependências, alterar o "
+"comportamento de compilação do port, adicionar metadados a pacotes e assim "
+"por diante, tudo selecionando valores simples e predefinidos."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:39
@@ -60,9 +65,9 @@ msgstr "Usando Vários Valores"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:47
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "USES=\tbison perl\n"
-msgstr ""
+msgstr "USES=\tbison perl\n"
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:51
@@ -72,9 +77,9 @@ msgstr "Adicionando um Argumento"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:57
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "USES=\ttar:xz\n"
-msgstr ""
+msgstr "USES=\ttar:xz\n"
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:61
@@ -84,9 +89,9 @@ msgstr "Adicionando Vários Argumentos"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:67
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "USES=\tdrupal:7,theme\n"
-msgstr ""
+msgstr "USES=\tdrupal:7,theme\n"
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:71
@@ -96,9 +101,9 @@ msgstr "Entrelaçando Tudo Isso Junto"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:77
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "USES=\tpgsql:9.3+ cpe python:2.7,build\n"
-msgstr ""
+msgstr "USES=\tpgsql:9.3+ cpe python:2.7,build\n"
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:81
@@ -355,10 +360,14 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:161
+#, fuzzy
 msgid ""
 "List of flags to be passed to `cabal-install` during the configuring and "
 "building stage. The flags are passed verbatim."
 msgstr ""
+"Lista de flags a serem passadas para o <command>cabal-install</command> "
+"durante o estágio de configuração e compilação. As flags são passadas sem "
+"alterações (verbatim)."
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:162
@@ -368,10 +377,14 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:164
+#, fuzzy
 msgid ""
 "List of executable files installed by the port. Default value: `${PORTNAME}"
 "`. Items from this list are automatically added to pkg-plist."
 msgstr ""
+"Lista de arquivos executáveis instalados pelo port. Valor padrão: "
+"<varname>${PORTNAME}</varname>. Os itens desta lista são adicionados "
+"automaticamente ao pkg-plist."
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:165
@@ -575,11 +588,16 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:217
+#, fuzzy
 msgid ""
 "Use `features` to request a list of features supported by the default "
 "compiler. After including [.filename]#bsd.port.pre.mk# the port can inspect "
 "the results using these variables:"
 msgstr ""
+"Use <literal>features</literal> para solicitar uma lista de recursos "
+"suportados pelo compilador padrão. Depois de incluir o arquivo <filename>bsd."
+"port.pre.mk</filename> o port pode inspecionar os resultados usando estas "
+"variáveis:"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:219
@@ -1594,11 +1612,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:504
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "USES=\t\tgnome\n"
 "USE_GNOME=\tgnomemenus3:build intlhack\n"
 msgstr ""
+"USES=\t\tgnome\n"
+"USE_GNOME=\tgnomemenus3:build intlhack\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:507
@@ -2692,11 +2712,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:845
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "USES=\t\tmate\n"
 "USE_MATE=\tmenus:build intlhack\n"
 msgstr ""
+"USES=\t\tmate\n"
+"USE_MATE=\tmenus:build intlhack\n"
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:848
@@ -3267,12 +3289,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:1034
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "USES=\t\tphp:ext\n"
 "USE_PHP=\twddx\n"
 "PHP_MOD_PRIO=\t40\n"
 msgstr ""
+"USES=\t\tphp:ext\n"
+"USE_PHP=\twddx\n"
+"PHP_MOD_PRIO=\t40\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:1037
@@ -3559,11 +3584,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:1117
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "USES=\t\tpyqt\n"
 "USE_PYQT=\tcore doc_build designer_run\n"
 msgstr ""
+"USES=\t\tpyqt\n"
+"USE_PYQT=\tcore doc_build designer_run\n"
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:1120
@@ -3670,10 +3697,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:1155
+#, fuzzy
 msgid ""
 "Provides support for building Qt 5 components. It takes care of setting up "
 "the appropriate configuration environment for the port to build."
 msgstr ""
+"Fornece suporte para a compilação de componentes <application>Qt 5</"
+"application>. Ele cuida da definição do ambiente de configuração apropriado "
+"para o port compilar."
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:1157
@@ -3995,9 +4026,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:1287
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "SHEBANG_LANG=\tlua\n"
-msgstr ""
+msgstr "SHEBANG_LANG=\tlua\n"
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:1292
@@ -4014,12 +4045,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:1302
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "SHEBANG_LANG=\tksh\n"
 "ksh_OLD_CMD=\t\"/usr/bin/env ksh\" /bin/ksh /usr/bin/ksh\n"
 "ksh_CMD=\t${LOCALBASE}/bin/ksh\n"
 msgstr ""
+"SHEBANG_LANG=\tksh\n"
+"ksh_OLD_CMD=\t\"/usr/bin/env ksh\" /bin/ksh /usr/bin/ksh\n"
+"ksh_CMD=\t${LOCALBASE}/bin/ksh\n"
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:1307
@@ -4038,9 +4072,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:1315
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "python_OLD_CMD=\t/opt/bin/python2.7\n"
-msgstr ""
+msgstr "python_OLD_CMD=\t/opt/bin/python2.7\n"
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:1320
@@ -4057,11 +4091,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:1329
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "USES=\tshebangfix\n"
 "SHEBANG_REGEX=\t./scripts/.*\\.(sh|pl|cgi)\n"
 msgstr ""
+"USES=\tshebangfix\n"
+"SHEBANG_REGEX=\t./scripts/.*\\.(sh|pl|cgi)\n"
 
 #. type: delimited block = 6
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:1334
@@ -4086,11 +4122,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:1348
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "USES=\tshebangfix\n"
 "SHEBANG_GLOB=\t*.sh *.pl\n"
 msgstr ""
+"USES=\tshebangfix\n"
+"SHEBANG_GLOB=\t*.sh *.pl\n"
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:1353
@@ -4107,11 +4145,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:1362
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "USES=\tshebangfix\n"
 "SHEBANG_FILES=\tscripts/foobar.pl scripts/*.sh\n"
 msgstr ""
+"USES=\tshebangfix\n"
+"SHEBANG_FILES=\tscripts/foobar.pl scripts/*.sh\n"
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:1367
@@ -4215,11 +4255,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:1403
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "BROKEN_SSL=\tlibressl\n"
 "BROKEN_SSL_REASON_libressl=\tneeds features only available in OpenSSL\n"
 msgstr ""
+"BROKEN_SSL=\tlibressl\n"
+"BROKEN_SSL_REASON_libressl=\tneeds features only available in OpenSSL\n"
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:1408
