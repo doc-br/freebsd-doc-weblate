@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-04-01 12:57+0000\n"
+"PO-Revision-Date: 2021-04-07 00:23+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/articlesbuilding-products_index/pt_BR/>\n"
@@ -59,6 +59,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:48
+#, fuzzy
 msgid ""
 "This article examines the issues in using FreeBSD code in appliances and "
 "software products.  It highlights the characteristics of FreeBSD that make "
@@ -66,6 +67,11 @@ msgid ""
 "suggesting a few \"best practices\" for organizations collaborating with the "
 "FreeBSD project."
 msgstr ""
+"Este artigo analisa as questões envolvidas no uso do código do FreeBSD em "
+"appliances e softwares. Ele também destaca as características do FreeBSD, "
+"que o tornam uma excelente base para o desenvolvimento de produtos. O artigo "
+"conclui sugerindo um conjunto das <quote>melhores práticas</quote> de "
+"organizações que colaboram com o projeto FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:50
@@ -80,6 +86,7 @@ msgstr "Introdução"
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:60
+#, fuzzy
 msgid ""
 "FreeBSD today is well-known as a high-performance server operating system.  "
 "It is deployed on millions of web servers and internet-facing hosts "
@@ -88,6 +95,14 @@ msgid ""
 "devices, to personal computers.  Portions of FreeBSD have also been used in "
 "commercial shrink-wrapped software (see <<freebsd-intro>>)."
 msgstr ""
+"Atualmente o FreeBSD é bem conhecido como um sistema operacional de alto "
+"desempenho para servidores. Ele está instalado em milhões de servidores web "
+"e em outros hosts conectados diretamente a internet em todo o mundo. O "
+"código do FreeBSD também é parte integrante de muitos produtos, que vão "
+"desde aparelhos como roteadores de rede, firewalls e dispositivos de "
+"armazenamento, até computadores pessoais. Partes do FreeBSD também têm sido "
+"utilizadas em softwares comerciais (consulte <xref linkend=\"freebsd-intro\""
+"/>)."
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:62
@@ -99,6 +114,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:65
+#, fuzzy
 msgid ""
 "While FreeBSD's source is distributed freely to the public, to fully enjoy "
 "the benefits of the project's work, organizations need to _collaborate_ with "
@@ -106,14 +122,25 @@ msgid ""
 "means of collaboration with the project and the pitfalls that need to be "
 "avoided while doing so."
 msgstr ""
+"Embora o código fonte do FreeBSD seja distribuído gratuitamente ao público, "
+"para desfrutar plenamente dos benefícios do trabalho do projeto, as "
+"organizações precisam <emphasis>colaborar</emphasis> com o mesmo. Nas seções "
+"subsequentes do presente artigo discutiremos formas eficazes de colaborar "
+"com o projeto, bem como os perigos que precisam ser evitados ao fazê-lo."
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:68
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "*Caveat Reader.* The author believes that the characteristics of the FreeBSD Project listed in this article were substantially true at the time the article was conceived and written (2005).\n"
 "However, the reader should keep in mind that the practices and processes used by open-source communities can change over time, and that the information in this article should therefore be taken as indicative rather than normative.\n"
 msgstr ""
+"O autor considera que as características do projeto FreeBSD mencionadas "
+"neste artigo eram substancialmente verdadeiras no momento em que o artigo "
+"foi concebido e escrito (2005). No entanto, o leitor deve ter em mente que "
+"as práticas e processos utilizados por comunidades de código aberto podem "
+"mudar ao longo do tempo, e que portanto as informações deste artigo devem "
+"ser consideradas apenas como indicativas e não como verdades absolutas.\n"
 
 #. type: Title ===
 #: documentation/content/en/articles/building-products/_index.adoc:69
@@ -210,12 +237,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:87
+#, fuzzy
 msgid ""
 "Awareness of optimal ways of working with the project-how best to reduce "
 "engineering costs, improve time to market, manage security vulnerabilities, "
 "and preserve future compatibility with your product as the FreeBSD project "
 "evolves."
 msgstr ""
+"Consciência das melhores formas de se trabalhar com o projeto—a melhor forma "
+"de reduzir os custos de engenharia, de reduzir o tempo necessário para levar "
+"seu produto ao mercado, de gerir vulnerabilidades de segurança, e de "
+"preservar a compatibilidade futura com o seu produto a medida que o Projeto "
+"FreeBSD evolui."
 
 #. type: Title ===
 #: documentation/content/en/articles/building-products/_index.adoc:88
@@ -262,10 +295,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:102
+#, fuzzy
 msgid ""
 "FreeBSD source code is distributed under a liberal BSD license facilitating "
 "its adoption in commercial products <<Mon2005>> with minimum hassle."
 msgstr ""
+"O código fonte do FreeBSD é distribuído sob uma licença BSD liberal, o que "
+"facilita sua adoção em produtos comerciais <citation>Mon2005</citation> com "
+"um mínimo de preocupações."
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:103
@@ -288,21 +325,32 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:105
+#, fuzzy
 msgid ""
 "The culture of the FreeBSD project, carried over from the Computer Science "
 "Research Group at The University of California, Berkeley <<McKu1999-1>>, "
 "fosters high-quality work. Some features in FreeBSD define the state of the "
 "art."
 msgstr ""
+"A cultura do projeto FreeBSD, herdada do Grupo de Pesquisa de Ciências da "
+"Computação da Universidade da Califórnia em Berkeley <citation>McKu1999-1</"
+"citation>, fomenta trabalhos de alta qualidade. Algumas funcionalidades do "
+"FreeBSD definem o estado da arte."
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:108
+#, fuzzy
 msgid ""
 "<<GoldGab2005>> examines the business reasons for using open-source in "
 "greater detail.  For organizations, the benefits of using FreeBSD components "
 "in their products include a shorter time to market, lower development costs "
 "and lower development risks."
 msgstr ""
+"O <citation>GoldGab2005</citation> analisa em maior profundidade os motivos "
+"comerciais para se utilizar código fonte aberto. Para as organizações, os "
+"benefícios do uso de componentes do FreeBSD em seus produtos incluem a "
+"redução do tempo necessário para lançar novos produtos no mercado, menores "
+"custos e menores riscos de desenvolvimento."
 
 #. type: Title ===
 #: documentation/content/en/articles/building-products/_index.adoc:109
@@ -349,26 +397,39 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:119
+#, fuzzy
 msgid ""
 "  FreeBSD ships with a self-hosting development environment that allows easy "
 "creation of such configurations."
 msgstr ""
+"  O FreeBSD é distribuído com um ambiente de desenvolvimento auto-hospedado "
+"o qual permite a fácil criação de tais configurações."
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:120
+#, fuzzy
 msgid ""
 "As a Unix compatible environment for the management functions of high-end "
 "storage and networking devices, running on a separate processor \"blade\"."
 msgstr ""
+"Como um ambiente Unix compatível para as funções de gerenciamento em "
+"dispositivos de armazenamento high-end e em dispositivos de rede, executando "
+"em uma lâmina separada <quote>blade</quote>."
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:124
+#, fuzzy
 msgid ""
 "  FreeBSD provides the tools for creating dedicated OS and application "
 "program images.  Its implementation of a BSD unix API is mature and tested.  "
 "FreeBSD can also provide a stable cross-development environment for the "
 "other components of the high-end device."
 msgstr ""
+"  O FreeBSD fornece ferramentas para a criação de imagens do sistema "
+"operacional dedicadas a executar uma função específica. Sua implementação da "
+"API unix BSD é madura e testada. O FreeBSD também pode proporcionar um "
+"ambiente de desenvolvimento cruzado estável para os outros componentes de "
+"dispositivos topo de linha."
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:125
@@ -432,10 +493,13 @@ msgstr "Tecnologias"
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:143
+#, fuzzy
 msgid ""
 "There are a large number of technologies supported by the FreeBSD project.  "
 "A selection of these are listed below:"
 msgstr ""
+"Existe um grande número de tecnologias suportadas pelo projeto FreeBSD. "
+"Abaixo você encontra uma lista com alguma delas:"
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:145
@@ -540,6 +604,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:168
+#, fuzzy
 msgid ""
 "There are many thousands of contributors in the first group; the vast "
 "majority of contributions to FreeBSD come from individuals in this group.  "
@@ -548,6 +613,12 @@ msgid ""
 "additional responsibilities, and new committers are assigned mentors to help "
 "them learn the ropes."
 msgstr ""
+"Existem muitos milhares de colaboradores no primeiro grupo, a grande maioria "
+"das contribuições para o FreeBSD vêm de indivíduos desse grupo; A permissão "
+"de commit (acesso de escrita) no repositório é concedida a pessoas que "
+"contribuem de forma consistente para o projeto. O direito de commit vem "
+"acompanhado de responsabilidades adicionais, e para facilitar o aprendizado "
+"das mesmas, um mentor é atribuído a todos os novos committers."
 
 #. type: Block title
 #: documentation/content/en/articles/building-products/_index.adoc:169
@@ -680,6 +751,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:212
+#, fuzzy
 msgid ""
 "While access to quality source code can reduce the cost of initial "
 "development, in the long-term the costs of managing change begin to "
@@ -690,6 +762,16 @@ msgid ""
 "that are __live__; i.e., with an active community, clear goals and a "
 "transparent working style."
 msgstr ""
+"Embora o acesso a um código fonte de qualidade possa reduzir o custo inicial "
+"de desenvolvimento, a longo prazo, os custos com o gerenciamento de mudanças "
+"começam a dominar. A medida que os ambientes computacionais mudam ao longo "
+"dos anos e novas vulnerabilidades de segurança são descobertas, o seu "
+"produto também precisará mudar e se adaptar. O uso de código open-source não "
+"deve ser encarado como uma atividade pontual, mas sim como um "
+"<emphasis>processo contínuo</emphasis>. Os melhores projetos para se "
+"colaborar são os que estão <emphasis>vivos</emphasis>, ou seja, aqueles com "
+"uma comunidade ativa, que tenha objetivos claros e que possua um estilo de "
+"trabalho transparente."
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:214
@@ -751,17 +833,28 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:228
+#, fuzzy
 msgid ""
 "Volunteer driven projects operate under different rules than for-profit "
 "corporates.  A common mistake that companies make when venturing into the "
 "open-source world is that of underplaying these differences."
 msgstr ""
+"As regras que regem a operação de um projeto voluntário são diferentes das "
+"que regem a operação de uma empresa com fins lucrativos. Um erro comum que "
+"as empresas cometem ao se aventurar no mundo open-source é o de desvalorizar "
+"essas diferenças."
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:230
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "*Motivation.* Most contributions to FreeBSD are done voluntarily without monetary rewards entering the picture. The factors that motivate individuals are complex, ranging from altruism, to an interest in solving the kinds of problems that FreeBSD attempts to solve. In this environment, \"elegance is never optional\"<<Nor1993>>.\n"
 msgstr ""
+"A maioria das contribuições feitas para o FreeBSD são feitas "
+"voluntariamente, sem que nenhuma recompensa financeira esteja envolvida. Os "
+"fatores que motivam as pessoas são complexos, e vão desde o puro altruísmo "
+"até o interesse comum em resolver algum tipo de problema que o FreeBSD "
+"esteja tentando resolver. Neste tipo de ambiente, a <quote>elegância jamais "
+"é opcional</quote> <citation>Nor1993</citation>.\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:232
@@ -869,10 +962,13 @@ msgstr "Se planeje para o longo prazo"
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:275
+#, fuzzy
 msgid ""
 "Setup processes that help in tracking the development of FreeBSD.  For "
 "example:"
 msgstr ""
+"Implante processos que o ajudem a monitorar o desenvolvimento do FreeBSD. "
+"Por exemplo:"
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:277
@@ -946,11 +1042,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:309
+#, fuzzy
 msgid ""
 "Use code from a -STABLE development branch of FreeBSD.  These development "
 "branches are formally supported by FreeBSD's release engineering and "
 "security teams and comprise of tested code."
 msgstr ""
+"Utilize código da branch de desenvolvimento -STABLE do FreeBSD. Este branch "
+"de desenvolvimento é formalmente suportado pelas equipes de engenharia de "
+"lançamento e de segurança, e é formada apenas por código testado."
 
 #. type: Labeled list
 #: documentation/content/en/articles/building-products/_index.adoc:310
@@ -960,6 +1060,7 @@ msgstr "Doe código para reduzir seus custos"
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:314
+#, fuzzy
 msgid ""
 "A major proportion of the costs associated with developing products is that "
 "of doing maintenance.  By donating non-critical code to the project, you "
@@ -967,6 +1068,13 @@ msgid ""
 "get.  This in turn leads to more bugs and security vulnerabilities being "
 "flushed out and performance anomalies being identified and fixed."
 msgstr ""
+"Uma parte significativa dos custos relacionados ao desenvolvimento de um "
+"produto é o de realizar a sua manutenção. Ao doar partes não criticas do seu "
+"código para o projeto, você se beneficia por ter o seu código exposto de uma "
+"forma ampla, exposição que ele não teria de outra forma. Esta exposição por "
+"sua vez leva eliminação de um maior numero de bugs e de vulnerabilidades de "
+"segurança, e permite que anomalias de desempenho sejam identificadas e "
+"corrigidas."
 
 #. type: Labeled list
 #: documentation/content/en/articles/building-products/_index.adoc:315
@@ -1011,12 +1119,19 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:329
+#, fuzzy
 msgid ""
 "Letting the FreeBSD community know that your company uses FreeBSD helps "
 "improve your chances of attracting high quality talent.  A large roster of "
 "support for FreeBSD also means more mind share for it among developers.  "
 "This in turn yields a healthier foundation for your future."
 msgstr ""
+"Dar visibilidade para a comunidade FreeBSD de que a sua empresa utiliza o "
+"sistema ajuda a melhorar as suas chances de atrair talentos de alta "
+"qualidade. Quanto maior for a lista de organizações que apoiam o FreeBSD "
+"maior será a presença do sistema na cabeça (mind share) dos desenvolvedores. "
+"Ao contribuir para aumentar o numero de desenvolvedores interessados no "
+"FreeBSD, você estará gerando uma base saudável para o seu futuro."
 
 #. type: Labeled list
 #: documentation/content/en/articles/building-products/_index.adoc:329
@@ -1051,15 +1166,22 @@ msgstr "Conclusão"
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:342
+#, fuzzy
 msgid ""
 "The FreeBSD project's goals are to create and give away the source code for "
 "a high-quality operating system.  By working with the FreeBSD project you "
 "can reduce development costs and improve your time to market in a number of "
 "product development scenarios."
 msgstr ""
+"O Objetivo do projeto FreeBSD é criar e distribuir o código fonte de um "
+"sistema operacional de alta qualidade. Ao trabalhar com o projeto FreeBSD "
+"você pode reduzir os seus custos de desenvolvimento e melhorar o tempo "
+"necessário para lançar seus novos produtos no mercado em vários cenários de "
+"desenvolvimento de produtos."
 
 #. type: Plain text
 #: documentation/content/en/articles/building-products/_index.adoc:346
+#, fuzzy
 msgid ""
 "We examined the characteristics of the FreeBSD project that make it an "
 "excellent choice for being part of an organization's product strategy.  We "
@@ -1068,6 +1190,12 @@ msgid ""
 "of best-practices that could help organizations collaborating with the "
 "project."
 msgstr ""
+"Foram examinadas as características do FreeBSD que o tornam uma excelente "
+"opção na estratégia de produto de uma organização. Em seguida, abordamos os "
+"aspectos predominantes da cultura do projeto e examinamos formas eficazes de "
+"interagir com os seus desenvolvedores. O artigo finaliza com uma lista das "
+"melhores práticas que podem ajudar na colaboração da iniciativa privada com "
+"o projeto FreeBSD."
 
 #. type: Title ==
 #: documentation/content/en/articles/building-products/_index.adoc:350
