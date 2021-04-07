@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-14 11:02-0300\n"
-"PO-Revision-Date: 2021-03-29 22:55+0000\n"
+"PO-Revision-Date: 2021-04-08 00:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbooksecurity_index/pt_BR/>\n"
@@ -163,6 +163,7 @@ msgstr "Introdução"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:76
+#, fuzzy
 msgid ""
 "Security is everyone's responsibility. A weak entry point in any system "
 "could allow intruders to gain access to critical information and cause havoc "
@@ -170,9 +171,15 @@ msgid ""
 "the CIA triad, which stands for the Confidentiality, Integrity, and "
 "Availability of information systems."
 msgstr ""
+"Segurança é responsabilidade de todos. Um ponto de entrada fraco em qualquer "
+"sistema pode permitir que intrusos obtenham acesso a informações críticas e "
+"causem estragos em toda a rede. Um dos princípios centrais da segurança da "
+"informação é a tríade <acronym>CIA</acronym>, que significa "
+"Confidencialidade, Integridade e Disponibilidade dos sistemas de informação."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:78
+#, fuzzy
 msgid ""
 "The CIA triad is a bedrock concept of computer security as customers and "
 "users expect their data to be protected. For example, a customer expects "
@@ -180,9 +187,16 @@ msgid ""
 "that their orders are not changed behind the scenes (integrity), and that "
 "they have access to their order information at all times (availablility)."
 msgstr ""
+"A tríade <acronym>CIA</acronym> é um conceito básico de segurança de "
+"computadores, pois os clientes e usuários esperam que seus dados sejam "
+"protegidos. Por exemplo, um cliente espera que as informações do cartão de "
+"crédito sejam armazenadas com segurança (confidencialidade), que os pedidos "
+"não sejam alterados nos bastidores (integridade) e que tenham acesso às "
+"informações do pedido em todos os momentos (disponibilidade)."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:80
+#, fuzzy
 msgid ""
 "To provide CIA, security professionals apply a defense in depth strategy. "
 "The idea of defense in depth is to add several layers of security to prevent "
@@ -193,6 +207,15 @@ msgid ""
 "implement an effective security strategy, one must understand threats and "
 "how to defend against them."
 msgstr ""
+"Para fornecer <acronym>CIA</acronym>, os profissionais de segurança aplicam "
+"uma estratégia de defesa em profundidade. A ideia de defesa em profundidade "
+"é adicionar várias camadas de segurança para evitar que uma falha em uma "
+"única camada e faça com que todo o sistema de segurança entre em colapso. "
+"Por exemplo, um administrador do sistema não pode simplesmente ativar um "
+"firewall e considerar a rede ou o sistema seguro. É preciso também auditar "
+"contas, verificar a integridade dos binários e garantir que ferramentas "
+"maliciosas não estejam instaladas. Para implementar uma estratégia de "
+"segurança eficaz, é preciso entender as ameaças e como se defender delas."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:82
@@ -228,6 +251,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:86
+#, fuzzy
 msgid ""
 "When applying security to systems, it is recommended to start by securing "
 "the basic accounts and system configuration, and then to secure the network "
@@ -239,6 +263,16 @@ msgid ""
 "operating procedures (SOPs) already exist. When in doubt, ask the security "
 "team."
 msgstr ""
+"Ao aplicar a segurança aos sistemas, recomenda-se começar protegendo as "
+"contas básicas e a configuração do sistema e, em seguida, proteger a camada "
+"de rede de modo a aderir à política do sistema e aos procedimentos de "
+"segurança da organização. Muitas organizações já possuem uma política de "
+"segurança que abrange a configuração de dispositivos de tecnologia. A "
+"política deve incluir a configuração de segurança de estações de trabalho, "
+"desktops, dispositivos móveis, telefones, servidores de produção e "
+"servidores de desenvolvimento. Em muitos casos, procedimentos operacionais "
+"padrão (<acronym>SOP</acronym>s) já existem. Em caso de dúvida, pergunte à "
+"equipe de segurança."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:88
@@ -282,11 +316,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:102
+#, fuzzy
 msgid ""
 "The second method is to prevent login access by changing the shell to [."
 "filename]#/usr/sbin/nologin#. Only the superuser can change the shell for "
 "other users:"
 msgstr ""
+"O segundo método é impedir o acesso ao login alterando o shell para "
+"<filename>/usr/sbin/nologin</filename>. Apenas o superusuário pode alterar o "
+"shell para outros usuários:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:106
@@ -296,10 +334,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:109
+#, fuzzy
 msgid ""
 "The [.filename]#/usr/sbin/nologin# shell prevents the system from assigning "
 "a shell to the user when they attempt to login."
 msgstr ""
+"O shell <filename>/usr/sbin/nologin</filename> impede que o sistema atribua "
+"um shell ao usuário quando ele tenta efetuar login."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:111
@@ -323,12 +364,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:116
+#, fuzzy
 msgid ""
 "The second, and recommended, method to permit privilege escalation is to "
 "install the package:security/sudo[] package or port. This software provides "
 "additional auditing, more fine-grained user control, and can be configured "
 "to lock users into running only the specified privileged commands."
 msgstr ""
+"O segundo e recomendado método para permitir o escalonamento de privilégios "
+"é instalar o pacote ou port <package>security/sudo</package>. Este software "
+"fornece auditoria adicional, controle de usuário mais refinado e pode ser "
+"configurado para bloquear os usuários para que executem apenas os comandos "
+"privilegiados especificados."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:118
@@ -367,11 +414,16 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:134
+#, fuzzy
 msgid ""
 "Blowfish is not part of AES and is not considered compliant with any Federal "
 "Information Processing Standards (FIPS). Its use may not be permitted in "
 "some environments."
 msgstr ""
+"O Blowfish não faz parte do <acronym>AES</acronym> e não é considerado "
+"compatível com nenhum Federal Information Processing Standard "
+"(<acronym>FIPS</acronym>). Seu uso pode não ser permitido em alguns "
+"ambientes."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:137
@@ -405,9 +457,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:149
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "        :passwd_format=sha512:\\\n"
-msgstr ""
+msgstr "        :passwd_format=sha512:\\\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:152
@@ -418,9 +470,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:156
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "        :passwd_format=blf:\\\n"
-msgstr ""
+msgstr "        :passwd_format=blf:\\\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:159
@@ -452,12 +504,17 @@ msgstr "Aplicação de Política de Senha"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:166
+#, fuzzy
 msgid ""
 "Enforcing a strong password policy for local accounts is a fundamental "
 "aspect of system security. In FreeBSD, password length, password strength, "
 "and password complexity can be implemented using built-in Pluggable "
 "Authentication Modules (PAM)."
 msgstr ""
+"Aplicar uma política de senha forte para contas locais é um aspecto "
+"fundamental da segurança do sistema. No FreeBSD, o tamanho da senha, a força "
+"da senha e a complexidade da senha podem ser implementados usando os Módulos "
+"de Autenticação Conectáveis (<acronym>PAM</acronym>)."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:168
@@ -519,12 +576,14 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:187
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "% passwd\n"
 "Changing local password for trhodes\n"
 "Old Password:\n"
 msgstr ""
+"Changing local password for trhodes\n"
+"Old Password:\n"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:198
@@ -564,9 +623,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:207
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "#       :passwordtime=90d:\\\n"
-msgstr ""
+msgstr "#       :passwordtime=90d:\\\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:210
@@ -615,12 +674,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:226
+#, fuzzy
 msgid ""
 "A rootkit does do one thing useful for administrators: once detected, it is "
 "a sign that a compromise happened at some point. But, these types of "
 "applications tend to be very well hidden. This section demonstrates a tool "
 "that can be used to detect rootkits, package:security/rkhunter[]."
 msgstr ""
+"Um rootkit faz uma coisa útil para administradores: uma vez detectado, é um "
+"sinal de que um comprometimento aconteceu em algum momento. Mas, esses tipos "
+"de aplicativos tendem a ser muito bem ocultos. Esta seção demonstra uma "
+"ferramenta que pode ser usada para detectar rootkits, <package>security/"
+"rkhunter</package>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:228
@@ -638,6 +703,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:235
+#, fuzzy
 msgid ""
 "After the process completes, a status message will be printed to the screen. "
 "This message will include the amount of files checked, suspect files, "
@@ -646,9 +712,17 @@ msgid ""
 "and known vulnerable versions of installed software. These can be handled "
 "now or after a more detailed analysis has been performed."
 msgstr ""
+"Depois que o processo for concluído, uma mensagem de status será impressa na "
+"tela. Esta mensagem incluirá a quantidade de arquivos verificados, arquivos "
+"suspeitos, possíveis rootkits e mais. Durante a verificação, alguns avisos "
+"de segurança genéricos podem ser produzidos sobre arquivos ocultos, a "
+"seleção do protocolo <application>OpenSSH</application> e versões "
+"vulneráveis conhecidas do software instalado. Estes podem ser tratados agora "
+"ou após uma análise mais detalhada ter sido realizada."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:237
+#, fuzzy
 msgid ""
 "Every administrator should know what is running on the systems they are "
 "responsible for. Third-party tools like rkhunter and package:sysutils/"
@@ -657,6 +731,14 @@ msgid ""
 "questions when something seems out of place, and be paranoid. While "
 "preventing a compromise is ideal, detecting a compromise is a must."
 msgstr ""
+"Todo administrador deve saber o que está sendo executado nos sistemas pelos "
+"quais é responsável. Ferramentas de terceiros como o <application>rkhunter</"
+"application> e o <package>sysutils/lsof</package> e comandos nativos como o "
+"<command>netstat</command> e o <command>ps</command>, podem mostrar uma "
+"grande quantidade de informações sobre o sistema. Faça anotações sobre o que "
+"é normal, faça perguntas quando algo parecer fora do lugar e seja paranoico. "
+"Embora evitar um comprometimento seja ideal, detectar um comprometimento é "
+"imprescindível."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:239
@@ -666,15 +748,22 @@ msgstr "Verificação Binária"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:242
+#, fuzzy
 msgid ""
 "Verification of system files and binaries is important because it provides "
 "the system administration and security teams information about system "
 "changes. A software application that monitors the system for changes is "
 "called an Intrusion Detection System (IDS)."
 msgstr ""
+"A verificação de arquivos e binários do sistema é importante porque fornece "
+"às equipes de administração e segurança do sistema informações sobre "
+"alterações no sistema. Uma aplicação de software que monitora o sistema para "
+"alterações é chamado de Sistema de Detecção de Intrusão "
+"(<acronym>IDS</acronym>)."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:244
+#, fuzzy
 msgid ""
 "FreeBSD provides native support for a basic IDS system. While the nightly "
 "security emails will notify an administrator of changes, the information is "
@@ -684,6 +773,14 @@ msgid ""
 "a read-only, root-owned directory or, preferably, on a removable USB disk or "
 "remote rsync server."
 msgstr ""
+"O FreeBSD fornece suporte nativo para um sistema de <acronym>IDS</acronym> "
+"básico. Embora os emails de segurança noturnos notifiquem o administrador "
+"sobre alterações, as informações são armazenadas localmente e há uma chance "
+"de que um usuário mal-intencionado modifique essas informações para ocultar "
+"suas alterações no sistema. Como tal, recomenda-se criar um conjunto "
+"separado de assinaturas binárias e armazená-las em um diretório de read-"
+"only, propriedade do root ou, de preferência, em um disco <acronym>USB</"
+"acronym> removível ou servidor <application>rsync</application> remoto."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:246
@@ -716,10 +813,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:256
+#, fuzzy
 msgid ""
 "Viewing [.filename]#/root/.bin_cksum_mtree# should yield output similar to "
 "the following:"
 msgstr ""
+"Visualizar o arquivo <filename>/root/.bin_cksum_mtree</filename> deve "
+"produzir uma saída semelhante à seguinte:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:263
@@ -784,6 +884,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:292
+#, fuzzy
 msgid ""
 "This should produce the same checksum for [.filename]#/bin# that was "
 "produced when the specification was created. If no changes have occurred to "
@@ -791,6 +892,12 @@ msgid ""
 "output file will be empty. To simulate a change, change the date on [."
 "filename]#/bin/cat# using `touch` and run the verification command again:"
 msgstr ""
+"Isso deve produzir o mesmo checksum para <filename>/bin</filename> que foi "
+"produzido quando a especificação foi criada. Se nenhuma alteração tiver "
+"ocorrido nos binários nesse diretório, o arquivo de saída <filename>/root/."
+"bin_chksum_output</filename> estará vazio. Para simular uma alteração, "
+"altere a data no arquivo <filename>/bin/cat</filename> usando o "
+"<command>touch</command> e execute o comando de verificação novamente:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:300
@@ -842,12 +949,18 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:314
+#, fuzzy
 msgid ""
 "Any time a setting is changed with `sysctl`, the chance to cause undesired "
 "harm is increased, affecting the availability of the system. All changes "
 "should be monitored and, if possible, tried on a testing system before being "
 "used on a production system."
 msgstr ""
+"Sempre que uma configuração é alterada com o <command>sysctl</command>, a "
+"chance de causar danos indesejados é aumentada, afetando a disponibilidade "
+"do sistema. Todas as alterações devem ser monitoradas e, se possível, "
+"testadas em um sistema de teste antes de serem usadas em um sistema de "
+"produção."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:317
@@ -924,6 +1037,7 @@ msgstr "Senhas de Uso Unico"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:338
+#, fuzzy
 msgid ""
 "By default, FreeBSD includes support for One-time Passwords In Everything "
 "(OPIE). OPIE is designed to prevent replay attacks, in which an attacker "
@@ -932,6 +1046,14 @@ msgid ""
 "attacker. OPIE uses a secure hash and a challenge/response system to manage "
 "passwords. The FreeBSD implementation uses the MD5 hash by default."
 msgstr ""
+"Por padrão, o FreeBSD inclui suporte para senhas de uso único em tudo "
+"(<acronym>OPIE</acronym>). O <acronym>OPIE</acronym> é projetado para evitar "
+"ataques repetidos, nos quais um atacante descobre a senha de um usuário e a "
+"usa para acessar um sistema. Como uma senha é usada apenas uma vez em "
+"<acronym>OPIE</acronym>, uma senha descoberta é de pouca utilidade para um "
+"invasor. O <acronym>OPIE</acronym> usa um hash seguro e um sistema de "
+"desafio/resposta para gerenciar senhas. A implementação do FreeBSD usa o "
+"hash <acronym>MD5</acronym> por padrão."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:340
@@ -975,6 +1097,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:346
+#, fuzzy
 msgid ""
 "This section describes four different sorts of operations. The first is how "
 "to set up one-time-passwords for the first time over a secure connection. "
@@ -983,6 +1106,12 @@ msgid ""
 "a number of keys which can be written down or printed out to use at insecure "
 "locations."
 msgstr ""
+"Esta seção descreve quatro tipos diferentes de operações. A primeira é como "
+"configurar senhas de uso único pela primeira vez em uma conexão segura. A "
+"segunda é como usar o <command>opiepasswd</command> em uma conexão insegura. "
+"A terceira é como efetuar login em uma conexão insegura. A quarta é como "
+"gerar um número de chaves que podem ser escritas ou impressas para uso em "
+"locais inseguros."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:347
@@ -1043,6 +1172,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:371
+#, fuzzy
 msgid ""
 "The `ID` line lists the login name (`unfurl`), default iteration count "
 "(`499`), and default seed (`to4268`). When logging in, the system will "
@@ -1051,6 +1181,13 @@ msgid ""
 "corresponds to those parameters and the secret password. At the next login, "
 "use this one-time password."
 msgstr ""
+"A linha <literal>ID</literal> lista o nome de login "
+"(<literal>unfurl</literal>), a contagem de iterações padrão "
+"(<literal>499</literal>) e o seed padrão (<literal>to4268</literal>). Ao "
+"efetuar o login, o sistema lembrará esses parâmetros e os exibirá, o que "
+"significa que eles não precisam ser memorizados. A última linha lista a "
+"senha única gerada que corresponde a esses parâmetros e a senha secreta. No "
+"próximo login, use essa senha única."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:372
@@ -1223,6 +1360,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:459
+#, fuzzy
 msgid ""
 "The `-n 5` requests five keys in sequence, and `30` specifies what the last "
 "iteration number should be. Note that these are printed out in _reverse_ "
@@ -1230,6 +1368,12 @@ msgid ""
 "hand; otherwise, print the list. Each line shows both the iteration count "
 "and the one-time password. Scratch off the passwords as they are used."
 msgstr ""
+"A opção <option>-n 5</option> solicita cinco chaves em seqüência e "
+"<option>30</option> especifica qual deve ser o último número de iteração. "
+"Note que estes são impressos na ordem <emphasis>reversa</emphasis> de uso. O "
+"usuário realmente paranóico pode querer escrever os resultados manualmente; "
+"caso contrário, imprima a lista. Cada linha mostra a contagem de iteração e "
+"a senha de uso único. Risque as senhas conforme elas forem usadas."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:460
@@ -1253,9 +1397,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:469
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "permit 192.168.0.0 255.255.0.0\n"
-msgstr ""
+msgstr "permit 192.168.0.0 255.255.0.0\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:472
@@ -1291,12 +1435,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:481
+#, fuzzy
 msgid ""
 "TCP Wrapper should not be considered a replacement for a properly configured "
 "firewall. Instead, TCP Wrapper should be used in conjunction with a firewall "
 "and other security enhancements in order to provide another layer of "
 "protection in the implementation of a security policy."
 msgstr ""
+"O <application>TCP Wrapper</application> não deve ser considerado um "
+"substituto para um firewall configurado adequadamente. Em vez disso, "
+"<application>TCP Wrapper</application> deve ser usado em conjunto com um "
+"firewall e outros aprimoramentos de segurança para fornecer outra camada de "
+"proteção na implementação de uma política de segurança."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:482
@@ -1313,11 +1463,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:490
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "inetd_enable=\"YES\"\n"
 "inetd_flags=\"-Ww\"\n"
 msgstr ""
+"inetd_enable=\"YES\"\n"
+"inetd_flags=\"-Ww\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:493
@@ -1334,12 +1486,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:500
+#, fuzzy
 msgid ""
 "In the simplest configuration, daemon connection policies are set to either "
 "permit or block, depending on the options in [.filename]#/etc/hosts.allow#. "
 "The default configuration in FreeBSD is to allow all connections to the "
 "daemons started with inetd."
 msgstr ""
+"Na configuração mais simples, as políticas de conexão do daemon são "
+"configuradas para permitir ou bloquear, dependendo das opções no arquivo "
+"<filename>/etc/hosts.allow</filename>. A configuração padrão no FreeBSD é "
+"permitir todas as conexões para os daemons iniciados com o "
+"<application>inetd</application>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:502
@@ -1362,11 +1520,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:509
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# This line is required for POP3 connections:\n"
 "qpopper : ALL : allow\n"
 msgstr ""
+"# This line is required for POP3 connections:\n"
+"qpopper : ALL : allow\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:512
@@ -1387,6 +1547,7 @@ msgstr "Configuração Avançada"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:521
+#, fuzzy
 msgid ""
 "TCP Wrapper provides advanced options to allow more control over the way "
 "connections are handled. In some cases, it may be appropriate to return a "
@@ -1396,9 +1557,18 @@ msgid ""
 "possible through the use of configuration options known as wildcards, "
 "expansion characters, and external command execution."
 msgstr ""
+"O <application>TCP Wrapper</application> fornece opções avançadas para "
+"permitir mais controle sobre o modo como as conexões são tratadas. Em alguns "
+"casos, pode ser apropriado retornar um comentário para determinados hosts ou "
+"conexões de daemon. Em outros casos, uma entrada de log deve ser registrada "
+"ou um email enviado ao administrador. Outras situações podem exigir o uso de "
+"um serviço apenas para conexões locais. Isso tudo é possível através do uso "
+"de opções de configuração conhecidas como wildcards, caracteres de expansão "
+"e execução de comandos externos."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:523
+#, fuzzy
 msgid ""
 "Suppose that a situation occurs where a connection should be denied yet a "
 "reason should be sent to the host who attempted to establish that "
@@ -1406,16 +1576,25 @@ msgid ""
 "is made, `twist` executes a shell command or script. An example exists in [."
 "filename]#hosts.allow#:"
 msgstr ""
+"Suponha que uma situação ocorra onde uma conexão deva ser negada, mas uma "
+"razão deve ser enviada ao host que tentou estabelecer essa conexão. Essa "
+"ação é possível com a opção <option>twist</option>. Quando uma tentativa de "
+"conexão é feita, o <option>twist</option> executa um comando ou script "
+"shell. Existe um exemplo no arquivo <filename>hosts.allow</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:530
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# The rest of the daemons are protected.\n"
 "ALL : ALL \\\n"
 "\t: severity auth.info \\\n"
 "\t: twist /bin/echo \"You are not welcome to use %d from %h.\"\n"
 msgstr ""
+"# The rest of the daemons are protected.\n"
+"ALL : ALL \\\n"
+"\t: severity auth.info \\\n"
+"\t: twist /bin/echo \"You are not welcome to use %d from %h.\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:533
@@ -1448,7 +1627,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:549
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# We do not allow connections from example.com:\n"
 "ALL : .example.com \\\n"
@@ -1456,6 +1635,11 @@ msgid ""
 "\t  /var/log/connections.log) \\\n"
 "\t: deny\n"
 msgstr ""
+"# We do not allow connections from example.com:\n"
+"ALL : .example.com \\\n"
+"\t: spawn (/bin/echo %a from %h attempted to access %d &gt;&gt; \\\n"
+"\t  /var/log/connections.log) \\\n"
+"\t: deny\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:552
@@ -1479,11 +1663,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:559
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# Block possibly spoofed requests to sendmail:\n"
 "sendmail : PARANOID : deny\n"
 msgstr ""
+"# Block possibly spoofed requests to sendmail:\n"
+"sendmail : PARANOID : deny\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:565
@@ -1501,10 +1687,14 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:572
+#, fuzzy
 msgid ""
 "When adding new configuration lines, make sure that any unneeded entries for "
 "that daemon are commented out in [.filename]#hosts.allow#."
 msgstr ""
+"Ao adicionar novas linhas de configuração, certifique-se de que quaisquer "
+"entradas desnecessárias para esse daemon sejam comentadas no arquivo "
+"<filename>hosts.allow</filename>."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/security/_index.adoc:575
@@ -1514,6 +1704,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:578
+#, fuzzy
 msgid ""
 "Kerberos is a network authentication protocol which was originally created "
 "by the Massachusetts Institute of Technology (MIT) as a way to securely "
@@ -1525,15 +1716,32 @@ msgid ""
 "Kerberos, their communications can be encrypted to assure privacy and data "
 "integrity."
 msgstr ""
+"O <application>Kerberos</application> é um protocolo de autenticação de rede "
+"que foi originalmente criado pelo Instituto de Tecnologia de Massachusetts "
+"(<acronym>MIT</acronym>) como uma maneira segura de fornecer autenticação em "
+"uma rede potencialmente hostil. O protocolo <application>Kerberos</"
+"application> usa criptografia robusta para que tanto um cliente quanto um "
+"servidor possam provar sua identidade sem enviar nenhum segredo não "
+"criptografado pela rede. O <application>Kerberos</application> pode ser "
+"descrito como um sistema proxy de verificação de identidade e como um "
+"sistema confiável de autenticação de terceiros. Depois que um usuário "
+"autentica com <application>Kerberos</application>, suas comunicações podem "
+"ser criptografadas para garantir privacidade e integridade dos dados."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:580
+#, fuzzy
 msgid ""
 "The only function of Kerberos is to provide the secure authentication of "
 "users and servers on the network. It does not provide authorization or "
 "auditing functions. It is recommended that Kerberos be used with other "
 "security methods which provide authorization and audit services."
 msgstr ""
+"A única função do <application>Kerberos</application> é fornecer a "
+"autenticação segura de usuários e servidores na rede. Ele não fornece "
+"funções de autorização ou auditoria. Recomenda-se que o "
+"<application>Kerberos</application> seja usado com outros métodos de "
+"segurança que forneçam serviços de autorização e auditoria."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:582
@@ -1617,8 +1825,10 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:604
+#, fuzzy
 msgid "To begin, install the package:security/heimdal[] package as follows:"
 msgstr ""
+"Para começar, instale o pacote <package>security/heimdal</package> assim:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:608
@@ -1785,11 +1995,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:702
+#, fuzzy
 msgid ""
 "While there will not be any kerberized daemons running at this point, it is "
 "possible to confirm that the KDC is functioning by obtaining a ticket for "
 "the principal that was just created:"
 msgstr ""
+"Embora não tenha nenhum daemon do kerberos em execução neste ponto, é "
+"possível confirmar que o <acronym>KDC</acronym> está funcionando obtendo um "
+"ticket para o principal que acabou de ser criado:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:707
@@ -1945,9 +2159,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:767
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "GSSAPIAuthentication yes\n"
-msgstr ""
+msgstr "GSSAPIAuthentication yes\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:770
@@ -1964,10 +2178,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:774
+#, fuzzy
 msgid ""
 "As it was for the server, the client requires configuration in [.filename]#/"
 "etc/krb5.conf#. Copy the file in place (securely) or re-enter it as needed."
 msgstr ""
+"Assim como foi no servidor, o cliente requer configuração no arquivo "
+"<filename>/etc/krb5.conf</filename>. Copie o arquivo no local (com segurança)"
+" ou insira-o novamente conforme necessário."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:776
@@ -1983,10 +2201,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:778
+#, fuzzy
 msgid ""
 "When testing a Kerberized application, try using a packet sniffer such as "
 "`tcpdump` to confirm that no sensitive information is sent in the clear."
 msgstr ""
+"Ao testar um aplicativo Kerberizado, tente usar um sniffer de pacote, como o "
+"<command>tcpdump</command>, para confirmar que nenhuma informação "
+"confidencial é enviada sem proteção."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:780
@@ -2019,11 +2241,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:789
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "tillman@example.org\n"
 "jdoe@example.org\n"
 msgstr ""
+"tillman@example.org\n"
+"jdoe@example.org\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:792
@@ -2065,7 +2289,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:808
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "kdc_program=\"/usr/local/sbin/kdc\"\n"
 "kadmind_program=\"/usr/local/sbin/kadmind\"\n"
@@ -2073,6 +2297,11 @@ msgid ""
 "kdc_enable=\"YES\"\n"
 "kadmind_enable=\"YES\"\n"
 msgstr ""
+"kdc_program=\"/usr/local/sbin/kdc\"\n"
+"kadmind_program=\"/usr/local/sbin/kadmind\"\n"
+"kdc_flags=\"\"\n"
+"kdc_enable=\"YES\"\n"
+"kadmind_enable=\"YES\"\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:810
@@ -2113,6 +2342,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:818
+#, fuzzy
 msgid ""
 "All hosts in the realm must be both forward and reverse resolvable in DNS "
 "or, at a minimum, exist in [.filename]#/etc/hosts#. CNAMEs will work, but "
@@ -2120,6 +2350,12 @@ msgid ""
 "unresolvable hosts is not intuitive: `Kerberos5 refuses authentication "
 "because Read req failed: Key table entry not found`."
 msgstr ""
+"Todos os hosts no realm devem ser resolvidos tanto de forma direta quanto "
+"reversa no <acronym>DNS</acronym> ou, no mínimo, no arquivo <filename>/etc/"
+"hosts</filename>. Os CNAMEs funcionarão, mas os registros A e PTR devem "
+"estar corretos e no lugar. A mensagem de erro para hosts não resolvidos não "
+"é intuitiva: <errorname>Kerberos5 refuses authentication because Read req "
+"failed: Key table entry not found</errorname>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:819
@@ -2218,12 +2454,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:833
+#, fuzzy
 msgid ""
 "If the KDC is unavailable, network services are unusable as authentication "
 "cannot be performed. This can be alleviated with a single master KDC and one "
 "or more slaves, and with careful implementation of secondary or fall-back "
 "authentication using PAM."
 msgstr ""
+"Se o <acronym>KDC</acronym> não estiver disponível, os serviços de rede não "
+"poderão ser utilizados, pois a autenticação não poderá ser executada. Isso "
+"pode ser mitigado com um único <acronym>KDC</acronym> master e um ou mais "
+"slaves, e com a implementação cuidadosa da autenticação secundária ou de "
+"fallback usando <acronym>PAM</acronym>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:835
@@ -2289,6 +2531,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:850
+#, fuzzy
 msgid ""
 "The version of OpenSSL included in FreeBSD supports the Secure Sockets Layer "
 "3.0 (SSLv3) and Transport Layer Security 1.0/1.1/1.2 (TLSv1/TLSv1.1/TLSv1.2) "
@@ -2296,6 +2539,11 @@ msgid ""
 "library. In FreeBSD 12.0-RELEASE and above, OpenSSL also supports Transport "
 "Layer Security 1.3 (TLSv1.3)."
 msgstr ""
+"A versão do <application>OpenSSL</application> incluída no FreeBSD suporta "
+"os protocolos de segurança de redes Secure Sockets Layer 3.0 (SSLv3) e "
+"Transport Layer Security 1.0/1.1/1.2 (TLSv1/TLSv1.1/TLSv1.2) e pode ser "
+"usado como uma biblioteca de criptografia geral. No FreeBSD 12.0-RELEASE e "
+"posterior, OpenSSL também suporta Transport Layer Security 1.3 (TLSv1.3)."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:852
@@ -2311,9 +2559,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:856
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "DEFAULT_VERSIONS+= ssl=openssl\n"
-msgstr ""
+msgstr "DEFAULT_VERSIONS+= ssl=openssl\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:859
@@ -2409,6 +2657,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:900
+#, fuzzy
 msgid ""
 "This command will create two files in the current directory. The certificate "
 "request, [.filename]#req.pem#, can be sent to a CA who will validate the "
@@ -2417,6 +2666,13 @@ msgid ""
 "certificate and should be stored in a secure location. If this falls in the "
 "hands of others, it can be used to impersonate the user or the server."
 msgstr ""
+"Este comando irá criar dois arquivos no diretório atual. A solicitação de "
+"certificado, <filename>req.pem</filename>, pode ser enviada para uma "
+"<acronym>CA</acronym> que validará as credenciais inseridas, assinará a "
+"solicitação e retornará o certificado assinado. O segundo arquivo, "
+"<filename>cert.key</filename>, é a chave privada do certificado e deve ser "
+"armazenado em um local seguro. Se ele cair nas mãos de outros, ele pode ser "
+"usado para representar o usuário ou o servidor."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:902
@@ -2485,10 +2741,14 @@ msgstr "Usando Certificados"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:939
+#, fuzzy
 msgid ""
 "One use for a certificate is to encrypt connections to the Sendmail mail "
 "server in order to prevent the use of clear text authentication."
 msgstr ""
+"Um uso para um certificado é criptografar conexões do servidor de email "
+"<application>Sendmail</application> para evitar o trafego de informações de "
+"autenticação em texto não criptografado."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:943
@@ -2536,11 +2796,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:962
+#, fuzzy
 msgid ""
 "If all went well, there will be no error messages in [.filename]#/var/log/"
 "maillog#. For a simple test, connect to the mail server's listening port "
 "using `telnet`:"
 msgstr ""
+"Se tudo correr bem, não haverá mensagens de erro no arquivo <filename>/var/"
+"log/maillog</filename>. Para um teste simples, conecte-se à porta de escuta "
+"do servidor de correio usando o <command>telnet</command>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:985
@@ -2653,11 +2917,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1010
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "options   IPSEC        IP security\n"
 "device    crypto\n"
 msgstr ""
+"options   IPSEC        #IP security\n"
+"device    crypto\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1013
@@ -2668,9 +2934,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1017
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "options   IPSEC_DEBUG  debug for IP security\n"
-msgstr ""
+msgstr "options   IPSEC_DEBUG  #debug for IP security\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1020
@@ -2714,11 +2980,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1028
+#, fuzzy
 msgid ""
 "To begin, package:security/ipsec-tools[] must be installed from the Ports "
 "Collection. This software provides a number of applications which support "
 "the configuration."
 msgstr ""
+"Para começar, o <package>security/ipsec-tools</package> deve ser instalado a "
+"partir da Coleção de Ports. Este software fornece várias aplicações que "
+"suportam a configuração."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1030
@@ -2748,13 +3018,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1046
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "gif0: flags=8051 mtu 1280\n"
 "tunnel inet 172.16.5.4 --> 192.168.1.12\n"
 "inet6 fe80::2e0:81ff:fe02:5881%gif0 prefixlen 64 scopeid 0x6\n"
 "inet 10.246.38.1 --> 10.0.0.5 netmask 0xffffff00\n"
 msgstr ""
+"gif0: flags=8051 mtu 1280\n"
+"tunnel inet 172.16.5.4 --&gt; 192.168.1.12\n"
+"inet6 fe80::2e0:81ff:fe02:5881%gif0 prefixlen 64 scopeid 0x6\n"
+"inet 10.246.38.1 --&gt; 10.0.0.5 netmask 0xffffff00\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1049
@@ -2763,13 +3037,17 @@ msgstr "Aqui está a saída do Gateway 2:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1056
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "gif0: flags=8051 mtu 1280\n"
 "tunnel inet 192.168.1.12 --> 172.16.5.4\n"
 "inet 10.0.0.5 --> 10.246.38.1 netmask 0xffffff00\n"
 "inet6 fe80::250:bfff:fe3a:c1f%gif0 prefixlen 64 scopeid 0x4\n"
 msgstr ""
+"gif0: flags=8051 mtu 1280\n"
+"tunnel inet 192.168.1.12 --&gt; 172.16.5.4\n"
+"inet 10.0.0.5 --&gt; 10.246.38.1 netmask 0xffffff00\n"
+"inet6 fe80::250:bfff:fe3a:c1f%gif0 prefixlen 64 scopeid 0x4\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1059
@@ -2811,12 +3089,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1085
+#, fuzzy
 msgid ""
 "As expected, both sides have the ability to send and receive ICMP packets "
 "from the privately configured addresses. Next, both gateways must be told "
 "how to route packets in order to correctly send traffic from either network. "
 "The following commands will achieve this goal:"
 msgstr ""
+"Como esperado, ambos os lados têm a capacidade de enviar e receber pacotes "
+"<acronym>ICMP</acronym> dos endereços configurados de forma privada. Em "
+"seguida, os dois gateways devem ser informados sobre como rotear pacotes "
+"para enviar corretamente o tráfego de qualquer rede. Os seguintes comandos "
+"atingirão esse objetivo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1092
@@ -2971,10 +3255,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1185
+#, fuzzy
 msgid ""
 "For descriptions of each available option, refer to the manual page for [."
 "filename]#racoon.conf#."
 msgstr ""
+"Para descrições de cada opção disponível, consulte a página de manual do "
+"<filename>racoon.conf</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1187
@@ -2985,15 +3272,19 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1189
+#, fuzzy
 msgid ""
 "This can be achieved with a shell script, similar to the following, on the "
 "corporate gateway. This file will be used during system initialization and "
 "should be saved as [.filename]#/usr/local/etc/racoon/setkey.conf#."
 msgstr ""
+"Isso pode ser obtido com um shell script, semelhante ao seguinte, no gateway "
+"corporativo. Este arquivo será usado durante a inicialização do sistema e "
+"deve ser salvo como <filename>/usr/local/etc/racoon/setkey.conf</filename>."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1197
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "flush;\n"
 "spdflush;\n"
@@ -3001,6 +3292,13 @@ msgid ""
 "spdadd 10.246.38.0/24 10.0.0.0/24 any -P out ipsec esp/tunnel/172.16.5.4-192.168.1.12/use;\n"
 "spdadd 10.0.0.0/24 10.246.38.0/24 any -P in ipsec esp/tunnel/192.168.1.12-172.16.5.4/use;\n"
 msgstr ""
+"flush;\n"
+"spdflush;\n"
+"# To the home network\n"
+"spdadd 10.246.38.0/24 10.0.0.0/24 any -P out ipsec esp/tunnel/172.16.5.4-192."
+"168.1.12/use;\n"
+"spdadd 10.0.0.0/24 10.246.38.0/24 any -P in ipsec esp/tunnel/192.168.1.12-172"
+".16.5.4/use;\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1200
@@ -3022,7 +3320,7 @@ msgstr "A saída deve ser semelhante à seguinte:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1222
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "corp-net# /usr/local/sbin/racoon -F -f /usr/local/etc/racoon/racoon.conf\n"
 "Foreground mode.\n"
@@ -3037,6 +3335,26 @@ msgid ""
 "2006-01-30 01:36:18: INFO: IPsec-SA established: ESP/Tunnel 192.168.1.12[0]->172.16.5.4[0] spi=124397467(0x76a279b)\n"
 "2006-01-30 01:36:18: INFO: IPsec-SA established: ESP/Tunnel 172.16.5.4[0]->192.168.1.12[0] spi=175852902(0xa7b4d66)\n"
 msgstr ""
+"corp-net<prompt>#</prompt> <userinput>/usr/local/sbin/racoon -F -f /usr/"
+"local/etc/racoon/racoon.conf</userinput>\n"
+"Foreground mode.\n"
+"2006-01-30 01:35:47: INFO: begin Identity Protection mode.\n"
+"2006-01-30 01:35:48: INFO: received Vendor ID: KAME/racoon\n"
+"2006-01-30 01:35:55: INFO: received Vendor ID: KAME/racoon\n"
+"2006-01-30 01:36:04: INFO: ISAKMP-SA established 172.16.5.4[500]-192.168.1."
+"12[500] spi:623b9b3bd2492452:7deab82d54ff704a\n"
+"2006-01-30 01:36:05: INFO: initiate new phase 2 negotiation: 172.16.5.4[0]192"
+".168.1.12[0]\n"
+"2006-01-30 01:36:09: INFO: IPsec-SA established: ESP/Tunnel 192.168.1."
+"12[0]-&gt;172.16.5.4[0] spi=28496098(0x1b2d0e2)\n"
+"2006-01-30 01:36:09: INFO: IPsec-SA established: ESP/Tunnel 172.16.5."
+"4[0]-&gt;192.168.1.12[0] spi=47784998(0x2d92426)\n"
+"2006-01-30 01:36:13: INFO: respond new phase 2 negotiation: 172.16.5.4[0]192."
+"168.1.12[0]\n"
+"2006-01-30 01:36:18: INFO: IPsec-SA established: ESP/Tunnel 192.168.1."
+"12[0]-&gt;172.16.5.4[0] spi=124397467(0x76a279b)\n"
+"2006-01-30 01:36:18: INFO: IPsec-SA established: ESP/Tunnel 172.16.5."
+"4[0]-&gt;192.168.1.12[0] spi=175852902(0xa7b4d66)\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1225
@@ -3063,12 +3381,18 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1238
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "01:47:32.021683 IP corporatenetwork.com > 192.168.1.12.privatenetwork.com: ESP(spi=0x02acbf9f,seq=0xa)\n"
 "01:47:33.022442 IP corporatenetwork.com > 192.168.1.12.privatenetwork.com: ESP(spi=0x02acbf9f,seq=0xb)\n"
 "01:47:34.024218 IP corporatenetwork.com > 192.168.1.12.privatenetwork.com: ESP(spi=0x02acbf9f,seq=0xc)\n"
 msgstr ""
+"01:47:32.021683 IP corporatenetwork.com &gt; 192.168.1.12.privatenetwork.com:"
+" ESP(spi=0x02acbf9f,seq=0xa)\n"
+"01:47:33.022442 IP corporatenetwork.com &gt; 192.168.1.12.privatenetwork.com:"
+" ESP(spi=0x02acbf9f,seq=0xb)\n"
+"01:47:34.024218 IP corporatenetwork.com &gt; 192.168.1.12.privatenetwork.com:"
+" ESP(spi=0x02acbf9f,seq=0xc)\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1241
@@ -3082,13 +3406,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1248
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "ipfw add 00201 allow log esp from any to any\n"
 "ipfw add 00202 allow log ah from any to any\n"
 "ipfw add 00203 allow log ipencap from any to any\n"
 "ipfw add 00204 allow log udp from any 500 to any\n"
 msgstr ""
+"ipfw add 00201 allow log esp from any to any\n"
+"ipfw add 00202 allow log ah from any to any\n"
+"ipfw add 00203 allow log ipencap from any to any\n"
+"ipfw add 00204 allow log udp from any 500 to any\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1253
@@ -3108,7 +3436,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1269
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "pass in quick proto esp from any to any\n"
 "pass in quick proto ah from any to any\n"
@@ -3121,6 +3449,16 @@ msgid ""
 "pass out quick proto udp from any port = 500 to any port = 500\n"
 "pass out quick on gif0 from any to any\n"
 msgstr ""
+"pass in quick proto esp from any to any\n"
+"pass in quick proto ah from any to any\n"
+"pass in quick proto ipencap from any to any\n"
+"pass in quick proto udp from any port = 500 to any port = 500\n"
+"pass in quick on gif0 from any to any\n"
+"pass out quick proto esp from any to any\n"
+"pass out quick proto ah from any to any\n"
+"pass out quick proto ipencap from any to any\n"
+"pass out quick proto udp from any port = 500 to any port = 500\n"
+"pass out quick on gif0 from any to any\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1272
@@ -3131,13 +3469,18 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1279
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "ipsec_enable=\"YES\"\n"
 "ipsec_program=\"/usr/local/sbin/setkey\"\n"
 "ipsec_file=\"/usr/local/etc/racoon/setkey.conf\" # allows setting up spd policies on boot\n"
 "racoon_enable=\"yes\"\n"
 msgstr ""
+"ipsec_enable=\"YES\"\n"
+"ipsec_program=\"/usr/local/sbin/setkey\"\n"
+"ipsec_file=\"/usr/local/etc/racoon/setkey.conf\" # allows setting up spd "
+"policies on boot\n"
+"racoon_enable=\"yes\"\n"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/security/_index.adoc:1282
@@ -3175,12 +3518,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1291
+#, fuzzy
 msgid ""
 "This section provides an overview of the built-in client utilities to "
 "securely access other systems and securely transfer files from a FreeBSD "
 "system. It then describes how to configure a SSH server on a FreeBSD system. "
 "More information is available in the man pages mentioned in this chapter."
 msgstr ""
+"Esta seção fornece uma visão geral dos utilitários embutidos de cliente para "
+"acessar com segurança outros sistemas e transferir arquivos com segurança de "
+"um sistema FreeBSD. Em seguida, descreve como configurar um servidor "
+"<acronym>SSH</acronym> em um sistema FreeBSD. Maiores informações estão "
+"disponíveis nas páginas man mencionadas neste capítulo."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:1292
@@ -3285,6 +3634,7 @@ msgstr "Autenticação Baseada em Chave"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1331
+#, fuzzy
 msgid ""
 "Instead of using passwords, a client can be configured to connect to the "
 "remote machine using keys. To generate RSA authentication keys, use `ssh-"
@@ -3292,6 +3642,12 @@ msgid ""
 "and follow the prompts. It is recommended to protect the keys with a "
 "memorable, but hard to guess passphrase."
 msgstr ""
+"Em vez de usar senhas, um cliente pode ser configurado para se conectar à "
+"máquina remota usando chaves. Para gerar chaves de autenticação "
+"<acronym>RSA</acronym>, use o <command>ssh-keygen</command>. Para gerar um "
+"par de chaves pública e privada, especifique o tipo de chave e siga os "
+"prompts. Recomenda-se proteger as chaves com uma senha memorável, mas "
+"difícil de se adivinhar."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1355
@@ -3367,20 +3723,31 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1373
+#, fuzzy
 msgid ""
 "Authentication is handled by `ssh-agent`, using the private keys that are "
 "loaded into it. `ssh-agent` can be used to launch another application like a "
 "shell or a window manager."
 msgstr ""
+"A autenticação é feita pelo <command>ssh-agent</command>, usando as chaves "
+"privadas que estão carregadas nele. O <command>ssh-agent</command> pode ser "
+"usado para iniciar outro aplicativo como um shell ou um gerenciador de "
+"janelas."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1375
+#, fuzzy
 msgid ""
 "To use `ssh-agent` in a shell, start it with a shell as an argument. Add the "
 "identity by running `ssh-add` and entering the passphrase for the private "
 "key. The user will then be able to `ssh` to any host that has the "
 "corresponding public key installed. For example:"
 msgstr ""
+"Para usar o <command>ssh-agent</command> em um shell, inicie-o com um shell "
+"como um argumento. Adicione a identidade executando <command>ssh-add</"
+"command> e inserindo a senha para a chave privada. O usuário então poderá "
+"executar o <command>ssh</command> para se conectar em qualquer host que "
+"tenha a chave pública correspondente instalada. Por exemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1383
@@ -3395,8 +3762,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1386
+#, fuzzy
 msgid "<.> Enter the passphrase for the key."
-msgstr ""
+msgstr "Digite a senha para a chave."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1388
@@ -3470,10 +3838,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1416
+#, fuzzy
 msgid ""
 "Indicates no command, or tunnel only. If omitted, `ssh` initiates a normal "
 "session."
 msgstr ""
+"Indica nenhum comando ou apenas túnel. Se omitido, o <command>ssh</command> "
+"inicia uma sessão normal."
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/security/_index.adoc:1417
@@ -3593,12 +3964,17 @@ msgstr "Ignorando um Firewall"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1465
+#, fuzzy
 msgid ""
 "Some firewalls filter both incoming and outgoing connections. For example, a "
 "firewall might limit access from remote machines to ports 22 and 80 to only "
 "allow SSH and web surfing. This prevents access to any other service which "
 "uses a port other than 22 or 80."
 msgstr ""
+"Alguns firewalls filtram as conexões de entrada e saída. Por exemplo, um "
+"firewall pode limitar o acesso de máquinas remotas às portas 22 e 80 para "
+"permitir apenas o <acronym>SSH</acronym> e navegação na web. Isso impede o "
+"acesso a qualquer outro serviço que use uma porta diferente de 22 ou 80."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1467
@@ -3649,16 +4025,19 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1489
+#, fuzzy
 msgid ""
 "If the service is not running, add the following line to [.filename]#/etc/rc."
 "conf#."
 msgstr ""
+"Se o serviço não estiver em execução, adicione a seguinte linha ao arquivo "
+"<filename>/etc/rc.conf</filename>."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1493
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "sshd_enable=\"YES\"\n"
-msgstr ""
+msgstr "sshd_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1496
@@ -3675,12 +4054,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1503
+#, fuzzy
 msgid ""
 "The first time sshd starts on a FreeBSD system, the system's host keys will "
 "be automatically created and the fingerprint will be displayed on the "
 "console. Provide users with the fingerprint so that they can verify it the "
 "first time they connect to the server."
 msgstr ""
+"A primeira vez que o <application>sshd</application> inicia em um sistema "
+"FreeBSD, as chaves de host do sistema serão criadas automaticamente e a "
+"impressão digital será exibida no console. Forneça aos usuários a impressão "
+"digital para que eles possam verificá-la na primeira vez que se conectarem "
+"ao servidor."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1505
@@ -3705,12 +4090,18 @@ msgstr "Segurança do Servidor SSH"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1511
+#, fuzzy
 msgid ""
 "While sshd is the most widely used remote administration facility for "
 "FreeBSD, brute force and drive by attacks are common to any system exposed "
 "to public networks. Several additional parameters are available to prevent "
 "the success of these attacks and will be described in this section."
 msgstr ""
+"Enquanto o <application>sshd</application> é o recurso de administração "
+"remota mais usado para o FreeBSD, a força bruta e o drive por ataques são "
+"comuns a qualquer sistema exposto a redes públicas. Vários parâmetros "
+"adicionais estão disponíveis para evitar o sucesso desses ataques e serão "
+"descritos nesta seção."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1513
@@ -3723,9 +4114,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1517
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "AllowUsers root@192.168.1.32\n"
-msgstr ""
+msgstr "AllowUsers root@192.168.1.32\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1520
@@ -3736,9 +4127,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1524
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "AllowUsers admin\n"
-msgstr ""
+msgstr "AllowUsers admin\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1527
@@ -3747,9 +4138,9 @@ msgstr "Multiplos usuários devem ser listados na mesma linha, assim:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1531
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "AllowUsers root@192.168.1.32 admin\n"
-msgstr ""
+msgstr "AllowUsers root@192.168.1.32 admin\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1534
@@ -3789,9 +4180,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1550
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "AuthenticationMethods publickey\n"
-msgstr ""
+msgstr "AuthenticationMethods publickey\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1556
@@ -3826,9 +4217,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1568
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "options UFS_ACL\n"
-msgstr ""
+msgstr "options UFS_ACL\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1571
@@ -3881,6 +4272,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1584
+#, fuzzy
 msgid ""
 "It is desirable to discourage accidental mounting without ACLs enabled "
 "because nasty things can happen if ACLs are enabled, then disabled, then re-"
@@ -3891,6 +4283,16 @@ msgid ""
 "have since had their permissions changed, resulting in unpredictable "
 "behavior."
 msgstr ""
+"É desejável desencorajar a montagem acidental sem que a <acronym>ACL</"
+"acronym> esteja habilitada porque coisas desagradáveis podem acontecer se "
+"<acronym>ACL</acronym>s estiverem habilitadas, e então desabilitadas e então "
+"reativadas sem limpar os atributos estendidos. Em geral, uma vez que as "
+"<acronym>ACL</acronym>s forem habilitadas em um sistema de arquivos, elas "
+"não devem ser desabilitadas, pois as proteções de arquivos resultantes podem "
+"não ser compatíveis com aquelas pretendidas pelos usuários do sistema e "
+"<acronym>ACL</acronym>s reativadas podem reconectar as <acronym>ACL</"
+"acronym>s anteriores aos arquivos que tiveram suas permissões alteradas, "
+"resultando em um comportamento imprevisível."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1587
@@ -3901,7 +4303,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1595
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "drwx------  2 robert  robert  512 Dec 27 11:54 private\n"
 "drwxrwx---+ 2 robert  robert  512 Dec 23 10:57 directory1\n"
@@ -3909,6 +4311,11 @@ msgid ""
 "drwxrwx---+ 2 robert  robert  512 Dec 27 11:57 directory3\n"
 "drwxr-xr-x  2 robert  robert  512 Nov 10 11:54 public_html\n"
 msgstr ""
+"drwx------  2 robert  robert  512 Dec 27 11:54 private\n"
+"drwxrwx---+ 2 robert  robert  512 Dec 23 10:57 directory1\n"
+"drwxrwx---+ 2 robert  robert  512 Dec 22 10:20 directory2\n"
+"drwxrwx---+ 2 robert  robert  512 Dec 27 11:57 directory3\n"
+"drwxr-xr-x  2 robert  robert  512 Nov 10 11:54 public_html\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1598
@@ -3972,12 +4379,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1629
+#, fuzzy
 msgid ""
 "In this example, there were no pre-defined entries, as they were removed by "
 "the previous command. This command restores the default options and assigns "
 "the options listed. If a user or group is added which does not exist on the "
 "system, an `Invalid argument` error will be displayed."
 msgstr ""
+"Neste exemplo, não havia entradas predefinidas, pois elas foram removidas "
+"pelo comando anterior. Este comando restaura as opções padrões e atribui as "
+"opções listadas. Se um usuário ou grupo for adicionado e não existir no "
+"sistema, um erro de <errorname>Invalid argument</errorname> será exibido."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1631
@@ -4007,6 +4419,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1638
+#, fuzzy
 msgid ""
 "Vulnerability assessment is a key factor in security. While FreeBSD releases "
 "advisories for the base system, doing so for every third party utility is "
@@ -4015,6 +4428,13 @@ msgid ""
 "FreeBSD add on utility known as pkg includes options explicitly for this "
 "purpose."
 msgstr ""
+"A avaliação de vulnerabilidade é um fator importante na segurança. Enquanto "
+"o FreeBSD libera avisos para o sistema base, fazê-lo para cada utilitário de "
+"terceiros está além da capacidade do Projeto FreeBSD. Existe uma maneira de "
+"mitigar vulnerabilidades de terceiros e avisar os administradores sobre "
+"problemas de segurança conhecidos. Um utilitário do FreeBSD conhecido como "
+"<application>pkg</application> inclui opções explicitamente para este "
+"propósito."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1640
@@ -4087,12 +4507,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1666
+#, fuzzy
 msgid ""
 "By pointing a web browser to the displayed URL, an administrator may obtain "
 "more information about the vulnerability. This will include the versions "
 "affected, by FreeBSD port version, along with other web sites which may "
 "contain security advisories."
 msgstr ""
+"Ao apontar um navegador da web para a <acronym>URL</acronym> exibida, um "
+"administrador pode obter mais informações sobre a vulnerabilidade. Isto "
+"incluirá as versões afetadas, pela versão do port do FreeBSD, juntamente com "
+"outros sites que podem conter avisos de segurança."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1668
@@ -4512,11 +4937,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1834
+#, fuzzy
 msgid ""
 "The `Module` field refers to the component location. In this example, the "
 "`bind` module is affected; therefore, this vulnerability affects an "
 "application installed with the operating system."
 msgstr ""
+"O campo <literal>Module</literal> refere-se ao local do componente. Neste "
+"exemplo, o módulo <literal>bind</literal> é afetado; Portanto, essa "
+"vulnerabilidade afeta um aplicativo instalado com o sistema operacional."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1835
@@ -4542,6 +4971,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1838
+#, fuzzy
 msgid ""
 "The `Corrected` field indicates the date, time, time offset, and releases "
 "that were corrected. The section in parentheses shows each branch for which "
@@ -4551,6 +4981,14 @@ msgid ""
 "followed by a number, indicating the sequence number of the patch, allowing "
 "users to track which patches have already been applied to the system."
 msgstr ""
+"O campo <literal>Corrected</literal> indica a data, a hora, o deslocamento "
+"do horário e as releases que foram corrigidas. A seção entre parênteses "
+"mostra cada branch para a qual a correção foi mesclada e o número de versão "
+"da liberação correspondente dessa branch. O próprio identificador de release "
+"inclui o número da versão e, se apropriado, o nível do patch. O nível de "
+"correção é a letra <literal>p</literal> seguida de um número, indicando o "
+"número de seqüência do patch, permitindo que os usuários controlem quais "
+"patches já foram aplicados ao sistema."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1839
@@ -4566,11 +5004,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1841
+#, fuzzy
 msgid ""
 "The `Problem Description` field explains the vulnerability. This can include "
 "information about the flawed code and how the utility could be maliciously "
 "used."
 msgstr ""
+"O campo <literal>Problem Description</literal> explica a vulnerabilidade. "
+"Isso pode incluir informações sobre o código defeituoso e como o utilitário "
+"pode ser usado de maneira mal-intencionada."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1842
@@ -4746,11 +5188,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1890
+#, fuzzy
 msgid ""
 "`rctl` can be used to provide a more fine-grained method for controlling "
 "resource limits. This command supports more than user limits as it can also "
 "be used to set resource constraints on processes and jails."
 msgstr ""
+"O comando <command>rctl</command> pode ser usado para fornecer um método "
+"mais refinado para controlar limites de recursos. Esse comando suporta mais "
+"que limites de usuário, já que também pode ser usado para definir restrições "
+"de recursos em processos e jails."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1892
@@ -4781,10 +5228,14 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1901
+#, fuzzy
 msgid ""
 "Whenever [.filename]#/etc/login.conf# is edited, the [.filename]#/etc/login."
 "conf.db# must be updated by executing the following command:"
 msgstr ""
+"Sempre que o arquivo <filename>/etc/login.conf</filename> for editado, o "
+"<filename>/etc/login.conf.db</filename> deve ser atualizado executando o "
+"seguinte comando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1905
@@ -4794,6 +5245,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1910
+#, fuzzy
 msgid ""
 "Resource limits differ from the default login capabilities in two ways. "
 "First, for every limit, there is a _soft_ and _hard_ limit. A soft limit may "
@@ -4802,6 +5254,13 @@ msgid ""
 "raised by the superuser. Second, most resource limits apply per process to a "
 "specific user."
 msgstr ""
+"Os limites de recursos diferem dos recursos de login padrão de duas "
+"maneiras. Primeiro, para cada limite, existe um limite <firstterm>soft</"
+"firstterm> e um <firstterm>hard</firstterm>. Um limite soft pode ser "
+"ajustado pelo usuário ou aplicativo, mas não pode ser definido como superior "
+"ao limite hard. O limite hard pode ser baixado pelo usuário, mas só pode ser "
+"aumentado pelo root. Segundo, a maioria dos limites de recursos se aplica "
+"por processo a um usuário específico."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1912
@@ -4914,11 +5373,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1964
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "options         RACCT\n"
 "options         RCTL\n"
 msgstr ""
+"options         RACCT\n"
+"options         RCTL\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1967
@@ -4938,9 +5399,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1973
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "user:trhodes:maxproc:deny=10/user\n"
-msgstr ""
+msgstr "user:trhodes:maxproc:deny=10/user\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1976
@@ -4955,12 +5416,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1978
+#, fuzzy
 msgid ""
 "Some care must be taken when adding rules. Since this user is constrained to "
 "`10` processes, this example will prevent the user from performing other "
 "tasks after logging in and executing a `screen` session. Once a resource "
 "limit has been hit, an error will be printed, as in this example:"
 msgstr ""
+"Algum cuidado deve ser tomado ao adicionar regras. Como esse usuário está "
+"restrito a <literal>10</literal> processos, este exemplo impedirá que o "
+"usuário execute outras tarefas depois de efetuar login e executar uma sessão "
+"<command>screen</command>. Quando um limite de recurso for atingido, um erro "
+"será impresso, como neste exemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1984
@@ -4996,11 +5463,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1999
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# Block jail from using more than 2G memory:\n"
 "jail:httpd:memoryuse:deny=2G/jail\n"
 msgstr ""
+"# Block jail from using more than 2G memory:\n"
+"jail:httpd:memoryuse:deny=2G/jail\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2002
@@ -5093,15 +5562,21 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2032
+#, fuzzy
 msgid ""
 "After the installation is complete, the installed `visudo` will open the "
 "configuration file with a text editor. Using `visudo` is highly recommended "
 "as it comes with a built in syntax checker to verify there are no errors "
 "before the file is saved."
 msgstr ""
+"Após a conclusão da instalação, o <command>visudo</command> instalado abrirá "
+"o arquivo de configuração com um editor de texto. O uso do <command>visudo</"
+"command> é altamente recomendado, pois vem com um verificador de sintaxe "
+"incorporado para verificar se não há erros antes que o arquivo seja salvo."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2034
+#, fuzzy
 msgid ""
 "The configuration file is made up of several small sections which allow for "
 "extensive configuration. In the following example, web application "
@@ -5109,12 +5584,18 @@ msgid ""
 "known as _webservice_. To grant this user permission to perform these tasks, "
 "add this line to the end of [.filename]#/usr/local/etc/sudoers#:"
 msgstr ""
+"O arquivo de configuração é composto de várias seções pequenas que permitem "
+"uma configuração extensiva. No exemplo a seguir, o mantenedor do aplicativo "
+"da web, user1, precisa iniciar, parar e reiniciar o aplicativo da web "
+"conhecido como <replaceable>webservice</replaceable>. Para conceder a este "
+"usuário permissão para executar estas tarefas, adicione esta linha ao final "
+"do arquivo <filename>/usr/local/etc/sudoers</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:2038
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "user1   ALL=(ALL)       /usr/sbin/service webservice *\n"
-msgstr ""
+msgstr "user1   ALL=(ALL)       /usr/sbin/service webservice *\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2041
@@ -5129,6 +5610,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2048
+#, fuzzy
 msgid ""
 "While this configuration allows a single user access to the webservice "
 "service; however, in most organizations, there is an entire web team in "
@@ -5136,6 +5618,12 @@ msgid ""
 "entire group. These steps will create a web group, add a user to this group, "
 "and allow all members of the group to manage the service:"
 msgstr ""
+"Embora essa configuração permita que um único usuário acesse o serviço "
+"<application>webservice</application>; No entanto, na maioria das "
+"organizações, existe uma equipe inteira da Web encarregada de gerenciar o "
+"serviço. Uma única linha também pode dar acesso a um grupo inteiro. Essas "
+"etapas criarão um grupo da Web, adicionarão um usuário a esse grupo e "
+"permitirão que todos os membros do grupo gerenciem o serviço:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:2052
@@ -5164,9 +5652,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:2066
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "%webteam   ALL=(ALL)       /usr/sbin/service webservice *\n"
-msgstr ""
+msgstr "%webteam   ALL=(ALL)       /usr/sbin/service webservice *\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2069
@@ -5197,9 +5685,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:2080
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "%webteam   ALL=(ALL)       NOPASSWD: /usr/sbin/service webservice *\n"
-msgstr ""
+msgstr "%webteam   ALL=(ALL)       NOPASSWD: /usr/sbin/service webservice *\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:2085
@@ -5220,12 +5708,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:2092
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Defaults iolog_dir=/var/log/sudo-io/%{user}\n"
-msgstr ""
+msgstr "Defaults iolog_dir=/var/log/sudo-io/%{user}\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:2098
+#, fuzzy
 msgid ""
 "This directory will be created automatically after the logging is "
 "configured. It is best to let the system create directory with default "
@@ -5233,6 +5722,12 @@ msgid ""
 "administrators who use the sudoreplay command. To change this behavior, read "
 "and uncomment the logging options inside [.filename]#sudoers#."
 msgstr ""
+"Este diretório será criado automaticamente após o logging ser configurado. É "
+"melhor deixar o sistema criar o diretório com permissões padrão apenas para "
+"estar seguro. Além disso, essa entrada também registra os administradores "
+"que usam o comando <application>sudoreplay</application>. Para alterar esse "
+"comportamento, leia e descomente as opções de log dentro do arquivo "
+"<filename>sudoers</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2101
@@ -5245,9 +5740,11 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:2105
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "%webteam ALL=(ALL) NOPASSWD: LOG_INPUT: LOG_OUTPUT: /usr/sbin/service webservice *\n"
 msgstr ""
+"%webteam ALL=(ALL) NOPASSWD: LOG_INPUT: LOG_OUTPUT: /usr/sbin/service "
+"webservice *\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2108
@@ -5279,12 +5776,18 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:2125
+#, fuzzy
 msgid ""
 "While sessions are logged, any administrator is able to remove sessions and "
 "leave only a question of why they had done so. It is worthwhile to add a "
 "daily check through an intrusion detection system (IDS) or similar software "
 "so that other administrators are alerted to manual alterations."
 msgstr ""
+"Enquanto as sessões são registradas, qualquer administrador pode remover as "
+"sessões e deixar apenas uma questão de por que elas fizeram isso. Vale a "
+"pena adicionar uma verificação diária por meio de um sistema de detecção de "
+"intrusão (<acronym>IDS</acronym>) ou software semelhante para que outros "
+"administradores sejam alertados sobre alterações manuais."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2128
