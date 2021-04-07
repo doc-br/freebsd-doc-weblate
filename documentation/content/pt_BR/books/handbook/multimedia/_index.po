@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-03-30 23:18+0000\n"
+"PO-Revision-Date: 2021-04-08 00:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookmultimedia_index/pt_BR/>\n"
@@ -44,6 +44,7 @@ msgstr "Sinopse"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:48
+#, fuzzy
 msgid ""
 "FreeBSD supports a wide variety of sound cards, allowing users to enjoy high "
 "fidelity output from a FreeBSD system. This includes the ability to record "
@@ -52,6 +53,13 @@ msgid ""
 "contains many applications for editing recorded audio, adding sound effects, "
 "and controlling attached MIDI devices."
 msgstr ""
+"O FreeBSD suporta uma ampla variedade de placas de som, permitindo que os "
+"usuários aproveitem a saída de alta fidelidade de um sistema FreeBSD. Isso "
+"inclui a capacidade de gravar e reproduzir áudio MPEG Layer 3 "
+"(<acronym>MP3</acronym>), arquivo de áudio Waveform (<acronym>WAV</acronym>)"
+", Ogg Vorbis e outros formatos. A coleção de Ports do FreeBSD contém muitas "
+"aplicações para editar áudio gravado, adicionar efeitos sonoros e controlar "
+"dispositivos MIDI conectados."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:50
@@ -171,24 +179,32 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:83
+#, fuzzy
 msgid ""
 "To automate the loading of this driver at boot time, add the driver to [."
 "filename]#/boot/loader.conf#. The line for this driver is:"
 msgstr ""
+"Para automatizar o carregamento desse driver no momento da inicialização, "
+"faça edição adicionando a seguinte linha ao arquivo <filename>/boot/loader."
+"conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:87
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "snd_hda_load=\"YES\"\n"
-msgstr ""
+msgstr "snd_hda_load=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:90
+#, fuzzy
 msgid ""
 "Other available sound modules are listed in [.filename]#/boot/defaults/"
 "loader.conf#. When unsure which driver to use, load the [."
 "filename]#snd_driver# module:"
 msgstr ""
+"Outros módulos de som disponíveis estão listados no arquivo <filename>/boot/"
+"defaults/loader.conf</filename>. Quando não tiver certeza de qual driver "
+"usar, carregue o módulo <filename>snd_driver</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:94
@@ -198,12 +214,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:97
+#, fuzzy
 msgid ""
 "This is a metadriver which loads all of the most common sound drivers and "
 "can be used to speed up the search for the correct driver. It is also "
 "possible to load all sound drivers by adding the metadriver to [.filename]#/"
 "boot/loader.conf#."
 msgstr ""
+"Este é um metadriver que carrega todos os drivers de som mais comuns e pode "
+"ser usado para acelerar a busca pelo driver correto. Também é possível "
+"carregar todos os drivers de som adicionando o metadriver no arquivo "
+"<filename>/boot/loader.conf</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:99
@@ -239,9 +260,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:109
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "device sound\n"
-msgstr ""
+msgstr "device sound\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:112
@@ -257,9 +278,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:116
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "device snd_hda\n"
-msgstr ""
+msgstr "device snd_hda\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:119
@@ -283,11 +304,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:126
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "device snd_sbc\n"
 "device snd_sb16\n"
 msgstr ""
+"device snd_sbc\n"
+"device snd_sb16\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:129
@@ -298,7 +321,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:137
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "hint.sbc.0.at=\"isa\"\n"
 "hint.sbc.0.port=\"0x220\"\n"
@@ -306,6 +329,11 @@ msgid ""
 "hint.sbc.0.drq=\"1\"\n"
 "hint.sbc.0.flags=\"0x15\"\n"
 msgstr ""
+"hint.sbc.0.at=\"isa\"\n"
+"hint.sbc.0.port=\"0x220\"\n"
+"hint.sbc.0.irq=\"5\"\n"
+"hint.sbc.0.drq=\"1\"\n"
+"hint.sbc.0.flags=\"0x15\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:140
@@ -330,11 +358,16 @@ msgstr "Testando o Som"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:147
+#, fuzzy
 msgid ""
 "After loading the required module or rebooting into the custom kernel, the "
 "sound card should be detected. To confirm, run `dmesg | grep pcm`. This "
 "example is from a system with a built-in Conexant CX20590 chipset:"
 msgstr ""
+"Depois de carregar o módulo necessário ou reinicializar no kernel "
+"personalizado, a placa de som deve ser detectada. Para confirmar, execute "
+"<command>dmesg | grep pcm</command>. Este exemplo é de um sistema com um "
+"chipset integrado Conexant CX20590:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:153
@@ -395,17 +428,24 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:183
+#, fuzzy
 msgid ""
 "Various applications, such as package:audio/workman[], provide a friendlier "
 "interface. The package:audio/mpg123[] port can be installed to listen to MP3 "
 "audio files."
 msgstr ""
+"Várias aplicações, como <package>audio/workman</package>, fornecem uma "
+"interface mais amigável. O Port <package>audio/mpg123</package> pode ser "
+"instalado para ouvir arquivos de áudio MP3."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:185
+#, fuzzy
 msgid ""
 "Another quick way to test the card is to send data to [.filename]#/dev/dsp#:"
 msgstr ""
+"Outra maneira rápida de testar a placa é enviar dados para <filename>/dev/"
+"dsp</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:189
@@ -444,10 +484,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:204
+#, fuzzy
 msgid ""
 "To get Bluetooth sound sink working with FreeBSD's sound system, users have "
 "to install package:audio/virtual_oss[] first:"
 msgstr ""
+"Para que o dispositivo Bluetooth funcione com o sistema de som do FreeBSD, "
+"os usuários precisam primeiramente instalar o <package>audio/"
+"virtual_oss</package>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:208
@@ -480,10 +524,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:225
+#, fuzzy
 msgid ""
 "To use headphones as a sound sink with package:audio/virtual_oss[], users "
 "need to create a virtual device after connecting to a Bluetooth audio device:"
 msgstr ""
+"Para usar fones de ouvido como reprodutor de som com <package>audio/"
+"virtual_oss</package>, os usuários precisam criar um dispositivo virtual "
+"depois de se conectarem a um dispositivo de áudio Bluetooth:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:229
@@ -562,7 +610,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:292
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "...\n"
 "hdac0: HDA Driver Revision: 20100226_0142\n"
@@ -582,6 +630,27 @@ msgid ""
 "pcm7: <HDA Realtek ALC889 PCM #3 Digital> at cad 2 nid 1 on hdac1\n"
 "...\n"
 msgstr ""
+"...\n"
+"hdac0: HDA Driver Revision: 20100226_0142\n"
+"hdac1: HDA Driver Revision: 20100226_0142\n"
+"hdac0: HDA Codec #0: NVidia (Unknown)\n"
+"hdac0: HDA Codec #1: NVidia (Unknown)\n"
+"hdac0: HDA Codec #2: NVidia (Unknown)\n"
+"hdac0: HDA Codec #3: NVidia (Unknown)\n"
+"pcm0: &lt;HDA NVidia (Unknown) PCM #0 DisplayPort&gt; at cad 0 nid 1 on "
+"hdac0\n"
+"pcm1: &lt;HDA NVidia (Unknown) PCM #0 DisplayPort&gt; at cad 1 nid 1 on "
+"hdac0\n"
+"pcm2: &lt;HDA NVidia (Unknown) PCM #0 DisplayPort&gt; at cad 2 nid 1 on "
+"hdac0\n"
+"pcm3: &lt;HDA NVidia (Unknown) PCM #0 DisplayPort&gt; at cad 3 nid 1 on "
+"hdac0\n"
+"hdac1: HDA Codec #2: Realtek ALC889\n"
+"pcm4: &lt;HDA Realtek ALC889 PCM #0 Analog&gt; at cad 2 nid 1 on hdac1\n"
+"pcm5: &lt;HDA Realtek ALC889 PCM #1 Analog&gt; at cad 2 nid 1 on hdac1\n"
+"pcm6: &lt;HDA Realtek ALC889 PCM #2 Digital&gt; at cad 2 nid 1 on hdac1\n"
+"pcm7: &lt;HDA Realtek ALC889 PCM #3 Digital&gt; at cad 2 nid 1 on hdac1\n"
+"...\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:295
@@ -620,11 +689,15 @@ msgstr "Utilizando Múltiplas Fontes de Som"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:312
+#, fuzzy
 msgid ""
 "It is often desirable to have multiple sources of sound that are able to "
 "play simultaneously. FreeBSD uses \"Virtual Sound Channels\" to multiplex "
 "the sound card's playback by mixing sound in the kernel."
 msgstr ""
+"Muitas vezes é desejável ter várias fontes de som capazes de tocar "
+"simultaneamente. O FreeBSD usa <quote>Canais de Som Virtuais</quote> para "
+"multiplexar a reprodução da placa de som mixando o som no kernel."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:314
@@ -691,9 +764,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:338
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "hint.pcm.0.vol=\"50\"\n"
-msgstr ""
+msgstr "hint.pcm.0.vol=\"50\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:341
@@ -733,12 +806,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:353
+#, fuzzy
 msgid ""
 "The package:audio/mpg123[] package or port provides an alternative, command-"
 "line `MP3` player. Once installed, specify the `MP3` file to play on the "
 "command line. If the system has multiple audio devices, the sound device can "
 "also be specified:"
 msgstr ""
+"O pacote ou Port <package>audio/mpg123</package> fornece um reprodutor de "
+"<acronym>MP3</acronym> alternativo em linha de comando. Uma vez instalado, "
+"especifique o arquivo <acronym>MP3</acronym> para reproduzir na linha de "
+"comando. Se o sistema tiver vários dispositivos de áudio, o dispositivo de "
+"som também pode ser especificado:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:360
@@ -1012,12 +1091,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:459
+#, fuzzy
 msgid ""
 "It is a good idea to have a short MPEG test file for evaluating various "
 "players and options. Since some `DVD` applications look for `DVD` media in [."
 "filename]#/dev/dvd# by default, or have this device name hardcoded in them, "
 "it might be useful to make a symbolic link to the proper device:"
 msgstr ""
+"É interessante ter um arquivo de teste MPEG pequeno para avaliar vários "
+"players e opções. Como alguns aplicativos de <acronym>DVD</acronym> procuram "
+"por mídia <acronym>DVD</acronym> em <filename>/dev/dvd</filename> por "
+"padrão, ou possuem esse nome de dispositivo codificado neles, pode ser útil "
+"fazer um link simbólico para o dispositivo adequado:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:463
@@ -1036,9 +1121,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:470
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "link cd0 dvd\n"
-msgstr ""
+msgstr "link cd0 dvd\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:473
@@ -1056,11 +1141,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:480
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "kern.ipc.shmmax=67108864\n"
 "kern.ipc.shmall=32768\n"
 msgstr ""
+"kern.ipc.shmmax=67108864\n"
+"kern.ipc.shmall=32768\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:483
@@ -1088,12 +1175,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:491
+#, fuzzy
 msgid ""
 "XVideo: an extension to the Xorg interface which allows video to be directly "
 "displayed in drawable objects through a special acceleration. This extension "
 "provides good quality playback even on low-end machines. The next section "
 "describes how to determine if this extension is running."
 msgstr ""
+"XVideo: uma extensão para a interface <application>Xorg</application> que "
+"permite que o vídeo seja exibido diretamente em objetos que podem ser "
+"desenhados através de uma aceleração especial. Esta extensão oferece "
+"reprodução de boa qualidade, mesmo em máquinas de baixo custo. A próxima "
+"seção descreve como determinar se esta extensão está sendo executada."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:492
@@ -1147,7 +1240,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:577
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "X-Video Extension version 2.2\n"
 "  screen #0\n"
@@ -1218,6 +1311,74 @@ msgid ""
 "        depth: 1\n"
 "        red, green, blue masks: 0x0, 0x0, 0x0\n"
 msgstr ""
+"X-Video Extension version 2.2\n"
+"  screen #0\n"
+"  Adaptor #0: \"Savage Streams Engine\"\n"
+"    number of ports: 1\n"
+"    port base: 43\n"
+"    operations supported: PutImage\n"
+"    supported visuals:\n"
+"      depth 16, visualID 0x22\n"
+"      depth 16, visualID 0x23\n"
+"    number of attributes: 5\n"
+"      \"XV_COLORKEY\" (range 0 to 16777215)\n"
+"              client settable attribute\n"
+"              client gettable attribute (current value is 2110)\n"
+"      \"XV_BRIGHTNESS\" (range -128 to 127)\n"
+"              client settable attribute\n"
+"              client gettable attribute (current value is 0)\n"
+"      \"XV_CONTRAST\" (range 0 to 255)\n"
+"              client settable attribute\n"
+"              client gettable attribute (current value is 128)\n"
+"      \"XV_SATURATION\" (range 0 to 255)\n"
+"              client settable attribute\n"
+"              client gettable attribute (current value is 128)\n"
+"      \"XV_HUE\" (range -180 to 180)\n"
+"              client settable attribute\n"
+"              client gettable attribute (current value is 0)\n"
+"    maximum XvImage size: 1024 x 1024\n"
+"    Number of image formats: 7\n"
+"      id: 0x32595559 (YUY2)\n"
+"        guid: 59555932-0000-0010-8000-00aa00389b71\n"
+"        bits per pixel: 16\n"
+"        number of planes: 1\n"
+"        type: YUV (packed)\n"
+"      id: 0x32315659 (YV12)\n"
+"        guid: 59563132-0000-0010-8000-00aa00389b71\n"
+"        bits per pixel: 12\n"
+"        number of planes: 3\n"
+"        type: YUV (planar)\n"
+"      id: 0x30323449 (I420)\n"
+"        guid: 49343230-0000-0010-8000-00aa00389b71\n"
+"        bits per pixel: 12\n"
+"        number of planes: 3\n"
+"        type: YUV (planar)\n"
+"      id: 0x36315652 (RV16)\n"
+"        guid: 52563135-0000-0000-0000-000000000000\n"
+"        bits per pixel: 16\n"
+"        number of planes: 1\n"
+"        type: RGB (packed)\n"
+"        depth: 0\n"
+"        red, green, blue masks: 0x1f, 0x3e0, 0x7c00\n"
+"      id: 0x35315652 (RV15)\n"
+"        guid: 52563136-0000-0000-0000-000000000000\n"
+"        bits per pixel: 16\n"
+"        number of planes: 1\n"
+"        type: RGB (packed)\n"
+"        depth: 0\n"
+"        red, green, blue masks: 0x1f, 0x7e0, 0xf800\n"
+"      id: 0x31313259 (Y211)\n"
+"        guid: 59323131-0000-0010-8000-00aa00389b71\n"
+"        bits per pixel: 6\n"
+"        number of planes: 3\n"
+"        type: YUV (packed)\n"
+"      id: 0x0\n"
+"        guid: 00000000-0000-0000-0000-000000000000\n"
+"        bits per pixel: 0\n"
+"        number of planes: 0\n"
+"        type: RGB (packed)\n"
+"        depth: 1\n"
+"        red, green, blue masks: 0x0, 0x0, 0x0\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:580
@@ -1235,12 +1396,15 @@ msgstr "Se o resultado, ao invés disso, se parecer com:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:588
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "X-Video Extension version 2.2\n"
 "screen #0\n"
 "no adaptors present\n"
 msgstr ""
+"X-Video Extension version 2.2\n"
+"screen #0\n"
+"no adaptors present\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:591
@@ -1284,12 +1448,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:603
+#, fuzzy
 msgid ""
 "MPlayer can be installed using the package:multimedia/mplayer[] package or "
 "port. Several compile options are available and a variety of hardware checks "
 "occur during the build process. For these reasons, some users prefer to "
 "build the port rather than install the package."
 msgstr ""
+"O <application>MPlayer</application> pode ser instalado usando o pacote ou "
+"port <package>multimedia/mplayer</package>. Várias opções de compilação "
+"estão disponíveis e uma variedade de verificações de hardware ocorre durante "
+"o processo de compilação. Por esses motivos, alguns usuários preferem "
+"compilar um port ao invés de instalar o pacote."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:605
@@ -1413,19 +1583,25 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:658
+#, fuzzy
 msgid ""
 "Each user can add commonly used options to their [.filename]#~/.mplayer/"
 "config# like so:"
 msgstr ""
+"Cada usuário pode adicionar opções comumente usadas ao seu <filename>~/."
+"mplayer/config</filename> assim:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:664
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "vo=xv\n"
 "fs=yes\n"
 "zoom=yes\n"
 msgstr ""
+"vo=xv\n"
+"fs=yes\n"
+"zoom=yes\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:667
@@ -1456,6 +1632,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:678
+#, fuzzy
 msgid ""
 "Before using `mencoder`, it is a good idea to become familiar with the "
 "options described at http://www.mplayerhq.hu/DOCS/HTML/en/mencoder."
@@ -1465,6 +1642,14 @@ msgid ""
 "combinations of command line options can yield output files that are "
 "unplayable even by `mplayer`."
 msgstr ""
+"Antes de usar o <command>mencoder</command>, é interessante familiarizar-se "
+"com as opções descritas em <link xlink:href=\"http://www.mplayerhq.hu/DOCS/"
+"HTML/en/mencoder.html\">mplayerhq.hu/DOCS/HTML/en/mencoder.html</link>. "
+"Existem inúmeras maneiras de melhorar a qualidade, diminuir a taxa de bits e "
+"alterar os formatos, e algumas dessas opções podem fazer a diferença entre "
+"bom ou mau desempenho. Combinações impróprias de opções de linha de comando "
+"podem produzir arquivos de saída que não podem ser reproduzidos até mesmo "
+"por <command>mplayer</command>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:680
@@ -1631,11 +1816,16 @@ msgstr "Placas de TV"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:741
+#, fuzzy
 msgid ""
 "TV cards can be used to watch broadcast or cable TV on a computer. Most "
 "cards accept composite video via an `RCA` or S-video input and some cards "
 "include a `FM` radio tuner."
 msgstr ""
+"As placas de TV podem ser usadas para assistir à transmissão ou à TV a cabo "
+"em um computador. A maioria das placas aceitam vídeo composto por meio de "
+"uma entrada <acronym>RCA</acronym> ou S-video e algumas placas incluem um "
+"sintonizador de rádio <acronym>FM</acronym>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:743
@@ -1661,9 +1851,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:751
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "bktr_load=\"YES\"\n"
-msgstr ""
+msgstr "bktr_load=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:754
@@ -1678,13 +1868,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:761
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "device\t bktr\n"
 "device\tiicbus\n"
 "device\tiicbb\n"
 "device\tsmbus\n"
 msgstr ""
+"device\t bktr\n"
+"device\tiicbus\n"
+"device\tiicbb\n"
+"device\tsmbus\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:764
@@ -1708,7 +1902,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:775
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "bktr0: <BrookTree 848A> mem 0xd7000000-0xd7000fff irq 10 at device 10.0 on pci0\n"
 "iicbb0: <I2C bit-banging driver> on bti2c0\n"
@@ -1717,6 +1911,13 @@ msgid ""
 "smbus0: <System Management Bus> on bti2c0\n"
 "bktr0: Pinnacle/Miro TV, Philips SECAM tuner.\n"
 msgstr ""
+"bktr0: &lt;BrookTree 848A&gt; mem 0xd7000000-0xd7000fff irq 10 at device "
+"10.0 on pci0\n"
+"iicbb0: &lt;I2C bit-banging driver&gt; on bti2c0\n"
+"iicbus0: &lt;Philips I2C bus&gt; on iicbb0 master-only\n"
+"iicbus1: &lt;Philips I2C bus&gt; on iicbb0 master-only\n"
+"smbus0: &lt;System Management Bus&gt; on bti2c0\n"
+"bktr0: Pinnacle/Miro TV, Philips SECAM tuner.\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:778
@@ -1730,9 +1931,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:782
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "options OVERRIDE_TUNER=6\n"
-msgstr ""
+msgstr "options OVERRIDE_TUNER=6\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:785
@@ -1765,23 +1966,32 @@ msgstr "Para usar a placa de TV, instale um dos seguintes aplicativos:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:798
+#, fuzzy
 msgid ""
 "package:multimedia/fxtv[] provides TV-in-a-window and image/audio/video "
 "capture capabilities."
 msgstr ""
+"<package>multimedia/fxtv</package> oferece recursos de captura de imagem/á"
+"udio/vídeo numa transmissão de TV no monitor do computador."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:799
+#, fuzzy
 msgid ""
 "package:multimedia/xawtv[] is another TV application with similar features."
 msgstr ""
+"O <package>multimedia/xawtv</package> é outro aplicativo de TV com recursos "
+"semelhantes."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:800
+#, fuzzy
 msgid ""
 "package:audio/xmradio[] provides an application for using the FM radio tuner "
 "of a TV card."
 msgstr ""
+"O <package>audio/xmradio</package> fornece uma aplicação para usar o "
+"sintonizador de rádio FM de uma placa de TV."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:802
@@ -1981,15 +2191,20 @@ msgstr "Verificando o Scanner"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:876
+#, fuzzy
 msgid ""
 "The [.filename]#GENERIC# kernel includes the device drivers needed to "
 "support `USB` scanners. Users with a custom kernel should ensure that the "
 "following lines are present in the custom kernel configuration file:"
 msgstr ""
+"O kernel <filename>GENERIC</filename> inclui os drivers de dispositivos "
+"necessários para suportar scanners <acronym>USB</acronym>. Usuários com um "
+"kernel personalizado devem garantir que as seguintes linhas estejam "
+"presentes no arquivo de configuração do kernel personalizado:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:884
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "device usb\n"
 "device uhci\n"
@@ -1997,6 +2212,11 @@ msgid ""
 "device ehci\n"
 "device xhci\n"
 msgstr ""
+"device usb\n"
+"device uhci\n"
+"device ohci\n"
+"device ehci\n"
+"device xhci\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:887
@@ -2033,11 +2253,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:901
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "device scbus\n"
 "device pass\n"
 msgstr ""
+"device scbus\n"
+"device pass\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:904
@@ -2232,9 +2454,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:999
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "usb /dev/ugen0.2\n"
-msgstr ""
+msgstr "usb /dev/ugen0.2\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1002
@@ -2247,10 +2469,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1010
+#, fuzzy
 msgid ""
 "Once `scanimage -L` sees the scanner, the configuration is complete and the "
 "scanner is now ready to use."
 msgstr ""
+"Depois que o comando <command>scanimage -L</command> identificar o scanner, "
+"a configuração estará completa e o scanner estará pronto para ser usado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1012
@@ -2304,12 +2529,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1031
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "[system=5]\n"
 "add path ugen0.2 mode 0660 group usb\n"
 "add path usb/0.2.0 mode 0666 group usb\n"
 msgstr ""
+"[system=5]\n"
+"add path ugen0.2 mode 0660 group usb\n"
+"add path usb/0.2.0 mode 0666 group usb\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1036
@@ -2323,12 +2551,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1042
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "[system=5]\n"
 "add path 'ugen*' mode 0660 group usb\n"
 "add path 'usb/*' mode 0666 group usb\n"
 msgstr ""
+"[system=5]\n"
+"add path 'ugen*' mode 0660 group usb\n"
+"add path 'usb/*' mode 0666 group usb\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1047
@@ -2342,9 +2573,9 @@ msgstr "Em seguida, ative o conjunto de regras no arquivo /etc/rc.conf:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1053
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "devfs_system_ruleset=\"system\"\n"
-msgstr ""
+msgstr "devfs_system_ruleset=\"system\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1056
