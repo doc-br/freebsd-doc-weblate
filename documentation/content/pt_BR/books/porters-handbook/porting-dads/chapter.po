@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-03-29 15:21+0000\n"
+"PO-Revision-Date: 2021-04-08 00:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/booksporters-handbookporting-dadschapter/pt_BR/>\n"
@@ -122,7 +122,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:72
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "#if __FreeBSD__ >= 9\n"
 "#  if __FreeBSD_version >= 901000\n"
@@ -130,6 +130,11 @@ msgid ""
 "#  endif\n"
 "#endif\n"
 msgstr ""
+"#if __FreeBSD__ &gt;= 9\n"
+"#  if __FreeBSD_version &gt;= 901000\n"
+"\t /* 9.1+ release specific code here */\n"
+"#  endif\n"
+"#endif\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:75
@@ -170,11 +175,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:89
+#, fuzzy
 msgid ""
 "Here are some important variables defined in [.filename]#bsd.port.pre.mk# "
 "(this is not the complete list, please read [.filename]#bsd.port.mk# for the "
 "complete list)."
 msgstr ""
+"Aqui estão algumas variáveis importantes definidas no arquivo <filename>bsd."
+"port.pre.mk</filename> (esta não é a lista completa, por favor leia "
+"<filename>bsd.port.mk</filename> para a lista completa)."
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:113
@@ -211,20 +220,27 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:121
+#, fuzzy
 msgid ""
 "Here are some examples of things that can be added after [.filename]#bsd."
 "port.pre.mk#:"
 msgstr ""
+"Aqui estão alguns exemplos de coisas que podem ser adicionadas depois do "
+"<filename>bsd.port.pre.mk</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:128
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# no need to compile lang/perl5 if perl5 is already in system\n"
 ".if ${OSVERSION} > 300003\n"
 "BROKEN=\tperl is in system\n"
 ".endif\n"
 msgstr ""
+"# no need to compile lang/perl5 if perl5 is already in system\n"
+".if ${OSVERSION} &gt; 300003\n"
+"BROKEN=\tperl is in system\n"
+".endif\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:131
@@ -239,20 +255,27 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:136
+#, fuzzy
 msgid ""
 "If the port installs a shell script whose purpose is to launch another "
 "program, and if launching that program is the last action performed by the "
 "script, make sure to launch the program using the `exec` statement, for "
 "instance:"
 msgstr ""
+"Se o port instalar um script shell cuja finalidade é executar outro "
+"programa, e se a execução desse programa for a última ação executada pelo "
+"script, certifique-se de executar o programa usando a função <function>exec</"
+"function>, por exemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:141
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "#!/bin/sh\n"
 "exec %%LOCALBASE%%/bin/java -jar %%DATADIR%%/foo.jar \"$@\"\n"
 msgstr ""
+"#!/bin/sh\n"
+"exec %%LOCALBASE%%/bin/java -jar %%DATADIR%%/foo.jar \"$@\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:144
@@ -281,12 +304,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:151
+#, fuzzy
 msgid ""
 "If a lot of new code is needed to do something, there may already be an "
 "implementation of it in [.filename]#bsd.port.mk#. While hard to read, there "
 "are a great many seemingly-hard problems for which [.filename]#bsd.port.mk# "
 "already provides a shorthand solution."
 msgstr ""
+"Se um monte de código novo é necessário para fazer algo, já pode haver uma "
+"implementação dele em <filename>bsd.port.mk</filename>. Embora seja difícil "
+"de ler, há muitos problemas aparentemente difíceis para os quais "
+"<filename>bsd.port.mk</filename> já fornece uma solução simples."
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:153
@@ -296,6 +324,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:156
+#, fuzzy
 msgid ""
 "The port must respect both `CC` and `CXX`. What we mean by this is that the "
 "port must not set the values of these variables absolutely, overriding "
@@ -303,6 +332,11 @@ msgid ""
 "existing values. This is so that build options that affect all ports can be "
 "set globally."
 msgstr ""
+"O port deve respeitar a variável <varname>CFLAGS</varname>. O que queremos "
+"dizer com isso é que o port não deve definir o valor dessa variável "
+"absolutamente, substituindo o valor existente. Em vez disso, pode anexar "
+"quaisquer valores necessários ao valor existente. Isso é para que as opções "
+"de build que afetam todos os ports possam ser definidas globalmente."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:158
@@ -320,15 +354,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:164
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "CC?= gcc\n"
-msgstr ""
+msgstr "CC?= gcc\n"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:169
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "CXX?= g++\n"
-msgstr ""
+msgstr "CXX?= g++\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:172
@@ -337,15 +371,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:176
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "CC= gcc\n"
-msgstr ""
+msgstr "CC= gcc\n"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:181
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "CXX= g++\n"
-msgstr ""
+msgstr "CXX= g++\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:184
@@ -364,6 +398,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:189
+#, fuzzy
 msgid ""
 "The port must respect `CFLAGS`. What we mean by this is that the port must "
 "not set the value of this variable absolutely, overriding the existing "
@@ -371,6 +406,11 @@ msgid ""
 "value. This is so that build options that affect all ports can be set "
 "globally."
 msgstr ""
+"O port deve respeitar a variável <varname>CFLAGS</varname>. O que queremos "
+"dizer com isso é que o port não deve definir o valor dessa variável "
+"absolutamente, substituindo o valor existente. Em vez disso, pode anexar "
+"quaisquer valores necessários ao valor existente. Isso é para que as opções "
+"de build que afetam todos os ports possam ser definidas globalmente."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:191
@@ -388,9 +428,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:197
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "CFLAGS+= -Wall -Werror\n"
-msgstr ""
+msgstr "CFLAGS+= -Wall -Werror\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:200
@@ -399,17 +439,23 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:204
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "CFLAGS= -Wall -Werror\n"
-msgstr ""
+msgstr "CFLAGS= -Wall -Werror\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:207
+#, fuzzy
 msgid ""
 "`CFLAGS` is defined on FreeBSD systems in [.filename]#/etc/make.conf#. The "
 "first example appends additional flags to `CFLAGS`, preserving any system-"
 "wide definitions. The second example clobbers anything previously defined."
 msgstr ""
+"<varname>CFLAGS</varname> são definidas em sistemas FreeBSD no arquivo "
+"<filename>/etc/make.conf</filename>. O primeiro exemplo acrescenta flags "
+"adicionais para a variável <varname>CFLAGS</varname>, preservando quaisquer "
+"definições de todo o sistema. O segundo exemplo atrapalha qualquer coisa "
+"previamente definida."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:209
@@ -421,22 +467,25 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:213
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "CFLAGS= -O3 -funroll-loops -DHAVE_SOUND\n"
-msgstr ""
+msgstr "CFLAGS= -O3 -funroll-loops -DHAVE_SOUND\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:216
+#, fuzzy
 msgid ""
 "Using system optimization flags, the [.filename]#Makefile# would look "
 "similar to this example:"
 msgstr ""
+"Usando flags de otimização do sistema, o <filename>Makefile</filename> seria "
+"semelhante a este exemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:220
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "CFLAGS+= -DHAVE_SOUND\n"
-msgstr ""
+msgstr "CFLAGS+= -DHAVE_SOUND\n"
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:223
@@ -461,12 +510,15 @@ msgstr "Exemplo de log de compilação não informativo (ruim):"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:234
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "  CC     source1.o\n"
 "  CC     source2.o\n"
 "  CCLD   someprogram\n"
 msgstr ""
+"  CC     source1.o\n"
+"  CC     source2.o\n"
+"  CCLD   someprogram\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:237
@@ -475,12 +527,15 @@ msgstr "Exemplo de log de compilação detalhado (bom):"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:243
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "cc -O2 -pipe -I/usr/local/include -c -o source1.o source1.c\n"
 "cc -O2 -pipe -I/usr/local/include -c -o source2.o source2.c\n"
 "cc -o someprogram source1.o source2.o -L/usr/local/lib -lsomelib\n"
 msgstr ""
+"cc -O2 -pipe -I/usr/local/include -c -o source1.o source1.c\n"
+"cc -O2 -pipe -I/usr/local/include -c -o source2.o source2.c\n"
+"cc -o someprogram source1.o source2.o -L/usr/local/lib -lsomelib\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:246
@@ -562,11 +617,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:273
+#, fuzzy
 msgid ""
 "  If instructed, the build cluster will still attempt to try to build them "
 "to see if the underlying problem has been resolved. (However, in general, "
 "the cluster is run without this.)"
 msgstr ""
+"  Se instruído, o cluster de build ainda tentará compilar eles para ver se o "
+"problema subjacente foi resolvido. (No entanto, em geral, o cluster é "
+"executado sem isso.)"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:275
@@ -607,6 +666,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:283
+#, fuzzy
 msgid ""
 "`FORBIDDEN` is used for ports that contain a security vulnerability or "
 "induce grave concern regarding the security of a FreeBSD system with a given "
@@ -620,15 +680,34 @@ msgid ""
 "release of the vulnerable software. Do not mark a port `FORBIDDEN` for any "
 "reason other than security."
 msgstr ""
+"A variável <varname>FORBIDDEN</varname> é usada para ports que contêm uma "
+"vulnerabilidade de segurança ou causam grande preocupação em relação à "
+"segurança de um sistema FreeBSD com um determinado port instalado (por "
+"exemplo, um programa de confiança inseguro ou um programa que fornece "
+"serviços facilmente exploráveis). Marcar ports como <varname>FORBIDDEN</"
+"varname> assim que um determinado software tiver uma vulnerabilidade e não "
+"houver atualização liberada. Idealmente, atualize os ports o mais rápido "
+"possível quando uma vulnerabilidade de segurança for descoberta para reduzir "
+"o número de hosts vulneráveis do FreeBSD (gostamos de ser conhecidos pela "
+"segurança), mas às vezes há um intervalo de tempo entre a divulgação de uma "
+"vulnerabilidade e uma versão atualizada do software vulnerável. Não marque "
+"um port como <varname>FORBIDDEN</varname> por qualquer outro motivo que não "
+"seja segurança."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:284
+#, fuzzy
 msgid ""
 "`IGNORE` is reserved for ports that must not be built for some other reason. "
 "Use it for ports where the problem is believed to be structural. The build "
 "cluster will not, under any circumstances, build ports marked as `IGNORE`. "
 "For instance, use `IGNORE` when a port:"
 msgstr ""
+"A variável <varname>IGNORE</varname> é reservada para ports que não devem "
+"ser compilados por algum outro motivo. Use-a para ports em que o problema é "
+"considerado estrutural. O cluster de build não criará, sob nenhuma "
+"circunstância, ports marcados com a variável <varname>IGNORE</varname>. Por "
+"exemplo, use <varname>IGNORE</varname> quando um port:"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:286
@@ -669,23 +748,28 @@ msgstr "Notas de Implementação"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:298
+#, fuzzy
 msgid ""
 "Do not quote the values of `BROKEN`, `IGNORE`, and related variables. Due to "
 "the way the information is shown to the user, the wording of messages for "
 "each variable differ:"
 msgstr ""
+"Não coloque os valores de <varname>BROKEN</varname>, <varname>IGNORE</"
+"varname> e variáveis relacionadas entre aspas. Devido à forma como a "
+"informação é mostrada ao usuário, o texto das mensagens para cada variável é "
+"diferente:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:302
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "BROKEN=\tfails to link with base -lcrypto\n"
-msgstr ""
+msgstr "BROKEN=\tfails to link with base -lcrypto\n"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:307
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "IGNORE=\tunsupported on recent versions\n"
-msgstr ""
+msgstr "IGNORE=\tunsupported on recent versions\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:310
@@ -694,9 +778,10 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:314
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "===>  foobar-0.1 is marked as broken: fails to link with base -lcrypto.\n"
 msgstr ""
+"===&gt;  foobar-0.1 is marked as broken: fails to link with base -lcrypto.\n"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:319
@@ -734,9 +819,9 @@ msgstr "Para a lista de arquiteturas suportadas, execute:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:334
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "cd ${SRCDIR}; make targets\n"
-msgstr ""
+msgstr "cd ${SRCDIR}; make targets\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:337
@@ -761,6 +846,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:346
+#, fuzzy
 msgid ""
 "`NO_ARCH` is meant to indicate that there is no need to build a package for "
 "each of the supported architectures. The goal is to reduce the amount of "
@@ -769,6 +855,14 @@ msgid ""
 "however, our package infrastructure (e.g., package managers, mirrors, and "
 "package builders) is not set up to fully benefit from `NO_ARCH`."
 msgstr ""
+"<literal>NO_ARCH</literal> pretende indicar que não há necessidade de "
+"compilar um pacote para cada uma das arquiteturas suportadas. O objetivo é "
+"reduzir a quantidade de recursos gastos na compilação e distribuição de "
+"pacotes, como largura de banda de rede e espaço em disco em mirrors e na "
+"mídia de distribuição. Atualmente, entretanto, nossa infraestrutura de "
+"pacotes (por exemplo, gerenciadores de pacotes, mirrors e compiladores de "
+"pacotes) não estão configurados para se beneficiar totalmente do "
+"<literal>NO_ARCH</literal>."
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:349
@@ -786,15 +880,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:356
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ONLY_FOR_ARCHS=\ti386 amd64\n"
-msgstr ""
+msgstr "ONLY_FOR_ARCHS=\ti386 amd64\n"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:361
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "NOT_FOR_ARCHS=\tia64 sparc64\n"
-msgstr ""
+msgstr "NOT_FOR_ARCHS=\tia64 sparc64\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:364
@@ -806,6 +900,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:367
+#, fuzzy
 msgid ""
 "If a port fetches i386 binaries and installs them, set `IA32_BINARY_PORT`. "
 "If this variable is set, [.filename]#/usr/lib32# must be present for IA32 "
@@ -813,6 +908,12 @@ msgid ""
 "of these two dependencies is not satisfied, `IGNORE` will be set "
 "automatically."
 msgstr ""
+"Se um port baixar e instalar binários i386, defina a variável "
+"<varname>IA32_BINARY_PORT</varname>. Se esta variável estiver "
+"definida,<filename>/usr/lib32</filename> deve estar presente para versões "
+"IA32 de bibliotecas e o kernel deve suportar compatibilidade com IA32. Se "
+"uma dessas duas dependências não forem satisfeitas, <varname>IGNORE</"
+"varname> será definido automaticamente."
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:369
@@ -822,12 +923,17 @@ msgstr "Considerações Específicas do Cluster"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:372
+#, fuzzy
 msgid ""
 "Some ports attempt to tune themselves to the exact machine they are being "
 "built on by specifying `-march=native` to the compiler. This should be "
 "avoided: either list it under an off-by-default option, or delete it "
 "entirely."
 msgstr ""
+"Alguns ports tentam se ajustar à máquina exata em que estão sendo "
+"compilados, definindo <literal>-march=native</literal> para o compilador. "
+"Isso deve ser evitado: liste-o em uma opção desativada por padrão ou exclua-"
+"o completamente."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:374
@@ -852,12 +958,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:381
+#, fuzzy
 msgid ""
 "When it makes sense to do so, users can be warned about a pending port "
 "removal with `DEPRECATED` and `EXPIRATION_DATE`. The former is a string "
 "stating why the port is scheduled for removal; the latter is a string in ISO "
 "8601 format (YYYY-MM-DD). Both will be shown to the user."
 msgstr ""
+"Quando fizer sentido, os usuários podem ser avisados sobre uma remoção de "
+"port pendente com as variáveis <varname>DEPRECATED</varname> e "
+"<varname>EXPIRATION_DATE</varname>. A primeira é uma string que indica "
+"porque o port está programado para remoção; a segunda é uma string no "
+"formato ISO 8601 (YYYY-MM-DD). Ambos serão mostrados ao usuário."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:383
@@ -887,6 +999,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:390
+#, fuzzy
 msgid ""
 "The correct way for a [.filename]#Makefile# to signal that the port cannot "
 "be installed due to some external factor (for instance, the user has "
@@ -894,6 +1007,11 @@ msgid ""
 "value to `IGNORE`. This value will be formatted and shown to the user by "
 "`make install`."
 msgstr ""
+"A maneira correta de um <filename>Makefile</filename> sinalizar que o port "
+"não pode ser instalado devido a algum fator externo (por exemplo, o usuário "
+"especificou uma combinação ilegal de opções de compilação) é definir um "
+"valor não vazio para <varname>IGNORE</varname>. Este valor será formatado e "
+"mostrado ao usuário pelo comando <command>make install</command>."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:392
@@ -921,15 +1039,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:403
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ".error \"option is not supported\"\n"
-msgstr ""
+msgstr ".error \"option is not supported\"\n"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:408
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "IGNORE=option is not supported\n"
-msgstr ""
+msgstr "IGNORE=option is not supported\n"
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:413
@@ -1003,11 +1121,16 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:437
+#, fuzzy
 msgid ""
 "FreeBSD ports generally expect POSIX compliance. Some software and build "
 "systems make assumptions based on a particular operating system or "
 "environment that can cause problems when used in a port."
 msgstr ""
+"Os ports do FreeBSD geralmente esperam conformidade com <acronym>POSIX</"
+"acronym>. Alguns softwares e sistemas de compilação fazem suposições "
+"baseadas em um sistema operacional ou ambiente específico que pode causar "
+"problemas quando usado em um port."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:439
@@ -1024,6 +1147,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:443
+#, fuzzy
 msgid ""
 "Do not record timestamps in the critical path of the application if it also "
 "works without. Getting timestamps may be slow, depending on the accuracy of "
@@ -1031,6 +1155,12 @@ msgid ""
 "they have to be and use an API which is documented to just deliver the "
 "needed precision."
 msgstr ""
+"Não registre timestamps no caminho crítico do aplicativo se ele também "
+"funcionar sem. Obter registros de timestamps pode ser lento, dependendo da "
+"precisão dos registros de timestamp no <acronym>SO</acronym>. Se os "
+"timestamps forem realmente necessários, determine o quão precisos eles devem "
+"ser e use uma <acronym>API</acronym> documentada para fornecer a precisão "
+"necessária."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:445
@@ -1097,10 +1227,14 @@ msgstr "Miscelânea"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:462
+#, fuzzy
 msgid ""
 "Always double-check [.filename]#pkg-descr# and [.filename]#pkg-plist#. If "
 "reviewing a port and a better wording can be achieved, do so."
 msgstr ""
+"Sempre verifique duas vezes os arquivos <filename>pkg-descr</filename> e "
+"<filename>pkg-plist</filename>. Se estiver revisando um port e uma melhor "
+"formulação puder ser alcançada, faça isso."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/porting-dads/chapter.adoc:464
