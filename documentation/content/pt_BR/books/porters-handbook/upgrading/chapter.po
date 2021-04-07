@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-03-29 11:12+0000\n"
+"PO-Revision-Date: 2021-04-08 00:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/booksporters-handbookupgradingchapter/pt_BR/>\n"
@@ -32,11 +32,15 @@ msgstr "Atualizando um Port"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/upgrading/chapter.adoc:33
+#, fuzzy
 msgid ""
 "When a port is not the most recent version available from the authors, "
 "update the local working copy of [.filename]#/usr/ports#. The port might "
 "have already been updated to the new version."
 msgstr ""
+"Quando um port não estiver na versão mais recente disponibilizada pelos "
+"autores, atualize a sua cópia de trabalho local do <filename>/usr/ports</"
+"filename>. O port pode já ter sido atualizado para a nova versão."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/upgrading/chapter.adoc:35
@@ -71,6 +75,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/upgrading/chapter.adoc:41
+#, fuzzy
 msgid ""
 "If there is no pending PR, the next step is to send an email to the port's "
 "maintainer, as shown by `make maintainer`. That person may already be "
@@ -80,6 +85,14 @@ msgid ""
 "with a maintainer of `ports@FreeBSD.org`, which is just the general ports "
 "mailing list, so sending mail there probably will not help in this case."
 msgstr ""
+"Se não houver nenhum PR pendente, o próximo passo é enviar um email para o "
+"mantenedor do port, como apresentado em <command>make maintainer</command>. "
+"Essa pessoa pode já estar trabalhando em uma atualização ou ter algum motivo "
+"para não atualizar o port neste momento (devido a, por exemplo, problemas de "
+"estabilidade da nova versão), e não há necessidade de duplicar seu trabalho. "
+"Note que os ports não mantidos são listadas com um mantenedor "
+"<literal>ports@FreeBSD.org</literal>, que é apenas a lista de discussão "
+"geral de ports, então enviar emails provavelmente não ajudará nesse caso."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/upgrading/chapter.adoc:43
@@ -221,10 +234,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/upgrading/chapter.adoc:91
+#, fuzzy
 msgid ""
 "<.> This can be anywhere, of course. Building ports is not limited to within "
 "[.filename]#/usr/ports/#."
 msgstr ""
+"Isso pode ser em qualquer lugar, é claro. Compilações de ports não se "
+"limitam ao <filename>/usr/ports/</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/upgrading/chapter.adoc:93
@@ -418,26 +434,36 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/upgrading/chapter.adoc:192
+#, fuzzy
 msgid ""
 "This file is used to list moved or removed ports. Each line in the file is "
 "made up of the name of the port, where the port was moved, when, and why. If "
 "the port was removed, the section detailing where it was moved can be left "
 "blank. Each section must be separated by the `|` (pipe) character, like so:"
 msgstr ""
+"Este arquivo é usado para listar os ports movidos ou removidos. Cada linha "
+"no arquivo é composta por nome do port, para onde o port foi movido, quando "
+"e por quê. Se o port foi removido, a seção detalhando onde ele estava pode "
+"ser deixado em branco. Cada seção deve ser separada pelo caractere "
+"<literal>|</literal> (pipe), assim:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/upgrading/chapter.adoc:196
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "old name|new name (blank for deleted)|date of move|reason\n"
-msgstr ""
+msgstr "old name|new name (blank for deleted)|date of move|reason\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/upgrading/chapter.adoc:199
+#, fuzzy
 msgid ""
 "The date must be entered in the form `YYYY-MM-DD`. New entries are added to "
 "the end of the list to keep it in chronological order, with the oldest entry "
 "at the top of the list."
 msgstr ""
+"A data deve ser inserida no formato <literal>YYYY-MM-DD</literal>. Novas "
+"entradas são adicionadas ao final da lista para mantê-las em ordem "
+"cronológica, com a entrada mais antiga no topo da lista."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/upgrading/chapter.adoc:201
@@ -466,8 +492,11 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/upgrading/chapter.adoc:209
+#, fuzzy
 msgid "If using a ports directory other than [.filename]#/usr/ports#, use:"
 msgstr ""
+"Se estiver usando um diretório de ports diferente de <filename>/usr/ports</"
+"filename>, use:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/upgrading/chapter.adoc:214
