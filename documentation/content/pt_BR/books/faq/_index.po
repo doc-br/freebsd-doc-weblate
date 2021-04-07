@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-14 11:02-0300\n"
-"PO-Revision-Date: 2021-03-28 20:54+0000\n"
+"PO-Revision-Date: 2021-04-08 00:51+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/booksfaq_index/pt_BR/>\n"
@@ -153,6 +153,7 @@ msgstr "Não remova ou modifique a licença."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:106
+#, fuzzy
 msgid ""
 "Many of us have a significant investment in the project and would certainly "
 "not mind a little financial compensation now and then, but we definitely do "
@@ -162,9 +163,18 @@ msgid ""
 "This, we believe, is one of the most fundamental goals of Free Software and "
 "one that we enthusiastically support."
 msgstr ""
+"Muitos de nós têm um investimento significativo no projeto e certamente não "
+"nos importaríamos com uma pequena compensação financeira de vez em quando, "
+"mas nós definitivamente não insistimos nisso. Acreditamos que a nossa "
+"primeira e principal <quote>missão</quote> é fornecer código a todos os "
+"participantes, e para qualquer finalidade, para que o código obtenha o maior "
+"uso possível e forneça o maior benefício possível. Este, acreditamos, é um "
+"dos objetivos mais fundamentais do Software Livre e um dos que apoiamos "
+"entusiasticamente."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:108
+#, fuzzy
 msgid ""
 "Code in our source tree which falls under the https://www.FreeBSD.org/"
 "copyright/COPYING[GNU General Public License (GPL)] or https://www.FreeBSD."
@@ -176,6 +186,16 @@ msgid ""
 "https://www.FreeBSD.org/copyright/freebsd-license/[FreeBSD license] whenever "
 "possible."
 msgstr ""
+"O código em nosso repositório de código-fonte que se enquadra na <link "
+"xlink:href=\"https://www.FreeBSD.org/copyright/COPYING\">Licença Pública "
+"Geral GNU (GPL)</link> ou na <link xlink:href=\"https://www.FreeBSD.org/"
+"copyright/COPYING.LIB\">Licença Pública Geral da Biblioteca GNU (LGPL)</"
+"link> vem com algumas restrições adicionais, ainda que sejam no sentido de "
+"forçar o acesso, em vez do habitual oposto. Devido às complexidades "
+"adicionais que podem surgir no uso comercial de um software GPL, nós nos "
+"esforçamos para substituir tais softwares por outros sob a <link xlink:href="
+"\"https://www.FreeBSD.org/copyright/freebsd-license.html\">Licença FreeBSD</"
+"link> que é menos restritiva, sempre que possível."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:110
@@ -192,6 +212,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:115
+#, fuzzy
 msgid ""
 "Most people do not actually use an operating system. They use applications. "
 "The applications are what really use the operating system. FreeBSD is "
@@ -201,6 +222,14 @@ msgid ""
 "Most of these applications can be managed through the https://www.FreeBSD."
 "org/ports/[Ports Collection]."
 msgstr ""
+"A maioria das pessoas não usa um sistema operacional. Elas usam aplicativos. "
+"São os aplicativos que realmente usam o sistema operacional. O FreeBSD é "
+"projetado para fornecer um ambiente robusto e completo para aplicativos. Ele "
+"suporta uma grande variedade de navegadores da web, pacotes de escritório, "
+"leitores de e-mail, programas gráficos, ambientes de programação, servidores "
+"de rede e muito mais. A maioria destes aplicativos pode ser gerenciada "
+"através da <link xlink:href=\"https://www.FreeBSD.org/ports/\">Coleção de "
+"Ports</link>."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:117
@@ -315,11 +344,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:141
+#, fuzzy
 msgid ""
 "DragonFly BSD is a fork of FreeBSD 4.8 that has since developed many "
 "interesting features of its own, including the HAMMER file system and "
 "support for user-mode \"vkernels\"."
 msgstr ""
+"O DragonFly BSD é um fork do FreeBSD 4.8 o qual desenvolveu muitas "
+"características interessantes ao longo dos anos, incluindo o sistema de "
+"arquivos HAMMER e o suporte para <quote>vkernels</quote> no modo de usuário."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:143
@@ -346,12 +379,19 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:150
+#, fuzzy
 msgid ""
 "Releases are made <<release-freq,every few months>>. While many people stay "
 "more up-to-date with the FreeBSD sources (see the questions on <<current,"
 "FreeBSD-CURRENT>> and <<stable,FreeBSD-STABLE>>) than that, doing so is more "
 "of a commitment, as the sources are a moving target."
 msgstr ""
+"As releases são liberadas a <link linkend=\"release-freq\">cada poucos "
+"meses</link>. Embora muitas pessoas se mantenham mais que isso por meio do "
+"código fonte do FreeBSD (veja as perguntas em <link linkend=\"current\""
+">FreeBSD-CURRENT</link> e <link linkend=\"stable\">FreeBSD-STABLE</link> ), "
+"esta periodicidade está mais para um compromisso, já que o código fonte é um "
+"alvo em movimento."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:152
@@ -397,6 +437,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:164
+#, fuzzy
 msgid ""
 "_FreeBSD-STABLE_ is the development branch from which major releases are "
 "made. Changes go into this branch at a slower pace and with the general "
@@ -408,6 +449,16 @@ msgid ""
 "CURRENT_, on the other hand, has been one unbroken line since 2.0 was "
 "released."
 msgstr ""
+"O <emphasis>FreeBSD-STABLE</emphasis> é o branch de desenvolvimento a partir "
+"do qual os releases principais são feitos. Mudanças entram nesta branch em "
+"um ritmo mais lento e com a suposição geral de que eles foram testados "
+"primeiro no FreeBSD-CURRENT. No entanto, a qualquer momento, o código fonte "
+"para o FreeBSD-STABLE pode ou não ser adequado para uso geral, devido a "
+"descoberta de bugs e/ou outros casos específicos que ainda não foram "
+"encontrados no FreeBSD-CURRENT. Usuários que não possuem recursos para "
+"realizar testes devem, ao invés dessa, executar a release mais recente do "
+"FreeBSD. O <emphasis>FreeBSD-CURRENT</emphasis>, por outro lado, tem sido "
+"uma linha ininterrupta desde que o 2.0 foi lançado."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:166
@@ -486,11 +537,16 @@ msgstr "Testar a versão mais recente do software de instalação."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:185
+#, fuzzy
 msgid ""
 "To give people who would like to run _-CURRENT_ or _-STABLE_ but who do not "
 "have the time or bandwidth to follow it on a day-to-day basis an easy way of "
 "bootstrapping it onto their systems."
 msgstr ""
+"Para que as pessoas que gostariam de executar o <emphasis>-CURRENT</"
+"emphasis> ou o <emphasis>-STABLE</emphasis> mas que não têm tempo ou largura "
+"de banda para acompanhá-lo no dia-a-dia tenham uma maneira fácil de instalá-"
+"las em seus sistemas."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:186
@@ -555,11 +611,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:200
+#, fuzzy
 msgid ""
 "However, most non-trivial changes are discussed in advance in the <<mailing,"
 "mailing lists>>, and there are no restrictions on who may take part in the "
 "discussion."
 msgstr ""
+"No entanto, a maioria das alterações não-triviais é discutida com "
+"antecedência nas <link linkend=\"mailing\">listas de discussão</link>, e não "
+"há restrições sobre quem pode participar da discussão."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:202
@@ -683,11 +743,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:238
+#, fuzzy
 msgid ""
 "The document's language and encoding. These are based on the locale names "
 "found under [.filename]#/usr/share/locale# on a FreeBSD system. The current "
 "languages and encodings are as follows:"
 msgstr ""
+"A linguagem e codificação do documento. Estes são baseados nos nomes de "
+"local encontrados sob o diretório <filename>/usr/share/locale</filename> em "
+"um sistema FreeBSD. Os idiomas e codificações atuais são os seguintes:"
 
 #. type: Table
 #: documentation/content/en/books/faq/_index.adoc:301
@@ -801,9 +865,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:329
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "The compression and packaging scheme.\n"
-msgstr ""
+msgstr "O esquema de compactação e empacotamento.\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:330
@@ -860,6 +924,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:347
+#, fuzzy
 msgid ""
 "If the file is compressed, tar will automatically detect the appropriate "
 "format and decompress it correctly, resulting in a collection of [."
@@ -867,6 +932,12 @@ msgid ""
 "which will contain the table of contents, introductory material, and links "
 "to the other parts of the document."
 msgstr ""
+"Se o arquivo estiver compactado, o <application>tar</application> detectará "
+"automaticamente o formato apropriado e o descompactará corretamente, "
+"resultando em uma coleção de arquivos <filename>.html</filename>. O "
+"principal deles é chamado <filename>index.html</filename>, que conterá o "
+"sumário, o material introdutório e os links para as outras partes do "
+"documento."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:349
@@ -904,6 +975,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:360
+#, fuzzy
 msgid ""
 "Channel `#FreeBSD` on http://freenode.net/[Freenode] is a general help "
 "channel with many users at any time. The conversations have been known to "
@@ -915,6 +987,17 @@ msgid ""
 "the question in English first and then relocate to `##freebsd-lang` as "
 "appropriate."
 msgstr ""
+"Canal <literal>#FreeBSD</literal> na <link xlink:href=\"http://freenode.net/"
+"\">Freenode</link> é um canal de ajuda geral com muitos usuários a qualquer "
+"horário. É de conhecimento que conversas off-topic acontecem em alguns "
+"momentos, mas a prioridade é dada aos usuários com perguntas sobre o "
+"FreeBSD. Outros usuários podem ajudar com o básico, consultando o Handbook "
+"sempre que possível e fornecendo links para ajudá-lo a aprender mais sobre "
+"um determinado tópico. Este é um canal em que a comunicação ocorre "
+"primariamente em inglês, embora seja frequentado por usuários de todo o "
+"mundo. As pessoas que não são falantes nativas do inglês devem tentar fazer "
+"as suas perguntas primeiro em inglês e, em seguida, tentar nos canais "
+"<literal>## freebsd-lang</literal> conforme apropriado."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:361
@@ -1097,6 +1180,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:425
+#, fuzzy
 msgid ""
 "Some FTP clients default their transfer mode to _ascii_ and attempt to "
 "change any end-of-line characters received to match the conventions used by "
@@ -1104,6 +1188,13 @@ msgid ""
 "Check the SHA-256 checksum of the downloaded boot image: if it is not "
 "_exactly_ that on the server, then the download process is suspect."
 msgstr ""
+"Alguns clientes FTP padronizam seu modo de transferência para "
+"<emphasis>ascii</emphasis> e tentam alterar quaisquer caracteres de end-of-"
+"line recebidos para corresponder às convenções usadas pelo sistema do "
+"cliente. Isso quase invariavelmente corromperá a imagem de inicialização. "
+"Verifique checksum SHA-256 da imagem de inicialização baixada: se não "
+"estiver<emphasis>exatamente</emphasis> como no servidor, o processo de "
+"download pode ter corrompido o arquivo."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:427
@@ -1202,6 +1293,7 @@ msgstr "Preciso instalar o código fonte?"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:466
+#, fuzzy
 msgid ""
 "In general, no. There is nothing in the base system which requires the "
 "presence of the source to operate. Some ports, like package:sysutils/lsof[], "
@@ -1209,6 +1301,11 @@ msgid ""
 "builds a kernel module or directly operates on kernel structures, the source "
 "must be installed."
 msgstr ""
+"Em geral, não. Não há nada no sistema base que exija a presença do código "
+"fonte para operar. Alguns ports, como o <package>sysutils/lsof</package>, "
+"não serão compilados a menos que o código fonte esteja instalado. Em "
+"particular, se o port compila um módulo de kernel ou opera diretamente em "
+"estruturas de kernel, o código fonte deve ser instalado."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:468
@@ -1384,6 +1481,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:520
+#, fuzzy
 msgid ""
 "The total address space on i386(TM) machines is 32-bit, meaning that at most "
 "4 GB of memory is addressable (can be accessed). Furthermore, some addresses "
@@ -1394,6 +1492,15 @@ msgid ""
 "Usually, 3.2 GB to 3.7 GB is the maximum usable physical memory in this "
 "configuration."
 msgstr ""
+"O espaço total de endereços nas máquinas <trademark>i386</trademark> é de 32 "
+"bits, o que significa que no máximo 4 GB de memória são endereçáveis (podem "
+"ser acessados). Além disso, alguns endereços nesse intervalo são reservados "
+"por hardware para diferentes finalidades, por exemplo, para usar e controlar "
+"dispositivos PCI, para acessar a memória de vídeo e assim por diante. "
+"Portanto, a quantidade total de memória utilizável pelo sistema operacional "
+"para o seu kernel e aplicativos é limitada a significativamente menos de 4 "
+"GB. Normalmente, temos de 3,2 GB a 3,7 GB de memória física máxima "
+"utilizável nessa configuração."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:522
@@ -1411,6 +1518,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:524
+#, fuzzy
 msgid ""
 "The most common way to enable PAE is to build a new kernel with the special "
 "ready-provided kernel configuration file called [.filename]#PAE#, which is "
@@ -1421,12 +1529,22 @@ msgid ""
 "with PAE. When creating a custom kernel configuration file, PAE can be "
 "enabled by adding the following line:"
 msgstr ""
+"A maneira mais comum de ativar o PAE é compilar um novo kernel com o arquivo "
+"especial de configuração do kernel, chamado <filename>PAE</filename>, que já "
+"está configurado para compilar um kernel seguro. Observe que algumas "
+"entradas neste arquivo de configuração do kernel são muito conservadoras e "
+"alguns drivers marcados como não prontos para serem usados com o PAE na "
+"verdade são possíveis de serem utilizados. Uma regra básica é que, se o "
+"driver for utilizável em arquiteturas de 64 bits (como o AMD64), ele também "
+"poderá ser usado com o PAE. Ao criar um arquivo de configuração de kernel "
+"personalizado, o suporte ao PAE pode ser ativada adicionando a seguinte "
+"linha:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:528
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "options       PAE\n"
-msgstr ""
+msgstr "options       PAE\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:531
@@ -1516,9 +1634,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:559
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "microcode_update_enable=\"YES\"\n"
-msgstr ""
+msgstr "microcode_update_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:562
@@ -1608,6 +1726,7 @@ msgstr "Como faço para cortar e colar texto com um mouse no console de texto?"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:595
+#, fuzzy
 msgid ""
 "It is not possible to remove data using the mouse. However, it is possible "
 "to copy and paste. Once the mouse daemon is running as described in the "
@@ -1616,6 +1735,13 @@ msgid ""
 "paste it at the text cursor. Pressing button 3 (right button) will \"extend"
 "\" the selected region of text."
 msgstr ""
+"Não é possível remover (cortar) dados usando o mouse. No entanto, é possível "
+"copiar e colar. Quando o daemon do mouse estiver em execução, conforme "
+"descrito na <link linkend=\"moused\">pergunta anterior</link>, mantenha "
+"pressionado o botão 1 (botão esquerdo) e mova o mouse para selecionar uma "
+"região do texto. Em seguida, pressione o botão 2 (botão do meio) para colar "
+"no cursor de texto. Pressionar o botão 3 (botão direito) irá <quote> "
+"estender </quote> a região selecionada do texto."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:597
@@ -1634,12 +1760,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:602
+#, fuzzy
 msgid ""
 "The answer is, unfortunately, \"It depends\". These mice with additional "
 "features require specialized driver in most cases. Unless the mouse device "
 "driver or the user program has specific support for the mouse, it will act "
 "just like a standard two, or three button mouse."
 msgstr ""
+"A resposta é, infelizmente, <quote>Depende</quote>. Esses mouses com "
+"recursos adicionais exigem um driver especializado na maioria dos casos. A "
+"menos que o driver do dispositivo do mouse ou o programa do usuário tenha "
+"suporte específico para o mouse, ele funcionará exatamente como um mouse "
+"padrão de dois ou três botões."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:604
@@ -1663,9 +1795,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:613
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "bind ^[[3~ ed-delete-next-char # for xterm\n"
-msgstr ""
+msgstr "bind ^[[3~ ed-delete-next-char # para o xterm\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:616
@@ -1676,9 +1808,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:620
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "bindkey ^[[3~ delete-char # for xterm\n"
-msgstr ""
+msgstr "bindkey ^[[3~ delete-char # para o xterm\n"
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:623
@@ -1840,12 +1972,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:667
+#, fuzzy
 msgid ""
 "If it is a problem with part of the base FreeBSD system, it may also be "
 "buggy code, but more often than not these problems are found and fixed long "
 "before us general FAQ readers get to use these bits of code (that is what -"
 "CURRENT is for)."
 msgstr ""
+"Se é um problema com parte do sistema base do FreeBSD, também pode ser "
+"resultado de um código com bugs, mas na maioria das vezes esses problemas "
+"são encontrados e corrigidos muito antes que o publico em geral e que "
+"normalmente lê o <acronym> FAQ </acronym> usem essas partes do código (é "
+"para isso que -CURRENT existe)."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:669
@@ -1859,12 +1997,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:671
+#, fuzzy
 msgid ""
 "For example, if `make buildworld` fails while trying to compile [."
 "filename]#ls.c# into [.filename]#ls.o# and, when run again, it fails in the "
 "same place, this is a broken build. Try updating source and try again. If "
 "the compile fails elsewhere, it is almost certainly due to hardware."
 msgstr ""
+"Por exemplo, se <command>make buildworld</command> falhar ao tentar compilar "
+"<filename>ls.c</filename> para <filename>ls.o</filename> e, quando executado "
+"novamente, ele falhar no mesmo lugar, significa que o código está quebrado. "
+"Tente atualizar o código fonte e tente compilar novamente. Se a compilação "
+"falhar em outro lugar, é quase certo que a causa é um problema de hardware."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:673
@@ -1911,11 +2055,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:682
+#, fuzzy
 msgid ""
 "  Regarding overclocking, it is far cheaper to have a slow system than a "
 "fried system that needs replacing! Also the community is not sympathetic to "
 "problems on overclocked systems."
 msgstr ""
+"  Em relação ao overclocking, é muito mais barato ter um sistema lento do "
+"que um sistema frito que precisa ser substituído! Além disso, a comunidade "
+"não é simpática a problemas em sistemas com overclock."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:683
@@ -1932,6 +2080,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:684
+#, fuzzy
 msgid ""
 "Over-optimistic motherboard settings: the BIOS settings, and some "
 "motherboard jumpers, provide options to set various timings. The defaults "
@@ -1940,6 +2089,13 @@ msgid ""
 "possible idea is to set to BIOS defaults, after noting the current settings "
 "first."
 msgstr ""
+"Configurações over-otimizadas da placa-mãe: as configurações da BIOS e "
+"alguns jumpers da placa-mãe oferecem opções para definir vários intervalos "
+"de tempo. Os valores padrões geralmente são suficientes, mas, às vezes, a "
+"configuração dos estados de espera na RAM para valores muito baixos, ou a "
+"configuração da opção <quote>RAM Speed: Turbo</quote> causará um "
+"comportamento estranho. Uma ideia válida é restaurar a configuração padrão "
+"da BIOS, depois é claro de anotar as configurações atuais."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:685
@@ -2038,11 +2194,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:708
+#, fuzzy
 msgid ""
 "The remote machine may be setting the terminal type to something other than "
 "`xterm` which is required by the FreeBSD console. Alternatively the kernel "
 "may have the wrong values for the width and height of the terminal."
 msgstr ""
+"A máquina remota pode estar configurando o tipo de terminal para algo "
+"diferente de <literal> xterm </literal>, que é o tipo requerido pelo console "
+"do FreeBSD. Alternativamente, o kernel pode ter valores errados para a "
+"largura e a altura do terminal."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:710
@@ -2061,11 +2222,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:714
+#, fuzzy
 msgid ""
 "Alternatively, if the client machine has package:x11/xterm[] installed, then "
 "running `resize` will query the terminal for the correct dimensions and set "
 "them."
 msgstr ""
+"Alternativamente, se a máquina do cliente tiver o <package>x11/xterm</"
+"package> instalado, a execução do <command>resize</command> consultará o "
+"terminal para as dimensões corretas e as definirá."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:716
@@ -2201,25 +2366,33 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:760
+#, fuzzy
 msgid ""
 "It may be a broken ACPI timer. The simplest solution is to disable the ACPI "
 "timer in [.filename]#/boot/loader.conf#:"
 msgstr ""
+"Pode ser um timer ACPI quebrado. A solução mais simples é desabilitar o "
+"timer ACPI no arquivo <filename>/boot/loader.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:764
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "debug.acpi.disabled=\"timer\"\n"
-msgstr ""
+msgstr "debug.acpi.disabled=\"timer\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:767
+#, fuzzy
 msgid ""
 "Or the BIOS may modify the TSC clock-perhaps to change the speed of the "
 "processor when running from batteries, or going into a power saving mode, "
 "but FreeBSD is unaware of these adjustments, and appears to gain or lose "
 "time."
 msgstr ""
+"Ou a BIOS poderá modificar o relógio TSC - talvez para mudar a velocidade do "
+"processador quando estiver funcionando a partir de baterias, ou quando "
+"estiver entrando em modo de economia de energia, mas o FreeBSD não tem "
+"conhecimento desses ajustes e parece ganhar ou perder tempo."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:769
@@ -2243,16 +2416,20 @@ msgstr "O computador agora deve começar a manter seu relógio mais preciso."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:779
+#, fuzzy
 msgid ""
 "To have this change automatically run at boot time, add the following line "
 "to [.filename]#/etc/sysctl.conf#:"
 msgstr ""
+"Para que essa mudança seja executada automaticamente no momento da "
+"inicialização, adicione a seguinte linha ao arquivo <filename>/etc/sysctl."
+"conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:783
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "kern.timecounter.hardware=i8254\n"
-msgstr ""
+msgstr "kern.timecounter.hardware=i8254\n"
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:786
@@ -2418,12 +2595,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:831
+#, fuzzy
 msgid ""
 "Most ports should work on all supported versions of FreeBSD. Those that do "
 "not are specifically marked as such. Each time a FreeBSD release is made, a "
 "snapshot of the ports tree at the time of release is also included in the [."
 "filename]#ports/# directory."
 msgstr ""
+"A maioria dos ports deve funcionar em todas as versões suportadas do "
+"FreeBSD. Aqueles que não funcionam, estão especificamente sinalizados como "
+"tal. Cada vez que uma release do FreeBSD é construída, um snapshot da "
+"coleção de ports no momento da construção também é incluída no diretório "
+"<filename>ports/</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:833
@@ -2485,11 +2668,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:851
+#, fuzzy
 msgid ""
 "First, make sure that the Ports Collection is up-to-date. Errors that affect "
 "building [.filename]#INDEX# from an up-to-date copy of the Ports Collection "
 "are high-visibility and are thus almost always fixed immediately."
 msgstr ""
+"Primeiro, certifique-se de que a Coleção de Ports esteja atualizada. Erros "
+"que afetam a compilação do <filename>INDEX</filename> a partir de uma cópia "
+"atualizada da coleção de ports são de alta visibilidade e, portanto, quase "
+"sempre são corrigidos imediatamente."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:853
@@ -2644,6 +2832,7 @@ msgstr "Por que meu kernel é tão grande?"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:897
+#, fuzzy
 msgid ""
 "`GENERIC` kernels shipped with FreeBSD are compiled in _debug mode_. Kernels "
 "built in debug mode contain debug data in separate files that are used for "
@@ -2654,26 +2843,43 @@ msgid ""
 "a debug kernel, and it is useful to keep one around in case of a system "
 "panic."
 msgstr ""
+"Os kernels <literal>GENERIC</literal> enviados com o FreeBSD são compilados "
+"com o <emphasis>modo de depuração</emphasis> habilitado. Kernels compilados "
+"no modo de depuração contêm dados de depuração em arquivos separados que são "
+"usados para depuração. Versões do FreeBSD anteriores a 11.0 armazenam esses "
+"arquivos de depuração no mesmo diretório que o próprio kernel, <filename>/"
+"boot/kernel/</filename>. No FreeBSD 11.0 e posterior, os arquivos de "
+"depuração são armazenados em <filename>/usr/lib/debug/boot/kernel/</"
+"filename>. Observe que haverá pouca ou nenhuma perda de desempenho ao "
+"executar um kernel com o modo de depuração habilitado, e é útil manter um "
+"por perto em caso de panic no sistema."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:899
+#, fuzzy
 msgid ""
 "When running low on disk space, there are different options to reduce the "
 "size of [.filename]#/boot/kernel/# and [.filename]#/usr/lib/debug/#."
 msgstr ""
+"Quando estiver com pouco espaço em disco, existem diferentes opções para "
+"reduzir o tamanho de <filename>/boot/kernel/</filename> e <filename>/usr/lib/"
+"debug/</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:901
+#, fuzzy
 msgid ""
 "To not install the symbol files, make sure the following line exists in [."
 "filename]#/etc/src.conf#:"
 msgstr ""
+"Para não instalar os arquivos de símbolos, certifique-se que a seguinte "
+"linha existe em <filename>/etc/src.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:905
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "WITHOUT_KERNEL_SYMBOLS=yes\n"
-msgstr ""
+msgstr "WITHOUT_KERNEL_SYMBOLS=yes\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:908
@@ -2696,9 +2902,9 @@ msgstr "Esta linha não existe no arquivo de configuração do kernel:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:916
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "makeoptions DEBUG=-g\n"
-msgstr ""
+msgstr "makeoptions DEBUG=-g\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:919
@@ -2715,10 +2921,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:923
+#, fuzzy
 msgid ""
 "To build and install only the specified modules, list them in [.filename]#/"
 "etc/make.conf#:"
 msgstr ""
+"Para construir e instalar somente os módulos desejados, liste-os em "
+"<filename>/etc/make.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:927
@@ -2728,12 +2937,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:930
+#, fuzzy
 msgid ""
 "Replace _accf_httpd ipfw_ with a list of needed modules. Only the listed "
 "modules will be built. This reduces the size of the kernel directory and "
 "decreases the amount of time needed to build the kernel. For more "
 "information, read [.filename]#/usr/share/examples/etc/make.conf#."
 msgstr ""
+"Substitua <emphasis>accf_httpd ipfw</emphasis> com a lista dos módulos que "
+"precisa. Apenas os módulos listados serão compilados. Isso reduz o tamanho "
+"do diretório do kernel e diminui o tempo necessário para compilar o kernel. "
+"Para mais informações, leia <filename>/usr/share/examples/etc/make."
+"conf</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:932
@@ -2751,10 +2966,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:936
+#, fuzzy
 msgid ""
 "For reference, the FreeBSD 11 amd64 kernel ([.filename]#/boot/kernel/"
 "kernel#) is approximately 25 MB."
 msgstr ""
+"Para referência, o kernel amd64  do FreeBSD 11 (<filename>/boot/kernel/"
+"kernel</filename>) é de aproximadamente 25 MB."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:938
@@ -2769,12 +2987,17 @@ msgstr "Há várias causas possíveis para esse problema:"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:943
+#, fuzzy
 msgid ""
 "The source tree is different from the one used to build the currently "
 "running system. When attempting an upgrade, read [.filename]#/usr/src/"
 "UPDATING#, paying particular attention to the \"COMMON ITEMS\" section at "
 "the end."
 msgstr ""
+"A o código fonte de origem é diferente do usado para construir o sistema "
+"atualmente em execução. Ao tentar uma atualização, leia o arquivo <filename>/"
+"usr/src/UPDATING</filename>, prestando atenção especial à seção <quote>ITENS "
+"COMUNS</quote> no final."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:944
@@ -2786,6 +3009,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:945
+#, fuzzy
 msgid ""
 "Even when building <<stable,FreeBSD-STABLE>>, it is possible that the source "
 "tree was fetched at a time when it was either being modified or it was "
@@ -2794,6 +3018,14 @@ msgid ""
 "source tree and see if the problem goes away. Try using a different mirror "
 "in case the previous one is having problems."
 msgstr ""
+"Mesmo quando estiver compilando o <link linkend=\"stable\">FreeBSD-STABLE</"
+"link>, é possível que o código fonte tenha sido obtido em um momento em que "
+"estava sendo modificado ou em que estava quebrado. Somente os releases "
+"possuem a garantia de que podem ser compilados, apesar do <link linkend="
+"\"stable\">FreeBSD-STABLE</link> compilar corretamente na maioria das vezes. "
+"Tente atualizar novamente o código fonte e veja se o problema desaparece. "
+"Tente usar um servidor de distribuição diferente, caso o anterior esteja com "
+"problemas."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:947
@@ -2803,10 +3035,13 @@ msgstr "Qual agendador está em uso em um sistema em execução?"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:950
+#, fuzzy
 msgid ""
 "The name of the scheduler currently being used is directly available as the "
 "value of the `kern.sched.name` sysctl:"
 msgstr ""
+"O nome do agendador que atualmente sendo usado está diretamente disponível "
+"como o valor da variavel <varname>kern.sched.name</varname> do sysctl:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:955
@@ -2932,6 +3167,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1000
+#, fuzzy
 msgid ""
 "Rearranging partitions with `dump` takes a bit more work. To merge a "
 "partition like [.filename]#/var# into its parent, create the new partition "
@@ -2939,6 +3175,11 @@ msgid ""
 "move the child partition into the empty directory that the first move "
 "created:"
 msgstr ""
+"Reorganizar as partições com o comando <command>dump</command> requer um "
+"pouco mais de trabalho. Para mesclar uma partição como <filename>/var</"
+"filename> com a partição pai, crie uma nova partição grande o suficiente "
+"para conter ambas, mova a partição pai conforme descrito acima e mova a "
+"partição filha para o diretório vazio criado pela primeira movimentação:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1009
@@ -2954,12 +3195,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1012
+#, fuzzy
 msgid ""
 "To split a directory from its parent, say putting [.filename]#/var# on its "
 "own partition when it was not before, create both partitions, then mount the "
 "child partition on the appropriate directory in the temporary mount point, "
 "then move the old single partition:"
 msgstr ""
+"Para separar um diretório do seu pai, digamos colocar <filename>/var</"
+"filename> em sua própria partição quando não era antes, crie as duas "
+"partições, monte a partição filho no diretório apropriado no ponto de "
+"montagem temporário e mova a antiga partição única:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1022
@@ -3275,11 +3521,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1107
+#, fuzzy
 msgid ""
 "This cannot be accomplished with the standard boot manager without rewriting "
 "it. There are a number of other boot managers in the [.filename]#sysutils# "
 "category of the Ports Collection."
 msgstr ""
+"Isso não pode ser feito com o gerenciador de inicialização padrão sem "
+"reescrevê-lo. Há vários outros gerenciadores de inicialização na categoria "
+"<filename>sysutils</filename> da coleção de ports."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:1109
@@ -3300,12 +3550,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1119
+#, fuzzy
 msgid ""
 "If the drive will only be used with FreeBSD systems, partition it with UFS "
 "or ZFS. This will provide long filename support, improvement in performance, "
 "and stability. If the drive will be used by other operating systems, a more "
 "portable choice, such as msdosfs, is better."
 msgstr ""
+"Se a unidade só for usada com sistemas FreeBSD, particione-a com "
+"<acronym>UFS</acronym> ou <acronym>ZFS</acronym>. Isso fornecerá suporte a "
+"nomes longos de arquivo, melhoria no desempenho e na  estabilidade. Se a "
+"unidade for usada por outros sistemas operacionais, uma escolha mais "
+"portátil, como por exemplo o msdosfs, será mais apropriada."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1125
@@ -3347,9 +3603,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1146
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "/dev/da0p1 /mnt ufs rw,noauto 0 0\n"
-msgstr ""
+msgstr "/dev/da0p1 /mnt ufs rw,noauto 0 0\n"
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:1149
@@ -3480,10 +3736,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1196
+#, fuzzy
 msgid ""
 "Users can only mount devices they have read permissions to. To allow users "
 "to mount a device permissions must be set in [.filename]#/etc/devfs.conf#."
 msgstr ""
+"Os usuários só podem montar dispositivos para os quais tenham permissões de "
+"leitura. Para permitir que os usuários montem um dispositivo, as permissões "
+"devem ser definidas em <filename>/etc/devfs.conf</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1198
@@ -3494,12 +3754,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1204
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# Allow all users to mount a USB drive.\n"
 "\t    own       /dev/da0       root:operator\n"
 "\t    perm      /dev/da0       0666\n"
 msgstr ""
+"# Allow all users to mount a USB drive.\n"
+"\t    own       /dev/da0       root:operator\n"
+"\t    perm      /dev/da0       0666\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1207
@@ -3726,11 +3989,17 @@ msgstr "O que é o L2ARC?"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1280
+#, fuzzy
 msgid ""
 "The L2ARC is a read cache stored on a fast device such as an SSD. This cache "
 "is not persistent across reboots. Note that RAM is used as the first layer "
 "of cache and the L2ARC is only needed if there is insufficient RAM."
 msgstr ""
+"O <acronym>L2ARC</acronym> é um cache de leitura armazenado em um "
+"dispositivo rápido, como um <acronym>SSD</acronym>. Esse cache não é "
+"persistente nas reinicializações. Observe que a RAM é usada como a primeira "
+"camada de cache e o L2ARC só é necessário se a quantidade de memória RAM for "
+"insuficiente."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1282
@@ -3848,16 +4117,19 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1315
+#, fuzzy
 msgid ""
 "ZFS TRIM is enabled by default, and can be turned off by adding this line to "
 "[.filename]#/etc/sysctl.conf#:"
 msgstr ""
+"O ZFS TRIM é ativado por padrão e pode ser desativado adicionando-se esta "
+"linha ao arquivo <filename>/etc/sysctl.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1319
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "vfs.zfs.trim.enabled=0\n"
-msgstr ""
+msgstr "vfs.zfs.trim.enabled=0\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/faq/_index.adoc:1324
@@ -3902,11 +4174,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1342
+#, fuzzy
 msgid ""
 "To start up local services, place shell scripts in the [.filename]#/usr/"
 "local/etc/rc.d# directory. These shell scripts should be set executable, the "
 "default file mode is `555`."
 msgstr ""
+"Para iniciar serviços locais, coloque seus shell scripts no diretório "
+"<filename>/usr/local/etc/rc.d</filename>. Estes shell scripts devem estar "
+"definidos como executáveis, o modo de arquivo padrão é "
+"<literal>555</literal>."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:1344
@@ -3991,9 +4268,12 @@ msgstr ""
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:1377
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "I made a mistake in rc.conf, or another startup file, and now I cannot edit it because the file system is read-only. What should I do?"
 msgstr ""
+"Cometi um erro no <filename>rc.conf</filename>, ou outro arquivo de "
+"inicialização, e agora não posso editá-lo porque o sistema de arquivos está "
+"montado somente leitura. O que devo fazer?"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1380
@@ -4072,9 +4352,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1403
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "options QUOTA\n"
-msgstr ""
+msgstr "options QUOTA\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1406
@@ -4131,12 +4411,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1435
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "options    SYSVSHM          # enable shared memory\n"
 "options    SYSVSEM          # enable for semaphores\n"
 "options    SYSVMSG          # enable for messaging\n"
 msgstr ""
+"options    SYSVSHM          # enable shared memory\n"
+"options    SYSVSEM          # enable for semaphores\n"
+"options    SYSVMSG          # enable for messaging\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1438
@@ -4262,11 +4545,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1491
+#, fuzzy
 msgid ""
 "Yet another way to reformat DOS text files is to use the package:converters/"
 "dosunix[] port from the Ports Collection. Consult its documentation about "
 "the details."
 msgstr ""
+"Uma outra maneira de reformatar arquivos de texto do DOS é usar o port "
+"<package>converters/dosunix</package> da Coleção de Ports. Consulte a sua "
+"documentação para maiores detalhes."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:1493
@@ -4595,9 +4882,11 @@ msgstr ""
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:1584
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "I just changed [.filename]#/etc/newsyslog.conf#. How can I check if it does what I expect?"
 msgstr ""
+"Acabei de alterar o <filename>/etc/newsyslog.conf </filename>. Como posso "
+"verificar se ele faz o que eu espero?"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1587
@@ -4646,11 +4935,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1607
+#, fuzzy
 msgid ""
 "Many implementations are available for different architectures and operating "
 "systems. An implementation of the server-side code is properly known as an "
 "`X server`."
 msgstr ""
+"Muitas implementações estão disponíveis para diferentes arquiteturas e "
+"sistemas operacionais. Uma implementação do código do lado do servidor é "
+"conhecida como um <literal>Servidor X</literal>."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:1609
@@ -4665,17 +4958,23 @@ msgstr "Para instalar o Xorg, siga um destes procedimentos:"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1614
+#, fuzzy
 msgid ""
 "Use the package:x11/xorg[] meta-port, which builds and installs every Xorg "
 "component."
 msgstr ""
+"Use o meta-port <package>x11/xorg</package>, que constrói e instala todos os "
+"componentes do Xorg."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1616
+#, fuzzy
 msgid ""
 "Use package:x11/xorg-minimal[], which builds and installs only the necessary "
 "Xorg components."
 msgstr ""
+"Use <package>x11/xorg-minimal</package>, que constrói e instala apenas os "
+"componentes Xorg necessários."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1618
@@ -4742,20 +5041,27 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1641
+#, fuzzy
 msgid ""
 "Then edit [.filename]#/etc/X11/xorg.conf# and make sure the following lines "
 "exist:"
 msgstr ""
+"Em seguida, edite o arquivo <filename>/etc/X11/xorg.conf</filename> e "
+"verifique se as seguintes linhas existem:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1648
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Section \"InputDevice\"\n"
 "   Option          \"Protocol\" \"SysMouse\"\n"
 "   Option          \"Device\" \"/dev/sysmouse\"\n"
 ".....\n"
 msgstr ""
+"Section \"InputDevice\"\n"
+"   Option          \"Protocol\" \"SysMouse\"\n"
+"   Option          \"Device\" \"/dev/sysmouse\"\n"
+".....\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1651
@@ -4768,9 +5074,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1655
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Option \"AutoAddDevices\" \"false\"\n"
-msgstr ""
+msgstr "Option \"AutoAddDevices\" \"false\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1658
@@ -4783,9 +5089,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1662
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "link    sysmouse    mouse\n"
-msgstr ""
+msgstr "link    sysmouse    mouse\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1665
@@ -4816,7 +5122,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1686
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Section \"InputDevice\"\n"
 "   Identifier      \"Mouse1\"\n"
@@ -4827,6 +5133,14 @@ msgid ""
 "   Option          \"ZAxisMapping\" \"4 5\"\n"
 "EndSection\n"
 msgstr ""
+"Section \"InputDevice\"\n"
+"   Identifier      \"Mouse1\"\n"
+"   Driver          \"mouse\"\n"
+"   Option          \"Protocol\" \"auto\"\n"
+"   Option          \"Device\" \"/dev/sysmouse\"\n"
+"   Option          \"Buttons\" \"5\"\n"
+"   Option          \"ZAxisMapping\" \"4 5\"\n"
+"EndSection\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1689
@@ -4837,12 +5151,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1695
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 ";; wheel mouse\n"
 "(global-set-key [mouse-4] 'scroll-down)\n"
 "(global-set-key [mouse-5] 'scroll-up)\n"
 msgstr ""
+";; wheel mouse\n"
+"(global-set-key [mouse-4] 'scroll-down)\n"
+"(global-set-key [mouse-5] 'scroll-up)\n"
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:1698
@@ -4864,16 +5181,19 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1705
+#, fuzzy
 msgid ""
 "To enable synaptics, add the following line to [.filename]#/boot/loader."
 "conf#:"
 msgstr ""
+"Para habilitar a synaptics, adicione a seguinte linha ao <filename> /boot/"
+"loader.conf </filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1709
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "hw.psm.synaptics_support=\"1\"\n"
-msgstr ""
+msgstr "hw.psm.synaptics_support=\"1\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1712
@@ -4882,7 +5202,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1721
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Section \"InputDevice\"\n"
 "Identifier  \"Touchpad0\"\n"
@@ -4891,6 +5211,12 @@ msgid ""
 "Option      \"Device\" \"/dev/psm0\"\n"
 "EndSection\n"
 msgstr ""
+"Section \"InputDevice\"\n"
+"Identifier  \"Touchpad0\"\n"
+"Driver      \"synaptics\"\n"
+"Option      \"Protocol\" \"psm\"\n"
+"Option      \"Device\" \"/dev/psm0\"\n"
+"EndSection\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1724
@@ -4899,9 +5225,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1728
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "InputDevice    \"Touchpad0\" \"SendCoreEvents\"\n"
-msgstr ""
+msgstr "InputDevice    \"Touchpad0\" \"SendCoreEvents\"\n"
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:1731
@@ -4983,7 +5309,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1763
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# Edit the existing entry for ttyv8 in /etc/ttys and change\n"
 "# \"off\" to \"on\".\n"
@@ -4992,22 +5318,37 @@ msgid ""
 "ttyva   \"/usr/libexec/getty Pc\"         xterm  on secure\n"
 "ttyvb   \"/usr/libexec/getty Pc\"         xterm  on secure\n"
 msgstr ""
+"# Edit the existing entry for ttyv8 in /etc/ttys and change\n"
+"# \"off\" to \"on\".\n"
+"ttyv8   \"/usr/libexec/getty Pc\"         xterm  on secure\n"
+"ttyv9   \"/usr/libexec/getty Pc\"         xterm  on secure\n"
+"ttyva   \"/usr/libexec/getty Pc\"         xterm  on secure\n"
+"ttyvb   \"/usr/libexec/getty Pc\"         xterm  on secure\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1766
+#, fuzzy
 msgid ""
 "The more virtual terminals, the more resources that are used. This can be "
 "problematic on systems with 8 MB RAM or less. Consider changing `secure` to "
 "`insecure`."
 msgstr ""
+"Quanto mais terminais virtuais estiverem ativos, mais recursos serão usados. "
+"Isso pode ser um problema em sistemas com 8 MB de RAM ou menos. Considere "
+"mudar a opção <literal>secure</literal> para <literal>insecure</literal>."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/faq/_index.adoc:1770
+#, fuzzy
 msgid ""
 "In order to run an X server, at least one virtual terminal must be left to "
 "`off` for it to use. This means that only eleven of the Alt-function keys "
 "can be used as virtual consoles so that one is left for the X server."
 msgstr ""
+"Para executar um servidor X, pelo menos um terminal virtual deverá ser "
+"deixado como <literal>off</literal> para ele usar. Isso significa que apenas "
+"onze das teclas de função Alt podem ser usadas como consoles virtuais, de "
+"modo que uma deverá ser deixada livre para uso do servidor X."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1773
@@ -5020,9 +5361,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1777
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ttyvb   \"/usr/libexec/getty Pc\"         xterm  off secure\n"
-msgstr ""
+msgstr "ttyvb   \"/usr/libexec/getty Pc\"         xterm  off secure\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1780
@@ -5122,16 +5463,19 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1811
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "/dev/ttyv0 0600 /dev/console\n"
-msgstr ""
+msgstr "/dev/ttyv0 0600 /dev/console\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1814
+#, fuzzy
 msgid ""
 "It will ensure that whomever logs in on [.filename]#/dev/ttyv0# will own the "
 "console."
 msgstr ""
+"Ele irá garantir que quem fizer o login em <filename>/dev/ttyv0</filename> "
+"será o dono do console."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:1816
@@ -5150,9 +5494,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1823
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "psmintr: out of sync (xxxx != yyyy)\n"
-msgstr ""
+msgstr "psmintr: out of sync (xxxx != yyyy)\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1826
@@ -5249,9 +5593,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1860
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "xmodmap $HOME/.xmodmaprc\n"
-msgstr ""
+msgstr "xmodmap $HOME/.xmodmaprc\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1863
@@ -5268,15 +5612,19 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1871
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "keycode 115 = F13\n"
 "keycode 116 = F14\n"
 "keycode 117 = F15\n"
 msgstr ""
+"keycode 115 = F13\n"
+"keycode 116 = F14\n"
+"keycode 117 = F15\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1874
+#, fuzzy
 msgid ""
 "For the package:x11-wm/fvwm2[] desktop manager, one could map the keys so "
 "that kbd:[F13] iconifies or de-iconifies the window the cursor is in, kbd:"
@@ -5285,22 +5633,35 @@ msgid ""
 "Workplace menu even if the cursor is not on the desktop, which is useful "
 "when no part of the desktop is visible."
 msgstr ""
+"Para o gerenciador da área de trabalho <package>x11-wm/fvwm2</package>, pode-"
+"se mapear as chaves para que <keycap>F13</keycap> seja minimizada a janela "
+"em que o cursor está ou a maximize, <keycap>F14</keycap> traz a janela em "
+"que o cursor está para a frente ou, se já estiver na frente, a coloca em "
+"background <keycap>F15</keycap> aparece no menu principal do Workplace mesmo "
+"que o cursor não esteja a área de trabalho, o que é útil quando nenhuma "
+"parte da área de trabalho está visível."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1876
+#, fuzzy
 msgid ""
 "The following entries in [.filename]#~/.fvwmrc# implement the aforementioned "
 "setup:"
 msgstr ""
+"As seguintes entradas em <filename> ~/.fvwmrc </filename> implementam a "
+"configuração acima mencionada:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1882
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Key F13        FTIWS    A        Iconify\n"
 "Key F14        FTIWS    A        RaiseLower\n"
 "Key F15        A        A        Menu Workplace Nop\n"
 msgstr ""
+"Key F13        FTIWS    A        Iconify\n"
+"Key F14        FTIWS    A        RaiseLower\n"
+"Key F15        A        A        Menu Workplace Nop\n"
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:1885
@@ -5321,10 +5682,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1890
+#, fuzzy
 msgid ""
 "The latest versions of nVidia cards are supported by the package:x11/nvidia-"
 "driver[] port."
 msgstr ""
+"As versões mais recentes das placas nVidia são suportadas pelo port "
+"<package> x11/nvidia-driver </package>."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1892
@@ -5341,9 +5705,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1896
+#, fuzzy
 msgid ""
 "For Matrox G200/G400, check the package:x11-drivers/xf86-video-mga[] port."
 msgstr ""
+"Para a Matrox G200/G400, verifique o port <package> x11-drivers/xf86-video-"
+"mga</package>."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1898
@@ -5544,11 +5911,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1981
+#, fuzzy
 msgid ""
 "Possibly because network address translation (NAT) is needed instead of just "
 "forwarding packets. A \"fwd\" rule only forwards packets, it does not "
 "actually change the data inside the packet. Consider this rule:"
 msgstr ""
+"Possivelmente porque você precisa utilizar a conversão de endereços de rede "
+"(NAT) em vez de apenas encaminhar os pacotes. Uma regra <quote>fwd</quote> "
+"apenas encaminha os pacotes, ela não altera os dados dentro do pacote. "
+"Considere esta regra:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1985
@@ -5636,9 +6008,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:2016
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "device bpf        # Berkeley Packet Filter\n"
-msgstr ""
+msgstr "device bpf        # Berkeley Packet Filter\n"
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:2019
@@ -5778,7 +6150,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:2069
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "include GENERIC\n"
 "ident GENERIC-IPV6ONLY\n"
@@ -5786,6 +6158,11 @@ msgid ""
 "nooptions INET\n"
 "nodevice gre\n"
 msgstr ""
+"include GENERIC\n"
+"ident GENERIC-IPV6ONLY\n"
+"makeoptions MKMODULESENV+=\"WITHOUT_INET_SUPPORT=\"\n"
+"nooptions INET\n"
+"nodevice gre\n"
 
 #. type: Title ==
 #: documentation/content/en/books/faq/_index.adoc:2072
@@ -5817,12 +6194,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2082
+#, fuzzy
 msgid ""
 "  The process is only able to run inside the walls. Since nothing the "
 "process does in regards to executing code is supposed to be able to breach "
 "the walls, a detailed audit of its code is not needed in order to be able to "
 "say certain things about its security."
 msgstr ""
+"  O processo só é capaz de correr dentro das barreiras. Desde que nada que o "
+"processo faça em relação à execução de código seja capaz de violar as "
+"barreiras, uma auditoria detalhada de seu código não é necessária para poder "
+"dizer certas coisas sobre sua segurança."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2084
@@ -5856,15 +6238,21 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2089
+#, fuzzy
 msgid ""
 "  The most common way to accomplish this is to build a simulated environment "
 "in a subdirectory and then run the processes in that directory chrooted so "
 "that [.filename]#/# for that process is this directory, not the real [."
 "filename]#/# of the system)."
 msgstr ""
+"  A maneira mais comum de fazer isso é construir um ambiente simulado em um "
+"subdiretório e então executar os processos nesse diretório chrooted para que "
+"o diretório <filename> / </filename> para esse processo seja este, não o "
+"diretório <filename>/</filename> real do sistema)."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2091
+#, fuzzy
 msgid ""
 "  Another common use is to mount an underlying file system read-only and "
 "then create a file system layer on top of it that gives a process a "
@@ -5872,13 +6260,22 @@ msgid ""
 "is able to write to those files, but only the process sees the effects - "
 "other processes in the system do not, necessarily."
 msgstr ""
+"  Outro uso comum é montar um sistema de arquivos subjacente somente leitura "
+"e, em seguida, criar uma camada do sistema de arquivos sobre ele, o que dá a "
+"um processo uma visualização aparentemente gravável nesse sistema de "
+"arquivos. O processo pode acreditar que é capaz de escrever nesses arquivos, "
+"mas o processo apenas vê os efeitos - outros processos no sistema não, "
+"necessariamente."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2093
+#, fuzzy
 msgid ""
 "  An attempt is made to make this sort of sandbox so transparent that the "
 "user (or hacker) does not realize that he is sitting in it."
 msgstr ""
+"  Foi feita uma tentativa de tornar esse tipo de sandbox tão transparente "
+"que o usuário (ou hacker) não percebe que está dentro dele."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2095
@@ -6107,6 +6504,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2165
+#, fuzzy
 msgid ""
 "This example shows two serial ports. The first is on IRQ4, port address "
 "`0x3f8`, and has a 16550A-type UART chip. The second uses the same kind of "
@@ -6114,9 +6512,16 @@ msgid ""
 "treated just like serial ports, except that they always have a modem "
 "attached to the port."
 msgstr ""
+"Este exemplo mostra duas portas seriais. O primeiro está no IRQ4, endereço "
+"de porta <literal>0x3f8</literal>, e possui um chip UART tipo 16550A. O "
+"segundo usa o mesmo tipo de chip, mas está no IRQ3 e está no endereço de "
+"porta <literal>0x2f8</literal>. As placas de modem internas são tratadas "
+"como portas seriais, exceto pelo fato de sempre terem um modem conectado à "
+"porta."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2167
+#, fuzzy
 msgid ""
 "The [.filename]#GENERIC# kernel includes support for two serial ports using "
 "the same IRQ and port address settings in the above example. If these "
@@ -6124,6 +6529,12 @@ msgid ""
 "serial ports than the kernel is configured for, reconfigure using the "
 "instructions in <<make-kernel,building a kernel>> for more details."
 msgstr ""
+"O kernel <filename>GENERIC</filename> inclui suporte para duas portas "
+"seriais usando as mesmas configurações de IRQ e endereço de porta no exemplo "
+"acima. Se estas configurações não forem adequadas para o sistema, ou se "
+"houver mais placas de modem ou portas seriais do que o kernel está "
+"configurado, reconfigure usando as instruções em <link linkend=\"make-"
+"kernel\">construindo um kernel</link> para mais detalhes."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:2169
@@ -6173,20 +6584,23 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:2183
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "options COM_MULTIPORT\n"
-msgstr ""
+msgstr "options COM_MULTIPORT\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2186
+#, fuzzy
 msgid ""
 "The following [.filename]#/boot/device.hints# example is for an AST 4-port "
 "serial card on IRQ 12:"
 msgstr ""
+"O exemplo a seguir <filename>/boot/device.hints</filename> é para uma placa "
+"serial AST de 4 portas no IRQ 12:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:2202
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "hint.sio.4.at=\"isa\"\n"
 "hint.sio.4.port=\"0x2a0\"\n"
@@ -6202,6 +6616,19 @@ msgid ""
 "hint.sio.7.flags=\"0x701\"\n"
 "hint.sio.7.irq=\"12\"\n"
 msgstr ""
+"hint.sio.4.at=\"isa\"\n"
+"hint.sio.4.port=\"0x2a0\"\n"
+"hint.sio.4.flags=\"0x701\"\n"
+"hint.sio.5.at=\"isa\"\n"
+"hint.sio.5.port=\"0x2a8\"\n"
+"hint.sio.5.flags=\"0x701\"\n"
+"hint.sio.6.at=\"isa\"\n"
+"hint.sio.6.port=\"0x2b0\"\n"
+"hint.sio.6.flags=\"0x701\"\n"
+"hint.sio.7.at=\"isa\"\n"
+"hint.sio.7.port=\"0x2b8\"\n"
+"hint.sio.7.flags=\"0x701\"\n"
+"hint.sio.7.irq=\"12\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2205
@@ -6332,8 +6759,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2250
+#, fuzzy
 msgid "However, the permissions on [.filename]#bar# will not have changed."
 msgstr ""
+"No entanto, as permissões no arquivo <filename>bar</filename> não serão "
+"alteradas."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2252
@@ -6376,26 +6806,38 @@ msgstr "Posso executar binários do DOS no FreeBSD?"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/faq/_index.adoc:2270
+#, fuzzy
 msgid ""
 "Yes. A DOS emulation program, package:emulators/doscmd[], is available in "
 "the FreeBSD Ports Collection."
 msgstr ""
+"Sim. Um programa de emulação DOS, <package>emulators/doscmd</package>, está "
+"disponível na Coleção de Ports do FreeBSD."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/faq/_index.adoc:2272
+#, fuzzy
 msgid ""
 "If doscmd will not suffice, package:emulators/pcemu[] emulates an 8088 and "
 "enough BIOS services to run many DOS text-mode applications. It requires the "
 "X Window System."
 msgstr ""
+"Se o <application>doscmd</application> não for suficiente, o <package>"
+"emulators/pcemu</package> emulará um 8088 e serviços de BIOS suficientes "
+"para executar muitos aplicativos em modo texto do DOS. Requer o sistema de "
+"janelas X."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/faq/_index.adoc:2274
+#, fuzzy
 msgid ""
 "The Ports Collection also has package:emulators/dosbox[]. The main focus of "
 "this application is emulating old DOS games using the local file system for "
 "files."
 msgstr ""
+"A coleção de ports também tem o <package>emulators/dosbox</package>. O foco "
+"principal deste aplicativo é emular antigos jogos do DOS usando o sistema de "
+"arquivos local para os arquivos."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:2276
@@ -6555,10 +6997,13 @@ msgstr "Vocês tem alguma imagem BSD daemon que eu poderia usar?"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/faq/_index.adoc:2320
+#, fuzzy
 msgid ""
 "Xfig and eps drawings are available under [.filename]#/usr/share/examples/"
 "BSD_daemon/#."
 msgstr ""
+"Desenhos Xfig e eps estão disponíveis em <filename>/usr/share/examples/"
+"BSD_daemon/</filename>."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:2322
@@ -6616,12 +7061,17 @@ msgstr ""
 
 #. type: delimited block * 4
 #: documentation/content/en/books/faq/_index.adoc:2337
+#, fuzzy
 msgid ""
 "It is a long story, or rather it is an old story, but it is quite short "
 "actually. C. Northcote Parkinson wrote a book in the early 1960s, called "
 "“Parkinson's Law”, which contains a lot of insight into the dynamics of "
 "management."
 msgstr ""
+"É uma longa história, ou melhor, é uma história antiga, mas na verdade é bem "
+"curta. C. Northcote Parkinson escreveu um livro no início dos anos 1960, "
+"chamado <quote>Lei de Parkinson</quote>, que contém muitas informações sobre "
+"a dinâmica da administração."
 
 #. type: delimited block * 4
 #: documentation/content/en/books/faq/_index.adoc:2341
@@ -6663,6 +7113,7 @@ msgstr ""
 
 #. type: delimited block * 4
 #: documentation/content/en/books/faq/_index.adoc:2347
+#, fuzzy
 msgid ""
 "A bike shed on the other hand. Anyone can build one of those over a weekend, "
 "and still have time to watch the game on TV. So no matter how well prepared, "
@@ -6670,6 +7121,12 @@ msgid ""
 "chance to show that he is doing his job, that he is paying attention, that "
 "he is here."
 msgstr ""
+"Uma bicicletário por outro lado. Qualquer um pode construir um desses em um "
+"fim de semana e ainda ter tempo de assistir ao jogo na TV. Portanto, não "
+"importa o quão bem preparado, não importa o quão razoável você é com a sua "
+"proposta, alguém vai aproveitar a chance de mostrar que ele está fazendo o "
+"seu trabalho, que ele está prestando atenção, que ele está "
+"<emphasis>aqui</emphasis>."
 
 #. type: delimited block * 4
 #: documentation/content/en/books/faq/_index.adoc:2349
@@ -6729,12 +7186,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2364
+#, fuzzy
 msgid ""
 "Seriously, FreeBSD uses the HLT (halt) instruction when the system is idle "
 "thus lowering its energy consumption and therefore the heat it generates. "
 "Also if you have ACPI (Advanced Configuration and Power Interface) "
 "configured, then FreeBSD can also put the CPU into a low power mode."
 msgstr ""
+"Sério, o FreeBSD usa a instrução <acronym>HLT</acronym> (halt) quando o "
+"sistema está ocioso, reduzindo assim seu consumo de energia e, portanto, o "
+"calor gerado. Além disso, se você tiver <acronym>ACPI</acronym> ("
+"Configuração Avançada e Interface de Energia) configurado, então o FreeBSD "
+"também pode colocar a CPU em um modo de baixa energia."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:2366
@@ -6750,15 +7213,22 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2370
+#, fuzzy
 msgid ""
 "Is there anything \"odd\" that FreeBSD does when compiling the kernel which "
 "would cause the memory to make a scratchy sound? When compiling (and for a "
 "brief moment after recognizing the floppy drive upon startup, as well), a "
 "strange scratchy sound emanates from what appears to be the memory banks."
 msgstr ""
+"Q. Existe alguma coisa <quote>estranha</quote> que o FreeBSD faz ao compilar "
+"o kernel que faria com que a memória fizesse um som de algo coçando? Ao "
+"compilar (e por um breve momento depois de reconhecer o drive de disquete na "
+"inicialização também), um estranho som de algo coçando emana do que parecem "
+"ser os bancos de memória."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2371
+#, fuzzy
 msgid ""
 "Yes! You will see frequent references to \"daemons\" in the BSD "
 "documentation, and what most people do not know is that this refers to "
@@ -6767,6 +7237,12 @@ msgid ""
 "among the daemons as they best decide how to deal with various system "
 "administration tasks."
 msgstr ""
+"Sim! Você verá referências freqüentes a <quote>daemons</quote> na "
+"documentação do BSD, e o que a maioria das pessoas não sabe é que isso se "
+"refere a entidades genuínas e não corporais que agora possuem seu "
+"computador. O som áspero vindo de sua memória é, na verdade, um sussurro "
+"agudo entre os daemons, pois eles decidem como lidar com várias tarefas de "
+"administração do sistema."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2373
@@ -7032,6 +7508,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2445
+#, fuzzy
 msgid ""
 "It goes into a special data sink in the CPU where it is converted to heat "
 "which is vented through the heatsink / fan assembly. This is why CPU cooling "
@@ -7047,6 +7524,21 @@ msgid ""
 "data will end up getting converted to heat by their equipment, but they "
 "generally have good cooling, so if you do not overdo it you should be OK."
 msgstr ""
+"Ele entra em um coletor de dados especial na CPU, onde é convertido em calor "
+"que é ventilado através do conjunto do dissipador de calor / ventilador. É "
+"por isso que o resfriamento da CPU é cada vez mais importante; À medida que "
+"as pessoas se acostumam com processadores mais rápidos, elas se tornam "
+"descuidadas com seus dados e mais e mais delas acabam no <filename>/dev/"
+"null</filename>, superaquecendo suas CPUs. Se você apagar <filename>/dev/"
+"null</filename> (o que efetivamente desativa o dissipador de dados da CPU) "
+"sua CPU pode ficar mais fria, mas seu sistema rapidamente ficará constipado "
+"com todos esses dados em excesso e começará a se comportar de maneira "
+"irregular. Se você tem uma conexão de rede rápida, pode resfriar sua CPU "
+"lendo dados de <filename>/dev/random</filename> e enviá-los para algum lugar;"
+" No entanto, você corre o risco de superaquecer sua conexão de rede e "
+"<filename>/</filename> ou irritar seu ISP, pois a maioria dos dados acabará "
+"sendo convertida em calor pelo equipamento, mas eles geralmente têm um bom "
+"resfriamento, então se você não exagere você deve estar bem."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2447
@@ -7055,6 +7547,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2449
+#, fuzzy
 msgid ""
 "There are other methods. As every good sysadmin knows, it is part of "
 "standard practice to send data to the screen of interesting variety to keep "
@@ -7066,6 +7559,17 @@ msgid ""
 "the card, the better the food, so the better behaved the pixies are. They "
 "also need constant stimulation - this is why screen savers exist."
 msgstr ""
+"Existem outros métodos. Como todo bom administrador de sistemas sabe, é "
+"parte da prática padrão enviar dados para a tela de variedade interessante "
+"para manter todos os pixies que compõem sua imagem felizes. Os duendes de "
+"tela (comumente com erros de digitação ou renomeados como "
+"<quote>pixels</quote>) são categorizados pelo tipo de chapéu que usam ("
+"vermelho, verde ou azul) e serão ocultados ou exibidos (mostrando a cor do "
+"chapéu ) sempre que recebem um pequeno pedaço de comida. Placas de vídeo "
+"transformam dados em comida de duende, e então os enviam para os duendes - "
+"quanto mais cara a carta, melhor a comida, então é melhor que os pixies se "
+"comportem melhor. Eles também precisam de estímulo constante - é por isso "
+"que existem proteções de tela."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2451
@@ -7211,7 +7715,7 @@ msgstr "Aqui está um panic típico do kernel:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:2509
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Fatal trap 12: page fault while in kernel mode\n"
 "fault virtual address   = 0x40\n"
@@ -7227,9 +7731,23 @@ msgid ""
 "trap number             = 12\n"
 "panic: page fault\n"
 msgstr ""
+"Fatal trap 12: page fault while in kernel mode\n"
+"fault virtual address   = 0x40\n"
+"fault code              = supervisor read, page not present\n"
+"instruction pointer     = 0x8:0xf014a7e5\n"
+"stack pointer           = 0x10:0xf4ed6f24\n"
+"frame pointer           = 0x10:0xf4ed6f28\n"
+"code segment            = base 0x0, limit 0xfffff, type 0x1b\n"
+"                        = DPL 0, pres 1, def32 1, gran 1\n"
+"processor eflags        = interrupt enabled, resume, IOPL = 0\n"
+"current process         = 80 (mount)\n"
+"interrupt mask          =\n"
+"trap number             = 12\n"
+"panic: page fault\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2512
+#, fuzzy
 msgid ""
 "This message is not enough. While the instruction pointer value is "
 "important, it is also configuration dependent as it varies depending on the "
@@ -7238,6 +7756,12 @@ msgid ""
 "function, but for a custom kernel, only you can tell us where the fault "
 "occurred."
 msgstr ""
+"Esta mensagem não é suficiente. Embora o valor do ponteiro de instrução seja "
+"importante, ele também depende da configuração, pois varia dependendo da "
+"imagem do kernel. Se for uma imagem de kernel <filename>GENERIC</filename> "
+"de um dos snapshots, é possível que alguém rastreie a função problemática, "
+"mas para um kernel personalizado, somente você pode nos dizer onde a falha "
+"ocorreu."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2514
@@ -7265,6 +7789,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2526
+#, fuzzy
 msgid ""
 "  where `f0xxxxxx` is the instruction pointer value. The odds are you will "
 "not get an exact match since the symbols in the kernel symbol table are for "
@@ -7272,6 +7797,12 @@ msgid ""
 "somewhere inside a function, not at the start. If you do not get an exact "
 "match, omit the last digit from the instruction pointer value and try again:"
 msgstr ""
+"  no qual <literal>f0xxxxxx</literal> é o valor do ponteiro de instrução. As "
+"probabilidades são de que você não obterá uma correspondência exata, pois os "
+"símbolos na tabela de símbolos do kernel são para os pontos de entrada das "
+"funções e o endereço do ponteiro de instrução estará em algum lugar dentro "
+"de uma função, não no início. Se você não obtiver uma correspondência exata, "
+"omita o último dígito do valor do ponteiro de instrução e tente novamente:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:2530
@@ -7281,12 +7812,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2533
+#, fuzzy
 msgid ""
 "  If that does not yield any results, chop off another digit. Repeat until "
 "there is some sort of output. The result will be a possible list of "
 "functions which caused the panic. This is a less than exact mechanism for "
 "tracking down the point of failure, but it is better than nothing."
 msgstr ""
+"  Se isso não produzir nenhum resultado, corte outro dígito. Repita até que "
+"haja algum tipo de saída. O resultado será uma possível lista das funções "
+"que causaram o panic. Este é um mecanismo menos do que exato para rastrear o "
+"ponto de falha, mas é melhor do que nada."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/faq/_index.adoc:2536
@@ -7312,9 +7848,10 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:2546
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "makeoptions     DEBUG=-g          # Build kernel with gdb(1) debug symbols\n"
 msgstr ""
+"makeoptions     DEBUG=-g          # Build kernel with gdb(1) debug symbols\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2549
@@ -7448,12 +7985,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2611
+#, fuzzy
 msgid ""
 "The ELF toolchain does not, by default, make the symbols defined in an "
 "executable visible to the dynamic linker. Consequently `dlsym()` searches on "
 "handles obtained from calls to `dlopen(NULL, flags)` will fail to find such "
 "symbols."
 msgstr ""
+"A toolchain ELF não faz, por padrão, os símbolos definidos em um executável "
+"visíveis para o vinculador dinâmico. Consequentemente, a busca da função "
+"<function>dlsym()</function> por identificadores obtidos de chamadas para "
+"<function>dlopen(NULL, flags)</function> não conseguirá encontrar tais "
+"símbolos."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:2613
