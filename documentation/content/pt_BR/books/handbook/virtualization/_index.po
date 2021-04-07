@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-14 11:02-0300\n"
-"PO-Revision-Date: 2021-03-29 23:45+0000\n"
+"PO-Revision-Date: 2021-04-08 00:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookvirtualization_index/pt_BR/>\n"
@@ -311,9 +311,9 @@ msgstr ""
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:127
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:202
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:288
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "kern.hz=100\n"
-msgstr ""
+msgstr "kern.hz=100\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:130
@@ -609,10 +609,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:225
+#, fuzzy
 msgid ""
 "This will load the New Virtual Machine Assistant. Click [."
 "guimenuitem]#Continue# to proceed:"
 msgstr ""
+"Isto irá carregar o Assistente de Nova Máquina Virtual. Clique em "
+"<guimenuitem>Continuar</guimenuitem> para prosseguir:"
 
 #. type: Target for macro image
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:226
@@ -744,6 +747,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:270
+#, fuzzy
 msgid ""
 "The last thing to change is how the virtual machine will connect to the "
 "network. To allow connections to the virtual machine from other machines "
@@ -752,6 +756,12 @@ msgid ""
 "connection (NAT)# is preferred so that the virtual machine can have access "
 "to the Internet, but the network cannot access the virtual machine."
 msgstr ""
+"A última coisa a mudar é como a máquina virtual se conectará à rede. Para "
+"permitir conexões à máquina virtual de outras máquinas além do host, escolha "
+"<guimenuitem>Conectar diretamente à rede física (Bridged)</guimenuitem>. "
+"Caso contrário, <guimenuitem>Compartilhar a conexão de internet do host "
+"(NAT)</guimenuitem> é preferível para que a máquina virtual possa ter acesso "
+"à Internet, porém sem que as demais maquinas da rede possam acessá-la."
 
 #. type: Target for macro image
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:271
@@ -867,10 +877,14 @@ msgstr "Estes comandos são executados na instancia virtualizada do FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:317
+#, fuzzy
 msgid ""
 "First, install the package:emulators/virtualbox-ose-additions[] package or "
 "port in the FreeBSD guest. This will install the port:"
 msgstr ""
+"Primeiro, instale o pacote ou o port <package>emulators/virtualbox-ose-"
+"additions</package> na instancia virtualizada do FreeBSD. Isso irá instalar "
+"o port:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:321
@@ -885,11 +899,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:329
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "vboxguest_enable=\"YES\"\n"
 "vboxservice_enable=\"YES\"\n"
 msgstr ""
+"vboxguest_enable=\"YES\"\n"
+"vboxservice_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:332
@@ -899,9 +915,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:336
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "vboxservice_flags=\"--disable-timesync\"\n"
-msgstr ""
+msgstr "vboxservice_flags=\"--disable-timesync\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:339
@@ -912,7 +928,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:348
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Section \"Device\"\n"
 "\tIdentifier \"Card0\"\n"
@@ -921,6 +937,12 @@ msgid ""
 "\tBoardName \"VirtualBox Graphics Adapter\"\n"
 "EndSection\n"
 msgstr ""
+"Section \"Device\"\n"
+"\tIdentifier \"Card0\"\n"
+"\tDriver \"vboxvideo\"\n"
+"\tVendorName \"InnoTek Systemberatung GmbH\"\n"
+"\tBoardName \"VirtualBox Graphics Adapter\"\n"
+"EndSection\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:351
@@ -931,13 +953,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:358
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Section \"InputDevice\"\n"
 "\tIdentifier \"Mouse0\"\n"
 "\tDriver \"vboxmouse\"\n"
 "EndSection\n"
 msgstr ""
+"Section \"InputDevice\"\n"
+"\tIdentifier \"Mouse0\"\n"
+"\tDriver \"vboxmouse\"\n"
+"EndSection\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:361
@@ -1099,29 +1125,36 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:438
+#, fuzzy
 msgid ""
 "To ensure the module is always loaded after a reboot, add this line to [."
 "filename]#/boot/loader.conf#:"
 msgstr ""
+"Para garantir que o módulo seja sempre carregado após uma reinicialização, "
+"adicione esta linha ao <filename>/boot/loader.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:442
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "vboxdrv_load=\"YES\"\n"
-msgstr ""
+msgstr "vboxdrv_load=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:445
+#, fuzzy
 msgid ""
 "To use the kernel modules that allow bridged or host-only networking, add "
 "this line to [.filename]#/etc/rc.conf# and reboot the computer:"
 msgstr ""
+"Para usar os módulos do kernel que permitem conexões de rede bridged ou host-"
+"only, adicione esta linha ao <filename>/etc/rc.conf</filename> e reinicie o "
+"computador:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:449
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "vboxnet_enable=\"YES\"\n"
-msgstr ""
+msgstr "vboxnet_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:452
@@ -1139,10 +1172,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:459
+#, fuzzy
 msgid ""
 "The default permissions for [.filename]#/dev/vboxnetctl# are restrictive and "
 "need to be changed for bridged networking:"
 msgstr ""
+"As permissões padrão para o <filename>/dev/vboxnetctl</filename> são "
+"restritivas e precisam ser alteradas para redes em modo Bridged:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:464
@@ -1154,18 +1190,23 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:467
+#, fuzzy
 msgid ""
 "To make this permissions change permanent, add these lines to [.filename]#/"
 "etc/devfs.conf#:"
 msgstr ""
+"Para tornar esta permissão permanente, adicione estas linhas ao <filename>/"
+"etc/devfs.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:472
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "own     vboxnetctl root:vboxusers\n"
 "perm    vboxnetctl 0660\n"
 msgstr ""
+"own     vboxnetctl root:vboxusers\n"
+"perm    vboxnetctl 0660\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:475
@@ -1217,30 +1258,38 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:496
+#, fuzzy
 msgid ""
 "Then, add the following to [.filename]#/etc/devfs.rules#, or create this "
 "file if it does not exist yet:"
 msgstr ""
+"Em seguida, adicione as seguintes linhas ao <filename>/etc/rc."
+"conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:501
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "[system=10]\n"
 "add path 'usb/*' mode 0660 group operator\n"
 msgstr ""
+"[system=10]\n"
+"add path 'usb/*' mode 0660 group operator\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:504
+#, fuzzy
 msgid ""
 "To load these new rules, add the following to [.filename]#/etc/rc.conf#:"
 msgstr ""
+"Em seguida, adicione as seguintes linhas ao <filename>/etc/rc."
+"conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:508
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "devfs_system_ruleset=\"system\"\n"
-msgstr ""
+msgstr "devfs_system_ruleset=\"system\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:511
@@ -1289,9 +1338,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:529
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "hald_enable=\"YES\"\n"
-msgstr ""
+msgstr "hald_enable=\"YES\"\n"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:534
@@ -1311,12 +1360,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:543
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "perm cd* 0660\n"
 "perm xpt0 0660\n"
 "perm pass* 0660\n"
 msgstr ""
+"perm cd* 0660\n"
+"perm xpt0 0660\n"
+"perm pass* 0660\n"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:551
@@ -1482,10 +1534,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:617
+#, fuzzy
 msgid ""
 "In order to boot operating systems other than FreeBSD, the package:sysutils/"
 "grub2-bhyve[] port must be first installed."
 msgstr ""
+"Para inicializar sistemas operacionais diferentes do FreeBSD, o port "
+"<package>sysutils/grub2-bhyve</package> deve ser instalada primeiro."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:619
@@ -1511,11 +1566,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:631
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "(hd0) ./linux.img\n"
 "(cd0) ./somelinux.iso\n"
 msgstr ""
+"(hd0) ./linux.img\n"
+"(cd0) ./somelinux.iso\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:634
@@ -1873,9 +1930,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:822
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "net.link.tap.up_on_open=1\n"
-msgstr ""
+msgstr "net.link.tap.up_on_open=1\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:825
@@ -1913,6 +1970,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:839
+#, fuzzy
 msgid ""
 "Xen(TM) is a bare-metal hypervisor, which means that it is the first program "
 "loaded after the BIOS. A special privileged guest called the Domain-0 "
@@ -1926,6 +1984,20 @@ msgid ""
 "other hypervisor solutions, while the DomU is where individual guest VMs are "
 "run."
 msgstr ""
+"O <trademark>Xen</trademark> é um hypervisor bare-metal, o que significa que "
+"é o primeiro programa carregado após o BIOS. Um convidado especial "
+"privilegiado chamado Domain-0 (<literal>Dom0</literal> para abreviar) é "
+"então iniciado. O Dom0 usa seus privilégios especiais para acessar "
+"diretamente o hardware físico subjacente, tornando-o uma solução de alto "
+"desempenho. Ele é capaz de acessar os controladores de disco e adaptadores "
+"de rede diretamente. As ferramentas de gerenciamento do <trademark>Xen</"
+"trademark> para gerenciar e controlar o hypervisor <trademark>Xen</"
+"trademark> também são usadas pelo Dom0 para criar, listar e destruir VMs. "
+"Dom0 fornece discos virtuais e recursos de rede para domínios sem "
+"privilégios, geralmente chamados de <literal>DomU</literal>. O "
+"<trademark>Xen</trademark> Dom0 pode ser comparado ao console de serviço de "
+"outras soluções de hypervisor , enquanto o DomU é onde as VMs convidadas são "
+"executadas."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:841
@@ -1982,6 +2054,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:858
+#, fuzzy
 msgid ""
 "Configuration files must be edited to prepare the host for the Dom0 "
 "integration after the Xen packages are installed. An entry to [.filename]#/"
@@ -1989,6 +2062,11 @@ msgid ""
 "to be wired. Otherwise, DomU VMs with higher memory requirements will not "
 "run."
 msgstr ""
+"Os arquivos de configuração devem ser editados para preparar o host para a "
+"integração do Dom0 após a instalação dos pacotes do Xen. Uma entrada para "
+"<filename>/etc/sysctl.conf</filename> desabilita o limite de quantas páginas "
+"de memória podem ser conectadas. Caso contrário, as VMs do DomU com "
+"requisitos de memória mais altos não serão executadas."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:862
@@ -2028,6 +2106,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:880
+#, fuzzy
 msgid ""
 "Selecting a Xen(TM) kernel in [.filename]#/boot/loader.conf# activates the "
 "Dom0. Xen(TM) also requires resources like CPU and memory from the host "
@@ -2036,6 +2115,13 @@ msgid ""
 "GB of memory and 4 virtual CPUs are made available for the Dom0. The serial "
 "console is also activated and logging options are defined."
 msgstr ""
+"A seleção de um kernel <trademark>Xen</trademark> no <filename>/boot/loader."
+"conf</filename> ativa o Dom0. O <trademark>Xen</trademark> também requer "
+"recursos como CPU e memória da máquina host para ele mesmo e para outros "
+"domínios DomU. Quanto de CPU e memória depende dos requisitos individuais e "
+"das capacidades de hardware. Neste exemplo, 8 GB de memória e 4 CPUs "
+"virtuais são disponibilizados para o Dom0. O console serial também é ativado "
+"e as opções de log são definidas."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:882
@@ -2090,12 +2176,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:914
+#, fuzzy
 msgid ""
 "These settings are enough to start a Dom0-enabled system. However, it lacks "
 "network functionality for the DomU machines. To fix that, define a bridged "
 "interface with the main NIC of the system which the DomU VMs can use to "
 "connect to the network. Replace _em0_ with the host network interface name."
 msgstr ""
+"Essas configurações são suficientes para iniciar um sistema habilitado para "
+"Dom0. No entanto, falta a funcionalidade de rede para as máquinas DomU. Para "
+"corrigir isso, defina uma interface em bridge com a NIC principal do sistema "
+"que as VMs DomU poderão usar para se conectar à rede. Substitua "
+"<replaceable>em0</replaceable> pelo nome da interface de rede do host."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:920
@@ -2170,10 +2262,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:951
+#, fuzzy
 msgid ""
 "A ZFS volume of 20 GB called [.filename]#xendisk0# is created to serve as "
 "the disk space for the VM."
 msgstr ""
+"Um volume de 20 GB do ZFS chamado <filename>xendisk0</filename> é criado "
+"para servir como espaço em disco para a VM."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:955
@@ -2183,12 +2278,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:958
+#, fuzzy
 msgid ""
 "The new DomU guest VM is defined in a file. Some specific definitions like "
 "name, keymap, and VNC connection details are also defined. The following [."
 "filename]#freebsd.cfg# contains a minimum DomU configuration for this "
 "example:"
 msgstr ""
+"A nova VM DomU convidada é definida em um arquivo. Algumas definições "
+"específicas, como nome, mapa de teclado e detalhes da conexão VNC, também "
+"são definidas. O seguinte <filename>freebsd.cfg</filename> contém uma "
+"configuração mínima de DomU para este exemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:975
@@ -2259,6 +2359,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:998
+#, fuzzy
 msgid ""
 "Each time the Dom0 is restarted, the configuration file must be passed to "
 "`xl create` again to re-create the DomU. By default, only the Dom0 is "
@@ -2269,6 +2370,14 @@ msgid ""
 "backed up and kept available to be able to re-create the guest VM when "
 "needed."
 msgstr ""
+"Cada vez que o Dom0 é reiniciado, o arquivo de configuração deve ser passado "
+"para <command>xl create</command> novamente para recriar o DomU. Por padrão, "
+"somente o Dom0 é criado após uma reinicialização, não as VMs individuais. As "
+"VMs podem continuar de onde pararam, pois armazenaram o sistema operacional "
+"no disco virtual. A configuração da máquina virtual pode mudar com o tempo ("
+"por exemplo, ao adicionar mais memória). Os arquivos de configuração da "
+"máquina virtual devem ter um backup e manter-se disponíveis para poder "
+"recriar a VM convidada quando necessário."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:1001
@@ -2287,6 +2396,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:1011
+#, fuzzy
 msgid ""
 "To begin the installation of the base operating system, start the VNC "
 "client, directing it to the main network address of the host or to the IP "
@@ -2299,6 +2409,16 @@ msgid ""
 "the parameter. Afterwards, recreate it using the modified [."
 "filename]*freebsd.cfg*."
 msgstr ""
+"Para iniciar a instalação do sistema operacional base, inicie o cliente VNC, "
+"direcionando-o para o endereço de rede principal do host ou para o endereço "
+"IP definido na linha <literal>vnclisten</literal> do <filename>freebsd.cfg</"
+"filename>. Depois que o sistema operacional tiver sido instalado, desligue o "
+"DomU e desconecte o visualizador VNC. Edite o <filename>freebsd.cfg</"
+"filename>, removendo a linha com a definição <literal>cdrom</literal> ou "
+"comentando-a inserindo um caractere <literal>#</literal> no início da linha. "
+"Para carregar esta nova configuração, é necessário remover o DomU antigo com "
+"<command>xl destroy</command>, passando o nome ou o id como parâmetro. "
+"Depois, recrie-o usando o <filename>freebsd.cfg</filename> modificado."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:1016
@@ -2421,16 +2541,22 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:1051
+#, fuzzy
 msgid ""
 "The most common cause of guest creation failures is the `xl` command "
 "spitting some error and exiting with a return code different than 0. If the "
 "error provided is not enough to help identify the issue, more verbose output "
 "can also be obtained from `xl` by using the `v` option repeatedly."
 msgstr ""
+"A causa mais comum de falhas na criação de convidados é o comando "
+"<literal>xl</literal> cuspindo algum erro e saindo com um código de retorno "
+"diferente de 0. Se o erro fornecido não for suficiente para ajudar a "
+"identificar o problema, uma saída mais detalhada pode ser obtida do comando "
+"<literal>xl</literal> usando-se a opção <literal>v</literal> repetidamente."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:1067
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# xl -vvv create freebsd.cfg\n"
 "Parsing config from freebsd.cfg\n"
@@ -2446,6 +2572,27 @@ msgid ""
 "libxl: debug: libxl_dom.c:988:libxl__load_hvm_firmware_module: Loading BIOS: /usr/local/shared/seabios/bios.bin\n"
 "...\n"
 msgstr ""
+"<prompt>#</prompt> <userinput>xl -vvv create freebsd.cfg</userinput>\n"
+"Parsing config from freebsd.cfg\n"
+"libxl: debug: libxl_create.c:1693:do_domain_create: Domain 0:ao 0x800d750a0: "
+"create: how=0x0 callback=0x0 poller=0x800d6f0f0\n"
+"libxl: debug: libxl_device.c:397:libxl__device_disk_set_backend: Disk "
+"vdev=xvda spec.backend=unknown\n"
+"libxl: debug: libxl_device.c:432:libxl__device_disk_set_backend: Disk "
+"vdev=xvda, using backend phy\n"
+"libxl: debug: libxl_create.c:1018:initiate_domain_create: Domain 1:running "
+"bootloader\n"
+"libxl: debug: libxl_bootloader.c:328:libxl__bootloader_run: Domain 1:not a "
+"PV/PVH domain, skipping bootloader\n"
+"libxl: debug: libxl_event.c:689:libxl__ev_xswatch_deregister: watch "
+"w=0x800d96b98: deregister unregistered\n"
+"domainbuilder: detail: xc_dom_allocate: cmdline=\"\", features=\"\"\n"
+"domainbuilder: detail: xc_dom_kernel_file: filename=\"/usr/local/lib/xen/"
+"boot/hvmloader\"\n"
+"domainbuilder: detail: xc_dom_malloc_filemap    : 326 kB\n"
+"libxl: debug: libxl_dom.c:988:libxl__load_hvm_firmware_module: Loading BIOS: "
+"/usr/local/share/seabios/bios.bin\n"
+"...\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:1069
