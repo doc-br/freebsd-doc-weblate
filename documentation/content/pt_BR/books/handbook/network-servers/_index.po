@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-01 00:53+0000\n"
+"PO-Revision-Date: 2021-04-08 23:28+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbooknetwork-servers_index/pt_BR/>\n"
@@ -196,9 +196,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:88
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "inetd_enable=\"YES\"\n"
-msgstr ""
+msgstr "inetd_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:91
@@ -246,9 +246,10 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:118
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ftp     stream  tcp     nowait  root    /usr/libexec/ftpd       ftpd -l\n"
 msgstr ""
+"ftp     stream  tcp     nowait  root    /usr/libexec/ftpd       ftpd -l\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:121
@@ -257,7 +258,7 @@ msgstr "As sete colunas em uma entrada são as seguintes:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:131
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "service-name\n"
 "socket-type\n"
@@ -267,6 +268,14 @@ msgid ""
 "server-program\n"
 "server-program-arguments\n"
 msgstr ""
+"service-name\n"
+"socket-type\n"
+"protocol\n"
+"{wait|nowait}[/max-child[/max-connections-per-ip-per-minute[/max-child-per-"
+"ip]]]\n"
+"user[:group][/login-class]\n"
+"server-program\n"
+"server-program-arguments\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:134
@@ -367,6 +376,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:177
+#, fuzzy
 msgid ""
 "`max-connections-per-ip-per-minute` limits the number of connections from "
 "any particular IP address per minute. Once the limit is reached, further "
@@ -377,6 +387,16 @@ msgid ""
 "any moment. These options can limit excessive resource consumption and help "
 "to prevent Denial of Service attacks."
 msgstr ""
+"<option>max-connections-per-ip-per-minute</option> limita o número de "
+"conexões de qualquer endereço específico de <acronym>IP</acronym> por "
+"minuto. Quando o limite for atingido, outras conexões desse endereço IP "
+"serão descartadas até o final do minuto. Por exemplo, um valor de "
+"<literal>/10</literal> limitaria qualquer endereço <acronym>IP</acronym> "
+"específico a dez tentativas de conexão por minuto. <option>max-child-per-ip</"
+"option> limita o número de processos-filhos que podem ser iniciados em nome "
+"de um único endereço <acronym>IP</acronym> a qualquer momento. Essas opções "
+"podem limitar o consumo excessivo de recursos e ajudar a impedir ataques de "
+"negação de serviço (DoS (Denial Of Service))."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:179
@@ -385,9 +405,11 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:183
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "finger stream  tcp     nowait/3/10 nobody /usr/libexec/fingerd fingerd -k -s\n"
 msgstr ""
+"finger stream  tcp     nowait/3/10 nobody /usr/libexec/fingerd fingerd -k -"
+"s\n"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:185
@@ -423,10 +445,14 @@ msgstr "argumentos do programa servidor"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:193
+#, fuzzy
 msgid ""
 "Used to specify any command arguments to be passed to the daemon on "
 "invocation. If the daemon is an internal service, use `internal`."
 msgstr ""
+"Usado para especificar qualquer argumento de comando a ser transmitido ao "
+"daemon na chamada. Se o daemon for um serviço interno, use "
+"<option>internal</option>."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:195
@@ -552,11 +578,17 @@ msgstr "Network File System (NFS)"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:228
+#, fuzzy
 msgid ""
 "FreeBSD supports the Network File System (NFS), which allows a server to "
 "share directories and files with clients over a network. With NFS, users and "
 "programs can access files on remote systems as if they were stored locally."
 msgstr ""
+"O FreeBSD suporta o Network File System (<acronym>NFS</acronym>), que "
+"permite que um servidor compartilhe diretórios e arquivos com clientes "
+"através de uma rede. Com o <acronym>NFS</acronym>, os usuários e programas "
+"podem acessar arquivos em sistemas remotos como se estivessem armazenados "
+"localmente."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:230
@@ -574,19 +606,28 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:233
+#, fuzzy
 msgid ""
 "Several clients may need access to the [.filename]#/usr/ports/distfiles# "
 "directory. Sharing that directory allows for quick access to the source "
 "files without having to download them to each client."
 msgstr ""
+"Vários clientes podem precisar de acesso ao diretório <filename>/usr/ports/"
+"distfiles</filename>. Compartilhar esse diretório permite acesso rápido aos "
+"arquivos fonte sem precisar baixá-los para cada cliente."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:234
+#, fuzzy
 msgid ""
 "On large networks, it is often more convenient to configure a central NFS "
 "server on which all user home directories are stored. Users can log into a "
 "client anywhere on the network and have access to their home directories."
 msgstr ""
+"Em grandes redes, geralmente é mais conveniente configurar um servidor "
+"central <acronym>NFS</acronym> no qual todos os diretórios home dos usuários "
+"são armazenados. Os usuários podem logar em um cliente em qualquer lugar da "
+"rede e ter acesso aos seus diretórios home."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:235
@@ -612,11 +653,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:238
+#, fuzzy
 msgid ""
 "NFS consists of a server and one or more clients. The client remotely "
 "accesses the data that is stored on the server machine. In order for this to "
 "function properly, a few processes have to be configured and running."
 msgstr ""
+"O <acronym>NFS</acronym> consiste em um servidor e um ou mais clientes. O "
+"cliente acessa remotamente os dados armazenados na máquina do servidor. Para "
+"que isso funcione corretamente, alguns processos precisam ser configurados e "
+"executados."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:240
@@ -710,9 +756,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:281
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "/usr/home  -alldirs  10.0.0.2 10.0.0.3 10.0.0.4\n"
-msgstr ""
+msgstr "/usr/home  -alldirs  10.0.0.2 10.0.0.3 10.0.0.4\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:284
@@ -727,26 +773,34 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:288
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "/a  -maproot=root  host.example.com box.example.org\n"
-msgstr ""
+msgstr "/a  -maproot=root  host.example.com box.example.org\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:291
+#, fuzzy
 msgid ""
 "A client can only be specified once per file system. For example, if [."
 "filename]#/usr# is a single file system, these entries would be invalid as "
 "both entries specify the same host:"
 msgstr ""
+"Um cliente só pode ser especificado uma vez por sistema de arquivos. Por "
+"exemplo, se <filename>/usr</filename> for um único sistema de arquivos, "
+"essas entradas serão inválidas, já que ambas as entradas especificam o mesmo "
+"host:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:297
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# Invalid when /usr is one file system\n"
 "/usr/src   client\n"
 "/usr/ports client\n"
 msgstr ""
+"# Invalid when /usr is one file system\n"
+"/usr/src   client\n"
+"/usr/ports client\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:300
@@ -755,9 +809,9 @@ msgstr "O formato correto para essa situação é usar uma entrada:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:304
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "/usr/src /usr/ports  client\n"
-msgstr ""
+msgstr "/usr/src /usr/ports  client\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:307
@@ -768,7 +822,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:318
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# Export src and ports to client01 and client02, but only\n"
 "# client01 has root privileges on it\n"
@@ -779,6 +833,14 @@ msgid ""
 "/exports -alldirs -maproot=root      client01 client02\n"
 "/exports/obj -ro\n"
 msgstr ""
+"# Export src and ports to client01 and client02, but only\n"
+"# client01 has root privileges on it\n"
+"/usr/src /usr/ports -maproot=root    client01\n"
+"/usr/src /usr/ports               client02\n"
+"# The client machines have root and can mount anywhere\n"
+"# on /exports. Anyone in the world can mount /exports/obj read-only\n"
+"/exports -alldirs -maproot=root      client01 client02\n"
+"/exports/obj -ro\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:321
@@ -789,12 +851,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:327
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "rpcbind_enable=\"YES\"\n"
 "nfs_server_enable=\"YES\"\n"
 "mountd_enable=\"YES\"\n"
 msgstr ""
+"rpcbind_enable=\"YES\"\n"
+"nfs_server_enable=\"YES\"\n"
+"mountd_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:330
@@ -837,9 +902,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:351
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "nfs_client_enable=\"YES\"\n"
-msgstr ""
+msgstr "nfs_client_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:354
@@ -876,16 +941,19 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:370
+#, fuzzy
 msgid ""
 "To mount a remote file system each time the client boots, add it to [."
 "filename]#/etc/fstab#:"
 msgstr ""
+"Para montar um sistema de arquivos remoto toda vez que o cliente for "
+"inicializado, adicione-o ao arquivo <filename>/etc/fstab</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:374
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "server:/home\t/mnt\tnfs\trw\t0\t0\n"
-msgstr ""
+msgstr "server:/home\t/mnt\tnfs\trw\t0\t0\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:377
@@ -900,19 +968,25 @@ msgstr "Bloqueio"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:381
+#, fuzzy
 msgid ""
 "Some applications require file locking to operate correctly. To enable "
 "locking, add these lines to [.filename]#/etc/rc.conf# on both the client and "
 "server:"
 msgstr ""
+"Alguns aplicativos exigem o bloqueio de arquivos para funcionar "
+"corretamente. Para ativar o bloqueio, adicione estas linhas ao arquivo "
+"<filename>/etc/rc.conf</filename> no cliente e no servidor:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:386
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "rpc_lockd_enable=\"YES\"\n"
 "rpc_statd_enable=\"YES\"\n"
 msgstr ""
+"rpc_lockd_enable=\"YES\"\n"
+"rpc_statd_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:389
@@ -1043,9 +1117,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:439
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "autofs_enable=\"YES\"\n"
-msgstr ""
+msgstr "autofs_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:442
@@ -1095,6 +1169,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:460
+#, fuzzy
 msgid ""
 "NIS is a Remote Procedure Call (RPC)-based client/server system that allows "
 "a group of machines within an NIS domain to share a common set of "
@@ -1102,6 +1177,13 @@ msgid ""
 "client systems with only minimal configuration data and to add, remove, or "
 "modify configuration data from a single location."
 msgstr ""
+"O <acronym>NIS</acronym> é um sistema cliente/servidor baseado em Remote "
+"Procedure Call (<acronym>RPC</acronym>) que permite que um grupo de máquinas "
+"dentro de um domínio <acronym>NIS</acronym> compartilhe um conjunto de "
+"arquivos de configuração. Isso permite que um administrador do sistema "
+"configure sistemas clientes <acronym>NIS</acronym> com apenas dados mínimos "
+"de configuração e adicione, remova ou modifique dados de configuração de um "
+"único local."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:462
@@ -1218,6 +1300,7 @@ msgstr "Considerações de Planejamento"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:508
+#, fuzzy
 msgid ""
 "This section describes a sample NIS environment which consists of 15 FreeBSD "
 "machines with no centralized point of administration. Each machine has its "
@@ -1226,6 +1309,13 @@ msgid ""
 "Currently, when a user is added to the lab, the process must be repeated on "
 "all 15 machines."
 msgstr ""
+"Esta seção descreve um ambiente <acronym>NIS</acronym> de exemplo que "
+"consiste em 15 máquinas FreeBSD sem ponto de administração centralizado. "
+"Cada máquina tem seu próprio <filename>/etc/passwd</filename> e <filename>/"
+"etc/master.passwd</filename>. Esses arquivos são mantidos em sincronia entre "
+"si somente por meio de intervenção manual. Atualmente, quando um usuário é "
+"adicionado ao laboratório, o processo deve ser repetido em todas as 15 "
+"máquinas."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:510
@@ -1264,11 +1354,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:541
+#, fuzzy
 msgid ""
 "If this is the first time an NIS scheme is being developed, it should be "
 "thoroughly planned ahead of time. Regardless of network size, several "
 "decisions need to be made as part of the planning process."
 msgstr ""
+"Se esta é a primeira vez que um esquema de <acronym>NIS</acronym> está sendo "
+"desenvolvido, ele deve ser cuidadosamente planejado através do tempo. "
+"Independentemente do tamanho da rede, várias decisões precisam ser tomadas "
+"como parte do processo de planejamento."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:542
@@ -1278,12 +1373,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:545
+#, fuzzy
 msgid ""
 "When a client broadcasts its requests for info, it includes the name of the "
 "NIS domain that it is part of. This is how multiple servers on one network "
 "can tell which server should answer which request. Think of the NIS domain "
 "name as the name for a group of hosts."
 msgstr ""
+"Quando um cliente transmite suas solicitações de informações, ele inclui o "
+"nome do domínio <acronym>NIS</acronym> do qual faz parte. É assim que vários "
+"servidores em uma rede podem informar qual servidor deve responder a qual "
+"solicitação. Pense no nome de domínio <acronym>NIS</acronym> como o nome de "
+"um grupo de hosts."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:547
@@ -1351,12 +1452,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:561
+#, fuzzy
 msgid ""
 "Setting up a master NIS server can be relatively straight forward, depending "
 "on environmental needs. Since FreeBSD provides built-in NIS support, it only "
 "needs to be enabled by adding the following lines to [.filename]#/etc/rc."
 "conf#:"
 msgstr ""
+"Configurar um servidor <acronym>NIS</acronym> master pode ser relativamente "
+"simples, dependendo das necessidades ambientais. Como o FreeBSD oferece "
+"suporte a <acronym>NIS</acronym> embutido, ele só precisa ser ativado "
+"adicionando as seguintes linhas ao arquivo <filename>/etc/rc.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:567
@@ -1378,6 +1484,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:574
+#, fuzzy
 msgid ""
 "Care must be taken in a multi-server domain where the server machines are "
 "also NIS clients. It is generally a good idea to force the servers to bind "
@@ -1388,13 +1495,26 @@ msgid ""
 "involved can be considerable and the failure mode is still present since the "
 "servers might bind to each other all over again."
 msgstr ""
+"É preciso ter cuidado em um domínio com vários servidores, no qual as "
+"máquinas do servidor também são clientes <acronym>NIS</acronym>. Geralmente, "
+"é uma boa ideia forçar os servidores a fazerem bind em si mesmos, em vez de "
+"permitir que eles transmitam solicitações de bind e, possivelmente, fiquem "
+"vinculados um ao outro. Modos de falha estranhos podem ocorrer se um "
+"servidor cair e outros dependerem dele. Eventualmente, todos os clientes "
+"terão tempo limite e tentarão fazer bind em outros servidores, mas o atraso "
+"envolvido poderá ser considerável e o modo de falha ainda estará presente, "
+"uma vez que os servidores podem ligar-se entre si novamente."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:576
+#, fuzzy
 msgid ""
 "A server that is also a client can be forced to bind to a particular server "
 "by adding these additional lines to [.filename]#/etc/rc.conf#:"
 msgstr ""
+"Um servidor que também é um cliente pode ser forçado fazer bind em um "
+"servidor em particular adicionando estas linhas adicionais ao arquivo "
+"<filename>/etc/rc.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:581
@@ -1523,9 +1643,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:646
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "NOPUSH = \"True\"\n"
-msgstr ""
+msgstr "NOPUSH = \"True\"\n"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:649
@@ -1662,20 +1782,30 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:727
+#, fuzzy
 msgid ""
 "This will generate a directory on the slave server called [.filename]#/var/"
 "yp/test-domain# which contains copies of the NIS master server's maps. "
 "Adding these [.filename]#/etc/crontab# entries on each slave server will "
 "force the slaves to sync their maps with the maps on the master server:"
 msgstr ""
+"Isto irá gerar um diretório no servidor slave chamado <filename>/var/yp/test-"
+"domain</filename> que contém cópias dos mapas do servidor principal do "
+"<acronym>NIS</acronym>. Adicionar estas entradas ao arquivo <filename>/etc/"
+"crontab</filename> em cada servidor slave forçará os slaves a sincronizar "
+"seus mapas com os mapas no servidor master:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:732
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "20      *       *       *       *       root   /usr/libexec/ypxfr passwd.byname\n"
 "21      *       *       *       *       root   /usr/libexec/ypxfr passwd.byuid\n"
 msgstr ""
+"20      *       *       *       *       root   /usr/libexec/ypxfr passwd."
+"byname\n"
+"21      *       *       *       *       root   /usr/libexec/ypxfr passwd."
+"byuid\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:735
@@ -1736,11 +1866,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:752
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "nisdomainname=\"test-domain\"\n"
 "nis_client_enable=\"YES\"\n"
 msgstr ""
+"nisdomainname=\"test-domain\"\n"
+"nis_client_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:755
@@ -1828,7 +1960,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:795
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# allow connections from local host -- mandatory\n"
 "127.0.0.1     255.255.255.255\n"
@@ -1840,6 +1972,15 @@ msgid ""
 "# this includes the machines in the testlab\n"
 "10.0.0.0      255.255.240.0\n"
 msgstr ""
+"# allow connections from local host -- mandatory\n"
+"127.0.0.1     255.255.255.255\n"
+"# allow connections from any host\n"
+"# on the 192.168.128.0 network\n"
+"192.168.128.0 255.255.255.0\n"
+"# allow connections from any host\n"
+"# between 10.0.0.0 to 10.0.15.255\n"
+"# this includes the machines in the testlab\n"
+"10.0.0.0      255.255.240.0\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:798
@@ -1863,6 +2004,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:802
+#, fuzzy
 msgid ""
 "Servers using [.filename]#securenets# may fail to serve legitimate NIS "
 "clients with archaic TCP/IP implementations. Some of these implementations "
@@ -1872,6 +2014,14 @@ msgid ""
 "may force the retirement of these client systems or the abandonment of [."
 "filename]#securenets#."
 msgstr ""
+"Servidores que usam <filename>securenets</filename> podem não servir "
+"clientes legítimos de <acronym>NIS</acronym> com implementações arcaicas de "
+"TCP/IP. Algumas dessas implementações definem todos os bits do host como "
+"zero ao fazer transmissões ou não observam a máscara de sub-rede ao calcular "
+"o endereço de transmissão. Embora alguns desses problemas possam ser "
+"corrigidos alterando a configuração do cliente, outros problemas podem "
+"forçar a desativação desses sistemas clientes ou o abandono do "
+"<filename>securenets</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:804
@@ -1912,7 +2062,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:831
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "basie# cat /etc/master.passwd\n"
 "root:[password]:0:0::0:0:The super-user:/root:/bin/csh\n"
@@ -1933,6 +2083,27 @@ msgid ""
 "-bill:::::::::\n"
 "+:::::::::\n"
 msgstr ""
+"basie<prompt>#</prompt> <userinput>cat /etc/master.passwd</userinput>\n"
+"root:[password]:0:0::0:0:The super-user:/root:/bin/csh\n"
+"toor:[password]:0:0::0:0:The other super-user:/root:/bin/sh\n"
+"daemon:*:1:1::0:0:Owner of many system processes:/root:/usr/sbin/nologin\n"
+"operator:*:2:5::0:0:System &amp;:/:/usr/sbin/nologin\n"
+"bin:*:3:7::0:0:Binaries Commands and Source,,,:/:/usr/sbin/nologin\n"
+"tty:*:4:65533::0:0:Tty Sandbox:/:/usr/sbin/nologin\n"
+"kmem:*:5:65533::0:0:KMem Sandbox:/:/usr/sbin/nologin\n"
+"games:*:7:13::0:0:Games pseudo-user:/usr/games:/usr/sbin/nologin\n"
+"news:*:8:8::0:0:News Subsystem:/:/usr/sbin/nologin\n"
+"man:*:9:9::0:0:Mister Man Pages:/usr/share/man:/usr/sbin/nologin\n"
+"bind:*:53:53::0:0:Bind Sandbox:/:/usr/sbin/nologin\n"
+"uucp:*:66:66::0:0:UUCP pseudo-user:/var/spool/uucppublic:/usr/libexec/uucp/"
+"uucico\n"
+"xten:*:67:67::0:0:X-10 daemon:/usr/local/xten:/usr/sbin/nologin\n"
+"pop:*:68:6::0:0:Post Office Owner:/nonexistent:/usr/sbin/nologin\n"
+"nobody:*:65534:65534::0:0:Unprivileged user:/nonexistent:/usr/sbin/nologin\n"
+"-bill:::::::::\n"
+"+:::::::::\n"
+"\n"
+"basie<prompt>#</prompt>\n"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:833
@@ -2024,6 +2195,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:884
+#, fuzzy
 msgid ""
 "When using netgroups to configure this scenario, each user is assigned to "
 "one or more netgroups and logins are then allowed or forbidden for all "
@@ -2033,6 +2205,14 @@ msgid ""
 "one central configuration file needs modification to grant or deny access to "
 "machines."
 msgstr ""
+"Ao usar netgroups para configurar esse cenário, cada usuário é atribuído a "
+"um ou mais netgroups e os logins são permitidos ou proibidos para todos os "
+"membros do netgroup. Ao adicionar uma nova máquina, as restrições de login "
+"devem ser definidas para todos os netgroups. Quando um novo usuário é "
+"adicionado, a conta deve ser adicionada a um ou mais netgroups. Se a "
+"configuração do <acronym>NIS</acronym> for planejada com cuidado, somente um "
+"arquivo de configuração central precisará ser modificado para conceder ou "
+"negar acesso a máquinas."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:886
@@ -2053,7 +2233,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:896
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "IT_EMP  (,alpha,test-domain)    (,beta,test-domain)\n"
 "IT_APP  (,charlie,test-domain)  (,delta,test-domain)\n"
@@ -2061,6 +2241,11 @@ msgid ""
 "        (,golf,test-domain)\n"
 "INTERNS (,able,test-domain)     (,baker,test-domain)\n"
 msgstr ""
+"IT_EMP  (,alpha,test-domain)    (,beta,test-domain)\n"
+"IT_APP  (,charlie,test-domain)  (,delta,test-domain)\n"
+"USERS   (,echo,test-domain)     (,foxtrott,test-domain) \\\n"
+"        (,golf,test-domain)\n"
+"INTERNS (,able,test-domain)     (,baker,test-domain)\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:899
@@ -2119,22 +2304,31 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:909
+#, fuzzy
 msgid ""
 "Some non-FreeBSD NIS clients cannot handle netgroups containing more than 15 "
 "entries. This limit may be circumvented by creating several sub-netgroups "
 "with 15 users or fewer and a real netgroup consisting of the sub-netgroups, "
 "as seen in this example:"
 msgstr ""
+"Alguns clientes não-FreeBSD <acronym>NIS</acronym> não podem lidar com "
+"netgroups contendo mais de 15 entradas. Esse limite pode ser contornado "
+"criando vários grupos de sub-redes com 15 usuários ou menos e um grupo de "
+"rede real consistindo dos grupos de sub-redes, como visto neste exemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:916
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "BIGGRP1  (,joe1,domain)  (,joe2,domain)  (,joe3,domain) [...]\n"
 "BIGGRP2  (,joe16,domain)  (,joe17,domain) [...]\n"
 "BIGGRP3  (,joe31,domain)  (,joe32,domain)\n"
 "BIGGROUP  BIGGRP1 BIGGRP2 BIGGRP3\n"
 msgstr ""
+"BIGGRP1  (,joe1,domain)  (,joe2,domain)  (,joe3,domain) [...]\n"
+"BIGGRP2  (,joe16,domain)  (,joe17,domain) [...]\n"
+"BIGGRP3  (,joe31,domain)  (,joe32,domain)\n"
+"BIGGROUP  BIGGRP1 BIGGRP2 BIGGRP3\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:919
@@ -2198,9 +2392,9 @@ msgstr "com"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:951
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "+@IT_EMP:::::::::\n"
-msgstr ""
+msgstr "+@IT_EMP:::::::::\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:954
@@ -2224,16 +2418,20 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:960
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "+:::::::::/usr/sbin/nologin\n"
-msgstr ""
+msgstr "+:::::::::/usr/sbin/nologin\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:963
+#, fuzzy
 msgid ""
 "This line configures the client to import all entries but to replace the "
 "shell in those entries with [.filename]#/usr/sbin/nologin#."
 msgstr ""
+"Esta linha configura o cliente para importar todas as entradas, mas para "
+"substituir o shell nessas entradas com <filename>/usr/sbin/"
+"nologin</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:965
@@ -2252,12 +2450,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:973
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "+@IT_EMP:::::::::\n"
 "+@IT_APP:::::::::\n"
 "+:::::::::/usr/sbin/nologin\n"
 msgstr ""
+"+@IT_EMP:::::::::\n"
+"+@IT_APP:::::::::\n"
+"+:::::::::/usr/sbin/nologin\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:976
@@ -2266,15 +2467,19 @@ msgstr "As linhas correspondentes para as estações de trabalho seriam:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:982
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "+@IT_EMP:::::::::\n"
 "+@USERS:::::::::\n"
 "+:::::::::/usr/sbin/nologin\n"
 msgstr ""
+"+@IT_EMP:::::::::\n"
+"+@USERS:::::::::\n"
+"+:::::::::/usr/sbin/nologin\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:985
+#, fuzzy
 msgid ""
 "NIS supports the creation of netgroups from other netgroups which can be "
 "useful if the policy regarding user access changes. One possibility is the "
@@ -2285,15 +2490,28 @@ msgid ""
 "netgroups contains the netgroups that are allowed to login onto these "
 "machines. The new entries for the NIS`netgroup` map would look like this:"
 msgstr ""
+"O NIS suporta a criação de grupos de rede de outros grupos de rede, o que "
+"pode ser útil se a política relacionada ao acesso do usuário for alterada. "
+"Uma possibilidade é a criação de netgroups baseados em funções. Por exemplo, "
+"pode-se criar um netgroup chamado <literal>BIGSRV</literal> para definir as "
+"restrições de login para os servidores importantes, outro grupo de rede "
+"chamado <literal>SMALLSRV</literal> para os servidores menos importantes e "
+"um terceiro netgroup chamado <literal>USERBOX</literal> para as estações de "
+"trabalho. Cada um desses netgroups contém os netgroups com permissão para "
+"efetuar login nessas máquinas. As novas entradas para o mapa do "
+"<acronym>NIS</acronym> <literal>netgroup</literal> seriam assim:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:991
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "BIGSRV    IT_EMP  IT_APP\n"
 "SMALLSRV  IT_EMP  IT_APP  ITINTERN\n"
 "USERBOX   IT_EMP  ITINTERN USERS\n"
 msgstr ""
+"BIGSRV    IT_EMP  IT_APP\n"
+"SMALLSRV  IT_EMP  IT_APP  ITINTERN\n"
+"USERBOX   IT_EMP  ITINTERN USERS\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:994
@@ -2339,7 +2557,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1042
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# Define groups of users first\n"
 "IT_EMP    (,alpha,test-domain)    (,beta,test-domain)\n"
@@ -2377,15 +2595,56 @@ msgid ""
 "TWO       (,hotel,test-domain)\n"
 "# [...more groups to follow]\n"
 msgstr ""
+"# Define groups of users first\n"
+"IT_EMP    (,alpha,test-domain)    (,beta,test-domain)\n"
+"IT_APP    (,charlie,test-domain)  (,delta,test-domain)\n"
+"DEPT1     (,echo,test-domain)     (,foxtrott,test-domain)\n"
+"DEPT2     (,golf,test-domain)     (,hotel,test-domain)\n"
+"DEPT3     (,india,test-domain)    (,juliet,test-domain)\n"
+"ITINTERN  (,kilo,test-domain)     (,lima,test-domain)\n"
+"D_INTERNS (,able,test-domain)     (,baker,test-domain)\n"
+"#\n"
+"# Now, define some groups based on roles\n"
+"USERS     DEPT1   DEPT2     DEPT3\n"
+"BIGSRV    IT_EMP  IT_APP\n"
+"SMALLSRV  IT_EMP  IT_APP    ITINTERN\n"
+"USERBOX   IT_EMP  ITINTERN  USERS\n"
+"#\n"
+"# And a groups for a special tasks\n"
+"# Allow echo and golf to access our anti-virus-machine\n"
+"SECURITY  IT_EMP  (,echo,test-domain)  (,golf,test-domain)\n"
+"#\n"
+"# machine-based netgroups\n"
+"# Our main servers\n"
+"WAR       BIGSRV\n"
+"FAMINE    BIGSRV\n"
+"# User india needs access to this server\n"
+"POLLUTION  BIGSRV  (,india,test-domain)\n"
+"#\n"
+"# This one is really important and needs more access restrictions\n"
+"DEATH     IT_EMP\n"
+"#\n"
+"# The anti-virus-machine mentioned above\n"
+"ONE       SECURITY\n"
+"#\n"
+"# Restrict a machine to a single user\n"
+"TWO       (,hotel,test-domain)\n"
+"# [...more groups to follow]\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1045
+#, fuzzy
 msgid ""
 "It may not always be advisable to use machine-based netgroups. When "
 "deploying a couple of dozen or hundreds of systems, role-based netgroups "
 "instead of machine-based netgroups may be used to keep the size of the NIS "
 "map within reasonable limits."
 msgstr ""
+"Pode não ser sempre aconselhável usar netgroups baseados em máquina. Ao "
+"implantar algumas dúzias ou centenas de sistemas, grupos de rede baseados em "
+"funções em vez de grupos de rede baseados em máquina podem ser usados para "
+"manter o tamanho do mapa do <acronym>NIS</acronym> dentro de limites "
+"razoáveis."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1046
@@ -2395,6 +2654,7 @@ msgstr "Formatos de Senha"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1049
+#, fuzzy
 msgid ""
 "NIS requires that all hosts within an NIS domain use the same format for "
 "encrypting passwords. If users have trouble authenticating on an NIS client, "
@@ -2402,23 +2662,36 @@ msgid ""
 "the format must be supported by all operating systems, where DES is the "
 "lowest common standard."
 msgstr ""
+"O <acronym>NIS</acronym> requer que todos os hosts em um domínio "
+"<acronym>NIS</acronym> usem o mesmo formato para criptografar senhas. Se os "
+"usuários tiverem problemas para autenticar em um cliente <acronym>NIS</"
+"acronym>, pode ser devido a um formato de senha diferente. Em uma rede "
+"heterogênea, o formato deve ser suportado por todos os sistemas "
+"operacionais, onde <acronym>DES</acronym> é o padrão comum mais baixo."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1051
+#, fuzzy
 msgid ""
 "To check which format a server or client is using, look at this section of [."
 "filename]#/etc/login.conf#:"
 msgstr ""
+"Para verificar qual formato um servidor ou cliente está usando, veja esta "
+"seção do <filename>/etc/login.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1058
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "default:\\\n"
 "\t:passwd_format=des:\\\n"
 "\t:copyright=/etc/COPYRIGHT:\\\n"
 "\t[Further entries elided]\n"
 msgstr ""
+"default:\\\n"
+"\t:passwd_format=des:\\\n"
+"\t:copyright=/etc/COPYRIGHT:\\\n"
+"\t[Further entries elided]\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1061
@@ -2457,6 +2730,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1078
+#, fuzzy
 msgid ""
 "The Lightweight Directory Access Protocol (LDAP) is an application layer "
 "protocol used to access, modify, and authenticate objects using a "
@@ -2468,9 +2742,20 @@ msgid ""
 "internal website authentication might all make use of a single user account "
 "in the LDAP server's record base."
 msgstr ""
+"O protocolo LDAP (<acronym>LDAP</acronym>) é um protocolo da camada de "
+"aplicação usado para acessar, modificar e autenticar objetos usando um "
+"serviço de informações de diretório distribuído. Pense nisso como um "
+"telefone ou livro de registro que armazena vários níveis de informações "
+"hierárquicas e homogêneas. Ele é usado nas redes do Active Directory e do "
+"<application>OpenLDAP</application> e permite que os usuários acessem vários "
+"níveis de informações internas utilizando uma única conta. Por exemplo, a "
+"autenticação de email, a obtenção de informações de contato dos funcionários "
+"e a autenticação interna de sites podem usar uma única conta de usuário na "
+"base de registros do servidor <acronym>LDAP</acronym>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1080
+#, fuzzy
 msgid ""
 "This section provides a quick start guide for configuring an LDAP server on "
 "a FreeBSD system. It assumes that the administrator already has a design "
@@ -2478,6 +2763,12 @@ msgid ""
 "will be used for, which users should have access to that information, and "
 "how to secure this information from unauthorized access."
 msgstr ""
+"Esta seção fornece um guia de início rápido para configurar um servidor "
+"<acronym>LDAP</acronym> em um sistema FreeBSD. Ele pressupõe que o "
+"administrador já tenha um plano de design que inclua o tipo de informação a "
+"ser armazenada, para que essas informações sejam usadas, quais usuários "
+"devem ter acesso a essas informações e como proteger essas informações "
+"contra acesso não autorizado."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1081
@@ -2596,10 +2887,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1130
+#, fuzzy
 msgid ""
 "The installation creates the directory [.filename]#/var/db/openldap-data# to "
 "hold the data. The directory to store the certificates must be created:"
 msgstr ""
+"A instalação cria o diretório <filename>/var/db/openldap-data</filename> "
+"para conter os dados. O diretório para armazenar os certificados deve ser "
+"criado:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1134
@@ -2651,11 +2946,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1153
+#, fuzzy
 msgid ""
 "During the certificate generation process, be sure to correctly set the "
 "`Common Name` attribute. The Certificate Signing Request must be signed with "
 "the Certificate Authority in order to be used as a valid certificate:"
 msgstr ""
+"Durante o processo de geração de certificados, certifique-se de configurar "
+"corretamente o atributo <literal>Common Name</literal>. A Solicitação de "
+"Assinatura de Certificado deve ser assinada com a Autoridade de Certificação "
+"para ser usada como um certificado válido:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1157
@@ -2682,11 +2982,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1168
+#, fuzzy
 msgid ""
 "Remember to use the same `Common Name` attribute when prompted. When "
 "finished, ensure that a total of eight (8) new files have been generated "
 "through the proceeding commands."
 msgstr ""
+"Lembre-se de usar o mesmo atributo <literal>Common Name</literal> quando "
+"solicitado. Quando terminar, assegure-se de que um total de oito (8) novos "
+"arquivos tenham sido gerado através dos comandos procedentes."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1170
@@ -2711,7 +3015,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1194
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "#\n"
 "# See slapd-config(5) for details on configuration options.\n"
@@ -2733,9 +3037,29 @@ msgid ""
 "olcTLSProtocolMin: 3.1\n"
 "olcTLSVerifyClient: never\n"
 msgstr ""
+"#\n"
+"# See slapd-config(5) for details on configuration options.\n"
+"# This file should NOT be world readable.\n"
+"#\n"
+"dn: cn=config\n"
+"objectClass: olcGlobal\n"
+"cn: config\n"
+"#\n"
+"#\n"
+"# Define global ACLs to disable default read access.\n"
+"#\n"
+"olcArgsFile: /var/run/openldap/slapd.args\n"
+"olcPidFile: /var/run/openldap/slapd.pid\n"
+"olcTLSCertificateFile: /usr/local/etc/openldap/server.crt\n"
+"olcTLSCertificateKeyFile: /usr/local/etc/openldap/private/server.key\n"
+"olcTLSCACertificateFile: /usr/local/etc/openldap/ca.crt\n"
+"#olcTLSCipherSuite: HIGH\n"
+"olcTLSProtocolMin: 3.1\n"
+"olcTLSVerifyClient: never\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1197
+#, fuzzy
 msgid ""
 "The Certificate Authority, server certificate and server private key files "
 "must be specified here. It is recommended to let the clients choose the "
@@ -2745,6 +3069,15 @@ msgid ""
 "verification is mandatory for the server, it is not for the client: "
 "`olcTLSVerifyClient: never`."
 msgstr ""
+"A Autoridade de Certificação, o certificado do servidor e os arquivos de "
+"chave privada do servidor devem ser especificados aqui. Recomenda-se que os "
+"clientes escolham a opção de criptografia de segurança e omitam "
+"<literal>olcTLSCipherSuite</literal> (incompatível com clientes TLS "
+"diferentes de <filename>openssl</filename>). A opção "
+"<literal>olcTLSProtocolMin</literal> permite que o servidor exija um nível "
+"mínimo de segurança: é recomendado. Enquanto a verificação é obrigatória "
+"para o servidor, não é para o cliente: <literal>olcTLSVerifyClient: "
+"never</literal>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1199
@@ -2757,7 +3090,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1215
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "#\n"
 "# Load dynamic backend modules:\n"
@@ -2773,6 +3106,19 @@ msgid ""
 "#olcModuleload:\tback_passwd.la\n"
 "#olcModuleload:\tback_shell.la\n"
 msgstr ""
+"#\n"
+"# Load dynamic backend modules:\n"
+"#\n"
+"dn: cn=module,cn=config\n"
+"objectClass: olcModuleList\n"
+"cn: module\n"
+"olcModulepath:\t/usr/local/libexec/openldap\n"
+"olcModuleload:\tback_mdb.la\n"
+"#olcModuleload:\tback_bdb.la\n"
+"#olcModuleload:\tback_hdb.la\n"
+"#olcModuleload:\tback_ldap.la\n"
+"#olcModuleload:\tback_passwd.la\n"
+"#olcModuleload:\tback_shell.la\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1218
@@ -2807,7 +3153,7 @@ msgstr "Em seguida, a seção de configuração do frontend:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1266
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# Frontend settings\n"
 "#\n"
@@ -2841,6 +3187,37 @@ msgid ""
 "olcPasswordHash: {SSHA}\n"
 "# {SSHA} is already the default for olcPasswordHash\n"
 msgstr ""
+"# Frontend settings\n"
+"#\n"
+"dn: olcDatabase={-1}frontend,cn=config\n"
+"objectClass: olcDatabaseConfig\n"
+"objectClass: olcFrontendConfig\n"
+"olcDatabase: {-1}frontend\n"
+"olcAccess: to * by * read\n"
+"#\n"
+"# Sample global access control policy:\n"
+"#\tRoot DSE: allow anyone to read it\n"
+"#\tSubschema (sub)entry DSE: allow anyone to read it\n"
+"#\tOther DSEs:\n"
+"#\t\tAllow self write access\n"
+"#\t\tAllow authenticated users read access\n"
+"#\t\tAllow anonymous users to authenticate\n"
+"#\n"
+"#olcAccess: to dn.base=\"\" by * read\n"
+"#olcAccess: to dn.base=\"cn=Subschema\" by * read\n"
+"#olcAccess: to *\n"
+"#\tby self write\n"
+"#\tby users read\n"
+"#\tby anonymous auth\n"
+"#\n"
+"# if no access controls are present, the default policy\n"
+"# allows anyone and everyone to read anything but restricts\n"
+"# updates to rootdn.  (e.g., \"access to * by * read\")\n"
+"#\n"
+"# rootdn can always read and write EVERYTHING!\n"
+"#\n"
+"olcPasswordHash: {SSHA}\n"
+"# {SSHA} is already the default for olcPasswordHash\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1269
@@ -2851,7 +3228,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1277
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "dn: olcDatabase={0}config,cn=config\n"
 "objectClass: olcDatabaseConfig\n"
@@ -2859,6 +3236,11 @@ msgid ""
 "olcAccess: to * by * none\n"
 "olcRootPW: {SSHA}iae+lrQZILpiUdf16Z9KmDmSwT77Dj4U\n"
 msgstr ""
+"dn: olcDatabase={0}config,cn=config\n"
+"objectClass: olcDatabaseConfig\n"
+"olcDatabase: {0}config\n"
+"olcAccess: to * by * none\n"
+"olcRootPW: {SSHA}iae+lrQZILpiUdf16Z9KmDmSwT77Dj4U\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1280
@@ -2877,7 +3259,7 @@ msgstr "A última seção é sobre o back-end do banco de dados:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1306
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "#######################################################################\n"
 "# LMDB database definitions\n"
@@ -2901,6 +3283,27 @@ msgid ""
 "# Indices to maintain\n"
 "olcDbIndex: objectClass eq\n"
 msgstr ""
+"#######################################################################\n"
+"# LMDB database definitions\n"
+"#######################################################################\n"
+"#\n"
+"dn: olcDatabase=mdb,cn=config\n"
+"objectClass: olcDatabaseConfig\n"
+"objectClass: olcMdbConfig\n"
+"olcDatabase: mdb\n"
+"olcDbMaxSize: 1073741824\n"
+"olcSuffix: dc=domain,dc=example\n"
+"olcRootDN: cn=mdbadmin,dc=domain,dc=example\n"
+"# Cleartext passwords, especially for the rootdn, should\n"
+"# be avoided.  See slappasswd(8) and slapd-config(5) for details.\n"
+"# Use of strong authentication encouraged.\n"
+"olcRootPW: {SSHA}X2wHvIWDk6G76CQyCMS1vDCvtICWgn0+\n"
+"# The database directory MUST exist prior to running slapd AND\n"
+"# should only be accessible by the slapd and slap tools.\n"
+"# Mode 700 recommended.\n"
+"olcDbDirectory:\t/var/db/openldap-data\n"
+"# Indices to maintain\n"
+"olcDbIndex: objectClass eq\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1309
@@ -2924,10 +3327,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1313
+#, fuzzy
 msgid ""
 "When the configuration is completed, [.filename]#slapd.ldif# must be placed "
 "in an empty directory. It is recommended to create it as:"
 msgstr ""
+"Quando a configuração estiver concluída, o <filename>slapd.ldif</filename> "
+"deve ser colocado em um diretório vazio. Recomenda-se criá-lo como:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1317
@@ -3017,11 +3423,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1373
+#, fuzzy
 msgid ""
 "Both the CA and the server certificate are now correctly recognized in their "
 "respective roles. To verify this, run this command from the [."
 "filename]#server.crt# directory:"
 msgstr ""
+"Tanto a CA quanto o certificado do servidor agora são reconhecidos "
+"corretamente em suas respectivas funções. Para verificar isso, execute este "
+"comando no diretório <filename>server.crt</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1377
@@ -3039,7 +3449,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1388
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "slapd_enable=\"YES\"\n"
 "slapd_flags='-h \"ldapi://%2fvar%2frun%2fopenldap%2fldapi/\n"
@@ -3047,6 +3457,11 @@ msgid ""
 "slapd_sockets=\"/var/run/openldap/ldapi\"\n"
 "slapd_cn_config=\"YES\"\n"
 msgstr ""
+"lapd_enable=\"YES\"\n"
+"slapd_flags='-h \"ldapi://%2fvar%2frun%2fopenldap%2fldapi/\n"
+"ldap://0.0.0.0/\"'\n"
+"slapd_sockets=\"/var/run/openldap/ldapi\"\n"
+"slapd_cn_config=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1391
@@ -3198,10 +3613,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1467
+#, fuzzy
 msgid ""
 "[.filename]#slapd.ldif# can then be edited and imported again. Please, "
 "follow this procedure only when no other solution is available."
 msgstr ""
+"O <filename>slapd.ldif</filename> pode então ser editado e importado "
+"novamente. Por favor, siga este procedimento somente quando nenhuma outra "
+"solução estiver disponível."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1469
@@ -3249,10 +3668,13 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1482
+#, fuzzy
 msgid ""
 "It should be noted that [.filename]#bpf# also allows privileged users to run "
 "network packet sniffers on that system."
 msgstr ""
+"Deve-se notar que o <filename>bpf</filename> também permite que usuários "
+"privilegiados executem sniffers de pacotes de rede naquele sistema."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1485
@@ -3305,10 +3727,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1496
+#, fuzzy
 msgid ""
 "This line in [.filename]#/etc/rc.conf# is used to configure background or "
 "asynchronous mode:"
 msgstr ""
+"Esta linha no <filename>/etc/rc.conf</filename> é usada para configurar o "
+"modo background ou assíncrono:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1500
@@ -3407,20 +3832,31 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1533
+#, fuzzy
 msgid ""
 "This section demonstrates how to configure a FreeBSD system to act as a DHCP "
 "server using the Internet Systems Consortium (ISC) implementation of the "
 "DHCP server. This implementation and its documentation can be installed "
 "using the package:net/isc-dhcp43-server[] package or port."
 msgstr ""
+"Esta seção demonstra como configurar um sistema FreeBSD para atuar como um "
+"servidor <acronym>DHCP</acronym> usando a implementação do servidor "
+"<acronym>DHCP</acronym> do Internet Systems Consortium "
+"(<acronym>ISC</acronym>). Esta implementação e a sua documentação podem ser "
+"instaladas usando o pacote ou port <package>net/isc-dhcp43-server</package>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1535
+#, fuzzy
 msgid ""
 "The installation of package:net/isc-dhcp43-server[] installs a sample "
 "configuration file. Copy [.filename]#/usr/local/etc/dhcpd.conf.example# to [."
 "filename]#/usr/local/etc/dhcpd.conf# and make any edits to this new file."
 msgstr ""
+"A instalação do <package>net/isc-dhcp43-server</package> instala um arquivo "
+"de configuração de exemplo. Copie o <filename>/usr/local/etc/dhcpd.conf."
+"example</filename> para <filename>/usr/local/etc/dhcpd.conf</filename> e "
+"faça as alterações neste novo arquivo."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1537
@@ -3516,11 +3952,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1578
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "dhcpd_enable=\"YES\"\n"
 "dhcpd_ifaces=\"dc0\"\n"
 msgstr ""
+"dhcpd_enable=\"YES\"\n"
+"dhcpd_ifaces=\"dc0\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1581
@@ -3571,12 +4009,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1599
+#, fuzzy
 msgid ""
 "  The server configuration file needs to contain all the information that "
 "should be provided to clients, along with information regarding the "
 "operation of the server. This configuration file is described in dhcpd."
 "conf(5)."
 msgstr ""
+"  O arquivo de configuração do servidor precisa conter todas as informações "
+"que devem ser fornecidas aos clientes, juntamente com informações sobre a "
+"operação do servidor. Este arquivo de configuração é descrito no "
+"<citerefentry><refentrytitle>dhcpd."
+"conf</refentrytitle><manvolnum>5</manvolnum></citerefentry>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1600
@@ -3598,6 +4042,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1605
+#, fuzzy
 msgid ""
 "  This daemon is used in advanced environments where one DHCP server "
 "forwards a request from a client to another DHCP server on a separate "
@@ -3605,6 +4050,13 @@ msgid ""
 "dhcp43-relay[] package or port. The installation includes dhcrelay(8) which "
 "provides more detail."
 msgstr ""
+"  Esse daemon é usado em ambientes avançados, onde um servidor "
+"<acronym>DHCP</acronym> encaminha uma solicitação de um cliente para outro "
+"servidor <acronym>DHCP</acronym> em uma rede separada. Se esta "
+"funcionalidade for necessária, instale o pacote ou port <package>net/isc-"
+"dhcp43-relay</package>. A instalação inclui o <citerefentry><refentrytitle>dh"
+"crelay</refentrytitle><manvolnum>8</manvolnum></citerefentry>, que fornece "
+"maiores detalhes."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1608
@@ -3614,6 +4066,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1611
+#, fuzzy
 msgid ""
 "Domain Name System (DNS) is the protocol through which domain names are "
 "mapped to IP addresses, and vice versa. DNS is coordinated across the "
@@ -3622,6 +4075,14 @@ msgid ""
 "individual domain information. It is not necessary to run a name server to "
 "perform DNS lookups on a system."
 msgstr ""
+"O Sistema de Nomes de Domínio (<acronym>DNS</acronym>) é o protocolo através "
+"do qual os nomes de domínio são mapeados para endereços de <acronym>IP</"
+"acronym> e vice-versa. O <acronym>DNS</acronym> é coordenado pela Internet "
+"através de um sistema complexo de raiz de autoridade, Top Level Domain "
+"(<acronym>TLD</acronym>) e outros servidores de nomes de menor escala, que "
+"hospedam e armazenam em cache domínios individuais. Não é necessário "
+"executar um servidor de nomes para executar pesquisas de <acronym>DNS</"
+"acronym> em um sistema."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1613
@@ -3789,9 +4250,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1674
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "local_unbound_enable=\"YES\"\n"
-msgstr ""
+msgstr "local_unbound_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1677
@@ -4118,6 +4579,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1810
+#, fuzzy
 msgid ""
 "In FreeBSD, some modules can be compiled with the package:www/apache24[] "
 "port. Type `make config` within [.filename]#/usr/ports/www/apache24# to see "
@@ -4126,6 +4588,13 @@ msgid ""
 "way to install many modules. This section describes three of the most "
 "commonly used modules."
 msgstr ""
+"No FreeBSD, alguns módulos podem ser compilados com o port <package>www/"
+"apache24</package>. Digite <command>make config</command> dentro do "
+"diretório <filename>/usr/ports/www/apache24</filename> para ver quais "
+"módulos estão disponíveis e quais estão ativados por padrão. Se o módulo não "
+"é compilado com o port, a Coleção de Ports do FreeBSD fornece uma maneira "
+"fácil de instalar vários módulos. Esta seção descreve três dos módulos mais "
+"usados."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1811
@@ -4149,34 +4618,47 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1816
+#, fuzzy
 msgid ""
 "After the configuration of SSL is complete, the following line must be "
 "uncommented in the main [.filename]#http.conf# to activate the changes on "
 "the next restart or reload of Apache:"
 msgstr ""
+"Depois da configuração do <acronym>SSL</acronym> estiver completa, deve ser "
+"removido o comentário da linha seguinte no arquivo <filename>http.conf</"
+"filename> principal para ativar as mudanças no próximo restart ou reload do "
+"Apache:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1820
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "#Include etc/apache24/extra/httpd-ssl.conf\n"
-msgstr ""
+msgstr "#Include etc/apache24/extra/httpd-ssl.conf\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1825
+#, fuzzy
 msgid ""
 "SSL version two and version three have known vulnerability issues. It is "
 "highly recommended TLS version 1.2 and 1.3 be enabled in place of the older "
 "SSL options. This can be accomplished by setting the following options in "
 "the [.filename]#ssl.conf#:"
 msgstr ""
+"Versão dois do <acronym>SSL</acronym> e a versão três tem problemas de "
+"vulnerabilidades conhecidas. É altamente recomendado a versão 1.2 do TLS e "
+"1.3 deve ser habilitada no lugar das velhas opções do SSL. Isso pode ser "
+"realizado configurando as seguintes opções no arquivo <filename>ssl."
+"conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1832
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "SSLProtocol all -SSLv3 -SSLv2 +TLSv1.2 +TLSv1.3\n"
 "SSLProxyProtocol all -SSLv2 -SSLv3 -TLSv1 -TLSv1.1\n"
 msgstr ""
+"SSLProtocol all -SSLv3 -SSLv2 +TLSv1.2 +TLSv1.3\n"
+"SSLProxyProtocol all -SSLv2 -SSLv3 -TLSv1 -TLSv1.1\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1835
@@ -4188,11 +4670,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1840
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# Secure (SSL/TLS) connections\n"
 "Include etc/apache24/extra/httpd-ssl.conf\n"
 msgstr ""
+"# Secure (SSL/TLS) connections\n"
+"Include etc/apache24/extra/httpd-ssl.conf\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1843
@@ -4203,12 +4687,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1849
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "LoadModule authn_socache_module libexec/apache24/mod_authn_socache.so\n"
 "LoadModule socache_shmcb_module libexec/apache24/mod_socache_shmcb.so\n"
 "LoadModule ssl_module libexec/apache24/mod_ssl.so\n"
 msgstr ""
+"LoadModule authn_socache_module libexec/apache24/mod_authn_socache.so\n"
+"LoadModule socache_shmcb_module libexec/apache24/mod_socache_shmcb.so\n"
+"LoadModule ssl_module libexec/apache24/mod_ssl.so\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1852
@@ -4281,12 +4768,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1873
+#, fuzzy
 msgid ""
 "A list will be displayed including the versions and additional features they "
 "provide. The components are completely modular, meaning features are enabled "
 "by installing the appropriate port. To install PHP version 7.4 for Apache, "
 "issue the following command:"
 msgstr ""
+"Uma lista vai ser disponibilizada incluindo as versões e partes adicionais "
+"que elas proverem. Os componentes são completamente modulares, significando "
+"que as partes especificas são habilitadas instalando o port apropriado. Para "
+"instalar o <acronym>PHP</acronym> na versão 7.4 para o Apache, use o "
+"seguinte comando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1877
@@ -4325,11 +4818,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1894
+#, fuzzy
 msgid ""
 "In addition, the `DirectoryIndex` in the configuration file will also need "
 "to be updated and Apache will either need to be restarted or reloaded for "
 "the changes to take effect."
 msgstr ""
+"Em adição, a opção <option>DirectoryIndex</option> no arquivo de "
+"configuração irá precisar ser atualizada também e o Apache irá precisar ser "
+"reiniciado ou feito um relaoad também para as mudanças surtirem efeito."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1896
@@ -4372,12 +4869,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1912
+#, fuzzy
 msgid ""
 "Once the install is complete, there are two methods of obtaining the "
 "installed PHP support modules and the environmental information of the "
 "build. The first is to install the full PHP binary and running the command "
 "to gain the information:"
 msgstr ""
+"Uma vez que a instalação esteja completa, há dois métodos para obter o "
+"suporte para os modulos do <acronym>PHP</acronym> e a informação do ambiente "
+"dessa instalação. A primeira é instalar o binário completo do <acronym>PHP</"
+"acronym> e rodar o seguinte comando para obter a informação:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1916
@@ -4436,11 +4938,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1935
+#, fuzzy
 msgid ""
 "While this change does require administrators to make changes, they are "
 "positive and equate to a more secure Internet for everyone. The changes are "
 "only required for sites not currently implementing SSL and TLS."
 msgstr ""
+"Embora essa mudança exija que os administradores façam alterações, elas são "
+"positivas e equivalem a uma Internet mais segura para todos. As mudanças são "
+"requeridas apenas para paginas não implementada corretamente com "
+"<acronym>SSL</acronym> e <acronym>TLS</acronym>."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1939
@@ -4460,11 +4967,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1947
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "LoadModule http2_module libexec/apache24/mod_http2.so\n"
 "LoadModule mpm_event_module libexec/apache24/mod_mpm_event.so\n"
 msgstr ""
+"LoadModule http2_module libexec/apache24/mod_http2.so\n"
+"LoadModule mpm_event_module libexec/apache24/mod_mpm_event.so\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1952
@@ -4486,9 +4995,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1959
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Protocols h2 http/1.1\n"
-msgstr ""
+msgstr "Protocolos h2 http/1.1\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1964
@@ -4535,13 +5044,17 @@ msgstr "A saída deve ser semelhante à seguinte:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1985
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "192.168.1.205 - - [18/Oct/2020:18:34:36 -0400] \"GET / HTTP/2.0\" 304 -\n"
 "192.0.2.205 - - [18/Oct/2020:19:19:57 -0400] \"GET / HTTP/2.0\" 304 -\n"
 "192.0.0.205 - - [18/Oct/2020:19:20:52 -0400] \"GET / HTTP/2.0\" 304 -\n"
 "192.0.2.205 - - [18/Oct/2020:19:23:10 -0400] \"GET / HTTP/2.0\" 304 -\n"
 msgstr ""
+"192.168.1.205 - - [18/Oct/2020:18:34:36 -0400] \"GET / HTTP/2.0\" 304 -\n"
+"192.0.2.205 - - [18/Oct/2020:19:19:57 -0400] \"GET / HTTP/2.0\" 304 -\n"
+"192.0.0.205 - - [18/Oct/2020:19:20:52 -0400] \"GET / HTTP/2.0\" 304 -\n"
+"192.0.2.205 - - [18/Oct/2020:19:23:10 -0400] \"GET / HTTP/2.0\" 304 -\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1988
@@ -4579,6 +5092,7 @@ msgstr "Django"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1998
+#, fuzzy
 msgid ""
 "Django is a BSD-licensed framework designed to allow developers to write "
 "high performance, elegant web applications quickly. It provides an object-"
@@ -4588,6 +5102,15 @@ msgid ""
 "system so that the logic of the application is separated from the HTML "
 "presentation."
 msgstr ""
+"O <application>Django</application> é um framework de licença BSD projetado "
+"para permitir que desenvolvedores escrevam aplicações web elegantes e de "
+"alto desempenho rapidamente. Ele fornece um mapeador relacional de objeto "
+"para que os tipos de dados sejam desenvolvidos como objetos "
+"<application>Python</application>. Uma <acronym>API</acronym> rica e "
+"dinâmica de acesso ao banco de dados é fornecida para os objetos sem que o "
+"desenvolvedor tenha que escrever <acronym>SQL</acronym>. Ele também fornece "
+"um sistema de template extensível para que a lógica do aplicativo seja "
+"separada da apresentação <acronym>HTML</acronym>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2000
@@ -4646,12 +5169,18 @@ msgstr "Ruby on Rails"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2022
+#, fuzzy
 msgid ""
 "Ruby on Rails is another open source web framework that provides a full "
 "development stack. It is optimized to make web developers more productive "
 "and capable of writing powerful applications quickly. On FreeBSD, it can be "
 "installed using the package:www/rubygem-rails[] package or port."
 msgstr ""
+"O <application>Ruby on Rails</application> é outro framework de software "
+"livre da Web que fornece uma stack de desenvolvimento completa. Ele é "
+"otimizado para tornar os desenvolvedores da Web mais produtivos e capazes de "
+"criar rapidamente aplicativos poderosos. No FreeBSD, ele pode ser instalado "
+"usando o pacote ou port <package>www/rubygem-rails</package>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2024
@@ -4741,9 +5270,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2047
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ftpd_enable=\"YES\"\n"
-msgstr ""
+msgstr "ftpd_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2050
@@ -4778,12 +5307,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2068
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ftp.info      /var/log/xferlog\n"
-msgstr ""
+msgstr "ftp.info      /var/log/xferlog\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2074
+#, fuzzy
 msgid ""
 "Be aware of the potential problems involved with running an anonymous FTP "
 "server. In particular, think twice about allowing anonymous users to upload "
@@ -4792,6 +5322,14 @@ msgid ""
 "required, then verify the permissions so that these files cannot be read by "
 "other anonymous users until they have been reviewed by an administrator."
 msgstr ""
+"Esteja ciente dos possíveis problemas envolvidos na execução de um servidor "
+"<acronym>FTP</acronym> anônimo. Em particular, pense duas vezes antes de "
+"permitir que usuários anônimos façam upload de arquivos. Pode acontecer que "
+"o site <acronym>FTP</acronym> se torne um fórum para o comércio de software "
+"comercial não licenciado ou pior. Se uploads anônimos de <acronym>FTP</"
+"acronym> forem necessários, verifique as permissões para que esses arquivos "
+"não possam ser lidos por outros usuários anônimos até que sejam revisados "
+"por um administrador."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2077
@@ -4890,10 +5428,13 @@ msgstr "Configurações Globais"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2118
+#, fuzzy
 msgid ""
 "Settings that describe the network are added in [.filename]#/usr/local/etc/"
 "smb4.conf#:"
 msgstr ""
+"As configurações que descrevem a rede são adicionadas em <filename>/usr/"
+"local/etc/smb4.conf</filename>:"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2119
@@ -4953,11 +5494,15 @@ msgstr "Configurações de Segurança"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2135
+#, fuzzy
 msgid ""
 "The most important settings in [.filename]#/usr/local/etc/smb4.conf# are the "
 "security model and the backend password format. These directives control the "
 "options:"
 msgstr ""
+"As configurações mais importantes em <filename>/usr/local/etc/smb4.conf</"
+"filename> são o modelo de segurança e o formato de senha de backend. Essas "
+"diretivas controlam as opções:"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2136
@@ -4967,6 +5512,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2138
+#, fuzzy
 msgid ""
 "The most common settings are `security = share` and `security = user`. If "
 "the clients use usernames that are the same as their usernames on the "
@@ -4974,6 +5520,12 @@ msgid ""
 "security policy and it requires clients to first log on before they can "
 "access shared resources."
 msgstr ""
+"As configurações mais comuns são <literal>security=share</literal> e "
+"<literal>security=user</literal>. Se os clientes usarem nomes de usuários "
+"que sejam os mesmos nomes de usuários na máquina do FreeBSD, a segurança no "
+"nível do usuário deve ser usada. Essa é a política de segurança padrão e "
+"exige que os clientes façam logon pela primeira vez antes de poderem acessar "
+"recursos compartilhados."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2140
@@ -4991,6 +5543,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2143
+#, fuzzy
 msgid ""
 "Samba has several different backend authentication models. Clients may be "
 "authenticated with LDAP, NIS+, an SQL database, or a modified password file. "
@@ -4998,6 +5551,13 @@ msgid ""
 "networks and is covered here. For larger or more complex networks, `ldapsam` "
 "is recommended. `smbpasswd` was the former default and is now obsolete."
 msgstr ""
+"O <application>Samba</application> possui vários modelos de autenticação de "
+"backend diferentes. Os clientes podem ser autenticados com LDAP, NIS+, um "
+"banco de dados SQL ou um arquivo de senha modificado. O método de "
+"autenticação recomendado, <literal>tdbsam</literal>, é ideal para redes "
+"simples e é abordado aqui. Para redes maiores ou mais complexas, o "
+"<literal>ldapsam</literal> é recomendado. <literal>smbpasswd</literal> foi o "
+"padrão anterior e agora está obsoleto."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2145
@@ -5042,9 +5602,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2163
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "samba_server_enable=\"YES\"\n"
-msgstr ""
+msgstr "samba_server_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2166
@@ -5070,9 +5630,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2180
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "winbindd_enable=\"YES\"\n"
-msgstr ""
+msgstr "winbindd_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2183
@@ -5102,6 +5662,7 @@ msgstr "Sincronização de Relógio com NTP"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2195
+#, fuzzy
 msgid ""
 "Over time, a computer's clock is prone to drift. This is problematic as many "
 "network services require the computers on a network to share the same "
@@ -5109,6 +5670,12 @@ msgid ""
 "stay consistent. The Network Time Protocol (NTP) is one way to provide clock "
 "accuracy in a network."
 msgstr ""
+"Com o tempo, o relógio de um computador está propenso a se desviar. Isso é "
+"problemático, pois muitos serviços de rede exigem que os computadores em uma "
+"rede compartilhem o mesmo tempo exato. Tempo preciso também é necessário "
+"para garantir que os registros de data e hora dos arquivos permaneçam "
+"consistentes. O protocolo de horário da rede (<acronym>NTP</acronym>) é uma "
+"maneira de fornecer precisão de relógio em uma rede."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2197
@@ -5462,7 +6029,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2312
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "set filter dial 0 deny udp src eq 123\n"
 "# Prevent NTP traffic from initiating dial out\n"
@@ -5473,6 +6040,14 @@ msgid ""
 "# Prevent outgoing NTP traffic from keeping the connection open\n"
 "set filter alive 2 permit 0/0 0/0\n"
 msgstr ""
+"set filter dial 0 deny udp src eq 123\n"
+"# Prevent NTP traffic from initiating dial out\n"
+"set filter dial 1 permit 0 0\n"
+"set filter alive 0 deny udp src eq 123\n"
+"# Prevent incoming NTP traffic from keeping the connection open\n"
+"set filter alive 1 deny udp dst eq 123\n"
+"# Prevent outgoing NTP traffic from keeping the connection open\n"
+"set filter alive 2 permit 0/0 0/0\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2315
@@ -5607,6 +6182,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2365
+#, fuzzy
 msgid ""
 "The second entry defines a single target. Target has two possible meanings: "
 "a machine serving iSCSI or a named group of LUNs. This example uses the "
@@ -5617,6 +6193,15 @@ msgid ""
 "can be any value. Any number of targets can be defined in this configuration "
 "file."
 msgstr ""
+"A segunda entrada define um único alvo. O alvo tem dois significados "
+"possíveis: uma máquina que atende <acronym>iSCSI</acronym> ou um grupo "
+"nomeado de <acronym>LUNs</acronym>. Este exemplo usa o último significado, "
+"onde <literal>iqn.2012-06.com.example:target0</literal> é o nome do alvo. "
+"Este nome de alvo é adequado para fins de teste. Para uso real, altere "
+"<literal>com.example</literal> para o nome de domínio real, invertido. O "
+"<literal>2012-06</literal> representa o ano e o mês de aquisição do controle "
+"desse nome de domínio, e <literal>target0</literal> pode ser qualquer valor. "
+"Qualquer número de alvos pode ser definido neste arquivo de configuração."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2367
@@ -5646,9 +6231,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2375
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ctld_enable=\"YES\"\n"
-msgstr ""
+msgstr "ctld_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2378
@@ -5772,9 +6357,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2451
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "iscsid_enable=\"YES\"\n"
-msgstr ""
+msgstr "iscsid_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2454
@@ -5789,11 +6374,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2461
+#, fuzzy
 msgid ""
 "Connecting to a target can be done with or without an [.filename]#/etc/iscsi."
 "conf# configuration file. This section demonstrates both types of "
 "connections."
 msgstr ""
+"Conectar-se a um alvo pode ser feito com ou sem um arquivo <filename>/etc/"
+"iscsi.conf</filename> de configuração. Esta seção demonstra os dois tipos de "
+"conexões."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2462
@@ -5823,11 +6412,14 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2477
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Target name                                     Target portal   State\n"
 "iqn.2012-06.com.example:target0                 10.10.10.10     Connected: da0\n"
 msgstr ""
+"Target name                                     Target portal   State\n"
+"iqn.2012-06.com.example:target0                 10.10.10.10     Connected: "
+"da0\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2480
@@ -5840,9 +6432,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2484
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Connected: da0 da1 da2.\n"
-msgstr ""
+msgstr "Connected: da0 da1 da2.\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2487
@@ -5854,11 +6446,14 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2492
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Target name                                     Target portal   State\n"
 "iqn.2012-06.com.example:target0                 10.10.10.10     Waiting for iscsid(8)\n"
 msgstr ""
+"Target name                                     Target portal   State\n"
+"iqn.2012-06.com.example:target0                 10.10.10.10     Waiting for "
+"iscsid(8)\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2495
@@ -5869,11 +6464,14 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2500
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Target name                                     Target portal   State\n"
 "iqn.2012-06.com.example:target0                 10.10.10.11     Connection refused\n"
 msgstr ""
+"Target name                                     Target portal   State\n"
+"iqn.2012-06.com.example:target0                 10.10.10.11     Connection "
+"refused\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2503
@@ -5882,11 +6480,13 @@ msgstr "Esta mensagem significa que o nome do alvo especificado está errado:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2508
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Target name                                     Target portal   State\n"
 "iqn.2012-06.com.example:target0                 10.10.10.10     Not found\n"
 msgstr ""
+"Target name                                     Target portal   State\n"
+"iqn.2012-06.com.example:target0                 10.10.10.10     Not found\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2511
@@ -5895,11 +6495,14 @@ msgstr "Esta mensagem significa que o alvo requer autenticação:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2516
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Target name                                     Target portal   State\n"
 "iqn.2012-06.com.example:target0                 10.10.10.10     Authentication failed\n"
 msgstr ""
+"Target name                                     Target portal   State\n"
+"iqn.2012-06.com.example:target0                 10.10.10.10     "
+"Authentication failed\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2519
@@ -5920,14 +6523,17 @@ msgstr "Conectando-se a um Alvo com um Arquivo de Configuração"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2529
+#, fuzzy
 msgid ""
 "To connect using a configuration file, create [.filename]#/etc/iscsi.conf# "
 "with contents like this:"
 msgstr ""
+"Para se conectar usando um arquivo de configuração, crie o <filename>/etc/"
+"iscsi.conf</filename> com o seguinte conteúdo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2539
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "t0 {\n"
 "\tTargetAddress   = 10.10.10.10\n"
@@ -5937,6 +6543,13 @@ msgid ""
 "\tchapSecret      = secretsecret\n"
 "}\n"
 msgstr ""
+"t0 {\n"
+"\tTargetAddress   = 10.10.10.10\n"
+"\tTargetName      = iqn.2012-06.com.example:target0\n"
+"\tAuthMethod      = CHAP\n"
+"\tchapIName       = user\n"
+"\tchapSecret      = secretsecret\n"
+"}\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2542
@@ -5976,15 +6589,21 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2558
+#, fuzzy
 msgid ""
 "To make the initiator automatically connect to all targets in [.filename]#/"
 "etc/iscsi.conf#, add the following to [.filename]#/etc/rc.conf#:"
 msgstr ""
+"Para fazer com que o inicializador se conecte automaticamente a todos os "
+"alvos no arquivo <filename>/etc/iscsi.conf</filename>, adicione o seguinte "
+"ao arquivo <filename>/etc/rc.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2563
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "iscsictl_enable=\"YES\"\n"
 "iscsictl_flags=\"-Aa\"\n"
 msgstr ""
+"iscsictl_enable=\"YES\"\n"
+"iscsictl_flags=\"-Aa\"\n"
