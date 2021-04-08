@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-04-01 12:57+0000\n"
+"PO-Revision-Date: 2021-04-08 23:28+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/articlesreleng_index/pt_BR/>\n"
@@ -41,6 +41,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:51
+#, fuzzy
 msgid ""
 "This paper describes the approach used by the FreeBSD release engineering "
 "team to make production quality releases of the FreeBSD Operating System.  "
@@ -48,6 +49,12 @@ msgid ""
 "describes the tools available for those interested in producing customized "
 "FreeBSD releases for corporate rollouts or commercial productization."
 msgstr ""
+"Este artigo descreve a abordagem usada pela equipe de engenharia de release "
+"do FreeBSD para produzir versões  do Sistema Operacional FreeBSD com "
+"qualidade de produção. Ele detalha a metodologia utilizada para as versões "
+"oficiais do FreeBSD e descreve as ferramentas disponíveis para aqueles "
+"interessados em produzir versões customizadas do FreeBSD para uso "
+"corporativo ou para uso em produtos comerciais."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:53
@@ -96,6 +103,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:78
+#, fuzzy
 msgid ""
 "A set of more stable branches are maintained, known as \"FreeBSD-STABLE\" or "
 "\"-STABLE\" for short.  All branches live in a master Subversion repository "
@@ -106,9 +114,20 @@ msgid ""
 "assumption that they have first gone into FreeBSD-CURRENT and have been "
 "thoroughly tested by our user community."
 msgstr ""
+"Um conjunto de branches mais estáveis é mantido, e é conhecido como <quote"
+">FreeBSD-STABLE</quote> ou <quote>-STABLE</quote> na forma abreviada. Todas "
+"as branchs ficam em um repositório principal do Subversion mantido pelo "
+"Projeto FreeBSD. O FreeBSD-CURRENT é a <quote>vanguarda do desenvolvimento "
+"tecnológico</quote> do FreeBSD, pelo qual todas as novas alterações entram "
+"no sistema pela primeira vez. O FreeBSD-STABLE é a branch de desenvolvimento "
+"a partir do qual as releases principais são feitas. Mudanças entram nesta "
+"branch em um ritmo diferente, e com a suposição geral de que elas foram "
+"primeiro para o FreeBSD-CURRENT e foram exaustivamente testadas por nossa "
+"comunidade de usuários."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:83
+#, fuzzy
 msgid ""
 "The term _stable_ in the name of the branch refers to the presumed "
 "Application Binary Interface stability, which is promised by the project.  "
@@ -119,6 +138,16 @@ msgid ""
 "unmodified on newer systems, including __HEAD__, assuming that the system "
 "management interfaces are not used."
 msgstr ""
+"O termo <emphasis>stable</emphasis> no nome da branch refere-se à "
+"estabilidade presumida da Interface Binária da Aplicação (ABI), que é "
+"prometida pelo projeto. Isso significa que um aplicativo de usuário "
+"compilado em uma versão mais antiga do sistema da mesma branch funciona em "
+"um sistema mais novo da mesma branch. A estabilidade do ABI melhorou muito "
+"em relação às versões anteriores. Na maioria dos casos, os binários dos "
+"sistemas <emphasis>STABLE</emphasis> mais antigos são executados sem "
+"modificações em sistemas mais recentes, incluindo o <emphasis>HEAD</"
+"emphasis>, assumindo que as interfaces de gerenciamento do sistema não são "
+"usadas."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:86
@@ -247,6 +276,7 @@ msgstr "Processos de Release (Versão)"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:125
+#, fuzzy
 msgid ""
 "New releases of FreeBSD are released from the -STABLE branch at "
 "approximately four month intervals.  The FreeBSD release process begins to "
@@ -256,9 +286,18 @@ msgid ""
 "code freeze.  During this time, many developers perform what have become "
 "known as \"MFC sweeps\"."
 msgstr ""
+"Novas versões do FreeBSD são liberadas a partir da branch -STABLE em "
+"intervalos de aproximadamente quatro meses. O processo de release do FreeBSD "
+"começa a se desenhar cerca de 70-80 dias antes da data de lançamento "
+"prevista, quando o engenheiro de versão envia um email para as listas de "
+"discussão de desenvolvimento para lembrar aos desenvolvedores que eles só "
+"têm 15 dias para integrar novas alterações antes do congelamento de código. "
+"Durante esse tempo, muitos desenvolvedores executam o que ficou conhecido "
+"como <quote>MFC sweeps</quote>."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:129
+#, fuzzy
 msgid ""
 "MFC stands for \"Merge From CURRENT\" and it describes the process of "
 "merging a tested change from our -CURRENT development branch to our -STABLE "
@@ -270,6 +309,16 @@ msgid ""
 "period is 3 days, which is typically used only for trivial or critical "
 "bugfixes."
 msgstr ""
+"<acronym>MFC</acronym> significa <quote>Merge From CURRENT</quote> e "
+"descreve o processo de fusão de uma alteração testada de nossa branch de "
+"desenvolvimento -CURRENT com a nossa branch -STABLE. A política do projeto "
+"requer que qualquer mudança seja aplicada pela primeira vez ao trunk, e "
+"aplicada às branches -STABLE após testes externos suficientes serem feitos "
+"pelos usuários no -CURRENT (espera-se que os desenvolvedores testem "
+"extensivamente a mudança antes de enviarem a mesma para o -CURRENT, mas é "
+"impossível para uma pessoa  exercer todos os usos de um sistema operacional "
+"de propósito geral). O período mínimo de MFC é de 3 dias, que normalmente é "
+"usado apenas para correções de bugs triviais ou críticas."
 
 #. type: Title ===
 #: documentation/content/en/articles/releng/_index.adoc:130
@@ -325,6 +374,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:147
+#, fuzzy
 msgid ""
 "Shortly after the code freeze is started, a _BETA1_ image is built and "
 "released for widespread testing.  During the code freeze, at least one beta "
@@ -335,9 +385,19 @@ msgid ""
 "all of the different components required for a successful release are "
 "available."
 msgstr ""
+"Logo após o início do congelamento de código, uma imagem <emphasis>BETA1</"
+"emphasis> é criada e liberada para testes generalizados. Durante o "
+"congelamento de código, pelo menos uma imagem beta ou um candidato a versão "
+"é lançado a cada duas semanas até que a versão final esteja pronta. Durante "
+"os dias que antecedem a versão final, a equipe de engenharia de release está "
+"em constante comunicação com a equipe de segurança, os mantenedores de "
+"documentação e os mantenedores de ports para garantir que todos os "
+"diferentes componentes necessários para uma versão bem-sucedida estejam "
+"disponíveis."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:150
+#, fuzzy
 msgid ""
 "After the quality of the BETA images is satisfying enough, and no large and "
 "potentially risky changes are planned, the release branch is created and "
@@ -347,6 +407,15 @@ msgid ""
 "becomes much harder to justify new changes to the system unless a serious "
 "bug-fix or security issue is involved."
 msgstr ""
+"Após a qualidade das imagens BETA ser satisfatória o suficiente, e nenhuma "
+"mudança grande e potencialmente arriscada estar planejada, a branch release "
+"é criada e as imagens <emphasis>Release Candidate</emphasis> (RC) são "
+"construídas a partir da branch release, ao invés das Imagens BETA serem "
+"construidas da branch STABLE. Além disso, o congelamento na branch STABLE é "
+"suspenso e a branch de release entra em um <quote>congelamento de código "
+"rígido</quote>, onde fica muito mais difícil justificar novas alterações no "
+"sistema, a menos que envolva uma correção séria de bug ou um problema de "
+"segurança."
 
 #. type: Title ===
 #: documentation/content/en/articles/releng/_index.adoc:151
@@ -356,11 +425,15 @@ msgstr "Checklist Final para uma Release"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:154
+#, fuzzy
 msgid ""
 "When several BETA images have been made available for widespread testing and "
 "all major issues have been resolved, the final release \"polishing\" can "
 "begin."
 msgstr ""
+"Quando várias imagens BETA já tiverem sido disponibilizadas para testes "
+"generalizados e todos os principais problemas tiverem sido resolvidos, o "
+"<quote>polimento</quote> da versão final pode começar."
 
 #. type: Title ====
 #: documentation/content/en/articles/releng/_index.adoc:156
@@ -533,8 +606,10 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:212
+#, fuzzy
 msgid "[.filename]#doc/en_US.ISO8859-1/books/handbook/mirrors/chapter.xml#"
 msgstr ""
+"<filename>doc/en_US.ISO8859-1/books/handbook/mirrors/chapter.xml</filename>"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:213
@@ -624,8 +699,10 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:231
+#, fuzzy
 msgid "[.filename]#src/release/doc/en_US.ISO8859-1/relnotes/common/new.xml#"
 msgstr ""
+"<filename>src/release/doc/en_US.ISO8859-1/relnotes/common/new.xml</filename>"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:232
@@ -712,12 +789,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:263
+#, fuzzy
 msgid ""
 "When the Subversion `svn cp` command is used to create a __release tag__, "
 "this identifies the source at a specific point in time.  By creating tags, "
 "we ensure that future release builders will always be able to use the exact "
 "same source we used to create the official FreeBSD Project releases."
 msgstr ""
+"Quando o comando <command>svn cp</command> do Subversion é usado para criar "
+"uma <emphasis>tag de versão</emphasis>, isso identifica o código fonte em um "
+"ponto específico no tempo. Criando tags, nós garantimos que futuros "
+"construtores de versões sempre poderão usar exatamente o mesmo código fonte "
+"que usamos para criar as releases oficiais do Projeto FreeBSD."
 
 #. type: Title ==
 #: documentation/content/en/articles/releng/_index.adoc:265
@@ -768,17 +851,23 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:289
+#, fuzzy
 msgid ""
 "After running these commands, all prepared release files are available in [."
 "filename]#/local3/release/R# directory."
 msgstr ""
+"Depois de executar esses comandos, todos os arquivos preparados da versão "
+"estarão disponíveis no diretório <filename>/local3/release/R</filename>."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:291
+#, fuzzy
 msgid ""
 "The release [.filename]#Makefile# can be broken down into several distinct "
 "steps."
 msgstr ""
+"O release <filename>Makefile</filename> pode ser dividido em várias etapas "
+"distintas."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:293
@@ -881,11 +970,16 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/releng/_index.adoc:312
+#, fuzzy
 msgid ""
 "It is important to remove any site-specific settings from [.filename]#/etc/"
 "make.conf#.  For example, it would be unwise to distribute binaries that "
 "were built on a system with `CPUTYPE` set to a specific processor."
 msgstr ""
+"É importante remover qualquer configuração específica do seu servidor do "
+"<filename>/etc/make.conf</filename>. Por exemplo, seria imprudente "
+"distribuir binários que foram compilados em um sistema com <varname>CPUTYPE</"
+"varname> configurado para um processador específico."
 
 #. type: Title ===
 #: documentation/content/en/articles/releng/_index.adoc:314
@@ -1014,6 +1108,7 @@ msgstr "Sites FTP"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:367
+#, fuzzy
 msgid ""
 "When the release has been thoroughly tested and packaged for distribution, "
 "the master FTP site must be updated.  The official FreeBSD public FTP sites "
@@ -1021,6 +1116,12 @@ msgid ""
 "This site is known as `ftp-master`.  When the release is ready, the "
 "following files must be modified on `ftp-master`:"
 msgstr ""
+"Quando a release for totalmente testada e empacotada para distribuição, o "
+"site FTP principal deverá ser atualizado. Os sites de FTP públicos oficiais "
+"do FreeBSD são todos espelhos de um servidor principal que está acessível "
+"somente a outros sites FTP. Este site é conhecido como <systemitem>ftp-"
+"master</systemitem>. Quando a release estiver pronta, os seguintes arquivos "
+"devem ser modificados no <systemitem>ftp-master</systemitem>:"
 
 #. type: Labeled list
 #: documentation/content/en/articles/releng/_index.adoc:368
@@ -1130,6 +1231,7 @@ msgstr "Extensibilidade"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:407
+#, fuzzy
 msgid ""
 "Although FreeBSD forms a complete operating system, there is nothing that "
 "forces you to use the system exactly as we have packaged it up for "
@@ -1142,6 +1244,17 @@ msgid ""
 "form of advanced installation and administration tools, for example, but we "
 "cannot be expected to answer questions about it."
 msgstr ""
+"Embora o FreeBSD forme um sistema operacional completo, não há nada que "
+"force você a usar o sistema exatamente como o empacotamos para distribuição. "
+"Tentamos projetar o sistema para ser o mais extensível possível, de modo que "
+"ele possa servir como uma plataforma na qual outros produtos comerciais "
+"possam ser construídos. A única <quote>regra</quote> que temos sobre isso é "
+"que se você for distribuir o FreeBSD com mudanças não triviais, nós "
+"encorajamos você a documentar suas melhorias! A comunidade do FreeBSD só "
+"pode ajudar a suportar usuários do software que fornecemos. Nós certamente "
+"encorajamos a inovação na forma de ferramentas avançadas de instalação e "
+"administração, por exemplo, mas você não esperar que respondamos perguntas "
+"sobre isso."
 
 #. type: Title ===
 #: documentation/content/en/articles/releng/_index.adoc:408
@@ -1180,6 +1293,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:425
+#, fuzzy
 msgid ""
 "Our user community has made it very clear that the security and stability of "
 "a FreeBSD release should not be sacrificed for any self-imposed deadlines or "
@@ -1188,6 +1302,13 @@ msgid ""
 "never been more apparent.  This will become even more important as FreeBSD "
 "is ported to new platforms."
 msgstr ""
+"Nossa comunidade de usuários deixou bem claro que a segurança e a "
+"estabilidade de uma versão do FreeBSD não devem ser sacrificadas por "
+"quaisquer prazos auto-impostos ou datas-alvo de lançamento. O projeto "
+"FreeBSD cresceu tremendamente ao longo de sua existência e a necessidade de "
+"procedimentos padronizados de engenharia de versões nunca foi tão aparente. "
+"Isso se tornará ainda mais importante à medida que o FreeBSD for portado "
+"para novas plataformas."
 
 #. type: Title ==
 #: documentation/content/en/articles/releng/_index.adoc:427
@@ -1197,11 +1318,16 @@ msgstr "Direções futuras"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:431
+#, fuzzy
 msgid ""
 "It is imperative for our release engineering activities to scale with our "
 "growing userbase.  Along these lines we are working very hard to document "
 "the procedures involved in producing FreeBSD releases."
 msgstr ""
+"É imperativo que nossas atividades de engenharia de release sejam escaladas "
+"com nossa crescente base de usuários. Nessa linha, estamos trabalhando muito "
+"para documentar os procedimentos envolvidos na produção de versões do "
+"FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:433
@@ -1233,6 +1359,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:436
+#, fuzzy
 msgid ""
 "_Installation Tools_ - Our installation program has long since outlived its "
 "intended life span. Several projects are under development to provide a more "
@@ -1240,6 +1367,11 @@ msgid ""
 "aimed to provide an intelligent new package framework and GUI installation "
 "program."
 msgstr ""
+"<emphasis>Ferramentas de instalação</emphasis> - Nosso programa de "
+"instalação há muito tempo ultrapassou à sua expectativa de vida útil. Vários "
+"projetos estão em desenvolvimento para fornecer um mecanismo de instalação "
+"mais avançado. O projeto libh era um desses projetos que visava fornecer um "
+"novo e inteligente framework de pacotes e um programa de instalação GUI."
 
 #. type: Title ==
 #: documentation/content/en/articles/releng/_index.adoc:438
