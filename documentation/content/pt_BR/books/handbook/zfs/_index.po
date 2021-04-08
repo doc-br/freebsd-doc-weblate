@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-14 11:02-0300\n"
-"PO-Revision-Date: 2021-03-30 23:19+0000\n"
+"PO-Revision-Date: 2021-04-08 03:22+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookzfs_index/pt_BR/>\n"
@@ -81,12 +81,19 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:53
+#, fuzzy
 msgid ""
 "Performance: multiple caching mechanisms provide increased performance. "
 "<<zfs-term-arc,ARC>> is an advanced memory-based read cache. A second level "
 "of disk-based read cache can be added with <<zfs-term-l2arc,L2ARC>>, and "
 "disk-based synchronous write cache is available with <<zfs-term-zil,ZIL>>."
 msgstr ""
+"Performance: vários mecanismos de cache fornecem uma maior performance. O "
+"<link linkend=\"zfs-term-arc\">ARC</link> é um avançado cache de leitura "
+"baseado em memória. Um segundo nível de cache de leitura baseado em disco "
+"pode ser adicionado com o <link linkend=\"zfs-term-l2arc\">L2ARC</link>, e o "
+"cache síncrono de escrita baseado em disco está disponível com <link linkend"
+"=\"zfs-term-zil\">ZIL</link>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:55
@@ -101,6 +108,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:60
+#, fuzzy
 msgid ""
 "ZFS is significantly different from any previous file system because it is "
 "more than just a file system. Combining the traditionally separate roles of "
@@ -124,6 +132,33 @@ msgid ""
 "to creating a number of different file systems and datasets rather than a "
 "single monolithic file system."
 msgstr ""
+"O <acronym>ZFS</acronym> é significativamente diferente de qualquer outro "
+"sistema de arquivos existente, porque ele é mais do que apenas um simples "
+"sistema de arquivos. A combinação das funções tradicionalmente separadas de "
+"gerenciamento de volume e de sistema de arquivos, fornece ao <acronym>ZFS</"
+"acronym> vantagens exclusivas. O sistema de arquivos agora conhece a "
+"estrutura abaixo dos discos. Os sistemas de arquivos tradicionais só podem "
+"ser criados em um único disco por vez. Se houvesse dois discos, dois "
+"sistemas de arquivos separados teriam que ser criados. Em uma configuração "
+"de hardware tradicional <acronym>RAID</acronym>, esse problema foi "
+"contornado apresentando ao sistema operacional um único disco lógico "
+"composto pelo espaço fornecido por vários discos físicos, sobre o qual o "
+"sistema operacional colocava um sistema de arquivos. Mesmo no caso de "
+"soluções de software <acronym>RAID</acronym> como as fornecidas pelo "
+"<acronym>GEOM</acronym>, o sistema de arquivos <acronym>UFS</acronym>, que "
+"está no topo da transformação <acronym>RAID</acronym>, acreditava que estava "
+"lidando com um único dispositivo físico. A combinação feita pelo "
+"<acronym>ZFS</acronym> do gerenciador de volumes e do sistema de arquivos "
+"resolve isso e permite a criação de vários sistemas de arquivos, todos "
+"compartilhando um pool de armazenamento disponível. Uma das maiores "
+"vantagens do reconhecimento do layout físico dos discos pelo <acronym>ZFS</"
+"acronym> é que os sistemas de arquivos existentes podem ser expandidos "
+"automaticamente quando novos discos são adicionados ao pool. Esse novo "
+"espaço é disponibilizado para todos os sistemas de arquivos. O <acronym>ZFS</"
+"acronym> também possui várias propriedades diferentes que podem ser "
+"aplicadas a cada sistema de arquivos, oferecendo muitas vantagens para a "
+"criação de vários sistemas de arquivos e datasets diferentes, em vez de um "
+"único sistema de arquivos monolítico."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/zfs/_index.adoc:62
@@ -141,9 +176,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:69
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "zfs_enable=\"YES\"\n"
-msgstr ""
+msgstr "zfs_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:72
@@ -464,10 +499,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:248
+#, fuzzy
 msgid ""
 "Users data is now stored on the freshly-created [.filename]#/storage/home#. "
 "Test by adding a new user and logging in as that user."
 msgstr ""
+"Os dados dos usuários agora são armazenados no recém-criado diretório "
+"<filename>/storage/home</filename>. Teste adicionando um novo usuário e "
+"efetuando login como este usuário."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:250
@@ -493,12 +532,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:259
+#, fuzzy
 msgid ""
 "The `@` character is a delimiter between the file system name or the volume "
 "name. If an important directory has been accidentally deleted, the file "
 "system can be backed up, then rolled back to an earlier snapshot when the "
 "directory still existed:"
 msgstr ""
+"O caractere <literal>@</literal> é um delimitador entre o nome do sistema de "
+"arquivos ou o nome do volume. Se um diretório importante tiver sido excluído "
+"acidentalmente, o backup do sistema de arquivos poderá ser feito e, em "
+"seguida, revertido para um snapshot anterior, quando o diretório ainda "
+"existia:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:263
@@ -585,9 +630,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:310
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "daily_status_zfs_enable=\"YES\"\n"
-msgstr ""
+msgstr "daily_status_zfs_enable=\"YES\"\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/zfs/_index.adoc:313
@@ -617,9 +662,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:327
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "all pools are healthy\n"
-msgstr ""
+msgstr "all pools are healthy\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:330
@@ -694,10 +739,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:361
+#, fuzzy
 msgid ""
 "Now the system can be powered down to replace [.filename]#da1#. When the "
 "system is back online, the failed disk can replaced in the pool:"
 msgstr ""
+"Agora o sistema pode ser desligado para substituir o <filename>da1</"
+"filename>. Quando o sistema estiver novamente online, o disco com falha "
+"poderá ser substituído no pool:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:365
@@ -915,6 +964,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:485
+#, fuzzy
 msgid ""
 "Pools can also be constructed using partitions rather than whole disks. "
 "Putting ZFS in a separate partition allows the same disk to have other "
@@ -927,6 +977,18 @@ msgid ""
 "original actually has a slightly smaller capacity, the smaller partition "
 "will still fit, and the replacement disk can still be used."
 msgstr ""
+"Os pools também podem ser construídos usando partições em vez de discos "
+"inteiros. Colocar o <acronym>ZFS</acronym> em uma partição separada permite "
+"que o mesmo disco tenha outras partições para outras finalidades. Em "
+"particular, partições com bootcode e sistemas de arquivos necessários para a "
+"inicialização podem ser adicionadas. Isso permite inicializar a partir de "
+"discos que também são membros de um pool. Não há penalidade de desempenho no "
+"FreeBSD ao usar uma partição em vez de um disco inteiro. O uso de partições "
+"também permite ao administrador <emphasis>sub-provisionar</emphasis> os "
+"discos, usando menos que a capacidade total. Se um disco de substituição "
+"futuro com o mesmo tamanho nominal do original tiver uma capacidade "
+"ligeiramente menor, a partição menor ainda se ajustará e o disco de "
+"substituição ainda poderá ser usado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:487
@@ -964,6 +1026,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:511
+#, fuzzy
 msgid ""
 "A pool that is no longer needed can be destroyed so that the disks can be "
 "reused. Destroying a pool involves first unmounting all of the datasets in "
@@ -972,6 +1035,12 @@ msgid ""
 "with `-f`, but this can cause undefined behavior in applications which had "
 "open files on those datasets."
 msgstr ""
+"Um pool que não é mais necessário pode ser destruído para que os discos "
+"possam ser reutilizados. Destruir um pool envolve primeiro desmontar todos "
+"os datasets nesse pool. Se os datasets estiverem em uso, a operação de "
+"desmontagem falhará e o pool não será destruído. A destruição do pool pode "
+"ser forçada com <option>-f</option>, mas isso pode causar um comportamento "
+"indefinido em aplicações que tiverem arquivos abertos nesses datasets."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/zfs/_index.adoc:513
@@ -1116,6 +1185,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:580
+#, fuzzy
 msgid ""
 "When adding disks to the existing vdev is not an option, as for RAID-Z, an "
 "alternative method is to add another vdev to the pool. Additional vdevs "
@@ -1127,9 +1197,20 @@ msgid ""
 "disk will result in the loss of a fraction of every block that has been "
 "written to the pool."
 msgstr ""
+"Quando adicionar discos ao vdev existente não é uma opção, como para "
+"<acronym>RAID-Z</acronym>, um método alternativo é adicionar outro vdev ao "
+"pool. Vdevs adicionais fornecem desempenho mais alto, distribuindo as "
+"operações de escrita nos vdevs. Cada vdev é responsável por fornecer a sua "
+"própria redundância. É possível, mas desencorajado, misturar tipos de vdev, "
+"como <literal>mirror</literal> e <literal>RAID-Z</literal>. Adicionar um "
+"vdev não-redundante a um pool que contenha um vdev mirror ou o "
+"<acronym>RAID-Z</acronym> arrisca os dados em todo o pool. As gravações são "
+"distribuídas, portanto, a falha do disco não-redundante resultará na perda "
+"de uma fração de cada bloco que foi gravado no pool."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:582
+#, fuzzy
 msgid ""
 "Data is striped across each of the vdevs. For example, with two mirror "
 "vdevs, this is effectively a RAID 10 that stripes writes across two sets of "
@@ -1138,6 +1219,12 @@ msgid ""
 "free space, as a disproportionate amount of the data is written to the less "
 "full vdev."
 msgstr ""
+"Os dados são distribuídos em cada um dos vdevs. Por exemplo, com dois vdevs "
+"mirror, esse é efetivamente um <acronym>RAID</acronym> 10 que escreve em "
+"dois conjuntos de mirrors. O espaço é alocado de forma que cada vdev chegue "
+"a 100% de uso ao mesmo tempo. Há uma penalidade de desempenho se os vdevs "
+"tiverem quantidades diferentes de espaço livre, pois uma quantidade "
+"desproporcional dos dados é gravada no vdev menos cheio."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:584
@@ -1260,6 +1347,7 @@ msgstr "Verificando o status de um pool"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:665
+#, fuzzy
 msgid ""
 "Pool status is important. If a drive goes offline or a read, write, or "
 "checksum error is detected, the corresponding error count increases. The "
@@ -1267,6 +1355,12 @@ msgid ""
 "pool and the status of the entire pool. Actions that need to be taken and "
 "details about the last <<zfs-zpool-scrub,`scrub`>> are also shown."
 msgstr ""
+"O status do pool é importante. Se uma unidade ficar off-line ou for "
+"detectado um erro de leitura, gravação ou de checksum, a contagem de erros "
+"correspondente aumentará. A saída <command> status </command> mostra a "
+"configuração e o status de cada dispositivo no pool e o status de todo o "
+"pool. Ações que precisam ser tomadas e detalhes sobre o último <link linkend"
+"=\"zfs-zpool-scrub\"><command>scrub</command></link> também são mostrados."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:673
@@ -1303,6 +1397,7 @@ msgstr "Substituindo um dispositivo em funcionamento"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:696
+#, fuzzy
 msgid ""
 "There are a number of situations where it may be desirable to replace one "
 "disk with a different disk. When replacing a working disk, the process keeps "
@@ -1313,6 +1408,15 @@ msgid ""
 "disk is larger than the old disk, it may be possible to grow the zpool, "
 "using the new space. See <<zfs-zpool-online,Growing a Pool>>."
 msgstr ""
+"Há várias situações em que pode ser desejável substituir um disco por um "
+"disco diferente. Ao substituir um disco em funcionamento, o processo mantém "
+"o disco antigo online durante a substituição. O pool nunca entra no estado "
+"<link linkend=\"zfs-term-degraded\"> degradado </link>, reduzindo o risco de "
+"perda de dados. <command> zpool replace </command> copia todos os dados do "
+"disco antigo para o novo. Após a conclusão da operação, o disco antigo é "
+"desconectado do vdev. Se o novo disco for maior que o disco antigo, pode ser "
+"possível aumentar o zpool usando o novo espaço. Veja <link linkend=\"zfs-"
+"zpool-online\"> Aumentando um Pool </link>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:698
@@ -1569,10 +1673,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:863
+#, fuzzy
 msgid ""
 "The next example demonstrates this self-healing behavior. A mirrored pool of "
 "disks [.filename]#/dev/ada0# and [.filename]#/dev/ada1# is created."
 msgstr ""
+"O próximo exemplo demonstra esse comportamento de autocura. Um conjunto "
+"espelhado de discos <filename>/dev/ada0</filename> e <filename>/dev/ada1</"
+"filename> é criado."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:872
@@ -1610,11 +1718,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:886
+#, fuzzy
 msgid ""
 "Some important data that have to be protected from data errors using the "
 "self-healing feature are copied to the pool. A checksum of the pool is "
 "created for later comparison."
 msgstr ""
+"Alguns dados importantes que devem ser protegidos de erros de dados usando o "
+"recurso de correção automática são copiados para o pool. É criado um "
+"checksum do pool para comparação posterior."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:896
@@ -1631,12 +1743,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:899
+#, fuzzy
 msgid ""
 "Data corruption is simulated by writing random data to the beginning of one "
 "of the disks in the mirror. To prevent ZFS from healing the data as soon as "
 "it is detected, the pool is exported before the corruption and imported "
 "again afterwards."
 msgstr ""
+"A corrupção de dados é simulada escrevendo dados aleatórios no início de um "
+"dos discos no espelho. Para evitar que o <acronym>ZFS</acronym> cure os "
+"dados assim que forem detectados, o pool é exportado antes da corrupção e "
+"importado novamente depois."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:904
@@ -1708,11 +1825,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:941
+#, fuzzy
 msgid ""
 "The error was detected and handled by using the redundancy present in the "
 "unaffected [.filename]#ada0# mirror disk. A checksum comparison with the "
 "original one will reveal whether the pool is consistent again."
 msgstr ""
+"O erro foi detectado e tratado usando a redundância presente no disco de "
+"espelhamento <filename>ada0</filename> não afetado. Uma comparação de "
+"checksum com o original irá revelar se o pool está consistente novamente."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:948
@@ -1895,6 +2016,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1043
+#, fuzzy
 msgid ""
 "Importing a pool automatically mounts the datasets. This may not be the "
 "desired behavior, and can be prevented with `zpool import -N`. `zpool import "
@@ -1905,6 +2027,16 @@ msgid ""
 "`zpool import -a` imports all pools that do not appear to be in use by "
 "another system."
 msgstr ""
+"Importar um pool automaticamente monta os conjuntos de dados. Este pode não "
+"ser o comportamento desejado e pode ser evitado com <command>zpool import "
+"-N</command>. O <command>zpool import -o</command> define propriedades "
+"temporárias apenas para esta importação. O <command> zpool import altroot=</"
+"command> permite importar um pool com um ponto base de montagem em vez da "
+"raiz do sistema de arquivos. Se o pool foi usado pela última vez em um "
+"sistema diferente e não foi exportado corretamente, uma importação pode ter "
+"que ser forçada com <command>zpool import -f</command>. O <command>zpool "
+"import -a</command> importa todos os pools que não parecem estar em uso por "
+"outro sistema."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1045
@@ -1955,6 +2087,7 @@ msgstr "Atualizando um pool de armazenamento"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1074
+#, fuzzy
 msgid ""
 "After upgrading FreeBSD, or if a pool has been imported from a system using "
 "an older version of ZFS, the pool can be manually upgraded to the latest "
@@ -1963,6 +2096,14 @@ msgid ""
 "way process. Older pools can be upgraded, but pools with newer features "
 "cannot be downgraded."
 msgstr ""
+"Após a atualização do FreeBSD, ou se um pool foi importado de um sistema "
+"usando uma versão mais antiga do <acronym>ZFS</acronym>, o pool pode ser "
+"atualizado manualmente para a versão mais recente do <acronym>ZFS</acronym> "
+"para suportar as funcionalidades mais recentes. Considere se o pool pode "
+"precisar ser importado em um sistema antigo antes de atualizar. A "
+"atualização é um processo unidirecional. Os pools mais antigos podem ser "
+"atualizados, mas os pools com funcionalidades mais recentes não podem ser "
+"desatualizados."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1076
@@ -2171,6 +2312,7 @@ msgstr "Exibindo o histórico gravado do pool"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1203
+#, fuzzy
 msgid ""
 "Commands that modify the pool are recorded. Recorded actions include the "
 "creation of datasets, changing properties, or replacement of a disk. This "
@@ -2179,6 +2321,13 @@ msgid ""
 "is part of the pool itself. The command to review this history is aptly "
 "named `zpool history`:"
 msgstr ""
+"Comandos que modificam o pool são registrados. As ações registradas incluem "
+"a criação de conjuntos de dados, a alteração de propriedades ou a "
+"substituição de um disco. Esse histórico é útil para revisar como um pool "
+"foi criado e qual usuário executou uma ação específica e quando. O histórico "
+"não é mantido em um arquivo de log, mas faz parte do próprio pool. O comando "
+"para revisar este histórico é apropriadamente chamado de <command>zpool "
+"history</command>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1212
@@ -2194,12 +2343,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1215
+#, fuzzy
 msgid ""
 "The output shows `zpool` and `zfs` commands that were executed on the pool "
 "along with a timestamp. Only commands that alter the pool in some way are "
 "recorded. Commands like `zfs list` are not included. When no pool name is "
 "specified, the history of all pools is displayed."
 msgstr ""
+"A saída mostra os comandos <command>zpool</command> e <command>zfs</command> "
+"que foram executados no pool juntamente com um registro de data e hora. "
+"Somente comandos que alteram o pool de alguma forma são registrados. "
+"Comandos como <command>zfs list</command> não estão incluídos. Quando nenhum "
+"nome de pool é especificado, é exibido o histórico de todos os pools."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1217
@@ -2226,11 +2381,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1232
+#, fuzzy
 msgid ""
 "More details can be shown by adding `-l`. History records are shown in a "
 "long format, including information like the name of the user who issued the "
 "command and the hostname on which the change was made."
 msgstr ""
+"Mais detalhes podem ser mostrados adicionando a opção <option>-l</option>. "
+"Os registros de histórico são mostrados em um formato longo, incluindo "
+"informações como o nome do usuário que emitiu o comando e o nome do host no "
+"qual a alteração foi feita."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1241
@@ -2257,12 +2417,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1246
+#, fuzzy
 msgid ""
 "Both options to `zpool history` can be combined to give the most detailed "
 "information possible for any given pool. Pool history provides valuable "
 "information when tracking down the actions that were performed or when more "
 "detailed output is needed for debugging."
 msgstr ""
+"Ambas as opções para o <command>zpool history</command> podem ser combinadas "
+"para fornecer as informações mais detalhadas possíveis para qualquer pool. O "
+"histórico do pool fornece informações valiosas ao rastrear as ações que "
+"foram executadas ou quando é necessária uma saída mais detalhada para a "
+"depuração."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1248
@@ -2272,6 +2438,7 @@ msgstr "Monitoramento de Desempenho"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1251
+#, fuzzy
 msgid ""
 "A built-in monitoring system can display pool I/O statistics in real time. "
 "It shows the amount of free and used space on the pool, how many read and "
@@ -2280,6 +2447,13 @@ msgid ""
 "monitored and displayed. A pool name can be provided to limit monitoring to "
 "just that pool. A basic example:"
 msgstr ""
+"Um sistema de monitoramento integrado pode exibir estatísticas de <acronym>I/"
+"O</acronym> do pool em tempo real. Ele mostra a quantidade de espaço livre e "
+"usado no pool, quantas operações de leitura e gravação estão sendo "
+"executadas por segundo e quanto de largura de banda de <acronym>I/O</"
+"acronym> está sendo utilizada no momento. Por padrão, todos os pools no "
+"sistema são monitorados e exibidos. Um nome de pool pode ser fornecido para "
+"limitar o monitoramento apenas a esse pool. Um exemplo básico:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1259
@@ -2305,6 +2479,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1264
+#, fuzzy
 msgid ""
 "Even more detailed I/O statistics can be displayed with `-v`. Each device in "
 "the pool is shown with a statistics line. This is useful in seeing how many "
@@ -2312,6 +2487,12 @@ msgid ""
 "determine if any individual device is slowing down the pool. This example "
 "shows a mirrored pool with two devices:"
 msgstr ""
+"Estatísticas mais detalhadas de <acronym>I/O</acronym> podem ser exibidas "
+"com a opção <option>-v</option>. Cada dispositivo no pool é mostrado com uma "
+"linha de estatísticas. Isso é útil para ver quantas operações de leitura e "
+"gravação estão sendo executadas em cada dispositivo e pode ajudar a "
+"determinar se algum dispositivo individual está reduzindo a velocidade do "
+"pool. Este exemplo mostra um pool espelhado com dois dispositivos:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1276
@@ -2336,6 +2517,7 @@ msgstr "Dividindo um pool de armazenamento"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1282
+#, fuzzy
 msgid ""
 "A pool consisting of one or more mirror vdevs can be split into two pools. "
 "Unless otherwise specified, the last member of each mirror is detached and "
@@ -2344,6 +2526,13 @@ msgid ""
 "displayed without it actually being performed. This helps confirm that the "
 "operation will do what the user intends."
 msgstr ""
+"Um pool que consiste em um ou mais vdevs espelhados pode ser dividido em "
+"dois conjuntos. A menos que seja especificado de outra forma, o último "
+"membro de cada espelho é desanexado e usado para criar um novo pool contendo "
+"os mesmos dados. A operação deve primeiro ser tentada com <option>-n</"
+"option>. Os detalhes da operação proposta são exibidos sem que sejam "
+"realmente executados. Isso ajuda a confirmar que a operação fará o que o "
+"usuário pretende."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1284
@@ -2367,6 +2556,7 @@ msgstr "Criando e destruindo conjuntos de dados"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1292
+#, fuzzy
 msgid ""
 "Unlike traditional disks and volume managers, space in ZFS is _not_ "
 "preallocated. With traditional file systems, after all of the space is "
@@ -2385,6 +2575,28 @@ msgid ""
 "slower, and the mounting of hundreds or even thousands of datasets can slow "
 "the FreeBSD boot process."
 msgstr ""
+"Ao contrário dos discos tradicionais e gerenciadores de volume, o espaço no "
+"<acronym>ZFS</acronym>  <emphasis>não</emphasis> é pré-alocado. Nos sistemas "
+"de arquivos tradicionais, depois que todo o espaço é particionado e "
+"atribuído, não há como adicionar um sistema de arquivos adicional sem "
+"adicionar um novo disco. Com o <acronym>ZFS</acronym>, novos sistemas de "
+"arquivos podem ser criados a qualquer momento. Cada <link linkend=\"zfs-term-"
+"dataset\"><emphasis>conjunto de dados</emphasis></link> tem propriedades "
+"incluindo recursos como compactação, deduplicação, armazenamento em cache e "
+"cotas, bem como outras propriedades úteis como somente leitura, "
+"diferenciação de maiúsculas e minúsculas , compartilhamento de arquivos de "
+"rede e um ponto de montagem. Os conjuntos de dados podem ser aninhados uns "
+"dentro dos outros e os conjuntos de dados filhos herdarão propriedades de "
+"seus pais. Cada conjunto de dados pode ser administrado, <link linkend=\"zfs-"
+"zfs-allow\">delegado</link>, <link linkend=\"zfs-zfs-send\">replicado</"
+"link>, preservado por um <link linkend=\"zfs-zfs-snapshot\">snapshot</link>, "
+"<link linkend=\"zfs-zfs-jail\">preso</link>, e destruído como uma unidade. "
+"Há muitas vantagens em criar um conjunto de dados separado para cada tipo ou "
+"conjunto de arquivos diferente. A única desvantagem de ter um número "
+"extremamente grande de conjuntos de dados é que alguns comandos como "
+"<command>zfs list</command> serão mais lentos, e a montagem de centenas ou "
+"mesmo milhares de conjuntos de dados pode retardar o processo de "
+"inicialização do FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1294
@@ -2564,6 +2776,7 @@ msgstr "Renomeando um Conjunto de Dados"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1401
+#, fuzzy
 msgid ""
 "The name of a dataset can be changed with `zfs rename`. The parent of a "
 "dataset can also be changed with this command. Renaming a dataset to be "
@@ -2572,6 +2785,13 @@ msgid ""
 "unmounted and then remounted in the new location (which is inherited from "
 "the new parent dataset). This behavior can be prevented with `-u`."
 msgstr ""
+"O nome de um conjunto de dados pode ser alterado com <command>zfs rename</"
+"command>. O pai de um conjunto de dados também pode ser alterado com esse "
+"comando. A renomeação de um conjunto de dados para um conjunto de dados pai "
+"diferente alterará o valor das propriedades herdadas do conjunto de dados "
+"pai. Quando um conjunto de dados é renomeado, ele é desmontado e, em "
+"seguida, remontado no novo local (que é herdado do novo conjunto de dados "
+"pai). Esse comportamento pode ser evitado com <option>-u</option>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1403
@@ -2758,6 +2978,7 @@ msgstr "Gerenciando Snapshots"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1514
+#, fuzzy
 msgid ""
 "<<zfs-term-snapshot,Snapshots>> are one of the most powerful features of "
 "ZFS. A snapshot provides a read-only, point-in-time copy of the dataset. "
@@ -2777,9 +2998,31 @@ msgid ""
 "that are related or dependent upon each other. Without snapshots, a backup "
 "would have copies of the files from different points in time."
 msgstr ""
+"Os <link linkend=\"zfs-term-snapshot\">snapshots</link> são um dos recursos "
+"mais poderosos do <acronym>ZFS</acronym>. Um snapshot fornece uma cópia "
+"point-in-time somente leitura do conjunto de dados. Com Copy-On-Write "
+"(<acronym>COW</acronym>), os snapshots podem ser criados rapidamente, "
+"preservando a versão mais antiga dos dados no disco. Se não houver "
+"snapshots, o espaço será recuperado para uso futuro quando os dados forem "
+"reconfigurados ou excluídos. Os snapshots preservam o espaço em disco "
+"gravando apenas as diferenças entre o conjunto de dados atual e uma versão "
+"anterior. Os snapshots são permitidos apenas em conjuntos de dados "
+"completos, não em arquivos ou diretórios individuais. Quando um snapshot é "
+"criado a partir de um conjunto de dados, tudo contido nele é duplicado. Isso "
+"inclui as propriedades do sistema de arquivos, arquivos, diretórios, "
+"permissões e assim por diante. Os snapshots não usam espaço adicional quando "
+"são criados pela primeira vez, consumindo espaço apenas quando os blocos de "
+"referência são alterados. Snapshots recursivos obtidos com <option>-r</"
+"option> criam um instantâneo com o mesmo nome no conjunto de dados e em "
+"todos os seus filhos, fornecendo um snapshot moment-in-time de todos os "
+"sistemas de arquivos no momento. Isso pode ser importante quando um "
+"aplicativo possui arquivos em vários conjuntos de dados relacionados ou "
+"dependentes um do outro. Sem snapshots, um backup teria cópias dos arquivos "
+"de diferentes pontos no tempo."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1516
+#, fuzzy
 msgid ""
 "Snapshots in ZFS provide a variety of features that even other file systems "
 "with snapshot functionality lack. A typical example of snapshot use is to "
@@ -2797,6 +3040,24 @@ msgid ""
 "pool, but can be used as a quick and easy way to store a copy of the dataset "
 "at a specific point in time."
 msgstr ""
+"Os snapshots no <acronym>ZFS</acronym> fornecem uma variedade de recursos "
+"que até mesmo outros sistemas de arquivos com a funcionalidade de snapshots "
+"não têm. Um exemplo típico de uso de snapshots é ter uma maneira rápida de "
+"fazer backup do estado atual do sistema de arquivos quando uma ação "
+"arriscada, como uma instalação de software ou uma atualização do sistema, é "
+"executada. Se a ação falhar, o snapshot poderá ser revertido e o sistema "
+"terá o mesmo estado de quando o snapshot foi criado. Se a atualização foi "
+"bem sucedida, o instantâneo pode ser excluído para liberar espaço. Sem "
+"snapshots, uma atualização com falha geralmente requer uma restauração de  "
+"backup, o que é tedioso, consome tempo e pode exigir tempo de inatividade "
+"durante o qual o sistema não pode ser usado. Os snapshots podem ser "
+"revertidos rapidamente, mesmo enquanto o sistema está sendo executado em "
+"operação normal, com pouco ou nenhum tempo de inatividade. A economia de "
+"tempo é enorme com sistemas de armazenamento de vários terabytes e o tempo "
+"necessário para copiar os dados a partir do backup. Os snapshots não "
+"substituem um backup completo de um pool, mas podem ser usados de maneira "
+"rápida e fácil para armazenar uma cópia do conjunto de dados em um momento "
+"específico."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1518
@@ -2867,12 +3128,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1566
+#, fuzzy
 msgid ""
 "Snapshots are not mounted directly, so no path is shown in the `MOUNTPOINT` "
 "column. There is no mention of available disk space in the `AVAIL` column, "
 "as snapshots cannot be written to after they are created. Compare the "
 "snapshot to the original dataset from which it was created:"
 msgstr ""
+"Os snapshots não são montados diretamente, portanto, nenhum caminho é "
+"mostrado na coluna <literal>MOUNTPOINT</literal>. Não há menção ao espaço "
+"disponível em disco na coluna <literal>AVAIL</literal>, já que os snapshots "
+"não podem ser gravados após serem criados. Compare o snapshot com o conjunto "
+"de dados original a partir do qual foi criado:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1573
@@ -2926,6 +3193,7 @@ msgstr "Comparando Snapshots"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1594
+#, fuzzy
 msgid ""
 "ZFS provides a built-in command to compare the differences in content "
 "between two snapshots. This is helpful when many snapshots were taken over "
@@ -2934,6 +3202,13 @@ msgid ""
 "contains a file that was accidentally deleted. Doing this for the two "
 "snapshots that were created in the previous section yields this output:"
 msgstr ""
+"O ZFS fornece um comando interno para comparar as diferenças de conteúdo "
+"entre dois snapshots. Isso é útil quando muitos snapshots foram gerados com "
+"o passar do tempo e o usuário deseja ver como o sistema de arquivos mudou ao "
+"longo do tempo. Por exemplo, o <command>zfs diff</command> permite que um "
+"usuário localize o ultimo snapshot que ainda contém um arquivo que foi "
+"acidentalmente excluído. Fazer isso para os dois snapshots criados na seção "
+"anterior produz essa saída:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1605
@@ -3016,11 +3291,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1646
+#, fuzzy
 msgid ""
 "A backup administrator can compare two snapshots received from the sending "
 "host and determine the actual changes in the dataset. See the <<zfs-zfs-send,"
 "Replication>> section for more information."
 msgstr ""
+"Um administrador de backup pode comparar dois snapshots recebidos do host de "
+"envio e determinar as alterações reais no conjunto de dados. Consulte a "
+"seção <link linkend=\"zfs-zfs-send\">Replicação</link> para obter maiores "
+"informações."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1648
@@ -3030,6 +3310,7 @@ msgstr "Reversão de um Snapshot"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1651
+#, fuzzy
 msgid ""
 "When at least one snapshot is available, it can be rolled back to at any "
 "time. Most of the time this is the case when the current state of the "
@@ -3050,6 +3331,27 @@ msgid ""
 "when some data is required later. This way, the user can roll back and forth "
 "between snapshots without losing data that is still valuable."
 msgstr ""
+"Quando pelo menos um snapshot estiver disponível, ele poderá ser revertido a "
+"qualquer momento. Na maioria das vezes, esse é o caso quando o estado atual "
+"do conjunto de dados não é mais necessário e uma versão mais antiga é "
+"preferida. Cenários em que testes de desenvolvimento local deram errado, "
+"atualizações de sistemas com falhas que dificultam o funcionamento geral do "
+"sistema ou a necessidade de restaurar arquivos ou diretórios excluídos "
+"acidentalmente são ocorrências muito comuns. Felizmente, reverter um "
+"snapshot é tão fácil quanto digitar <command>zfs rollback "
+"<replaceable>snapshotname</replaceable></command>. Dependendo de quantas "
+"alterações estão envolvidas, a operação será concluída em um determinado "
+"período de tempo. Durante esse período, o conjunto de dados permanece sempre "
+"em um estado consistente, da mesma forma que um banco de dados em "
+"conformidade com os princípios do ACID ao realizar uma reversão. Isso está "
+"acontecendo enquanto o conjunto de dados está ativo e acessível, sem exigir "
+"um tempo de inatividade. Depois que o snapshot for revertido, o conjunto de "
+"dados terá o mesmo estado de quando o snapshot foi originalmente criado. "
+"Todos os outros dados nesse conjunto de dados que não faziam parte do "
+"snapshot são descartados. Criar um snapshot do estado atual do conjunto de "
+"dados antes de reverter para um anterior é uma boa ideia quando alguns dos "
+"dados são necessários mais tarde. Desta forma, o usuário pode alternar entre "
+"os snapshots sem perder dados que ainda são valiosos."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1653
@@ -3077,12 +3379,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1670
+#, fuzzy
 msgid ""
 "At this point, the user realized that too many files were deleted and wants "
 "them back. ZFS provides an easy way to get them back using rollbacks, but "
 "only when snapshots of important data are performed on a regular basis. To "
 "get the files back and start over from the last snapshot, issue the command:"
 msgstr ""
+"Neste ponto, o usuário percebeu que muitos arquivos foram excluídos e os "
+"quer de volta. O <acronym>ZFS</acronym> fornece uma maneira fácil de "
+"recuperá-los usando reversões, mas somente quando os snapshots de dados "
+"importantes são executados regularmente. Para recuperar os arquivos e "
+"recomeçar a partir do último snapshot, emita o comando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1676
@@ -3095,12 +3403,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1679
+#, fuzzy
 msgid ""
 "The rollback operation restored the dataset to the state of the last "
 "snapshot. It is also possible to roll back to a snapshot that was taken much "
 "earlier and has other snapshots that were created after it. When trying to "
 "do this, ZFS will issue this warning:"
 msgstr ""
+"A operação de reversão restaurou o conjunto de dados para o estado do último "
+"snapshot. Também é possível reverter para um snapshot que foi gerado muito "
+"antes e que possui outros snapshots criados após ele. Ao tentar fazer isso, "
+"o <acronym>ZFS</acronym> irá emitir este aviso:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1692
@@ -3120,6 +3433,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1695
+#, fuzzy
 msgid ""
 "This warning means that snapshots exist between the current state of the "
 "dataset and the snapshot to which the user wants to roll back. To complete "
@@ -3130,6 +3444,15 @@ msgid ""
 "and the consequences of losing all intermediate snapshots is understood, the "
 "command can be issued:"
 msgstr ""
+"Esse aviso significa que existem snapshots entre o estado atual do conjunto "
+"de dados e o snapshot para o qual o usuário deseja retroceder. Para concluir "
+"a reversão, esses snapshots devem ser excluídos. O <acronym>ZFS</acronym> "
+"não pode rastrear todas as alterações entre estados diferentes do conjunto "
+"de dados, porque os snapshots são somente de leitura. O <acronym>ZFS</"
+"acronym> não excluirá os snapshots afetados, a menos que o usuário "
+"especifique a opção <option>-r</option> para indicar que essa é a ação "
+"desejada. Se essa for a intenção e as consequências da perda de todos os "
+"snapshots intermediários forem compreendidas, o comando poderá ser emitido:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1704
@@ -3158,6 +3481,7 @@ msgstr "Restaurando arquivos individuais a partir de Snapshots"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1712
+#, fuzzy
 msgid ""
 "Snapshots are mounted in a hidden directory under the parent dataset: [."
 "filename]#.zfs/snapshots/snapshotname#. By default, these directories will "
@@ -3168,6 +3492,16 @@ msgid ""
 "property to `visible` allows them to appear in the output of `ls` and other "
 "commands that deal with directory contents."
 msgstr ""
+"Os snapshots são montados em um diretório oculto no conjunto de dados pai: "
+"<filename>.zfs/snapshots/<replaceable>snapshotname</replaceable></filename>. "
+"Por padrão, esses diretórios não serão exibidos mesmo quando um <command>ls "
+"-a</command> padrão for executado. Embora o diretório não seja exibido, ele "
+"está lá e pode ser acessado como qualquer diretório normal. A propriedade "
+"denominada <literal>snapdir</literal> controla se esses diretórios ocultos "
+"aparecem em uma listagem de diretórios. Definir a propriedade como "
+"<literal>visible</literal> permite que eles apareçam na saída do "
+"<command>ls</command> e de outros comandos que lidam com o conteúdo do "
+"diretório."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1723
@@ -3185,6 +3519,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1726
+#, fuzzy
 msgid ""
 "Individual files can easily be restored to a previous state by copying them "
 "from the snapshot back to the parent dataset. The directory structure below "
@@ -3194,6 +3529,13 @@ msgid ""
 "directory by copying it from the snapshot that contained the latest version "
 "of the file:"
 msgstr ""
+"Arquivos individuais podem ser facilmente restaurados para um estado "
+"anterior, copiando-os do snapshot de volta para o conjunto de dados pai. A "
+"estrutura de diretórios abaixo de <filename>.zfs/snapshot</filename> tem um "
+"diretório nomeado exatamente como os instantâneos criados anteriormente para "
+"facilitar sua identificação. No próximo exemplo, presume-se que um arquivo "
+"deve ser restaurado a partir do diretório <filename>.zfs</filename> oculto, "
+"copiando-o do snapshot que continha a versão mais recente do arquivo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1737
@@ -3211,6 +3553,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1740
+#, fuzzy
 msgid ""
 "When `ls .zfs/snapshot` was issued, the `snapdir` property might have been "
 "set to hidden, but it would still be possible to list the contents of that "
@@ -3220,6 +3563,13 @@ msgid ""
 "filename]#.zfs/snapshot# is simple enough. Trying it the other way around "
 "results in this error:"
 msgstr ""
+"Quando o comando <command>ls .zfs/snapshot</command> foi emitido, a "
+"propriedade <literal>snapdir</literal> pode ter sido definida como oculta, "
+"mas ainda seria possível listar o conteúdo desse diretório. Cabe ao "
+"administrador decidir se esses diretórios serão exibidos. É possível exibi-"
+"los para determinados conjuntos de dados e impedi-los para outros. Copiar "
+"arquivos ou diretórios deste diretório <filename>.zfs/snapshot</filename> "
+"oculto é bastante simples. Tentar o contrário, resulta neste erro:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1745
@@ -3269,6 +3619,7 @@ msgstr "Gerenciando Clones"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1757
+#, fuzzy
 msgid ""
 "A clone is a copy of a snapshot that is treated more like a regular dataset. "
 "Unlike a snapshot, a clone is not read only, is mounted, and can have its "
@@ -3281,6 +3632,18 @@ msgid ""
 "consumed. The clone can be mounted at any point within the ZFS file system "
 "hierarchy, not just below the original location of the snapshot."
 msgstr ""
+"Um clone é uma cópia de um snapshot que é tratado mais como um conjunto de "
+"dados regular. Ao contrário de um snapshot, um clone não é somente de "
+"leitura, ele pode ser montado e pode ter suas próprias propriedades. Uma vez "
+"que um clone tenha sido criado usando <command>zfs clone</command>, o "
+"snapshot do qual ele foi criado não pode ser destruído. O relacionamento "
+"filho/pai entre o clone e o snapshot pode ser revertido usando <command>zfs "
+"promote</command>. Depois que um clone é promovido, o snapshot se torna um "
+"filho do clone, em vez de filho do conjunto de dados pai original. Isso "
+"mudará a maneira como o espaço é contabilizado, mas não mudará a quantidade "
+"de espaço consumida. O clone pode ser montado em qualquer ponto dentro da "
+"hierarquia do sistema de arquivos <acronym>ZFS</acronym>, não apenas abaixo "
+"do local original do snapshot."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1759
@@ -3367,6 +3730,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1800
+#, fuzzy
 msgid ""
 "After making some changes like copying [.filename]#loader.conf# to the "
 "promoted clone, for example, the old directory becomes obsolete in this "
@@ -3375,6 +3739,13 @@ msgid ""
 "on the clone to name it like the old dataset (it could also get an entirely "
 "different name)."
 msgstr ""
+"Depois de fazer algumas alterações, como copiar o <filename>loader.conf</"
+"filename> para o clone promovido, por exemplo, o diretório antigo torna-se "
+"obsoleto nesse caso. Em vez disso, o clone promovido pode substituí-lo. Isso "
+"pode ser conseguido por dois comandos consecutivos: <command>zfs destroy</"
+"command> no dataset antigo e <command>zfs rename</command> no clone para "
+"nomeá-lo como o conjunto de dados antigo (ele também poderia ter um nome "
+"totalmente diferente)."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1811
@@ -3392,6 +3763,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1814
+#, fuzzy
 msgid ""
 "The cloned snapshot is now handled like an ordinary dataset. It contains all "
 "the data from the original snapshot plus the files that were added to it "
@@ -3404,6 +3776,17 @@ msgid ""
 "dataset. This saves time and administrative overhead when providing these "
 "jails."
 msgstr ""
+"O snapshot clonado agora é tratado como um conjunto de dados comum. Ele "
+"contém todos os dados do snapshot original mais os arquivos que foram "
+"adicionados a ele como o <filename>loader.conf</filename>. Os clones podem "
+"ser usados em diferentes cenários para fornecer recursos úteis aos usuários "
+"do ZFS. Por exemplo, as jails podem ser disponibilizados como snapshots "
+"contendo diferentes conjuntos de aplicativos instalados. Os usuários podem "
+"clonar esses snapshots e adicionar seus próprios aplicativos como acharem "
+"melhor. Uma vez satisfeitos com as alterações, os clones podem ser "
+"promovidos a conjuntos de dados completos e fornecidos aos usuários finais "
+"para que trabalhem como se estivessem com um conjunto de dados real. "
+"Fornecer estes jails economiza tempo e sobrecarga administrativa."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1816
@@ -3413,6 +3796,7 @@ msgstr "Replicação"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1819
+#, fuzzy
 msgid ""
 "Keeping data on a single pool in one location exposes it to risks like theft "
 "and natural or human disasters. Making regular backups of the entire pool is "
@@ -3424,6 +3808,16 @@ msgid ""
 "snapshots>>). The commands used for replicating data are `zfs send` and `zfs "
 "receive`."
 msgstr ""
+"Manter os dados em um único pool e em um único local o expõe a riscos como "
+"roubo e desastres naturais ou humanos. Fazer backups regulares de todo o "
+"pool é vital. O <acronym>ZFS</acronym> fornece um recurso de serialização "
+"integrado que pode enviar uma representação de fluxo dos dados para a saída "
+"padrão. Usando essa técnica, é possível não apenas armazenar os dados em "
+"outro pool conectado ao sistema local, mas também enviá-los por uma rede "
+"para outro sistema. Os snapshots são a base para essa replicação (consulte a "
+"seção sobre <link linkend=\"zfs-zfs-snapshot\"> snapshots "
+"<acronym>ZFS</acronym></link>). Os comandos usados para replicar dados são "
+"<command>zfs send</command> e <command>zfs receive</command>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1821
@@ -3442,6 +3836,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1831
+#, fuzzy
 msgid ""
 "The pool named _mypool_ is the primary pool where data is written to and "
 "read from on a regular basis. A second pool, _backup_ is used as a standby "
@@ -3452,6 +3847,17 @@ msgid ""
 "been created, it can be copied to the _backup_ pool. Only snapshots can be "
 "replicated. Changes made since the most recent snapshot will not be included."
 msgstr ""
+"O pool chamado <replaceable>mypool</replaceable> é o pool principal no qual "
+"os dados são gravados e lidos regularmente. Um segundo pool, "
+"<replaceable>backup</replaceable> é usado como standby, caso o pool "
+"principal fique indisponível. Observe que esse failover não é feito "
+"automaticamente pelo <acronym>ZFS</acronym>, mas deve ser feito manualmente "
+"por um administrador do sistema, quando necessário. Um snapshot é usado para "
+"fornecer uma versão consistente do sistema de arquivos a ser replicado. "
+"Depois que um snapshot de <replaceable>mypool</replaceable> tiver sido "
+"criado, ele poderá ser copiado para o pool <replaceable>backup</"
+"replaceable>. Apenas snapshots podem ser replicados. As alterações feitas "
+"desde o snapshot mais recente não serão incluídas."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1838
@@ -3465,12 +3871,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1841
+#, fuzzy
 msgid ""
 "Now that a snapshot exists, `zfs send` can be used to create a stream "
 "representing the contents of the snapshot. This stream can be stored as a "
 "file or received by another pool. The stream is written to standard output, "
 "but must be redirected to a file or pipe or an error is produced:"
 msgstr ""
+"Agora que existe um snapshot, o <command>zfs send</command> pode ser usado "
+"para criar um fluxo representando o conteúdo do snapshot. Esse fluxo pode "
+"ser armazenado como um arquivo ou recebido por outro pool. O fluxo é gravado "
+"na saída padrão, mas deve ser redirecionado para um arquivo ou canal ou um "
+"erro será produzido:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1847
@@ -3483,12 +3895,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1850
+#, fuzzy
 msgid ""
 "To back up a dataset with `zfs send`, redirect to a file located on the "
 "mounted backup pool. Ensure that the pool has enough free space to "
 "accommodate the size of the snapshot being sent, which means all of the data "
 "contained in the snapshot, not just the changes from the previous snapshot."
 msgstr ""
+"Para fazer backup de um conjunto de dados com o <command>zfs send</command>, "
+"redirecione para um arquivo localizado no pool de backup montado. Assegure-"
+"se de que o pool tenha espaço livre suficiente para acomodar o tamanho do "
+"snapshot que está sendo enviado, o que significa todos os dados contidos no "
+"snapshot, não apenas as mudanças do snapshot anterior."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1858
@@ -3511,6 +3929,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1863
+#, fuzzy
 msgid ""
 "Instead of storing the backups as archive files, ZFS can receive them as a "
 "live file system, allowing the backed up data to be accessed directly. To "
@@ -3521,6 +3940,16 @@ msgid ""
 "the transfer is complete. A dataset can only be replicated to an empty "
 "dataset."
 msgstr ""
+"Em vez de armazenar os backups como arquivos compactados, o <acronym>ZFS</"
+"acronym> pode recebê-los como um sistema de arquivos ativo, permitindo que "
+"os dados de backup sejam acessados diretamente. Para obter os dados reais "
+"contidos nesses fluxos, o <command>zfs receive</command> é usado para "
+"transformar os fluxos novamente em arquivos e diretórios. O exemplo a seguir "
+"combina o <command>zfs send</command> e o <command>zfs receive</command> "
+"usando um canal para copiar os dados de um pool para outro. Os dados podem "
+"ser usados diretamente no pool de recebimento após a conclusão da "
+"transferência. Um conjunto de dados só pode ser replicado para um conjunto "
+"de dados vazio."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1871
@@ -3551,11 +3980,15 @@ msgstr "Backups Incrementais"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1882
+#, fuzzy
 msgid ""
 "`zfs send` can also determine the difference between two snapshots and send "
 "only the differences between the two. This saves disk space and transfer "
 "time. For example:"
 msgstr ""
+"O <command>zfs send</command> também pode determinar a diferença entre dois "
+"snapshots e enviar apenas as diferenças entre os dois. Isso economiza espaço "
+"em disco e tempo de transferência. Por exemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1894
@@ -3574,6 +4007,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1897
+#, fuzzy
 msgid ""
 "A second snapshot called _replica2_ was created. This second snapshot "
 "contains only the changes that were made to the file system between now and "
@@ -3582,6 +4016,13 @@ msgid ""
 "the data that has changed. This can only succeed if the initial snapshot "
 "already exists on the receiving side."
 msgstr ""
+"Um segundo snapshot chamado <replaceable>replica2</replaceable> foi criado. "
+"Este segundo snapshot contém apenas as alterações feitas no sistema de "
+"arquivos entre o snapshot atual e o anterior, <replaceable>replica1</"
+"replaceable>. O uso do <command>zfs send -i</command> e a indicação do par "
+"de snapshots gera um fluxo de réplica incremental contendo apenas os dados "
+"que foram alterados. Isso só será bem-sucedido se o snapshot inicial já "
+"existir no lado do recebimento."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1904
@@ -3628,6 +4069,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1925
+#, fuzzy
 msgid ""
 "The incremental stream was successfully transferred. Only the data that had "
 "changed was replicated, rather than the entirety of _replica1_. Only the "
@@ -3636,9 +4078,16 @@ msgid ""
 "to rely on slow networks or when costs per transferred byte must be "
 "considered."
 msgstr ""
+"O fluxo incremental foi transferido com sucesso. Apenas os dados que foram "
+"alterados foram replicados, em vez da totalidade da <replaceable>replica1</"
+"replaceable>. Somente as diferenças foram enviadas, o que levou muito menos "
+"tempo para transferir e economizou espaço em disco por não copiar o pool "
+"completo novamente. Isso é útil quando se precisa confiar em redes lentas ou "
+"quando os custos por byte transferido devem ser considerados."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1927
+#, fuzzy
 msgid ""
 "A new file system, _backup/mypool_, is available with all of the files and "
 "data from the pool _mypool_. If `-P` is specified, the properties of the "
@@ -3647,6 +4096,14 @@ msgid ""
 "will be copied, along with all of their properties. Sending and receiving "
 "can be automated so that regular backups are created on the second pool."
 msgstr ""
+"Um novo sistema de arquivos, <replaceable>backup/mypool</replaceable>, está "
+"disponível com todos os arquivos e dados do pool <replaceable>mypool</"
+"replaceable>. Se <option>-P</option> for especificado, as propriedades do "
+"dataset serão copiadas, incluindo configurações de compactação, cotas e "
+"pontos de montagem. Quando <option>-R</option> é especificado, todos os "
+"conjuntos de dados filho do dataset indicado serão copiados, juntamente com "
+"todas as suas propriedades. O envio e o recebimento podem ser automatizados "
+"para que backups regulares sejam criados no segundo pool."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1929
@@ -3771,6 +4228,7 @@ msgstr "Cotas para Datasets, Usuários e Grupos"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1972
+#, fuzzy
 msgid ""
 "<<zfs-term-quota,Dataset quotas>> are used to restrict the amount of space "
 "that can be consumed by a particular dataset. <<zfs-term-refquota,Reference "
@@ -3780,6 +4238,15 @@ msgid ""
 "to prevent users or groups from using all of the space in the pool or "
 "dataset."
 msgstr ""
+"<link linkend=\"zfs-term-quota\">As cotas para dataset</link> são usadas "
+"para restringir a quantidade de espaço que pode ser consumida por um "
+"determinado conjunto de dados. As <link linkend=\"zfs-term-refquota\">cotas "
+"de referência</link> funcionam basicamente da mesma maneira, mas contam "
+"apenas o espaço usado pelo próprio conjunto de dados, excluindo snapshots e "
+"conjuntos de dados filho. Da mesma forma, as cotas para <link linkend=\"zfs-"
+"term-userquota\">usuário</link> e para <link linkend=\"zfs-term-groupquota\""
+">grupo</link> podem ser usadas para impedir que usuários ou grupos usem todo "
+"o espaço do pool ou do conjunto de dados."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1974
@@ -3794,8 +4261,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1976
+#, fuzzy
 msgid "To enforce a dataset quota of 10 GB for [.filename]#storage/home/bob#:"
 msgstr ""
+"Para impor uma cota de dataser de 10 GB para o <filename>storage/home/"
+"bob</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1980
@@ -3805,9 +4275,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1983
+#, fuzzy
 msgid ""
 "To enforce a reference quota of 10 GB for [.filename]#storage/home/bob#:"
 msgstr ""
+"Para impor uma cota de referência de 10 GB para <filename>storage/home/"
+"bob</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1987
@@ -3952,12 +4425,18 @@ msgstr "Reservas"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2053
+#, fuzzy
 msgid ""
 "<<zfs-term-reservation,Reservations>> guarantee a minimum amount of space "
 "will always be available on a dataset. The reserved space will not be "
 "available to any other dataset. This feature can be especially useful to "
 "ensure that free space is available for an important dataset or log files."
 msgstr ""
+"As <link linkend=\"zfs-term-reservation\">reservas</link> garantem uma "
+"quantidade mínima de espaço sempre disponível em um conjunto de dados. O "
+"espaço reservado não estará disponível para nenhum outro conjunto de dados. "
+"Esse recurso pode ser especialmente útil para garantir que haja espaço livre "
+"disponível para um conjunto de dados ou arquivos de log importantes."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2055
@@ -3993,10 +4472,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2071
+#, fuzzy
 msgid ""
 "This command shows any reservations or refreservations that exist on [."
 "filename]#storage/home/bob#:"
 msgstr ""
+"Este comando mostra todas as reservas ou atualizações existentes no<filename>"
+"storage/home/bob</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2076
@@ -4070,6 +4552,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2100
+#, fuzzy
 msgid ""
 "Compression can have an unexpected side effect when combined with <<zfs-term-"
 "userquota,User Quotas>>. User quotas restrict how much space a user can "
@@ -4082,6 +4565,18 @@ msgid ""
 "(the `logicalused` property), but the change in compression caused them to "
 "reach their quota limit."
 msgstr ""
+"A compactação pode ter um efeito colateral inesperado quando combinada com "
+"<link linkend=\"zfs-term-userquota\">cotas de usuário</link>. As cotas de "
+"usuários restringem a quantidade de espaço que um usuário pode consumir em "
+"um conjunto de dados, mas as medidas são baseadas em quanto espaço é usado "
+"<emphasis>após a compactação</emphasis>. Portanto, se um usuário tiver uma "
+"cota de 10 GB e gravar 10 GB de dados compactáveis, eles ainda poderão "
+"armazenar dados adicionais. Se, posteriormente, atualizarem um arquivo, "
+"digamos um banco de dados, com dados mais ou menos compactáveis, a "
+"quantidade de espaço disponível para eles será alterada. Isso pode resultar "
+"na situação ímpar em que um usuário não aumentou a quantidade real de dados ("
+"a propriedade <literal>logicalused</literal>), mas a alteração na "
+"compactação fez com que eles atingissem seu limite de cota."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2102
@@ -4216,12 +4711,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2138
+#, fuzzy
 msgid ""
 "The `DEDUP` column shows the actual rate of deduplication for the pool. A "
 "value of `1.00x` shows that data has not been deduplicated yet. In the next "
 "example, the ports tree is copied three times into different directories on "
 "the deduplicated pool created above."
 msgstr ""
+"A coluna <literal>DEDUP</literal> mostra a taxa real de deduplicação para o "
+"pool. Um valor de <literal>1.00x</literal> mostra que os dados ainda não "
+"foram desduplicados. No próximo exemplo, a árvore de ports é copiada três "
+"vezes em diretórios diferentes no pool desduplicado criado acima."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2144
@@ -4248,12 +4748,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2156
+#, fuzzy
 msgid ""
 "The `DEDUP` column shows a factor of `3.00x`. Multiple copies of the ports "
 "tree data was detected and deduplicated, using only a third of the space. "
 "The potential for space savings can be enormous, but comes at the cost of "
 "having enough memory to keep track of the deduplicated blocks."
 msgstr ""
+"A coluna <literal>DEDUP</literal> mostra um fator de <literal>3.00x</"
+"literal>. Várias cópias dos dados da árvore de ports foram detectadas e "
+"desduplicadas, usando apenas um terço do espaço. O potencial de economia de "
+"espaço pode ser enorme, mas com o custo de ter memória suficiente para "
+"rastrear os blocos desduplicados."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2158
@@ -4341,6 +4847,7 @@ msgstr "Administração Delegada"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2194
+#, fuzzy
 msgid ""
 "A comprehensive permission delegation system allows unprivileged users to "
 "perform ZFS administration functions. For example, if each user's home "
@@ -4351,6 +4858,16 @@ msgid ""
 "possible to delegate the ability to delegate permissions. Permission "
 "delegation is possible for each subcommand and most properties."
 msgstr ""
+"Um sistema abrangente de delegação de permissão permite que usuários sem "
+"privilégios realizem funções de administração do <acronym>ZFS</acronym>. Por "
+"exemplo, se o diretório pessoal de cada usuário for um conjunto de dados, os "
+"usuários poderão receber permissão para criar e destruir snapshots de seus "
+"diretórios pessoais. Um usuário de backup pode receber permissão para usar "
+"recursos de replicação. Um script de estatísticas de uso pode ter permissão "
+"para ser executado com acesso apenas aos dados de utilização de espaço para "
+"todos os usuários. É ainda possível delegar a capacidade de delegar "
+"permissões. A delegação de permissão é possível para cada subcomando e para "
+"a maioria das propriedades."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2196
@@ -4476,14 +4993,20 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2222
+#, fuzzy
 msgid ""
 "  Forcing 4 KB blocks is also useful on pools where disk upgrades are "
 "planned. Future disks are likely to use 4 KB sectors, and `ashift` values "
 "cannot be changed after a pool is created."
 msgstr ""
+"  Forçar blocos de 4 KB também é útil em pools em que as atualizações de "
+"disco são planejadas. Os discos futuros provavelmente usarão setores de 4 "
+"KB, e os valores de <varname>ashift</varname> não poderão ser alterados "
+"depois que um pool for criado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2224
+#, fuzzy
 msgid ""
 "  In some specific cases, the smaller 512-byte block size might be "
 "preferable. When used with 512-byte disks for databases, or as storage for "
@@ -4491,6 +5014,11 @@ msgid ""
 "can provide better performance, especially when using a smaller ZFS record "
 "size."
 msgstr ""
+"  Em alguns casos específicos, o menor tamanho de bloco de 512 bytes pode "
+"ser preferível. Quando usado com discos de 512 bytes para bancos de dados, "
+"ou como armazenamento para máquinas virtuais, menos dados são transferidos "
+"durante pequenas leituras aleatórias. Isso pode fornecer melhor desempenho, "
+"especialmente ao usar um tamanho de registro <acronym>ZFS</acronym> menor."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2225
@@ -4643,6 +5171,7 @@ msgstr "Memória"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2243
+#, fuzzy
 msgid ""
 "As a bare minimum, the total system memory should be at least one gigabyte. "
 "The amount of recommended RAM depends upon the size of the pool and which "
@@ -4653,6 +5182,15 @@ msgid ""
 "to memory exhaustion. Further tuning may be required for systems with less "
 "than the recommended RAM requirements."
 msgstr ""
+"Como mínimo, a memória total do sistema deve ter pelo menos um gigabyte. A "
+"quantidade de RAM <acronym>recomendada</acronym> depende do tamanho do pool "
+"e dos recursos do <acronym>ZFS</acronym> usados. Uma regra geral é 1 GB de "
+"RAM para cada 1 TB de armazenamento. Se o recurso de deduplicação for usado, "
+"uma regra geral é 5 GB de RAM por TB de armazenamento para ser desduplicado. "
+"Enquanto alguns usuários usam com sucesso o <acronym>ZFS</acronym> com menos "
+"<acronym>RAM</acronym>, os sistemas sob carga pesada podem entrar em panic "
+"devido ao esgotamento da memória. Outros ajustes podem ser necessários para "
+"sistemas com uma quantia de memória RAM inferior ao recomendado."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2244
@@ -4670,9 +5208,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2251
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "options        KVA_PAGES=512\n"
-msgstr ""
+msgstr "options        KVA_PAGES=512\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2254
@@ -4700,13 +5238,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2265
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "vm.kmem_size=\"330M\"\n"
 "vm.kmem_size_max=\"330M\"\n"
 "vfs.zfs.arc_max=\"40M\"\n"
 "vfs.zfs.vdev.cache.size=\"5M\"\n"
 msgstr ""
+"vm.kmem_size=\"330M\"\n"
+"vm.kmem_size_max=\"330M\"\n"
+"vfs.zfs.arc_max=\"40M\"\n"
+"vfs.zfs.vdev.cache.size=\"5M\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2268
@@ -4753,6 +5295,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2281
+#, fuzzy
 msgid ""
 "ZFS is a fundamentally different file system because it is more than just a "
 "file system. ZFS combines the roles of file system and volume manager, "
@@ -4768,6 +5311,23 @@ msgid ""
 "extensive partitioning where free space becomes fragmented across the "
 "partitions."
 msgstr ""
+"O <acronym>ZFS</acronym> é um sistema de arquivos fundamentalmente "
+"diferente, porque é mais do que apenas um sistema de arquivos. O "
+"<acronym>ZFS</acronym> combina as funções do sistema de arquivos e do "
+"gerenciador de volume, permitindo que dispositivos de armazenamento "
+"adicionais sejam adicionados a um sistema ativo e torne o novo espaço "
+"disponível em todos os sistemas de arquivos existentes nesse pool "
+"imediatamente. Combinando os papéis tradicionalmente separados, o "
+"<acronym>ZFS</acronym> é capaz de superar limitações anteriores que impediam "
+"o crescimento de grupos <acronym>RAID</acronym>. Cada dispositivo de nível "
+"superior em um pool é chamado de <emphasis>vdev</emphasis>, que pode ser um "
+"disco simples ou uma transformação <acronym>RAID</acronym> como um espelho "
+"ou array <acronym>RAID-Z</acronym>. Os sistemas de arquivos <acronym>ZFS</"
+"acronym> (chamados <emphasis>datasets</emphasis>) têm acesso ao espaço livre "
+"combinado de todo o pool. À medida que os blocos são alocados do pool, o "
+"espaço disponível para cada sistema de arquivos diminui. Essa abordagem "
+"evita a armadilha comum com o particionamento extensivo onde o espaço livre "
+"se torna fragmentado nas partições."
 
 #. type: Table
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2292
@@ -4846,12 +5406,19 @@ msgstr ""
 
 #. type: Table
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2311
+#, fuzzy
 msgid ""
 "  In a RAID-Z1 configuration with four disks, each 1 TB, usable storage is 3 "
 "TB and the pool will still be able to operate in degraded mode with one "
 "faulted disk. If an additional disk goes offline before the faulted disk is "
 "replaced and resilvered, all data in the pool can be lost."
 msgstr ""
+"  Em uma configuração de <acronym>RAID-Z1</acronym> com quatro discos, cada "
+"um com 1 TB, resultará em um volume com armazenamento utilizável de 3 TB e o "
+"pool ainda poderá operar em modo degradado com um disco com falha. Se um "
+"disco adicional ficar off-line antes que o disco com falha seja substituído "
+"e que o resilver tenha sido executado, todos os dados no pool poderão ser "
+"perdidos."
 
 #. type: Table
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2313
@@ -4865,6 +5432,7 @@ msgstr ""
 
 #. type: Table
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2315
+#, fuzzy
 msgid ""
 "  A configuration of two RAID-Z2 vdevs consisting of 8 disks each would "
 "create something similar to a RAID-60 array. A RAID-Z group's storage "
@@ -4873,6 +5441,13 @@ msgid ""
 "of approximately 3 TB, and an array of eight 1 TB disks in RAID-Z3 will "
 "yield 5 TB of usable space."
 msgstr ""
+"  Uma configuração de dois vdevs <acronym>RAID-Z2</acronym> consistindo de 8 "
+"discos cada criaria algo similar a um array <acronym>RAID-60</acronym>. A "
+"capacidade de armazenamento do grupo <acronym>RAID-Z</acronym> é "
+"aproximadamente o tamanho do menor disco multiplicado pelo número de discos "
+"sem paridade. Quatro discos de 1 TB em <acronym>RAID-Z1</acronym> têm um "
+"tamanho efetivo de aproximadamente 3 TB, e uma matriz de oito discos de 1 TB "
+"em <acronym>RAID-Z3</acronym> produzirá 5 TB de espaço utilizável ."
 
 #. type: Table
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2316
@@ -4931,6 +5506,7 @@ msgstr ""
 
 #. type: Table
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2325
+#, fuzzy
 msgid ""
 "_Syncing_ - All of the data in the transaction group is written to stable "
 "storage. This process will in turn modify other data, such as metadata and "
@@ -4945,6 +5521,20 @@ msgid ""
 "completed. Once the sync state is complete, the transaction group in the "
 "quiescing state is advanced to the syncing state."
 msgstr ""
+"<emphasis>Syncing</emphasis> - Todos os dados no grupo de transações são "
+"gravados no armazenamento estável. Esse processo, por sua vez, modificará "
+"outros dados, como metadados e mapas de espaço, que também precisarão ser "
+"gravados no armazenamento estável. O processo de sincronização envolve "
+"vários passos. O primeiro é o maior, e trata de todos os blocos de dados "
+"alterados, seguido pelos metadados, que podem levar vários passos para serem "
+"concluídos. Como a alocação de espaço para os blocos de dados gera novos "
+"metadados, o estado de sincronização não pode ser concluído até que um passo "
+"seja concluído e não aloque espaço adicional. O estado de sincronização "
+"também é onde as <emphasis>synctasks</emphasis> são concluídas. As operações "
+"de sincronização são operações administrativas, como criar ou destruir "
+"snapshots e datasets, que modificam o uberblock. Quando o estado de "
+"sincronização estiver concluído, o grupo de transações no estado de quiesce "
+"é avançado para o estado de sincronização."
 
 #. type: Table
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2357
