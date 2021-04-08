@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-04-01 00:52+0000\n"
+"PO-Revision-Date: 2021-04-08 23:28+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/articleslinux-emulation_index/pt_BR/>\n"
@@ -65,6 +65,7 @@ msgstr "Introdução"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:47
+#, fuzzy
 msgid ""
 "In the last few years the open source UNIX(R) based operating systems "
 "started to be widely deployed on server and client machines.  Among these "
@@ -78,6 +79,20 @@ msgid ""
 "where there are many binary only programs available for Linux(R) that lack "
 "support for FreeBSD."
 msgstr ""
+"Nos últimos anos, os sistemas operacionais baseados em código aberto "
+"<trademark class=\"registered\">UNIX</trademark> começaram a ser amplamente "
+"implantados em máquinas servidores e clientes. Entre esses sistemas "
+"operacionais eu gostaria de destacar dois: FreeBSD, por sua herança BSD, "
+"base de código comprovada pelo tempo e muitos recursos interessantes e "
+"<trademark class=\"registered\">Linux</trademark> por sua ampla base de "
+"usuários, entusiasta comunidade aberta de desenvolvedores e apoio de grandes "
+"empresas. O FreeBSD tende a ser usado em máquinas de classe servidor, "
+"tarefas de rede pesadas com menos uso em máquinas de classe desktop para "
+"usuários comuns. Embora o <trademark class=\"registered\">Linux</trademark> "
+"tenha o mesmo uso em servidores, mas é muito mais usado por usuários "
+"domésticos. Isto leva a uma situação onde existem muitos programas binários "
+"disponíveis apenas para <trademark class=\"registered\">Linux</trademark> "
+"que não suportam o FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:49
@@ -98,9 +113,9 @@ msgstr ""
 
 #. type: Title ==
 #: documentation/content/en/articles/linux-emulation/_index.adoc:54
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "A look inside..."
-msgstr ""
+msgstr "Um olhar para dentro…"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:60
@@ -179,12 +194,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:98
+#, fuzzy
 msgid ""
 "Another possible way to communicate is by using a _trap_.  Traps occur "
 "asynchronously after some event occurs (division by zero, page fault etc.).  "
 "A trap can be transparent for a process (page fault) or can result in a "
 "reaction like sending a _signal_ (division by zero)."
 msgstr ""
+"Outra maneira possível de se comunicar é usando uma <firstterm>trap</"
+"firstterm>. As traps ocorrem de forma assíncrona após a ocorrência de algum "
+"evento (divisão por zero, falha de página, etc.). Uma trap pode ser "
+"transparente para um processo (falha de página) ou pode resultar em uma "
+"reação como o envio de um <firstterm>signal</firstterm> (divisão por zero)."
 
 #. type: Title ====
 #: documentation/content/en/articles/linux-emulation/_index.adoc:100
@@ -194,6 +215,7 @@ msgstr "Comunicação entre processos"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:105
+#, fuzzy
 msgid ""
 "There are other APIs (System V IPC, shared memory etc.) but the single most "
 "important API is signal.  Signals are sent by processes or by the kernel and "
@@ -201,6 +223,11 @@ msgid ""
 "supplied routine, some result in a predefined action that cannot be altered "
 "or ignored."
 msgstr ""
+"Existem outras APIs (System V IPC, memória compartilhada, etc.), mas a API "
+"mais importante é o signal. Os signals são enviados por processos ou pelo "
+"kernel e recebidos por processos. Alguns signals podem ser ignorados ou "
+"manipulados por uma rotina fornecida pelo usuário, alguns resultam em uma "
+"ação predefinida que não pode ser alterada ou ignorada."
 
 #. type: Title ====
 #: documentation/content/en/articles/linux-emulation/_index.adoc:107
@@ -441,6 +468,7 @@ msgstr "Armadilhas (Traps)"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:204
+#, fuzzy
 msgid ""
 "Handling of traps in FreeBSD is similar to the handling of syscalls.  "
 "Whenever a trap occurs, an assembler handler is called.  It is chosen "
@@ -450,6 +478,14 @@ msgid ""
 "processes the occurred trap.  After the processing it might send a signal to "
 "the process and/or exit to userland using `userret()`."
 msgstr ""
+"O manuseio de traps no FreeBSD é similar ao manuseio de syscalls. Sempre que "
+"ocorre uma trap, um manipulador de assembler é chamado. É escolhido entre "
+"alltraps, alltraps com regs push ou calltrap, dependendo do tipo de trap. "
+"Este manipulador prepara argumentos para uma chamada para uma função C "
+"<literal>trap()</literal> (definida em <filename>sys/i386/i386/trap."
+"c</filename>), que então processa a trap ocorrida. Após o processamento, ele "
+"pode enviar um sinal para o processo e/ou sair para o espaço do usuário "
+"usando <literal>userret()</literal>."
 
 #. type: Title =====
 #: documentation/content/en/articles/linux-emulation/_index.adoc:206
@@ -460,11 +496,16 @@ msgstr "Saídas"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:210
+#, fuzzy
 msgid ""
 "Exits from kernel to userspace happen using the assembler routine `doreti` "
 "regardless of whether the kernel was entered via a trap or via a syscall.  "
 "This restores the program status from the stack and returns to the userspace."
 msgstr ""
+"As saídas do kernel para o userspace acontecem usando a rotina assembler "
+"<literal>doreti</literal>, independentemente de o kernel ter sido acessado "
+"por meio de uma trap ou via syscall. Isso restaura o status do programa da "
+"pilha e retorna ao espaço do usuário."
 
 #. type: Title =====
 #: documentation/content/en/articles/linux-emulation/_index.adoc:212
@@ -505,6 +546,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:237
+#, fuzzy
 msgid ""
 "As stated previously there are two implementations of threading in FreeBSD.  "
 "The M:N library divides the work between kernel space and userspace.  Thread "
@@ -518,6 +560,18 @@ msgid ""
 "implemented but it was removed recently because it caused serious slowdown "
 "and made the code more difficult to deal with)."
 msgstr ""
+"Como dito anteriormente, existem duas implementações de threads no FreeBSD. "
+"A biblioteca M:N divide o trabalho entre o espaço do kernel e o espaço do "
+"usuário. Thread é uma entidade que é agendada no kernel, mas pode "
+"representar vários números de threads do userspace. Threads M do userspace "
+"são mapeadas para threads N do kernel, economizando recursos e mantendo a "
+"capacidade de explorar o paralelismo de multiprocessadores. Mais informações "
+"sobre a implementação podem ser obtidas na página do manual ou [1]. A "
+"biblioteca 1:1 mapeia diretamente um segmento userland para uma thread do "
+"kernel, simplificando muito o esquema. Nenhum desses designs implementa um "
+"mecanismo justo (tal mecanismo foi implementado, mas foi removido "
+"recentemente porque causou séria lentidão e tornou o código mais difícil de "
+"lidar)."
 
 #. type: Title ===
 #: documentation/content/en/articles/linux-emulation/_index.adoc:239
@@ -637,11 +691,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:290
+#, fuzzy
 msgid ""
 "The trap handlers are introduced in [.filename]#arch/i386/kernel/traps.c# "
 "and most of these handlers live in [.filename]#arch/i386/kernel/entry.S#, "
 "where handling of the traps happens."
 msgstr ""
+"Os manipuladores de traps são apresentados em <filename>arch/i386/kernel/"
+"traps.c</filename> e a maioria desses manipuladores vive em <filename>arch/"
+"i386/kernel/entry.S</filename>, onde a manipulação das traps acontecem."
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:296
@@ -749,6 +807,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:332
+#, fuzzy
 msgid ""
 "As you can see the `CLONE_THREAD` does most of the work and does not seem to "
 "fit the scheme very well.  The original intention is unclear (even for "
@@ -758,6 +817,14 @@ msgid ""
 "is good for as glibc does not use that so only hand-written use of the clone "
 "permits a programmer to access this features."
 msgstr ""
+"Como você pode ver, o <literal>CLONE_THREAD</literal> faz a maior parte do "
+"trabalho e não parece se encaixar muito bem no esquema. A intenção original "
+"não é clara (mesmo para autores, de acordo com comentários no código), mas "
+"acho que originalmente havia uma flag de thread, que foi então dividida "
+"entre muitas outras flags, mas essa separação nunca foi totalmente "
+"concluída. Também não está claro para que serve esta partição, uma vez que a "
+"glibc não usa isso, portanto, apenas o uso do clone escrito à mão permite "
+"que um programador acesse esses recursos."
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:335
@@ -817,9 +884,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/linux-emulation/_index.adoc:358
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "#define CLONE_SIGNAL (CLONE_SIGHAND | CLONE_THREAD)\n"
-msgstr ""
+msgstr "#define CLONE_SIGNAL (CLONE_SIGHAND | CLONE_THREAD)\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:361
@@ -836,6 +903,7 @@ msgstr "O que é emulação"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:368
+#, fuzzy
 msgid ""
 "According to a dictionary definition, emulation is the ability of a program "
 "or device to imitate another program or device.  This is achieved by "
@@ -846,9 +914,19 @@ msgid ""
 "point units emulation etc.) and operating system emulation (either in kernel "
 "of the operating system or as a userspace program)."
 msgstr ""
+"De acordo com uma definição de dicionário, emulação é a capacidade de um "
+"programa ou dispositivo de imitar um outro programa ou dispositivo. Isto é "
+"conseguido fornecendo a mesma reação a um determinado estímulo que o objeto "
+"emulado. Na prática, o mundo do software vê três tipos de emulação - um "
+"programa usado para emular uma máquina (QEMU, vários emuladores de consoles "
+"de jogos etc.), emulação de software de uma instalação de hardware ("
+"emuladores OpenGL, emulação de unidades de ponto flutuante etc.) e emulação "
+"do sistema (no kernel do sistema operacional ou como um programa de espaço "
+"do usuário)."
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:375
+#, fuzzy
 msgid ""
 "Emulation is usually used in a place, where using the original component is "
 "not feasible nor possible at all.  For example someone might want to use a "
@@ -859,9 +937,18 @@ msgid ""
 "porting an operating system to a new (non-existent) platform.  Sometimes it "
 "is just cheaper to emulate."
 msgstr ""
+"Emulação é geralmente usada em um lugar, onde o uso do componente original "
+"não é viável nem possível a todos. Por exemplo, alguém pode querer usar um "
+"programa desenvolvido para um sistema operacional diferente do que eles "
+"usam. Então a emulação vem a calhar. Por vezes, não há outra maneira senão "
+"usar emulação - por ex. Quando o dispositivo de hardware que você tenta usar "
+"não existe (ainda/mais), então não há outro caminho além da emulação. Isso "
+"acontece com frequência ao transferir um sistema operacional para uma nova "
+"plataforma (inexistente). Às vezes é mais barato emular."
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:387
+#, fuzzy
 msgid ""
 "Looking from an implementation point of view, there are two main approaches "
 "to the implementation of emulation.  You can either emulate the whole thing "
@@ -884,6 +971,27 @@ msgid ""
 "powerful one on the less powerful we have to emulate the missing features "
 "with full emulation described above."
 msgstr ""
+"Olhando do ponto de vista da implementação, existem duas abordagens "
+"principais para a implementação da emulação. Você pode emular a coisa toda - "
+"aceitando possíveis entradas do objeto original, mantendo o estado interno e "
+"emitindo a saída correta com base no estado e/ou na entrada. Este tipo de "
+"emulação não requer condições especiais e basicamente pode ser implementado "
+"em qualquer lugar para qualquer dispositivo/programa. A desvantagem é que a "
+"implementação de tal emulação é bastante difícil, demorada e propensa a "
+"erros. Em alguns casos, podemos usar uma abordagem mais simples. Imagine que "
+"você deseja emular uma impressora que imprime da esquerda para a direita em "
+"uma impressora que imprime da direita para a esquerda. É óbvio que não há "
+"necessidade de uma camada de emulação complexa, mas a simples reversão do "
+"texto impresso é suficiente. Às vezes, o ambiente de emulação é muito "
+"semelhante ao emulado, portanto, apenas uma camada fina de alguma tradução é "
+"necessária para fornecer uma emulação totalmente funcional! Como você pode "
+"ver, isso é muito menos exigente de implementar, portanto, menos demorado e "
+"propenso a erros do que a abordagem anterior. Mas a condição necessária é "
+"que os dois ambientes sejam semelhantes o suficiente. A terceira abordagem "
+"combina os dois anteriores. Na maioria das vezes, os objetos não fornecem os "
+"mesmos recursos, portanto, em um caso de emulação, o mais poderoso é o menos "
+"poderoso que temos para emular os recursos ausentes com a emulação completa "
+"descrita acima."
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:390
@@ -905,6 +1013,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:396
+#, fuzzy
 msgid ""
 "No emulation is perfect and emulations tend to lack some parts but this "
 "usually does not cause any serious drawbacks.  Imagine a game console "
@@ -913,6 +1022,12 @@ msgid ""
 "as the original game console but its an acceptable compromise between price "
 "and comfort."
 msgstr ""
+"Nenhuma emulação é perfeita e as emulações tendem a não ter algumas partes, "
+"mas isso geralmente não causa nenhuma desvantagem séria. Imagine um emulador "
+"de console de jogos que emula tudo, menos a saída de música. Não há dúvida "
+"de que os jogos são jogáveis e pode-se usar o emulador. Pode não ser tão "
+"confortável quanto o console original, mas é um compromisso aceitável entre "
+"preço e conforto."
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:400
@@ -947,6 +1062,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:415
+#, fuzzy
 msgid ""
 "There are basically two types of binaries in FreeBSD.  Shell-like text "
 "scripts which are identified by `#!` as their first two characters and "
@@ -957,6 +1073,15 @@ msgid ""
 "operating system can accurately determine what type of binary the given file "
 "is."
 msgstr ""
+"Existem basicamente dois tipos de binários no FreeBSD. Scripts de texto "
+"semelhantes a shell que são identificados por <literal>#!</literal> como "
+"seus dois primeiros caracteres e binários normais (normalmente "
+"<firstterm>ELF</firstterm>), que são uma representação de um objeto "
+"executável compilado. A grande maioria (pode-se dizer todos eles) de "
+"binários no FreeBSD é do tipo ELF. Os arquivos ELF contêm um cabeçalho, que "
+"especifica a ABI do OS para este arquivo ELF. Ao ler essas informações, o "
+"sistema operacional pode determinar com precisão o tipo de binário do "
+"arquivo fornecido."
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:421
@@ -973,6 +1098,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:426
+#, fuzzy
 msgid ""
 "The nature of emulation of different OSes (and also some other subsystems) "
 "led developers to invite a handler event mechanism.  There are various "
@@ -981,6 +1107,13 @@ msgid ""
 "For example, when a process exits there is a handler called that possibly "
 "cleans up whatever the subsystem needs to be cleaned."
 msgstr ""
+"A natureza da emulação de diferentes sistemas operacionais (e também alguns "
+"outros subsistemas) levou os desenvolvedores a invitar um mecanismo de "
+"evento manipulador. Existem vários locais no kernel, onde uma lista de "
+"manipuladores de eventos é chamada. Cada subsistema pode registrar um "
+"manipulador de eventos e eles são chamados de acordo com sua necessidade. "
+"Por exemplo, quando um processo é encerrado, há um manipulador chamado que "
+"possivelmente limpa o que o subsistema que ele  precisa de limpeza."
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:428
@@ -998,10 +1131,13 @@ msgstr "Primitivas comuns no kernel do FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:434
+#, fuzzy
 msgid ""
 "Emulation layers need some support from the operating system.  I am going to "
 "describe some of the supported primitives in the FreeBSD operating system."
 msgstr ""
+"Camadas de emulação precisam de algum suporte do sistema operacional. Eu vou "
+"descrever algumas das primitivas suportadas no sistema operacional FreeBSD."
 
 #. type: Title ====
 #: documentation/content/en/articles/linux-emulation/_index.adoc:436
@@ -1051,11 +1187,15 @@ msgstr "barreiras de agendamento"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:450
+#, fuzzy
 msgid ""
 "Below there are descriptions for the 3 families.  For every lock, you should "
 "really check the linked manpage (where possible) for more detailed "
 "explanations."
 msgstr ""
+"Abaixo, há descrições para as 3 famílias. Para cada bloqueio, você deve "
+"verificar a página de manual vinculada (onde for possível) para obter "
+"explicações mais detalhadas."
 
 #. type: Title =====
 #: documentation/content/en/articles/linux-emulation/_index.adoc:452
@@ -1065,6 +1205,7 @@ msgstr "Operações atômicas e barreiras de memória"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:463
+#, fuzzy
 msgid ""
 "Atomic operations are implemented through a set of functions performing "
 "simple arithmetics on memory operands in an atomic way with respect to "
@@ -1087,6 +1228,31 @@ msgid ""
 "however, noting that atomic operations (and memory barriers as well) should "
 "ideally only be used for building front-ending locks (as mutexes)."
 msgstr ""
+"Operações atômicas são implementadas através de um conjunto de funções que "
+"executam aritmética simples em operandos de memória de maneira atômica com "
+"relação a eventos externos (interrupções, preempção, etc.). Operações "
+"atômicas podem garantir atomicidade apenas em pequenos tipos de dados (na "
+"ordem de magnitude do tipo de dados C da arquitetura <literal>."
+"long.</literal>), portanto raramente devem ser usados diretamente no código "
+"de nível final, se não apenas para operações muito simples (como "
+"configuração de flags em um bitmap, por exemplo). De fato, é bastante "
+"simples e comum escrever uma semântica errada baseada apenas em operações "
+"atômicas (geralmente referidas como lock-less). O kernel do FreeBSD oferece "
+"uma maneira de realizar operações atômicas em conjunto com uma barreira de "
+"memória. As barreiras de memória garantirão que uma operação atômica "
+"ocorrerá seguindo alguma ordem especificas em relação a outros acessos à "
+"memória. Por exemplo, se precisarmos que uma operação atômica aconteça logo "
+"depois que todas as outras gravações pendentes (em termos de instruções "
+"reordenando atividades de buffers) forem concluídas, precisamos usar "
+"explicitamente uma barreira de memória em conjunto com essa operação "
+"atômica. Portanto, é simples entender por que as barreiras de memória "
+"desempenham um papel fundamental na construção de bloqueios de alto nível ("
+"assim como referências, exclusões mútuas, etc.). Para uma explicação "
+"detalhada sobre operações atômicas, consulte "
+"<citerefentry><refentrytitle>atomic</refentrytitle><manvolnum>9</manvolnum></"
+"citerefentry>. É muito, no entanto, notar que as operações atômicas (e as "
+"barreiras de memória também) devem, idealmente, ser usadas apenas para "
+"construir bloqueios front-ending (como mutexes)."
 
 #. type: Title =====
 #: documentation/content/en/articles/linux-emulation/_index.adoc:465
@@ -1096,6 +1262,7 @@ msgstr "Refcounts"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:471
+#, fuzzy
 msgid ""
 "Refcounts are interfaces for handling reference counters.  They are "
 "implemented through atomic operations and are intended to be used just for "
@@ -1106,6 +1273,15 @@ msgid ""
 "paths.  A manpage discussing refcount does not exist currently, just check [."
 "filename]#sys/refcount.h# for an overview of the existing API."
 msgstr ""
+"Refcounts são interfaces para manipular contadores de referência. Eles são "
+"implementados por meio de operações atômicas e destinam-se a ser usados "
+"apenas para casos em que o contador de referência é a única coisa a ser "
+"protegida, portanto, até mesmo algo como um spin-mutex é obsoleto. Usar a "
+"interface de recontagem para estruturas, onde um mutex já é usado, "
+"geralmente está errado, pois provavelmente devemos fechar o contador de "
+"referência em alguns caminhos já protegidos. Uma manpage discutindo refcount "
+"não existe atualmente, apenas verifique <filename>sys/refcount.h</filename> "
+"para uma visão geral da API existente."
 
 #. type: Title =====
 #: documentation/content/en/articles/linux-emulation/_index.adoc:473
@@ -1115,6 +1291,7 @@ msgstr "Locks"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:478
+#, fuzzy
 msgid ""
 "FreeBSD kernel has huge classes of locks.  Every lock is defined by some "
 "peculiar properties, but probably the most important is the event linked to "
@@ -1122,6 +1299,12 @@ msgid ""
 "acquire the lock).  FreeBSD's locking scheme presents three different "
 "behaviors for contenders:"
 msgstr ""
+"O kernel do FreeBSD tem enormes classes de bloqueios. Cada bloqueio é "
+"definido por algumas propriedades peculiares, mas provavelmente o mais "
+"importante é o evento vinculado a detentores de contestação (ou, em outros "
+"termos, o comportamento de threading incapazes de adquirir o bloqueio). O "
+"esquema de bloqueio do FreeBSD apresenta três comportamentos diferentes para "
+"contendores:"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:480
@@ -1151,6 +1334,7 @@ msgstr "Spinning locks"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:495
+#, fuzzy
 msgid ""
 "Spin locks let waiters to spin until they cannot acquire the lock.  An "
 "important matter do deal with is when a thread contests on a spin lock if it "
@@ -1161,6 +1345,16 @@ msgid ""
 "CPUs, etc.), spin locks are intended to protect very small paths of code, or "
 "ideally not to be used at all if not explicitly requested (explained later)."
 msgstr ""
+"Spin locks permitem que os acumuladores rotacionarem até que eles não "
+"consigam adquirir um lock. Uma questão importante é quando um segmento "
+"contesta em um spin lock se não for desmarcado. Uma vez que o kernel do "
+"FreeBSD é preventivo, isto expõe o spin lock ao risco de deadlocks que podem "
+"ser resolvidos apenas desabilitando as interrupções enquanto elas são "
+"adquiridas. Por essa e outras razões (como falta de suporte à propagação de "
+"prioridade, falta de esquemas de balanceamento de carga entre CPUs, etc.), "
+"os spin locks têm a finalidade de proteger endereçamentos muito pequenos de "
+"código ou, idealmente, não serem usados se não solicitados explicitamente ( "
+"explicado posteriormente)."
 
 #. type: Title =====
 #: documentation/content/en/articles/linux-emulation/_index.adoc:497
@@ -1170,6 +1364,7 @@ msgstr "Bloqueio"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:502
+#, fuzzy
 msgid ""
 "Block locks let waiters to be descheduled and blocked until the lock owner "
 "does not drop it and wakes up one or more contenders.  In order to avoid "
@@ -1178,6 +1373,13 @@ msgid ""
 "interface and are intended to be the most used kind of locks in the kernel, "
 "if no particular conditions are met."
 msgstr ""
+"Os locks em blocos permitem que as tarefas dos acumuladores sejam removidas "
+"e bloqueados até que o proprietário do bloqueio não os libere e ative um ou "
+"mais contendores. Para evitar problemas de fome, os locks em bloco fazem a "
+"propagação de prioridade dos acumuladores para o proprietário. Os locks em "
+"bloco devem ser implementados por meio da interface turnstile e devem ser o "
+"tipo mais usado de bloqueios no kernel, se nenhuma condição específica for "
+"atendida."
 
 #. type: Title =====
 #: documentation/content/en/articles/linux-emulation/_index.adoc:504
@@ -1197,6 +1399,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:513
+#, fuzzy
 msgid ""
 "The order used to acquire locks is very important, not only for the "
 "possibility to deadlock due at lock order reversals, but even because lock "
@@ -1210,6 +1413,18 @@ msgid ""
 "smaller paths than sleep lock (these rules are not about atomic operations "
 "or scheduling barriers, however)."
 msgstr ""
+"A ordem usada para adquirir locks é muito importante, não apenas pela "
+"possibilidade de deadlock devido a reversões de ordem de bloqueio, mas "
+"também porque a aquisição de lock deve seguir regras específicas vinculadas "
+"a naturezas de bloqueios. Se você der uma olhada na tabela acima, a regra "
+"prática é que, se um segmento contiver um lock de nível n (onde o nível é o "
+"número listado próximo ao tipo de bloqueio), não é permitido adquirir um "
+"lock de níveis superiores , pois isso quebraria a semântica especificada "
+"para um caminho. Por exemplo, se uma thread contiver um lock em bloco (nível "
+"2), ele poderá adquirir um spin lock (nível 1), mas não um sleep lock (nível "
+"3), pois os locks em bloco são destinados a proteger caminhos menores que o "
+"sleep lock ( essas regras não são sobre operações atômicas ou agendamento de "
+"barreiras, no entanto)."
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:515
@@ -1282,10 +1497,13 @@ msgstr "Barreiras de agendamento"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:533
+#, fuzzy
 msgid ""
 "Scheduling barriers are intended to be used in order to drive scheduling of "
 "threading.  They consist mainly of three different stubs:"
 msgstr ""
+"As barreiras de agendamento devem ser usadas para orientar o agendamento de "
+"threads. Eles consistem principalmente de três diferentes stubs:"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:535
@@ -1319,6 +1537,7 @@ msgstr "Seções críticas"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:549
+#, fuzzy
 msgid ""
 "The FreeBSD kernel has been made preemptive basically to deal with interrupt "
 "threads.  In fact, in order to avoid high interrupt latency, time-sharing "
@@ -1333,6 +1552,21 @@ msgid ""
 "effectively but should be used carefully in order to not lose the whole "
 "advantage that preemption brings."
 msgstr ""
+"O kernel do FreeBSD foi feito basicamente para lidar com threads de "
+"interrupção. De fato, para evitar latência de interrupção alta, os segmentos "
+"de prioridade de compartilhamento de tempo podem ser precedidos por threads "
+"de interrupção (dessa forma, eles não precisam aguardar para serem agendados "
+"como as visualizações de caminho normais). Preempção, no entanto, introduz "
+"novos pontos de corrida que precisam ser manipulados também. Muitas vezes, "
+"para lidar com a preempção, a coisa mais simples a fazer é desativá-la "
+"completamente. Uma seção crítica define um pedaço de código (delimitado pelo "
+"par de funções "
+"<citerefentry><refentrytitle>critical_enter</refentrytitle><manvolnum>9</"
+"manvolnum> </citerefentry> e <citerefentry><refentrytitle>critical_exit</refe"
+"ntrytitle><manvolnum>9</manvolnum></citerefentry>, onde é garantido que a "
+"preempção não aconteça (até que o código protegido seja totalmente executado)"
+" Isso pode substituir um bloqueio efetivamente, mas deve ser usado com "
+"cuidado para não perder toda a vantagem essa preempção traz."
 
 #. type: Title =====
 #: documentation/content/en/articles/linux-emulation/_index.adoc:551
@@ -1342,6 +1576,7 @@ msgstr "sched_pin/sched_unpin"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:557
+#, fuzzy
 msgid ""
 "Another way to deal with preemption is the `sched_pin()` interface.  If a "
 "piece of code is closed in the `sched_pin()` and `sched_unpin()` pair of "
@@ -1351,6 +1586,14 @@ msgid ""
 "we assume other threads will not change those data.  The latter condition "
 "will determine a critical section as a too strong condition for our code."
 msgstr ""
+"Outra maneira de lidar com a preempção é a interface <function>sched_pin()</"
+"function>. Se um trecho de código é fechado no par de funções "
+"<function>sched_pin()</function> e <function>sched_unpin()</function>, é "
+"garantido que a respectiva thread, mesmo que possa ser antecipada, sempre "
+"ser executada na mesma CPU. Fixar é muito eficaz no caso particular quando "
+"temos que acessar por dados do cpu e assumimos que outras threads não irão "
+"alterar esses dados. A última condição determinará uma seção crítica como "
+"uma condição muito forte para o nosso código."
 
 #. type: Title =====
 #: documentation/content/en/articles/linux-emulation/_index.adoc:559
@@ -1360,6 +1603,7 @@ msgstr "sched_bind/sched_unbind"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:564
+#, fuzzy
 msgid ""
 "`sched_bind` is an API used in order to bind a thread to a particular CPU "
 "for all the time it executes the code, until a `sched_unbind` function call "
@@ -1369,6 +1613,15 @@ msgid ""
 "`sched_bind` and `sched_unbind` manipulate internal scheduler structures, "
 "they need to be enclosed in `sched_lock` acquisition/releasing when used."
 msgstr ""
+"<function>sched_bind</function> é uma API usada para vincular uma thread a "
+"uma CPU em particular durante todo o tempo em que ele executa o código, até "
+"que uma chamada de função <function>sched_unbind</function> não a "
+"desvincule. Esse recurso tem um papel importante em situações em que você "
+"não pode confiar no estado atual das CPUs (por exemplo, em estágios iniciais "
+"de inicialização), já que você deseja evitar que sua thread migre em CPUs "
+"inativas. Como <function>sched_bind</function> e <function>sched_unbind</"
+"function> manipulam as estruturas internas do agendador, elas precisam estar "
+"entre a aquisição/liberação de <function>sched_lock</function> quando usadas."
 
 #. type: Title ====
 #: documentation/content/en/articles/linux-emulation/_index.adoc:566
@@ -1378,6 +1631,7 @@ msgstr "Estrutura Proc"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:572
+#, fuzzy
 msgid ""
 "Various emulation layers sometimes require some additional per-process "
 "data.  It can manage separate structures (a list, a tree etc.) containing "
@@ -1386,9 +1640,17 @@ msgid ""
 "`p_emuldata`, which is a void pointer to some emulation layer specific "
 "data.  This `proc` entry is protected by the proc mutex."
 msgstr ""
+"Várias camadas de emulação exigem alguns dados adicionais por processo. Ele "
+"pode gerenciar estruturas separadas (uma lista, uma árvore etc.) contendo "
+"esses dados para cada processo, mas isso tende a ser lento e consumir "
+"memória. Para resolver este problema, a estrutura <literal>proc</literal> do "
+"FreeBSD contém <literal>p_emuldata</literal>, que é um ponteiro vazio para "
+"alguns dados específicos da camada de emulação. Esta entrada <literal>proc</"
+"literal> é protegida pelo mutex proc."
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:577
+#, fuzzy
 msgid ""
 "The FreeBSD `proc` structure contains a `p_sysent` entry that identifies, "
 "which ABI this process is running.  In fact, it is a pointer to the "
@@ -1397,6 +1659,13 @@ msgid ""
 "effectively determine whether the process belongs to our emulation layer.  "
 "The code typically looks like:"
 msgstr ""
+"A estrutura <literal>proc</literal> do FreeBSD contém uma entrada "
+"<literal>p_sysent</literal> que identifica, qual ABI este processo está "
+"executando. Na verdade, é um ponteiro para o <literal>sysentvec</literal> "
+"descrito acima. Portanto, comparando esse ponteiro com o endereço em que a "
+"estrutura <literal>sysentvec</literal> da ABI especificada está armazenada, "
+"podemos efetivamente determinar se o processo pertence à nossa camada de "
+"emulação. O código normalmente se parece com:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/linux-emulation/_index.adoc:582
@@ -1618,14 +1887,17 @@ msgstr "Escrevendo syscall"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:667
+#, fuzzy
 msgid ""
 "Every syscall implemented in the Linuxulator must have its prototype with "
 "various flags in [.filename]#syscalls.master#.  The form of the file is:"
 msgstr ""
+"Cada syscall implementada no Linuxulator deve ter seu protótipo com vários "
+"flags no <filename>syscalls.master</filename>. A forma do arquivo é:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/linux-emulation/_index.adoc:675
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "...\n"
 "\tAUE_FORK STD\t\t{ int linux_fork(void); }\n"
@@ -1633,6 +1905,11 @@ msgid ""
 "\tAUE_CLOSE NOPROTO\t{ int close(int fd); }\n"
 "...\n"
 msgstr ""
+"...\n"
+"\tAUE_FORK STD\t\t{ int linux_fork(void); }\n"
+"...\n"
+"\tAUE_CLOSE NOPROTO\t{ int close(int fd); }\n"
+"...\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:685
@@ -1659,7 +1936,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/linux-emulation/_index.adoc:696
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "...\n"
 "#define LINUX_SYS_linux_fork 2\n"
@@ -1667,37 +1944,55 @@ msgid ""
 "#define LINUX_SYS_close 6\n"
 "...\n"
 msgstr ""
+"...\n"
+"#define LINUX_SYS_linux_fork 2\n"
+"...\n"
+"#define LINUX_SYS_close 6\n"
+"...\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:699
+#, fuzzy
 msgid ""
 "The [.filename]#linux_proto.h# contains structure definitions of arguments "
 "to every syscall, e.g.:"
 msgstr ""
+"O <filename>linux_proto.h</filename> contém definições de estrutura de "
+"argumentos para cada syscall, por exemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/linux-emulation/_index.adoc:705
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "struct linux_fork_args {\n"
 "  register_t dummy;\n"
 "};\n"
 msgstr ""
+"struct linux_fork_args {\n"
+"  register_t dummy;\n"
+"};\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:708
+#, fuzzy
 msgid ""
 "And finally, [.filename]#linux_sysent.c# contains structure describing the "
 "system entry table, used to actually dispatch a syscall, e.g.:"
 msgstr ""
+"E finalmente, <filename>linux_sysent.c</filename> contém uma estrutura "
+"descrevendo a tabela de entrada do sistema, usada para realmente enviar um "
+"syscall, por exemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/linux-emulation/_index.adoc:713
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "{ 0, (sy_call_t *)linux_fork, AUE_FORK, NULL, 0, 0 }, /* 2 = linux_fork */\n"
 "{ AS(close_args), (sy_call_t *)close, AUE_CLOSE, NULL, 0, 0 }, /* 6 = close */\n"
 msgstr ""
+"{ 0, (sy_call_t *)linux_fork, AUE_FORK, NULL, 0, 0 }, /* 2 = linux_fork */\n"
+"{ AS(close_args), (sy_call_t *)close, AUE_CLOSE, NULL, 0, 0 }, /* 6 = close "
+"*/\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:717
@@ -1752,6 +2047,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:740
+#, fuzzy
 msgid ""
 "This routine first checks whether the signal has been installed with a "
 "`SA_SIGINFO` in which case it calls `linux_rt_sendsig` routine instead.  "
@@ -1763,6 +2059,16 @@ msgid ""
 "Finally, it copies out the signal context to the userspace and prepares "
 "context for the actual signal handler to run."
 msgstr ""
+"Esta rotina primeiro verifica se o signal foi instalado com um "
+"<literal>SA_SIGINFO</literal>, caso em que chama a rotina "
+"<function>linux_rt_sendsig</function>. Além disso, ele aloca (ou reutiliza "
+"um contexto de identificador de sinal já existente) e cria uma lista de "
+"argumentos para o manipulador de signal. Ele traduz o número do signal "
+"baseado na tabela de tradução do signal, atribui um manipulador, traduz o "
+"sigset. Em seguida, ele salva o contexto para a rotina <function>sigreturn</"
+"function> (vários registradores, número da trap traduzida e máscara de "
+"signal). Finalmente, copia o contexto do signal para o espaço do usuário e "
+"prepara o contexto para que o manipulador de sinal real seja executado."
 
 #. type: Title ====
 #: documentation/content/en/articles/linux-emulation/_index.adoc:742
@@ -1788,11 +2094,15 @@ msgstr "linux_sigreturn"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:754
+#, fuzzy
 msgid ""
 "This syscall is used for return from the signal handler.  It does some "
 "security checks and restores the original process context.  It also unmasks "
 "the signal in process signal mask."
 msgstr ""
+"Esta syscall é usada para retornar do manipulador de sinal. Ela faz algumas "
+"verificações de segurança e restaura o contexto do processo original. Também "
+"desmascara o sinal na máscara de sinal do processo."
 
 #. type: Title ===
 #: documentation/content/en/articles/linux-emulation/_index.adoc:756
@@ -1898,6 +2208,7 @@ msgstr "Correção de pilha"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:811
+#, fuzzy
 msgid ""
 "The RTLD run-time link-editor expects so called AUX tags on stack during an "
 "`execve` so a fixup must be done to ensure this.  Of course, every RTLD "
@@ -1906,6 +2217,14 @@ msgid ""
 "copies out AUX tags to the stack and adjusts the stack of the user space "
 "process to point right after those tags.  So RTLD works in a smart way."
 msgstr ""
+"O editor de links em tempo de execução do RTLD espera as chamadas tags AUX "
+"na pilha durante uma <function>execve</function>, portanto, uma correção "
+"deve ser feita para garantir isso. Naturalmente, cada sistema RTLD é "
+"diferente, portanto, a camada de emulação deve fornecer sua própria rotina "
+"de correção de pilha para fazer isso. O mesmo acontece com o Linuxulator. O "
+"<function>elf_linux_fixup</function> simplesmente copia tags AUX para a "
+"pilha e ajusta a pilha do processo de espaço do usuário para apontar logo "
+"após essas tags. Então, a RTLD funciona de maneira inteligente."
 
 #. type: Title ===
 #: documentation/content/en/articles/linux-emulation/_index.adoc:813
@@ -2049,11 +2368,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:881
+#, fuzzy
 msgid ""
 "Every NPTL thread is created by a call to the `clone` syscall with a "
 "specific set of flags (more in the next subsection).  The NPTL implements "
 "strict 1:1 threading."
 msgstr ""
+"Cada threading NPTL é criada por uma chamada a syscall <function>clone</"
+"function> com um conjunto específico de flags (mais na próxima subseção). O "
+"NPTL implementa segmentação rígida de 1:1."
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:883
@@ -2160,9 +2483,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/linux-emulation/_index.adoc:928
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "struct linux_emuldata *em_find(struct proc *, int locked);\n"
-msgstr ""
+msgstr "struct linux_emuldata * em_find (struct proc *, int bloqueado);\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:933
@@ -2213,11 +2536,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/linux-emulation/_index.adoc:957
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "int linux_clone(l_int flags, void *stack, void *parent_tidptr, int dummy,\n"
 "void * child_tidptr);\n"
 msgstr ""
+"int linux_clone(l_int flags, void *stack, void *parent_tidptr, int dummy,\n"
+"void * child_tidptr);\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:967
@@ -2361,12 +2686,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1033
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "mov %edx,%gs:0x10\n"
-msgstr ""
+msgstr "mov %edx,%gs:0x10\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1042
+#, fuzzy
 msgid ""
 "This will load the content of the `%edx` register into memory location "
 "0x1244.  Some segment registers have a special use, for example `%cs` is "
@@ -2376,6 +2702,15 @@ msgid ""
 "can store more types of segments.  LDT can be per process.  Both tables "
 "define up to 8191 entries."
 msgstr ""
+"Isso carregará o conteúdo do registro <varname>% edx</varname> na "
+"localização da memória 0x1244. Alguns registradores de segmento têm um uso "
+"especial, por exemplo <varname>% cs</varname> é usado para segmento de "
+"código e <varname>% ss</varname> é usado para o segmento de pilha, mas "
+"<varname>% fs</varname> e <varname>% gs</varname> geralmente não são usados. "
+"Os segmentos são armazenados em uma tabela GDT global ou em uma tabela LDT "
+"local. O LDT é acessado por meio de uma entrada no GDT. O LDT pode armazenar "
+"mais tipos de segmentos. LDT pode ser por processo. Ambas as tabelas definem "
+"até 8191 entradas."
 
 #. type: Title ====
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1044
@@ -2447,6 +2782,7 @@ msgstr "amd64"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1081
+#, fuzzy
 msgid ""
 "The amd64 implementation is similar to the i386 one but there was initially "
 "no 32bit segment descriptor used for this purpose (hence not even native "
@@ -2456,6 +2792,13 @@ msgid ""
 "numbers are different and the descriptor format and the loading differs "
 "slightly."
 msgstr ""
+"A implementação do amd64 é semelhante à do i386, mas inicialmente não havia "
+"um descritor de segmento de 32 bits usado para esse propósito (por isso nem "
+"usuários nativos de TLB de 32 bits trabalhavam), então tivemos que adicionar "
+"esse segmento e implementar seu carregamento em cada troca de contexto ("
+"quando a flag sinalizando uso de 32 bits está definida). Além disso, o "
+"carregamento de TLS é exatamente o mesmo, apenas os números de segmento são "
+"diferentes e o formato do descritor e o carregamento diferem ligeiramente."
 
 #. type: Title ===
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1083
@@ -2471,6 +2814,7 @@ msgstr "Introdução à sincronização"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1096
+#, fuzzy
 msgid ""
 "Threads need some kind of synchronization and POSIX(R) provides some of "
 "them: mutexes for mutual exclusion, read-write locks for mutual exclusion "
@@ -2491,6 +2835,27 @@ msgid ""
 "user), this is in-kernel stuff but it shows clearly how important the "
 "performance of synchronization primitives is."
 msgstr ""
+"Threads precisam de algum tipo de sincronização e <trademark class="
+"\"registered\">POSIX</trademark> fornece alguns deles: mutexes para exclusão "
+"mútua, bloqueios de leitura/gravação para exclusão mútua com relação de "
+"polarização de leituras e gravações e variáveis de condição para sinalizar "
+"um mudança de status. É interessante observar que a API de thread <trademark "
+"class=\"registered\">POSIX</trademark> não tem suporte para semáforos. Essas "
+"implementações de rotinas de sincronização são altamente dependentes do tipo "
+"de suporte a threading que temos. No modelo puro 1:M (espaço de usuário), a "
+"implementação pode ser feita apenas no espaço do usuário e, portanto, ser "
+"muito rápida (as variáveis de condição provavelmente serão implementadas "
+"usando sinais, ou seja, não rápido) e simples. No modelo 1:1, a situação "
+"também é bastante clara - as threading devem ser sincronizadas usando as "
+"facilidades do kernel (o que é muito lento porque uma syscall deve ser "
+"executada). O cenário M:N misto combina apenas a primeira e a segunda "
+"abordagem ou depende apenas do kernel. A sincronização de threads é uma "
+"parte vital da programação ativada por threads e seu desempenho pode afetar "
+"muito o programa resultante. Benchmarks recentes no sistema operacional "
+"FreeBSD mostraram que uma implementação sx_lock melhorada gerou 40% de "
+"aceleração no <firstterm>ZFS</firstterm> (um usuário sx pesado), isso é algo "
+"in-kernel, mas mostra claramente quão importante é o desempenho das "
+"primitivas de sincronização. ."
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1100
@@ -2558,9 +2923,11 @@ msgstr "A syscall do futex é assim:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1130
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "int futex(void *uaddr, int op, int val, struct timespec *timeout, void *uaddr2, int val3);\n"
 msgstr ""
+"int futex(void *uaddr, int op, int val, struct timespec *timeout, void *"
+"uaddr2, int val3);\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1133
@@ -2577,33 +2944,39 @@ msgstr "Futexes implementam as seguintes operações:"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1137
+#, fuzzy
 msgid "`FUTEX_WAIT`"
-msgstr ""
+msgstr "FUTEX_WAIT"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1138
+#, fuzzy
 msgid "`FUTEX_WAKE`"
-msgstr ""
+msgstr "FUTEX_WAKE"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1139
+#, fuzzy
 msgid "`FUTEX_FD`"
-msgstr ""
+msgstr "FUTEX_FD"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1140
+#, fuzzy
 msgid "`FUTEX_REQUEUE`"
-msgstr ""
+msgstr "FUTEX_REQUEUE"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1141
+#, fuzzy
 msgid "`FUTEX_CMP_REQUEUE`"
-msgstr ""
+msgstr "FUTEX_CMP_REQUEUE"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1142
+#, fuzzy
 msgid "`FUTEX_WAKE_OP`"
-msgstr ""
+msgstr "FUTEX_WAKE_OP"
 
 #. type: Title =====
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1144
@@ -2800,6 +3173,7 @@ msgstr "futex_get / futex_put"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1228
+#, fuzzy
 msgid ""
 "A futex is obtained using the `futex_get` function, which searches a linear "
 "list of futexes and returns the found one or creates a new futex.  When "
@@ -2807,6 +3181,11 @@ msgid ""
 "decreases a reference counter of the futex and if the refcount reaches zero "
 "it is released."
 msgstr ""
+"Um futex é obtido usando a função <function>futex_get</function>, que busca "
+"uma lista linear de futexes e retorna o encontrado ou cria um novo futex. Ao "
+"liberar um futex do uso, chamamos a função <function>futex_put</function>, "
+"que diminui um contador de referência do futex e, se o refcount chegar a "
+"zero, ele é liberado."
 
 #. type: Title =====
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1230
@@ -2870,20 +3249,27 @@ msgstr "operação atômica futex"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1262
+#, fuzzy
 msgid ""
 "The atomic operation takes two parameters `encoded_op` and `uaddr`.  The "
 "encoded operation encodes the operation itself, comparing value, operation "
 "argument, and comparing argument.  The pseudocode for the operation is like "
 "this one:"
 msgstr ""
+"A operação atômica usa dois parâmetros <varname>encoded_op</varname> e "
+"<varname>uaddr</varname>. A operação codificada, codifica a operação em si, "
+"comparando valor, argumento de operação e argumento de comparação. O "
+"pseudocódigo da operação é como este:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1267
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "oldval = *uaddr2\n"
 "*uaddr2 = oldval OP oparg\n"
 msgstr ""
+"oldval = *uaddr2\n"
+"*uaddr2 = oldval OP oparg\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1271
@@ -2902,11 +3288,16 @@ msgstr "Bloqueio Futex"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1277
+#, fuzzy
 msgid ""
 "Futex implementation uses two lock lists protecting `sx_lock` and global "
 "locks (either Giant or another `sx_lock`).  Every operation is performed "
 "locked from the start to the very end."
 msgstr ""
+"A implementação do Futex usa duas listas de lock que protegndo "
+"<function>sx_lock</function> e locks globais (Giant ou outra "
+"<function>sx_lock</function>). Cada operação é executada bloqueada desde o "
+"início até o final."
 
 #. type: Title ===
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1279
@@ -3033,6 +3424,7 @@ msgstr "Ioctl"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1350
+#, fuzzy
 msgid ""
 "The ioctl interface is quite fragile due to its generality.  We have to bear "
 "in mind that devices differ between Linux(R) and FreeBSD so some care must "
@@ -3054,6 +3446,30 @@ msgid ""
 "plan is to port those from NetBSD.  The trend is to use Linux(R) ioctls even "
 "in the native FreeBSD drivers because of the easy porting of applications."
 msgstr ""
+"A interface ioctl é bastante frágil devido à sua generalidade. Nós temos que "
+"ter em mente que os dispositivos diferem entre <trademark class=\"registered"
+"\">Linux</trademark> e FreeBSD, então alguns cuidados devem ser aplicados "
+"para fazer o trabalho de emulação de ioctl corretamente. O manuseio ioctl é "
+"implementado em <filename>linux_ioctl.c</filename>, onde a função "
+"<function>linux_ioctl</function> é definida. Esta função simplesmente itera "
+"sobre conjuntos de manipuladores ioctl para encontrar um manipulador que "
+"implementa um dado comando. A syscall ioctl tem três parâmetros, o file "
+"descriptor, comando e um argumento. O comando é um número de 16 bits, que, "
+"em teoria, é dividido em alta classe determinante de 8 bits do comando ioctl "
+"e 8 bits baixos, que são o comando real dentro do conjunto dado. A emulação "
+"aproveita essa divisão. Implementamos manipuladores para cada conjunto, como "
+"<function>sound_handler</function> ou <function>disk_handler</function>. "
+"Cada manipulador tem um comando máximo e um comando mínimo definido, que é "
+"usado para determinar qual manipulador é usado. Existem pequenos problemas "
+"com esta abordagem porque <trademark class=\"registered\">Linux</trademark> "
+"não usa a divisão definida consistentemente, por isso as ioctls para um "
+"conjunto diferente estão dentro de um conjunto ao qual não devem pertencer ("
+"ioctls genéricos SCSI dentro do cdrom conjunto, etc.). O FreeBSD atualmente "
+"não implementa muitos ioctls do <trademark class=\"registered\">Linux</"
+"trademark> (comparado ao NetBSD, por exemplo), mas o plano é portar os do "
+"NetBSD. A tendência é usar o ioctls <trademark class=\"registered\">Linux</"
+"trademark> mesmo nos drivers nativos do FreeBSD, devido à fácil "
+"portabilidade dos aplicativos."
 
 #. type: Title ====
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1352
@@ -3063,6 +3479,7 @@ msgstr "Depuração"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1359
+#, fuzzy
 msgid ""
 "Every syscall should be debuggable.  For this purpose we introduce a small "
 "infrastructure.  We have the ldebug facility, which tells whether a given "
@@ -3070,6 +3487,11 @@ msgid ""
 "LMSG and ARGS macros.  Those are used for altering a printable string for "
 "uniform debugging messages."
 msgstr ""
+"Cada syscall deve ser debugável. Para isso, introduzimos uma pequena infra-"
+"estrutura. Nós temos o recurso ldebug, que informa se uma dada syscall deve "
+"ser depurada (configurável através de um sysctl). Para impressão, temos as "
+"macros LMSG e ARGS. Essas são usadas para alterar uma string imprimível para "
+"mensagens uniformes de depuração."
 
 #. type: Title ==
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1361
@@ -3112,12 +3534,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1377
+#, fuzzy
 msgid ""
 "We hope to enable 2.6.16 emulation by default some time after FreeBSD 7.0 is "
 "released at least to expose the 2.6 emulation parts for some wider testing.  "
 "Once this is done we can switch to Fedora Core 6 linux_base, which is the "
 "ultimate plan."
 msgstr ""
+"Esperamos habilitar a emulação 2.6.16 por padrão algum tempo depois que o "
+"FreeBSD 7.0 for lançado pelo menos para expor as partes da emulação 2.6 para "
+"alguns testes mais amplos. Feito isso, podemos mudar para o Fedora Core 6 "
+"linux_base, que é o plano final."
 
 #. type: Title ===
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1379
@@ -3127,11 +3554,16 @@ msgstr "Trabalho futuro"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1382
+#, fuzzy
 msgid ""
 "Future work should focus on fixing the remaining issues with futexes, "
 "implement the rest of the *at family of syscalls, fix the signal delivery "
 "and possibly implement the `epoll` and `inotify` facilities."
 msgstr ""
+"O trabalho futuro deve focar na correção dos problemas remanescentes com "
+"futexes, implementar o restante da família de syscalls, corrigir a entrega "
+"de sinal e possivelmente implementar os recursos de <function>epoll</"
+"function> e <function>inotify</function>."
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1384
@@ -3148,12 +3580,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1388
+#, fuzzy
 msgid ""
 "The other possible goal is to share our code with NetBSD and DragonflyBSD.  "
 "NetBSD has some support for 2.6 emulation but its far from finished and not "
 "really tested.  DragonflyBSD has expressed some interest in porting the 2.6 "
 "improvements."
 msgstr ""
+"O outro objetivo possível é compartilhar nosso código com o NetBSD e o "
+"DragonflyBSD. O NetBSD tem algum suporte para emulação 2.6, mas está longe "
+"de ser concluído e não foi realmente testado. O DragonflyBSD manifestou "
+"algum interesse em portar as melhorias do 2.6."
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-emulation/_index.adoc:1393
