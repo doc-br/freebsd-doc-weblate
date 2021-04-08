@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-04-01 00:52+0000\n"
+"PO-Revision-Date: 2021-04-08 23:28+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/articlespr-guidelines_index/pt_BR/>\n"
@@ -51,15 +51,21 @@ msgstr "Introdução"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:38
+#, fuzzy
 msgid ""
 "Bugzilla is an issue management system used by the FreeBSD Project.  As "
 "accurate tracking of outstanding software defects is important to FreeBSD's "
 "quality, the correct use of the software is essential to the forward "
 "progress of the Project."
 msgstr ""
+"O Bugzilla é um sistema de gerenciamento de problemas usado pelo Projeto "
+"FreeBSD. Como o rastreamento preciso de defeitos de software pendentes é "
+"importante para a qualidade do FreeBSD, o uso correto do software é "
+"essencial para o avanço do projeto."
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:41
+#, fuzzy
 msgid ""
 "Access to Bugzilla is available to the entire FreeBSD community.  In order "
 "to maintain consistency within the database and provide a consistent user "
@@ -67,6 +73,11 @@ msgid ""
 "management such as presenting followup, handling close requests, and so "
 "forth."
 msgstr ""
+"O acesso ao Bugzilla está disponível para toda a comunidade do FreeBSD. Para "
+"manter a consistência dentro do banco de dados e fornecer uma experiência de "
+"usuário consistente, diretrizes foram estabelecidas cobrindo aspectos comuns "
+"do gerenciamento de erros, como apresentação de acompanhamento, tratamento "
+"de solicitações de fechamento e assim por diante."
 
 #. type: Title ==
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:43
@@ -83,20 +94,30 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:47
+#, fuzzy
 msgid ""
 "Jane Random BugBuster confirms that the bug report has sufficient "
 "information to be reproducible. If not, she goes back and forth with the "
 "reporter to obtain the needed information. At this point the bug is set to "
 "the `Open` state."
 msgstr ""
+"Jane Random BugBuster confirma que o relatório de erros tem informação "
+"suficiente para ser reproduzível. Se não, ela irá interagir repetidamente "
+"com o usuário para obter as informações necessárias. Neste ponto, o bug é "
+"definido para o estado <literal> Open </literal>."
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:48
+#, fuzzy
 msgid ""
 "Joe Random Committer takes interest in the PR and assigns it to himself, or "
 "Jane Random BugBuster decides that Joe is best suited to handle it and "
 "assigns it to him. The bug should be set to the `In Discussion` state."
 msgstr ""
+"Joe Random Committer se interessa pelo PR e o atribui a si mesmo, ou Jane "
+"Random BugBuster decide que Joe é a pessoa mais adequada para lidar com o "
+"problema e atribui o bug a ele. O bug deve ser definido para o estado "
+"<literal> In Discussion </literal>."
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:49
@@ -118,6 +139,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:51
+#, fuzzy
 msgid ""
 "A couple of iterations later, both Joe and the originator are satisfied with "
 "the patch, and Joe commits it to `-CURRENT` (or directly to `-STABLE` if the "
@@ -126,6 +148,14 @@ msgid ""
 "part of the patch) and, if appropriate, start an MFC countdown. The bug is "
 "set to the `Needs MFC` state."
 msgstr ""
+"Algumas iterações depois, Joe e o originador estão satisfeitos com o patch, "
+"e Joe faz o commit para o branch <literal>-CURRENT</literal> (ou diretamente "
+"para o branch <literal>-STABLE</literal> se o problema não existir no "
+"<literal>-CURRENT</literal>), certificando-se de fazer referencia ao "
+"Relatório de Problemas no seu log de commit (e dando o crédito ao  "
+"originador caso ele tenha enviado o patch todo ou parte dele) e, se "
+"apropriado, iniciará uma contagem regressiva de MFC. O bug é então alterado "
+"para o estado <literal> Needs MFC </literal>."
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:52
@@ -136,6 +166,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:57
+#, fuzzy
 msgid ""
 "Many PRs are submitted with very little information about the problem, and "
 "some are either very complex to solve, or just scratch the surface of a "
@@ -144,6 +175,12 @@ msgid ""
 "within cannot be solved, or has occurred again, it is necessary to re-open "
 "the PR."
 msgstr ""
+"Muitos PRs são submetidos contendo muito pouca informação sobre o problema, "
+"e alguns são muito complexos para resolver, ou apenas arranham a superfície "
+"de um problema maior; Nestes casos, é muito importante obter todas as "
+"informações necessárias para resolver o problema. Se o problema reportado "
+"não puder ser resolvido ou caso ele ocorra novamente, é necessário reabrir o "
+"PR."
 
 #. type: Title ==
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:60
@@ -153,10 +190,14 @@ msgstr "Estado do relatório de problemas"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:64
+#, fuzzy
 msgid ""
 "It is important to update the state of a PR when certain actions are taken.  "
 "The state should accurately reflect the current state of work on the PR."
 msgstr ""
+"É importante atualizar o status de um PR quando determinadas ações são "
+"tomadas. O status deve refletir com precisão o estado atual do trabalho no "
+"PR."
 
 #. type: Block title
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:65
@@ -166,6 +207,7 @@ msgstr "Um pequeno exemplo sobre quando alterar o estado de PR"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:70
+#, fuzzy
 msgid ""
 "When a PR has been worked on and the developer(s) responsible feel "
 "comfortable about the fix, they will submit a followup to the PR and change "
@@ -173,6 +215,11 @@ msgid ""
 "the fix in their context and respond indicating whether the defect has "
 "indeed been remedied."
 msgstr ""
+"Quando um PR tiver sido tratado e o desenvolvedor responsável se sente "
+"confortável com a correção, ele enviará um follow up para o PR e mudará o "
+"seu estado para <quote>feedback</quote>. Neste ponto, o originador deve "
+"avaliar a correção em seu contexto e responder indicando se o defeito foi de "
+"fato remediado."
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:73
@@ -239,6 +286,7 @@ msgstr "suspended"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:91
+#, fuzzy
 msgid ""
 "The problem is not being worked on, due to lack of information or "
 "resources.  This is a prime candidate for somebody who is looking for a "
@@ -247,6 +295,13 @@ msgid ""
 "wish-list items that entail a significant amount of work which no one "
 "currently has time for."
 msgstr ""
+"O problema não está sendo trabalhado, devido à falta de informações ou "
+"recursos. Este é um excelente candidato para alguém que está procurando um "
+"projeto para assumir. Se o problema não puder ser resolvido, ele será "
+"fechado, e não suspenso. O projeto de documentação usa <quote>suspended</"
+"quote> para itens da <quote>lista de desejos</quote> que envolvem uma "
+"quantidade significativa de trabalho para a qual ninguém tem tempo no "
+"momento."
 
 #. type: Labeled list
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:92
@@ -267,11 +322,16 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:98
+#, fuzzy
 msgid ""
 "The \"patched\" state is directly related to feedback, so you may go "
 "directly to \"closed\" state if the originator cannot test the patch, and it "
 "works in your own testing."
 msgstr ""
+"O estado <quote>patched</quote> está diretamente relacionado ao feedback, "
+"então você pode passar direto para o estado de <quote>closed</quote> se o "
+"originador não puder testar o patch, e ele tiver funcionado no seu próprio "
+"teste."
 
 #. type: Title ==
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:101
@@ -337,6 +397,7 @@ msgstr "PRs não atribuídos"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:120
+#, fuzzy
 msgid ""
 "When PRs arrive, they are initially assigned to a generic (placeholder) "
 "assignee.  These are always prepended with `freebsd-`.  The exact value for "
@@ -344,12 +405,17 @@ msgid ""
 "specific FreeBSD mailing list.  Here is the current list, with the most "
 "common ones listed first:"
 msgstr ""
+"Quando os PRs chegam, eles são inicialmente atribuídos a um responsável "
+"genérico (placeholder). Estes são sempre prefixados com <literal>freebsd-</"
+"literal>. O valor exato para esse padrão depende da categoria; na maioria "
+"dos casos, corresponde a uma lista de discussão específica do FreeBSD. Aqui "
+"está a lista atual, com os mais comuns listados primeiro:"
 
 #. type: Block title
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:122
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Default Assignees - most common"
-msgstr ""
+msgstr "Responsáveis Padrões - mais comuns"
 
 #. type: Table
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:148
@@ -382,9 +448,9 @@ msgstr ""
 
 #. type: Block title
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:151
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Default Assignees - other"
-msgstr ""
+msgstr "Responsável Padrão - outros"
 
 #. type: Table
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:177
@@ -417,6 +483,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:183
+#, fuzzy
 msgid ""
 "Do not be surprised to find that the submitter of the PR has assigned it to "
 "the wrong category.  If you fix the category, do not forget to fix the "
@@ -425,22 +492,38 @@ msgid ""
 "that it might be generic to all of FreeBSD, and thus be more appropriate for "
 "`kern`.  The converse is also true, of course.)"
 msgstr ""
+"Não se surpreenda ao descobrir que o usuário responsável pelo PR atribuiu a "
+"categoria errada. Se você corrigir a categoria, não se esqueça de corrigir a "
+"atribuição também. (Em particular, nossos usuários parecem ter dificuldade "
+"em entender que apenas porque seu problema se manifesta em um sistema i386, "
+"que ele pode ser genérico para todo o FreeBSD, e assim ser mais apropriado "
+"para o <literal>kern</literal>. O oposto também é verdade, claro.)"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:186
+#, fuzzy
 msgid ""
 "Certain PRs may be reassigned away from these generic assignees by anyone.  "
 "There are several types of assignees: specialized mailing lists; mail "
 "aliases (used for certain limited-interest items); and individuals."
 msgstr ""
+"Certos PRs podem ser reatribuídos para longe destes responsáveis genéricos "
+"por qualquer pessoa. Existem vários tipos de responsáveis: listas de "
+"discussão especializadas; aliases de correio (usados para determinados itens "
+"de interesse limitado); e indivíduos."
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:189
+#, fuzzy
 msgid ""
 "For assignees which are mailing lists, please use the long form when making "
 "the assignment (e.g., `freebsd-foo` instead of `foo`); this will avoid "
 "duplicate emails sent to the mailing list."
 msgstr ""
+"Para os responsáveis que são listas de discussão, use o formulário longo ao "
+"fazer a atribuição (por exemplo, <literal>freebsd-foo</literal> em vez de "
+"<literal>foo</literal>); isso evitará emails duplicados enviados para a "
+"lista de discussão."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:193
@@ -459,9 +542,9 @@ msgstr ""
 
 #. type: Block title
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:198
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Common Assignees - base system"
-msgstr ""
+msgstr "Responsáveis Comuns - sistema base"
 
 #. type: Table
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:315
@@ -585,9 +668,9 @@ msgstr ""
 
 #. type: Block title
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:318
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Common Assignees - Ports Collection"
-msgstr ""
+msgstr "Responsáveis Comuns - Ports Collection"
 
 #. type: Table
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:420
@@ -708,6 +791,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:426
+#, fuzzy
 msgid ""
 "For other PRs, please do not reassign them to individuals (other than "
 "yourself) unless you are certain that the assignee really wants to track the "
@@ -715,12 +799,17 @@ msgid ""
 "particular problem because everyone assumes that the assignee is already "
 "working on it."
 msgstr ""
+"Para outros PRs, por favor, não os reatribua para outros indivíduos (outros "
+"que não sejam você), a menos que tenha certeza de que o responsável "
+"realmente deseja acompanhar o PR. Isso ajudará a evitar situações em que "
+"ninguém se dedica para consertar um problema em particular, porque todos "
+"assumem que o responsável já está trabalhando nele."
 
 #. type: Block title
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:428
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Common Assignees - Other"
-msgstr ""
+msgstr "Responsáveis Comuns - Outros"
 
 #. type: Table
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:445
@@ -758,6 +847,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:456
+#, fuzzy
 msgid ""
 "Assigned PRs should not be touched by anyone but the assignee or "
 "bugmeister.  If you have comments, submit a followup.  If for some reason "
@@ -765,6 +855,11 @@ msgid ""
 "assignee.  If the assignee does not respond within two weeks, unassign the "
 "PR and do as you please."
 msgstr ""
+"PRs designados não devem ser tocados por ninguém além do responsável ou do "
+"bugmeister. Se você tiver comentários, envie um followup. Se, por algum "
+"motivo, você achar que o PR deve mudar de estado ou ser reatribuído, envie "
+"uma mensagem ao responsável. Se o responsável não responder dentro de duas "
+"semanas, cancele a atribuição do PR e faça o que quiser."
 
 #. type: Title ==
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:458
@@ -774,6 +869,7 @@ msgstr "PRs Duplicados"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:462
+#, fuzzy
 msgid ""
 "If you find more than one PR that describe the same issue, choose the one "
 "that contains the largest amount of useful information and close the others, "
@@ -782,6 +878,13 @@ msgid ""
 "one in a followup, including references to the others; then close the other "
 "PRs (which are now completely superseded)."
 msgstr ""
+"Se você encontrar mais de um PR que descreva o mesmo problema, escolha "
+"aquele que contém a maior quantidade de informações úteis e feche os outros, "
+"indicando claramente o número do PR substituto. Se vários PRs contiverem "
+"informações úteis que não se sobrepõem, envie todas as informações ausentes "
+"para um para um deles por meio de um followup, incluindo referências aos "
+"outros; em seguida, feche os outros PRs (que agora estão completamente "
+"substituídos)."
 
 #. type: Title ==
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:464
@@ -809,12 +912,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:470
+#, fuzzy
 msgid ""
 "If the PR describes an issue which you know is the result of a usage error "
 "(incorrect configuration or otherwise), submit a followup explaining what "
 "the originator did wrong, then close the PR with the reason \"User error\" "
 "or \"Configuration error\"."
 msgstr ""
+"Se o PR descrever um problema que você sabe ser o resultado de um erro de "
+"uso (configuração incorreta ou outra coisa do tipo), envie um followup "
+"explicando o que o originador fez de errado e feche o PR com o motivo "
+"<quote>User error</quote> ou <quote>Configuration error</quote>."
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:471
@@ -836,11 +944,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:473
+#, fuzzy
 msgid ""
 "In other cases, ask the originator to confirm if the problem still exists in "
 "newer versions. If the originator does not reply within a month, close the "
 "PR with the notation \"Feedback timeout\"."
 msgstr ""
+"Em outros casos, peça ao originador para confirmar se o problema ainda "
+"existe em versões mais recentes. Se o originador não responder dentro de um "
+"mês, feche o PR com a notação <quote>Feedback timeout</quote>."
 
 #. type: Title ==
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:475
@@ -859,11 +971,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:481
+#, fuzzy
 msgid ""
 "The email addresses that Bugzilla listens to for incoming PRs have been "
 "published as part of the FreeBSD documentation, have been announced and "
 "listed on the web-site.  This means that spammers found them."
 msgstr ""
+"Os endereços de e-mail que o Bugzilla utiliza para receber os PRs foram "
+"publicados como parte da documentação do FreeBSD, e também foram anunciados "
+"e listados no website. Isso significa que os spammers os encontraram."
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:483
@@ -901,10 +1017,13 @@ msgstr "Leitura Adicional"
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:495
+#, fuzzy
 msgid ""
 "This is a list of resources relevant to the proper writing and processing of "
 "problem reports.  It is by no means complete."
 msgstr ""
+"Esta é uma lista de recursos relevantes para a escrita adequada e "
+"processamento de relatórios de problemas. Não está de modo algum completo."
 
 #. type: Plain text
 #: documentation/content/en/articles/pr-guidelines/_index.adoc:496
