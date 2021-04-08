@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-04-01 00:52+0000\n"
+"PO-Revision-Date: 2021-04-08 23:28+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/articlesrc-scripting_index/pt_BR/>\n"
@@ -31,6 +31,7 @@ msgstr "Sumário"
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:29
+#, fuzzy
 msgid ""
 "Beginners may find it difficult to relate the facts from the formal "
 "documentation on the BSD [.filename]#rc.d# framework with the practical "
@@ -40,6 +41,13 @@ msgid ""
 "provide reference points for further study of the design and efficient "
 "application of [.filename]#rc.d#."
 msgstr ""
+"Os iniciantes podem achar difícil relacionar os fatos da documentação formal "
+"do framework <filename>rc.d</filename> do BSD com as tarefas práticas do "
+"script <filename>rc.d</filename>. Neste artigo, consideramos alguns casos "
+"típicos de complexidade crescente, vamos mostrar os recursos do <filename>rc."
+"d</filename> adequados para cada caso e vamos discutir como eles funcionam. "
+"Esse exame deve fornecer pontos de referência para um estudo mais "
+"aprofundado do design e da aplicação eficiente do <filename>rc.d</filename>."
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:31
@@ -98,6 +106,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:62
+#, fuzzy
 msgid ""
 "Without a clean and well-designed framework, the startup scripts had to bend "
 "over backwards to satisfy the needs of rapidly developing BSD-based "
@@ -109,6 +118,17 @@ msgid ""
 "in [.filename]#/etc/rc.d#.  Soon we will learn about more components of the "
 "[.filename]#rc.d# system and see how the individual scripts are invoked."
 msgstr ""
+"Sem um framework limpo e bem projetado, os scripts de inicialização tiveram "
+"que se curvar para satisfazer as necessidades de desenvolvimento rápido dos "
+"sistemas operacionais baseados no BSD. Tornou-se óbvio, finalmente, que mais "
+"passos eram necessários no caminho para construção de um sistema "
+"<filename>rc</filename> extensível e customizável. Assim nasceu o BSD "
+"<filename>rc.d</filename>. Seus pais reconhecidos foram o Luke Mewburn e a "
+"comunidade do NetBSD. Mais tarde ele foi importado para o FreeBSD. Seu nome "
+"se refere à localização dos scripts do sistema para serviços individuais, "
+"que é o <filename>/etc/rc.d</filename>. Em breve, vamos aprender sobre mais "
+"componentes do sistema <filename>rc.d</filename> e vamos ver como os scripts "
+"individuais são invocados."
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:73
@@ -162,12 +182,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:88
+#, fuzzy
 msgid ""
 "This article focuses on the FreeBSD branch of [.filename]#rc.d#.  "
 "Nevertheless, it may be useful to NetBSD developers, too, because the two "
 "branches of BSD [.filename]#rc.d# not only share the same design but also "
 "stay similar in their aspects visible to script authors."
 msgstr ""
+"Este artigo foca no branch <filename>rc.d</filename> do FreeBSD. No entanto, "
+"ele também pode ser útil para os desenvolvedores do NetBSD, porque os dois "
+"branchs <filename>rc.d</filename> do BSD não apenas compartilham o mesmo "
+"design, mas também permanecem similares em seus aspectos visíveis aos "
+"autores do script."
 
 #. type: Title ==
 #: documentation/content/en/articles/rc-scripting/_index.adoc:90
@@ -177,11 +203,16 @@ msgstr "Esboçando a tarefa"
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:94
+#, fuzzy
 msgid ""
 "A little consideration before starting `$EDITOR` will not hurt.  In order to "
 "write a well-tempered [.filename]#rc.d# script for a system service, we "
 "should be able to answer the following questions first:"
 msgstr ""
+"Um pouco de consideração antes de iniciar o <envar>$EDITOR</envar> não irá "
+"prejudicar. Para escrever um script <filename>rc.d</filename> corretamente "
+"customizado para um serviço do sistema, devemos poder responder as seguintes "
+"questões primeiro:"
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:96
@@ -328,10 +359,13 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/rc-scripting/_index.adoc:160
+#, fuzzy
 msgid ""
 "Some useful functions related to networking are provided by another include "
 "file, [.filename]#/etc/network.subr#."
 msgstr ""
+"Algumas funções úteis relacionadas a rede são fornecidas por outro arquivo "
+"include, o <filename>/etc/network.subr</filename>."
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:165
@@ -343,11 +377,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:169
+#, fuzzy
 msgid ""
 "Now it is the right time to choose a unique name for our script once and for "
 "all.  We will use it in a number of places while developing the script.  For "
 "a start, let us give the same name to the script file, too."
 msgstr ""
+"Agora é o momento certo para escolher um nome exclusivo para o nosso script "
+"de uma vez por todas. Vamos usá-lo em vários lugares enquanto desenvolvemos "
+"o script. Para começar, também vamos dar o mesmo nome ao arquivo de script."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/rc-scripting/_index.adoc:176
@@ -375,11 +413,15 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/rc-scripting/_index.adoc:187
+#, fuzzy
 msgid ""
 "To make the code in [.filename]#rc.d# more uniform, it is common to use `"
 "${name}` wherever appropriate.  Thus a number of lines can be just copied "
 "from one script to another."
 msgstr ""
+"Para tornar o código em <filename>rc.d</filename> mais uniforme, é comum "
+"usar <envar>${name}</envar> onde for apropriado. Assim, várias linhas podem "
+"ser copiadas de um script para outro."
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:191
@@ -607,9 +649,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/rc-scripting/_index.adoc:298
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "start_cmd=\"echo \\\"$dummy_msg\\\"\"\n"
-msgstr ""
+msgstr "start_cmd=\"echo \\\"$dummy_msg\\\"\"\n"
 
 #. type: Title ==
 #: documentation/content/en/articles/rc-scripting/_index.adoc:301
@@ -655,10 +697,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:326
+#, fuzzy
 msgid ""
 "Pleasingly simple, isn't it? Let us examine our little script.  The only new "
 "thing to note is as follows:"
 msgstr ""
+"Agradavelmente simples, não é? Vamos examinar nosso pequeno script. A única "
+"coisa nova a observar é o seguinte:"
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:330
@@ -732,12 +777,18 @@ msgstr "Inicialização e desligamento de um daemon avançado"
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:365
+#, fuzzy
 msgid ""
 "Let us add some meat onto the bones of the previous script and make it more "
 "complex and featureful.  The default methods can do a good job for us, but "
 "we may need some of their aspects tweaked.  Now we will learn how to tune "
 "the default methods to our needs."
 msgstr ""
+"Vamos adicionar um pouco de carne aos ossos do script anterior e torná-lo "
+"mais complexo e cheio de funcionalidades. Os métodos padrões podem fazer um "
+"bom trabalho para nós, mas podemos precisar ajustar alguns dos seus "
+"aspectos. Agora vamos aprender como ajustar os métodos padrões para as "
+"nossas necessidades."
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/rc-scripting/_index.adoc:377
@@ -1033,12 +1084,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/rc-scripting/_index.adoc:535
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "if checkyesno mumbled_enable; then\n"
 "        foo\n"
 "fi\n"
 msgstr ""
+"if checkyesno mumbled_enable; then\n"
+"        foo\n"
+"fi\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:538
@@ -1049,12 +1103,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/rc-scripting/_index.adoc:544
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "if checkyesno \"${mumbled_enable}\"; then\n"
 "        foo\n"
 "fi\n"
 msgstr ""
+"if checkyesno \"${mumbled_enable}\"; then\n"
+"        foo\n"
+"fi\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/rc-scripting/_index.adoc:549
@@ -1111,6 +1168,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/rc-scripting/_index.adoc:576
+#, fuzzy
 msgid ""
 "However, we should consider beforehand the place of our script in the system "
 "startup sequence.  The service handled by our script is likely to depend on "
@@ -1119,6 +1177,13 @@ msgid ""
 "demand nothing, it can hardly start before the basic filesystems have been "
 "checked and mounted."
 msgstr ""
+"No entanto, devemos considerar antecipadamente o local do nosso script na "
+"sequência de inicialização do sistema. O serviço manipulado pelo nosso "
+"script provavelmente depende de outros serviços. Por exemplo, um daemon de "
+"rede não pode funcionar sem as interfaces de rede e o roteamento em "
+"funcionamento. Mesmo que um serviço pareça não exigir nada, dificilmente "
+"pode ser iniciado antes que os sistemas de arquivos básicos tenham sido "
+"verificados e montados."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/rc-scripting/_index.adoc:582
@@ -1230,11 +1295,15 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/rc-scripting/_index.adoc:637
+#, fuzzy
 msgid ""
 "Usually a script specifies a single condition provided.  However, nothing "
 "prevents us from listing several conditions there, e.g., for compatibility "
 "reasons."
 msgstr ""
+"Geralmente, um script especifica uma única condição fornecida. No entanto, "
+"nada nos impede de listar várias condições, por exemplo, por razões de "
+"compatibilidade."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/rc-scripting/_index.adoc:639
@@ -1254,6 +1323,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/rc-scripting/_index.adoc:649
+#, fuzzy
 msgid ""
 "The `BEFORE:` line should not be abused to work around an incomplete "
 "dependency list in the other script.  The appropriate case for using `BEFORE:"
@@ -1263,6 +1333,14 @@ msgid ""
 "on the firewall in doing their job, the system security will benefit from "
 "the firewall being ready before there is any network traffic."
 msgstr ""
+"A linha <literal>BEFORE:</literal> não deve ser abusada para contornar uma "
+"lista de dependências incompleta no outro script. O caso apropriado para "
+"usar o <literal>BEFORE:</literal> é quando o outro script não se importa com "
+"o nosso, mas nosso script pode fazer sua tarefa melhor se for executado "
+"antes do outro. Um típico exemplo da vida real são as interfaces de rede "
+"versus o firewall: embora as interfaces não dependam do firewall em realizar "
+"seu trabalho, a segurança do sistema se beneficiará do firewall estar pronto "
+"antes que haja qualquer tráfego de rede."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/rc-scripting/_index.adoc:653
@@ -1385,10 +1463,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/rc-scripting/_index.adoc:705
+#, fuzzy
 msgid ""
 "To illustrate this opportunity, let us modify the primitive dummy script so "
 "that its messages depend on the additional arguments supplied.  Here we go:"
 msgstr ""
+"Para ilustrar essa oportunidade, vamos modificar o script fictício primitivo "
+"para que suas mensagens dependam dos argumentos adicionais fornecidos. Aqui "
+"vamos nós:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/rc-scripting/_index.adoc:717
