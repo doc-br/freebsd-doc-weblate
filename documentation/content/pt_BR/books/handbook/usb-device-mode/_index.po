@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:55-0300\n"
-"PO-Revision-Date: 2021-03-30 23:19+0000\n"
+"PO-Revision-Date: 2021-04-08 03:22+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookusb-device-mode_index/pt_BR/>\n"
@@ -64,6 +64,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:52
+#, fuzzy
 msgid ""
 "There are two basic ways the hardware can provide the device mode "
 "functionality: with a separate \"client port\", which only supports the "
@@ -74,6 +75,17 @@ msgid ""
 "mode. Connecting a USB host like a computer causes FreeBSD to switch to "
 "device mode. Single purpose \"client ports\" always work in device mode."
 msgstr ""
+"Existem duas maneiras básicas pelas quais o hardware pode fornecer a "
+"funcionalidade do modo de dispositivo: com uma \"porta de cliente\" "
+"separada, que suporta apenas o modo de dispositivo, e com uma porta USB OTG, "
+"que pode fornecer o modo de dispositivo e o modo de host. Para portas "
+"<acronym>USB OTG</acronym>, a stack <acronym>USB</acronym> alterna "
+"automaticamente entre o lado do host e o lado do dispositivo, dependendo do "
+"que estiver conectado à porta. Conectar um dispositivo <acronym>USB</"
+"acronym> como um cartão de memória à porta faz com que o FreeBSD mude para o "
+"modo de host. Conectar um host <acronym>USB</acronym> como um computador faz "
+"com que o FreeBSD mude para o modo de dispositivo. As \"portas do cliente\" "
+"de finalidade única sempre funcionam no modo de dispositivo."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:54
@@ -154,18 +166,23 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:73
+#, fuzzy
 msgid ""
 "To enable USB device mode serial ports, add those lines to [.filename]#/etc/"
 "ttys#:"
 msgstr ""
+"Para ativar as portas seriais do modo de dispositivo USB, adicione essas "
+"linhas ao <filename>/etc/ttys</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:78
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "ttyU0\t\"/usr/libexec/getty 3wire\"\tvt100\tonifconsole secure\n"
 "ttyU1\t\"/usr/libexec/getty 3wire\"\tvt100\tonifconsole secure\n"
 msgstr ""
+"ttyU0\t\"/usr/libexec/getty 3wire\"\tvt100\tonifconsole secure\n"
+"ttyU1\t\"/usr/libexec/getty 3wire\"\tvt100\tonifconsole secure\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:81
@@ -174,7 +191,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:91
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "notify 100 {\n"
 "\tmatch \"system\"\t\t\"DEVFS\";\n"
@@ -184,6 +201,13 @@ msgid ""
 "\taction \"/sbin/init q\";\n"
 "};\n"
 msgstr ""
+"notify 100 {\n"
+"\tmatch \"system\"\t\t\"DEVFS\";\n"
+"\tmatch \"subsystem\"\t\"CDEV\";\n"
+"\tmatch \"type\"\t\t\"CREATE\";\n"
+"\tmatch \"cdev\"\t\t\"ttyU[0-9]+\";\n"
+"\taction \"/sbin/init q\";\n"
+"};\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:94
@@ -199,19 +223,26 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:101
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:155
+#, fuzzy
 msgid ""
 "Make sure the necessary modules are loaded and the correct template is set "
 "at boot by adding those lines to [.filename]#/boot/loader.conf#, creating it "
 "if it does not already exist:"
 msgstr ""
+"Certifique-se de que os módulos necessários estejam carregados e que o "
+"template correto esteja configurado na inicialização, adicionando estas "
+"linhas ao <filename>/boot/loader.conf</filename>, criando-o se ele ainda não "
+"existir:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:106
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "umodem_load=\"YES\"\n"
 "hw.usb.template=3\n"
 msgstr ""
+"umodem_load=\"YES\"\n"
+"hw.usb.template=3\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:109
@@ -237,6 +268,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:119
+#, fuzzy
 msgid ""
 "To connect to a board configured to provide USB device mode serial ports, "
 "connect the USB host, such as a laptop, to the boards USB OTG or USB client "
@@ -244,6 +276,11 @@ msgid ""
 "the list you should see a USB serial port, eg \"ttyU0\". To open the "
 "connection, use:"
 msgstr ""
+"Para conectar-se a uma placa configurada para fornecer portas seriais de um "
+"dispositivo USB, conecte o host USB, como um laptop, às placas USB OTG ou "
+"porta de cliente USB. Use <command>pstat -t</command> no host para listar as "
+"linhas de terminal. Perto do final da lista, você deve ver uma porta serial "
+"USB, por exemplo, \"ttyU0\". Para abrir a conexão, use:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:123
@@ -304,6 +341,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:148
+#, fuzzy
 msgid ""
 "To connect to a board configured to provide USB device mode serial ports, "
 "connect the USB host, such as a laptop, to the boards USB OTG or USB client "
@@ -315,6 +353,17 @@ msgid ""
 "COMx obtained from Device Manager in the \"Serial line\" dialog box and "
 "click Open."
 msgstr ""
+"Para conectar-se a uma placa configurada para fornecer portas seriais de "
+"modo de dispositivo USB, conecte o host USB, como um laptop, às placas USB "
+"OTG ou porta de cliente USB. Para abrir uma conexão, você precisará de um "
+"programa de terminal serial, como <application>PuTTY</application>. Para "
+"verificar o nome da porta COM usada pelo Windows, execute o Gerenciador de "
+"dispositivos, expanda. \"Ports (COM &amp; LPT)\".Você verá um nome "
+"semelhante a \"USB Serial Device (COM4)\". Execute o programa do terminal "
+"serial de sua escolha, por exemplo, <application>PuTTY</application>. Na "
+"caixa de diálogo <application>PuTTY</application> defina \"Connection type\" "
+"como \"Serial\", digite o COMx obtido no Gerenciador de Dispositivos na "
+"caixa de diálogo \"Serial line\" e clique em Abrir."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:150
@@ -333,11 +382,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:160
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "if_cdce_load=\"YES\"\n"
 "hw.usb.template=1\n"
 msgstr ""
+"if_cdce_load=\"YES\"\n"
+"hw.usb.template=1\n"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:168
@@ -389,9 +440,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:187
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "cfumass_enable=\"YES\"\n"
-msgstr ""
+msgstr "cfumass_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:190
@@ -406,12 +457,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:197
+#, fuzzy
 msgid ""
 "Differently from serial and network functionality, the template should not "
 "be set to 0 or 10 in [.filename]#/boot/loader.conf#. This is because the LUN "
 "must be set up before setting the template. The cfumass startup script sets "
 "the correct template number automatically when started."
 msgstr ""
+"Diferentemente da funcionalidade serial e de rede, o modelo não deve ser "
+"definido como 0 ou 10 no <filename>/boot/loader.conf</filename>. Isso ocorre "
+"porque o LUN deve ser configurado antes de definir o template. O script de "
+"inicialização cfumass define o número do modelo correto automaticamente "
+"quando iniciado."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:198
@@ -455,9 +512,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:214
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "cfumass_load=\"YES\"\n"
-msgstr ""
+msgstr "cfumass_load=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:217
@@ -497,7 +554,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:237
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "target naa.50015178f369f092 {\n"
 "\tlun 0 {\n"
@@ -506,6 +563,12 @@ msgid ""
 "\t}\n"
 "}\n"
 msgstr ""
+"target naa.50015178f369f092 {\n"
+"\tlun 0 {\n"
+"\t\tpath /data/target0\n"
+"\t\tsize 4G\n"
+"\t}\n"
+"}\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:240
@@ -526,9 +589,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:246
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ctld_enable=\"YES\"\n"
-msgstr ""
+msgstr "ctld_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:249
