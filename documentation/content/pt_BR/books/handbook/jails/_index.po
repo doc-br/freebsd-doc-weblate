@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:55-0300\n"
-"PO-Revision-Date: 2021-03-30 23:19+0000\n"
+"PO-Revision-Date: 2021-04-08 03:22+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookjails_index/pt_BR/>\n"
@@ -44,6 +44,7 @@ msgstr "Sinopse"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:48
+#, fuzzy
 msgid ""
 "Since system administration is a difficult task, many tools have been "
 "developed to make life easier for the administrator. These tools often "
@@ -52,6 +53,13 @@ msgid ""
 "_jails_. Jails have been available since FreeBSD 4.X and continue to be "
 "enhanced in their usefulness, performance, reliability, and security."
 msgstr ""
+"Como a administração de sistemas é uma tarefa difícil, muitas ferramentas "
+"foram desenvolvidas para facilitar a vida do administrador. Essas "
+"ferramentas geralmente aprimoram a maneira como os sistemas são instalados, "
+"configurados e mantidos. Uma das ferramentas que podem ser usadas para "
+"melhorar a segurança de um sistema FreeBSD é <firstterm>jails</firstterm>. "
+"Jails estão disponíveis desde o FreeBSD 4.X e continuam sendo aprimoradas em "
+"sua utilidade, desempenho, confiabilidade e segurança."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:50
@@ -239,12 +247,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:87
+#, fuzzy
 msgid ""
 "The environment of processes running in a \"chroot\". This includes "
 "resources such as the part of the file system which is visible, user and "
 "group IDs which are available, network interfaces and other IPC mechanisms, "
 "etc."
 msgstr ""
+"O ambiente dos processos em execução em um <quote>chroot</quote>. Isso "
+"inclui recursos como a parte do sistema de arquivos que é visível, IDs de "
+"usuário e grupo que estão disponíveis, interfaces de rede e outros "
+"mecanismos de IPC, etc."
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/jails/_index.adoc:88
@@ -305,6 +318,7 @@ msgstr "Criando e Controlando Jails"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:101
+#, fuzzy
 msgid ""
 "Some administrators divide jails into the following two types: \"complete\" "
 "jails, which resemble a real FreeBSD system, and \"service\" jails, "
@@ -314,6 +328,14 @@ msgid ""
 "the source of the userland: use prebuilt binaries (such as those supplied on "
 "an install media) or build from source."
 msgstr ""
+"Alguns administradores dividem as jails nos dois seguintes tipos: jails "
+"<quote>completa</quote>, que se assemelham a um sistema real do FreeBSD, e "
+"jails de <quote>serviço</quote>, dedicados a um aplicativo ou serviço, "
+"possivelmente executando com privilégios. Esta é apenas uma divisão "
+"conceitual e o processo de criação de uma jail não é afetado por ela. Ao "
+"criar uma jail <quote>completa</quote>, há duas opções para a origem do "
+"userland: usar binários pré-compilados (como aqueles fornecidos em uma mídia "
+"de instalação) ou compila-los a partir do código fonte."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/jails/_index.adoc:102
@@ -359,11 +381,15 @@ msgstr "Instalar uma Jail por uma imagem ISO"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:120
+#, fuzzy
 msgid ""
 "To install the userland from installation media, first create the root "
 "directory for the jail. This can be done by setting the `DESTDIR` variable "
 "to the proper location."
 msgstr ""
+"Para instalar o userland da mídia de instalação, primeiro crie o diretório "
+"raiz da jail. Isso pode ser feito definindo a variável <varname>DESTDIR</"
+"varname> para o local adequado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:122
@@ -514,10 +540,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:183
+#, fuzzy
 msgid ""
 "Jails are often started at boot time and the FreeBSD [.filename]#rc# "
 "mechanism provides an easy way to do this."
 msgstr ""
+"As jails geralmente são iniciadas no boot e o mecanismo <filename>rc</"
+"filename> do FreeBSD fornece uma maneira fácil de fazer isso."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:186
@@ -546,9 +575,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:206
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "jail_enable=\"YES\"   # Set to NO to disable starting of any jails\n"
-msgstr ""
+msgstr "jail_enable=\"YES\"   # Set to NO to disable starting of any jails\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:209
@@ -911,12 +940,18 @@ msgstr "Economize espaço e inodes, tanto quanto possível."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:326
+#, fuzzy
 msgid ""
 "This design relies on a single, read-only master template which is mounted "
 "into each jail and one read-write device per jail. A device can be a "
 "separate physical disc, a partition, or a vnode backed memory device. This "
 "example uses read-write nullfs mounts."
 msgstr ""
+"Esse design depende de um template master único, read-only, que é montado em "
+"cada jail e em um dispositivo read-write por jail. Um dispositivo pode ser "
+"um disco físico separado, uma partição ou um dispositivo de memória com "
+"suporte a vnode. Este exemplo usa montagens <application>nullfs</"
+"application> read-write."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:328
@@ -930,42 +965,58 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:331
+#, fuzzy
 msgid "Each jail will be mounted under the [.filename]#/home/j# directory."
-msgstr ""
+msgstr "Cada jail será montada no diretório <filename>/home/j</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:332
+#, fuzzy
 msgid ""
 "The template for each jail and the read-only partition for all of the jails "
 "is [.filename]#/home/j/mroot#."
 msgstr ""
+"O template para cada jail e a partição read-only para todos as jails é "
+"<filename>/home/j/mroot</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:333
+#, fuzzy
 msgid ""
 "A blank directory will be created for each jail under the [.filename]#/home/"
 "j# directory."
 msgstr ""
+"Um diretório em branco será criado para cada jail no diretório <filename>/"
+"home/j</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:334
+#, fuzzy
 msgid ""
 "Each jail will have a [.filename]#/s# directory that will be linked to the "
 "read-write portion of the system."
 msgstr ""
+"Cada jail terá um diretório <filename>/s</filename> que será vinculado à "
+"parte de read-write do sistema."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:335
+#, fuzzy
 msgid ""
 "Each jail will have its own read-write system that is based upon [."
 "filename]#/home/j/skel#."
 msgstr ""
+"Cada jail terá seu próprio sistema de read-write baseado em <filename>/home/"
+"j/skel</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:336
+#, fuzzy
 msgid ""
 "The read-write portion of each jail will be created in [.filename]#/home/js#."
 msgstr ""
+"A parte de read-write de cada jail será criada em <filename>/home/"
+"js</filename>."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/jails/_index.adoc:338
@@ -1087,25 +1138,33 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:402
+#, fuzzy
 msgid ""
 "As a last step, create a generic [.filename]#/home/j/skel/etc/make.conf# "
 "containing this line:"
 msgstr ""
+"Como último passo, crie um arquivo <filename>/home/j/skel/etc/make.conf</"
+"filename> genérico contendo esta linha:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:406
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "WRKDIRPREFIX?=  /s/portbuild\n"
-msgstr ""
+msgstr "WRKDIRPREFIX?=  /s/portbuild\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:409
+#, fuzzy
 msgid ""
 "  This makes it possible to compile FreeBSD ports inside each jail. Remember "
 "that the ports directory is part of the read-only system. The custom path "
 "for `WRKDIRPREFIX` allows builds to be done in the read-write portion of "
 "every jail."
 msgstr ""
+"  Isto torna possível compilar ports do FreeBSD dentro de cada jail. Lembre-"
+"se de que o diretório do ports faz parte do sistema somente leitura. O "
+"caminho customizado para o <literal>WRKDIRPREFIX</literal> permite que "
+"compilações sejam feitas na parte read-write de cada jail."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/jails/_index.adoc:411
@@ -1123,15 +1182,19 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:417
+#, fuzzy
 msgid ""
 "Add the following lines to [.filename]#/etc/fstab#, so that the read-only "
 "template for the jails and the read-write space will be available in the "
 "respective jails:"
 msgstr ""
+"Adicione as seguintes linhas ao arquivo <filename>/etc/fstab</filename>, "
+"para que o template read-only e o espaço read-write das jails estejam "
+"disponível nas respectivas jails:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:426
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "/home/j/mroot   /home/j/ns     nullfs  ro  0   0\n"
 "/home/j/mroot   /home/j/mail   nullfs  ro  0   0\n"
@@ -1140,6 +1203,12 @@ msgid ""
 "/home/js/mail   /home/j/mail/s nullfs  rw  0   0\n"
 "/home/js/www    /home/j/www/s  nullfs  rw  0   0\n"
 msgstr ""
+"/home/j/mroot   /home/j/ns     nullfs  ro  0   0\n"
+"/home/j/mroot   /home/j/mail   nullfs  ro  0   0\n"
+"/home/j/mroot   /home/j/www    nullfs  ro  0   0\n"
+"/home/js/ns     /home/j/ns/s   nullfs  rw  0   0\n"
+"/home/js/mail   /home/j/mail/s nullfs  rw  0   0\n"
+"/home/js/www    /home/j/www/s  nullfs  rw  0   0\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:429
@@ -1156,7 +1225,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:448
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "jail_enable=\"YES\"\n"
 "jail_set_hostname_allow=\"NO\"\n"
@@ -1174,6 +1243,21 @@ msgid ""
 "jail_www_rootdir=\"/usr/home/j/www\"\n"
 "jail_www_devfs_enable=\"YES\"\n"
 msgstr ""
+"jail_enable=\"YES\"\n"
+"jail_set_hostname_allow=\"NO\"\n"
+"jail_list=\"ns mail www\"\n"
+"jail_ns_hostname=\"ns.example.org\"\n"
+"jail_ns_ip=\"192.168.3.17\"\n"
+"jail_ns_rootdir=\"/usr/home/j/ns\"\n"
+"jail_ns_devfs_enable=\"YES\"\n"
+"jail_mail_hostname=\"mail.example.org\"\n"
+"jail_mail_ip=\"192.168.3.18\"\n"
+"jail_mail_rootdir=\"/usr/home/j/mail\"\n"
+"jail_mail_devfs_enable=\"YES\"\n"
+"jail_www_hostname=\"www.example.org\"\n"
+"jail_www_ip=\"62.123.43.14\"\n"
+"jail_www_rootdir=\"/usr/home/j/www\"\n"
+"jail_www_devfs_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:451
@@ -1201,10 +1285,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:459
+#, fuzzy
 msgid ""
 "Install the read-write template into each jail using package:sysutils/"
 "cpdup[]:"
 msgstr ""
+"Instale o template read-write em cada jail usando <package>sysutils/"
+"cpdup</package>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:466
@@ -1287,10 +1374,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:501
+#, fuzzy
 msgid ""
 "The first step is to upgrade the host system. Then, create a new temporary "
 "read-only template in [.filename]#/home/j/mroot2#."
 msgstr ""
+"O primeiro passo é atualizar o sistema host. Em seguida, crie um novo "
+"template temporário read-only em <filename>/home/j/mroot2</filename>."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:510
@@ -1351,10 +1441,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:541
+#, fuzzy
 msgid ""
 "Unmount the original file systems as the read-write systems are attached to "
 "the read-only system ([.filename]#/s#):"
 msgstr ""
+"Desmonte os sistemas de arquivos originais, pois os sistemas read-write "
+"estão conectados ao sistema read-only (<filename>/s</filename>):"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:550
@@ -1450,18 +1543,22 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:587
+#, fuzzy
 msgid ""
 "To keep jail loopback traffic off the host's loopback network interface "
 "`lo0`, a second loopback interface is created by adding an entry to [."
 "filename]#/etc/rc.conf#:"
 msgstr ""
+"Para manter o tráfego de loopback da jail fora da interface de rede de "
+"loopback do host <literal>lo0</literal>, uma segunda interface de loopback é "
+"criada adicionando uma entrada no arquivo <filename>/etc/rc.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:591
 #: documentation/content/en/books/handbook/jails/_index.adoc:962
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "cloned_interfaces=\"lo1\"\n"
-msgstr ""
+msgstr "cloned_interfaces=\"lo1\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:594
@@ -1481,10 +1578,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:603
+#, fuzzy
 msgid ""
 "  Jails can be allowed to use aliases of this secondary loopback interface "
 "without interfering with the host."
 msgstr ""
+"  Jails podem ter permissão para usar aliases dessa interface de loopback "
+"secundária sem interferir no host."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:605
@@ -1522,9 +1622,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:620
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ezjail_enable=\"YES\"\n"
-msgstr ""
+msgstr "ezjail_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:623
@@ -1571,12 +1671,17 @@ msgstr "Preencher a Jail com o FreeBSD-RELEASE"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:642
+#, fuzzy
 msgid ""
 "  For a basejail based on the FreeBSD RELEASE matching that of the host "
 "computer, use `install`. For example, on a host computer running FreeBSD 10-"
 "STABLE, the latest RELEASE version of FreeBSD -10 will be installed in the "
 "jail):"
 msgstr ""
+"  Para uma basejail baseada na mesma versão FreeBSD RELEASE do computador "
+"host, use o comando <command>install</command>. Por exemplo, em um "
+"computador host executando o FreeBSD 10-STABLE, a versão mais recente do "
+"FreeBSD -10 será instalada na jail:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:646
@@ -1815,11 +1920,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:751
+#, fuzzy
 msgid ""
 "  Enter configuration settings in [.filename]#/etc/rc.conf#. This is much "
 "like configuring a full computer. The host name and IP address are not set "
 "here. Those values are already provided by the jail configuration."
 msgstr ""
+"  Digite as definições de configuração no arquivo <filename>/etc/rc.conf</"
+"filename>. Isso é muito parecido com a configuração de um computador "
+"completo. O nome do host e o endereço <acronym>IP</acronym> não estão "
+"definidos aqui. Esses valores já são fornecidos pela configuração da jail."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:753
@@ -2044,10 +2154,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:866
+#, fuzzy
 msgid ""
 "After a major version update it is recommended by package:sysutils/ezjail[] "
 "to make sure your `pkg` is of the correct version. Therefore enter:"
 msgstr ""
+"Após uma atualização de versão principal, é recomendado pelo <package>"
+"sysutils/ezjail</package> garantir que o <command>pkg</command> seja da "
+"versão correta. Portanto, digite:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:870
@@ -2165,11 +2279,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:923
+#, fuzzy
 msgid ""
 "The archive file can be copied elsewhere as a backup, or an existing jail "
 "can be restored from it with `restore`. A new jail can be created from the "
 "archive, providing a convenient way to clone existing jails."
 msgstr ""
+"O archive pode ser copiado em outro lugar como um backup, ou uma jail "
+"existente pode ser restaurada a partir dele com o <command>restore</"
+"command>. Uma nova jail pode ser criada a partir de um archive, fornecendo "
+"uma maneira conveniente de clonar as jails existentes."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:925
@@ -2245,10 +2364,13 @@ msgstr "Executando o BIND em uma Jail"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:958
+#, fuzzy
 msgid ""
 "Create a cloned loopback interface by adding a line to [.filename]#/etc/rc."
 "conf#:"
 msgstr ""
+"Crie uma interface de loopback clonada adicionando uma linha ao arquivo "
+"<filename>/etc/rc.conf</filename>:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:965
@@ -2299,11 +2421,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:1000
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "nameserver 10.0.0.62\n"
 "nameserver 10.0.0.61\n"
 msgstr ""
+"nameserver 10.0.0.62\n"
+"nameserver 10.0.0.61\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:1003
@@ -2318,10 +2442,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:1010
+#, fuzzy
 msgid ""
 "Configure the name server by editing [.filename]#/usr/local/etc/namedb/named."
 "conf#."
 msgstr ""
+"Configure o servidor de nomes editando o arquivo <filename>/usr/local/etc/"
+"namedb/named.conf</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:1012
@@ -2367,9 +2494,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:1033
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "\tlisten-on\t{ 192.168.1.240; };\n"
-msgstr ""
+msgstr "\tlisten-on\t{ 192.168.1.240; };\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:1036
@@ -2380,7 +2507,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:1044
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "/*\n"
 "\tforwarders {\n"
@@ -2388,6 +2515,11 @@ msgid ""
 "\t};\n"
 "*/\n"
 msgstr ""
+"/*\n"
+"\tforwarders {\n"
+"\t\t127.0.0.1;\n"
+"\t};\n"
+"*/\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:1047
@@ -2423,9 +2555,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:1065
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "named_enable=\"YES\"\n"
-msgstr ""
+msgstr "named_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:1068
@@ -2449,9 +2581,9 @@ msgstr "Uma resposta que inclui"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:1082
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ";; Got answer;\n"
-msgstr ""
+msgstr ";; Got answer;\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:1085
@@ -2462,9 +2594,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:1089
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ";; connection timed out; no servers could be reached\n"
-msgstr ""
+msgstr ";; connection timed out; no servers could be reached\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:1092
@@ -2483,9 +2615,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:1098
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "nameserver 192.168.1.240\n"
-msgstr ""
+msgstr "nameserver 192.168.1.240\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:1101
