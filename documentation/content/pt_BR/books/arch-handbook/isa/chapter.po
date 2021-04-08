@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-01 00:52+0000\n"
+"PO-Revision-Date: 2021-04-08 23:28+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/booksarch-handbookisachapter/pt_BR/>\n"
@@ -232,11 +232,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:109
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 " DRIVER_MODULE(xxx, isa, xxx_isa_driver,\n"
 "       xxx_devclass, 0, 0);\n"
 msgstr ""
+" DRIVER_MODULE(xxx, isa, xxx_isa_driver,\n"
+"       xxx_devclass, 0, 0);\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:112
@@ -249,7 +251,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:121
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "    static struct isa_pnp_id xxx_pnp_ids[] = {\n"
 "        /* a line for each supported PnP ID */\n"
@@ -258,6 +260,12 @@ msgid ""
 "        { 0,        NULL }, /* end of table */\n"
 "    };\n"
 msgstr ""
+"    static struct isa_pnp_id xxx_pnp_ids[] = {\n"
+"        /* a line for each supported PnP ID */\n"
+"        { 0x12345678,   \"Our device model 1234A\" },\n"
+"        { 0x12345679,   \"Our device model 1234B\" },\n"
+"        { 0,        NULL }, /* end of table */\n"
+"    };\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:124
@@ -268,12 +276,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:130
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "    static struct isa_pnp_id xxx_pnp_ids[] = {\n"
 "        { 0,        NULL }, /* end of table */\n"
 "    };\n"
 msgstr ""
+"    static struct isa_pnp_id xxx_pnp_ids[] = {\n"
+"        { 0,        NULL }, /* end of table */\n"
+"    };\n"
 
 #. type: Title ==
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:133
@@ -385,11 +396,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:161
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "device xxx0 at isa? port 0x300 irq 10 drq 5\n"
 "       iomem 0xd0000 flags 0x1 sensitive\n"
 msgstr ""
+"device xxx0 at isa? port 0x300 irq 10 drq 5\n"
+"       iomem 0xd0000 flags 0x1 sensitive\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:164
@@ -423,9 +436,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:171
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "device xxx0 at isa?\n"
-msgstr ""
+msgstr "device xxx0 at isa?\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:173
@@ -443,9 +456,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:179
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "device xxx at isa?\n"
-msgstr ""
+msgstr "device xxx at isa?\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:182
@@ -641,13 +654,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:229
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "          IRQ: 0-1\n"
 "          DRQ: 0-1\n"
 "          MEMORY: 0-3\n"
 "          IOPORT: 0-7\n"
 msgstr ""
+"          IRQ: 0-1\n"
+"          DRQ: 0-1\n"
+"          MEMORY: 0-3\n"
+"          IOPORT: 0-7\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:232
@@ -1724,7 +1741,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:533
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "           s = splsoftvm();\n"
 "           error = bus_dmamap_load(\n"
@@ -1745,6 +1762,28 @@ msgid ""
 "           splx(s);\n"
 "          }\n"
 msgstr ""
+"           {\n"
+"           int s;\n"
+"           int error;\n"
+"\n"
+"           s = splsoftvm();\n"
+"           error = bus_dmamap_load(\n"
+"               dmat,\n"
+"               dmamap,\n"
+"               buffer_ptr,\n"
+"               buffer_len,\n"
+"               callback,\n"
+"               /*callback_arg*/ buffer_descriptor,\n"
+"               /*flags*/0);\n"
+"           if (error == EINPROGRESS) {\n"
+"               /*\n"
+"                * Do whatever is needed to ensure synchronization\n"
+"                * with callback. Callback is guaranteed not to be started\n"
+"                * until we do splx() or tsleep().\n"
+"                */\n"
+"              }\n"
+"           splx(s);\n"
+"          }\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:536
@@ -2087,11 +2126,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:620
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "        pnperror=ISA_PNP_PROBE(device_get_parent(dev), dev,\n"
 "        xxx_pnp_ids); if(pnperror == ENXIO) return ENXIO;\n"
 msgstr ""
+"        pnperror=ISA_PNP_PROBE(device_get_parent(dev), dev,\n"
+"        xxx_pnp_ids); if(pnperror == ENXIO) return ENXIO;\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:623
@@ -2112,11 +2153,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:630
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "          if(pnperror != 0)\n"
 "              return pnperror;\n"
 msgstr ""
+"          if(pnperror != 0)\n"
+"              return pnperror;\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:633
@@ -2147,11 +2190,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:642
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 " sc->port0 = bus_get_resource_start(dev,\n"
 "        SYS_RES_IOPORT, 0 /*rid*/); if(sc->port0 == 0) return ENXIO;\n"
 msgstr ""
+" sc-&gt;port0 = bus_get_resource_start(dev,\n"
+"        SYS_RES_IOPORT, 0 /*rid*/); if(sc-&gt;port0 == 0) return ENXIO;\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:645
@@ -2330,12 +2375,16 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:735
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "          /* implemented in some very device-specific way */\n"
 "          if(error = xxx_probe_ports(sc))\n"
 "              goto bad; /* will deallocate the resources before returning */\n"
 msgstr ""
+"          /* implemented in some very device-specific way */\n"
+"          if(error = xxx_probe_ports(sc))\n"
+"              goto bad; /* will deallocate the resources before returning */"
+"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:738
@@ -2349,11 +2398,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:743
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "          if(pnperror)\n"
 "              device_set_desc(dev, \"Our device model 1234\");\n"
 msgstr ""
+"          if(pnperror)\n"
+"              device_set_desc(dev, \"Our device model 1234\");\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:746
@@ -2464,11 +2515,13 @@ msgstr ""
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:805
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:1068
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "          xxx_free_resources(sc);\n"
 "          return 0;\n"
 msgstr ""
+"          xxx_free_resources(sc);\n"
+"          return 0;\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:808
@@ -2618,12 +2671,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:889
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "          struct xxx_softc *sc = device_get_softc(dev);\n"
 "          int unit = device_get_unit(dev);\n"
 "          int error = 0;\n"
 msgstr ""
+"          struct xxx_softc *sc = device_get_softc(dev);\n"
+"          int unit = device_get_unit(dev);\n"
+"          int error = 0;\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:892
@@ -3035,12 +3091,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:1088
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "          static void\n"
 "          xxx_intr(struct xxx_softc *sc)\n"
 "          {\n"
 msgstr ""
+"          static void\n"
+"          xxx_intr(struct xxx_softc *sc)\n"
+"          {\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:1091
@@ -3057,13 +3116,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:1101
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "          while(xxx_interrupt_pending(sc)) {\n"
 "              xxx_process_interrupt(sc);\n"
 "              xxx_acknowledge_interrupt(sc);\n"
 "          }\n"
 msgstr ""
+"          while(xxx_interrupt_pending(sc)) {\n"
+"              xxx_process_interrupt(sc);\n"
+"              xxx_acknowledge_interrupt(sc);\n"
+"          }\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/isa/chapter.adoc:1103
