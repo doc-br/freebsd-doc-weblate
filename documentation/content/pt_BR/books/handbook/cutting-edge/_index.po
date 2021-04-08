@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-04-01 12:56+0000\n"
+"PO-Revision-Date: 2021-04-08 23:28+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookcutting-edge_index/pt_BR/>\n"
@@ -44,6 +44,7 @@ msgstr "Sinopse"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:52
+#, fuzzy
 msgid ""
 "FreeBSD is under constant development between releases.  Some people prefer "
 "to use the officially released versions, while others prefer to keep in sync "
@@ -54,6 +55,15 @@ msgid ""
 "to track the development system and the basic tools for keeping a FreeBSD "
 "system up-to-date."
 msgstr ""
+"O FreeBSD está em constante desenvolvimento entre os releases. Algumas "
+"pessoas preferem usar as versões lançadas oficialmente, enquanto outras "
+"preferem se manter em sincronia com os últimos desenvolvimentos. No entanto, "
+"até mesmo versões oficiais são atualizadas com patches de segurança e outras "
+"correções críticas. Independentemente da versão usada, o FreeBSD fornece "
+"todas as ferramentas necessárias para manter o sistema atualizado e permite "
+"atualizações fáceis entre as versões. Este capítulo descreve como acompanhar "
+"o sistema de desenvolvimento  e o uso das ferramentas básicas para manter um "
+"sistema FreeBSD atualizado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:54
@@ -127,12 +137,18 @@ msgstr "Atualização do FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:76
+#, fuzzy
 msgid ""
 "Applying security patches in a timely manner and upgrading to a newer "
 "release of an operating system are important aspects of ongoing system "
 "administration.  FreeBSD includes a utility called `freebsd-update` which "
 "can be used to perform both these tasks."
 msgstr ""
+"A aplicação de patches de segurança em tempo hábil e a atualização para uma "
+"versão mais recente de um sistema operacional são aspectos importantes da "
+"administração contínua do sistema. O FreeBSD inclui um utilitário chamado "
+"<command>freebsd-update</command> o qual pode ser usado para executar ambas "
+"as tarefas."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:80
@@ -164,12 +180,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:91
+#, fuzzy
 msgid ""
 "This section describes the configuration file used by `freebsd-update`, "
 "demonstrates how to apply a security patch and how to upgrade to a minor or "
 "major operating system release, and discusses some of the considerations "
 "when upgrading the operating system."
 msgstr ""
+"Esta seção descreve o arquivo de configuração usado pelo <command>freebsd-"
+"update</command>, demonstra como aplicar um patch de segurança e como "
+"atualizar para um release menor ou principal do sistema operacional e "
+"discute algumas das considerações ao atualizar o sistema operacional ."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:93
@@ -189,14 +210,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:103
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# Components of the base system which should be kept updated.\n"
 "Components world kernel\n"
 msgstr ""
+"# Componentes do sistema base que devem ser mantidos atualizados.\n"
+"Components world kernel\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:110
+#, fuzzy
 msgid ""
 "This parameter controls which parts of FreeBSD will be kept up-to-date.  The "
 "default is to update the entire base system and the kernel.  Individual "
@@ -206,15 +230,26 @@ msgid ""
 "this could have disastrous consequences as source code and binaries may "
 "become out of sync."
 msgstr ""
+"Este parâmetro controla quais partes do FreeBSD serão mantidas atualizadas. "
+"O padrão é atualizar todo o sistema básico e o kernel. Componentes "
+"individuais podem ser especificados, como <literal>src/base</literal> ou "
+"<literal>src/sys</literal>. No entanto, a melhor opção é deixar isso no "
+"padrão, pois alterá-lo para incluir itens específicos requer que todos os "
+"itens necessários sejam listados. Com o tempo, isso pode ter consequências "
+"desastrosas, pois o código-fonte e os binários podem ficar fora de sincronia."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:116
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# Paths which start with anything matching an entry in an IgnorePaths\n"
 "# statement will be ignored.\n"
 "IgnorePaths /boot/kernel/linker.hints\n"
 msgstr ""
+"# Caminhos que começam com qualquer coisa que corresponda a uma entrada em "
+"uma \n"
+"# declaração IgnorePaths será ignorada.\n"
+"IgnorePaths /boot/kernel/linker.hints\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:120
@@ -227,13 +262,20 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:127
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# Paths which start with anything matching an entry in an UpdateIfUnmodified\n"
 "# statement will only be updated if the contents of the file have not been\n"
 "# modified by the user (unless changes are merged; see below).\n"
 "UpdateIfUnmodified /etc/ /var/ /root/ /.cshrc /.profile\n"
 msgstr ""
+"# Caminhos que começam com qualquer coisa que corresponda a uma entrada em "
+"uma declaração  \n"
+"# UpdateIfUnmodified só será atualizada se o conteúdo do arquivo não tiver "
+"sido\n"
+"# modificado pelo usuário (a menos que as alterações sejam mescladas; veja "
+"abaixo).\n"
+"UpdateIfUnmodified /etc/ /var/ /root/ /.cshrc /.profile\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:132
@@ -246,12 +288,16 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:138
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# When upgrading to a new FreeBSD release, files which match MergeChanges\n"
 "# will have any local changes merged into the version from the new release.\n"
 "MergeChanges /etc/ /var/named/etc/ /boot/device.hints\n"
 msgstr ""
+"# Ao fazer o upgrade para uma nova versão do FreeBSD, os arquivos que forem "
+"especificados no MergeChanges\n"
+"# terão quaisquer alterações locais mescladas na versão da nova release.\n"
+"MergeChanges /etc/ /var/named/etc/ /boot/device.hints\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:145
@@ -266,24 +312,31 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:151
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# Directory in which to store downloaded updates and temporary\n"
 "# files used by FreeBSD Update.\n"
 "# WorkDir /var/db/freebsd-update\n"
 msgstr ""
+"# Diretório no qual armazenar atualizações baixadas e arquivos \n"
+"# temporários usados pelo FreeBSD Update.\n"
+"# WorkDir /var/db/freebsd-update\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:155
+#, fuzzy
 msgid ""
 "This directory is where all patches and temporary files are placed.  In "
 "cases where the user is doing a version upgrade, this location should have "
 "at least a gigabyte of disk space available."
 msgstr ""
+"Este diretório é onde todos os patches e arquivos temporários são colocados. "
+"Nos casos em que o usuário estiver fazendo uma atualização de versão, esse "
+"local deverá ter pelo menos um gigabyte de espaço em disco disponível."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:163
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# When upgrading between releases, should the list of Components be\n"
 "# read strictly (StrictComponents yes) or merely as a list of components\n"
@@ -291,6 +344,12 @@ msgid ""
 "# which actually are installed and upgrade those (StrictComponents no)?\n"
 "# StrictComponents no\n"
 msgstr ""
+"# Ao atualizar entre releases, a lista de Componentes deve ser lida de forma "
+"estrita (StrictComponents yes)\n"
+"# ou meramente como uma lista de componentes que *podem* ser instalados de "
+"quais atualizações do \n"
+"# FreeBSD devem ser instaladas e atualizadas (StrictComponents no)?\n"
+"# StrictComponents no\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:167
@@ -318,12 +377,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:177
+#, fuzzy
 msgid ""
 "FreeBSD security patches may be downloaded and installed using the following "
 "commands.  The first command will determine if any outstanding patches are "
 "available, and if so, will list the files that will be modifed if the "
 "patches are applied.  The second command will apply the patches."
 msgstr ""
+"Patches de segurança do FreeBSD podem ser baixados e instalados usando os "
+"seguintes comandos. O primeiro comando determinará se algum patch pendente "
+"está disponível e, em caso afirmativo, listará os arquivos que serão "
+"modificados se os patches forem aplicados. O segundo comando aplicará os "
+"patches."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:182
@@ -335,33 +400,48 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:186
+#, fuzzy
 msgid ""
 "If the update applies any kernel patches, the system will need a reboot in "
 "order to boot into the patched kernel.  If the patch was applied to any "
 "running binaries, the affected applications should be restarted so that the "
 "patched version of the binary is used."
 msgstr ""
+"Se a atualização aplicar alguma correção de kernel, o sistema precisará de "
+"uma reinicialização para inicializar no kernel corrigido. Se o patch for "
+"aplicado a qualquer binário em execução, os aplicativos afetados devem ser "
+"reiniciados para que a versão corrigida do binário seja usada."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:191
+#, fuzzy
 msgid ""
 "Usually, the user needs to be prepared to reboot the system.  To know if a "
 "reboot is required by a kernel update, execute the commands `freebsd-version "
 "-k` and `uname -r` and if it differs a reboot is required."
 msgstr ""
+"Normalmente, o usuário precisa estar preparado para reiniciar o sistema. "
+"Para saber se uma reinicialização é necessária por uma atualização do "
+"kernel, execute os comandos <command>freebsd-version -k</command> e "
+"<command>uname -r</command> e se eles forem diferentes, é necessário "
+"reiniciar."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:194
+#, fuzzy
 msgid ""
 "The system can be configured to automatically check for updates once every "
 "day by adding this entry to [.filename]#/etc/crontab#:"
 msgstr ""
+"O sistema pode ser configurado para verificar automaticamente as "
+"atualizações uma vez por dia, adicionando esta entrada ao <filename>/etc/"
+"crontab</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:198
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "@daily                                  root    freebsd-update cron\n"
-msgstr ""
+msgstr "@daily                                  root    freebsd-update cron\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:202
@@ -373,10 +453,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:204
+#, fuzzy
 msgid ""
 "If anything goes wrong, `freebsd-update` has the ability to roll back the "
 "last set of changes with the following command:"
 msgstr ""
+"Se algo der errado, o <command>freebsd-update</command> terá a capacidade de "
+"reverter o último conjunto de alterações com o seguinte comando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:209
@@ -425,6 +508,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:235
+#, fuzzy
 msgid ""
 "The updates distributed by `freebsd-update` do not always involve the "
 "kernel.  It is not necessary to rebuild a custom kernel if the kernel "
@@ -437,6 +521,18 @@ msgid ""
 "systems, as it allows for a quick assessment of the updates installed in "
 "each one."
 msgstr ""
+"As atualizações distribuídas pelo <command>freebsd-update</command> nem "
+"sempre envolvem o kernel. Não é necessário recompilar um kernel "
+"personalizado se o código fonte do kernel não tiverem sido modificado pelo "
+"<command>freebsd-update install</command>. No entanto, o <command>freebsd-"
+"update</command> sempre atualizará o <filename>/usr/src/sys/conf/newvers.sh</"
+"filename>. O nível de patch atual, conforme indicado pelo número "
+"<literal>-p</literal> relatado pelo <command>uname -r</command>, é obtido "
+"desse arquivo. Recompilar um kernel personalizado, mesmo que nada mais tenha "
+"sido alterado, permite que o <command>uname</command> relate com precisão o "
+"nível de patch atual do sistema. Isso é particularmente útil ao manter "
+"vários sistemas, pois permite uma avaliação rápida das atualizações "
+"instaladas em cada um deles."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:237
@@ -480,12 +576,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:259
+#, fuzzy
 msgid ""
 "After the command has been received, `freebsd-update` will evaluate the "
 "configuration file and current system in an attempt to gather the "
 "information necessary to perform the upgrade.  A screen listing will display "
 "which components have and have not been detected.  For example:"
 msgstr ""
+"Depois que o comando for recebido, o <command>freebsd-update</command> "
+"avaliará o arquivo de configuração e o sistema atual na tentativa de reunir "
+"as informações necessárias para executar a atualização. Uma listagem de tela "
+"exibirá quais componentes foram e quais não foram detectados. Por exemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:266
@@ -525,11 +626,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:282
+#, fuzzy
 msgid ""
 "At this point, `freebsd-update` will attempt to download all files required "
 "for the upgrade.  In some cases, the user may be prompted with questions "
 "regarding what to install or how to proceed."
 msgstr ""
+"Neste ponto, o <command>freebsd-update</command> tentará baixar todos os "
+"arquivos necessários para a atualização. Em alguns casos, o usuário pode ser "
+"questionado sobre o que instalar ou como proceder."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:284
@@ -552,14 +657,19 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:295
+#, fuzzy
 msgid ""
 "This warning may be safely ignored at this point.  The updated [."
 "filename]#GENERIC# kernel will be used as an intermediate step in the "
 "upgrade process."
 msgstr ""
+"Este aviso pode ser ignorado com segurança neste momento. O kernel "
+"<filename>GENERIC</filename> atualizado será usado como uma etapa "
+"intermediária no processo de atualização."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:304
+#, fuzzy
 msgid ""
 "Once all the patches have been downloaded to the local system, they will be "
 "applied.  This process may take a while, depending on the speed and workload "
@@ -571,9 +681,21 @@ msgid ""
 "backup of [.filename]#/etc# and manually merge important files, such as [."
 "filename]#master.passwd# or [.filename]#group# at a later time."
 msgstr ""
+"Depois que todos os patches tiverem sido baixados para o sistema local, eles "
+"serão aplicados. Esse processo pode demorar um pouco, dependendo da "
+"velocidade e da carga de trabalho da máquina. Os arquivos de configuração "
+"serão então mesclados. O processo de mesclagem requer alguma intervenção do "
+"usuário, pois um arquivo pode ser mesclado ou um editor pode aparecer na "
+"tela para uma mesclagem manual. Os resultados de cada mesclagem bem-sucedida "
+"serão mostrados para o usuário enquanto o processo continua. Um merge falho "
+"ou ignorado fará com que o processo seja abortado. Os usuários podem desejar "
+"fazer um backup de <filename>/etc</filename> e mesclar manualmente os "
+"arquivos importantes, como o <filename>master.passwd</filename> ou o "
+"<filename>group</filename> posteriormente."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:311
+#, fuzzy
 msgid ""
 "The system is not being altered yet as all patching and merging is happening "
 "in another directory.  Once all patches have been applied successfully, all "
@@ -581,6 +703,11 @@ msgid ""
 "smoothly, the changes can be committed to disk by the user using the "
 "following command:"
 msgstr ""
+"O sistema não está sendo alterado, já que todos os patches e merges estão "
+"acontecendo em outro diretório. Uma vez que todas as correções tenham sido "
+"aplicadas com sucesso, e todos os arquivos de configuração foram mesclados e "
+"tudo indicar que o processo ocorrerá sem problemas, as alterações poderão "
+"ser confirmadas pelo usuário usando o seguinte comando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:315
@@ -606,6 +733,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:335
+#, fuzzy
 msgid ""
 "Before rebooting with the [.filename]#GENERIC# kernel, make sure it contains "
 "all the drivers required for the system to boot properly and connect to the "
@@ -616,6 +744,16 @@ msgid ""
 "facility.  It is recommended to disable non-essential services as well as "
 "any disk and network mounts until the upgrade process is complete."
 msgstr ""
+"Antes de reinicializar com o kernel <filename>GENERIC</filename>, verifique "
+"se ele contém todos os drivers necessários para o sistema inicializar "
+"corretamente e se conectar à rede, se a máquina que está sendo atualizada "
+"for acessada remotamente. Em particular, se o kernel customizado em execução "
+"contiver funcionalidades internas normalmente fornecidas pelos módulos do "
+"kernel, certifique-se de carregar temporariamente estes módulos no kernel "
+"<filename>GENERIC</filename> usando o <filename>/boot/loader.conf</"
+"filename>. Recomenda-se desabilitar os serviços não essenciais, bem como "
+"todas as montagens de disco e de rede, até que o processo de atualização "
+"seja concluído."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:338
@@ -631,12 +769,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:347
+#, fuzzy
 msgid ""
 "Once the system has come back online, restart `freebsd-update` using the "
 "following command.  Since the state of the process has been saved, `freebsd-"
 "update` will not start from the beginning, but will instead move on to the "
 "next phase and remove all old shared libraries and object files."
 msgstr ""
+"Quando o sistema estiver on-line, reinicie o <command>freebsd-update</"
+"command> usando o comando a seguir. Como o estado do processo foi salvo, o "
+"<command>freebsd-update</command> não será iniciado desde o início, mas "
+"passará para a próxima fase e removerá todas as bibliotecas compartilhadas e "
+"os arquivos de objetos antigos."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:356
@@ -672,6 +816,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:371
+#, fuzzy
 msgid ""
 "If a custom kernel has been built more than once or if it is unknown how "
 "many times the custom kernel has been built, obtain a copy of the `GENERIC` "
@@ -679,6 +824,12 @@ msgid ""
 "physical access to the system is available, a copy of the `GENERIC` kernel "
 "can be installed from the installation media:"
 msgstr ""
+"Se um kernel personalizado foi compilado mais de uma vez ou se é "
+"desconhecido quantas vezes o kernel personalizado foi compilado, obtenha uma "
+"cópia do kernel <literal>GENERIC</literal> que corresponda à versão atual do "
+"sistema operacional. Se o acesso físico ao sistema estiver disponível, uma "
+"cópia do kernel <literal>GENERIC</literal> pode ser instalada a partir da "
+"mídia de instalação:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:377
@@ -739,6 +890,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:405
+#, fuzzy
 msgid ""
 "A forced upgrade of all installed packages will replace the packages with "
 "fresh versions from the repository even if the version number has not "
@@ -746,6 +898,11 @@ msgid ""
 "upgrading between major versions of FreeBSD.  The forced upgrade can be "
 "accomplished by performing:"
 msgstr ""
+"Uma atualização forçada de todos os pacotes instalados substituirá os "
+"pacotes por novas versões a partir do repositório, mesmo que o número da "
+"versão não tenha aumentado. Isso é necessário por causa da alteração da "
+"versão do ABI que ocorre ao atualizar entre versões principais do FreeBSD. A "
+"atualização forçada pode ser realizada executando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:409
@@ -770,20 +927,29 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:420
+#, fuzzy
 msgid ""
 "This command will display the configuration screens for each application "
 "that has configurable options and wait for the user to interact with those "
 "screens.  To prevent this behavior, and use only the default options, "
 "include `-G` in the above command."
 msgstr ""
+"Este comando exibirá as telas de configuração de cada aplicativo que possui "
+"opções configuráveis e aguardará que o usuário interaja com estas telas. "
+"Para evitar esse comportamento e usar apenas as opções padrões, inclua "
+"<option>-G</option> no comando acima."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:423
+#, fuzzy
 msgid ""
 "Once the software upgrades are complete, finish the upgrade process with a "
 "final call to `freebsd-update` in order to tie up all the loose ends in the "
 "upgrade process:"
 msgstr ""
+"Quando as atualizações de software estiverem concluídas, conclua o processo "
+"de atualização com uma chamada final para o <command>freebsd-update</"
+"command> para amarrar todas as pontas soltas no processo de atualização:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:431
@@ -795,10 +961,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:434
+#, fuzzy
 msgid ""
 "Reboot the machine into the new FreeBSD version.  The upgrade process is now "
 "complete."
 msgstr ""
+"Reinicialize a máquina na nova versão do FreeBSD. O processo de atualização "
+"está concluído agora."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:436
@@ -808,12 +977,18 @@ msgstr "Comparação do estado do sistema"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:440
+#, fuzzy
 msgid ""
 "The state of the installed FreeBSD version against a known good copy can be "
 "tested using `freebsd-update IDS`.  This command evaluates the current "
 "version of system utilities, libraries, and configuration files and can be "
 "used as a built-in Intrusion Detection System (IDS)."
 msgstr ""
+"O estado da versão instalada do FreeBSD em relação a uma boa cópia conhecida "
+"pode ser testado usando o <command>freebsd-update IDS</command>. Este "
+"comando avalia a versão atual dos utilitários do sistema, bibliotecas e "
+"arquivos de configuração e pode ser usado como um Sistema de Detecção de "
+"Intrusão embutido (<acronym>IDS</acronym>)."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:448
@@ -845,19 +1020,28 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:458
+#, fuzzy
 msgid ""
 "The system will now be inspected and a lengthy listing of files, along with "
 "the SHA256 hash values for both the known value in the release and the "
 "current installation, will be sent to the specified output file."
 msgstr ""
+"O sistema agora será inspecionado e uma longa lista de arquivos, junto com "
+"os valores de hash <acronym>SHA256</acronym> tanto para o valor conhecido na "
+"release e como na instalação atual, será enviada para o arquivo de saída "
+"especificado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:461
+#, fuzzy
 msgid ""
 "The entries in the listing are extremely long, but the output format may be "
 "easily parsed.  For instance, to obtain a list of all files which differ "
 "from those in the release, issue the following command:"
 msgstr ""
+"As entradas na listagem são extremamente longas, mas o formato de saída pode "
+"ser facilmente analisado. Por exemplo, para obter uma lista de todos os "
+"arquivos que diferem daqueles na release, execute o seguinte comando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:469
@@ -872,6 +1056,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:476
+#, fuzzy
 msgid ""
 "This sample output has been truncated as many more files exist.  Some files "
 "have natural modifications.  For example, [.filename]#/etc/passwd# will be "
@@ -880,6 +1065,13 @@ msgid ""
 "directories, add them to the `IDSIgnorePaths` option in [.filename]#/etc/"
 "freebsd-update.conf#."
 msgstr ""
+"Este exemplo de saída foi truncado, pois existem muito mais arquivos. Alguns "
+"arquivos possuem modificações naturais. Por exemplo, o <filename>/etc/"
+"passwd</filename> será modificado se usuários tiverem sido adicionados ao "
+"sistema. Módulos de kernel podem diferir pois o <command>freebsd-update</"
+"command> pode tê-los atualizado. Para excluir arquivos ou diretórios "
+"específicos, adicione-os à opção <literal>IDSIgnorePaths</literal> em "
+"<filename>/etc/freebsd-update.conf</filename>."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:478
@@ -943,10 +1135,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:503
+#, fuzzy
 msgid ""
 "The initial download of the documentation sources may take a while.  Let it "
 "run until it completes."
 msgstr ""
+"O download inicial dos fontes da documentação pode demorar um pouco. Deixe "
+"executar até completar."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:505
@@ -962,11 +1157,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:513
+#, fuzzy
 msgid ""
 "Once an up-to-date snapshot of the documentation sources has been fetched to "
 "[.filename]#/usr/doc#, everything is ready for an update of the installed "
 "documentation."
 msgstr ""
+"Depois que um snapshot atualizado dos fontes da documentação for obtido e "
+"disponibilizado em <filename>/usr/doc</filename>, tudo estará pronto para "
+"uma atualização da documentação instalada."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:515
@@ -1013,15 +1212,21 @@ msgstr "Usando o FreeBSD-CURRENT"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:534
+#, fuzzy
 msgid ""
 "FreeBSD-CURRENT is the \"bleeding edge\" of FreeBSD development and FreeBSD-"
 "CURRENT users are expected to have a high degree of technical skill.  Less "
 "technical users who wish to track a development branch should track FreeBSD-"
 "STABLE instead."
 msgstr ""
+"O FreeBSD-CURRENT é o desenvolvimento <quote>bleeding edge</quote> do "
+"FreeBSD e espera-se que os usuários do FreeBSD-CURRENT tenham um alto grau "
+"de habilidade técnica. Usuários menos técnicos que desejam acompanhar um "
+"ramo de desenvolvimento devem acompanhar o FreeBSD-STABLE."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:538
+#, fuzzy
 msgid ""
 "FreeBSD-CURRENT is the very latest source code for FreeBSD and includes "
 "works in progress, experimental changes, and transitional mechanisms that "
@@ -1032,6 +1237,14 @@ msgid ""
 "brings disaster or new functionality can be a matter of when the source code "
 "was synced."
 msgstr ""
+"O FreeBSD-CURRENT é o código-fonte mais recente do FreeBSD e inclui "
+"trabalhos em andamento, mudanças experimentais e mecanismos de transição que "
+"podem ou não estar presentes na próxima versão oficial. Enquanto muitos "
+"desenvolvedores do FreeBSD compilam o código-fonte do FreeBSD-CURRENT "
+"diariamente, há curtos períodos de tempo em que o código fonte pode não ser "
+"compilável. Esses problemas são resolvidos o mais rápidamente possível, mas "
+"se o FreeBSD-CURRENT traz ou não uma nova funcionalidade pode ser uma "
+"questão de quando o código-fonte foi sincronizado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:540
@@ -1120,12 +1333,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:559
+#, fuzzy
 msgid ""
 "Due to the size of the repository, some users choose to only synchronize the "
 "sections of source that interest them or which they are contributing patches "
 "to. However, users that plan to compile the operating system from source "
 "must download _all_ of FreeBSD-CURRENT, not just selected portions."
 msgstr ""
+"Devido ao tamanho do repositório, alguns usuários escolhem sincronizar "
+"apenas as seções do código-fonte que lhes interessam ou para as quais estão "
+"contribuindo com correções. No entanto, os usuários que planejam compilar o "
+"sistema operacional a partir do código-fonte devem baixar <emphasis>tudo</"
+"emphasis> do FreeBSD-CURRENT, não apenas as partes selecionadas."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:562
@@ -1156,6 +1375,7 @@ msgstr "Usando o FreeBSD-STABLE"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:572
+#, fuzzy
 msgid ""
 "FreeBSD-STABLE is the development branch from which major releases are "
 "made.  Changes go into this branch at a slower pace and with the general "
@@ -1166,6 +1386,15 @@ msgid ""
 "not have the resources to perform testing should instead run the most recent "
 "release of FreeBSD."
 msgstr ""
+"O FreeBSD-STABLE é o ramo de desenvolvimento a partir do qual as releases "
+"principais são feitas. Mudanças entram neste ramo em um ritmo mais lento e "
+"com a suposição geral de que elas foram testadas primeiro no FreeBSD-"
+"CURRENT. Ele <emphasis>ainda</emphasis> é um ramo de desenvolvimento e, a "
+"qualquer momento, as fontes para o FreeBSD-STABLE podem ou não ser adequadas "
+"para uso geral. É simplesmente outra trilha de desenvolvimento de "
+"engenharia, não um recurso para usuários finais. Usuários que não possuem "
+"recursos para realizar testes devem, ao invés disso, executar a release mais "
+"recente do FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:574
@@ -1180,6 +1409,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:579
+#, fuzzy
 msgid ""
 "While the FreeBSD-STABLE branch should compile and run at all times, this "
 "cannot be guaranteed.  Since more people run FreeBSD-STABLE than FreeBSD-"
@@ -1189,6 +1419,14 @@ msgid ""
 "important _not_ to update any production servers to FreeBSD-STABLE without "
 "thoroughly testing the code in a development or testing environment."
 msgstr ""
+"Embora seja esperado que o ramo FreeBSD-STABLE compile e execute o tempo "
+"todo, isso não pode ser garantido. Uma vez que mais pessoas executam o "
+"FreeBSD-STABLE do que o FreeBSD-CURRENT, é inevitável que bugs e problemas "
+"mais raros às vezes sejam encontrados no FreeBSD-STABLE os quais não foram "
+"detectados no FreeBSD-CURRENT. Por esta razão, não se deve seguir cegamente "
+"o FreeBSD-STABLE. É particularmente importante <emphasis>não</emphasis> "
+"atualizar quaisquer servidores de produção para o FreeBSD-STABLE sem testar "
+"completamente o código em um ambiente de desenvolvimento ou de teste."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:581
@@ -1261,6 +1499,7 @@ msgstr "Atualizando o FreeBSD a partir do código fonte"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:602
+#, fuzzy
 msgid ""
 "Updating FreeBSD by compiling from source offers several advantages over "
 "binary updates.  Code can be built with options to take advantage of "
@@ -1270,6 +1509,14 @@ msgid ""
 "updates, but allows complete customization to produce a tailored version of "
 "FreeBSD."
 msgstr ""
+"A atualização do FreeBSD através da compilação a partir do código-fonte "
+"oferece várias vantagens sobre as atualizações binárias. O código pode ser "
+"compilado com opções para aproveitar o hardware específico. Partes do "
+"sistema base podem ser compiladas com configurações não padrões, ou deixadas "
+"de fora somente onde não são necessárias ou desejadas. O processo de "
+"compilação leva mais tempo para atualizar um sistema do que apenas instalar "
+"atualizações binárias, mas permite customização completa para produzir uma "
+"versão do FreeBSD adaptada as suas necessidades."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:604
@@ -1317,21 +1564,26 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:629
+#, fuzzy
 msgid ""
 "<.> Check [.filename]#/usr/src/UPDATING# for any manual steps required "
 "before or after building from source."
 msgstr ""
+"Verifique o <filename>/usr/src/UPDATING</filename> para quaisquer etapas "
+"manuais necessárias antes ou depois de compilar a partir do código fonte."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:631
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:639
+#, fuzzy
 msgid "<.> Go to the source directory."
-msgstr ""
+msgstr "Vá para o diretório de origem."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:633
+#, fuzzy
 msgid "<.> Compile the world, everything except the kernel."
-msgstr ""
+msgstr "Compile o mundo, tudo exceto o kernel."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:635
@@ -1342,13 +1594,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:637
+#, fuzzy
 msgid "<.> Reboot the system to the new kernel."
-msgstr ""
+msgstr "Reinicialize o sistema com o novo kernel."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:641
+#, fuzzy
 msgid "<.> Install the world."
-msgstr ""
+msgstr "Instale o mundo."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:643
@@ -1357,8 +1611,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:645
+#, fuzzy
 msgid "<.> Restart the system to use the newly-built world and kernel."
-msgstr ""
+msgstr "Reinicie o sistema para usar o mundo e o kernel recém-compilados."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:648
@@ -1368,10 +1623,14 @@ msgstr "Preparando-se para uma atualização a partir do código fonte"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:651
+#, fuzzy
 msgid ""
 "Read [.filename]#/usr/src/UPDATING#. Any manual steps that must be performed "
 "before or after an update are described in this file."
 msgstr ""
+"Leia o <filename>/usr/src/UPDATING</filename>. Quaisquer etapas manuais que "
+"devem ser executadas antes ou depois de uma atualização são descritas neste "
+"arquivo."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:653
@@ -1412,11 +1671,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:677
+#, fuzzy
 msgid ""
 "The update process can take some time if the directory has not been updated "
 "recently.  After it finishes, the source code is up to date and the build "
 "process described in the next section can begin."
 msgstr ""
+"O processo de atualização pode levar algum tempo se o diretório não tiver "
+"sido atualizado recentemente. Após a conclusão, o código-fonte estará "
+"atualizado e o processo de compilação descrito na próxima seção poderá "
+"começar."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:681
@@ -1494,10 +1758,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:727
+#, fuzzy
 msgid ""
 "<.> Move the old directory out of the way. If there are no local "
 "modifications in this directory, it can be deleted."
 msgstr ""
+"Mova o diretório antigo para fora do caminho. Se não houver modificações "
+"locais nesse diretório, ele poderá ser excluído."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:729
@@ -1573,6 +1840,7 @@ msgstr "Definindo o Número de Jobs"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:768
+#, fuzzy
 msgid ""
 "Increasing the number of build jobs on multi-core processors can improve "
 "build speed.  Determine the number of cores with `sysctl hw.ncpu`.  "
@@ -1582,6 +1850,14 @@ msgid ""
 "between half and double the number of cores.  The number of jobs is "
 "specified with `-j`."
 msgstr ""
+"Aumentar o número de jobs de compilação em processadores com vários núcleos "
+"pode melhorar a velocidade de construção. Determine o número de núcleos com "
+"<command>sysctl hw.ncpu</command>. Os processadores variam, assim como os "
+"sistemas de compilação usados com diferentes versões do FreeBSD, portanto, o "
+"teste é o único método seguro para determinar como um número diferente de "
+"tarefas afeta a velocidade de compilação. Como ponto de partida, considere "
+"valores entre metade e o dobro do número de núcleos. O número de jobs é "
+"especificado com a opção <option>-j</option>."
 
 #. type: Block title
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:770
@@ -1630,6 +1906,7 @@ msgstr "Compilando um Kernel Customizado"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:801
+#, fuzzy
 msgid ""
 "The standard FreeBSD kernel is based on a _kernel config file_ called [."
 "filename]#GENERIC#.  The [.filename]#GENERIC# kernel includes the most "
@@ -1637,14 +1914,24 @@ msgid ""
 "necessary to build a custom kernel, adding or removing device drivers or "
 "options to fit a specific need."
 msgstr ""
+"O kernel padrão do FreeBSD é baseado em um <emphasis>arquivo de configuração "
+"do kernel</emphasis> chamado <filename>GENERIC</filename>. O kernel "
+"<filename>GENERIC</filename> inclui os drivers e opções de dispositivos mais "
+"comumente necessários. Às vezes, é útil ou necessário criar um kernel "
+"personalizado, adicionando ou removendo drivers de dispositivo ou opções "
+"para atender a uma necessidade específica."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:803
+#, fuzzy
 msgid ""
 "For example, someone developing a small embedded computer with severely "
 "limited RAM could remove unneeded device drivers or options to make the "
 "kernel slightly smaller."
 msgstr ""
+"Por exemplo, alguém que desenvolve um pequeno computador embarcado com RAM "
+"<acronym>severamente limitada</acronym> pode remover drivers de dispositivo "
+"desnecessários ou opções para tornar o kernel um pouco menor."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:806
@@ -1657,6 +1944,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:812
+#, fuzzy
 msgid ""
 "[.filename]#/usr/src# can be deleted or recreated, so it is preferable to "
 "keep custom kernel config files in a separate directory, like [.filename]#/"
@@ -1664,14 +1952,25 @@ msgid ""
 "If that directory is deleted or overwritten, the kernel config can be re-"
 "linked into the new one."
 msgstr ""
+"O <filename>/usr/src</filename> pode ser deletado ou recriado, então é "
+"preferível manter os arquivos de configuração do kernel em um diretório "
+"separado, como por exemplo em <filename>/root</filename>. Vincule o arquivo "
+"de configuração do kernel ao diretório <filename>conf</filename>. Se esse "
+"diretório for excluído ou sobrescrito, a configuração do kernel pode ser "
+"vinculada novamente ao novo."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:816
+#, fuzzy
 msgid ""
 "A custom config file can be created by copying the [.filename]#GENERIC# "
 "config file.  In this example, the new custom kernel is for a storage "
 "server, so is named [.filename]#STORAGESERVER#:"
 msgstr ""
+"Um arquivo de configuração personalizado pode ser criado copiando o arquivo "
+"de configuração <filename>GENERIC</filename>. Neste exemplo, o novo kernel "
+"personalizado é para um servidor de armazenamento, portanto, é denominado "
+"<filename>STORAGESERVER</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:822
@@ -1754,11 +2053,16 @@ msgstr "Concluindo a atualização"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:865
+#, fuzzy
 msgid ""
 "A few final tasks complete the update.  Any modified configuration files are "
 "merged with the new versions, outdated libraries are located and removed, "
 "then the system is restarted."
 msgstr ""
+"Algumas tarefas finais completam a atualização. Quaisquer arquivos de "
+"configuração que tenham sido modificados serão mesclado com as novas "
+"versões, as bibliotecas desatualizadas são localizadas e removidas e, em "
+"seguida, o sistema é reiniciado."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:867
@@ -1802,10 +2106,13 @@ msgstr "Verificando Arquivos e Bibliotecas Desatualizados"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:886
+#, fuzzy
 msgid ""
 "Some obsolete files or directories can remain after an update.  These files "
 "can be located:"
 msgstr ""
+"Alguns arquivos ou diretórios obsoletos podem permanecer após uma "
+"atualização. Esses arquivos podem ser localizados:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:890
@@ -1826,8 +2133,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:901
+#, fuzzy
 msgid "Some obsolete libraries can also remain.  These can be detected with:"
 msgstr ""
+"Algumas bibliotecas obsoletas também podem permanecer. Estes podem ser "
+"detectados com:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:905
@@ -1848,11 +2158,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:916
+#, fuzzy
 msgid ""
 "Programs which were still using those old libraries will stop working when "
 "the library has been deleted.  These programs must be rebuilt or replaced "
 "after deleting the old libraries."
 msgstr ""
+"Os programas que ainda estavam usando estas bibliotecas antigas deixarão de "
+"funcionar quando a biblioteca for excluída. Estes programas devem ser "
+"recompilados ou substituídos após a exclusão das bibliotecas antigas."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:922
