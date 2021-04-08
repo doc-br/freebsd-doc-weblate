@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-04-01 00:52+0000\n"
+"PO-Revision-Date: 2021-04-08 23:28+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/articlesldap-auth_index/pt_BR/>\n"
@@ -31,12 +31,18 @@ msgstr "Sumário"
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:26
+#, fuzzy
 msgid ""
 "This document is intended as a guide for the configuration of an LDAP server "
 "(principally an OpenLDAP server) for authentication on FreeBSD.  This is "
 "useful for situations where many servers need the same user accounts, for "
 "example as a replacement for NIS."
 msgstr ""
+"Este documento pretende ser um guia para a configuração de um servidor LDAP ("
+"principalmente um servidor <application>OpenLDAP</application>) para "
+"autenticação no FreeBSD. Isso é útil para situações em que muitos servidores "
+"precisam das mesmas contas de usuário, por exemplo, como substituto do "
+"<application>NIS</application>."
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:28
@@ -51,12 +57,18 @@ msgstr "Prefácio"
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:36
+#, fuzzy
 msgid ""
 "This document is intended to give the reader enough of an understanding of "
 "LDAP to configure an LDAP server.  This document will attempt to provide an "
 "explanation of package:net/nss_ldap[] and package:security/pam_ldap[] for "
 "use with client machines services for use with the LDAP server."
 msgstr ""
+"Este documento destina-se a fornecer ao leitor uma compreensão suficiente do "
+"LDAP para configurar um servidor LDAP. Este documento tentará fornecer uma "
+"explicação de <package>net/nss_ldap</package> e <package>security/pam_ldap</"
+"package> para uso com serviços de máquinas cliente para uso com o servidor "
+"LDAP."
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:38
@@ -71,6 +83,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:42
+#, fuzzy
 msgid ""
 "This article is not intended to be an exhaustive account of the security, "
 "robustness, or best practice considerations for configuring LDAP or the "
@@ -80,6 +93,13 @@ msgid ""
 "only, and any actual implementation should be accompanied by careful "
 "requirement analysis."
 msgstr ""
+"Este artigo não pretende ser um relato exaustivo da segurança, robustez ou "
+"considerações sobre práticas recomendadas para configurar o LDAP ou os "
+"outros serviços discutidos aqui. Embora o autor tenha o cuidado de fazer "
+"tudo corretamente, ele não aborda problemas de segurança além do escopo "
+"geral. Este artigo deve ser considerado para estabelecer as bases teóricas "
+"somente, e qualquer implementação real deve ser acompanhada por uma análise "
+"cuidadosa dos requisitos."
 
 #. type: Title ==
 #: documentation/content/en/articles/ldap-auth/_index.adoc:44
@@ -98,6 +118,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:53
+#, fuzzy
 msgid ""
 "The LDAP server http://www.openldap.org/[OpenLDAP] will be used in the "
 "examples in this document; while the principles here should be generally "
@@ -106,15 +127,28 @@ msgid ""
 "package:net/openldap24-server[].  Client servers will need the corresponding "
 "package:net/openldap24-client[] libraries."
 msgstr ""
+"O servidor LDAP <link xlink:href=\"http://www.openldap.org/\">OpenLDAP</"
+"link> será usado nos exemplos deste documento; embora os princípios aqui "
+"devam ser geralmente aplicáveis a muitos servidores diferentes, a maior "
+"parte da administração concreta é especificamente para "
+"<application>OpenLDAP</application>. Existem várias versões de servidor nos "
+"ports, por exemplo <package>net/openldap24-server</package>. Os servidores "
+"clientes precisarão das bibliotecas <package>net/openldap24-client</package> "
+"correspondentes."
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:56
+#, fuzzy
 msgid ""
 "There are (basically) two areas of the LDAP service which need "
 "configuration.  The first is setting up a server to receive connections "
 "properly, and the second is adding entries to the server's directory so that "
 "FreeBSD tools know how to interact with it."
 msgstr ""
+"Existem (basicamente) duas áreas do serviço LDAP que precisam de "
+"configuração. A primeira é a configuração de um servidor para receber as "
+"conexões corretamente, e o segundo é adicionar entradas ao diretório do "
+"servidor para que as ferramentas do FreeBSD saibam como interagir com ele."
 
 #. type: Title ===
 #: documentation/content/en/articles/ldap-auth/_index.adoc:58
@@ -169,12 +203,17 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:93
+#, fuzzy
 msgid ""
 "You will want to require encryption in your connections to the LDAP server; "
 "otherwise your users' passwords will be transferred in plain text, which is "
 "considered insecure.  The tools we will be using support two very similar "
 "kinds of encryption, SSL and TLS."
 msgstr ""
+"Você desejará exigir criptografia em suas conexões com o servidor LDAP; caso "
+"contrário, as senhas de seus usuários serão transferidas em texto simples, o "
+"que é considerado inseguro. As ferramentas que usaremos suportam dois tipos "
+"muito semelhantes de criptografia, SSL e TLS."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:96
@@ -195,12 +234,17 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:103
+#, fuzzy
 msgid ""
 "The reason SSL uses a different port than TLS is because a TLS connection "
 "begins as plain text, and switches to encrypted traffic after the `STARTTLS` "
 "directive.  SSL connections are encrypted from the beginning.  Other than "
 "that there are no substantial differences between the two."
 msgstr ""
+"A razão pela qual o SSL usa uma porta diferente do TLS é porque uma conexão "
+"TLS começa como texto simples e alterna para o tráfego criptografado após a "
+"diretiva <literal>STARTTLS</literal>. As conexões SSL são criptografadas "
+"desde o início. Além disso, não há diferenças substanciais entre os dois."
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:107
@@ -320,9 +364,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:175
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "slapd_enable=\"YES\"\n"
-msgstr ""
+msgstr "slapd_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:180
@@ -363,20 +407,27 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:202
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "base dc=example,dc=org\n"
 "uri ldap://server.example.org/\n"
 "ssl start_tls\n"
 "tls_cacert /path/to/your/cacert.crt\n"
 msgstr ""
+"base dc=example,dc=org\n"
+"uri ldap://server.example.org/\n"
+"ssl start_tls\n"
+"tls_cacert /path/to/your/cacert.crt\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:207
+#, fuzzy
 msgid ""
 "It is important that your clients have access to [.filename]#cacert.crt#, "
 "otherwise they will not be able to connect."
 msgstr ""
+"É importante que seus clientes tenham acesso ao <filename>cacert.crt</"
+"filename>, caso contrário, eles não poderão se conectar."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:214
@@ -404,6 +455,7 @@ msgstr "Entradas no banco de dados"
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:226
+#, fuzzy
 msgid ""
 "Authentication against an LDAP directory is generally accomplished by "
 "attempting to bind to the directory as the connecting user.  This is done by "
@@ -412,6 +464,12 @@ msgid ""
 "that entry's `userPassword` attribute matches the password supplied, then "
 "the bind is successful."
 msgstr ""
+"A autenticação em um diretório LDAP geralmente é realizada pela tentativa de "
+"vincular ao diretório como o usuário de conexão. Isso é feito estabelecendo "
+"um vinculo <quote>simples</quote> no diretório com o nome de usuário "
+"fornecido. Se houver uma entrada com o <literal>uid</literal> igual ao nome "
+"do usuário e o atributo <literal>userPassword</literal> da entrada "
+"corresponder à senha fornecida, o vinculo será bem-sucedido."
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:228
@@ -438,13 +496,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:241
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "dn: ou=people,dc=example,dc=org\n"
 "objectClass: top\n"
 "objectClass: organizationalUnit\n"
 "ou: people\n"
 msgstr ""
+"dn: ou=people,dc=example,dc=org\n"
+"objectClass: top\n"
+"objectClass: organizationalUnit\n"
+"ou: people\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:244
@@ -455,6 +517,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:249
+#, fuzzy
 msgid ""
 "Some thought might be given to the object class your users will belong to.  "
 "Most tools by default will use `people`, which is fine if you simply want to "
@@ -463,6 +526,13 @@ msgid ""
 "to use `inetOrgPerson`, which has many useful attributes.  In either case, "
 "the relevant schemas need to be loaded in [.filename]#slapd.conf#."
 msgstr ""
+"Alguma consideração pode ser dada à classe de objeto a que seus usuários "
+"pertencerão. A maioria das ferramentas, por padrão, usará <literal>people</"
+"literal>, o que é bom se você quiser simplesmente fornecer entradas para "
+"autenticar. No entanto, se você for armazenar informações do usuário no "
+"banco de dados LDAP, provavelmente usará <literal>inetOrgPerson</literal>, "
+"que possui muitos atributos úteis. Em ambos os casos, os esquemas relevantes "
+"precisam ser carregados em <filename>slapd.conf</filename>."
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:252
@@ -479,7 +549,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:268
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "dn: uid=tuser,ou=people,dc=example,dc=org\n"
 "objectClass: person\n"
@@ -493,6 +563,17 @@ msgid ""
 "uid: tuser\n"
 "cn: tuser\n"
 msgstr ""
+"dn: uid=tuser,ou=people,dc=example,dc=org\n"
+"objectClass: person\n"
+"objectClass: posixAccount\n"
+"objectClass: shadowAccount\n"
+"objectClass: top\n"
+"uidNumber: 10000\n"
+"gidNumber: 10000\n"
+"homeDirectory: /home/tuser\n"
+"loginShell: /bin/csh\n"
+"uid: tuser\n"
+"cn: tuser\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:271
@@ -507,20 +588,27 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:274
+#, fuzzy
 msgid ""
 "We also need group entries.  They are as configurable as user entries, but "
 "we will use the defaults below:"
 msgstr ""
+"Também precisamos de entradas de grupo. Eles são configuráveis como entradas "
+"do usuário, mas usaremos os padrões abaixo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:281
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "dn: ou=groups,dc=example,dc=org\n"
 "objectClass: top\n"
 "objectClass: organizationalUnit\n"
 "ou: groups\n"
 msgstr ""
+"dn: ou=people,dc=example,dc=org\n"
+"objectClass: top\n"
+"objectClass: organizationalUnit\n"
+"ou: people\n"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:287
@@ -543,11 +631,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:294
+#, fuzzy
 msgid ""
 "The `ldapsearch` utility on the client machine should now return these "
 "entries.  If it does, your database is properly configured to be used as an "
 "LDAP authentication server."
 msgstr ""
+"O utilitário <command>ldapsearch</command> na máquina cliente deve agora "
+"retornar essas entradas. Em caso afirmativo, o banco de dados está "
+"configurado corretamente para ser usado como um servidor de autenticação "
+"LDAP."
 
 #. type: Title ==
 #: documentation/content/en/articles/ldap-auth/_index.adoc:296
@@ -565,10 +658,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:301
+#, fuzzy
 msgid ""
 "FreeBSD requires two ports to be installed to authenticate against an LDAP "
 "server, package:security/pam_ldap[] and package:net/nss_ldap[]."
 msgstr ""
+"O FreeBSD requer que dois ports sejam instalados para autenticação em um "
+"servidor LDAP, <package>security/pam_ldap</package> e <package>net/"
+"nss_ldap</package>."
 
 #. type: Title ===
 #: documentation/content/en/articles/ldap-auth/_index.adoc:303
@@ -618,9 +715,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:327
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "pam_login_attribute uid\n"
-msgstr ""
+msgstr "pam_login_attribute uid\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:335
@@ -680,12 +777,17 @@ msgstr "PAM"
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:364
+#, fuzzy
 msgid ""
 "PAM, which stands for \"Pluggable Authentication Modules\", is the method by "
 "which FreeBSD authenticates most of its sessions.  To tell FreeBSD we wish "
 "to use an LDAP server, we will have to add a line to the appropriate PAM "
 "file."
 msgstr ""
+"PAM, que significa <quote>Pluggable Authentication Modules</quote>, é o "
+"método pelo qual o FreeBSD autentica a maioria de suas sessões. Para dizer "
+"ao FreeBSD que desejamos usar um servidor LDAP, teremos que adicionar uma "
+"linha ao arquivo PAM apropriado."
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:366
@@ -702,9 +804,9 @@ msgstr "Para usar o PAM para autenticação, adicione a linha"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:372
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "auth  sufficient  /usr/local/lib/pam_ldap.so  no_warn\n"
-msgstr ""
+msgstr "auth suficiente /usr/local/lib/pam_ldap.so no_warn\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:375
@@ -724,12 +826,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:382
+#, fuzzy
 msgid ""
 "However it is not a good idea to allow _every_ user in the directory into "
 "_every_ client machine.  With the current configuration, all that a user "
 "needs to log into a machine is an LDAP entry.  Fortunately there are a few "
 "ways to restrict user access."
 msgstr ""
+"No entanto, não é uma boa idéia permitir que <emphasis>todo</emphasis> "
+"usuário no diretório dentro de <emphasis>todo</emphasis> computador cliente. "
+"Com a configuração atual, tudo o que um usuário precisa para efetuar login "
+"em uma máquina é uma entrada LDAP. Felizmente, existem algumas maneiras de "
+"restringir o acesso do usuário."
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:385
@@ -741,16 +849,19 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:389
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "pam_groupdn cn=servername,ou=accessgroups,dc=example,dc=org\n"
-msgstr ""
+msgstr "pam_groupdn cn=servername,ou=accessgroups,dc=example,dc=org\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:393
+#, fuzzy
 msgid ""
 "in [.filename]#ldap.conf#, then only members of that group will be able to "
 "log in.  There are a few things to bear in mind, however."
 msgstr ""
+"em <filename>ldap.conf</filename>, somente os membros desse grupo poderão "
+"efetuar login. Entretanto, há algumas coisas a serem lembradas."
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:396
@@ -762,12 +873,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:400
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "memberUid: uid=someuser,ou=people,dc=example,dc=org\n"
-msgstr ""
+msgstr "memberUid: uid=algum usuário, ou=pessoas, dc=exemplo, dc=org\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:406
+#, fuzzy
 msgid ""
 "Additionally, this directive is not checked in PAM during authentication, it "
 "is checked during account management, so you will need a second line in your "
@@ -778,6 +890,16 @@ msgid ""
 "`ignore_authinfo_unavail` option so that you are not locked out of every "
 "computer when the LDAP server is unavailable."
 msgstr ""
+"Além disso, essa diretiva não é verificada no PAM durante a autenticação, "
+"ela é verificada durante o gerenciamento de contas, portanto, você precisará "
+"de uma segunda linha em seus arquivos PAM sob <literal>account</literal>. "
+"Isso exigirá, por sua vez, que <emphasis>todo</emphasis> usuário seja "
+"listado no grupo, o que não é necessariamente o que queremos. Para evitar o "
+"bloqueio de usuários que não estão no LDAP, você deve ativar o atributo "
+"<literal>ignore_unknown_user</literal>. Finalmente, você deve definir a "
+"opção <literal>ignore_authinfo_unavail</literal> para que você não fique "
+"bloqueado em todos os computadores quando o servidor LDAP estiver "
+"indisponível."
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:408
@@ -851,11 +973,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:452
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "group: compat\n"
 "passwd: compat\n"
 msgstr ""
+"group: compat\n"
+"passwd: compat\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:455
@@ -864,11 +988,13 @@ msgstr "com"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:460
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "group: files ldap\n"
 "passwd: files ldap\n"
 msgstr ""
+"group: files ldap\n"
+"passwd: files ldap\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:463
@@ -944,11 +1070,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:507
+#, fuzzy
 msgid ""
 "This script does hardly any error checking, but more important it is very "
 "cavalier about how it stores your passwords.  If you do anything like this, "
 "at least adjust the `security.bsd.see_other_uids` sysctl value:"
 msgstr ""
+"Esse script dificilmente faz qualquer verificação de erros, mas, o mais "
+"importante, é muito indiferente sobre como ele armazena suas senhas. Se você "
+"fizer algo assim, ajuste pelo menos o valor de sysctl <literal>security.bsd."
+"see_other_uids</literal>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:511
@@ -958,12 +1089,17 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:518
+#, fuzzy
 msgid ""
 "A more flexible (and probably more secure) approach can be used by writing a "
 "custom program, or even a web interface.  The following is part of a Ruby "
 "library that can change LDAP passwords.  It sees use both on the command "
 "line, and on the web."
 msgstr ""
+"Uma abordagem mais flexível (e provavelmente mais segura) pode ser usada "
+"escrevendo um programa personalizado, ou até mesmo uma interface web. A "
+"seguir, parte de uma biblioteca <application>Ruby</application> que pode "
+"alterar senhas LDAP. Ele vê o uso na linha de comando e na web."
 
 #. type: Block title
 #: documentation/content/en/articles/ldap-auth/_index.adoc:520
@@ -1055,11 +1191,15 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:567
+#, fuzzy
 msgid ""
 "Although not guaranteed to be free of security holes (the password is kept "
 "in memory, for example) this is cleaner and more flexible than a simple `sh` "
 "script."
 msgstr ""
+"Apesar de não ter a garantia de estar livre de falhas de segurança (a senha "
+"é mantida na memória, por exemplo), isso é mais limpo e mais flexível do que "
+"um simples script <command>sh</command>."
 
 #. type: Title ==
 #: documentation/content/en/articles/ldap-auth/_index.adoc:569
@@ -1069,6 +1209,7 @@ msgstr "Considerações de segurança"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:572
+#, fuzzy
 msgid ""
 "Now that your machines (and possibly other services) are authenticating "
 "against your LDAP server, this server needs to be protected at least as well "
@@ -1076,13 +1217,21 @@ msgid ""
 "possibly even more so since a broken or cracked LDAP server would break "
 "every client service."
 msgstr ""
+"Agora que suas máquinas (e possivelmente outros serviços) estão autenticando "
+"em seu servidor LDAP, este servidor precisa ser protegido pelo menos tão bem "
+"quanto <filename>/etc/master.passwd</filename> seria em um servidor regular, "
+"e possivelmente mais ainda, uma vez que um servidor LDAP corrompido "
+"quebraria todos os serviços do cliente."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:575
+#, fuzzy
 msgid ""
 "Remember, this section is not exhaustive.  You should continually review "
 "your configuration and procedures for improvements."
 msgstr ""
+"Lembre-se, esta seção não é exaustiva. Você deve revisar continuamente sua "
+"configuração e procedimentos para melhorias."
 
 #. type: Title ===
 #: documentation/content/en/articles/ldap-auth/_index.adoc:577
@@ -1100,11 +1249,16 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:585
+#, fuzzy
 msgid ""
 "To begin with, the `userPassword` attribute should not be world-readable.  "
 "By default, anyone who can connect to the LDAP server can read this "
 "attribute.  To disable this, put the following in [.filename]#slapd.conf#:"
 msgstr ""
+"Para começar, o atributo <literal>userPassword</literal> não deve ser "
+"legível por todos. Por padrão, qualquer pessoa que possa se conectar ao "
+"servidor LDAP pode ler esse atributo. Para desabilitar isso, coloque o "
+"seguinte em <filename>slapd.conf</filename>:"
 
 #. type: Block title
 #: documentation/content/en/articles/ldap-auth/_index.adoc:587
@@ -1143,12 +1297,17 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:611
+#, fuzzy
 msgid ""
 "Additionally, you'll want to keep users from changing some of their own "
 "attributes.  By default, users can change any attribute (except for those "
 "which the LDAP schemas themselves deny changes), such as `uidNumber`.  To "
 "close this hole, modify the above to"
 msgstr ""
+"Além disso, você desejará impedir que os usuários alterem alguns de seus "
+"próprios atributos. Por padrão, os usuários podem alterar qualquer atributo ("
+"exceto aqueles que os próprios esquemas LDAP negam alterações), como "
+"<literal>uidNumber</literal>. Para fechar este buraco, modifique o acima para"
 
 #. type: Block title
 #: documentation/content/en/articles/ldap-auth/_index.adoc:613
@@ -1204,15 +1363,20 @@ msgstr "Criando um grupo de gerenciamento"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:653
+#, fuzzy
 msgid ""
 "Say you want your IT department to be able to change home directories for "
 "users, but you do not want all of them to be able to add or remove users.  "
 "The way to do this is to add a group for these admins:"
 msgstr ""
+"Digamos que você queira que seu departamento de TI possa alterar os "
+"diretórios pessoais dos usuários, mas não deseja que todos eles possam "
+"adicionar ou remover usuários. A maneira de fazer isso é adicionar um grupo "
+"para esses administradores:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:668
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "dn: cn=homemanagement,dc=example,dc=org\n"
 "objectClass: top\n"
@@ -1222,11 +1386,20 @@ msgid ""
 "memberUid: uid=tuser,ou=people,dc=example,dc=org\n"
 "memberUid: uid=user2,ou=people,dc=example,dc=org\n"
 msgstr ""
+"dn: cn=homemanagement,dc=example,dc=org\n"
+"objectClass: top\n"
+"objectClass: posixGroup\n"
+"cn: homemanagement\n"
+"gidNumber: 121 # required for posixGroup\n"
+"memberUid: uid=tuser,ou=people,dc=example,dc=org\n"
+"memberUid: uid=user2,ou=people,dc=example,dc=org\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:673
+#, fuzzy
 msgid "And then change the permissions attributes in [.filename]#slapd.conf#:"
 msgstr ""
+"E então mude os atributos de permissões em <filename>slapd.conf</filename>:"
 
 #. type: Block title
 #: documentation/content/en/articles/ldap-auth/_index.adoc:675
@@ -1236,13 +1409,17 @@ msgstr "ACLs para um grupo de gerenciamento de diretório inicial"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:685
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "access to dn.subtree=\"ou=people,dc=example,dc=org\"\n"
 "  attr=homeDirectory\n"
 "  by dn=\"cn=homemanagement,dc=example,dc=org\"\n"
 "  dnattr=memberUid write\n"
 msgstr ""
+"access to dn.subtree=\"ou=people,dc=example,dc=org\"\n"
+"  attr=homeDirectory\n"
+"  by dn=\"cn=homemanagement,dc=example,dc=org\"\n"
+"  dnattr=memberUid write\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:690
@@ -1276,11 +1453,15 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:703
+#, fuzzy
 msgid ""
 "It is a good idea, then, to store passwords in a more secure format, such as "
 "SSHA (salted SHA).  This is done by whatever program you use to change "
 "users' passwords."
 msgstr ""
+"É uma boa idéia, então, armazenar senhas em um formato mais seguro, como o "
+"SSHA (salted SHA). Isso é feito por qualquer programa que você use para "
+"alterar as senhas dos usuários."
 
 #. type: Title ==
 #: documentation/content/en/articles/ldap-auth/_index.adoc:708
@@ -1299,6 +1480,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:714
+#, fuzzy
 msgid ""
 "package:security/pam_mkhomedir[] is a PAM module that always succeeds; its "
 "purpose is to create home directories for users which do not have them.  If "
@@ -1306,6 +1488,11 @@ msgid ""
 "to use this and set up skeleton directories than to prepare every home "
 "directory."
 msgstr ""
+"O <package>security/pam_mkhomedir</package> é um módulo PAM que sempre é bem-"
+"sucedido; Sua finalidade é criar diretórios pessoais para usuários que não "
+"os possuem. Se você tiver dezenas de servidores clientes e centenas de "
+"usuários, é muito mais fácil usar isso e configurar diretórios esqueletos do "
+"que preparar cada diretório inicial."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:718
@@ -1318,6 +1505,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:722
+#, fuzzy
 msgid ""
 "package:sysutils/ldapvi[] is a great utility for editing LDAP values in an "
 "LDIF-like syntax.  The directory (or subsection of the directory) is "
@@ -1325,6 +1513,12 @@ msgid ""
 "makes it easy to enable large-scale changes in the directory without having "
 "to write a custom tool."
 msgstr ""
+"O <package>sysutils/ldapvi</package> é um ótimo utilitário para editar "
+"valores LDAP em uma sintaxe semelhante a LDIF. O diretório (ou subseção do "
+"diretório) é apresentado no editor escolhido pela variável de ambiente "
+"<envar>EDITOR</envar>. Isso facilita a ativação de alterações em grande "
+"escala no diretório sem a necessidade de escrever uma ferramenta "
+"personalizada."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:725
@@ -1342,6 +1536,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:734
+#, fuzzy
 msgid ""
 "If you are hosting two or more LDAP servers, you will probably not want to "
 "use self-signed certificates, since each client will have to be configured "
@@ -1349,6 +1544,11 @@ msgid ""
 "simple as creating your own certificate authority, and signing your servers' "
 "certificates with that."
 msgstr ""
+"Se você estiver hospedando dois ou mais servidores LDAP, provavelmente não "
+"desejará usar certificados autoassinados, já que cada cliente precisará ser "
+"configurado para trabalhar com cada certificado. Embora isso seja possível, "
+"não é tão simples quanto criar sua própria autoridade de certificação e "
+"assinar os certificados de seus servidores com isso."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:736
@@ -1360,10 +1560,13 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:739
+#, fuzzy
 msgid ""
 "To create a certificate authority, we simply need a self-signed certificate "
 "and key.  The steps for this again are"
 msgstr ""
+"Para criar uma autoridade de certificação, simplesmente precisamos de um "
+"certificado e chave autoassinados. As etapas para isso novamente são"
 
 #. type: Block title
 #: documentation/content/en/articles/ldap-auth/_index.adoc:741
@@ -1382,11 +1585,15 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:756
+#, fuzzy
 msgid ""
 "These will be your root CA key and certificate.  You will probably want to "
 "encrypt the key and store it in a cool, dry place; anyone with access to it "
 "can masquerade as one of your LDAP servers."
 msgstr ""
+"Estas serão sua chave e certificado de CA raiz. Você provavelmente desejará "
+"criptografar a chave e armazená-la em um local seguro; qualquer pessoa com "
+"acesso a ele pode se passar por um dos seus servidores LDAP."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:759
@@ -1399,11 +1606,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/ldap-auth/_index.adoc:763
+#, fuzzy
 msgid ""
 "Do not forget to use the fully qualified domain name for the \"common name\" "
 "attribute when generating the certificate signing request; otherwise clients "
 "will reject a connection with you, and it can be very tricky to diagnose."
 msgstr ""
+"Não se esqueça de usar o nome de domínio totalmente qualificado para o "
+"atributo <quote>common name</quote> ao gerar a solicitação de assinatura de "
+"certificado; caso contrário, os clientes rejeitarão uma conexão com você e "
+"poderá ser muito complicado diagnosticar."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ldap-auth/_index.adoc:766
