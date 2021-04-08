@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-03-30 23:20+0000\n"
+"PO-Revision-Date: 2021-04-08 23:28+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/articlesnanobsd_index/pt_BR/>\n"
@@ -53,6 +53,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:40
+#, fuzzy
 msgid ""
 "It can be used to build specialized install images, designed for easy "
 "installation and maintenance of systems commonly called \"computer appliances"
@@ -60,6 +61,12 @@ msgid ""
 "product, which means all applications are pre-installed.  The appliance is "
 "plugged into an existing network and can begin working (almost) immediately."
 msgstr ""
+"Ele pode ser usado para construir imagens de instalação especializadas, "
+"projetadas para fácil instalação e manutenção de sistemas comumente chamados "
+"de <quote>appliances</quote>. Os appliances têm seu hardware e software "
+"agrupados no produto, o que significa que todos os aplicativos são pré-"
+"instalados. O appliance é conectado a uma rede existente e pode começar a "
+"funcionar (quase) imediatamente."
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:42
@@ -68,10 +75,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:44
+#, fuzzy
 msgid ""
 "Ports and packages work as in FreeBSD - Every single application can be "
 "installed and used in a NanoBSD image, the same way as in FreeBSD."
 msgstr ""
+"Os Ports e os pacotes funcionam como no FreeBSD - Cada aplicativo pode ser "
+"instalado e usado em uma imagem do <application>NanoBSD</application>, da "
+"mesma forma que no FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:45
@@ -92,11 +103,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:47
+#, fuzzy
 msgid ""
 "Easy to build and customize - Making use of just one shell script and one "
 "configuration file it is possible to build reduced and customized images "
 "satisfying any arbitrary set of requirements."
 msgstr ""
+"É fácil de criar e personalizar - Usando apenas um script de shell e um "
+"arquivo de configuração, é possível criar imagens reduzidas e "
+"personalizadas, satisfazendo qualquer conjunto arbitrário de requisitos."
 
 #. type: Title ==
 #: documentation/content/en/articles/nanobsd/_index.adoc:49
@@ -124,10 +139,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:59
+#, fuzzy
 msgid ""
 "The configuration file partition, which can be mounted under the [."
 "filename]#/cfg# directory at run time."
 msgstr ""
+"A partição do arquivo de configuração, que pode ser montada no diretório "
+"<filename>/cfg</filename> em tempo de execução."
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:61
@@ -171,19 +189,29 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:85
+#, fuzzy
 msgid ""
 "The partition containing [.filename]#/cfg# should be mounted only at boot "
 "time and while overriding the configuration files."
 msgstr ""
+"A partição que contém o <filename>/cfg</filename> deve ser montada somente "
+"no momento da inicialização ou quando for preciso sobrescrever os arquivos "
+"de configuração."
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:87
+#, fuzzy
 msgid ""
 "Keeping [.filename]#/cfg# mounted at all times is not a good idea, "
 "especially if the NanoBSD system runs off a mass storage medium that may be "
 "adversely affected by a large number of writes to the partition (like when "
 "the filesystem syncer flushes data to the system disks)."
 msgstr ""
+"Manter o <filename>/cfg</filename> montado o tempo todo não é uma boa ideia, "
+"especialmente se o sistema  <application>NanoBSD</application> for executado "
+"em um meio de armazenamento em massa que pode ser afetado negativamente por "
+"um grande número de gravações na partição (como quando o sistema de arquivos "
+"sincroniza os dados para os discos do sistema)."
 
 #. type: Title ===
 #: documentation/content/en/articles/nanobsd/_index.adoc:89
@@ -224,15 +252,19 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:107
+#, fuzzy
 msgid "<.> Start the build process."
-msgstr ""
+msgstr "Comece o processo de construção."
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:109
+#, fuzzy
 msgid ""
 "<.> Change the current directory to the place where the built images are "
 "located."
 msgstr ""
+"Altere o diretório atual para o local onde as imagens construídas estão "
+"localizadas."
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:111
@@ -479,11 +511,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:171
+#, fuzzy
 msgid ""
 "Invocation of the following command will force the [.filename]#nanobsd.sh# "
 "to read its configuration from [.filename]#myconf.nano# located in the "
 "current directory:"
 msgstr ""
+"A execução do seguinte comando forçará o <filename>nanobsd.sh</filename> a "
+"ler sua configuração do <filename>myconf.nano</filename> localizado no "
+"diretório atual:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/nanobsd/_index.adoc:175
@@ -526,10 +562,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:190
+#, fuzzy
 msgid ""
 "The configuration file consists of configuration options, which override the "
 "default values.  The most important directives are:"
 msgstr ""
+"O arquivo de configuração consiste em opções de configuração, que substituem "
+"os valores padrões. As diretivas mais importantes são:"
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:192
@@ -814,14 +853,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:273
+#, fuzzy
 msgid ""
 "A more useful example of a customization function is the following, which "
 "changes the default size of the [.filename]#/etc# directory from 5MB to 30MB:"
 msgstr ""
+"Um exemplo mais útil de uma função de customização é o seguinte, o qual "
+"altera o tamanho padrão do diretório <filename>/etc</filename> de 5MB para "
+"30MB:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/nanobsd/_index.adoc:281
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "cust_etc_size () (\n"
 "\tcd ${NANO_WORLDDIR}/conf\n"
@@ -829,6 +872,11 @@ msgid ""
 ")\n"
 "customize_cmd cust_etc_size\n"
 msgstr ""
+"cust_etc_size () (\n"
+"\tcd ${NANO_WORLDDIR}/conf\n"
+"\techo 30000 &gt; default/etc/md_size\n"
+")\n"
+"customize_cmd cust_etc_size\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:284
@@ -1057,12 +1105,18 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/nanobsd/_index.adoc:381
+#, fuzzy
 msgid ""
 "  The most important difference of this step from the initial NanoBSD "
 "installation is that now instead of using [.filename]#\\_.disk.full# (which "
 "contains an image of the entire disk), the [.filename]#_.disk.image# image "
 "is installed (which contains an image of a single system partition)."
 msgstr ""
+"  A diferença mais importante deste passo da instalação inicial do "
+"<application>NanoBSD</application> é que agora, em vez de usar <filename>_. "
+"Disk.full</filename> (que contém uma imagem do disco todo), a imagem "
+"<filename>_.disk.image</filename> está instalada (a qual contém uma imagem "
+"de uma única partição do sistema)."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/nanobsd/_index.adoc:382
@@ -1177,10 +1231,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:427
+#, fuzzy
 msgid ""
 "Connect to the host serving new image and execute [.filename]#updatep1# "
 "script:"
 msgstr ""
+"Conecte-se ao host que está servindo a nova imagem e execute o script "
+"<filename>updatep1</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/nanobsd/_index.adoc:431
