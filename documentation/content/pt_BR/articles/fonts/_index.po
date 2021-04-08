@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-04-01 00:52+0000\n"
+"PO-Revision-Date: 2021-04-08 23:28+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/articlesfonts_index/pt_BR/>\n"
@@ -51,6 +51,7 @@ msgstr "Introdução"
 
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:37
+#, fuzzy
 msgid ""
 "There are many sources of fonts available, and one might ask how they might "
 "be used with FreeBSD.  The answer can be found by carefully searching the "
@@ -58,6 +59,11 @@ msgid ""
 "time consuming, so this tutorial is an attempt to provide a shortcut for "
 "others who might be interested."
 msgstr ""
+"Existem muitas origens de fontes disponíveis, e alguém pode questionar como "
+"elas podem ser utilizadas no FreeBSD. A resposta pode ser encontrada numa "
+"busca cuidadosa na documentação do componente onde você gostaria de utilizar "
+"a mesma. Isto pode consumir um bom tempo, portanto esse tutorial é uma "
+"tentativa de fornecer um atalho para outros que possam estar interessados."
 
 #. type: Title ==
 #: documentation/content/en/articles/fonts/_index.adoc:39
@@ -67,10 +73,13 @@ msgstr "Terminologia Básica"
 
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:43
+#, fuzzy
 msgid ""
 "There are many different font formats and associated font file suffixes.  A "
 "few that will be addressed here are:"
 msgstr ""
+"Existem muitos formatos diferentes de fontes e sufixos de arquivos de fontes "
+"associados. Alguns deles serão abordados aqui:"
 
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:44
@@ -160,12 +169,17 @@ msgstr "Quais Formatos de Fonte eu Posso Utilizar?"
 
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:72
+#, fuzzy
 msgid ""
 "Which font file format is useful depends on the application being used.  "
 "FreeBSD by itself uses no fonts.  Application programs and/or drivers may "
 "make use of the font files.  Here is a small cross reference of application/"
 "driver to the font type suffixes:"
 msgstr ""
+"Qual formato de arquivo de fonte é útil depende do aplicativo que está sendo "
+"usado. O FreeBSD por si só, não usa fontes. Aplicativos e/ou drivers podem "
+"fazer uso de arquivos de fontes. Aqui tem uma pequena referência cruzada de "
+"aplicação/driver para os sufixos de tipo de fonte:"
 
 #. type: Labeled list
 #: documentation/content/en/articles/fonts/_index.adoc:73
@@ -186,9 +200,9 @@ msgstr ""
 
 #. type: Labeled list
 #: documentation/content/en/articles/fonts/_index.adoc:78
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "syscons:"
-msgstr ""
+msgstr "syscons"
 
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:80
@@ -256,17 +270,22 @@ msgstr "Configurando um Console Virtual para o Modo de Linhas 80x60"
 
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:105
+#, fuzzy
 msgid ""
 "First, an 8x8 font must be loaded.  To do this, [.filename]#/etc/rc.conf# "
 "should contain the line (change the font name to an appropriate one for your "
 "locale):"
 msgstr ""
+"Primeiro, uma fonte 8x8 deve ser carregada. Para fazer isso, <filename>/etc/"
+"rc.conf</filename> deve conter a linha (altere o nome da fonte para uma "
+"apropriada para a sua região):"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/fonts/_index.adoc:109
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "font8x8=\"iso-8x8\"\t\t# font 8x8 from /usr/share/syscons/fonts/* (or NO).\n"
 msgstr ""
+"font8x8=\"iso-8x8\"\t\t# font 8x8 from /usr/share/syscons/fonts/* (or NO).\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:112
@@ -290,17 +309,24 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:123
+#, fuzzy
 msgid ""
 "To make this more seamless, one can embed these commands in the startup "
 "scripts so it takes place when the system boots.  To do this is add this "
 "line to [.filename]#/etc/rc.conf#."
 msgstr ""
+"Para fazer isso de uma maneira mais integrada, é possível incluir esses "
+"comandos nos scripts de inicialização de modo que ocorra quando o sistema "
+"for iniciado. Para fazer isso basta adicionar essa linha no <filename>/etc/rc"
+".conf</filename>."
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/fonts/_index.adoc:127
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "allscreens_flags=\"VGA_80x60\"\t# Set this vidcontrol mode for all virtual screens\n"
 msgstr ""
+"allscreens_flags=\"VGA_80x60\"\t# Set this vidcontrol mode for all virtual "
+"screens\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:130
@@ -380,7 +406,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/fonts/_index.adoc:178
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "-bitstream-charter-medium-r-normal-xxx-0-0-0-0-p-0-iso8859-1\n"
 "     |        |      |    |   |     |  | | | | | |    \\    \\\n"
@@ -394,6 +420,18 @@ msgid ""
 "     |        |      |        \\     \\\t   \\\n"
 "  foundry  family  weight   slant  width  additional style\n"
 msgstr ""
+"-bitstream-charter-medium-r-normal-xxx-0-0-0-0-p-0-iso8859-1\n"
+"     |        |      |    |   |     |  | | | | | |    \\    \\\n"
+"     |        |      |    |   |     \\  \\ \\ \\ \\ \\ \\     +----+- "
+"character set\n"
+"     |        |      |    |   \\      \\  \\ \\ \\ \\ \\ +- average width\n"
+"     |        |      |    |    \\      \\  \\ \\ \\ \\ +- spacing\n"
+"     |        |      |    \\\t\\      \\  \\ \\ \\ +- vertical res.\n"
+"     |        |      |     \\\t \\\t\\  \\ \\ +- horizontal res.\n"
+"     |        |      |      \\\t  \\\t \\  \\ +- points\n"
+"     |        |      |       \\     \\\t  \\  +- pixels\n"
+"     |        |      |        \\     \\\t   \\\n"
+"  foundry  family  weight   slant  width  additional style\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:184
@@ -406,7 +444,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/fonts/_index.adoc:212
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "% strings showboat.pfb | more\n"
 "%!FontType1-1.0: Showboat 001.001\n"
@@ -434,6 +472,31 @@ msgid ""
 "/FontName /Showboat def\n"
 "--stdin--\n"
 msgstr ""
+"<prompt>%</prompt> <userinput>strings showboat.pfb | more</userinput>\n"
+"%!FontType1-1.0: Showboat 001.001\n"
+"%%CreationDate: 1/15/91 5:16:03 PM\n"
+"%%VMusage: 1024 45747\n"
+"% Generated by Fontographer 3.1\n"
+"% Showboat\n"
+" 1991 by David Rakowski.  Alle Rechte Vorbehalten.\n"
+"FontDirectory/Showboat known{/Showboat findfont dup/UniqueID known{dup\n"
+"/UniqueID get 4962377 eq exch/FontType get 1 eq and}{pop false}ifelse\n"
+"{save true}{false}ifelse}{false}ifelse\n"
+"12 dict begin\n"
+"/FontInfo 9 dict dup begin\n"
+" /version (001.001) readonly def\n"
+" /FullName (Showboat) readonly def\n"
+" /FamilyName (Showboat) readonly def\n"
+" /Weight (Medium) readonly def\n"
+" /ItalicAngle 0 def\n"
+" /isFixedPitch false def\n"
+" /UnderlinePosition -106 def\n"
+" /UnderlineThickness 16 def\n"
+" /Notice (Showboat\n"
+" 1991 by David Rakowski.  Alle Rechte Vorbehalten.) readonly def\n"
+"end readonly def\n"
+"/FontName /Showboat def\n"
+"--stdin--\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:215
@@ -442,9 +505,9 @@ msgstr "Usando essas informações, um possível nome poderia ser:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/fonts/_index.adoc:219
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "-type1-Showboat-medium-r-normal-decorative-0-0-0-0-p-0-iso8859-1\n"
-msgstr ""
+msgstr "-type1-Showboat-medium-r-normal-decorative-0-0-0-0-p-0-iso8859-1\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:222
@@ -709,11 +772,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:345
+#, fuzzy
 msgid ""
 "The first tool is `afmtodit`.  This is not normally installed, so it must be "
 "retrieved from the source distribution.  I found I had to change the first "
 "line of the file, so I did:"
 msgstr ""
+"A primeira ferramenta é o <command>afmtodit</command>. Ela normalmente não "
+"está instalada, então deve ser baixada de uma fonte de distribuição. Eu "
+"percebi que teria que mudar a primeira linha do arquivo, então eu fiz:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/fonts/_index.adoc:354
@@ -783,10 +850,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:388
+#, fuzzy
 msgid ""
 "Of course, if [.filename]#.pfa# is already available, just use a symbolic "
 "link to reference it."
 msgstr ""
+"Claro que, se o arquivo<filename>.pfa</filename> já existe, apenas crie um "
+"link simbólico para referenciá-lo."
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/fonts/_index.adoc:400
@@ -874,10 +944,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:449
+#, fuzzy
 msgid ""
 "This potentially requires a bit of work, simply because it depends on some "
 "utilities that are not installed as part of the base system.  They are:"
 msgstr ""
+"Isso potencialmente requer um pouco de trabalho, simplesmente porque depende "
+"de alguns utilitários que não são instalados como parte do sistema base. "
+"Eles são:"
 
 #. type: Labeled list
 #: documentation/content/en/articles/fonts/_index.adoc:450
@@ -887,10 +961,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:453
+#, fuzzy
 msgid ""
 "TrueType to PostScript conversion utilities.  This allows conversion of a "
 "TrueType font to an ascii font metric ([.filename]#.afm#) file."
 msgstr ""
+"Utilitário de conversão TrueType para PostScript. Ee permite a conversão de "
+"uma fonte TrueType em um arquivo de métrica de fonte ascii (<filename>."
+"afm</filename>)."
 
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:457
@@ -950,15 +1028,21 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/fonts/_index.adoc:477
+#, fuzzy
 msgid ""
 "If you are paranoid about working in the [.filename]#/usr/src# tree, simply "
 "copy the contents of the above directory to a work location."
 msgstr ""
+"Se você é paranóico sobre o trabalhar no diretório <filename>/usr/src</"
+"filename>, simplesmente copie o conteúdo do diretório acima para um local de "
+"trabalho."
 
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:481
+#, fuzzy
 msgid "In the work area, you will need to make the utility.  Just type:"
 msgstr ""
+"Na área de trabalho, você precisará compilar o utilitário. Apenas digite:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/fonts/_index.adoc:485
@@ -968,11 +1052,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:488
+#, fuzzy
 msgid ""
 "You may also need to copy [.filename]#/usr/contrib/groff/devps/generate/"
 "textmap# to [.filename]#/usr/share/groff_font/devps/generate# if it does not "
 "already exist."
 msgstr ""
+"Você também pode precisar copiar o <filename>/usr/contrib/groff/devps/"
+"generate/textmap</filename> para <filename>/usr/share/groff_font/devps/"
+"generate</filename> se ele ainda não existir."
 
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:490
@@ -1012,10 +1100,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:504
+#, fuzzy
 msgid ""
 "  For example, to convert the 30f9 Barcode font using the default file "
 "names, use the following command:"
 msgstr ""
+"  Por exemplo, para converter a fonte de código de barras 30f9 usando o nome "
+"de arquivo padrão, use o seguinte comando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/fonts/_index.adoc:512
@@ -1109,10 +1200,13 @@ msgstr "As Fontes TrueType Podem ser Usadas com Outros Programas?"
 
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:554
+#, fuzzy
 msgid ""
 "The TrueType font format is used by Windows, Windows 95, and Mac's.  It is "
 "quite popular and there are a great number of fonts available in this format."
 msgstr ""
+"O formato de fonte TrueType é usado pelo Windows, Windows 95 e Mac. É "
+"bastante popular e há um grande número de fontes disponíveis neste formato."
 
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:558
@@ -1172,11 +1266,15 @@ msgstr "Onde Fontes Adicionais Podem ser Obtidas?"
 
 #. type: Plain text
 #: documentation/content/en/articles/fonts/_index.adoc:573
+#, fuzzy
 msgid ""
 "Many fonts are available on the Internet.  They are either entirely free, or "
 "are share-ware.  In addition many fonts are available in the [.filename]#x11-"
 "fonts/# category in the ports collection"
 msgstr ""
+"Muitas fontes estão disponíveis na Internet. Elas são totalmente gratuitas "
+"ou sharewares. Além disso, muitas fontes estão disponíveis na categoria "
+"<filename>x11-fonts/</filename> na coleção do ports"
 
 #. type: Title ==
 #: documentation/content/en/articles/fonts/_index.adoc:575
