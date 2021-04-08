@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:55-0300\n"
-"PO-Revision-Date: 2021-04-01 00:53+0000\n"
+"PO-Revision-Date: 2021-04-08 23:28+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookserialcomms_index/pt_BR/>\n"
@@ -195,11 +195,15 @@ msgstr "Cabos Serial e Portas"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:87
+#, fuzzy
 msgid ""
 "There are several different kinds of serial cables. The two most common "
 "types are null-modem cables and standard RS-232 cables. The documentation "
 "for the hardware should describe the type of cable required."
 msgstr ""
+"Existem vários tipos diferentes de cabos seriais. Os dois tipos mais comuns "
+"são cabo null-modem e cabo padrão <acronym>RS-232</acronym>. A documentação "
+"do hardware deve descrever o tipo de cabo necessário."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:89
@@ -518,10 +522,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:331
+#, fuzzy
 msgid ""
 "In FreeBSD, each serial port is accessed through an entry in [.filename]#/"
 "dev#. There are two different kinds of entries:"
 msgstr ""
+"No FreeBSD, cada porta serial é acessada através de uma entrada em "
+"<filename>/dev</filename>. Existem dois tipos diferentes de entradas:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:333
@@ -636,11 +643,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:366
+#, fuzzy
 msgid ""
 "To prevent certain settings from being changed by an application, make "
 "adjustments to the locking device. For example, to lock the speed of [."
 "filename]#ttyu5# to 57600 bps, type:"
 msgstr ""
+"Para impedir que determinadas configurações sejam alteradas por um "
+"aplicativo, faça ajustes no dispositivo de bloqueio. Por exemplo, para "
+"bloquear a velocidade de <filename>ttyu5</filename> para 57600 bps, digite:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:370
@@ -650,10 +661,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:373
+#, fuzzy
 msgid ""
 "Now, any application that opens [.filename]#ttyu5# and tries to change the "
 "speed of the port will be stuck with 57600 bps."
 msgstr ""
+"Agora, qualquer aplicativo que abra <filename>ttyu5</filename> e tente "
+"alterar a velocidade da porta será bloqueado com 57600 bps."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:375
@@ -717,6 +731,7 @@ msgstr "Terminais Burros"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:389
+#, fuzzy
 msgid ""
 "Dumb terminals are specialized hardware that connect to computers over "
 "serial lines. They are called \"dumb\" because they have only enough "
@@ -724,6 +739,12 @@ msgid ""
 "run on these devices. Instead, dumb terminals connect to a computer that "
 "runs the needed programs."
 msgstr ""
+"Terminais burro são um hardware especializado que se conecta a computadores "
+"através de linhas seriais. Eles são chamados de <quote>dumb</quote> porque "
+"eles possuem apenas poder computacional suficiente para exibir, enviar e "
+"receber texto. Nenhum programa pode ser executado nesses dispositivos. Em "
+"vez disso, os terminais burros se conectam a um computador que executa os "
+"programas necessários."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:391
@@ -805,10 +826,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:411
+#, fuzzy
 msgid ""
 "Additional programs are available through the Ports Collection, such as "
 "package:comms/minicom[]."
 msgstr ""
+"Programas adicionais estão disponíveis através da coleção de ports, como "
+"<package>comms/minicom</package>."
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:412
@@ -818,12 +842,17 @@ msgstr "Terminais X"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:414
+#, fuzzy
 msgid ""
 "X terminals are the most sophisticated kind of terminal available. Instead "
 "of connecting to a serial port, they usually connect to a network like "
 "Ethernet. Instead of being relegated to text-only applications, they can "
 "display any Xorg application."
 msgstr ""
+"Os terminais X são o tipo de terminal mais sofisticado disponível. Em vez de "
+"se conectar a uma porta serial, eles geralmente se conectam a uma rede como "
+"a Ethernet. Em vez de serem relegados a aplicativos somente de texto, eles "
+"podem exibir qualquer aplicativo <application>Xorg</application>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:416
@@ -873,22 +902,32 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:432
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "ttyu0   \"/usr/libexec/getty std.9600\"   dialup  off secure\n"
 "ttyu1   \"/usr/libexec/getty std.9600\"   dialup  off secure\n"
 "ttyu2   \"/usr/libexec/getty std.9600\"   dialup  off secure\n"
 "ttyu3   \"/usr/libexec/getty std.9600\"   dialup  off secure\n"
 msgstr ""
+"ttyu0   \"/usr/libexec/getty std.9600\"   dialup  off secure\n"
+"ttyu1   \"/usr/libexec/getty std.9600\"   dialup  off secure\n"
+"ttyu2   \"/usr/libexec/getty std.9600\"   dialup  off secure\n"
+"ttyu3   \"/usr/libexec/getty std.9600\"   dialup  off secure\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:435
+#, fuzzy
 msgid ""
 "When attaching a terminal to one of those ports, modify the default entry to "
 "set the required speed and terminal type, to turn the device `on` and, if "
 "needed, to change the port's `secure` setting. If the terminal is connected "
 "to another port, add an entry for the port."
 msgstr ""
+"Ao conectar um terminal a uma destas portas, modifique a entrada padrão para "
+"definir a velocidade e o tipo de terminal necessários, para ligar o "
+"dispositivo <literal>on</literal> e, se necessário, para alterar o "
+"<literal>secure</literal> da porta. Se o terminal estiver conectado a outra "
+"porta, adicione uma entrada para a porta."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:437
@@ -967,10 +1006,14 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:461
+#, fuzzy
 msgid ""
 "After making any changes to [.filename]#/etc/ttys#, send a SIGHUP (hangup) "
 "signal to the `init` process to force it to re-read its configuration file:"
 msgstr ""
+"Depois de fazer qualquer alteração em <filename>/etc/ttys</filename>, envie "
+"um sinal SIGHUP (hangup) para o processo <command>init</command> para forçá-"
+"lo a reler seu arquivo de configuração:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:465
@@ -988,11 +1031,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:470
+#, fuzzy
 msgid ""
 "If everything is set up correctly, all cables are in place, and the "
 "terminals are powered up, a `getty` process should now be running on each "
 "terminal and login prompts should be available on each terminal."
 msgstr ""
+"Se tudo estiver configurado corretamente, todos os cabos estiverem no lugar "
+"e os terminais ligados, um processo <command>getty</command> deverá estar em "
+"execução em cada terminal e as solicitações de login deverão estar "
+"disponíveis em cada terminal."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:472
@@ -1034,12 +1082,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:481
+#, fuzzy
 msgid ""
 "Make sure the terminal and FreeBSD agree on the bps rate and parity "
 "settings. For a video display terminal, make sure the contrast and "
 "brightness controls are turned up. If it is a printing terminal, make sure "
 "paper and ink are in good supply."
 msgstr ""
+"Certifique-se de que o terminal e o FreeBSD concordem com as configurações "
+"de taxa e paridade de <acronym>bps</acronym>. Para um terminal de exibição "
+"de vídeo, verifique se os controles de contraste e brilho estão ativados. Se "
+"for um terminal de impressão, verifique se o papel e a tinta estão em bom "
+"estado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:483
@@ -1115,21 +1169,33 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:504
+#, fuzzy
 msgid ""
 "External modems are more convenient because they often can be configured via "
 "parameters stored in non-volatile RAM and they usually provide lighted "
 "indicators that display the state of important RS-232 signals, indicating "
 "whether the modem is operating properly."
 msgstr ""
+"Os modems externos são mais convenientes, pois geralmente podem ser "
+"configurados por meio de parâmetros armazenados em <acronym>RAM</acronym> "
+"não voláteis e geralmente fornecem indicadores luminosos que exibem o estado "
+"dos sinais <acronym>RS-232</acronym> importantes, indicando se o modem está "
+"funcionando corretamente."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:506
+#, fuzzy
 msgid ""
 "Internal modems usually lack non-volatile RAM, so their configuration may be "
 "limited to setting DIP switches. If the internal modem has any signal "
 "indicator lights, they are difficult to view when the system's cover is in "
 "place."
 msgstr ""
+"Normalmente, os modems internos não possuem <acronym>RAM</acronym> não "
+"volátil, portanto, sua configuração pode ser limitada à configuração de "
+"switches <acronym>DIP</acronym>. Se o modem interno tiver luzes indicadoras "
+"de sinal, elas serão difíceis de visualizar quando a tampa do sistema "
+"estiver no lugar."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:508
@@ -1193,6 +1259,7 @@ msgstr "Configuração de Modem"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:521
+#, fuzzy
 msgid ""
 "As with terminals, `init` spawns a `getty` process for each configured "
 "serial port used for dial-in connections. When a user dials the modem's line "
@@ -1206,9 +1273,23 @@ msgid ""
 "`getty` executes `login`, which completes the login process by asking for "
 "the user's password and then starting the user's shell."
 msgstr ""
+"Como nos terminais, o <command>init</command> gera um processo "
+"<command>getty</command> para cada porta serial configurada usada para "
+"conexões de dial-in. Quando um usuário disca a linha do modem e os modems se "
+"conectam, o sinal <quote>Carrier Detect</quote> é informado pelo modem. O "
+"kernel percebe que a portadora foi detectada e instrui o <command>getty</"
+"command> a abrir a porta e exibir um prompt <prompt>login:</prompt> na "
+"velocidade da linha inicial especificada. Em uma configuração típica, se "
+"caracteres de lixo forem recebidos, geralmente devido à velocidade de "
+"conexão do modem ser diferente da velocidade configurada, o <command>getty</"
+"command> tenta ajustar as velocidades de linha até receber caracteres "
+"razoáveis. Depois que o usuário digita seu nome de login, o <command>getty</"
+"command> executa o <command>login</command>, que conclui o processo de login "
+"solicitando a senha do usuário e iniciando o shell do usuário."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:523
+#, fuzzy
 msgid ""
 "There are two schools of thought regarding dial-up modems. One configuration "
 "method is to set the modems and systems so that no matter at what speed a "
@@ -1219,6 +1300,15 @@ msgid ""
 "will not adjust their screen-painting methods to make their response better "
 "for slower connections."
 msgstr ""
+"Existem duas escolas de pensamento sobre modems dial-up. Um método de "
+"configuração é definir os modems e sistemas de modo que, independentemente "
+"da velocidade em que um usuário remoto disca, a interface de discagem "
+"<acronym>RS-232</acronym> seja executada em uma velocidade travada. O "
+"benefício dessa configuração é que o usuário remoto sempre vê um prompt de "
+"login do sistema imediatamente. A desvantagem é que o sistema não sabe qual "
+"é a verdadeira taxa de dados do usuário, portanto, programas em tela cheia "
+"como o <application>Emacs</application> não ajustam seus métodos de tela "
+"para melhorar a resposta para conexões mais lentas."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:525
@@ -1238,6 +1328,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:527
+#, fuzzy
 msgid ""
 "When locking a modem's data communications rate at a particular speed, no "
 "changes to [.filename]#/etc/gettytab# should be needed. However, for a "
@@ -1251,10 +1342,23 @@ msgid ""
 "(table continuation) entry to pick up the rest of the settings for a "
 "particular data rate."
 msgstr ""
+"Ao travar a taxa de comunicação de dados de um modem a uma velocidade "
+"específica, nenhuma alteração em <filename>/etc/gettytab</filename> deve ser "
+"necessária. No entanto, para uma configuração de velocidade compatível, "
+"entradas adicionais podem ser necessárias para definir as velocidades a "
+"serem usadas para o modem. Este exemplo configura um modem de 14,4 Kbps com "
+"uma velocidade de interface superior de 19,2 Kbps usando conexões de 8 bits "
+"sem paridade. Ele configura o <command>getty</command> para iniciar a taxa "
+"de comunicação para uma conexão V.32bis a 19,2 Kbps, passando por 9600 bps, "
+"2400 bps, 1200 bps, 300 bps e de volta para 19,2 Kbps. O ciclo de taxa de "
+"comunicação é implementado com o recurso <literal>nx=</literal> (proxima "
+"tabela). Cada linha usa uma entrada <literal>tc=</literal> (continuação de "
+"tabela) para selecionar o restante das configurações para uma taxa de dados "
+"específica."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:543
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "#\n"
 "# Additions for a V.32bis Modem\n"
@@ -1270,6 +1374,19 @@ msgid ""
 "uq|V19200|High Speed Modem at 19200,8-bit:\\\n"
 "        :nx=V9600:tc=std.19200:\n"
 msgstr ""
+"#\n"
+"# Additions for a V.32bis Modem\n"
+"#\n"
+"um|V300|High Speed Modem at 300,8-bit:\\\n"
+"        :nx=V19200:tc=std.300:\n"
+"un|V1200|High Speed Modem at 1200,8-bit:\\\n"
+"        :nx=V300:tc=std.1200:\n"
+"uo|V2400|High Speed Modem at 2400,8-bit:\\\n"
+"        :nx=V1200:tc=std.2400:\n"
+"up|V9600|High Speed Modem at 9600,8-bit:\\\n"
+"        :nx=V2400:tc=std.9600:\n"
+"uq|V19200|High Speed Modem at 19200,8-bit:\\\n"
+"        :nx=V9600:tc=std.19200:\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:546
@@ -1283,7 +1400,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:563
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "#\n"
 "# Additions for a V.32bis or V.34 Modem\n"
@@ -1300,6 +1417,20 @@ msgid ""
 "vq|VH57600|Very High Speed Modem at 57600,8-bit:\\\n"
 "        :nx=VH9600:tc=std.57600:\n"
 msgstr ""
+"#\n"
+"# Additions for a V.32bis or V.34 Modem\n"
+"# Starting at 57.6 Kbps\n"
+"#\n"
+"vm|VH300|Very High Speed Modem at 300,8-bit:\\\n"
+"        :nx=VH57600:tc=std.300:\n"
+"vn|VH1200|Very High Speed Modem at 1200,8-bit:\\\n"
+"        :nx=VH300:tc=std.1200:\n"
+"vo|VH2400|Very High Speed Modem at 2400,8-bit:\\\n"
+"        :nx=VH1200:tc=std.2400:\n"
+"vp|VH9600|Very High Speed Modem at 9600,8-bit:\\\n"
+"        :nx=VH2400:tc=std.9600:\n"
+"vq|VH57600|Very High Speed Modem at 57600,8-bit:\\\n"
+"        :nx=VH9600:tc=std.57600:\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:566
@@ -1318,9 +1449,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:572
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ttyu0   \"/usr/libexec/getty xxx\"   dialup on\n"
-msgstr ""
+msgstr "ttyu0   \"/usr/libexec/getty V19200\"   dialup on\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:575
@@ -1332,32 +1463,41 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:577
+#, fuzzy
 msgid ""
 "For a locked-speed configuration, specify the speed with a valid type listed "
 "in [.filename]#/etc/gettytab#. This example is for a modem whose port speed "
 "is locked at 19.2 Kbps:"
 msgstr ""
+"Para uma configuração de velocidade travada, especifique a velocidade com um "
+"tipo válido listado em <filename>/etc/gettytab</filename>. Este exemplo é "
+"para um modem cuja velocidade de porta está travada em 19,2 Kbps:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:581
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ttyu0   \"/usr/libexec/getty std.19200\"   dialup on\n"
-msgstr ""
+msgstr "ttyu0   \"/usr/libexec/getty V19200\"   dialup on\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:584
+#, fuzzy
 msgid ""
 "In a matching-speed configuration, the entry needs to reference the "
 "appropriate beginning \"auto-baud\" entry in [.filename]#/etc/gettytab#. To "
 "continue the example for a matching-speed modem that starts at 19.2 Kbps, "
 "use this entry:"
 msgstr ""
+"Em uma configuração de velocidade correspondente, a entrada precisa "
+"referenciar a entrada inicial apropriada <quote>auto-baud</quote> em "
+"<filename>/etc/gettytab</filename>. Para continuar o exemplo de um modem com "
+"velocidade correspondente que começa em 19,2 Kbps, use esta entrada:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:588
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ttyu0   \"/usr/libexec/getty V19200\"   dialup on\n"
-msgstr ""
+msgstr "ttyu0   \"/usr/libexec/getty V19200\"   dialup on\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:591
@@ -1400,6 +1540,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:610
+#, fuzzy
 msgid ""
 "Hook up the modem to the FreeBSD system and boot the system. If the modem "
 "has status indication lights, watch to see whether the modem's DTR indicator "
@@ -1408,6 +1549,12 @@ msgid ""
 "the appropriate communications port and is waiting for the modem to accept a "
 "call."
 msgstr ""
+"Conecte o modem ao sistema FreeBSD e inicialize o sistema. Se o modem tiver "
+"luzes de indicação de status, observe se o indicador <acronym>DTR</acronym> "
+"do modem acende quando o prompt <prompt>login:</prompt> é exibido no console "
+"do sistema. Se acender, isso deve significar que o FreeBSD iniciou um "
+"processo <command>getty</command> na porta de comunicação apropriada e está "
+"aguardando o modem aceitar uma chamada."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:612
@@ -1425,6 +1572,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:619
+#, fuzzy
 msgid ""
 "If the second column contains a `d0` instead of a `??` and the modem has not "
 "accepted a call yet, this means that `getty` has completed its open on the "
@@ -1433,6 +1581,13 @@ msgid ""
 "communications port until the carrier detect signal has been asserted by the "
 "modem."
 msgstr ""
+"Se a segunda coluna contiver um <literal>d0</literal> em vez de um "
+"<literal>??</literal> e o modem ainda não aceitou uma chamada, isso "
+"significa que o <command>getty</command> completou sua chamada na porta de "
+"comunicações. Isso pode indicar um problema com o cabeamento ou com um modem "
+"configurado incorretamente porque o <command>getty</command> não deve "
+"conseguir abrir a porta de comunicação até que o sinal de detecção da "
+"portadora tenha sido declarado pelo modem."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:621
@@ -1463,10 +1618,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:627
+#, fuzzy
 msgid ""
 "The initial capability name specified in the entry in [.filename]#/etc/ttys# "
 "matches the name of a capability in [.filename]#/etc/gettytab#."
 msgstr ""
+"O nome do recurso inicial especificado na entrada em <filename>/etc/ttys</"
+"filename> corresponde ao nome de um recurso em <filename>/etc/"
+"gettytab</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:628
@@ -1480,12 +1639,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:631
+#, fuzzy
 msgid ""
 "If the modem on the FreeBSD system will not answer, make sure that the modem "
 "is configured to answer the phone when DTR is asserted. If the modem seems "
 "to be configured correctly, verify that the DTR line is asserted by checking "
 "the modem's indicator lights."
 msgstr ""
+"Se o modem no sistema FreeBSD não responder, verifique se o modem está "
+"configurado para atender o telefone quando o <acronym>DTR</acronym> é "
+"ativado. Se o modem parece estar configurado corretamente, verifique se a "
+"linha <acronym>DTR</acronym> é ativada, verificando as luzes indicadoras do "
+"modem."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:633
@@ -1569,9 +1734,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:658
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "cuau0:dv=/dev/cuau0:br#19200:pa=none\n"
-msgstr ""
+msgstr "cuau0:dv=/dev/cuau0:br#19200:pa=none\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:661
@@ -1616,9 +1781,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:679
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "pn=\\@\n"
-msgstr ""
+msgstr "pn=\\@\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:682
@@ -1633,13 +1798,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:692
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "tip115200|Dial any phone number at 115200 bps:\\\n"
 "        :dv=/dev/cuau0:br#115200:at=hayes:pa=none:du:\n"
 "tip57600|Dial any phone number at 57600 bps:\\\n"
 "        :dv=/dev/cuau0:br#57600:at=hayes:pa=none:du:\n"
 msgstr ""
+"tip115200|Dial any phone number at 115200 bps:\\\n"
+"        :dv=/dev/cuau0:br#115200:at=hayes:pa=none:du:\n"
+"tip57600|Dial any phone number at 57600 bps:\\\n"
+"        :dv=/dev/cuau0:br#57600:at=hayes:pa=none:du:\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:695
@@ -1659,11 +1828,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:707
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "cu115200|Use cu to dial any number at 115200bps:\\\n"
 "        :dv=/dev/cuau1:br#57600:at=hayes:pa=none:du:\n"
 msgstr ""
+"cu115200|Use cu to dial any number at 115200bps:\\\n"
+"        :dv=/dev/cuau1:br#57600:at=hayes:pa=none:du:\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:710
@@ -1708,7 +1879,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:734
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "pain|pain.deep13.com|Forrester's machine:\\\n"
 "        :cm=CONNECT pain\\n:tc=deep13:\n"
@@ -1717,6 +1888,14 @@ msgid ""
 "deep13:Gizmonics Institute terminal server:\\\n"
 "        :dv=/dev/cuau2:br#38400:at=hayes:du:pa=none:pn=5551234:\n"
 msgstr ""
+"pain|pain.deep13.com|Forrester's machine:\\\n"
+"        :cm=CONNECT pain\\n"
+":tc=deep13:\n"
+"muffin|muffin.deep13.com|Frank's machine:\\\n"
+"        :cm=CONNECT muffin\\n"
+":tc=deep13:\n"
+"deep13:Gizmonics Institute terminal server:\\\n"
+"        :dv=/dev/cuau2:br#38400:at=hayes:du:pa=none:pn=5551234:\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:737
@@ -1742,13 +1921,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:749
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "big-university:\\\n"
 "        :pn=\\@:tc=dialout\n"
 "dialout:\\\n"
 "        :dv=/dev/cuau3:br#9600:at=courier:du:pa=none:\n"
 msgstr ""
+"big-university:\\\n"
+"        :pn=\\@:tc=dialout\n"
+"dialout:\\\n"
+"        :dv=/dev/cuau3:br#9600:at=courier:du:pa=none:\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:752
@@ -1757,13 +1940,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:759
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "big-university 5551111\n"
 "big-university 5551112\n"
 "big-university 5551113\n"
 "big-university 5551114\n"
 msgstr ""
+"big-university 5551111\n"
+"big-university 5551112\n"
+"big-university 5551113\n"
+"big-university 5551114\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:762
@@ -1798,10 +1985,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:771
+#, fuzzy
 msgid ""
 "To change the force character, specify the following in [.filename]#~/."
 "tiprc#:"
 msgstr ""
+"Para alterar o caractere force, especifique o seguinte em <filename>~/."
+"tiprc</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:775
@@ -1833,11 +2023,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:788
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "force=^^\n"
 "raisechar=^^\n"
 msgstr ""
+"force=^^\n"
+"raisechar=^^\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:791
@@ -1935,11 +2127,15 @@ msgstr "Configuração Rápida do Console Serial"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:821
+#, fuzzy
 msgid ""
 "This section provides a fast overview of setting up the serial console. This "
 "procedure can be used when the dumb terminal is connected to [."
 "filename]#COM1#."
 msgstr ""
+"Esta seção fornece uma visão geral rápida da configuração do console serial. "
+"Este procedimento pode ser usado quando o terminal burro é conectado ao "
+"<filename>COM1</filename>."
 
 #. type: Block title
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:823
@@ -1949,9 +2145,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:825
+#, fuzzy
 msgid ""
 "Connect the serial cable to [.filename]#COM1# and the controlling terminal."
 msgstr ""
+"Conecte o cabo serial ao <filename>COM1</filename> e ao terminal de controle."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:826
@@ -2030,18 +2228,26 @@ msgstr "Desconecte o teclado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:850
+#, fuzzy
 msgid ""
 "  Many systems probe for the keyboard during the Power-On Self-Test (POST) "
 "and will generate an error if the keyboard is not detected. Some machines "
 "will refuse to boot until the keyboard is plugged in."
 msgstr ""
+"  Muitos sistemas detectam o teclado durante o Power-On Self-Test "
+"(<acronym>POST</acronym>) e geram um erro se o teclado não for detectado. "
+"Algumas máquinas recusarão a inicialização até que o teclado esteja "
+"conectado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:852
+#, fuzzy
 msgid ""
 "  If the computer complains about the error, but boots anyway, no further "
 "configuration is needed."
 msgstr ""
+"  Se o computador reclamar do erro, mas inicializar de qualquer maneira, "
+"nenhuma outra configuração será necessária."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:854
@@ -2071,6 +2277,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:866
+#, fuzzy
 msgid ""
 "While most systems will boot without a keyboard, quite a few will not boot "
 "without a graphics adapter. Some systems can be configured to boot with no "
@@ -2080,6 +2287,15 @@ msgid ""
 "these machines, leave some kind of graphics card plugged in, even if it is "
 "just a junky mono board. A monitor does not need to be attached."
 msgstr ""
+"Embora a maioria dos sistemas inicialize sem um teclado, alguns não "
+"inicializarão sem um adaptador gráfico. Alguns sistemas podem ser "
+"configurados para inicializar sem nenhum adaptador gráfico alterando a "
+"configuração do <quote>graphics adapter</quote> na configuração "
+"<acronym>BIOS</acronym> para <quote>Not installed</quote>. Outros sistemas "
+"não suportam esta opção e recusarão a inicialização se não houver hardware "
+"de exibição no sistema. Com estas máquinas, deixe algum tipo de placa "
+"gráfica ligada, mesmo que seja apenas uma placa mono lixo. Um monitor não "
+"precisa ser conectado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:869
@@ -2106,11 +2322,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:873
+#, fuzzy
 msgid ""
 "  This file instructs the boot block code how to boot the system. In order "
 "to activate the serial console, one or more of the following options are "
 "needed. When using multiple options, include them all on the same line:"
 msgstr ""
+"  Este arquivo instrui o código do bloco de inicialização como inicializar o "
+"sistema. Para ativar o console serial, uma ou mais das seguintes opções são "
+"necessárias. Ao usar várias opções, inclua todas elas na mesma linha:"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:874
@@ -2120,6 +2340,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:876
+#, fuzzy
 msgid ""
 "Toggles between the internal and serial consoles. Use this to switch console "
 "devices. For instance, to boot from the internal (video) console, use `-h` "
@@ -2128,6 +2349,13 @@ msgid ""
 "tell the boot loader and the kernel to use the video display as the console "
 "instead."
 msgstr ""
+"Alterna entre os consoles interno e serial. Use isso para alternar "
+"dispositivos do console. Por exemplo, para inicializar a partir do console "
+"(vídeo) interno, use <option>-h</option> para direcionar o carregador de "
+"boot e o kernel para usar a porta serial como seu dispositivo de console. "
+"Alternativamente, para inicializar a partir da porta serial, use <option>-h</"
+"option> para dizer ao gerenciador de inicialização e ao kernel para usar a "
+"exibição de vídeo como o console."
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:877
@@ -2137,6 +2365,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:879
+#, fuzzy
 msgid ""
 "Toggles between the single and dual console configurations. In the single "
 "configuration, the console will be either the internal console (video "
@@ -2147,6 +2376,15 @@ msgid ""
 "block is running. Once the boot loader gets control, the console specified "
 "by `-h` becomes the only console."
 msgstr ""
+"Alterna entre as configurações de console única e dupla. Na configuração "
+"única, o console será o console interno (exibição de vídeo) ou a porta "
+"serial, dependendo do estado de <option>-h</option>. Na configuração do "
+"console duplo, a exibição de vídeo e a porta serial se tornarão o console ao "
+"mesmo tempo, independentemente do estado de <option>-h</option>. No entanto, "
+"a configuração do console duplo entrará em vigor somente enquanto o bloco de "
+"inicialização estiver em execução. Depois que o gerenciador de boot obtiver "
+"controle, o console especificado por <option>-h</option> se tornará o único "
+"console."
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:880
@@ -2163,6 +2401,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:886
+#, fuzzy
 msgid ""
 "Due to space constraints in the current version of the boot blocks, `-P` is "
 "capable of detecting extended keyboards only. Keyboards with less than 101 "
@@ -2170,6 +2409,12 @@ msgid ""
 "laptops may not be properly found because of this limitation. If this is the "
 "case, do not use `-P`."
 msgstr ""
+"Devido a restrições de espaço na versão atual dos blocos de inicialização, "
+"<option>-P</option> é capaz de detectar somente teclados estendidos. "
+"Teclados com menos de 101 teclas e sem as teclas F11 e F12 podem não ser "
+"detectados. Teclados em alguns laptops podem não ser encontrados "
+"corretamente devido a essa limitação. Se este for o caso, não use "
+"<option>-P</option>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:889
@@ -2197,18 +2442,23 @@ msgstr "Inicialize a máquina."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:894
+#, fuzzy
 msgid ""
 "  When FreeBSD starts, the boot blocks echo the contents of [.filename]#/"
 "boot.config# to the console. For example:"
 msgstr ""
+"  Quando o FreeBSD inicia, os blocos de inicialização mostram o conteúdo do "
+"<filename>/boot.config</filename> para o console. Por exemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:899
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "/boot.config: -P\n"
 "Keyboard: no\n"
 msgstr ""
+"/boot.config: -P\n"
+"Keyboard: no\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:902
@@ -2247,11 +2497,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:929
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "\n"
 "After the message, there will be a small pause before the boot blocks continue loading the boot loader and before any further messages are printed to the console. Under normal circumstances, there is no need to interrupt the boot blocks, but one can do so in order to make sure things are set up correctly.\n"
 msgstr ""
+"\n"
+"Após a mensagem, haverá uma pequena pausa antes que os blocos de "
+"inicialização continuem carregando o carregador de boot e antes que qualquer "
+"outra mensagem seja impressa no console. Em circunstâncias normais, não há "
+"necessidade de interromper os blocos de inicialização, mas pode-se fazê-lo "
+"para garantir que as coisas sejam configuradas corretamente.\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:931
@@ -2307,16 +2563,20 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:952
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "console=\"comconsole\"\n"
-msgstr ""
+msgstr "console=\"comconsole\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:955
+#, fuzzy
 msgid ""
 "That line should be the first line of [.filename]#/boot/loader.conf# so that "
 "boot messages are displayed on the serial console as early as possible."
 msgstr ""
+"Esta linha deve ser a primeira linha do <filename>/boot/loader.conf</"
+"filename> para que as mensagens de boot sejam exibidas no console serial o "
+"mais cedo possível."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:957
@@ -2328,11 +2588,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:959
+#, fuzzy
 msgid ""
 "At the moment, the boot loader has no option equivalent to `-P` in the boot "
 "block, and there is no provision to automatically select the internal "
 "console and the serial console based on the presence of the keyboard."
 msgstr ""
+"No momento, o carregador de boot não tem nenhuma opção equivalente a "
+"<option>-P</option> no bloco de inicialização, e não há provisão para "
+"selecionar automaticamente o console interno e o console serial com base na "
+"presença do teclado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:965
@@ -2381,12 +2646,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:982
+#, fuzzy
 msgid ""
 "  If the serial console is configured in some other way than by booting with "
 "`-h`, or if the serial console used by the kernel is different from the one "
 "used by the boot blocks, add the following option, with the desired speed, "
 "to a custom kernel configuration file and compile a new kernel:"
 msgstr ""
+"  Se o console serial estiver configurado de alguma outra maneira que não "
+"seja inicializando com <option>-h</option>, ou se o console serial usado "
+"pelo kernel for diferente daquele usado pelos blocos de inicialização, "
+"adicione a seguinte opção, com a velocidade desejada, em um arquivo de "
+"configuração de kernel personalizado e compile um novo kernel:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:986
@@ -2438,8 +2709,10 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/serialcomms/_index.adoc:1008
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "options BREAK_TO_DEBUGGER\n"
 "options DDB\n"
 msgstr ""
+"options BREAK_TO_DEBUGGER\n"
+"options DDB\n"
