@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-01 00:53+0000\n"
+"PO-Revision-Date: 2021-04-08 23:28+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/booksporters-handbookkeeping-upchapter/pt_BR/>\n"
@@ -47,6 +47,7 @@ msgstr "FreshPorts"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/keeping-up/chapter.adoc:38
+#, fuzzy
 msgid ""
 "One of the easiest ways to learn about updates that have already been "
 "committed is by subscribing to http://www.FreshPorts.org/[FreshPorts]. "
@@ -59,9 +60,21 @@ msgid ""
 "impractical. Also, in some cases, the changes are very minor in nature. We "
 "expect everyone to use their best judgement in these cases.)"
 msgstr ""
+"Uma das maneiras mais fáceis de saber sobre atualizações que já foram "
+"submetidas é assinando o <link xlink:href=\"http://www.FreshPorts.org/\""
+">FreshPorts</link>. Múltiplos ports podem ser monitoradas. Os mantenedores "
+"são fortemente encorajados a se inscrever, porque eles receberão uma "
+"notificação não apenas de suas próprias mudanças, mas também de quaisquer "
+"mudanças que qualquer outro committer do FreeBSD tenha feito. (Geralmente é "
+"necessário para acompanhar as mudanças na estrutura de ports subjacentes - "
+"embora seja mais educado receber um aviso antecipado daqueles que submeterem "
+"essas mudanças, às vezes isso é negligenciado ou impraticável. Além disso, "
+"em alguns casos, as alterações são muito menores por natureza. Esperamos que "
+"todos usem seu melhor julgamento nesses casos.)"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/keeping-up/chapter.adoc:40
+#, fuzzy
 msgid ""
 "To use FreshPorts, an account is required. Those with registered email "
 "addresses at `@FreeBSD.org` will see the opt-in link on the right-hand side "
@@ -69,6 +82,12 @@ msgid ""
 "using a `@FreeBSD.org` email address can change the email to `@FreeBSD.org`, "
 "subscribe, then change it back again."
 msgstr ""
+"Para usar o FreshPorts, é necessário uma conta. Aqueles com endereços de "
+"email registrados <literal>@FreeBSD.org</literal> verão um link opt-in no "
+"lado direito das páginas web. Aqueles que já possuem uma conta no "
+"FreshPorts, mas não estão usando endereço de email <literal>@FreeBSD.org</"
+"literal> podem alterar o e-mail para <literal>@FreeBSD.org</literal>, se "
+"inscrever, e então alterar o email novamente."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/keeping-up/chapter.adoc:42
@@ -170,6 +189,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/keeping-up/chapter.adoc:68
+#, fuzzy
 msgid ""
 "Portscout's first page gives the email address of the port maintainer, the "
 "number of ports the maintainer is responsible for, the number of those ports "
@@ -177,6 +197,12 @@ msgid ""
 "The search function allows for searching by email address for a specific "
 "maintainer, and for selecting whether only out-of-date ports are shown."
 msgstr ""
+"A primeira página do <application>Portscout</application> fornece o endereço "
+"de e-mail do mantenedor de port, o número de ports pelos quais o mantenedor "
+"é responsável, o número desses ports com novos distfiles e a porcentagem dos "
+"ports que estão desatualizados. A função de pesquisa permite pesquisar por "
+"endereço de email de um mantenedor específico e permite também selecionar se "
+"apenas os ports desatualizados serão mostrados."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/keeping-up/chapter.adoc:70
@@ -208,6 +234,7 @@ msgstr "O Sistema de Monitoramento de Ports do FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/keeping-up/chapter.adoc:77
+#, fuzzy
 msgid ""
 "Another handy resource is the http://portsmon.FreeBSD.org[FreeBSD Ports "
 "Monitoring System] (also known as `portsmon`). This system comprises a "
@@ -217,6 +244,14 @@ msgid ""
 "collection are used. In the future, this will be expanded to include the "
 "distfile survey, as well as other sources."
 msgstr ""
+"Outro recurso útil é o <link xlink:href=\"http://portsmon.FreeBSD.org\""
+">Sistema de Monitoramento de Ports do FreeBSD</link> (também conhecido como "
+"<literal>portsmon</literal>). Este sistema compreende em um banco de dados "
+"que processa informações de várias fontes e permite que ele seja acessado "
+"através de uma interface web. Atualmente, os Relatórios de Problemas (PRs) "
+"dos ports, os logs de erros do cluster de compilação e os arquivos "
+"individuais da coleção de ports são usados. No futuro, isso será expandido "
+"para incluir pesquisa de distfile, bem como outras fontes."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/keeping-up/chapter.adoc:79
@@ -227,6 +262,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/keeping-up/chapter.adoc:80
+#, fuzzy
 msgid ""
 "This is the only resource available that maps PR entries to portnames. PR "
 "submitters do not always include the portname in their Synopsis, although we "
@@ -234,3 +270,9 @@ msgid ""
 "whether an existing port has any PRs filed against it, any build errors, or "
 "if a new port the porter is considering creating has already been submitted."
 msgstr ""
+"Este é o único recurso disponível que mapeia entradas de PR para nomes de "
+"ports. Os remetentes de PR nem sempre incluem o nome do port em sua Sinopse, "
+"embora preferiríamos que eles o fizessem. Logo, <literal>portsmon</literal> "
+"é um bom lugar para descobrir se um port existente tem algum PR arquivado, "
+"qualquer erro de compilação ou se um novo port que o mantenedor está "
+"considerando criar já foi submetido."
