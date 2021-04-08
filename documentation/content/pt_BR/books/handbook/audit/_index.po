@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-01 12:56+0000\n"
+"PO-Revision-Date: 2021-04-08 23:28+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookaudit_index/pt_BR/>\n"
@@ -118,15 +118,22 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:67
+#, fuzzy
 msgid ""
 "The audit facility has some known limitations. Not all security-relevant "
 "system events are auditable and some login mechanisms, such as Xorg-based "
 "display managers and third-party daemons, do not properly configure auditing "
 "for user login sessions."
 msgstr ""
+"O recurso de auditoria possui algumas limitações conhecidas. Nem todos os "
+"eventos do sistema que são relevantes para a segurança são auditáveis, e "
+"também alguns mecanismos de login, como gerenciadores de exibição baseados "
+"em <application>Xorg</application> e daemons de terceiros, não configuram "
+"adequadamente a auditoria para sessões de login do usuário."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:69
+#, fuzzy
 msgid ""
 "The security event auditing facility is able to generate very detailed logs "
 "of system activity. On a busy system, trail file data can be very large when "
@@ -137,6 +144,15 @@ msgid ""
 "that other file systems are not affected if the audit file system becomes "
 "full."
 msgstr ""
+"O recurso de auditoria de eventos de segurança é capaz de gerar logs muito "
+"detalhados da atividade do sistema. Em um sistema muito utilizado, os dados "
+"do arquivo de rastreamento podem ser muito grandes quando configurados para "
+"grandes detalhes, excedendo gigabytes por semana em algumas configurações. "
+"Os administradores devem levar em consideração os requisitos de espaço em "
+"disco associados a configurações de auditoria de alto volume. Por exemplo, "
+"pode ser desejável dedicar um sistema de arquivos ao <filename>/var/audit</"
+"filename> para que outros sistemas de arquivos não sejam afetados se o "
+"sistema de arquivos de auditoria ficar cheio."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/audit/_index.adoc:72
@@ -181,12 +197,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:80
+#, fuzzy
 msgid ""
 "_trail_: a log file consisting of a series of audit records describing "
 "security events. Trails are in roughly chronological order with respect to "
 "the time events completed. Only authorized processes are allowed to commit "
 "records to the audit trail."
 msgstr ""
+"<emphasis>trail</emphasis>: um arquivo de log que consiste em uma série de "
+"registros de auditoria que descrevem eventos de segurança. As trilhas estão "
+"em ordem cronológica aproximada com relação aos eventos concluídos. Apenas "
+"processos autorizados podem enviar registros para a trilha de auditoria."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:81
@@ -197,6 +218,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:82
+#, fuzzy
 msgid ""
 "_preselection_: the process by which the system identifies which events are "
 "of interest to the administrator. The preselection configuration uses a "
@@ -204,9 +226,15 @@ msgid ""
 "for which users, as well as global settings that apply to both authenticated "
 "and unauthenticated processes."
 msgstr ""
+"<emphasis>preselection</emphasis>: o processo pelo qual o sistema identifica "
+"quais eventos são de interesse do administrador. A configuração de pré-"
+"seleção usa uma série de expressões de seleção para identificar quais "
+"classes de eventos auditar quais usuários, bem como configurações globais "
+"que se aplicam a processos autenticados e não autenticados."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:83
+#, fuzzy
 msgid ""
 "_reduction_: the process by which records from existing audit trails are "
 "selected for preservation, printing, or analysis. Likewise, the process by "
@@ -216,6 +244,14 @@ msgid ""
 "but after that, trails might be reduced in order to preserve only login "
 "information for archival purposes."
 msgstr ""
+"<emphasis>reduction</emphasis>: o processo pelo qual os registros das "
+"trilhas de auditoria existentes são selecionados para preservação, impressão "
+"ou análise. Da mesma forma, o processo pelo qual os registros de auditoria "
+"indesejados são removidos da trilha de auditoria. Usando a redução, os "
+"administradores podem implementar políticas para a preservação de dados de "
+"auditoria. Por exemplo, trilhas de auditoria detalhadas podem ser mantidas "
+"por um mês, mas depois disso, as trilhas podem ser reduzidas para preservar "
+"apenas as informações de login para fins de arquivamento."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/audit/_index.adoc:85
@@ -234,9 +270,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:92
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "auditd_enable=\"YES\"\n"
-msgstr ""
+msgstr "auditd_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:95
@@ -260,9 +296,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:106
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "options\tAUDIT\n"
-msgstr ""
+msgstr "options\tAUDIT\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/audit/_index.adoc:108
@@ -387,10 +423,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:204
+#, fuzzy
 msgid ""
 "These audit event classes may be customized by modifying the [."
 "filename]#audit_class# and [.filename]#audit_event# configuration files."
 msgstr ""
+"Essas classes de eventos de auditoria podem ser personalizadas modificando "
+"os arquivos de configuração <filename>audit_class</filename> e "
+"<filename>audit_event</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:206
@@ -450,9 +490,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:237
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "lo,+ex\n"
-msgstr ""
+msgstr "lo,+ex\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/audit/_index.adoc:239
@@ -462,38 +502,55 @@ msgstr "Arquivos de Configuração"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:242
+#, fuzzy
 msgid ""
 "The following configuration files for security event auditing are found in [."
 "filename]#/etc/security#:"
 msgstr ""
+"Os seguintes arquivos de configuração para auditoria de eventos de segurança "
+"são encontrados em <filename>/etc/security</filename>:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:244
+#, fuzzy
 msgid ""
 "[.filename]#audit_class#: contains the definitions of the audit classes."
 msgstr ""
+"<filename>audit_class</filename>: contém as definições das classes de "
+"auditoria."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:245
+#, fuzzy
 msgid ""
 "[.filename]#audit_control#: controls aspects of the audit subsystem, such as "
 "default audit classes, minimum disk space to leave on the audit log volume, "
 "and maximum audit trail size."
 msgstr ""
+"<filename>audit_control</filename>: controla os aspectos do subsistema de "
+"auditoria, como as classes de auditoria padrão, o espaço em disco mínimo a "
+"ser deixado no volume do log de auditoria e o tamanho máximo da trilha de "
+"auditoria."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:246
+#, fuzzy
 msgid ""
 "[.filename]#audit_event#: textual names and descriptions of system audit "
 "events and a list of which classes each event is in."
 msgstr ""
+"<filename>audit_event</filename>: nomes e descrições textuais de eventos de "
+"auditoria do sistema e uma lista de quais classes cada evento está."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:247
+#, fuzzy
 msgid ""
 "[.filename]#audit_user#: user-specific audit requirements to be combined "
 "with the global defaults at login."
 msgstr ""
+"<filename>audit_user</filename>: requisitos de auditoria específicos do "
+"usuário a serem combinados com os padrões globais no login."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:248
@@ -516,12 +573,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:256
+#, fuzzy
 msgid ""
 "In most cases, administrators will only need to modify [."
 "filename]#audit_control# and [.filename]#audit_user#. The first file "
 "controls system-wide audit properties and policies and the second file may "
 "be used to fine-tune auditing by user."
 msgstr ""
+"Na maioria dos casos, os administradores precisarão modificar apenas "
+"<filename>audit_control</filename> e <filename>audit_user</filename>. O "
+"primeiro arquivo controla as políticas e as propriedades de auditoria de "
+"todo o sistema, e o segundo arquivo pode ser usado para ajustar a auditoria "
+"pelo usuário."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/audit/_index.adoc:258
@@ -531,14 +594,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:261
+#, fuzzy
 msgid ""
 "A number of defaults for the audit subsystem are specified in [."
 "filename]#audit_control#:"
 msgstr ""
+"Vários padrões para o subsistema de auditoria são especificados em "
+"<filename>audit_control</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:272
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "dir:/var/audit\n"
 "dist:off\n"
@@ -549,9 +615,18 @@ msgid ""
 "filesz:2M\n"
 "expire-after:10M\n"
 msgstr ""
+"dir:/var/audit\n"
+"dist:off\n"
+"flags:lo,aa\n"
+"minfree:5\n"
+"naflags:lo,aa\n"
+"policy:cnt,argv\n"
+"filesz:2M\n"
+"expire-after:10M\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:275
+#, fuzzy
 msgid ""
 "The `dir` entry is used to set one or more directories where audit logs will "
 "be stored. If more than one directory entry appears, they will be used in "
@@ -559,6 +634,13 @@ msgid ""
 "stored on a dedicated file system, in order to prevent interference between "
 "the audit subsystem and other subsystems if the file system fills."
 msgstr ""
+"A entrada <option>dir</option> é usada para definir um ou mais diretórios "
+"onde os logs de auditoria serão armazenados. Se mais de uma entrada de "
+"diretório aparecer, elas serão usadas em ordem à medida que forem "
+"preenchidas. É comum configurar a auditoria para que os logs de auditoria "
+"sejam armazenados em um sistema de arquivos dedicado, para evitar a "
+"interferência entre o subsistema de auditoria e outros subsistemas, se o "
+"sistema de arquivos encher."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:277
@@ -569,12 +651,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:279
+#, fuzzy
 msgid ""
 "The `flags` field sets the system-wide default preselection mask for "
 "attributable events. In the example above, successful and failed login/"
 "logout events as well as authentication and authorization are audited for "
 "all users."
 msgstr ""
+"O campo <option>flags</option> define a máscara de pré-seleção padrão para "
+"todo o sistema para eventos atribuíveis. No exemplo acima, eventos de login/"
+"logout bem-sucedidos e com falha, bem como autenticação e autorização, são "
+"auditados para todos os usuários."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:281
@@ -585,11 +672,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:283
+#, fuzzy
 msgid ""
 "The `naflags` entry specifies audit classes to be audited for non-attributed "
 "events, such as the login/logout process and authentication and "
 "authorization."
 msgstr ""
+"A entrada <option>naflags</option> especifica as classes de auditoria a "
+"serem auditadas para eventos não atribuídos, como o processo de login/logout "
+"e autenticação e autorização."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:285
@@ -603,12 +694,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:287
+#, fuzzy
 msgid ""
 "The `filesz` entry specifies the maximum size for an audit trail before "
 "automatically terminating and rotating the trail file. A value of `0` "
 "disables automatic log rotation. If the requested file size is below the "
 "minimum of 512k, it will be ignored and a log message will be generated."
 msgstr ""
+"A entrada <option>filesz</option> especifica o tamanho máximo para uma "
+"trilha de auditoria antes de finalizar e rotacionar automaticamente o "
+"arquivo de trilha. Um valor de <literal>0</literal> desabilita a rotação "
+"automática de log. Se o tamanho do arquivo solicitado estiver abaixo do "
+"mínimo de 512k, ele será ignorado e uma mensagem de log será gerada."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:289
@@ -645,11 +742,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:301
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "root:lo,+ex:no\n"
 "www:fc,+ex:no\n"
 msgstr ""
+"root:lo,+ex:no\n"
+"www:fc,+ex:no\n"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/audit/_index.adoc:304
@@ -659,6 +758,7 @@ msgstr "Trabalhando com Trilhas de Auditoria"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:307
+#, fuzzy
 msgid ""
 "Since audit trails are stored in the BSM binary format, several built-in "
 "tools are available to modify or convert these trails to text. To convert "
@@ -668,6 +768,15 @@ msgid ""
 "type, event class, user, date or time of the event, and the file path or "
 "object acted on."
 msgstr ""
+"Como as trilhas de auditoria são armazenadas no formato binário "
+"<acronym>BSM</acronym>, várias ferramentas internas estão disponíveis para "
+"modificar ou converter essas trilhas em texto. Para converter arquivos de "
+"trilha em um formato de texto simples, use o <command>praudit</command>. "
+"Para reduzir o arquivo de trilha de auditoria para fins de análise, "
+"arquivamento ou impressão, use o <command>auditreduce</command>. Esse "
+"utilitário suporta vários parâmetros de seleção, incluindo tipo de evento, "
+"classe de evento, usuário, data ou hora do evento e o caminho ou objeto do "
+"arquivo em questão."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:309
@@ -700,7 +809,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:328
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "header,133,10,execve(2),0,Mon Sep 25 15:58:03 2006, + 384 msec\n"
 "exec arg,finger,doug\n"
@@ -710,6 +819,13 @@ msgid ""
 "return,success,0\n"
 "trailer,133\n"
 msgstr ""
+"header,133,10,execve(2),0,Mon Sep 25 15:58:03 2006, + 384 msec\n"
+"exec arg,finger,doug\n"
+"path,/usr/bin/finger\n"
+"attribute,555,root,wheel,90,24918,104944\n"
+"subject,robert,root,wheel,root,wheel,38439,38032,42086,128.232.9.100\n"
+"return,success,0\n"
+"trailer,133\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:331
@@ -801,9 +917,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:357
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "add path 'auditpipe*' mode 0440 group audit\n"
-msgstr ""
+msgstr "add path 'auditpipe*' mode 0440 group audit\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:360
@@ -814,6 +930,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:365
+#, fuzzy
 msgid ""
 "It is easy to produce audit event feedback cycles, in which the viewing of "
 "each audit event results in the generation of more audit events. For "
@@ -823,6 +940,15 @@ msgid ""
 "reason, it is advisable to run `praudit` on an audit pipe device from "
 "sessions without fine-grained I/O auditing."
 msgstr ""
+"É fácil produzir ciclos de feedback de evento de auditoria, nos quais a "
+"visualização de cada evento de auditoria resulta na geração de mais eventos "
+"de auditoria. Por exemplo, se toda a rede <acronym>I/O</acronym> for "
+"auditada e <command>praudit</command> for executada a partir de uma sessão "
+"<acronym>SSH</acronym>, um fluxo contínuo de eventos de auditoria será "
+"gerada em uma taxa alta, pois cada evento sendo impresso gerará outro "
+"evento. Por esse motivo, é aconselhável executar <command>praudit</command> "
+"em um dispositivo de pipe de auditoria a partir de sessões sem auditoria de "
+"<acronym>I/O</acronym> de baixa granularidade."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/audit/_index.adoc:367
@@ -858,21 +984,26 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:379
+#, fuzzy
 msgid ""
 "Adding the following line to [.filename]#/etc/crontab# will schedule this "
 "rotation every twelve hours:"
 msgstr ""
+"Adicionar a seguinte linha ao <filename>/etc/crontab</filename> agendará "
+"essa rotação a cada doze horas:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:383
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "0     */12       *       *       *       root    /usr/sbin/audit -n\n"
-msgstr ""
+msgstr "0     */12       *       *       *       root    /usr/sbin/audit -n\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:386
+#, fuzzy
 msgid "The change will take effect once [.filename]#/etc/crontab# is saved."
 msgstr ""
+"A alteração terá efeito quando o <filename>/etc/crontab</filename> for salvo."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:388
@@ -884,6 +1015,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:390
+#, fuzzy
 msgid ""
 "As audit trail files can become very large, it is often desirable to "
 "compress or otherwise archive trails once they have been closed by the audit "
@@ -893,10 +1025,18 @@ msgid ""
 "following may be added to [.filename]#/etc/security/audit_warn# to compress "
 "audit trails on close:"
 msgstr ""
+"Como os arquivos de trilha de auditoria podem se tornar muito grandes, "
+"geralmente é desejável compactar ou arquivar rastros depois que eles forem "
+"fechados pelo daemon de auditoria. O script <filename>audit_warn</filename> "
+"pode ser usado para executar operações personalizadas para uma variedade de "
+"eventos relacionados à auditoria, incluindo a terminação limpa de trilhas de "
+"auditoria quando elas são rotacionadas. Por exemplo, o seguinte pode ser "
+"adicionado ao <filename>/etc/security/audit_warn</filename> para compactar "
+"as trilhas de auditoria ao serem fechados:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:399
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "#\n"
 "# Compress audit trail files on close.\n"
@@ -905,6 +1045,12 @@ msgid ""
 "        gzip -9 $2\n"
 "fi\n"
 msgstr ""
+"#\n"
+"# Compress audit trail files on close.\n"
+"#\n"
+"if [ \"$1\" = closefile ]; then\n"
+"        gzip -9 $2\n"
+"fi\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:401
