@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-03-30 23:20+0000\n"
+"PO-Revision-Date: 2021-04-08 23:28+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/articleslinux-users_index/pt_BR/>\n"
@@ -114,10 +114,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-users/_index.adoc:60
+#, fuzzy
 msgid ""
 "FreeBSD provides two methods for installing applications: binary packages "
 "and compiled ports.  Each method has its own benefits:"
 msgstr ""
+"FreeBSD provê dois métodos para a instalação de novos aplicativos: pacotes "
+"binários e através da compilação do código fonte (Árvore de ports).  Cada "
+"método tem seu benefício:"
 
 #. type: Block title
 #: documentation/content/en/articles/linux-users/_index.adoc:61
@@ -205,6 +209,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-users/_index.adoc:95
+#, fuzzy
 msgid ""
 "The FreeBSD Ports Collection is a framework of [.filename]#Makefiles# and "
 "patches specifically customized for installing applications from source on "
@@ -212,6 +217,12 @@ msgid ""
 "apply any required patches, compile the code, and install the application "
 "and any required dependencies."
 msgstr ""
+"A árvore de ports do FreeBSD é um framework de <filename>Makefile</"
+"filename>s e patches customizados especificamente para a instalação através "
+"do código fonte no FreeBSD. Quando um port é instalado, o sistema irá buscar "
+"o código fonte, aplicar qualquer patch que seja necessário, compilar o "
+"código, instalar a aplicação e qualquer outra dependência da qual ela "
+"necessite."
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-users/_index.adoc:98
@@ -324,7 +335,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/linux-users/_index.adoc:149
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# enable SSHD\n"
 "sshd_enable=\"YES\"\n"
@@ -332,13 +343,22 @@ msgid ""
 "apache24_enable=\"YES\"\n"
 "apache24_flags=\"-DSSL\"\n"
 msgstr ""
+"# enable SSHD\n"
+"sshd_enable=\"YES\"\n"
+"# enable Apache with SSL\n"
+"apache24_enable=\"YES\"\n"
+"apache24_flags=\"-DSSL\"\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-users/_index.adoc:152
+#, fuzzy
 msgid ""
 "Once a service has been enabled in [.filename]#/etc/rc.conf#, it can be "
 "started without rebooting the system:"
 msgstr ""
+"Uma vez que o serviço tenha sido habilitado no arquivo <filename>/etc/rc."
+"conf</filename>, ele pode ser inicializado sem a necessidade de uma "
+"reinicialização do sistema."
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/linux-users/_index.adoc:157
@@ -406,12 +426,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/linux-users/_index.adoc:198
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "hostname=\"server1.example.com\"\n"
 "ifconfig_em0=\"inet 10.10.10.100 netmask 255.255.255.0\"\n"
 "defaultrouter=\"10.10.10.1\"\n"
 msgstr ""
+"hostname=\"server1.example.com\"\n"
+"ifconfig_em0=\"inet 10.10.10.100 netmask 255.255.255.0\"\n"
+"defaultrouter=\"10.10.10.1\"\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-users/_index.adoc:201
@@ -420,11 +443,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/linux-users/_index.adoc:206
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "hostname=\"server1.example.com\"\n"
 "ifconfig_em0=\"DHCP\"\n"
 msgstr ""
+"hostname=\"server1.example.com\"\n"
+"ifconfig_em0=\"DHCP\"\n"
 
 #. type: Title ==
 #: documentation/content/en/articles/linux-users/_index.adoc:209
@@ -469,17 +494,22 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/linux-users/_index.adoc:227
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "pass in on $ext_if inet proto tcp from any to ($ext_if) port 22\n"
-msgstr ""
+msgstr "pass in on $ext_if inet proto tcp from any to ($ext_if) port 22\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-users/_index.adoc:231
+#, fuzzy
 msgid ""
 "IPFILTER is the firewall application developed by Darren Reed.  It is not "
 "specific to FreeBSD and has been ported to several operating systems "
 "including NetBSD, OpenBSD, SunOS, HP/UX, and Solaris."
 msgstr ""
+"O <application>IPFILTER</application> é uma aplicação de firewall "
+"desenvolvida por Darren Reed. Ela não é específica para o FreeBSD e foi "
+"portado para diversos sistemas operacionais, incluindo NetBSD, OpenBSD, "
+"SunOS, HP/UX, e Solaris."
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-users/_index.adoc:233
@@ -488,9 +518,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/linux-users/_index.adoc:237
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "pass in on $ext_if proto tcp from any to any port = 22\n"
-msgstr ""
+msgstr "pass in on $ext_if proto tcp from any to any port = 22\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-users/_index.adoc:241
@@ -507,9 +537,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/linux-users/_index.adoc:247
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ipfw add allow tcp from any to me 22 in via $ext_if\n"
-msgstr ""
+msgstr "ipfw add allow tcp from any to me 22 in via $ext_if\n"
 
 #. type: Title ==
 #: documentation/content/en/articles/linux-users/_index.adoc:250
@@ -528,6 +558,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-users/_index.adoc:257
+#, fuzzy
 msgid ""
 "Updating from source is the most involved update method, but offers the "
 "greatest amount of flexibility.  The process involves synchronizing a local "
@@ -535,6 +566,11 @@ msgid ""
 "the local source code is up-to-date, a new version of the kernel and "
 "userland can be compiled."
 msgstr ""
+"Atualizar através do código fonte é a forma mais trabalhosa, mas ela oferece "
+"uma grande flexibilidade.  O processo envolve a sincronização da cópia local "
+"do código fonte do FreeBSD com os servidores de <application>Subversion</"
+"application> do FreeBSD. Uma vez que o código fonte local esteja atualizado, "
+"uma nova versão do kernel e da userland poderão ser compiladas."
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-users/_index.adoc:261
@@ -554,9 +590,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/linux-users/_index.adoc:269
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "0 3 * * * root /usr/sbin/freebsd-update cron\n"
-msgstr ""
+msgstr "0 3 * * * root /usr/sbin/freebsd-update cron\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/linux-users/_index.adoc:274
@@ -607,16 +643,19 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-users/_index.adoc:297
+#, fuzzy
 msgid ""
 "If an application requires procfs, add the following entry to [.filename]#/"
 "etc/fstab#:"
 msgstr ""
+"Se alguma aplicação necessitar do procfs, adicione a seguinte entrada no "
+"arquivo <filename>/etc/fstab</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/linux-users/_index.adoc:301
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "proc                /proc           procfs  rw,noauto       0       0\n"
-msgstr ""
+msgstr "proc                /proc           procfs  rw,noauto       0       0\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/linux-users/_index.adoc:304
