@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: 2021-03-30 23:19+0000\n"
+"PO-Revision-Date: 2021-04-08 00:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookports_index/pt_BR/>\n"
@@ -155,12 +155,18 @@ msgstr "Teste e instale o software."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:71
+#, fuzzy
 msgid ""
 "A FreeBSD _port_ is a collection of files designed to automate the process "
 "of compiling an application from source code. The files that comprise a port "
 "contain all the necessary information to automatically download, extract, "
 "patch, compile, and install the application."
 msgstr ""
+"Um <emphasis>port</emphasis> do FreeBSD é uma coleção de arquivos projetados "
+"para automatizar o processo de compilação de um aplicativo a partir do "
+"código-fonte. Os arquivos que compõem um port contêm todas as informações "
+"necessárias para baixar, extrair, corrigir, compilar e instalar "
+"automaticamente o aplicativo."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:73
@@ -267,14 +273,19 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:92
+#, fuzzy
 msgid ""
 "Some applications have compile-time options relating to which features are "
 "installed. For example, Apache can be configured with a wide variety of "
 "different built-in options."
 msgstr ""
+"Alguns aplicativos têm opções em tempo de compilação relacionadas a quais "
+"recursos estão instalados. Por exemplo, o <application>Apache</application> "
+"pode ser configurado com uma ampla variedade de diferentes opções internas."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:94
+#, fuzzy
 msgid ""
 "  In some cases, multiple packages will exist for the same application to "
 "specify certain settings. For example, Ghostscript is available as a [."
@@ -283,6 +294,13 @@ msgid ""
 "rapidly becomes impossible if an application has more than one or two "
 "different compile-time options."
 msgstr ""
+"  Em alguns casos, vários pacotes existirão para o mesmo aplicativo para "
+"especificar determinadas configurações. Por exemplo, o "
+"<application>Ghostscript</application> está disponível como um pacote "
+"<filename>ghostscript</filename> e um pacote <filename>ghostscript-nox11</"
+"filename>, dependendo se o <application>Xorg</application> está instalado ou "
+"não. Criar vários pacotes rapidamente se torna impossível se um aplicativo "
+"tiver mais de uma ou duas opções diferentes de tempo de compilação."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:95
@@ -359,6 +377,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:115
+#, fuzzy
 msgid ""
 "Dan Langille maintains http://www.FreshPorts.org/[FreshPorts.org] which "
 "provides a comprehensive search utility and also tracks changes to the "
@@ -366,6 +385,11 @@ msgid ""
 "customized watch list in order to receive an automated email when their "
 "watched ports are updated."
 msgstr ""
+"Dan Langille mantém o <link xlink:href=\"http://www.FreshPorts.org/\""
+">FreshPorts.org</link>, que fornece um utilitário de pesquisa abrangente e "
+"também rastreia alterações nos aplicativos da Coleção de Ports. Os usuários "
+"registrados podem criar uma lista de observação personalizada para receber "
+"um e-mail automatizado quando seus ports sendo monitorados forem atualizados."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:116
@@ -401,6 +425,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:135
+#, fuzzy
 msgid ""
 "  Package names include the version number and, in the case of ports based "
 "on python, the version number of the version of python the package was built "
@@ -411,6 +436,16 @@ msgid ""
 "application by the port origin, which is the path in the ports tree. Repeat "
 "the `pkg search` with `-o` to list the origin of each package:"
 msgstr ""
+"  Os nomes dos pacotes incluem o número da versão e, no caso de ports "
+"baseados em python, o número da versão  do pacote python sobre o qual o "
+"pacote foi compilado. Alguns ports também possuem várias versões "
+"disponíveis. No caso do <application>Subversion</application>, existem "
+"diferentes versões disponíveis, bem como diferentes opções de compilação. "
+"Neste caso, a versão estaticamente vinculada do <application>Subversion</"
+"application>. Ao indicar qual pacote instalar, é melhor especificar o "
+"aplicativo pela origem do port, que é o caminho na árvore de ports. Repita o "
+"<command>pkg search</command> com <option>-o</option> para listar a origem "
+"de cada pacote:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:150
@@ -470,10 +505,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:170
+#, fuzzy
 msgid ""
 "  Note that this will also return any matched files downloaded into the [."
 "filename]#/usr/ports/distfiles# directory."
 msgstr ""
+"  Observe que isso também retornará todos os arquivos correspondentes "
+"baixados no diretório <filename>/usr/ports/distfiles</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:171
@@ -555,11 +593,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:212
+#, fuzzy
 msgid ""
 "pkg is the next generation replacement for the traditional FreeBSD package "
 "management tools, offering many features that make dealing with binary "
 "packages faster and easier."
 msgstr ""
+"O <application>pkg</application> é o substituto da próxima geração para as "
+"tradicionais ferramentas de gerenciamento de pacotes do FreeBSD, oferecendo "
+"muitos recursos que tornam o processamento de pacotes binários mais rápido e "
+"fácil."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:214
@@ -642,6 +685,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:248
+#, fuzzy
 msgid ""
 "When upgrading an existing system that originally used the older pkg_* "
 "tools, the database must be converted to the new format, so that the new "
@@ -649,6 +693,12 @@ msgid ""
 "installed, the package database must be converted from the traditional "
 "format to the new format by running this command:"
 msgstr ""
+"Ao atualizar um sistema existente que usava originalmente as ferramentas "
+"pkg_ * mais antigas, o banco de dados deve ser convertido para o novo "
+"formato, para que as novas ferramentas estejam cientes dos pacotes já "
+"instalados. Uma vez que o <application>pkg</application> tenha sido "
+"instalado, o banco de dados de pacotes deve ser convertido do formato "
+"tradicional para o novo formato, executando este comando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:252
@@ -674,12 +724,18 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:267
+#, fuzzy
 msgid ""
 "The package database conversion may emit errors as the contents are "
 "converted to the new version. Generally, these errors can be safely ignored. "
 "However, a list of software that was not successfully converted is shown "
 "after `pkg2ng` finishes. These applications must be manually reinstalled."
 msgstr ""
+"A conversão do banco de dados de pacotes pode emitir erros conforme o "
+"conteúdo é convertido para a nova versão. Geralmente, esses erros podem ser "
+"ignorados com segurança. No entanto, uma lista com os softwares que não "
+"foram convertidos com sucesso é mostrada após o <command>pkg2ng</command> "
+"terminar. Esses aplicativos devem ser reinstalados manualmente."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:270
@@ -737,12 +793,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:295
+#, fuzzy
 msgid ""
 "The rest of this section demonstrates common binary package management tasks "
 "which can be performed using pkg. Each demonstrated command provides many "
 "switches to customize its use. Refer to a command's help or man page for "
 "details and more examples."
 msgstr ""
+"O restante desta seção demonstra tarefas comuns de gerenciamento de pacotes "
+"binários que podem ser executadas usando o <application>pkg</application>. "
+"Cada comando demonstrado fornece muitos switches para personalizar seu uso. "
+"Consulte a ajuda de um comando ou a página do manual para obter detalhes e "
+"mais exemplos."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/ports/_index.adoc:297
@@ -752,6 +814,7 @@ msgstr "Branches Ports Trimestrais e Mais Recentes"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:300
+#, fuzzy
 msgid ""
 "The `Quarterly` branch provides users with a more predictable and stable "
 "experience for port and package installation and upgrades. This is done "
@@ -764,6 +827,18 @@ msgid ""
 "branch created in January 2016, is named 2016Q1. And the `Latest` branch "
 "provides the latest versions of the packages to the users."
 msgstr ""
+"As branches <literal>Quarterly</literal>(trimestrais) provê aos usuários uma "
+"experiência mais estável e previsível para instalação e upgrade de ports e "
+"pacotes.  Isto é feito essencialmente permitindo apenas atualizações que não "
+"contém novas features (non-features updates). Branches trimestrais visam "
+"receber correções se segurança (que talvez sejam atualizações de versão, ou "
+"commits de backports), correções de bugs e compliance de ports ou alterações "
+"de frameworks. A branch trimestral é baseada (anualmente) na HEAD no início "
+"de Janeiro, Abril, Julho e Outubro. As branches são nomeadas de acordo com o "
+"ano (YYYY) e o quarter (Q1-4) em que são criadas. Por exemplo, a branch "
+"trimestral criada em Janeiro de 2016, é nomeada 2016Q1. E a branch "
+"<literal>Latest</literal> provê as últimas versões dos pacotes para os "
+"usuários."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:302
@@ -792,7 +867,7 @@ msgstr "O resultado deve ser semelhante ao seguinte:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:322
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "FreeBSD: {\n"
 "  url: \"pkg+http://pkg.FreeBSD.org/${ABI}/latest\",\n"
@@ -802,6 +877,13 @@ msgid ""
 "  enabled: yes\n"
 "}\n"
 msgstr ""
+"FreeBSD: {\n"
+"  url: \"pkg+http://pkg.FreeBSD.org/${ABI}/latest\",\n"
+"  mirror_type: \"srv\",\n"
+"  signature_type: \"fingerprints\",\n"
+"  fingerprints: \"/usr/share/keys/pkg\",\n"
+"  enabled: yes\n"
+"}\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:325
@@ -1016,12 +1098,17 @@ msgstr "Auditando os Pacotes Instalados"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:422
+#, fuzzy
 msgid ""
 "Software vulnerabilities are regularly discovered in third-party "
 "applications. To address this, pkg includes a built-in auditing mechanism. "
 "To determine if there are any known vulnerabilities for the software "
 "installed on the system, run:"
 msgstr ""
+"Vulnerabilidades de software são regularmente descobertas em aplicativos de "
+"terceiros. Para resolver isso, o <application>pkg</application> inclui um "
+"mecanismo de auditoria integrado. Para determinar se há alguma "
+"vulnerabilidade conhecida para o software instalado no sistema, execute:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:426
@@ -1108,11 +1195,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:466
+#, fuzzy
 msgid ""
 "This list can be used to rebuild all packages installed on a system using "
 "build tools such as package:ports-mgmt/poudriere[] or package:ports-mgmt/"
 "synth[]."
 msgstr ""
+"Esta lista pode ser usada para recompilar todos os pacotes instalados em um "
+"sistema usando ferramentas de compilação como o <package>ports-mgmt/"
+"poudriere</package> ou o <package>ports-mgmt/synth</package>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:468
@@ -1318,10 +1409,13 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:573
+#, fuzzy
 msgid ""
 "By default, the Ports Collection itself is stored as a subdirectory of [."
 "filename]#/usr/ports#."
 msgstr ""
+"Por padrão, a própria coleção de ports é armazenada como um subdiretório de "
+"<filename>/usr/ports</filename>."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:575
@@ -1352,10 +1446,13 @@ msgstr ""
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:584
+#, fuzzy
 msgid ""
 "To download a compressed snapshot of the Ports Collection into [.filename]#/"
 "var/db/portsnap#:"
 msgstr ""
+"Para baixar um snapshot compactado da coleção de ports em <filename>/var/db/"
+"portsnap</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:588
@@ -1474,6 +1571,7 @@ msgstr ""
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:651
+#, fuzzy
 msgid ""
 "The Ports Collection contains directories for software categories. Inside "
 "each category are subdirectories for individual applications. Each "
@@ -1481,42 +1579,65 @@ msgid ""
 "compile and install that program, called a _ports skeleton_. Each port "
 "skeleton includes these files and directories:"
 msgstr ""
+"A coleção de ports contém diretórios para categorias de software. Dentro de "
+"cada categoria estão subdiretórios para aplicativos individuais. Cada "
+"subdiretório de aplicativo contém um conjunto de arquivos que informa ao "
+"FreeBSD como compilar e instalar esse programa, chamado de "
+"<emphasis>esqueleto do ports</emphasis>. Cada esqueleto de port inclui esses "
+"arquivos e diretórios:"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:653
+#, fuzzy
 msgid ""
 "[.filename]#Makefile#: contains statements that specify how the application "
 "should be compiled and where its components should be installed."
 msgstr ""
+"<filename>Makefile</filename>: contém instruções que especificam como o "
+"aplicativo deve ser compilado e onde seus componentes devem ser instalados."
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:654
+#, fuzzy
 msgid ""
 "[.filename]#distinfo#: contains the names and checksums of the files that "
 "must be downloaded to build the port."
 msgstr ""
+"<filename>distinfo</filename>: contém os nomes e checksums dos arquivos que "
+"devem ser baixados para compilar o port."
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:655
+#, fuzzy
 msgid ""
 "[.filename]#files/#: this directory contains any patches needed for the "
 "program to compile and install on FreeBSD. This directory may also contain "
 "other files used to build the port."
 msgstr ""
+"<filename>files/</filename>: este diretório contém quaisquer patches "
+"necessários para o programa compilar e instalar no FreeBSD. Esse diretório "
+"também pode conter outros arquivos usados para compilar o port."
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:656
+#, fuzzy
 msgid ""
 "[.filename]#pkg-descr#: provides a more detailed description of the program."
 msgstr ""
+"<filename>pkg-descr</filename>: fornece uma descrição mais detalhada do "
+"programa."
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:657
+#, fuzzy
 msgid ""
 "[.filename]#pkg-plist#: a list of all the files that will be installed by "
 "the port. It also tells the ports system which files to remove upon "
 "deinstallation."
 msgstr ""
+"<filename>pkg-plist</filename>: uma lista de todos os arquivos que serão "
+"instalados pelo port. Ele também informa ao sistema de ports quais arquivos "
+"devem ser removidos após a desinstalação."
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:659
@@ -1573,11 +1694,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:676
+#, fuzzy
 msgid ""
 "To compile and install the port, change to the directory of the port to be "
 "installed, then type `make install` at the prompt. Messages will indicate "
 "the progress:"
 msgstr ""
+"Para compilar e instalar o port, mude para o diretório do port a ser "
+"instalado e, em seguida, digite <command>make install</command> no prompt. "
+"Mensagens indicarão o progresso:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:698
@@ -1624,14 +1749,19 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:714
+#, fuzzy
 msgid ""
 "Since `lsof` is a program that runs with increased privileges, a security "
 "warning is displayed as it is installed. Once the installation is complete, "
 "the prompt will be returned."
 msgstr ""
+"Como o <command>lsof</command> é um programa que é executado com privilégios "
+"aumentados, um aviso de segurança é exibido quando é instalado. Quando a "
+"instalação estiver concluída, o prompt será retornado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:716
+#, fuzzy
 msgid ""
 "Some shells keep a cache of the commands that are available in the "
 "directories listed in the `PATH` environment variable, to speed up lookup "
@@ -1640,6 +1770,14 @@ msgid ""
 "without specifying its full path. Use `hash -r` instead for the `sh` shell. "
 "Refer to the documentation for the shell for more information."
 msgstr ""
+"Algumas shells mantêm um cache dos comandos que estão disponíveis nos "
+"diretórios listados na variável de ambiente <envar>PATH</envar>, para "
+"acelerar as operações de pesquisa do arquivo executável desses comandos. Os "
+"usuários do shell <command>tcsh</command> devem digitar <command>rehash</"
+"command> para que um comando recém-instalado possa ser usado sem especificar "
+"seu caminho completo. Use <command>hash -r</command> para o shell "
+"<command>sh</command>. Consulte a documentação do shell para mais "
+"informações."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:718
@@ -1736,12 +1874,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:748
+#, fuzzy
 msgid ""
 "In rare cases, such as when an organization has a local distfiles "
 "repository, the `MASTER_SITES` variable can be used to override the download "
 "locations specified in the [.filename]#Makefile#. When using, specify the "
 "alternate location:"
 msgstr ""
+"Em casos raros, como quando uma organização tem um repositório local de "
+"distfiles, a variável <varname>MASTER_SITES</varname> pode ser usada para "
+"substituir os locais de download especificados no <filename>Makefile</"
+"filename>. Ao usar, especifique o local alternativo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:754
@@ -1911,6 +2054,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:826
+#, fuzzy
 msgid ""
 "Before attempting an upgrade, read [.filename]#/usr/ports/UPDATING# from the "
 "top of the file to the date closest to the last time ports were upgraded or "
@@ -1921,6 +2065,15 @@ msgid ""
 "note of any instructions which match any of the ports that need upgrading "
 "and follow these instructions when performing the upgrade."
 msgstr ""
+"Antes de tentar uma atualização, leia o <filename>/usr/ports/UPDATING</"
+"filename> da parte superior do arquivo até a data mais próxima da última vez "
+"em que os ports foram atualizados ou o sistema foi instalado. Este arquivo "
+"descreve vários problemas e etapas adicionais que os usuários podem "
+"encontrar e precisar executar ao atualizar um port, incluindo coisas como "
+"alterações de formato de arquivo, alterações nos locais de arquivos de "
+"configuração ou incompatibilidades com versões anteriores. Anote quaisquer "
+"instruções que correspondam a qualquer um dos ports que precisam de "
+"atualização e siga estas instruções ao executar a atualização."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/ports/_index.adoc:829
@@ -1963,12 +2116,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:844
+#, fuzzy
 msgid ""
 "package:ports-mgmt/portmaster[] is a very small utility for upgrading "
 "installed ports. It is designed to use the tools installed with the FreeBSD "
 "base system without depending on other ports or databases. To install this "
 "utility as a port:"
 msgstr ""
+"O <package>ports-mgmt/portmaster</package> é um utilitário muito pequeno "
+"para atualizar os ports instalados. Ele é projetado para usar as ferramentas "
+"instaladas com o sistema base do FreeBSD sem depender de outros ports ou "
+"bancos de dados. Para instalar este utilitário como um port:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:849
@@ -2080,11 +2238,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:905
+#, fuzzy
 msgid ""
 "Portmaster can also be used to install new ports on the system, upgrading "
 "all dependencies before building and installing the new port. To use this "
 "function, specify the location of the port in the Ports Collection:"
 msgstr ""
+"O <application>Portmaster</application> também pode ser usado para instalar "
+"novos ports no sistema, atualizando todas as dependências antes de compilar "
+"e instalar o novo port. Para usar essa função, especifique o local do port "
+"na coleção de ports:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:909
@@ -2107,11 +2270,16 @@ msgstr "Atualizando Ports Usando o Portupgrade"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:917
+#, fuzzy
 msgid ""
 "package:ports-mgmt/portupgrade[] is another utility that can be used to "
 "upgrade ports. It installs a suite of applications which can be used to "
 "manage ports. However, it is dependent upon Ruby. To install the port:"
 msgstr ""
+"O <package>ports-mgmt/portupgrade</package> é outro utilitário que pode ser "
+"usado para atualizar ports. Ele instala um conjunto de aplicativos que podem "
+"ser usados para gerenciar ports. No entanto, ele depende do Ruby. Para "
+"instalar o port:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:922
@@ -2123,11 +2291,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:925
+#, fuzzy
 msgid ""
 "Before performing an upgrade using this utility, it is recommended to scan "
 "the list of installed ports using `pkgdb -F` and to fix all the "
 "inconsistencies it reports."
 msgstr ""
+"Antes de executar uma atualização usando esse utilitário, é recomendável "
+"verificar a lista de ports instalados usando o <command>pkgdb -F</command> e "
+"corrigir todas as inconsistências relatadas."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:927
@@ -2262,10 +2434,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:985
+#, fuzzy
 msgid ""
 "In addition to these commands, package:ports-mgmt/pkg_cutleaves[] automates "
 "the task of removing installed ports that are no longer needed."
 msgstr ""
+"Além desses comandos, o <package>ports-mgmt/pkg_cutleaves</package> "
+"automatiza a tarefa de remover os ports instalados que não são mais "
+"necessários."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/ports/_index.adoc:987
@@ -2309,12 +2485,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:996
+#, fuzzy
 msgid ""
 "The number of processor cores detected is used to define how many builds "
 "will run in parallel. Supply enough virtual memory, either with `RAM` or "
 "swap space. If virtual memory runs out, the compilation jails will stop and "
 "be torn down, resulting in weird error messages."
 msgstr ""
+"O número de núcleos do processador detectados é usado para definir quantas "
+"compilações serão executadas em paralelo. Forneça memória virtual "
+"suficiente, seja por meio de <acronym>RAM</acronym> ou espaço de swap. Se a "
+"memória virtual se esgotar, as jails de compilação serão interrompidas e "
+"desativadas, resultando em mensagens de erro estranhas."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/ports/_index.adoc:998
@@ -2334,7 +2516,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:1048
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# poudriere jail -c -j 11amd64 -v 11.4-RELEASE\n"
 "[00:00:00] Creating 11amd64 fs at /poudriere/jails/11amd64... done\n"
@@ -2381,6 +2563,57 @@ msgid ""
 "[00:04:06] Recording filesystem state for clean... done\n"
 "[00:04:07] Jail 11amd64 11.4-RELEASE-p1 amd64 is ready to be used\n"
 msgstr ""
+"<prompt>#</prompt> <userinput>poudriere jail -c -j <replaceable>11amd64</"
+"replaceable> -v <replaceable>11.4-RELEASE</replaceable></userinput>\n"
+"[00:00:00] Creating 11amd64 fs at /poudriere/jails/11amd64... done\n"
+"[00:00:00] Using pre-distributed MANIFEST for FreeBSD 11.4-RELEASE amd64\n"
+"[00:00:00] Fetching base for FreeBSD 11.4-RELEASE amd64\n"
+"/poudriere/jails/11amd64/fromftp/base.txz              125 MB 4110 kBps    "
+"31s\n"
+"[00:00:33] Extracting base... done\n"
+"[00:00:54] Fetching src for FreeBSD 11.4-RELEASE amd64\n"
+"/poudriere/jails/11amd64/fromftp/src.txz               154 MB 4178 kBps    "
+"38s\n"
+"[00:01:33] Extracting src... done\n"
+"[00:02:31] Fetching lib32 for FreeBSD 11.4-RELEASE amd64\n"
+"/poudriere/jails/11amd64/fromftp/lib32.txz              24 MB 3969 kBps    "
+"06s\n"
+"[00:02:38] Extracting lib32... done\n"
+"[00:02:42] Cleaning up... done\n"
+"[00:02:42] Recording filesystem state for clean... done\n"
+"[00:02:42] Upgrading using ftp\n"
+"/etc/resolv.conf -&gt; /poudriere/jails/11amd64/etc/resolv.conf\n"
+"Looking up update.FreeBSD.org mirrors... 3 mirrors found.\n"
+"Fetching public key from update4.freebsd.org... done.\n"
+"Fetching metadata signature for 11.4-RELEASE from update4.freebsd.org... "
+"done.\n"
+"Fetching metadata index... done.\n"
+"Fetching 2 metadata files... done.\n"
+"Inspecting system... done.\n"
+"Preparing to download files... done.\n"
+"Fetching 124 patches.....10....20....30....40....50....60....70....80....90.."
+"..100....110....120.. done.\n"
+"Applying patches... done.\n"
+"Fetching 6 files... done.\n"
+"The following files will be added as part of updating to\n"
+"11.4-RELEASE-p1:\n"
+"/usr/src/contrib/unbound/.github\n"
+"/usr/src/contrib/unbound/.github/FUNDING.yml\n"
+"/usr/src/contrib/unbound/contrib/drop2rpz\n"
+"/usr/src/contrib/unbound/contrib/unbound_portable.service.in\n"
+"/usr/src/contrib/unbound/services/rpz.c\n"
+"/usr/src/contrib/unbound/services/rpz.h\n"
+"/usr/src/lib/libc/tests/gen/spawnp_enoexec.sh\n"
+"The following files will be updated as part of updating to\n"
+"11.4-RELEASE-p1:\n"
+"[…]\n"
+"Installing updates...Scanning //usr/share/certs/blacklisted for "
+"certificates...\n"
+"Scanning //usr/share/certs/trusted for certificates...\n"
+" done.\n"
+"11.4-RELEASE-p1\n"
+"[00:04:06] Recording filesystem state for clean... done\n"
+"[00:04:07] Jail 11amd64 11.4-RELEASE-p1 amd64 is ready to be used\n"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:1055
@@ -2421,13 +2654,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:1069
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "editors/emacs\n"
 "devel/git\n"
 "ports-mgmt/pkg\n"
 "...\n"
 msgstr ""
+"editors/emacs\n"
+"devel/git\n"
+"ports-mgmt/pkg\n"
+"...\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1072
@@ -2482,6 +2719,7 @@ msgstr "Configurando Clientes do pkg para usar um repositório de Poudriere"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1094
+#, fuzzy
 msgid ""
 "While it is possible to use both a custom repository along side of the "
 "official repository, sometimes it is useful to disable the official "
@@ -2489,15 +2727,23 @@ msgid ""
 "disables the official configuration file. Create [.filename]#/usr/local/etc/"
 "pkg/repos/FreeBSD.conf# that contains the following:"
 msgstr ""
+"Embora seja possível usar um repositório personalizado ao lado do "
+"repositório oficial, às vezes é útil desativar o repositório oficial. Isso é "
+"feito criando um arquivo de configuração que substitui e desativa o arquivo "
+"de configuração oficial. Crie o <filename>/usr/local/etc/pkg/repos/FreeBSD."
+"conf</filename> que deverá conter o seguinte:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:1100
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "FreeBSD: {\n"
 "\tenabled: no\n"
 "}\n"
 msgstr ""
+"FreeBSD: {\n"
+"\tenabled: no\n"
+"}\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1103
@@ -2548,6 +2794,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1120
+#, fuzzy
 msgid ""
 "Most applications install at least one default configuration file in [."
 "filename]#/usr/local/etc#. In cases where an application has a large number "
@@ -2557,14 +2804,27 @@ msgid ""
 "edited to meet the system's needs. To edit a sample file, first copy it "
 "without the [.filename]#.sample# extension."
 msgstr ""
+"A maioria dos aplicativos instala pelo menos um arquivo de configuração "
+"padrão em <filename>/usr/local/etc</filename>. Nos casos em que um "
+"aplicativo possui um grande número de arquivos de configuração, um "
+"subdiretório será criado para mantê-los. Geralmente, os arquivos de "
+"configuração de exemplo são instalados e terminam com um sufixo, como "
+"<filename>.sample</filename>. Os arquivos de configuração devem ser "
+"revisados e possivelmente editados para atender às necessidades do sistema. "
+"Para editar um arquivo de amostra, primeiro copie-o sem a extensão <filename>"
+".sample</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1121
+#, fuzzy
 msgid ""
 "Applications which provide documentation will install it into [.filename]#/"
 "usr/local/shared/doc# and many applications also install manual pages. This "
 "documentation should be consulted before continuing."
 msgstr ""
+"As aplicações que fornecem documentação irão instalá-la em <filename>/usr/"
+"local/share/doc</filename> e muitos aplicativos também instalam páginas de "
+"manual. Esta documentação deve ser consultada antes de continuar."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1122
