@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-04-01 12:57+0000\n"
+"PO-Revision-Date: 2021-04-08 23:28+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/articlesipsec-must_index/pt_BR/>\n"
@@ -31,10 +31,14 @@ msgstr "Sumário"
 
 #. type: Plain text
 #: documentation/content/en/articles/ipsec-must/_index.adoc:27
+#, fuzzy
 msgid ""
 "You installed IPsec and it seems to be working.  How do you know? I describe "
 "a method for experimentally verifying that IPsec is working."
 msgstr ""
+"Você instalou o IPsec e ele parece estar funcionando. Como você sabe? Eu "
+"descrevo um método para verificar experimentalmente se o IPsec está "
+"funcionando."
 
 #. type: Plain text
 #: documentation/content/en/articles/ipsec-must/_index.adoc:29
@@ -88,6 +92,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/ipsec-must/_index.adoc:50
+#, fuzzy
 msgid ""
 "Suppose you could measure the entropy of the data to- and from- your network "
 "interface.  Then you could see the difference between unencrypted data and "
@@ -95,6 +100,12 @@ msgid ""
 "mode\" was not encrypted---as the outermost IP header must be if the packet "
 "is to be routable."
 msgstr ""
+"Suponha que você possa medir a entropia dos dados destinados para a sua "
+"interface de rede e também dos dados originados dela. Então você pode ver a "
+"diferença entre dados não criptografados e dados criptografados. Isso seria "
+"verdade mesmo que alguns dos dados no <quote>modo criptografado</quote> não "
+"estivessem criptografados --- como deve o cabeçalho IP mais externo para que "
+"o pacote seja roteável."
 
 #. type: Title ===
 #: documentation/content/en/articles/ipsec-must/_index.adoc:52
@@ -210,6 +221,7 @@ msgstr "Embargo"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ipsec-must/_index.adoc:111
+#, fuzzy
 msgid ""
 "This experiment shows that IPsec _does_ seem to be distributing the payload "
 "data __uniformly__, as encryption should.  However, the experiment described "
@@ -218,6 +230,14 @@ msgid ""
 "or keys being visible to others, use of weak algorithms, kernel subversion, "
 "etc.  Study the source; know the code."
 msgstr ""
+"Esta experiência mostra que o IPsec <emphasis>parece</emphasis> estar "
+"distribuindo os dados de carga <emphasis>uniformemente</emphasis>, como a "
+"criptografia deveria. No entanto, o experimento descrito aqui <emphasis>não "
+"pode</emphasis> detectar muitas das falhas possíveis em um sistema (nenhum "
+"dos quais eu tenho qualquer evidência para). Estes incluem geração ou troca "
+"deficiente de chaves, dados ou chaves sendo visíveis para outros, uso de "
+"algoritmos fracos, subversão do kernel, etc. Estude a fonte; conheça o "
+"código."
 
 #. type: Title ==
 #: documentation/content/en/articles/ipsec-must/_index.adoc:113
@@ -227,6 +247,7 @@ msgstr "IPsec --- Definição"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ipsec-must/_index.adoc:119
+#, fuzzy
 msgid ""
 "Internet Protocol security extensions to IPv4; required for IPv6.  A "
 "protocol for negotiating encryption and authentication at the IP (host-to-"
@@ -234,6 +255,12 @@ msgid ""
 "login; PGP secures only a specified file or message.  IPsec encrypts "
 "everything between two hosts."
 msgstr ""
+"Extensões de segurança do protocolo Internet para o IPv4; obrigatório para o "
+"IPv6. Um protocolo para negociar criptografia e autenticação no nível IP ("
+"host para host). O SSL protege apenas um soquete de aplicativo; O "
+"<application>SSH</application> protege apenas um login;<application>PGP</"
+"application> protege apenas um arquivo ou mensagem especifico. O IPsec "
+"criptografa tudo entre dois hosts."
 
 #. type: Title ==
 #: documentation/content/en/articles/ipsec-must/_index.adoc:121
@@ -273,9 +300,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ipsec-must/_index.adoc:137
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "device\tbpf\n"
-msgstr ""
+msgstr "device\tbpf\n"
 
 #. type: Title ==
 #: documentation/content/en/articles/ipsec-must/_index.adoc:140
