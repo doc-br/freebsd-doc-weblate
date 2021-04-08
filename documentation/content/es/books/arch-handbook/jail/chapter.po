@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-02 12:02+0000\n"
+"PO-Revision-Date: 2021-04-09 00:54+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/booksarch-handbookjailchapter/es/>\n"
@@ -817,6 +817,7 @@ msgstr "Protocolos"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/jail/chapter.adoc:387
+#, fuzzy
 msgid ""
 "There are certain protocols which are very common, such as TCP, UDP, IP and "
 "ICMP. IP and ICMP are on the same level: the network layer 2. There are "
@@ -831,6 +832,21 @@ msgid ""
 "disallows any processes from jail to be able to specify the address that "
 "does not belong to the jail in which the calling process exists."
 msgstr ""
+"Hay ciertos protocolos que son muy comunes, como TCP, UDP, IP e ICMP. IP e "
+"ICMP están en el mismo nivel: la capa de red 2. Hay ciertas precauciones que "
+"se toman para evitar que un proceso encerrado vincule un protocolo a una "
+"determinada dirección solo si el <literal>nam</literal> el parámetro está "
+"configurado. <literal>nam</literal>Es un puntero a un <literal>sockaddr</"
+"literal> estructura, que describe la dirección a la que enlazar el servicio. "
+"Una definición más exacta es que <literal>sockaddr</literal> \"se puede "
+"utilizar como plantilla para hacer referencia a la etiqueta de "
+"identificación y la longitud de cada dirección \". En la función "
+"<literal>in_pcbbind_setup()</literal>, <literal>sin</literal> Es un puntero "
+"a un <literal>sockaddr_in</literal> estructura, que contiene el puerto, la "
+"dirección, la longitud y la familia de dominio del socket que se va a "
+"vincular. Básicamente, esto no permite ningún proceso de <application>jail</"
+"application>para poder especificar la dirección que no pertenece al "
+"<application>jail</application>en el que existe el proceso de llamada."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/jail/chapter.adoc:424
