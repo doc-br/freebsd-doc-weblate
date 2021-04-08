@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-02-24 00:32+0000\n"
-"Last-Translator: Danilo G. Baio <dbaio@FreeBSD.org>\n"
+"PO-Revision-Date: 2021-04-08 23:28+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/booksarch-handbooksoundchapter/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.5\n"
+"X-Generator: Weblate 4.5.2\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:1
@@ -440,7 +440,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:161
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "          static int\n"
 "          xxxchannel_setformat(kobj_t obj, void *data, u_int32_t format) <.>\n"
@@ -450,6 +450,13 @@ msgid ""
 "              return 0;\n"
 "           }\n"
 msgstr ""
+"          static int\n"
+"          xxxchannel_setspeed(kobj_t obj, void *data, u_int32_t speed)\n"
+"          {\n"
+"              struct xxx_chinfo *ch = data;\n"
+"               ...\n"
+"              return speed;\n"
+"           }\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:164
@@ -472,7 +479,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:178
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "          static int\n"
 "          xxxchannel_setspeed(kobj_t obj, void *data, u_int32_t speed)\n"
@@ -482,6 +489,13 @@ msgid ""
 "              return speed;\n"
 "           }\n"
 msgstr ""
+"          static int\n"
+"          xxxchannel_setspeed(kobj_t obj, void *data, u_int32_t speed)\n"
+"          {\n"
+"              struct xxx_chinfo *ch = data;\n"
+"               ...\n"
+"              return speed;\n"
+"           }\n"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:180
@@ -509,7 +523,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:195
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "          static int\n"
 "          xxxchannel_setblocksize(kobj_t obj, void *data, u_int32_t blocksize)\n"
@@ -519,6 +533,13 @@ msgid ""
 "              return blocksize; <.>\n"
 "           }\n"
 msgstr ""
+"          static int\n"
+"          xxxchannel_setspeed(kobj_t obj, void *data, u_int32_t speed)\n"
+"          {\n"
+"              struct xxx_chinfo *ch = data;\n"
+"               ...\n"
+"              return speed;\n"
+"           }\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:198
