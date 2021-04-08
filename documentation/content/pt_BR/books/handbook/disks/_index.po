@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:55-0300\n"
-"PO-Revision-Date: 2021-03-30 23:19+0000\n"
+"PO-Revision-Date: 2021-04-08 00:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookdisks_index/pt_BR/>\n"
@@ -224,16 +224,20 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:116
+#, fuzzy
 msgid ""
 "Finally, an entry is added to [.filename]#/etc/fstab# so the new disk will "
 "be mounted automatically at startup:"
 msgstr ""
+"Finalmente, uma entrada é adicionada ao arquivo <filename>/etc/fstab</"
+"filename> para que o novo disco seja montado automaticamente na "
+"inicialização:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:120
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "/dev/ada1p1\t/newdisk\tufs\trw\t2\t2\n"
-msgstr ""
+msgstr "/dev/ada1p1\t/newdisk\tufs\trw\t2\t2\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:123
@@ -373,6 +377,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:198
+#, fuzzy
 msgid ""
 "There is risk of data loss when modifying the partition table of a mounted "
 "file system. It is best to perform the following steps on an unmounted file "
@@ -380,6 +385,12 @@ msgid ""
 "absolutely necessary, a mounted file system can be resized after disabling "
 "GEOM safety features:"
 msgstr ""
+"Existe o risco de perda de dados ao modificar a tabela de partições de um "
+"sistema de arquivos montado. É melhor executar as etapas a seguir em um "
+"sistema de arquivos desmontado durante a execução de um dispositivo <acronym"
+">CD-ROM</acronym> ou <acronym>USB</acronym> live. No entanto, se for "
+"absolutamente necessário, um sistema de arquivos montado pode ser "
+"redimensionado depois de desativar os recursos de segurança do GEOM:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:202
@@ -389,6 +400,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:207
+#, fuzzy
 msgid ""
 "Resize the partition, leaving room to recreate a swap partition of the "
 "desired size. The partition to resize is specified with `-i`, and the new "
@@ -396,6 +408,12 @@ msgid ""
 "with `-a`. This only modifies the size of the partition. The file system in "
 "the partition will be expanded in a separate step."
 msgstr ""
+"Redimensione a partição, deixando espaço para recriar uma partição swap do "
+"tamanho desejado. A partição a ser redimensionada é especificada com "
+"<option>-i</option> e o novo tamanho desejado com <option>-s</option>. "
+"Opcionalmente, o alinhamento da partição é controlado com <option>-a</"
+"option>. Isso só modifica o tamanho da partição. O sistema de arquivos na "
+"partição será expandido em uma etapa separada."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:217
@@ -412,10 +430,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:220
+#, fuzzy
 msgid ""
 "Recreate the swap partition and activate it. If no size is specified with `-"
 "s`, all remaining space is used:"
 msgstr ""
+"Recrie a partição swap e ative-a. Se nenhum tamanho for especificado com "
+"<option>-s</option>, todo o espaço restante será usado:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:231
@@ -504,7 +525,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:279
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "device scbus\t# SCSI bus (required for ATA/SCSI)\n"
 "device da\t# Direct Access (disks)\n"
@@ -517,6 +538,16 @@ msgid ""
 "device umass\t# Disks/Mass storage - Requires scbus and da\n"
 "device cd\t# needed for CD and DVD burners\n"
 msgstr ""
+"device scbus\t# SCSI bus (required for ATA/SCSI)\n"
+"device da\t# Direct Access (disks)\n"
+"device pass\t# Passthrough device (direct ATA/SCSI access)\n"
+"device uhci\t# provides USB 1.x support\n"
+"device ohci\t# provides USB 1.x support\n"
+"device ehci\t# provides USB 2.0 support\n"
+"device xhci\t# provides USB 3.0 support\n"
+"device usb\t# USB Bus (required)\n"
+"device umass\t# Disks/Mass storage - Requires scbus and da\n"
+"device cd\t# needed for CD and DVD burners\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:282
@@ -551,7 +582,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:300
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "umass0: <STECH Simple Drive, class 0/0, rev 2.00/1.04, addr 3> on usbus0\n"
 "umass0:  SCSI over Bulk-Only; quirks = 0x0100\n"
@@ -563,13 +594,26 @@ msgid ""
 "da0: 152627MB (312581808 512 byte sectors: 255H 63S/T 19457C)\n"
 "da0: quirks=0x2<NO_6_BYTE>\n"
 msgstr ""
+"umass0: &lt;STECH Simple Drive, class 0/0, rev 2.00/1.04, addr 3&gt; on "
+"usbus0\n"
+"umass0:  SCSI over Bulk-Only; quirks = 0x0100\n"
+"umass0:4:0:-1: Attached to scbus4\n"
+"da0 at umass-sim0 bus 0 scbus4 target 0 lun 0\n"
+"da0: &lt;STECH Simple Drive 1.04&gt; Fixed Direct Access SCSI-4 device\n"
+"da0: Serial Number WD-WXE508CAN263\n"
+"da0: 40.000MB/s transfers\n"
+"da0: 152627MB (312581808 512 byte sectors: 255H 63S/T 19457C)\n"
+"da0: quirks=0x2&lt;NO_6_BYTE&gt;\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:303
+#, fuzzy
 msgid ""
 "The brand, device node ([.filename]#da0#), speed, and size will differ "
 "according to the device."
 msgstr ""
+"A marca, o nó de dispositivo (<filename>da0</filename>), a velocidade e o "
+"tamanho serão diferentes de acordo com o dispositivo."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:305
@@ -613,12 +657,17 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:326
+#, fuzzy
 msgid ""
 "Allowing untrusted users to mount arbitrary media, by enabling `vfs."
 "usermount` as described below, should not be considered safe from a security "
 "point of view. Most file systems were not built to safeguard against "
 "malicious devices."
 msgstr ""
+"Permitir que usuários não confiáveis montem mídia arbitrária, ativando "
+"<varname>vfs.usermount</varname> como descrito abaixo, não deve ser "
+"considerado seguro do ponto de vista da segurança. A maioria dos sistemas de "
+"arquivos não foi criada para proteger contra dispositivos maliciosos."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:329
@@ -631,11 +680,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:334
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "[localrules=5]\n"
 "add path 'da*' mode 0660 group operator\n"
 msgstr ""
+"[localrules=5]\n"
+"add path 'da*' mode 0660 group operator\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:339
@@ -666,22 +717,26 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:353
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "devfs_system_ruleset=\"localrules\"\n"
-msgstr ""
+msgstr "devfs_system_ruleset=\"localrules\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:356
+#, fuzzy
 msgid ""
 "Then, instruct the system to allow regular users to mount file systems by "
 "adding the following line to [.filename]#/etc/sysctl.conf#:"
 msgstr ""
+"Em seguida, instrua o sistema para permitir que usuários comuns montem "
+"sistemas de arquivos incluindo a seguinte linha no arquivo <filename>/etc/"
+"sysctl.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:360
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "vfs.usermount=1\n"
-msgstr ""
+msgstr "vfs.usermount=1\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:363
@@ -753,13 +808,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:400
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "umass0: at uhub3, port 2, addr 3 (disconnected)\n"
 "da0 at umass-sim0 bus 0 scbus4 target 0 lun 0\n"
 "da0: <STECH Simple Drive 1.04> s/n WD-WXE508CAN263          detached\n"
 "(da0:umass-sim0:0:0:0): Periph destroyed\n"
 msgstr ""
+"umass0: at uhub3, port 2, addr 3 (disconnected)\n"
+"da0 at umass-sim0 bus 0 scbus4 target 0 lun 0\n"
+"da0: &lt;STECH Simple Drive 1.04&gt; s/n WD-WXE508CAN263          detached\n"
+"(da0:umass-sim0:0:0:0): Periph destroyed\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/disks/_index.adoc:402
@@ -776,9 +835,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:409
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "/media\t\t-media\t\t-nosuid\n"
-msgstr ""
+msgstr "/media\t\t-media\t\t-nosuid\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:412
@@ -787,7 +846,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:420
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "notify 100 {\n"
 "\tmatch \"system\" \"GEOM\";\n"
@@ -795,6 +854,11 @@ msgid ""
 "\taction \"/usr/sbin/automount -c\";\n"
 "};\n"
 msgstr ""
+"notify 100 {\n"
+"\tmatch \"system\" \"GEOM\";\n"
+"\tmatch \"subsystem\" \"DEV\";\n"
+"\taction \"/usr/sbin/automount -c\";\n"
+"};\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:423
@@ -820,9 +884,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:435
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "autofs_enable=\"YES\"\n"
-msgstr ""
+msgstr "autofs_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:438
@@ -846,11 +910,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:450
+#, fuzzy
 msgid ""
 "Each file system that can be automatically mounted appears as a directory in "
 "[.filename]#/media/#. The directory is named after the file system label. If "
 "the label is missing, the directory is named after the device node."
 msgstr ""
+"Cada sistema de arquivos que pode ser montado automaticamente aparece como "
+"um diretório em <filename>/media/</filename>. O diretório é nomeado após o "
+"rótulo do sistema de arquivos. Se o rótulo estiver ausente, o diretório será "
+"nomeado após o nó do dispositivo."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:452
@@ -884,6 +953,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:464
+#, fuzzy
 msgid ""
 "Compact Disc (CD) media provide a number of features that differentiate them "
 "from conventional disks. They are designed so that they can be read "
@@ -892,6 +962,13 @@ msgid ""
 "and not a physical property of the disk. The ISO 9660 file system was "
 "designed to deal with these differences."
 msgstr ""
+"A mídia em disco compacto (<acronym>CD</acronym>) fornece vários recursos "
+"que os diferenciam dos discos convencionais. Eles são projetados para que "
+"possam ser lidos continuamente sem atrasos para mover a cabeça entre as "
+"trilhas. Embora a mídia <acronym>CD</acronym> tenha faixas, elas se referem "
+"a uma seção de dados a ser lida continuamente e não a uma propriedade física "
+"do disco. O sistema de arquivos <acronym>ISO</acronym> 9660 foi projetado "
+"para lidar com essas diferenças."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:466
@@ -924,13 +1001,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:480
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "device scbus\t# SCSI bus (required for ATA/SCSI)\n"
 "device da\t# Direct Access (disks)\n"
 "device pass\t# Passthrough device (direct ATA/SCSI access)\n"
 "device cd\t# needed for CD and DVD burners\n"
 msgstr ""
+"device scbus\t# SCSI bus (required for ATA/SCSI)\n"
+"device da\t# Direct Access (disks)\n"
+"device pass\t# Passthrough device (direct ATA/SCSI access)\n"
+"device cd\t# needed for CD and DVD burners\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:483
@@ -939,7 +1020,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:496
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "device scbus\t# SCSI bus (required for ATA/SCSI)\n"
 "device da\t# Direct Access (disks)\n"
@@ -952,6 +1033,16 @@ msgid ""
 "device usb\t# USB Bus (required)\n"
 "device umass\t# Disks/Mass storage - Requires scbus and da\n"
 msgstr ""
+"device scbus\t# SCSI bus (required for ATA/SCSI)\n"
+"device da\t# Direct Access (disks)\n"
+"device pass\t# Passthrough device (direct ATA/SCSI access)\n"
+"device cd\t# needed for CD and DVD burners\n"
+"device uhci\t# provides USB 1.x support\n"
+"device ohci\t# provides USB 1.x support\n"
+"device ehci\t# provides USB 2.0 support\n"
+"device xhci\t# provides USB 3.0 support\n"
+"device usb\t# USB Bus (required)\n"
+"device umass\t# Disks/Mass storage - Requires scbus and da\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:499
@@ -960,13 +1051,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:506
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "device ata\t# Legacy ATA/SATA controllers\n"
 "device scbus\t# SCSI bus (required for ATA/SCSI)\n"
 "device pass\t# Passthrough device (direct ATA/SCSI access)\n"
 "device cd\t# needed for CD and DVD burners\n"
 msgstr ""
+"device ata\t# Legacy ATA/SATA controllers\n"
+"device scbus\t# SCSI bus (required for ATA/SCSI)\n"
+"device pass\t# Passthrough device (direct ATA/SCSI access)\n"
+"device cd\t# needed for CD and DVD burners\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:511
@@ -977,22 +1072,26 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:515
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "device atapicam\n"
-msgstr ""
+msgstr "device atapicam\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:518
+#, fuzzy
 msgid ""
 "Alternately, this driver can be loaded at boot time by adding the following "
 "line to [.filename]#/boot/loader.conf#:"
 msgstr ""
+"Como alternativa, esse driver pode ser carregado no momento da inicialização "
+"adicionando a seguinte linha ao arquivo <filename>/boot/loader."
+"conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:522
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "atapicam_load=\"YES\"\n"
-msgstr ""
+msgstr "atapicam_load=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:525
@@ -1059,7 +1158,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:576
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# cdrecord -scanbus\n"
 "ProDVD-ProBD-Clone 3.00 (amd64-unknown-freebsd10.0) Copyright (C) 1995-2010 Jörg Schilling\n"
@@ -1083,6 +1182,28 @@ msgid ""
 "        1,6,0   106) 'ARTEC   ' 'AM12S           ' '1.06' Scanner\n"
 "        1,7,0   107) *\n"
 msgstr ""
+"<prompt>#</prompt> <userinput>cdrecord -scanbus</userinput>\n"
+"ProDVD-ProBD-Clone 3.00 (amd64-unknown-freebsd10.0) Copyright (C) 1995-2010 "
+"Jörg Schilling\n"
+"Using libscg version 'schily-0.9'\n"
+"scsibus0:\n"
+"        0,0,0     0) 'SEAGATE ' 'ST39236LW       ' '0004' Disk\n"
+"        0,1,0     1) 'SEAGATE ' 'ST39173W        ' '5958' Disk\n"
+"        0,2,0     2) *\n"
+"        0,3,0     3) 'iomega  ' 'jaz 1GB         ' 'J.86' Removable Disk\n"
+"        0,4,0     4) 'NEC     ' 'CD-ROM DRIVE:466' '1.26' Removable CD-ROM\n"
+"        0,5,0     5) *\n"
+"        0,6,0     6) *\n"
+"        0,7,0     7) *\n"
+"scsibus1:\n"
+"        1,0,0   100) *\n"
+"        1,1,0   101) *\n"
+"        1,2,0   102) *\n"
+"        1,3,0   103) *\n"
+"        1,4,0   104) *\n"
+"        1,5,0   105) 'YAMAHA  ' 'CRW4260         ' '1.0q' Removable CD-ROM\n"
+"        1,6,0   106) 'ARTEC   ' 'AM12S           ' '1.06' Scanner\n"
+"        1,7,0   107) *\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:579
@@ -1285,9 +1406,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:658
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "cd9660_iconv_load=\"YES\"\n"
-msgstr ""
+msgstr "cd9660_iconv_load=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:661
@@ -1318,9 +1439,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:670
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "options SCSI_DELAY=15000\n"
-msgstr ""
+msgstr "options SCSI_DELAY=15000\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:673
@@ -1339,12 +1460,18 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:679
+#, fuzzy
 msgid ""
 "This type of disk can not be mounted as a normal data CD. In order to "
 "retrieve the data burned to such a CD, the data must be read from the raw "
 "device node. For example, this command will extract a compressed tar file "
 "located on the second CD device into the current working directory:"
 msgstr ""
+"Este tipo de disco não pode ser montado como um <acronym>CD</acronym> de "
+"dados normal. Para recuperar os dados gravados em um <acronym>CD</acronym>, "
+"os dados devem ser lidos no nó do dispositivo bruto. Por exemplo, este "
+"comando irá extrair um arquivo tar compactado localizado no segundo "
+"dispositivo de <acronym>CD</acronym> para o diretório de trabalho atual:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:683
@@ -1400,12 +1527,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:707
+#, fuzzy
 msgid ""
 "  A device name does not need to be specified if there is only one CD device "
 "on the system. Refer to the `cdda2wav` manual page for instructions on how "
 "to specify a device and to learn more about the other options available for "
 "this command."
 msgstr ""
+"  Um nome de dispositivo não precisa ser especificado se houver apenas um "
+"dispositivo de <acronym>CD</acronym> no sistema. Consulte a página de manual "
+"<command>cdda2wav</command> para obter instruções sobre como especificar um "
+"dispositivo e aprender mais sobre as outras opções disponíveis para este "
+"comando."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:708
@@ -1489,6 +1622,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:736
+#, fuzzy
 msgid ""
 "A distinction must be made between the physical media and the application. "
 "For example, a DVD-Video is a specific file layout that can be written on "
@@ -1496,6 +1630,12 @@ msgid ""
 "choosing the type of media, ensure that both the burner and the DVD-Video "
 "player are compatible with the media under consideration."
 msgstr ""
+"Uma distinção deve ser feita entre a mídia física e a aplicação. Por "
+"exemplo, um DVD-Vídeo é um layout de arquivo específico que pode ser gravado "
+"em qualquer mídia física <acronym>DVD</acronym> gravável, como DVD-R, DVD+R "
+"ou <acronym>DVD-RW</acronym>. Antes de escolher o tipo de mídia, verifique "
+"se o gravador e o reprodutor de DVD-Video são compatíveis com a mídia em "
+"questão."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/disks/_index.adoc:738
@@ -1529,9 +1669,9 @@ msgstr ""
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:749
 #: documentation/content/en/books/handbook/disks/_index.adoc:948
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "hw.ata.atapi_dma=\"1\"\n"
-msgstr ""
+msgstr "hw.ata.atapi_dma=\"1\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:752
@@ -1565,10 +1705,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:763
+#, fuzzy
 msgid ""
 "To burn to a DVD+R or a DVD-R the data in [.filename]#/path/to/data#, use "
 "the following command:"
 msgstr ""
+"Para gravar em um DVD+R ou DVD-R os dados em <filename>/path/to/data</"
+"filename>, use o seguinte comando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:767
@@ -1671,12 +1814,18 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:808
+#, fuzzy
 msgid ""
 "A DVD-Video is a specific file layout based on the ISO 9660 and micro-UDF (M-"
 "UDF) specifications. Since DVD-Video presents a specific data structure "
 "hierarchy, a particular program such as package:multimedia/dvdauthor[] is "
 "needed to author the DVD."
 msgstr ""
+"Um DVD-Video é um layout de arquivo específico baseado nas especificações "
+"ISO 9660 e micro-UDF (M-UDF). Como o DVD-Video apresenta uma hierarquia de "
+"estrutura de dados específica, um programa específico como <package>"
+"multimedia/dvdauthor</package> é necessário para criar o "
+"<acronym>DVD</acronym>."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:810
@@ -1733,11 +1882,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:830
+#, fuzzy
 msgid ""
 "To burn a totally new file system and not just append some data onto a DVD"
 "+RW, the media does not need to be blanked first. Instead, write over the "
 "previous recording like this:"
 msgstr ""
+"Para gravar um sistema de arquivos totalmente novo e não apenas acrescentar "
+"alguns dados em um <acronym>DVD+RW</acronym>, a mídia não precisa ser "
+"apagada primeiro. Em vez disso, escreva sobre a gravação anterior assim:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:834
@@ -1920,12 +2073,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:923
+#, fuzzy
 msgid ""
 "Using this command with a DVD+RW or a DVD-RW in restricted overwrite mode "
 "will append data while merging the new session to the existing one. The "
 "result will be a single-session disc. Use this method to add data after an "
 "initial write on these types of media."
 msgstr ""
+"Usando este comando com um <acronym>DVD+RW</acronym> ou um <acronym>DVD-RW</"
+"acronym> no modo de sobrescrita restrita adicionará dados ao mesclar a nova "
+"sessão à existente. O resultado será um disco de sessão única. Use este "
+"método para adicionar dados após uma gravação inicial nesses tipos de mídia."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:927
@@ -1984,11 +2142,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:951
+#, fuzzy
 msgid ""
 "A DVD-RAM can be seen as a removable hard drive. Like any other hard drive, "
 "the DVD-RAM must be formatted before it can be used. In this example, the "
 "whole disk space will be formatted with a standard UFS2 file system:"
 msgstr ""
+"Um <acronym>DVD-RAM</acronym> pode ser visto como um disco rígido removível. "
+"Como qualquer outro disco rígido, o <acronym>DVD-RAM</acronym> deve ser "
+"formatado antes de poder ser usado. Neste exemplo, todo o espaço em disco "
+"será formatado com um sistema de arquivos UFS2 padrão:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:957
@@ -2069,11 +2232,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:989
+#, fuzzy
 msgid ""
 "After low-level formatting the disk, create a disk label as it is needed by "
 "the system to determine the size of the disk and its geometry. The supported "
 "geometry values are listed in [.filename]#/etc/disktab#."
 msgstr ""
+"Após a formatação de baixo nível do disco, crie um rótulo de disco conforme "
+"requerido pelo sistema para determinar o tamanho do disco e sua geometria. "
+"Os valores de geometria suportados estão listados no arquivo <filename>/etc/"
+"disktab</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:991
@@ -2311,10 +2479,13 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1105
+#, fuzzy
 msgid ""
 "Copies of whole file systems or disks which are synchronized with another "
 "system on the network using a scheduled package:net/rsync[]."
 msgstr ""
+"Cópias de sistemas de arquivos inteiros ou discos que são sincronizados com "
+"outro sistema na rede usando um <package>net/rsync</package> agendado."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1106
@@ -2471,11 +2642,16 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1156
+#, fuzzy
 msgid ""
 "This example creates a compressed backup of the current directory and saves "
 "it to [.filename]#/tmp/mybackup.tgz#. When creating a backup file, make sure "
 "that the backup is not saved to the same directory that is being backed up."
 msgstr ""
+"Este exemplo cria um backup compactado do diretório atual e o salva no "
+"arquivo <filename>/tmp/mybackup.tgz</filename>. Ao criar um arquivo de "
+"backup, verifique se o backup não está salvo no mesmo diretório em que está "
+"sendo feito backup."
 
 #. type: Block title
 #: documentation/content/en/books/handbook/disks/_index.adoc:1157
@@ -2491,6 +2667,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1167
+#, fuzzy
 msgid ""
 "To restore the entire backup, `cd` into the directory to restore into and "
 "specify the name of the backup. Note that this will overwrite any newer "
@@ -2498,6 +2675,11 @@ msgid ""
 "temporary directory or specify the name of the file within the backup to "
 "restore."
 msgstr ""
+"Para restaurar o backup inteiro, <command>cd</command> no diretório para "
+"restaurar e especificar o nome do backup. Observe que isso sobrescreverá "
+"qualquer versão mais nova de arquivos no diretório de restauração. Em caso "
+"de dúvida, restaure para um diretório temporário ou especifique o nome do "
+"arquivo dentro do backup a ser restaurado."
 
 #. type: Block title
 #: documentation/content/en/books/handbook/disks/_index.adoc:1168
@@ -2605,12 +2787,17 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1213
+#, fuzzy
 msgid ""
 "In FreeBSD, `mt` is used to control operations of the tape drive, such as "
 "seeking through files on a tape or writing tape control marks to the tape. "
 "For example, the first three files on a tape can be preserved by skipping "
 "past them before writing a new file:"
 msgstr ""
+"No FreeBSD, o <command>mt</command> é usado para controlar as operações da "
+"unidade de fita, como procurar arquivos em uma fita ou gravar marcas de "
+"controle na fita. Por exemplo, os três primeiros arquivos em uma fita podem "
+"ser preservados, ignorando-os antes de gravar um novo arquivo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1217
@@ -2738,6 +2925,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1267
+#, fuzzy
 msgid ""
 "Store this printout and a copy of the installation media in a secure "
 "location. Should an emergency restore be needed, boot into the installation "
@@ -2745,6 +2933,12 @@ msgid ""
 "used to view the current state of the system, and if needed, to reformat "
 "disks and restore data from backups."
 msgstr ""
+"Armazene esta saída e uma cópia da mídia de instalação em um local seguro. "
+"Se uma restauração de emergência for necessária, inicialize na mídia de "
+"instalação e selecione <literal>Live CD</literal> para acessar um shell de "
+"recuperação. Esse modo de recuperação pode ser usado para exibir o estado "
+"atual do sistema e, se necessário, reformatar discos e restaurar dados de "
+"backups."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1271
@@ -2806,9 +3000,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1287
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "device md\n"
-msgstr ""
+msgstr "device md\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/disks/_index.adoc:1290
@@ -2847,12 +3041,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1303
+#, fuzzy
 msgid ""
 "When a memory disk is no longer in use, its resources should be released "
 "back to the system. First, unmount the file system, then use `mdconfig` to "
 "detach the disk from the system and release its resources. To continue this "
 "example:"
 msgstr ""
+"Quando um disco de memória não está mais em uso, seus recursos devem ser "
+"liberados de volta ao sistema. Primeiro, desmonte o sistema de arquivos e "
+"use o <command>mdconfig</command> para desanexar o disco do sistema e "
+"liberar seus recursos. Para continuar este exemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1308
@@ -2877,12 +3076,18 @@ msgstr "Criando um Disco Virtual Baseado em Arquivo ou Memória"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1316
+#, fuzzy
 msgid ""
 "FreeBSD also supports memory disks where the storage to use is allocated "
 "from either a hard disk or an area of memory. The first method is commonly "
 "referred to as a file-backed file system and the second method as a memory-"
 "backed file system. Both types can be created using `mdconfig`."
 msgstr ""
+"O FreeBSD também suporta discos virtuais onde o armazenamento a ser "
+"utilizado é alocado a partir de um disco rígido ou de uma área de memória. O "
+"primeiro método é comumente referido como um disco virtual baseado em "
+"arquivo e o segundo como um disco virtual baseado em memória. Ambos os tipos "
+"podem ser criados usando o <command>mdconfig</command>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1318
@@ -2913,10 +3118,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1335
+#, fuzzy
 msgid ""
 "To create a new file-backed memory disk, first allocate an area of disk to "
 "use. This example creates an empty 5MB file named [.filename]#newimage#:"
 msgstr ""
+"Para criar um novo disco virtual baseado em arquivo, primeiro aloque a área "
+"que será usada para o disco. Esse exemplo cria um arquivo vázio de 5MB "
+"chamado <filename>newimage</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1341
@@ -2971,10 +3180,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1368
+#, fuzzy
 msgid ""
 "To instead create a new memory-based memory disk with `mdmfs`, use this one "
 "command:"
 msgstr ""
+"Para criar um novo disco virtual baseado em memória com o <command>mdmfs</"
+"command>, use este comando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1372
@@ -3108,12 +3320,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1421
+#, fuzzy
 msgid ""
 "The frozen [.filename]#/var# is now available through [.filename]#/mnt#. "
 "Everything will initially be in the same state it was during the snapshot "
 "creation time. The only exception is that any earlier snapshots will appear "
 "as zero length files. To unmount the snapshot, use:"
 msgstr ""
+"O <filename>/var</filename> congelado agora está disponível através de "
+"<filename>/mnt</filename>. Tudo estará inicialmente no mesmo estado que "
+"estava quando o snapshot foi criado. A única exceção é que os snapshots "
+"anteriores aparecerão como arquivos com comprimento zero. Para desmontar o "
+"snapshot, use:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1426
@@ -3189,9 +3407,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1452
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "options QUOTA\n"
-msgstr ""
+msgstr "options QUOTA\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1455
@@ -3200,9 +3418,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1459
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "quota_enable=\"YES\"\n"
-msgstr ""
+msgstr "quota_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1462
@@ -3216,9 +3434,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1466
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "check_quotas=\"NO\"\n"
-msgstr ""
+msgstr "check_quotas=\"NO\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1469
@@ -3231,22 +3449,25 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1473
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "/dev/da1s2g   /home    ufs rw,userquota 1 2\n"
-msgstr ""
+msgstr "/dev/da1s2g   /home    ufs rw,userquota 1 2\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1476
+#, fuzzy
 msgid ""
 "To enable group quotas, use `groupquota` instead. To enable both user and "
 "group quotas, separate the options with a comma:"
 msgstr ""
+"Para ativar cotas de grupo, use <option>groupquota</option>. Para ativar "
+"cotas de usuários e grupos, separe as opções com uma vírgula:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1480
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "/dev/da1s2g    /home    ufs rw,userquota,groupquota 1 2\n"
-msgstr ""
+msgstr "/dev/da1s2g    /home    ufs rw,userquota,groupquota 1 2\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1483
@@ -3384,9 +3605,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1524
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "/usr: kbytes in use: 65, limits (soft = 500, hard = 600)\n"
-msgstr ""
+msgstr "/usr: kbytes in use: 65, limits (soft = 500, hard = 600)\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1527
@@ -3442,13 +3663,18 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1549
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Disk quotas for user test (uid 1002):\n"
 "     Filesystem  usage    quota   limit   grace   files   quota   limit   grace\n"
 "           /usr      65*     50      75   5days       7      50      60\n"
 "       /usr/var       0      50      75               0      50      60\n"
 msgstr ""
+"Disk quotas for user test (uid 1002):\n"
+"     Filesystem  usage    quota   limit   grace   files   quota   limit   "
+"grace\n"
+"           /usr      65*     50      75   5days       7      50      60\n"
+"       /usr/var       0      50      75               0      50      60\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1552
@@ -3481,9 +3707,10 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1562
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "rquotad/1      dgram rpc/udp wait root /usr/libexec/rpc.rquotad rpc.rquotad\n"
 msgstr ""
+"rquotad/1      dgram rpc/udp wait root /usr/libexec/rpc.rquotad rpc.rquotad\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1565
@@ -3516,6 +3743,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1577
+#, fuzzy
 msgid ""
 "Regardless of how an attacker may have come into possession of a hard drive "
 "or powered-down computer, the GEOM-based cryptographic subsystems built into "
@@ -3525,14 +3753,27 @@ msgid ""
 "`geli` utilities can be used to transparently encrypt entire file systems. "
 "No cleartext ever touches the hard drive's platter."
 msgstr ""
+"Independentemente de como um invasor pode ter acesso a um disco rígido ou um "
+"computador desligado, os subsistemas criptográficos baseados em "
+"<acronym>GEOM</acronym> incorporados ao FreeBSD são capazes de proteger os "
+"dados nos sistemas de arquivos do computador contra atacantes super "
+"motivados com recursos significativos. Ao contrário dos métodos de "
+"criptografia que criptografam arquivos individuais, os utilitários "
+"incorporados <command>gbde</command> e <command>geli</command> podem ser "
+"usados para criptografar de forma transparente sistemas de arquivos "
+"inteiros. Nenhum dado aberto sequer toca na bandeja do disco rígido."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1579
+#, fuzzy
 msgid ""
 "This chapter demonstrates how to create an encrypted file system on FreeBSD. "
 "It first demonstrates the process using `gbde` and then demonstrates the "
 "same example using `geli`."
 msgstr ""
+"Este capítulo demonstra como criar um sistema de arquivos criptografado no "
+"FreeBSD. Primeiro ele demonstra o processo usando o <command>gbde</command> "
+"e depois demonstra o mesmo exemplo usando <command>geli</command>."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/disks/_index.adoc:1580
@@ -3590,11 +3831,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1598
+#, fuzzy
 msgid ""
 "The following example demonstrates adding a new hard drive to a system that "
 "will hold a single encrypted partition that will be mounted as [.filename]#/"
 "private#."
 msgstr ""
+"O exemplo a seguir demonstra a adição de um novo disco rígido a um sistema "
+"que conterá uma única partição criptografada que será montada como "
+"<filename>/private</filename>."
 
 #. type: Block title
 #: documentation/content/en/books/handbook/disks/_index.adoc:1600
@@ -3639,6 +3884,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1621
+#, fuzzy
 msgid ""
 "  The gbde lock file contains information that gbde requires to access "
 "encrypted partitions. Without access to the lock file, gbde will not be able "
@@ -3646,6 +3892,12 @@ msgid ""
 "manual intervention which is not supported by the software. Each encrypted "
 "partition uses a separate lock file."
 msgstr ""
+"  O arquivo de lock <application>gbde</application> contém informações que o "
+"<application>gbde</application> requer para acessar partições "
+"criptografadas. Sem acesso ao arquivo de lock, o <application>gbde</"
+"application> não poderá descriptografar os dados contidos na partição "
+"criptografada sem intervenção manual significativa que não seja suportada "
+"pelo software. Cada partição criptografada usa um arquivo de lock separado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1622
@@ -3718,11 +3970,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1657
+#, fuzzy
 msgid ""
 "  This command will prompt to input the passphrase that was selected during "
 "the initialization of the encrypted partition. The new encrypted device will "
 "appear in [.filename]#/dev# as [.filename]#/dev/device_name.bde#:"
 msgstr ""
+"  Este comando solicitará a entrada da senha que foi selecionada durante a "
+"inicialização da partição criptografada. O novo dispositivo criptografado "
+"aparecerá em <filename>/dev</filename> como <filename>/dev/device_name."
+"bde</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1664
@@ -3761,8 +4018,10 @@ msgstr "Montando a Partição Criptografada"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1678
+#, fuzzy
 msgid "  Create a mount point and mount the encrypted file system:"
 msgstr ""
+"  Crie um ponto de montagem e monte o sistema de arquivos criptografados:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1683
@@ -3779,9 +4038,12 @@ msgstr "Verificar se o sistema de arquivos criptografados está disponível"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1688
+#, fuzzy
 msgid ""
 "  The encrypted file system should now be visible and available for use:"
 msgstr ""
+"  O sistema de arquivos criptografados agora deve estar visível e disponível "
+"para uso:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1699
@@ -3799,12 +4061,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1702
+#, fuzzy
 msgid ""
 "After each boot, any encrypted file systems must be manually re-attached to "
 "the kernel, checked for errors, and mounted, before the file systems can be "
 "used. To configure these steps, add the following lines to [.filename]#/etc/"
 "rc.conf#:"
 msgstr ""
+"Após cada inicialização, todos os sistemas de arquivos criptografados devem "
+"ser reconectados manualmente ao kernel, verificados quanto a erros e "
+"montados antes que os sistemas de arquivos possam ser usados. Para "
+"configurar estas etapas, adicione as seguintes linhas ao arquivo <filename>/"
+"etc/rc.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1708
@@ -3913,6 +4181,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1738
+#, fuzzy
 msgid ""
 "The following example describes how to generate a key file which will be "
 "used as part of the master key for the encrypted provider mounted under [."
@@ -3922,6 +4191,14 @@ msgid ""
 "how to attach to the `geli` provider, create a file system on it, mount it, "
 "work with it, and finally, how to detach it."
 msgstr ""
+"O exemplo a seguir descreve como gerar um arquivo de chave que será usado "
+"como parte da chave mestra para o provedor criptografado montado em "
+"<filename>/private</filename>. O arquivo chave fornecerá alguns dados "
+"aleatórios usados para criptografar a chave mestra. A chave mestra também "
+"será protegida por uma frase secreta. O tamanho do setor do provedor será de "
+"4kB. O exemplo descreve como se conectar ao provedor <command>geli</"
+"command>, criar um sistema de arquivos, montá-lo, trabalhar com ele e, "
+"finalmente, como desanexá-lo."
 
 #. type: Block title
 #: documentation/content/en/books/handbook/disks/_index.adoc:1740
@@ -3944,14 +4221,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1748
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "geom_eli_load=\"YES\"\n"
-msgstr ""
+msgstr "geom_eli_load=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1751
+#, fuzzy
 msgid "  To load the kernel module now:"
-msgstr ""
+msgstr "  Para carregar o módulo do kernel agora:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1755
@@ -3961,18 +4239,23 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1758
+#, fuzzy
 msgid ""
 "  For a custom kernel, ensure the kernel configuration file contains these "
 "lines:"
 msgstr ""
+"  Para um kernel customizado, assegure-se de que o arquivo de configuração "
+"do kernel contenha estas linhas:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1763
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "options GEOM_ELI\n"
 "device crypto\n"
 msgstr ""
+"options GEOM_ELI\n"
+"device crypto\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1766
@@ -3981,6 +4264,7 @@ msgstr "Gerando a Chave Mestra"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1768
+#, fuzzy
 msgid ""
 "  The following commands generate a master key that all data will be "
 "encrypted with. This key can never be changed. Rather than using it "
@@ -3991,6 +4275,14 @@ msgid ""
 "size of the provider ([.filename]#/dev/da2.eli#) as 4kB, for better "
 "performance:"
 msgstr ""
+"  Os comandos a seguir geram uma chave mestra com a qual todos os dados "
+"serão criptografados. Esta chave nunca pode ser alterada. Em vez de usá-lo "
+"diretamente, ele é criptografado com uma ou mais chaves de usuário. As "
+"chaves do usuário são compostas por uma combinação opcional de bytes "
+"aleatórios de um arquivo, <filename>/root/da2.key</filename> e/ou uma senha. "
+"Neste caso, a fonte de dados do arquivo de chave é <filename>/dev/random</"
+"filename>. Este comando também configura o tamanho do setor do provedor "
+"(<filename>/dev/da2.eli</filename>) como 4kB, para melhor desempenho:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1775
@@ -4004,10 +4296,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1778
+#, fuzzy
 msgid ""
 "  It is not mandatory to use both a passphrase and a key file as either "
 "method of securing the master key can be used in isolation."
 msgstr ""
+"  Não é obrigatório o uso de uma frase secreta e de um arquivo de chave, "
+"pois cada método de proteger a chave mestra pode ser usado isoladamente."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1780
@@ -4029,10 +4324,13 @@ msgstr "Anexando o Provedor com a Chave Gerada"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1789
+#, fuzzy
 msgid ""
 "  To attach the provider, specify the key file, the name of the disk, and "
 "the passphrase:"
 msgstr ""
+"  Para anexar o provedor, especifique o arquivo de chave, o nome do disco e "
+"a frase secreta:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1794
@@ -4078,8 +4376,10 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1816
+#, fuzzy
 msgid "  The encrypted file system should now be available for use:"
 msgstr ""
+"  O sistema de arquivos criptografado agora deve estar disponível para uso:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1827
@@ -4097,12 +4397,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1830
+#, fuzzy
 msgid ""
 "Once the work on the encrypted partition is done, and the [.filename]#/"
 "private# partition is no longer needed, it is prudent to put the device into "
 "cold storage by unmounting and detaching the `geli` encrypted partition from "
 "the kernel:"
 msgstr ""
+"Uma vez que o trabalho na partição criptografada é feito, e a partição "
+"<filename>/private</filename> não é mais necessária, é prudente colocar o "
+"dispositivo no armazenamento frio desmontando e desanexando a partição "
+"<command>geli</command> criptografada do kernel:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1835
@@ -4209,11 +4514,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1869
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# Device\t\tMountpoint\tFStype\tOptions\t\tDump\tPass#\n"
 "/dev/ada0s1b.bde\tnone\t\tswap\tsw\t\t0\t0\n"
 msgstr ""
+"# Device\t\tMountpoint\tFStype\tOptions\t\tDump\tPass#\n"
+"/dev/ada0s1b.bde\tnone\t\tswap\tsw\t\t0\t0\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1872
@@ -4224,11 +4531,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1877
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# Device\t\tMountpoint\tFStype\tOptions\t\tDump\tPass#\n"
 "/dev/ada0s1b.eli\tnone\t\tswap\tsw\t\t0\t0\n"
 msgstr ""
+"# Device\t\tMountpoint\tFStype\tOptions\t\tDump\tPass#\n"
+"/dev/ada0s1b.eli\tnone\t\tswap\tsw\t\t0\t0\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1880
@@ -4308,11 +4617,14 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1899
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# Device\t\tMountpoint\tFStype\tOptions\t\t\t\tDump\tPass#\n"
 "/dev/ada0s1b.eli\tnone\t\tswap\tsw,ealgo=blowfish,keylen=128,sectorsize=4096\t0\t0\n"
 msgstr ""
+"# Device\t\tMountpoint\tFStype\tOptions\t\t\t\tDump\tPass#\n"
+"/dev/ada0s1b.eli\tnone\t\tswap\tsw,ealgo=blowfish,keylen=128,sectorsize="
+"4096\t0\t0\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/disks/_index.adoc:1901
@@ -4363,6 +4675,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1927
+#, fuzzy
 msgid ""
 "High availability is one of the main requirements in serious business "
 "applications and highly-available storage is a key component in such "
@@ -4374,6 +4687,18 @@ msgid ""
 "availability features of FreeBSD like CARP, HAST makes it possible to build "
 "a highly-available storage cluster that is resistant to hardware failures."
 msgstr ""
+"A alta disponibilidade é um dos principais requisitos em aplicativos de "
+"negócios sérios e o armazenamento altamente disponível é um componente-chave "
+"nesses ambientes. No FreeBSD, o framework Alta Disponiblidade de "
+"Armazenamento (<acronym>HAST</acronym>) permite o armazenamento transparente "
+"dos mesmos dados em várias máquinas fisicamente separadas conectadas por uma "
+"rede <acronym>TCP/IP</acronym>. <acronym>HAST</acronym> pode ser entendido "
+"como um RAID1 (mirror) baseado em rede, e é similar ao sistema de "
+"armazenamento DRBD® usado na plataforma GNU/<trademark class=\"registered\""
+">Linux</trademark>. Em combinação com outros recursos de alta "
+"disponibilidade do FreeBSD, como o <acronym>CARP</acronym>, o <acronym>HAST</"
+"acronym> possibilita a criação de um cluster de armazenamento altamente "
+"disponível, resistente a falhas de hardware."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1929
@@ -4514,15 +4839,22 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1961
+#, fuzzy
 msgid ""
 "Each write, delete, or flush operation is sent to both the local disk and to "
 "the remote disk over TCP/IP. Each read operation is served from the local "
 "disk, unless the local disk is not up-to-date or an I/O error occurs. In "
 "such cases, the read operation is sent to the secondary node."
 msgstr ""
+"Cada operação de gravação, exclusão ou liberação é enviada para o disco "
+"local e para o disco remoto sobre <acronym>TCP/IP </acronym>. Cada operação "
+"de leitura é fornecida a partir do disco local, a menos que o disco local "
+"não esteja atualizado ou ocorra um erro de <acronym>I/O</acronym>. Nesses "
+"casos, a operação de leitura é enviada para o nó secundário."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1963
+#, fuzzy
 msgid ""
 "HAST tries to provide fast failure recovery. For this reason, it is "
 "important to reduce synchronization time after a node's outage. To provide "
@@ -4530,6 +4862,12 @@ msgid ""
 "only synchronizes those during a regular synchronization, with an exception "
 "of the initial sync."
 msgstr ""
+"<acronym>HAST</acronym> tenta fornecer recuperação rápida de falhas. Por "
+"esse motivo, é importante reduzir o tempo de sincronização após a "
+"interrupção de um nó. Para fornecer sincronização rápida, o <acronym>HAST</"
+"acronym> gerencia um bitmap no disco de extensões sujas e sincroniza apenas "
+"aquelas durante uma sincronização regular, com exceção da sincronização "
+"inicial."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1965
@@ -4540,6 +4878,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1967
+#, fuzzy
 msgid ""
 "_memsync_: This mode reports a write operation as completed when the local "
 "write operation is finished and when the remote node acknowledges data "
@@ -4548,6 +4887,12 @@ msgid ""
 "intended to reduce latency, but still provides good reliability. This mode "
 "is the default."
 msgstr ""
+"<emphasis>memsync</emphasis>: Este modo reporta uma operação de gravação "
+"como concluída quando a operação de gravação local é finalizada e quando o "
+"nó remoto reconhece a chegada dos dados, mas antes de realmente armazenar os "
+"dados. Os dados no nó remoto serão armazenados diretamente após o envio da "
+"confirmação. Este modo destina-se a reduzir a latência, mas ainda fornece "
+"boa confiabilidade. Este modo é o padrão."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1968
@@ -4559,12 +4904,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1969
+#, fuzzy
 msgid ""
 "_async_: This mode reports a write operation as completed when the local "
 "write completes. This is the fastest and the most dangerous replication "
 "mode. It should only be used when replicating to a distant node where "
 "latency is too high for other modes."
 msgstr ""
+"<emphasis>async</emphasis>: Este modo relata uma operação de gravação como "
+"concluída quando a gravação local é concluída. Este é o modo de replicação "
+"mais rápido e mais perigoso. Ele deve ser usado somente ao replicar para um "
+"nó distante, onde a latência é muito alta para outros modos."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/disks/_index.adoc:1970
@@ -4607,9 +4957,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1983
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "options\tGEOM_GATE\n"
-msgstr ""
+msgstr "options\tGEOM_GATE\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1986
@@ -4758,9 +5108,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:2061
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "hastd_enable=\"YES\"\n"
-msgstr ""
+msgstr "hastd_enable=\"YES\"\n"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/disks/_index.adoc:2063
@@ -5112,12 +5462,18 @@ msgstr "Solução de problemas"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:2222
+#, fuzzy
 msgid ""
 "HAST should generally work without issues. However, as with any other "
 "software product, there may be times when it does not work as supposed. The "
 "sources of the problems may be different, but the rule of thumb is to ensure "
 "that the time is synchronized between the nodes of the cluster."
 msgstr ""
+"O <acronym>HAST</acronym> geralmente deve funcionar sem problemas. No "
+"entanto, como acontece com qualquer outro produto de software, pode haver "
+"momentos em que ele não funciona como deveria. As origens dos problemas "
+"podem ser diferentes, mas a regra geral é garantir que o horário esteja "
+"sincronizado entre os nós do cluster."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:2224
@@ -5136,21 +5492,32 @@ msgstr "Recuperando-se da Condição de Split-brain"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:2229
+#, fuzzy
 msgid ""
 "_Split-brain_ occurs when the nodes of the cluster are unable to communicate "
 "with each other, and both are configured as primary. This is a dangerous "
 "condition because it allows both nodes to make incompatible changes to the "
 "data. This problem must be corrected manually by the system administrator."
 msgstr ""
+"<firstterm>Split-brain</firstterm> ocorre quando os nós do cluster não "
+"conseguem se comunicar entre si e ambos são configurados como primários. "
+"Esta é uma condição perigosa porque permite que ambos os nós façam "
+"alterações incompatíveis nos dados. Esse problema deve ser corrigido "
+"manualmente pelo administrador do sistema."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:2231
+#, fuzzy
 msgid ""
 "The administrator must either decide which node has more important changes, "
 "or perform the merge manually. Then, let HAST perform full synchronization "
 "of the node which has the broken data. To do this, issue these commands on "
 "the node which needs to be resynchronized:"
 msgstr ""
+"O administrador deve decidir qual nó tem alterações mais importantes ou "
+"executar a mesclagem manualmente. Então, deixe o <acronym>HAST</acronym> "
+"executar a sincronização completa do nó que possui os dados quebrados. Para "
+"fazer isso, emita esses comandos no nó que precisa ser ressincronizado:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:2237
