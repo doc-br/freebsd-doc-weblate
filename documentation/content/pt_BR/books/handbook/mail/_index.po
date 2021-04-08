@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:55-0300\n"
-"PO-Revision-Date: 2021-04-01 12:56+0000\n"
+"PO-Revision-Date: 2021-04-08 23:28+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookmail_index/pt_BR/>\n"
@@ -213,6 +213,7 @@ msgstr "Servidor de Email e Caixas de Correio"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:83
+#, fuzzy
 msgid ""
 "The mail host is a server that is responsible for delivering and receiving "
 "mail for a host or a network. The mail host collects all mail sent to the "
@@ -222,9 +223,19 @@ msgid ""
 "and collected using protocols such as POP or IMAP. If mail is read locally, "
 "a POP or IMAP server does not need to be installed."
 msgstr ""
+"O servidor de email é um servidor responsável por entregar e receber emails "
+"para um host ou uma rede. O servidor de email coleta todas as mensagens "
+"enviadas para o domínio e as armazena no <filename>mbox</filename> padrão ou "
+"no formato alternativo Maildir, dependendo da configuração. Uma vez que o "
+"email foi armazenado, ele pode ser lido localmente usando um <acronym>MUA</"
+"acronym> ou acessado e coletado remotamente usando protocolos como "
+"<acronym>POP</acronym> ou <acronym>IMAP</acronym>. Se o email for lido "
+"localmente, não é necessário instalar um servidor <acronym>POP</acronym> ou "
+"<acronym>IMAP</acronym>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:85
+#, fuzzy
 msgid ""
 "To access mailboxes remotely, a POP or IMAP server is required as these "
 "protocols allow users to connect to their mailboxes from remote locations. "
@@ -235,6 +246,16 @@ msgid ""
 "also perform tasks such as searching on the server in order to minimize data "
 "transfer between clients and servers."
 msgstr ""
+"Para acessar as caixas de email remotamente, é necessário um servidor "
+"<acronym>POP</acronym> ou <acronym>IMAP</acronym>, pois esses protocolos "
+"permitem que os usuários se conectem a suas caixas de correio de locais "
+"remotos. O <acronym>IMAP</acronym> oferece várias vantagens sobre o "
+"<acronym>POP</acronym>. Isso inclui a capacidade de armazenar uma cópia de "
+"mensagens em um servidor remoto após o download e atualizações simultâneas. "
+"O <acronym>IMAP</acronym> pode ser útil em links de baixa velocidade, pois "
+"permite aos usuários buscar a estrutura das mensagens sem baixá-las. Ele "
+"também pode executar tarefas como pesquisas no servidor para minimizar a "
+"transferência de dados entre clientes e servidores."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:87
@@ -331,6 +352,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:118
+#, fuzzy
 msgid ""
 "This access database file defines which hosts or IP addresses have access to "
 "the local mail server and what kind of access they have. Hosts listed as "
@@ -344,6 +366,20 @@ msgid ""
 "`QUARANTINE` will have their messages held and will receive the specified "
 "text as the reason for the hold."
 msgstr ""
+"Este arquivo de acesso define quais hosts ou endereços de <acronym>IP</"
+"acronym> têm acesso ao servidor de email local e que tipo de acesso eles "
+"possuem. Os hosts listados como <option>OK</option>, que é a opção padrão, "
+"têm permissão para enviar emails para esse host, desde que o destino final "
+"do email seja a máquina local. Os hosts listados como <option>REJECT</"
+"option> são rejeitados para todas as conexões de email. Os hosts listados "
+"como <option>RELAY</option> têm permissão para enviar emails para qualquer "
+"destino usando este servidor de email. Os hosts listados como <option>ERROR</"
+"option> terão seus emails retornados com o erro de email especificado. Se um "
+"host estiver listado como <option>SKIP</option>, o <application>Sendmail</"
+"application> interromperá a pesquisa atual por esta entrada sem aceitar ou "
+"rejeitar o email. Os hosts listados como <option>QUARANTINE</option> terão "
+"suas mensagens retidas e receberão o texto especificado como o motivo da "
+"retenção."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:120
@@ -418,13 +454,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:160
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "root: localuser\n"
 "ftp-bugs: joe,eric,paul\n"
 "bit.bucket:  /dev/null\n"
 "procmail: \"|/usr/local/bin/procmail\"\n"
 msgstr ""
+"root: localuser\n"
+"ftp-bugs: joe,eric,paul\n"
+"bit.bucket:  /dev/null\n"
+"procmail: \"|/usr/local/bin/procmail\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:163
@@ -457,6 +497,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:168
+#, fuzzy
 msgid ""
 "This is the master configuration file for Sendmail. It controls the overall "
 "behavior of Sendmail, including everything from rewriting email addresses to "
@@ -464,6 +505,12 @@ msgid ""
 "configuration file is quite complex. Fortunately, this file rarely needs to "
 "be changed for standard mail servers."
 msgstr ""
+"Este é o arquivo de configuração principal do <application>Sendmail</"
+"application>. Ele controla o comportamento geral do <application>Sendmail</"
+"application>, incluindo tudo desde a tradução de endereços de email até a "
+"impressão de mensagens de rejeição para servidores de email remotos. Assim, "
+"este arquivo de configuração é bastante complexo. Felizmente, esse arquivo "
+"raramente precisa ser alterado para servidores de email padrão."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:170
@@ -505,15 +552,19 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:183
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "root@example.com                root\n"
 "postmaster@example.com          postmaster@noc.example.net\n"
 "@example.com                    joe\n"
 msgstr ""
+"root@example.com                root\n"
+"postmaster@example.com          postmaster@noc.example.net\n"
+"@example.com                    joe\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:186
+#, fuzzy
 msgid ""
 "This file is processed in a first match order. When an email address matches "
 "the address on the left, it is mapped to the local mailbox listed on the "
@@ -526,6 +577,19 @@ msgid ""
 "virtusertable#. Whenever this file is edited, update its database and "
 "restart Sendmail:"
 msgstr ""
+"Este arquivo é processado pela primeira entrada que for correspondida. "
+"Quando um endereço de email corresponde ao endereço à esquerda, ele é "
+"mapeado para a caixa de correio local listada à direita. O formato da "
+"primeira entrada neste exemplo mapeia um endereço de email específico para "
+"uma caixa de correio local, enquanto o formato da segunda entrada mapeia um "
+"endereço de email específico para uma caixa de correio remota. Por fim, "
+"qualquer endereço de email de <literal>example.com</literal> que não "
+"correspondeu a nenhuma das entradas anteriores corresponderá ao último "
+"mapeamento e será enviado para a caixa de correio local <literal>joe</"
+"literal>. Ao criar entradas personalizadas, use este formato e adicione-as "
+"ao <filename>/etc/mail/virtusertable</filename>. Sempre que este arquivo for "
+"editado, atualize seu banco de dados e reinicie o "
+"<application>Sendmail</application>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:191
@@ -562,13 +626,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:204
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "your.isp.example.com\n"
 "other.isp.example.net\n"
 "users-isp.example.org\n"
 "www.example.org\n"
 msgstr ""
+"your.isp.example.com\n"
+"other.isp.example.net\n"
+"users-isp.example.org\n"
+"www.example.org\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:207
@@ -579,12 +647,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:209
+#, fuzzy
 msgid ""
 "Now any mail sent through the system by any host in this list, provided the "
 "user has an account on the system, will succeed. This allows users to send "
 "mail from the system remotely without opening the system up to relaying SPAM "
 "from the Internet."
 msgstr ""
+"Agora, qualquer mensagem enviada pelo sistema por qualquer domínio dessa "
+"lista, desde que o usuário tenha uma conta no sistema, será aceita. Isso "
+"permite que os usuários enviem emails de domínios remotos do sistema sem "
+"precisar liberar acesso externo ao sistema, evitando <acronym>SPAM</acronym> "
+"da Internet."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/mail/_index.adoc:211
@@ -643,13 +717,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:236
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "sendmail_enable=\"NO\"\n"
 "sendmail_submit_enable=\"NO\"\n"
 "sendmail_outbound_enable=\"NO\"\n"
 "sendmail_msp_queue_enable=\"NO\"\n"
 msgstr ""
+"sendmail_enable=\"NO\"\n"
+"sendmail_submit_enable=\"NO\"\n"
+"sendmail_outbound_enable=\"NO\"\n"
+"sendmail_msp_queue_enable=\"NO\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:239
@@ -660,9 +738,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:243
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "sendmail_enable=\"NO\"\n"
-msgstr ""
+msgstr "sendmail_enable=\"NO\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:246
@@ -703,9 +781,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:262
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "postfix_enable=\"YES\"\n"
-msgstr ""
+msgstr "postfix_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:265
@@ -718,13 +796,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:272
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "daily_clean_hoststat_enable=\"NO\"\n"
 "daily_status_mail_rejects_enable=\"NO\"\n"
 "daily_status_include_submit_mailq=\"NO\"\n"
 "daily_submit_queuerun=\"NO\"\n"
 msgstr ""
+"daily_clean_hoststat_enable=\"NO\"\n"
+"daily_status_mail_rejects_enable=\"NO\"\n"
+"daily_status_include_submit_mailq=\"NO\"\n"
+"daily_submit_queuerun=\"NO\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:275
@@ -782,7 +864,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:305
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "#\n"
 "# Execute the Postfix sendmail program, named /usr/local/sbin/sendmail\n"
@@ -792,6 +874,13 @@ msgid ""
 "mailq           /usr/local/sbin/sendmail\n"
 "newaliases      /usr/local/sbin/sendmail\n"
 msgstr ""
+"#\n"
+"# Execute the Postfix sendmail program, named /usr/local/sbin/sendmail\n"
+"#\n"
+"sendmail        /usr/local/sbin/sendmail\n"
+"send-mail       /usr/local/sbin/sendmail\n"
+"mailq           /usr/local/sbin/sendmail\n"
+"newaliases      /usr/local/sbin/sendmail\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:308
@@ -804,7 +893,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:317
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "sendmail        /usr/local/sbin/ssmtp\n"
 "send-mail       /usr/local/sbin/ssmtp\n"
@@ -813,6 +902,12 @@ msgid ""
 "hoststat        /usr/bin/true\n"
 "purgestat       /usr/bin/true\n"
 msgstr ""
+"sendmail        /usr/local/sbin/ssmtp\n"
+"send-mail       /usr/local/sbin/ssmtp\n"
+"mailq           /usr/local/sbin/ssmtp\n"
+"newaliases      /usr/local/sbin/ssmtp\n"
+"hoststat        /usr/bin/true\n"
+"purgestat       /usr/bin/true\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:320
@@ -867,9 +962,9 @@ msgstr "Como uma boa solução, coloque a linha:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:337
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "search foo.bar.edu bar.edu\n"
-msgstr ""
+msgstr "search foo.bar.edu bar.edu\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:340
@@ -878,17 +973,21 @@ msgstr "em vez do anterior:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:344
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "domain foo.bar.edu\n"
-msgstr ""
+msgstr "domain foo.bar.edu\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:347
+#, fuzzy
 msgid ""
 "into [.filename]#/etc/resolv.conf#. However, make sure that the search order "
 "does not go beyond the \"boundary between local and public administration\", "
 "as RFC 1535 calls it."
 msgstr ""
+"no <filename>/etc/resolv.conf</filename>. No entanto, certifique-se de que a "
+"ordem de pesquisa não ultrapasse o limite <quote>entre administração local e "
+"pública</quote>, como a RFC 1535 a chama."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/mail/_index.adoc:348
@@ -916,11 +1015,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:358
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "example.com.          MX        10      example.com.\n"
 "                      MX        20      example.net.\n"
 msgstr ""
+"example.com.          MX        10      example.com.\n"
+"                      MX        20      example.net.\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:361
@@ -1046,12 +1147,17 @@ msgstr "Configuração básica"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:418
+#, fuzzy
 msgid ""
 "Out of the box, one can send email to external hosts as long as [.filename]#/"
 "etc/resolv.conf# is configured or the network has access to a configured DNS "
 "server. To have email delivered to the MTA on the FreeBSD host, do one of "
 "the following:"
 msgstr ""
+"Fora da caixa, pode-se enviar email para hosts externos desde que <filename>/"
+"etc/resolv.conf</filename> esteja configurado ou a rede tenha acesso a um "
+"servidor <acronym>DNS</acronym>. Para ter um email entregue ao <acronym>MTA</"
+"acronym> em um host FreeBSD, siga um destes procedimentos:"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:420
@@ -1156,13 +1262,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:462
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "freefall\t\tMX\t30\tmail.crl.net\n"
 "freefall\t\tMX\t40\tagora.rdrop.com\n"
 "freefall\t\tMX\t10\tfreefall.FreeBSD.org\n"
 "freefall\t\tMX\t20\twho.cdrom.com\n"
 msgstr ""
+"freefall\t\tMX\t30\tmail.crl.net\n"
+"freefall\t\tMX\t40\tagora.rdrop.com\n"
+"freefall\t\tMX\t10\tfreefall.FreeBSD.org\n"
+"freefall\t\tMX\t20\twho.cdrom.com\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:465
@@ -1211,11 +1321,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:481
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "example.FreeBSD.org\tA\t204.216.27.XX\t\t; Workstation\n"
 "\t\t\tMX\t10 nevdull.FreeBSD.org\t; Mailhost\n"
 msgstr ""
+"example.FreeBSD.org\tA\t204.216.27.XX\t\t; Workstation\n"
+"\t\t\tMX\t10 nevdull.FreeBSD.org\t; Mailhost\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:484
@@ -1241,9 +1353,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:492
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "customer1.org\t\tMX\t10\tmail.myhost.com\n"
-msgstr ""
+msgstr "customer1.org\t\tMX\t10\tmail.myhost.com\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:495
@@ -1321,10 +1433,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:514
+#, fuzzy
 msgid ""
 "The easiest way to fulfill those needs is to install the package:mail/"
 "ssmtp[] port:"
 msgstr ""
+"A maneira mais fácil de atender a essas necessidades é instalar o port "
+"<package>mail/ssmtp</package>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:519
@@ -1343,13 +1458,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:529
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "root=yourrealemail@example.com\n"
 "mailhub=mail.example.com\n"
 "rewriteDomain=example.com\n"
 "hostname=_HOSTNAME_\n"
 msgstr ""
+"root=yourrealemail@example.com\n"
+"mailhub=mail.example.com\n"
+"rewriteDomain=example.com\n"
+"hostname=_HOSTNAME_\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:532
@@ -1419,11 +1538,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:552
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "MYADDR:\n"
 "!bg su user -c fetchmail\n"
 msgstr ""
+"MYADDR:\n"
+"!bg su user -c fetchmail\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:555
@@ -1436,9 +1557,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:559
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "  !bg su user -c \"sendmail -q\"\n"
-msgstr ""
+msgstr "  !bg su user -c \"sendmail -q\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:562
@@ -1450,9 +1571,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:566
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "poll example.net protocol pop3 fetchall pass MySecret\n"
-msgstr ""
+msgstr "poll example.net protocol pop3 fetchall pass MySecret\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:569
@@ -1477,7 +1598,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:592
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "VERSIONID(`bsd.home.mc version 1.0')\n"
 "OSTYPE(bsd4.4)dnl\n"
@@ -1496,6 +1617,22 @@ msgid ""
 "define(`confDOMAIN_NAME',`bsd.home')dnl\n"
 "define(`confDELIVERY_MODE',`deferred')dnl\n"
 msgstr ""
+"VERSIONID(`bsd.home.mc version 1.0')\n"
+"OSTYPE(bsd4.4)dnl\n"
+"FEATURE(nouucp)dnl\n"
+"MAILER(local)dnl\n"
+"MAILER(smtp)dnl\n"
+"Cwlocalhost\n"
+"Cwbsd.home\n"
+"MASQUERADE_AS(`example.net')dnl\n"
+"FEATURE(allmasquerade)dnl\n"
+"FEATURE(masquerade_envelope)dnl\n"
+"FEATURE(nocanonify)dnl\n"
+"FEATURE(nodns)dnl\n"
+"define(`SMART_HOST', `relay.example.net')\n"
+"Dmbsd.home\n"
+"define(`confDOMAIN_NAME',`bsd.home')dnl\n"
+"define(`confDELIVERY_MODE',`deferred')dnl\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:595
@@ -1522,25 +1659,34 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:603
+#, fuzzy
 msgid ""
 "Install package:security/cyrus-sasl2[] from the Ports Collection. This port "
 "supports a number of compile-time options. For the SMTP authentication "
 "method demonstrated in this example, make sure that `LOGIN` is not disabled."
 msgstr ""
+"Instale o <package>security/cyrus-sasl2</package> da Coleção de Ports. Este "
+"port suporta várias opções de tempo de compilação. Para o método de "
+"autenticação SMTP demonstrado neste exemplo, certifique-se de que "
+"<option>LOGIN</option> não esteja desabilitado."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:604
+#, fuzzy
 msgid ""
 "After installing package:security/cyrus-sasl2[], edit [.filename]#/usr/local/"
 "lib/sasl2/Sendmail.conf#, or create it if it does not exist, and add the "
 "following line:"
 msgstr ""
+"Depois de instalar o <package>security/cyrus-sasl2</package>, edite o "
+"<filename>/usr/local/lib/sasl2/Sendmail.conf</filename>, ou crie-o se ele "
+"não existir, e adicione a seguinte linha :"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:608
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "pwcheck_method: saslauthd\n"
-msgstr ""
+msgstr "pwcheck_method: saslauthd\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:611
@@ -1551,14 +1697,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:615
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "saslauthd_enable=\"YES\"\n"
-msgstr ""
+msgstr "saslauthd_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:618
+#, fuzzy
 msgid "  Finally, start the saslauthd daemon:"
-msgstr ""
+msgstr "  Finalmente, inicie o daemon saslauthd:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:622
@@ -1577,16 +1724,21 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:626
+#, fuzzy
 msgid "Next, edit [.filename]#/etc/make.conf# and add the following lines:"
 msgstr ""
+"Em seguida, edite o <filename>/etc/make.conf</filename> e adicione as "
+"seguintes linhas:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:631
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "SENDMAIL_CFLAGS=-I/usr/local/include/sasl -DSASL\n"
 "SENDMAIL_LDADD=/usr/local/lib/libsasl2.so\n"
 msgstr ""
+"SENDMAIL_CFLAGS=-I/usr/local/include/sasl -DSASL\n"
+"SENDMAIL_LDADD=/usr/local/lib/libsasl2.so\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:634
@@ -1615,10 +1767,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:647
+#, fuzzy
 msgid ""
 "  This compile should not have any problems if [.filename]#/usr/src# has not "
 "changed extensively and the shared libraries it needs are available."
 msgstr ""
+"  Esta compilação não deve ter nenhum problema se o <filename>/usr/src</"
+"filename> não foi alterado extensivamente e as bibliotecas compartilhadas "
+"necessárias estiverem disponíveis."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:648
@@ -1631,12 +1787,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:654
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "dnl set SASL options\n"
 "TRUST_AUTH_MECH(`GSSAPI DIGEST-MD5 CRAM-MD5 LOGIN')dnl\n"
 "define(`confAUTH_MECHANISMS', `GSSAPI DIGEST-MD5 CRAM-MD5 LOGIN')dnl\n"
 msgstr ""
+"dnl set SASL options\n"
+"TRUST_AUTH_MECH(`GSSAPI DIGEST-MD5 CRAM-MD5 LOGIN')dnl\n"
+"define(`confAUTH_MECHANISMS', `GSSAPI DIGEST-MD5 CRAM-MD5 LOGIN')dnl\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:657
@@ -1725,6 +1884,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:683
+#, fuzzy
 msgid ""
 "The contents of the user's mailbox in [.filename]#/var/mail# are "
 "automatically read by `mail`. Should the mailbox be empty, the utility exits "
@@ -1732,10 +1892,16 @@ msgid ""
 "application interface starts, and a list of messages will be displayed. "
 "Messages are automatically numbered, as can be seen in the following example:"
 msgstr ""
+"O conteúdo da caixa de correio do usuário em <filename>/var/mail</filename> "
+"é lido automaticamente pelo <command>mail</command>. Se a caixa de correio "
+"estiver vazia, o utilitário sairá com uma mensagem indicando que nenhum "
+"email foi encontrado. Se o email existir, a interface do aplicativo será "
+"iniciada e uma lista de mensagens será exibida. As mensagens são numeradas "
+"automaticamente, como pode ser visto no exemplo a seguir:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:691
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Mail version 8.1 6/6/93.  Type ? for help.\n"
 "\"/var/mail/marcs\": 3 messages 3 new\n"
@@ -1743,6 +1909,11 @@ msgid ""
 " N  2 root@localhost        Mon Mar  8 14:05  14/509   \"user account\"\n"
 " N  3 root@localhost        Mon Mar  8 14:05  14/509   \"sample\"\n"
 msgstr ""
+"Mail version 8.1 6/6/93.  Type ? for help.\n"
+"\"/var/mail/marcs\": 3 messages 3 new\n"
+"&gt;N  1 root@localhost        Mon Mar  8 14:05  14/510   \"test\"\n"
+" N  2 root@localhost        Mon Mar  8 14:05  14/509   \"user account\"\n"
+" N  3 root@localhost        Mon Mar  8 14:05  14/509   \"sample\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:694
@@ -1992,6 +2163,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:794
+#, fuzzy
 msgid ""
 "alpine has had several remote vulnerabilities discovered in the past, which "
 "allowed remote attackers to execute arbitrary code as users on the local "
@@ -2000,6 +2172,14 @@ msgid ""
 "the FreeBSD Security Officer believes there are likely to be other "
 "undiscovered vulnerabilities. Users install alpine at their own risk."
 msgstr ""
+"O <application>alpine</application> teve várias vulnerabilidades remotas "
+"descobertas no passado, que permitiam que atacantes remotos executassem "
+"código arbitrário como usuários no sistema local, pela ação de enviar um "
+"email especialmente preparado. Enquanto problemas <emphasis>conhecidos</"
+"emphasis> foram corrigidos, o código <application>alpine</application> foi "
+"escrito em um estilo inseguro e o FreeBSD Security Officer acredita que "
+"provavelmente há outras vulnerabilidades não descobertas. Os usuários "
+"instalam o <application>alpine</application> por sua conta e risco."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:797
@@ -2160,6 +2340,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:838
+#, fuzzy
 msgid ""
 "This section explains some of the basic features of fetchmail. This utility "
 "requires a [.filename]#.fetchmailrc# configuration in the user's home "
@@ -2168,6 +2349,13 @@ msgid ""
 "this file, it is advisable to make it readable only by the user, with the "
 "following command:"
 msgstr ""
+"Esta seção explica alguns dos recursos básicos do <application>fetchmail</"
+"application>. Este utilitário requer uma configuração <filename>."
+"fetchmailrc</filename> no diretório pessoal do usuário para que seja "
+"executado corretamente. Este arquivo inclui informações do servidor, bem "
+"como credenciais de login. Devido à natureza sensível do conteúdo deste "
+"arquivo, é aconselhável torná-lo legível apenas pelo usuário, com o seguinte "
+"comando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:842
@@ -2186,9 +2374,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:849
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "poll example.com protocol pop3 username \"joesoap\" password \"XXX\"\n"
-msgstr ""
+msgstr "poll example.com protocol pop3 username \"joesoap\" password \"XXX\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:852
@@ -2199,7 +2387,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:860
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "poll example.com proto pop3:\n"
 "user \"joesoap\", with password \"XXX\", is \"jsoap\" here;\n"
@@ -2207,6 +2395,11 @@ msgid ""
 "poll example2.net proto imap:\n"
 "user \"john\", with password \"XXXXX\", is \"myth\" here;\n"
 msgstr ""
+"poll example.com proto pop3:\n"
+"user \"joesoap\", with password \"XXX\", is \"jsoap\" here;\n"
+"user \"andrea\", with password \"XXXX\";\n"
+"poll example2.net proto imap:\n"
+"user \"john\", with password \"XXXXX\", is \"myth\" here;\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:863
@@ -2251,9 +2444,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:879
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "\"|exec /usr/local/bin/procmail || exit 75\"\n"
-msgstr ""
+msgstr "\"|exec /usr/local/bin/procmail || exit 75\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:882
@@ -2277,12 +2470,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:892
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 ":0\n"
 "* ^From.*user@example.com\n"
 "! goodmail@example2.com\n"
 msgstr ""
+":0\n"
+"* ^From.*user@example.com\n"
+"! goodmail@example2.com\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:895
@@ -2309,12 +2505,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:910
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 ":0\n"
 "* ^TOalternate@example.com\n"
 "alternate\n"
 msgstr ""
+":0\n"
+"* ^TOalternate@example.com\n"
+"alternate\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:913
@@ -2323,12 +2522,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:919
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 ":0\n"
 "^Subject:.*Spam\n"
 "/dev/null\n"
 msgstr ""
+":0\n"
+"^Subject:.*Spam\n"
+"/dev/null\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mail/_index.adoc:922
@@ -2339,7 +2541,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mail/_index.adoc:933
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 ":0\n"
 "* ^Sender:.owner-freebsd-\\/[^@]+@FreeBSD.ORG\n"
@@ -2350,3 +2552,11 @@ msgid ""
 "\tFreeBSD-${MATCH}\n"
 "}\n"
 msgstr ""
+":0\n"
+"* ^Sender:.owner-freebsd-\\/[^@]+@FreeBSD.ORG\n"
+"{\n"
+"\tLISTNAME=${MATCH}\n"
+"\t:0\n"
+"\t* LISTNAME??^\\/[^@]+\n"
+"\tFreeBSD-${MATCH}\n"
+"}\n"
