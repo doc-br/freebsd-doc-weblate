@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-01 00:53+0000\n"
+"PO-Revision-Date: 2021-04-08 23:28+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/booksporters-handbookflavorschapter/pt_BR/>\n"
@@ -47,11 +47,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/flavors/chapter.adoc:38
+#, fuzzy
 msgid ""
 "For example, a port can have a normal version with many features and quite a "
 "few dependencies, and a light \"lite\" version with only basic features and "
 "minimal dependencies."
 msgstr ""
+"Por exemplo, um port pode ter uma versão normal com muitos recursos e "
+"algumas dependências, e uma versão leve <quote>lite</quote> com apenas "
+"recursos básicos e dependências mínimas."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/flavors/chapter.adoc:40
@@ -82,9 +86,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/flavors/chapter.adoc:53
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "FLAVOR?=\t${FLAVORS:[1]}\n"
-msgstr ""
+msgstr "FLAVOR?=\t${FLAVORS:[1]}\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/flavors/chapter.adoc:59
@@ -109,7 +113,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/flavors/chapter.adoc:75
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "FLAVORS=\tdefault lite\n"
 "lite_PKGNAMESUFFIX=\t-lite\n"
@@ -118,6 +122,12 @@ msgid ""
 "[enable non lite features]\n"
 ".endif\n"
 msgstr ""
+"FLAVORS=\tdefault lite\n"
+"lite_PKGNAMESUFFIX=\t-lite\n"
+"[...]\n"
+".if ${FLAVOR:U} != lite\n"
+"[enable non lite features]\n"
+".endif\n"
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/flavors/chapter.adoc:80
@@ -134,7 +144,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/flavors/chapter.adoc:94
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "FLAVORS=\tx11 nox11\n"
 "FLAVOR?=\t${FLAVORS:[1]}\n"
@@ -144,6 +154,13 @@ msgid ""
 "[enable x11 features]\n"
 ".endif\n"
 msgstr ""
+"FLAVORS=\tx11 nox11\n"
+"FLAVOR?=\t${FLAVORS:[1]}\n"
+"nox11_PKGNAMESUFFIX=\t-nox11\n"
+"[...]\n"
+".if ${FLAVOR} == x11\n"
+"[enable x11 features]\n"
+".endif\n"
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/flavors/chapter.adoc:99
@@ -242,10 +259,13 @@ msgstr "Flavors Helpers"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/flavors/chapter.adoc:143
+#, fuzzy
 msgid ""
 "To make the [.filename]#Makefile# easier to write, a few flavors helpers "
 "exist."
 msgstr ""
+"Para tornar o <filename>Makefile</filename> mais fácil de ser escrito, "
+"existem alguns flavors helpers."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/flavors/chapter.adoc:145
@@ -348,11 +368,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/flavors/chapter.adoc:176
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "FLAVORS=\tnormal lite\n"
 "lite_PKGNAMESUFFIX=\t-lite\n"
 msgstr ""
+"FLAVORS=\tnormal lite\n"
+"lite_PKGNAMESUFFIX=\t-lite\n"
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/flavors/chapter.adoc:181
@@ -496,11 +518,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/flavors/chapter.adoc:261
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "USES=\tpython\n"
 "USE_PYTHON=\tdistutils\n"
 msgstr ""
+"USES=\tpython\n"
+"USE_PYTHON=\tdistutils\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/flavors/chapter.adoc:264
@@ -509,11 +533,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/flavors/chapter.adoc:269
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "USES=\tpython\n"
 "USE_PYTHON=\tdistutils allflavors\n"
 msgstr ""
+"USES=\tpython\n"
+"USE_PYTHON=\tdistutils allflavors\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/flavors/chapter.adoc:272
@@ -528,11 +554,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/flavors/chapter.adoc:284
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "USES=\tpython:-3.5\n"
 "USE_PYTHON=\tdistutils\n"
 msgstr ""
+"USES=\tpython:-3.5\n"
+"USE_PYTHON=\tdistutils\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/flavors/chapter.adoc:287
@@ -541,11 +569,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/flavors/chapter.adoc:292
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "USES=\tpython:-3.5\n"
 "USE_PYTHON=\tdistutils allflavors\n"
 msgstr ""
+"USES=\tpython:-3.5\n"
+"USE_PYTHON=\tdistutils allflavors\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/flavors/chapter.adoc:295
@@ -554,11 +584,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/flavors/chapter.adoc:300
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "USES=\tpython:3.4+\n"
 "USE_PYTHON=\tdistutils\n"
 msgstr ""
+"USES=\tpython:3.4+\n"
+"USE_PYTHON=\tdistutils\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/flavors/chapter.adoc:303
@@ -567,11 +599,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/flavors/chapter.adoc:308
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "USES=\tpython:3.4+\n"
 "USE_PYTHON=\tdistutils allflavors\n"
 msgstr ""
+"USES=\tpython:3.4+\n"
+"USE_PYTHON=\tdistutils allflavors\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/flavors/chapter.adoc:311
