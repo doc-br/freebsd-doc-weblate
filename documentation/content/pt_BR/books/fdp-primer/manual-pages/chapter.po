@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: 2021-04-01 00:52+0000\n"
+"PO-Revision-Date: 2021-04-08 23:28+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate-dev.freebsd.org/"
 "projects/documentation/booksfdp-primermanual-pageschapter/pt_BR/>\n"
@@ -37,6 +37,7 @@ msgstr "Introdução"
 
 #. type: Plain text
 #: documentation/content/en/books/fdp-primer/manual-pages/chapter.adoc:29
+#, fuzzy
 msgid ""
 "_Manual pages_, commonly shortened to _man pages_, were conceived as readily-"
 "available reminders for command syntax, device driver details, or "
@@ -44,6 +45,12 @@ msgid ""
 "reference from the command line for users, system administrators, and "
 "programmers."
 msgstr ""
+"<emphasis>Páginas de manual</emphasis>, geralmente abreviadas como "
+"<emphasis>man pages</emphasis>, foram concebidas como lembretes prontamente "
+"disponíveis para sintaxe de comandos, detalhes de drivers de dispositivos ou "
+"formatos de arquivos de configuração. Elas se tornaram uma referência rápida "
+"extremamente valiosa de linha de comando para usuários, administradores de "
+"sistema e programadores."
 
 #. type: Plain text
 #: documentation/content/en/books/fdp-primer/manual-pages/chapter.adoc:31
@@ -288,10 +295,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/fdp-primer/manual-pages/chapter.adoc:180
+#, fuzzy
 msgid ""
 "When rendered with the command `man ls`, the result displayed on the screen "
 "looks like this:"
 msgstr ""
+"Quando renderizado com o comando <command>man ls</command>, o resultado "
+"exibido na tela é semelhante ao seguinte:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/fdp-primer/manual-pages/chapter.adoc:184
@@ -439,7 +449,7 @@ msgstr "Adicione um espaço antes da pontuação em uma linha com macros. Exempl
 
 #. type: delimited block . 4
 #: documentation/content/en/books/fdp-primer/manual-pages/chapter.adoc:234
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 ".Sh SEE ALSO\n"
 ".Xr geom 4 ,\n"
@@ -447,9 +457,15 @@ msgid ""
 ".Xr geom 8 ,\n"
 ".Xr gptboot 8\n"
 msgstr ""
+".Sh SEE ALSO\n"
+".Xr geom 4 ,\n"
+".Xr boot0cfg 8 ,\n"
+".Xr geom 8 ,\n"
+".Xr gptboot 8\n"
 
 #. type: Plain text
 #: documentation/content/en/books/fdp-primer/manual-pages/chapter.adoc:237
+#, fuzzy
 msgid ""
 "Note how the commas at the end of the `.Xr` lines have been placed after a "
 "space. The `.Xr` macro expects two parameters to follow it, the name of an "
@@ -457,6 +473,12 @@ msgid ""
 "punctuation from the section number. Without the space, the external links "
 "would incorrectly point to section `4,` or `8,`."
 msgstr ""
+"Observe como as vírgulas no final das linhas <literal>.Xr</literal> foram "
+"colocadas após um espaço. A macro <literal>.Xr</literal> espera dois "
+"parâmetros, o nome de uma página de manual externa e um número de seção. O "
+"espaço separa a pontuação do número da seção. Sem o espaço, os links "
+"externos apontariam incorretamente para a seção <literal>4,</literal> ou "
+"<literal>8,</literal>."
 
 #. type: Title ===
 #: documentation/content/en/books/fdp-primer/manual-pages/chapter.adoc:239
@@ -573,7 +595,7 @@ msgstr "A estrutura básica preferida para uma seção 1 ou 8 sobre um comando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/fdp-primer/manual-pages/chapter.adoc:328
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 ".Dd August 25, 2017\n"
 ".Dt EXAMPLECMD 8\n"
@@ -594,6 +616,24 @@ msgid ""
 ".Sh AUTHORS\n"
 ".An Firstname Lastname Aq Mt flastname@example.com\n"
 msgstr ""
+".Dd August 25, 2017\n"
+".Dt EXAMPLECMD 8\n"
+".Os\n"
+".Sh NAME\n"
+".Nm examplecmd\n"
+".Nd \"command to demonstrate section 1 and 8 man pages\"\n"
+".Sh SYNOPSIS\n"
+".Nm\n"
+".Op Fl v\n"
+".Sh DESCRIPTION\n"
+"The\n"
+".Nm\n"
+"utility does nothing except demonstrate a trivial but complete\n"
+"manual page for a section 1 or 8 command.\n"
+".Sh SEE ALSO\n"
+".Xr exampleconf 5\n"
+".Sh AUTHORS\n"
+".An Firstname Lastname Aq Mt flastname@example.com\n"
 
 #. type: Title ===
 #: documentation/content/en/books/fdp-primer/manual-pages/chapter.adoc:331
@@ -609,7 +649,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/fdp-primer/manual-pages/chapter.adoc:390
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 ".Dd August 25, 2017\n"
 ".Dt EXAMPLEDRIVER 4\n"
@@ -665,6 +705,59 @@ msgid ""
 ".Sh AUTHORS\n"
 ".An Firstname Lastname Aq Mt flastname@example.com\n"
 msgstr ""
+".Dd August 25, 2017\n"
+".Dt EXAMPLEDRIVER 4\n"
+".Os\n"
+".Sh NAME\n"
+".Nm exampledriver\n"
+".Nd \"driver to demonstrate section 4 man pages\"\n"
+".Sh SYNOPSIS\n"
+"To compile this driver into the kernel, add this line to the\n"
+"kernel configuration file:\n"
+".Bd -ragged -offset indent\n"
+".Cd \"device exampledriver\"\n"
+".Ed\n"
+".Pp\n"
+"To load the driver as a module at boot, add this line to\n"
+".Xr loader.conf 5 :\n"
+".Bd -literal -offset indent\n"
+"exampledriver_load=\"YES\"\n"
+".Ed\n"
+".Sh DESCRIPTION\n"
+"The\n"
+".Nm\n"
+"driver provides an opportunity to show a skeleton or template\n"
+"file for section 4 manual pages.\n"
+".Sh HARDWARE\n"
+"The\n"
+".Nm\n"
+"driver supports these cards from the aptly-named Nonexistent\n"
+"Technologies:\n"
+".Pp\n"
+".Bl -bullet -compact\n"
+".It\n"
+"NT X149.2 (single and dual port)\n"
+".It\n"
+"NT X149.8 (single port)\n"
+".El\n"
+".Sh DIAGNOSTICS\n"
+".Bl -diag\n"
+".It \"flashing green light\"\n"
+"Something bad happened.\n"
+".It \"flashing red light\"\n"
+"Something really bad happened.\n"
+".It \"solid black light\"\n"
+"Power cord is unplugged.\n"
+".El\n"
+".Sh SEE ALSO\n"
+".Xr example 8\n"
+".Sh HISTORY\n"
+"The\n"
+".Nm\n"
+"device driver first appeared in\n"
+".Fx 49.2 .\n"
+".Sh AUTHORS\n"
+".An Firstname Lastname Aq Mt flastname@example.com\n"
 
 #. type: Title ===
 #: documentation/content/en/books/fdp-primer/manual-pages/chapter.adoc:393
@@ -680,7 +773,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/fdp-primer/manual-pages/chapter.adoc:412
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 ".Dd August 25, 2017\n"
 ".Dt EXAMPLECONF 5\n"
@@ -696,6 +789,19 @@ msgid ""
 ".Sh AUTHORS\n"
 ".An Firstname Lastname Aq Mt flastname@example.com\n"
 msgstr ""
+".Dd August 25, 2017\n"
+".Dt EXAMPLECONF 5\n"
+".Os\n"
+".Sh NAME\n"
+".Nm example.conf\n"
+".Nd \"config file to demonstrate section 5 man pages\"\n"
+".Sh DESCRIPTION\n"
+".Nm\n"
+"is an example configuration file.\n"
+".Sh SEE ALSO\n"
+".Xr example 8\n"
+".Sh AUTHORS\n"
+".An Firstname Lastname Aq Mt flastname@example.com\n"
 
 #. type: Title ==
 #: documentation/content/en/books/fdp-primer/manual-pages/chapter.adoc:415
