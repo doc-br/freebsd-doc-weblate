@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-14 11:02-0300\n"
-"PO-Revision-Date: 2021-04-02 12:03+0000\n"
+"PO-Revision-Date: 2021-04-10 02:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/booksporters-handbookuseschapter/es/>\n"
@@ -38,11 +38,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:37
+#, fuzzy
 msgid ""
 "`USES` macros make it easy to declare requirements and settings for a port. "
 "They can add dependencies, change building behavior, add metadata to "
 "packages, and so on, all by selecting simple, preset values."
 msgstr ""
+"<varname>USES</varname> Las macros facilitan la declaración de requisitos y "
+"configuraciones para un puerto. Pueden agregar dependencias, cambiar el "
+"comportamiento de la construcción, agregar metadatos a los paquetes, etc., "
+"todo seleccionando valores preestablecidos simples."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:39
@@ -355,10 +360,13 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:161
+#, fuzzy
 msgid ""
 "List of flags to be passed to `cabal-install` during the configuring and "
 "building stage. The flags are passed verbatim."
 msgstr ""
+"Lista de banderas a pasar <command>cabal-install</command>durante la etapa "
+"de configuración y construcción. Las banderas se pasan textualmente."
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:162
@@ -368,10 +376,14 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:164
+#, fuzzy
 msgid ""
 "List of executable files installed by the port. Default value: `${PORTNAME}"
 "`. Items from this list are automatically added to pkg-plist."
 msgstr ""
+"Lista de archivos ejecutables instalados por el puerto. Valor por defecto: "
+"<varname>${PORTNAME}</varname>. Los elementos de esta lista se agregan "
+"automáticamente a pkg-plist."
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:165
@@ -575,11 +587,16 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:217
+#, fuzzy
 msgid ""
 "Use `features` to request a list of features supported by the default "
 "compiler. After including [.filename]#bsd.port.pre.mk# the port can inspect "
 "the results using these variables:"
 msgstr ""
+"Use <literal>features</literal> para solicitar una lista de funciones "
+"admitidas por el compilador predeterminado. Después de incluir <filename>bsd."
+"port.pre.mk</filename> el puerto puede inspeccionar los resultados usando "
+"estas variables:"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:219
@@ -3672,10 +3689,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:1155
+#, fuzzy
 msgid ""
 "Provides support for building Qt 5 components. It takes care of setting up "
 "the appropriate configuration environment for the port to build."
 msgstr ""
+"Brinda soporte para la construcción <application>Qt 5</application> "
+"componentes. Se encarga de configurar el entorno de configuración adecuado "
+"para que se cree el puerto."
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:1157
@@ -4217,11 +4238,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:1403
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "BROKEN_SSL=\tlibressl\n"
 "BROKEN_SSL_REASON_libressl=\tneeds features only available in OpenSSL\n"
 msgstr ""
+"BROKEN_SSL=\tlibressl\n"
+"BROKEN_SSL_REASON_libressl=\tnecesita funciones solo disponibles en OpenSSL\n"
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/uses/chapter.adoc:1408
