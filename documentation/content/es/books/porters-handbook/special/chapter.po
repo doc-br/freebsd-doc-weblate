@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-14 11:02-0300\n"
-"PO-Revision-Date: 2021-04-03 12:46+0000\n"
+"PO-Revision-Date: 2021-04-10 02:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/booksporters-handbookspecialchapter/es/>\n"
@@ -480,12 +480,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:188
+#, fuzzy
 msgid ""
 "If the binary package is not generally useful, and the application must "
 "always be compiled from the source code, use `NO_PACKAGE`. For example, if "
 "the application has configuration information that is site specific hard "
 "coded into it at compile time, set `NO_PACKAGE`."
 msgstr ""
+"Si el paquete binario no es útil en general y la aplicación siempre debe "
+"compilarse a partir del código fuente, utilice <varname>NO_PACKAGE</"
+"varname>. Por ejemplo, si la aplicación tiene información de configuración "
+"que es específica del sitio codificada en ella en tiempo de compilación, "
+"establezca<varname>NO_PACKAGE</varname>."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:190
@@ -502,12 +508,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:195
+#, fuzzy
 msgid ""
 "This variable alone indicates that, although we are allowed to generate "
 "binary packages, we may put neither those packages nor the port's "
 "`DISTFILES` onto a CD-ROM (or similar media) for resale. However, the binary "
 "packages and the port's `DISTFILES` will still be available via FTP/HTTP."
 msgstr ""
+"Esta variable por sí sola indica que, aunque se nos permite generar paquetes "
+"binarios, no podemos poner ni esos paquetes ni el puerto <varname>DISTFILES</"
+"varname> en un CD-ROM (o un medio similar) para su reventa. Sin embargo, los "
+"paquetes binarios y el puerto <varname>DISTFILES</varname> seguirá estando "
+"disponible a través de FTP/HTTP."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:197
@@ -553,11 +565,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:211
+#, fuzzy
 msgid ""
 "Set this variable alone if the application's license permits neither "
 "mirroring the application's `DISTFILES` nor distributing the binary package "
 "in any way."
 msgstr ""
+"Establezca esta variable sola si la licencia de la aplicación no permite "
+"duplicar la de la aplicación. <varname>DISTFILES</varname> ni distribuir el "
+"paquete binario de ninguna manera."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:213
@@ -598,12 +614,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:225
+#, fuzzy
 msgid ""
 "If the port has legal concerns not addressed by the above variables, set "
 "`LEGAL_TEXT` to a string explaining the concern. For example, if special "
 "permission was obtained for FreeBSD to redistribute the binary, this "
 "variable must indicate so."
 msgstr ""
+"Si el puerto tiene problemas legales que no se abordan en las variables "
+"anteriores, configure <varname>LEGAL_TEXT</varname> a una cuerda que explica "
+"la preocupación. Por ejemplo, si se obtuvo un permiso especial para que "
+"FreeBSD redistribuya el binario, esta variable debe indicarlo."
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:227
@@ -613,12 +634,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:230
+#, fuzzy
 msgid ""
 "A port which sets any of the above variables must also be added to [."
 "filename]#/usr/ports/LEGAL#. The first column is a glob which matches the "
 "restricted distfiles. The second column is the port's origin. The third "
 "column is the output of `make -VLEGAL`."
 msgstr ""
+"Un puerto que establece cualquiera de las variables anteriores también debe "
+"agregarse a <filename>/usr/ports/LEGAL</filename>. La primera columna es un "
+"glob que coincide con los distfiles restringidos. La segunda columna es el "
+"origen del puerto. La tercera columna es la salida de <command>make "
+"-VLEGAL</command>."
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:232
@@ -656,10 +683,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:246
+#, fuzzy
 msgid ""
 "Note that this stanza must be preceded by an inclusion of [.filename]#bsd."
 "port.pre.mk#."
 msgstr ""
+"Tenga en cuenta que esta estrofa debe ir precedida de una inclusión de "
+"<filename>bsd.port.pre.mk</filename>."
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:248
@@ -694,6 +724,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:260
+#, fuzzy
 msgid ""
 "When setting `MAKE_JOBS_UNSAFE`, it is very important to explain either with "
 "a comment in the [.filename]#Makefile#, or at least in the commit message, "
@@ -701,6 +732,12 @@ msgid ""
 "impossible to either fix the problem, or test if it has been fixed when "
 "committing an update at a later date."
 msgstr ""
+"Al configurar <varname>MAKE_JOBS_UNSAFE</varname>, Es muy importante "
+"explicar con un comentario en el <filename>Makefile</filename>, o al menos "
+"en el mensaje de confirmación, <emphasis>porque</emphasis> el puerto no se "
+"construye cuando se habilita. De lo contrario, es casi imposible solucionar "
+"el problema o probar si se ha solucionado al realizar una actualización en "
+"una fecha posterior."
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:263
@@ -1173,10 +1210,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:540
+#, fuzzy
 msgid ""
 "Now the distribution file is ready to use and we can go ahead and extract "
 "crate dependencies from the bundled [.filename]#Cargo.lock#:"
 msgstr ""
+"Ahora el archivo de distribución está listo para usar y podemos continuar y "
+"extraer las dependencias de la caja del paquete <filename>Cargo."
+"lock</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:551
@@ -1214,10 +1255,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:581
+#, fuzzy
 msgid ""
 "[.filename]#distinfo# needs to be regenerated to contain all the crate "
 "distribution files:"
 msgstr ""
+"<filename>distinfo</filename> necesita ser regenerado para contener todos "
+"los archivos de distribución de cajas:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:599
@@ -1552,11 +1596,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:773
+#, fuzzy
 msgid ""
 "Now the distribution file is ready to use and we can extract the required Go "
 "module dependencies. This step requires having package:ports-mgmt/"
 "modules2tuple[] installed:"
 msgstr ""
+"Ahora el archivo de distribución está listo para usar y podemos extraer las "
+"dependencias del módulo Go necesarias. Este paso requiere tener <package "
+"role=\"port\">ports-mgmt/modules2tuple</package> instalado:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:787
@@ -1594,10 +1642,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:817
+#, fuzzy
 msgid ""
 "[.filename]#distinfo# needs to be regenerated to contain all the "
 "distribution files:"
 msgstr ""
+"<filename>distinfo</filename> necesita ser regenerado para contener todos "
+"los archivos de distribución:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:830
@@ -1673,12 +1724,18 @@ msgstr "Creación de un puerto para una aplicación Haskell alojada en hackage"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:868
+#, fuzzy
 msgid ""
 "When preparing a Haskell Cabal port, the package:devel/hs-cabal-install[] "
 "program is required, so make sure it is installed beforehand. First we need "
 "to define common ports variables that allows cabal-install to fetch the "
 "package distribution file:"
 msgstr ""
+"Al preparar un puerto Haskell Cabal, el <package role=\"port\">devel/hs-"
+"cabal-install</package> Se requiere el programa, así que asegúrese de que "
+"esté instalado de antemano. Primero necesitamos definir variables de puertos "
+"comunes que permitan a cabal-install buscar el archivo de distribución del "
+"paquete:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:874
@@ -1799,10 +1856,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:938
+#, fuzzy
 msgid ""
 "Finally, [.filename]#distinfo# needs to be regenerated to contain all the "
 "distribution files:"
 msgstr ""
+"Finalmente, <filename>distinfo</filename> necesita ser regenerado para "
+"contener todos los archivos de distribución:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:949
@@ -1988,6 +2048,7 @@ msgstr "Manejo de directorios del catálogo de mensajes"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1038
+#, fuzzy
 msgid ""
 "There is a point to note about installing message catalog files. The target "
 "directories for them, which reside under [.filename]#LOCALBASE/share/"
@@ -1998,6 +2059,15 @@ msgid ""
 "plist# and see whether the port is going to install a message catalog file "
 "for a unique language."
 msgstr ""
+"Hay un punto a tener en cuenta sobre la instalación de archivos de catálogo "
+"de mensajes. Los directorios de destino para ellos, que residen en <filename>"
+"LOCALBASE/share/locale</filename>, no debe ser creado y eliminado por un "
+"puerto. Los idiomas más populares tienen sus respectivos directorios "
+"listados en <filename>PORTSDIR/Templates/BSD.local.dist</filename>. Los "
+"directorios de muchos otros idiomas se rigen por la <package role=\"port\">"
+"devel/gettext</package> Puerto. Consulte su <filename>pkg-plist</filename> y "
+"vea si el puerto va a instalar un archivo de catálogo de mensajes para un "
+"idioma único."
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1040
@@ -2077,6 +2147,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1082
+#, fuzzy
 msgid ""
 "Do not use `${SITE_PERL}` in dependency declarations. Doing so assumes that "
 "[.filename]#perl5.mk# has been included, which is not always true. Ports "
@@ -2084,6 +2155,12 @@ msgid ""
 "move later in an upgrade. The right way to declare Perl module dependencies "
 "is shown in the example below."
 msgstr ""
+"No utilice <literal>${SITE_PERL}</literal> en declaraciones de dependencia. "
+"Hacerlo asume que <filename>perl5.mk</filename> se ha incluido, lo que no "
+"siempre es cierto. Los puertos que dependen de este puerto tendrán "
+"dependencias incorrectas si los archivos de este puerto se mueven más "
+"adelante en una actualización. La forma correcta de declarar las "
+"dependencias del módulo Perl se muestra en el siguiente ejemplo."
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1085
@@ -2365,10 +2442,13 @@ msgstr "Fuentes X11"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1245
+#, fuzzy
 msgid ""
 "If the port installs fonts for the X Window System, put them in [."
 "filename]#LOCALBASE/lib/X11/fonts/local#."
 msgstr ""
+"Si el puerto instala fuentes para el sistema X Window, colóquelas en "
+"<filename>LOCALBASE/lib/X11/fonts/local</filename>."
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1247
@@ -2400,6 +2480,7 @@ msgstr "Entradas de escritorio"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1261
+#, fuzzy
 msgid ""
 "Desktop entries (http://standards.freedesktop.org/desktop-entry-spec/latest/"
 "[a Freedesktop standard]) provide a way to automatically adjust desktop "
@@ -2411,6 +2492,18 @@ msgid ""
 "the user, and desktop entries are encouraged for applications which can be "
 "used in a desktop environment."
 msgstr ""
+"Entradas de escritorio(<link xlink:href=\"http://standards.freedesktop.org/"
+"desktop-entry-spec/latest/\">un estándar Freedesktop</link>) proporcionan "
+"una forma de ajustar automáticamente las funciones del escritorio cuando se "
+"instala un nuevo programa, sin requerir la intervención del usuario. Por "
+"ejemplo, los programas recién instalados aparecen automáticamente en los "
+"menús de aplicaciones de entornos de escritorio compatibles. Las entradas de "
+"escritorio se originaron en <application>GNOME</application> entorno de "
+"escritorio, pero ahora son un estándar y también funcionan con "
+"<application>KDE</application> and <application>Xfce</application>. Este "
+"poco de automatización proporciona un beneficio real para el usuario, y se "
+"recomiendan las entradas de escritorio para aplicaciones que se pueden usar "
+"en un entorno de escritorio."
 
 #. type: Title ====
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1263
@@ -2457,9 +2550,11 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1280
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "DESKTOP_ENTRIES=\t\"NAME\" \"COMMENT\" \"ICON\" \"COMMAND\" \"CATEGORY\" StartupNotify\n"
 msgstr ""
+"DESKTOP_ENTRIES=\t\"NOMBRE\" \"COMENTARIO\" \"ICONO\" \"COMANDO\" \"CATEGORÍA"
+"\" StartupNotify\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1283
@@ -2507,11 +2602,17 @@ msgstr "Introducción"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1302
+#, fuzzy
 msgid ""
 "This chapter explains the GNOME framework as used by ports. The framework "
 "can be loosely divided into the base components, GNOME desktop components, "
 "and a few special macros that simplify the work of port maintainers."
 msgstr ""
+"Este capítulo explica <acronym>GNOME</acronym> framework como lo usan los "
+"puertos. El marco se puede dividir libremente en los componentes básicos, "
+"<acronym>GNOME</acronym> componentes de escritorio y algunas macros "
+"especiales que simplifican el trabajo de los encargados de mantenimiento de "
+"puertos."
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1304
@@ -2521,6 +2622,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1307
+#, fuzzy
 msgid ""
 "Adding this variable to the port allows the use of the macros and components "
 "defined in [.filename]#bsd.gnome.mk#. The code in [.filename]#bsd.gnome.mk# "
@@ -2531,6 +2633,16 @@ msgid ""
 "components, GNOME 3 components and legacy components. If the port needs only "
 "GTK3 libraries, this is the shortest way to define it:"
 msgstr ""
+"Agregar esta variable al puerto permite el uso de las macros y componentes "
+"definidos en <filename>bsd.gnome.mk</filename>. El código en <filename>bsd."
+"gnome.mk</filename> agrega las dependencias necesarias de tiempo de "
+"construcción, tiempo de ejecución o biblioteca o el manejo de archivos "
+"especiales. <acronym>GNOME</acronym> aplicaciones bajo FreeBSD usan el "
+"<varname>USE_GNOME</varname> infraestructura. Incluya todos los componentes "
+"necesarios como una lista separada por espacios. los <varname>USE_GNOME</"
+"varname> Los componentes se dividen en estas listas virtuales: componentes "
+"básicos, componentes de GNOME 3 y componentes heredados. Si el puerto solo "
+"necesita bibliotecas GTK3, esta es la forma más corta de definirlo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1311
@@ -2548,11 +2660,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1316
+#, fuzzy
 msgid ""
 "Here is an example [.filename]#Makefile# for a GNOME port that uses many of "
 "the techniques outlined in this document. Please use it as a guide for "
 "creating new ports."
 msgstr ""
+"Aquí hay un ejemplo <filename>Makefile</filename> para un puerto GNOME que "
+"utiliza muchas de las técnicas descritas en este documento. Úselo como guía "
+"para crear nuevos puertos."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1320
@@ -2668,11 +2784,15 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1365
+#, fuzzy
 msgid ""
 "Do not add glib schemas to the [.filename]#pkg-plist#. If they are listed in "
 "[.filename]#pkg-plist#, they will not be registered and the applications "
 "might not work properly."
 msgstr ""
+"No agregue esquemas simplistas al <filename>pkg-plist</filename>. Si se "
+"enumeran en<filename>pkg-plist</filename>, no se registrarán y es posible "
+"que las aplicaciones no funcionen correctamente."
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1367
@@ -3227,6 +3347,7 @@ msgstr "Selección de componentes"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1811
+#, fuzzy
 msgid ""
 "Individual Qt tool and library dependencies must be specified in `USE_QT`. "
 "Every component can be suffixed with `_build` or `_run`, the suffix "
@@ -3238,6 +3359,19 @@ msgid ""
 "components are listed below (all available components are listed in "
 "`_USE_QT_ALL`, and `_USE_QT5_ONLY` in [.filename]#/usr/ports/Mk/Uses/qt.mk#):"
 msgstr ""
+"Las dependencias individuales de la biblioteca y la herramienta Qt deben "
+"especificarse en <varname>USE_QT</varname>. Cada componente puede tener el "
+"sufijo <literal>_build</literal> o <literal>_run</literal>, el sufijo que "
+"indica si la dependencia del componente está en tiempo de construcción o en "
+"tiempo de ejecución. Si no tiene sufijo, se dependerá del componente tanto "
+"en tiempo de ejecución como de compilación. Por lo general, los componentes "
+"de la biblioteca se especifican sin sufijo, los componentes de la "
+"herramienta se especifican principalmente con el<literal>_build</literal> "
+"Los componentes de sufijo y complemento se especifican con el <literal>_run</"
+"literal> sufijo. Los componentes más utilizados se enumeran a continuación ("
+"todos los componentes disponibles se enumeran en <varname>_USE_QT_ALL</"
+"varname>, y <varname>_USE_QT5_ONLY</varname> en <filename>/usr/ports/Mk/Uses/"
+"qt.mk</filename>):"
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:1812
@@ -4359,11 +4493,15 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2767
+#, fuzzy
 msgid ""
 "This is a simple example, `USE_LXQT` adds a dependency on LXQt libraries. "
 "Required LXQt components and other dependencies can be determined from the "
 "configure log."
 msgstr ""
+"Este es un ejemplo simple, <literal>USE_LXQT</literal> agrega una "
+"dependencia en las bibliotecas LXQt. Los componentes LXQt necesarios y otras "
+"dependencias se pueden determinar a partir del registro de configuración."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2773
@@ -4596,6 +4734,7 @@ msgstr "Mejores prácticas"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2923
+#, fuzzy
 msgid ""
 "When porting a Java library, the port has to install the JAR file(s) in [."
 "filename]#${JAVAJARDIR}#, and everything else under [.filename]#"
@@ -4604,6 +4743,14 @@ msgid ""
 "filename]#Makefile#. Use this statement (where [.filename]#myport.jar# is "
 "the name of the JAR file installed as part of the port):"
 msgstr ""
+"Al migrar una biblioteca de Java, el puerto tiene que instalar el (los) "
+"archivo (s) JAR en <filename>${JAVAJARDIR}</filename>, y todo lo demás "
+"debajo <filename>${JAVASHAREDIR}/${PORTNAME}</filename> (excepto la "
+"documentación, ver más abajo). Para reducir el tamaño del archivo de "
+"embalaje, haga referencia a los archivos JAR directamente en el "
+"<filename>Makefile</filename>. Utilice esta declaración (donde "
+"<filename><replaceable>myport</replaceable>.jar</filename> es el nombre del "
+"archivo JAR instalado como parte del puerto):"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2927
@@ -4613,6 +4760,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2930
+#, fuzzy
 msgid ""
 "When porting a Java application, the port usually installs everything under "
 "a single directory (including its JAR dependencies). The use of [.filename]#"
@@ -4621,6 +4769,12 @@ msgid ""
 "dependencies under this directory or uses the already installed ones (from [."
 "filename]#${JAVAJARDIR}#)."
 msgstr ""
+"Al portar una aplicación Java, el puerto generalmente instala todo en un "
+"solo directorio (incluidas sus dependencias JAR). El uso de "
+"<filename>${JAVASHAREDIR}/${PORTNAME}</filename> se recomienda "
+"encarecidamente a este respecto. Depende del portero decidir si el puerto "
+"instala las dependencias JAR adicionales en este directorio o utiliza las ya "
+"instaladas (desde <filename>${JAVAJARDIR}</filename>)."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2932
@@ -4733,9 +4887,9 @@ msgstr "Aplicaciones web, Apache y PHP"
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2964
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Apache"
-msgstr ""
+msgstr "apache"
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:2967
@@ -4835,11 +4989,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3031
+#, fuzzy
 msgid ""
 "Do not depend on Apache unless the web app explicitly needs Apache. Respect "
 "that users may wish to run a web application on a web server other than "
 "Apache."
 msgstr ""
+"No dependa de Apache a menos que la aplicación web necesite Apache "
+"explícitamente. Respete que los usuarios deseen ejecutar una aplicación web "
+"en un servidor web que no sea <application>Apache</application>."
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3033
@@ -5123,10 +5281,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3203
+#, fuzzy
 msgid ""
 "A complete list of available variables can be found in [.filename]#/usr/"
 "ports/Mk/Uses/python.mk#."
 msgstr ""
+"Puede encontrar una lista completa de variables disponibles en <filename>/"
+"usr/ports/Mk/Uses/python.mk</filename>."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3207
@@ -5296,12 +5457,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3302
+#, fuzzy
 msgid ""
 "This table shows the selected variables available to port authors via the "
 "ports infrastructure. These variables are used to install files into their "
 "proper locations. Use them in [.filename]#pkg-plist# as much as possible. Do "
 "not redefine these variables in the port."
 msgstr ""
+"esta tabla muestra las variables seleccionadas disponibles para los autores "
+"de puertos a través de la infraestructura de puertos. Estas variables se "
+"utilizan para instalar archivos en sus ubicaciones adecuadas. Úselos en "
+"<filename>pkg-plist</filename> as much as possible. No redefina estas "
+"variables en el puerto."
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3303
@@ -5344,10 +5511,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3336
+#, fuzzy
 msgid ""
 "A complete list of available variables can be found in [.filename]#/usr/"
 "ports/Mk/bsd.ruby.mk#."
 msgstr ""
+"Puede encontrar una lista completa de variables disponibles en <filename>/"
+"usr/ports/Mk/bsd.ruby.mk</filename>."
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3338
@@ -5524,15 +5694,21 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3395
+#, fuzzy
 msgid ""
 "There are many versions of the wxWidgets libraries which conflict between "
 "them (install files under the same name). In the ports tree this problem has "
 "been solved by installing each version under a different name using version "
 "number suffixes."
 msgstr ""
+"Hay muchas versiones del <application>wxWidgets</application> bibliotecas "
+"que entran en conflicto entre ellas (instalan archivos con el mismo nombre). "
+"En el árbol de puertos, este problema se ha resuelto instalando cada versión "
+"con un nombre diferente utilizando sufijos de número de versión."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3397
+#, fuzzy
 msgid ""
 "The obvious disadvantage of this is that each application has to be modified "
 "to find the expected version. Fortunately, most of the applications call the "
@@ -5542,6 +5718,14 @@ msgid ""
 "argument, to specify which `wx-config` script to call. Otherwise they have "
 "to be patched."
 msgstr ""
+"La desventaja obvia de esto es que cada aplicación debe modificarse para "
+"encontrar la versión esperada. Afortunadamente, la mayoría de las "
+"aplicaciones llaman al <command>wx-config</command> script para determinar "
+"los indicadores necesarios del compilador y del enlazador. El script recibe "
+"un nombre diferente para cada versión disponible. La mayoría de las "
+"aplicaciones respetan una variable de entorno o aceptan un argumento de "
+"configuración para especificar qué <command>wx-config</command> script para "
+"llamar. De lo contrario, deben ser parcheados."
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3399
@@ -6024,12 +6208,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3682
+#, fuzzy
 msgid ""
 "There are many versions of the Lua libraries and corresponding interpreters, "
 "which conflict between them (install files under the same name). In the "
 "ports tree this problem has been solved by installing each version under a "
 "different name using version number suffixes."
 msgstr ""
+"Hay muchas versiones del <application>Lua</application> bibliotecas e "
+"intérpretes correspondientes, que entran en conflicto entre ellos (instalan "
+"archivos con el mismo nombre). En el árbol de puertos, este problema se ha "
+"resuelto instalando cada versión con un nombre diferente utilizando sufijos "
+"de número de versión."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3684
@@ -6044,12 +6234,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3686
+#, fuzzy
 msgid ""
 "Applications that use Lua should normally build for just one version. "
 "However, loadable modules for Lua are built in a separate flavor for each "
 "Lua version that they support, and dependencies on such modules should "
 "specify the flavor using the `@${LUA_FLAVOR}` suffix on the port origin."
 msgstr ""
+"Aplicaciones que utilizan <application>Lua</application> normalmente debería "
+"compilarse para una sola versión. Sin embargo, los módulos cargables para "
+"Lua se construyen en un tipo diferente para cada versión de Lua que admiten, "
+"y las dependencias de dichos módulos deben especificar el tipo utilizando el "
+"<literal>@${LUA_FLAVOR}</literal> sufijo en el origen del puerto."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3691
@@ -6165,11 +6361,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3734
+#, fuzzy
 msgid ""
 "Since each flavor must have a different package name, the variable "
 "`LUA_PKGNAMEPREFIX` is provided which will be set to an appropriate value; "
 "the intended usage is:"
 msgstr ""
+"Dado que cada sabor debe tener un nombre de paquete diferente, la variable "
+"<varname>LUA_PKGNAMEPREFIX</varname> se proporciona que se establecerá en un "
+"valor apropiado; el uso previsto es:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3738
@@ -6492,11 +6692,15 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3947
+#, fuzzy
 msgid ""
 "Sometimes a program has an `ld` argument or search path hardcoded in a [."
 "filename]#Makefile# or configure script. This approach can be used to solve "
 "that problem:"
 msgstr ""
+"A veces, un programa tiene una <command>ld</command> argumento o ruta de "
+"búsqueda codificada en un <filename>Makefile</filename> o configurar el "
+"script. Este enfoque se puede utilizar para resolver ese problema.:"
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:3949
@@ -6908,9 +7112,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4161
+#, fuzzy
 msgid ""
 "An example simple [.filename]#rc.d# script to start the doormand daemon:"
 msgstr ""
+"Un ejemplo simple <filename>rc.d</filename> script para iniciar el demonio "
+"doormand:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4165
@@ -7024,12 +7231,18 @@ msgstr "Si el script no inicia un servicio persistente, esto no es necesario."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4215
+#, fuzzy
 msgid ""
 "For optional configuration elements the \"=\" style of default variable "
 "assignment is preferable to the \":=\" style here, since the former sets a "
 "default value only if the variable is unset, and the latter sets one if the "
 "variable is unset _or_ null. A user might very well include something like:"
 msgstr ""
+"Para elementos de configuración opcionales, \"=\" El estilo de asignación de "
+"variables por defecto es preferible al\":=\"estilo aquí, ya que el primero "
+"establece un valor predeterminado solo si la variable no está configurada, y "
+"el segundo establece uno si la variable no está configurada <emphasis>o</"
+"emphasis> null. Un usuario podría incluir algo como:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4219
@@ -7039,11 +7252,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4222
+#, fuzzy
 msgid ""
 "in their [.filename]#rc.conf.local#, and a variable substitution using \":="
 "\" would inappropriately override the user's intention. The `_enable` "
 "variable is not optional, and must use the \":\" for the default."
 msgstr ""
+"en su <filename>rc.conf.local</filename>, y una sustitución de variable "
+"usando \":=\" anularía inapropiadamente la intención del usuario. los "
+"<literal>_enable</literal> La variable no es opcional y debe utilizar \":\" "
+"como valor predeterminado."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4226
@@ -7063,18 +7281,25 @@ msgstr "Lista de verificación previa al compromiso"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4232
+#, fuzzy
 msgid ""
 "Before contributing a port with an [.filename]#rc.d# script, and more "
 "importantly, before committing one, please consult this checklist to be sure "
 "that it is ready."
 msgstr ""
+"Antes de aportar un puerto con <filename>rc.d</filename> script y, lo que es "
+"más importante, antes de enviar uno, consulte esta lista de verificación "
+"para asegurarse de que esté listo."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4234
+#, fuzzy
 msgid ""
 "The package:devel/rclint[] port can check for most of these, but it is not a "
 "substitute for proper review."
 msgstr ""
+"El <package role=\"port\">devel/rclint</package> puerto puede comprobar la "
+"mayoría de estos, pero no sustituye a una revisión adecuada."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4237
@@ -7119,12 +7344,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4242
+#, fuzzy
 msgid ""
 "Make sure there is no `KEYWORD: FreeBSD` present. This has not been "
 "necessary nor desirable for years. It is also an indication that the new "
 "script was copy/pasted from an old script, so extra caution must be given to "
 "the review."
 msgstr ""
+"Asegúrese de que no haya <literal>KEYWORD: FreeBSD</literal> presente. Esto "
+"no ha sido necesario ni deseable durante años. También es una indicación de "
+"que la nueva secuencia de comandos se copió / pegó de una secuencia de "
+"comandos anterior, por lo que se debe prestar especial atención a la "
+"revisión."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4243
@@ -7194,10 +7425,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4257
+#, fuzzy
 msgid ""
 "Does the script execute any code unconditionally? This is frowned on. "
 "Usually these things must be dealt with through a `start_precmd`."
 msgstr ""
+"¿El script ejecuta algún código incondicionalmente? Esto está mal visto. Por "
+"lo general, estas cosas deben tratarse a través de un "
+"<function>start_precmd</function>."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/special/chapter.adoc:4258
