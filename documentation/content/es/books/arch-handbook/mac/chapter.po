@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-02 12:02+0000\n"
+"PO-Revision-Date: 2021-04-10 02:51+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/booksarch-handbookmacchapter/es/>\n"
@@ -37,6 +37,7 @@ msgstr "Copyright de la documentación MAC"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:41
+#, fuzzy
 msgid ""
 "This documentation was developed for the FreeBSD Project by Chris Costello "
 "at Safeport Network Services and Network Associates Laboratories, the "
@@ -44,6 +45,11 @@ msgid ""
 "contract N66001-01-C-8035 (\"CBOSS\"), as part of the DARPA CHATS research "
 "program."
 msgstr ""
+"Esta documentación fue desarrollada para el Proyecto FreeBSD por Chris "
+"Costello en Safeport Network Services y Network Associates Laboratories, la "
+"División de Investigación de Seguridad de Network Associates, Inc. bajo el "
+"contrato DARPA / SPAWAR N66001-01-C-8035 (<quote>CBOSS</quote>), como parte "
+"del programa de investigación DARPA CHATS."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:43
@@ -581,6 +587,7 @@ msgstr "Registro de pólizas"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:130
+#, fuzzy
 msgid ""
 "The MAC Framework maintains two lists of active policies: a static list, and "
 "a dynamic list. The lists differ only with regards to their locking "
@@ -595,6 +602,21 @@ msgid ""
 "(some policies may only be loaded prior to boot). Likewise, de-registration "
 "may fail if a policy is flagged as not unloadable."
 msgstr ""
+"MAC Framework mantiene dos listas de políticas activas: una lista estática y "
+"una lista dinámica. Las listas difieren solo con respecto a su semántica de "
+"bloqueo: no se requiere un recuento de referencias elevado para hacer uso de "
+"la lista estática. Cuando se cargan los módulos del kernel que contienen "
+"políticas de MAC Framework, el módulo de políticas utilizará "
+"<literal>SYSINIT</literal> para invocar una función de registro; cuando se "
+"descarga un módulo de políticas, <literal>SYSINIT</literal> también invocará "
+"una función de cancelación de registro. El registro puede fallar si un "
+"módulo de política se carga más de una vez, si no hay suficientes recursos "
+"disponibles para el registro (por ejemplo, la política puede requerir "
+"etiquetado y el estado de etiquetado insuficiente puede estar disponible), o "
+"es posible que no se cumplan otros requisitos previos de la política ("
+"algunas políticas solo se puede cargar antes del arranque). Del mismo modo, "
+"la cancelación del registro puede fallar si una póliza está marcada como no "
+"descargable."
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:132
@@ -714,6 +736,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:147
+#, fuzzy
 msgid ""
 "In-memory labels are stored in slab-allocated `struct label`, which consists "
 "of a fixed-length array of unions, each holding a `void *` pointer and a "
@@ -730,6 +753,25 @@ msgid ""
 "is the process credential, which must be manually dereferenced to access the "
 "credential label. This may change in future revisions of the MAC Framework."
 msgstr ""
+"Las etiquetas en memoria se almacenan en bloques asignados <varname remap="
+"\"structname\">etiqueta de estructura</varname>, que consiste en una matriz "
+"de uniones de longitud fija, cada una con un <literal>void *</"
+"literal>Puntero y un <literal>largo</literal>. A las políticas que se "
+"registren para el almacenamiento de etiquetas se les asignará un "
+"identificador de \"ranura\", que se puede utilizar para eliminar la "
+"referencia al almacenamiento de etiquetas. La semántica del almacenamiento "
+"se deja enteramente en manos del módulo de políticas: los módulos se "
+"proporcionan con una variedad de puntos de entrada asociados con el ciclo de "
+"vida del objeto del kernel, incluida la inicialización, asociación / "
+"creación y destrucción. Con estas interfaces, es posible implementar el "
+"recuento de referencias y otros modelos de almacenamiento. Los módulos de "
+"políticas generalmente no requieren acceso directo a la estructura del "
+"objeto para recuperar una etiqueta, ya que MAC Framework generalmente pasa "
+"tanto un puntero al objeto como un puntero directo a la etiqueta del objeto "
+"en los puntos de entrada. La principal excepción a esta regla es la "
+"credencial del proceso, que debe eliminarse manualmente para acceder a la "
+"etiqueta de la credencial. Esto puede cambiar en futuras revisiones del MAC "
+"Framework."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:149
@@ -769,6 +811,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:151
+#, fuzzy
 msgid ""
 "In the case of file system labels, special support is provided for the "
 "persistent storage of security labels in extended attributes. Where "
@@ -782,6 +825,20 @@ msgid ""
 "extended attribute need not be directly accessed with every access control "
 "check."
 msgstr ""
+"En el caso de las etiquetas del sistema de archivos, se proporciona un "
+"soporte especial para el almacenamiento persistente de etiquetas de "
+"seguridad en atributos extendidos. Donde están disponibles, las "
+"transacciones de atributos extendidos se utilizan para permitir "
+"actualizaciones compuestas consistentes de etiquetas de seguridad en vnodes; "
+"actualmente, este soporte solo está presente en el sistema de archivos UFS2. "
+"Los autores de políticas pueden optar por implementar etiquetas de objetos "
+"del sistema de archivos de múltiples etiquetas utilizando uno (o más) "
+"atributos extendidos. Por razones de eficiencia, la etiqueta "
+"vnode(<literal>v_label</literal>) es un caché de cualquier etiqueta en disco;"
+" las políticas pueden cargar valores en la caché cuando se crea una "
+"instancia del vnode y actualizar la caché según sea necesario. Como "
+"resultado, no es necesario acceder directamente al atributo extendido con "
+"cada verificación de control de acceso."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:155
@@ -814,6 +871,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:163
+#, fuzzy
 msgid ""
 "The label management calls accept a label description structure, `struct "
 "mac`, which contains a series of MAC label elements. Each element contains a "
@@ -826,6 +884,20 @@ msgid ""
 "memory allocation and error handling, simplifying user applications that "
 "must manage labels."
 msgstr ""
+"Las llamadas de gestión de etiquetas aceptan una estructura de descripción "
+"de etiquetas, <varname remap=\"structname\">estructura mac</varname>, que "
+"contiene una serie de elementos de etiqueta MAC. Cada elemento contiene un "
+"nombre de cadena de caracteres y un valor de cadena de caracteres. A cada "
+"póliza se le dará la oportunidad de reclamar un nombre de elemento en "
+"particular, permitiendo que las pólizas expongan múltiples elementos "
+"independientes si lo desea. Los módulos de políticas realizan la "
+"internalización y externalización entre las etiquetas del kernel y las "
+"etiquetas proporcionadas por el usuario a través de puntos de entrada, lo "
+"que permite una variedad de semánticas. Las llamadas al sistema de "
+"administración de etiquetas generalmente están envueltas por las funciones "
+"de la biblioteca del usuario para realizar la asignación de memoria y el "
+"manejo de errores, lo que simplifica las aplicaciones de usuario que deben "
+"administrar las etiquetas.."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:165
@@ -878,11 +950,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:173
+#, fuzzy
 msgid ""
 "`mac_syscall()` permits policy modules to create new system calls without "
 "modifying the system call table; it accepts a target policy name, operation "
 "number, and opaque argument for use by the policy."
 msgstr ""
+"<function>mac_syscall()</function> permite que los módulos de políticas "
+"creen nuevas llamadas al sistema sin modificar la tabla de llamadas al "
+"sistema; acepta un nombre de política de destino, un número de operación y "
+"un argumento opaco para que lo utilice la política."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:174
@@ -909,12 +986,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:177
+#, fuzzy
 msgid ""
 "`mac_execve()` is identical to the `execve()` system call, only it also "
 "accepts a requested label to set the process label to when beginning "
 "execution of a new program. This change in label on execution is referred to "
 "as a \"transition\"."
 msgstr ""
+"<function>mac_execve()</function> Es idéntico al <function>execve()</"
+"function> llamada al sistema, solo que también acepta una etiqueta "
+"solicitada para establecer la etiqueta del proceso al comenzar la ejecución "
+"de un nuevo programa. Este cambio de etiqueta en la ejecución se denomina "
+"\"transición\"."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:178
@@ -1019,12 +1102,18 @@ msgstr "Declaración de política"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:198
+#, fuzzy
 msgid ""
 "Modules may be declared using the `MAC_POLICY_SET()` macro, which names the "
 "policy, provides a reference to the MAC entry point vector, provides load-"
 "time flags determining how the policy framework should handle the policy, "
 "and optionally requests the allocation of label state by the framework."
 msgstr ""
+"Los módulos se pueden declarar utilizando el <function>MAC_POLICY_SET()</"
+"function>macro, que nombra la política, proporciona una referencia al vector "
+"de punto de entrada MAC, proporciona indicadores de tiempo de carga que "
+"determinan cómo el marco de políticas debe manejar la política y, "
+"opcionalmente, solicita la asignación del estado de la etiqueta por el marco."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:212
@@ -1045,6 +1134,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:215
+#, fuzzy
 msgid ""
 "The MAC policy entry point vector, `mac__policy__ops` in this example, "
 "associates functions defined in the module with specific entry points. A "
@@ -1062,6 +1152,25 @@ msgid ""
 "careful about what kernel primitives they invoke so as to avoid lock "
 "ordering or sleeping problems."
 msgstr ""
+"El vector de punto de entrada de la política "
+"MAC,<varname>mac_<replaceable>policy</replaceable>_ops</varname> en este "
+"ejemplo, asocia funciones definidas en el módulo con puntos de entrada "
+"específicos. Puede encontrar una lista completa de los puntos de entrada "
+"disponibles y sus prototipos en la sección de referencia del punto de "
+"entrada MAC. De especial interés durante el registro del módulo son los "
+"<symbol>.mpo_destroy</symbol> y <symbol>.mpo_init</symbol> puntos de "
+"entrada.<symbol>.mpo_init</symbol> se invocará una vez que una política se "
+"registre con éxito en el marco del módulo, pero antes de que cualquier otro "
+"punto de entrada se active. Esto permite que la política realice cualquier "
+"asignación e inicialización específica de la política, como la "
+"inicialización de datos o bloqueos. <symbol>.mpo_destroy</symbol> se "
+"invocará cuando se descargue un módulo de políticas para permitir la "
+"liberación de cualquier memoria asignada y la destrucción de bloqueos. "
+"Actualmente, estos dos puntos de entrada se invocan con el mutex de la lista "
+"de políticas MAC retenido para evitar que se invoquen otros puntos de "
+"entrada: esto se cambiará, pero mientras tanto, las políticas deben tener "
+"cuidado con las primitivas del kernel que invocan para evitar Bloqueo de "
+"pedidos o problemas para dormir."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:217
@@ -1147,6 +1256,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:231
+#, fuzzy
 msgid ""
 "This flag indicates that the policy module requires labeling of Mbufs, and "
 "that memory should always be allocated for the storage of Mbuf labels. By "
@@ -1157,9 +1267,20 @@ msgid ""
 "allocate Mbuf label storage regardless of the setting of this flag, and may "
 "be useful in some environments."
 msgstr ""
+"Esta bandera indica que el módulo de políticas requiere el etiquetado de "
+"Mbufs y que siempre se debe asignar memoria para el almacenamiento de "
+"etiquetas Mbuf. De forma predeterminada, MAC Framework no asignará "
+"almacenamiento de etiquetas para Mbufs a menos que al menos una política "
+"cargada tenga esta bandera establecida. Esto mejora considerablemente el "
+"rendimiento de la red cuando las políticas no requieren el etiquetado Mbuf. "
+"Una opción de kernel, <literal>MAC_ALWAYS_LABEL_MBUF</literal>, existe para "
+"obligar a MAC Framework a asignar almacenamiento de etiquetas Mbuf "
+"independientemente de la configuración de esta marca, y puede ser útil en "
+"algunos entornos."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:235
+#, fuzzy
 msgid ""
 "Policies using the `MPC_LOADTIME_FLAG_LABELMBUFS` without the "
 "`MPC_LOADTIME_FLAG_NOTLATE` flag set must be able to correctly handle `NULL` "
@@ -1169,6 +1290,15 @@ msgid ""
 "is active (i.e., the policy is not being loaded late), then all Mbufs are "
 "guaranteed to have label storage."
 msgstr ""
+"Políticas que utilizan <literal>MPC_LOADTIME_FLAG_LABELMBUFS</literal> sin "
+"el <literal>MPC_LOADTIME_FLAG_NOTLATE</literal> el conjunto de banderas debe "
+"poder manejar correctamente <literal>NULL</literal>Los punteros de etiqueta "
+"Mbuf pasaron a puntos de entrada. Esto es necesario ya que los Mbufs en "
+"vuelo sin almacenamiento de etiquetas pueden persistir después de que se "
+"haya cargado una política que habilita el etiquetado Mbuf. Si una política "
+"se carga antes de que el subsistema de red esté activo (es decir, la "
+"política no se carga tarde), entonces se garantiza que todos los Mbufs "
+"tienen almacenamiento de etiquetas."
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:238
@@ -1178,6 +1308,7 @@ msgstr "Puntos de entrada de políticas"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:241
+#, fuzzy
 msgid ""
 "Four classes of entry points are offered to policies registered with the "
 "framework: entry points associated with the registration and management of "
@@ -1188,6 +1319,15 @@ msgid ""
 "entry point is provided so that policies may extend the kernel interface "
 "without registering new system calls."
 msgstr ""
+"Nuestras clases de puntos de entrada se ofrecen a las políticas registradas "
+"en el marco: puntos de entrada asociados con el registro y la gestión de "
+"políticas, puntos de entrada que denotan inicialización, creación, "
+"destrucción y otros eventos del ciclo de vida de los objetos del kernel, "
+"eventos asociados con decisiones de control de acceso que el módulo de "
+"políticas puede influir y las llamadas asociadas con la gestión de etiquetas "
+"en objetos. Además <function>mac_syscall()</function> Se proporciona un "
+"punto de entrada para que las políticas puedan extender la interfaz del "
+"kernel sin registrar nuevas llamadas al sistema."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:243
@@ -1408,6 +1548,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:360
+#, fuzzy
 msgid ""
 "This entry point permits policy modules to perform MAC-related events when a "
 "thread returns to user space, via a system call return, trap return, or "
@@ -1424,6 +1565,24 @@ msgid ""
 "to scheduling an AST and the AST being performed may be complex and "
 "interlaced in multithreaded applications."
 msgstr ""
+"Este punto de entrada permite que los módulos de políticas realicen eventos "
+"relacionados con MAC cuando un hilo regresa al espacio del usuario, a través "
+"de un retorno de llamada al sistema, retorno de trampa o de otra manera. "
+"Esto es necesario para las políticas que tienen etiquetas de proceso "
+"flotantes, ya que no siempre es posible adquirir el bloqueo del proceso en "
+"puntos arbitrarios de la pila durante el procesamiento de llamadas al "
+"sistema; Las etiquetas de proceso pueden representar datos de autenticación "
+"tradicionales, información del historial de procesos u otros datos. Para "
+"emplear este mecanismo, los cambios previstos en la etiqueta de credenciales "
+"del proceso pueden almacenarse en el <literal>p_label</literal>protegido por "
+"un bloqueo de giro por política y, a continuación, establezca el "
+"<literal>TDF_ASTPENDING</literal> bandera y por proceso "
+"<literal>PS_MACPENDM</literal>bandera para programar una llamada al punto de "
+"entrada userret. Desde este punto de entrada, la política puede crear una "
+"credencial de reemplazo con menos preocupación por el contexto de bloqueo. "
+"Se advierte a los redactores de políticas que el orden de eventos "
+"relacionado con la programación de un AST y el AST que se está realizando "
+"puede ser complejo y entrelazado en aplicaciones multiproceso."
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:362
@@ -2743,6 +2902,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:1559
+#, fuzzy
 msgid ""
 "Object specific events do not generally fall into the other broad classes of "
 "label events, but will generally provide an opportunity to modify or update "
@@ -2751,6 +2911,13 @@ msgid ""
 "entry point as a result of the acceptance of an additional mbuf to that "
 "queue."
 msgstr ""
+"Los eventos específicos de objetos generalmente no se incluyen en las otras "
+"clases amplias de eventos de etiqueta, pero generalmente brindan la "
+"oportunidad de modificar o actualizar la etiqueta de un objeto en función de "
+"un contexto adicional. Por ejemplo, la etiqueta en una cola de reensamblado "
+"de fragmentos de IP puede actualizarse durante la <symbol>MAC_UPDATE_IPQ</"
+"symbol> punto de entrada como resultado de la aceptación de un mbuf "
+"adicional a esa cola."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:1561
@@ -2773,6 +2940,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:1565
+#, fuzzy
 msgid ""
 "In addition to labels associated with specific kernel objects, an additional "
 "class of labels exists: temporary labels. These labels are used to store "
@@ -2781,6 +2949,13 @@ msgid ""
 "MAC_INTERNALIZE, which accepts a user label to be converted to an in-kernel "
 "representation."
 msgstr ""
+"Además de las etiquetas asociadas con objetos específicos del kernel, existe "
+"una clase adicional de etiquetas: etiquetas temporales. Estas etiquetas se "
+"utilizan para almacenar información actualizada enviada por procesos de "
+"usuario. Estas etiquetas se inicializan y destruyen como con otros tipos de "
+"etiquetas, pero el evento de creación es <symbol>MAC_INTERNALIZE</symbol>, "
+"que acepta una etiqueta de usuario para convertirla en una representación en "
+"el kernel."
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:1567
@@ -4475,12 +4650,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2852
+#, fuzzy
 msgid ""
 "Set the label on the mbuf header of a newly created datagram generated by "
 "the IP stack in response to an existing received datagram (`oldmbuf`). This "
 "call may be made in a number of situations, including when responding to "
 "ICMP request datagrams."
 msgstr ""
+"Establezca la etiqueta en el encabezado mbuf de un datagrama recién creado "
+"generado por la pila de IP en respuesta a un datagrama recibido existente "
+"(<parameter>oldmbuf</parameter>). Esta llamada puede realizarse en varias "
+"situaciones, incluso al responder a datagramas de solicitud ICMP."
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2854
@@ -4529,6 +4709,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2893
+#, fuzzy
 msgid ""
 "Determine whether an mbuf header containing an IP datagram (`fragment`) "
 "fragment matches the label of the passed IP fragment reassembly queue "
@@ -4540,6 +4721,18 @@ msgid ""
 "policy does not permit them to be reassembled based on the label or other "
 "information."
 msgstr ""
+"Determine si un encabezado mbuf que contiene un datagrama IP "
+"(<parameter>fragment</parameter>) el fragmento coincide con la etiqueta de "
+"la cola de reensamblado del fragmento de IP pasada "
+"(<parameter>ipq</parameter>). Regreso (<returnvalue>1</returnvalue>) para "
+"una coincidencia exitosa, o (<returnvalue>0</returnvalue>) sin partido. Esta "
+"llamada se realiza cuando la pila de IP intenta encontrar una cola de "
+"reensamblado de fragmentos existente para un fragmento recién recibido; si "
+"esto falla, se puede crear una nueva cola de reensamblado de fragmentos para "
+"el fragmento. Las políticas pueden utilizar este punto de entrada para "
+"evitar el reensamblaje de fragmentos de IP que de otro modo coincidirían si "
+"la política no permite que se vuelvan a ensamblar en función de la etiqueta "
+"u otra información."
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2895
@@ -6493,6 +6686,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:4455
+#, fuzzy
 msgid ""
 "Determine whether the subject credential can retrieve the extended attribute "
 "with the passed namespace and name from the passed vnode. Policies "
@@ -6501,6 +6695,14 @@ msgid ""
 "or an `errno` value for failure. Suggested failure: EACCES for label "
 "mismatch, or EPERM for lack of privilege."
 msgstr ""
+"Determine si la credencial del sujeto puede recuperar el atributo extendido "
+"con el espacio de nombres pasado y el nombre del vnode pasado. Las políticas "
+"que implementan el etiquetado utilizando atributos extendidos pueden estar "
+"interesadas en el manejo especial de operaciones en esos atributos "
+"extendidos. Regreso <returnvalue>0</returnvalue> para el éxito, o un "
+"<varname>errno</varname>valor por fracaso. Fallo sugerido: "
+"<errorcode>EACCES</errorcode> si la etiqueta no coincide, o "
+"<errorcode>EPERM</errorcode> por falta de privilegio."
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:4457
@@ -7248,6 +7450,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:5102
+#, fuzzy
 msgid ""
 "Determine whether the subject credential can set the extended attribute of "
 "passed name and passed namespace on the passed vnode. Policies implementing "
@@ -7259,6 +7462,18 @@ msgid ""
 "for success, or an `errno` value for failure. Suggested failure: EACCES for "
 "label mismatch, or EPERM for lack of privilege."
 msgstr ""
+"Determine si la credencial del sujeto puede establecer el atributo extendido "
+"de nombre pasado y espacio de nombres pasado en el vnode pasado. Las "
+"políticas que implementan etiquetas de seguridad respaldadas en atributos "
+"extendidos pueden querer proporcionar protecciones adicionales para esos "
+"atributos. Además, las políticas deben evitar tomar decisiones basadas en "
+"los datos referenciados de <parameter>uio</parameter>,ya que existe una "
+"condición de carrera potencial entre esta verificación y la operación real. "
+"los <parameter>uio</parameter> tambien puede ser <literal>NULL</literal> si "
+"se está realizando una operación de eliminación. Regreso <returnvalue>0</"
+"returnvalue> para el éxito, o un <varname>errno</varname> valor por fracaso. "
+"Fallo sugerido:<errorcode>EACCES</errorcode> si la etiqueta no coincide, o "
+"<errorcode>EPERM</errorcode> por falta de privilegio."
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:5104
