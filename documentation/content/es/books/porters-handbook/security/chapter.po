@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-14 11:02-0300\n"
-"PO-Revision-Date: 2021-04-02 12:03+0000\n"
+"PO-Revision-Date: 2021-04-10 02:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/booksporters-handbooksecuritychapter/es/>\n"
@@ -109,6 +109,7 @@ msgstr "Reparación de vulnerabilidades de seguridad"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:45
+#, fuzzy
 msgid ""
 "While on the subject of ports and packages, a security vulnerability may "
 "initially appear in the original distribution or in the port files. In the "
@@ -120,6 +121,17 @@ msgid ""
 "case, follow <<port-upgrading,the standard procedure for submitting "
 "changes>> unless having rights to commit it directly to the ports tree."
 msgstr ""
+"En el tema de puertos y paquetes, una vulnerabilidad de seguridad puede "
+"aparecer inicialmente en la distribución original o en los archivos del "
+"puerto. En el primer caso, es probable que el desarrollador de software "
+"original lance un parche o una nueva versión al instante. Actualice el "
+"puerto de inmediato con respecto a la corrección del autor. Si la reparación "
+"se retrasa por algún motivo,<link linkend=\"dads-noinstall\">marcar el "
+"puerto como <varname>FORBIDDEN</varname></link> o introduzca un archivo de "
+"parche en el puerto. En el caso de un puerto vulnerable, simplemente arregle "
+"el puerto lo antes posible. En cualquier caso, siga <link linkend=\"port-"
+"upgrading\">el procedimiento estándar para enviar cambios</link> a menos que "
+"tenga derechos para enviarlo directamente al árbol de puertos."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:49
@@ -133,6 +145,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:52
+#, fuzzy
 msgid ""
 "Please make sure that the port's revision is bumped as soon as the "
 "vulnerability has been closed. That is how the users who upgrade installed "
@@ -145,6 +158,18 @@ msgid ""
 "`DISTVERSION`. Please refer to the <<makefile-naming-revepoch,corresponding "
 "section>> for more information."
 msgstr ""
+"Asegúrese de que la revisión del puerto se elimine tan pronto como se cierre "
+"la vulnerabilidad. Así es como los usuarios que actualizan los paquetes "
+"instalados de forma regular verán que necesitan ejecutar una actualización. "
+"Además, se construirá y distribuirá un nuevo paquete a través de espejos FTP "
+"y WWW, reemplazando al vulnerable. Bache <varname>PORTREVISION</varname> a "
+"no ser que <varname>DISTVERSION</varname> ha cambiado en el curso de la "
+"corrección de la vulnerabilidad. Es decir, golpe <varname>PORTREVISION</"
+"varname> si agrega un archivo de parche al puerto, pero no lo golpee si "
+"actualiza el puerto a la última versión del software y, por lo tanto, ya lo "
+"tocó<varname>DISTVERSION</varname>. por favor refiérase a <link linkend"
+"=\"makefile-naming-revepoch\">sección correspondiente</link> para más "
+"información."
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:54
@@ -160,6 +185,7 @@ msgstr "La base de datos VuXML"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:60
+#, fuzzy
 msgid ""
 "A very important and urgent step to take as early after a security "
 "vulnerability is discovered as possible is to notify the community of port "
@@ -171,9 +197,20 @@ msgid ""
 "notification that they _must_ update the package without delay as soon as a "
 "corrected version is available."
 msgstr ""
+"Un paso muy importante y urgente que se debe tomar tan pronto como sea "
+"posible después de que se descubra una vulnerabilidad de seguridad es "
+"notificar a la comunidad de usuarios del puerto sobre el peligro. Tal "
+"notificación tiene dos propósitos. Primero, si el peligro es realmente "
+"severo, será aconsejable aplicar una solución instantánea. Por ejemplo, "
+"detenga el servicio de red afectado o incluso desinstale el puerto por "
+"completo hasta que se cierre la vulnerabilidad. En segundo lugar, muchos "
+"usuarios tienden a actualizar los paquetes instalados solo ocasionalmente. "
+"Sabrán por la notificación que <emphasis>must</emphasis> actualice el "
+"paquete sin demora tan pronto como esté disponible una versión corregida."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:62
+#, fuzzy
 msgid ""
 "Given the huge number of ports in the tree, a security advisory cannot be "
 "issued on each incident without creating a flood and losing the attention of "
@@ -182,6 +219,13 @@ msgid ""
 "[the FreeBSD VuXML database]. The Security Officer Team members also monitor "
 "it for issues requiring their intervention."
 msgstr ""
+"Dada la gran cantidad de puertos en el árbol, no se puede emitir un aviso de "
+"seguridad en cada incidente sin crear una inundación y perder la atención de "
+"la audiencia cuando se trata de asuntos realmente serios. Por lo tanto, las "
+"vulnerabilidades de seguridad encontradas en los puertos se registran en "
+"<link xlink:href=\"https://vuxml.freebsd.org/\">la base de datos FreeBSD "
+"VuXML</link>. Los miembros del Equipo de Oficiales de Seguridad también lo "
+"monitorean para detectar problemas que requieran su intervención."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:64
@@ -196,6 +240,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:66
+#, fuzzy
 msgid ""
 "The VuXML database is an XML document. Its source file [.filename]#vuln.xml# "
 "is kept right inside the port package:security/vuxml[]. Therefore the file's "
@@ -205,6 +250,14 @@ msgid ""
 "find an existing entry fitting the case at hand, then copy it and use it as "
 "a template."
 msgstr ""
+"La base de datos VuXML es una <acronym>XML</acronym> documento. Su archivo "
+"fuente <filename>vuln.xml</filename> se mantiene dentro del puerto <package "
+"role=\"puerto\">security/vuxml</package>. Por lo tanto, la ruta completa del "
+"archivo será <filename>PORTSDIR/security/vuxml/vuln.xml</filename>. Cada vez "
+"que se descubre una vulnerabilidad de seguridad en un puerto, agregue una "
+"entrada para ella en ese archivo. Hasta que esté familiarizado con VuXML, lo "
+"mejor que puede hacer es encontrar una entrada existente que se ajuste al "
+"caso en cuestión, luego copiarla y usarla como plantilla."
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:68
@@ -214,6 +267,7 @@ msgstr "Una breve introducción a VuXML"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:71
+#, fuzzy
 msgid ""
 "The full-blown XML format is complex, and far beyond the scope of this book. "
 "However, to gain basic insight on the structure of a VuXML entry only the "
@@ -226,6 +280,19 @@ msgid ""
 "otherwise amorphous data into shape. VuXML is particularly tailored to mark "
 "up descriptions of security vulnerabilities."
 msgstr ""
+"El en toda regla <acronym>XML</acronym>El formato es complejo y está más "
+"allá del alcance de este libro. Sin embargo, para obtener información básica "
+"sobre la estructura de una entrada VuXML, solo se necesita la noción de "
+"etiquetas. Los nombres de las etiquetas XML se incluyen entre corchetes "
+"angulares. Cada apertura &lt;tag&gt; debe tener un cierre coincidente "
+"&lt;/tag&gt;. Tags puede estar anidado. Si se anida, las etiquetas internas "
+"deben cerrarse antes que las externas. Existe una jerarquía de etiquetas, es "
+"decir, reglas más complejas para anidarlas. Esto es similar a HTML. La "
+"principal diferencia es que XML es e<emphasis>X</emphasis>tensible, es "
+"decir, basado en la definición de etiquetas personalizadas. Debido a su "
+"estructura intrínseca, XML da forma a datos que de otro modo serían amorfos. "
+"VuXML está especialmente diseñado para marcar descripciones de "
+"vulnerabilidades de seguridad."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:73
@@ -307,8 +374,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:131
+#, fuzzy
 msgid "<.> This is a one-line description of the issue found."
-msgstr ""
+msgstr "Esta es una descripción de una línea del problema encontrado."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:133
@@ -338,6 +406,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:139
+#, fuzzy
 msgid ""
 "<.> Several related package groups (essentially, ports) can be listed in the "
 "`<affected>` section. This can be used if several software products (say "
@@ -345,6 +414,12 @@ msgid ""
 "its bugs and vulnerabilities. Note the difference from listing multiple "
 "names within a single <package> section."
 msgstr ""
+"Se pueden enumerar varios grupos de paquetes relacionados (esencialmente, "
+"puertos) en el <literal>&lt;affected&gt;</literal> sección. Esto se puede "
+"usar si varios productos de software (por ejemplo, FooBar, FreeBar y OpenBar)"
+" crecen a partir de la misma base de código y aún comparten sus errores y "
+"vulnerabilidades. Tenga en cuenta la diferencia de enumerar varios nombres "
+"dentro de un solo &lt;package&gt; sección."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:141
@@ -365,10 +440,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:145
+#, fuzzy
 msgid ""
 "<.> This section contains references to relevant documents. As many "
 "references as apply are encouraged."
 msgstr ""
+"Esta sección contiene referencias a documentos relevantes. Se recomiendan "
+"tantas referencias como corresponda."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:147
@@ -422,10 +500,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:165
+#, fuzzy
 msgid ""
 "<.> This is a generic URL. Only it if none of the other reference categories "
 "apply."
 msgstr ""
+"Esta es una URL genérica. Solo si no se aplica ninguna de las otras "
+"categorías de referencia."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:167
@@ -466,11 +547,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:180
+#, fuzzy
 msgid ""
 "First, check whether there already is an entry for this vulnerability. If "
 "there were such an entry, it would match the previous version of the "
 "package, `2013.58`:"
 msgstr ""
+"Primero, verifique si ya existe una entrada para esta vulnerabilidad. Si "
+"hubiera tal entrada, coincidiría con la versión anterior del paquete, "
+"<literal>2013.58</literal>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/security/chapter.adoc:184
