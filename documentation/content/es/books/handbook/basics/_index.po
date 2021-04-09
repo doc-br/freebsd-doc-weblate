@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: 2021-04-03 12:46+0000\n"
+"PO-Revision-Date: 2021-04-10 02:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/bookshandbookbasics_index/es/>\n"
@@ -31,9 +31,9 @@ msgstr ""
 
 #. type: Title =
 #: documentation/content/en/books/handbook/basics/_index.adoc:9
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "FreeBSD basics"
-msgstr ""
+msgstr "Conceptos básicos de FreeBSD"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/basics/_index.adoc:45
@@ -151,12 +151,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:78
+#, fuzzy
 msgid ""
 "Since FreeBSD is a multiuser system, it needs some way to distinguish "
 "between different users. This is accomplished by requiring every user to log "
 "into the system before gaining access to the programs on the system. Every "
 "user has a unique name \"username\" and a personal \"password\"."
 msgstr ""
+"Dado que FreeBSD es un sistema multiusuario, necesita alguna forma de "
+"distinguir entre diferentes usuarios. Esto se logra al requerir que todos "
+"los usuarios inicien sesión en el sistema antes de obtener acceso a los "
+"programas del sistema. Cada usuario tiene un nombre único <quote> nombre de "
+"usuario </quote> y una <quote> contraseña </quote> personal."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:80
@@ -254,10 +260,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:97
+#, fuzzy
 msgid ""
 "In FreeBSD, the number of available virtual consoles is configured in this "
 "section of [.filename]#/etc/ttys#:"
 msgstr ""
+"En FreeBSD, la cantidad de consolas virtuales disponibles se configura en "
+"esta sección de <filename>/etc/ttys</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:112
@@ -321,14 +330,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:124
+#, fuzzy
 msgid ""
 "The settings which control single user mode are found in this section of [."
 "filename]#/etc/ttys#:"
 msgstr ""
+"Las configuraciones que controlan el modo de usuario único se encuentran en "
+"esta sección de<filename>/etc/ttys</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:132
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# name  getty                           type  status  comments\n"
 "#\n"
@@ -336,6 +348,12 @@ msgid ""
 "# when going to single-user mode.\n"
 "console none                            unknown  off  secure\n"
 msgstr ""
+"# nombre getty tipo comentarios de estado\n"
+"#\n"
+"# Si la consola está marcada como \"insegura\", init le pedirá la contraseña "
+"de root\n"
+"# al pasar al modo de usuario único.\n"
+"consola ninguno desconocido fuera seguro\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:135
@@ -366,11 +384,16 @@ msgstr "Cambiar los modos de video de la consola"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:145
+#, fuzzy
 msgid ""
 "The FreeBSD console default video mode may be adjusted to 1024x768, "
 "1280x1024, or any other size supported by the graphics chip and monitor. To "
 "use a different video mode load the `VESA` module:"
 msgstr ""
+"El modo de video predeterminado de la consola FreeBSD se puede ajustar a "
+"1024x768, 1280x1024 o cualquier otro tamaño compatible con el chip gráfico y "
+"el monitor. Para usar un modo de video diferente, cargue el módulo <literal> "
+"VESA </literal>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:149
@@ -407,10 +430,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:166
+#, fuzzy
 msgid ""
 "If the new video mode is acceptable, it can be permanently set on boot by "
 "adding it to [.filename]#/etc/rc.conf#:"
 msgstr ""
+"Si el nuevo modo de video es aceptable, se puede configurar permanentemente "
+"al arrancar agregándolo a<filename>etc/rc.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:170
@@ -518,11 +544,16 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:202
+#, fuzzy
 msgid ""
 "Care must be taken when using the operator group, as unintended superuser-"
 "like access privileges may be granted, including but not limited to "
 "shutdown, reboot, and access to all items in [.filename]#/dev# in the group."
 msgstr ""
+"Se debe tener cuidado al utilizar el grupo de operadores, ya que se pueden "
+"otorgar privilegios de acceso no deseados similares a los de un "
+"superusuario, incluidos, entre otros, el apagado, reinicio y acceso a todos "
+"los elementos en<filename>/dev</filename> en el grupo."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:205
@@ -607,12 +638,19 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:223
+#, fuzzy
 msgid ""
 "The User ID (UID) is a number used to uniquely identify the user to the "
 "FreeBSD system. Commands that allow a user name to be specified will first "
 "convert it to the UID. It is recommended to use a UID less than 65535, since "
 "higher values may cause compatibility issues with some software."
 msgstr ""
+"El ID de usuario (<acronym>UID</acronym>) es un número que se utiliza para "
+"identificar de forma única al usuario en el sistema FreeBSD. Los comandos "
+"que permiten especificar un nombre de usuario primero lo convertirán al "
+"<acronym> UID </acronym>. Se recomienda utilizar un UID menor que 65535, ya "
+"que los valores más altos pueden causar problemas de compatibilidad con "
+"algunos programas."
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/basics/_index.adoc:224
@@ -622,6 +660,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:226
+#, fuzzy
 msgid ""
 "The Group ID (GID) is a number used to uniquely identify the primary group "
 "that the user belongs to. Groups are a mechanism for controlling access to "
@@ -630,6 +669,14 @@ msgid ""
 "to be members of more than one group. It is recommended to use a GID of "
 "65535 or lower as higher GIDs may break some software."
 msgstr ""
+"El ID de grupo (<acronym> GID </acronym>) es un número que se utiliza para "
+"identificar de forma única el grupo principal al que pertenece el usuario. "
+"Los grupos son un mecanismo para controlar el acceso a los recursos según el "
+"<acronym> GID </acronym> de un usuario en lugar de su <acronym> UID </"
+"acronym>. Esto puede reducir significativamente el tamaño de algunos "
+"archivos de configuración y permite a los usuarios ser miembros de más de un "
+"grupo. Se recomienda utilizar un GID de 65535 o inferior, ya que los GID más "
+"altos pueden dañar algún software."
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/basics/_index.adoc:227
@@ -793,12 +840,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:259
+#, fuzzy
 msgid ""
 "In this example, the user only becomes superuser in order to run `make "
 "install` as this step requires superuser privilege. Once the command "
 "completes, the user types `exit` to leave the superuser account and return "
 "to the privilege of their user account."
 msgstr ""
+"En este ejemplo, el usuario solo se convierte en superusuario para ejecutar "
+"<command> make install </command> ya que este paso requiere privilegios de "
+"superusuario. Una vez que se completa el comando, el usuario escribe "
+"<command> exit </command> para salir de la cuenta de superusuario y volver "
+"al privilegio de su cuenta de usuario."
 
 #. type: Block title
 #: documentation/content/en/books/handbook/basics/_index.adoc:260
@@ -910,7 +963,7 @@ msgstr "Agregar un usuario en FreeBSD"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:348
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# adduser\n"
 "Username: jru\n"
@@ -943,6 +996,37 @@ msgid ""
 "Goodbye!\n"
 "#\n"
 msgstr ""
+"<prompt> # </prompt> <userinput> adduser </userinput>\n"
+"Nombre de usuario: <userinput> jru </userinput>\n"
+"Nombre completo: <entrada de usuario> J. Usuario aleatorio </userinput>\n"
+"Uid (dejar vacío por defecto):\n"
+"Grupo de inicio de sesión [jru]:\n"
+"El grupo de inicio de sesión es jru. ¿Invitar a jru a otros grupos? []: "
+"<userinput> rueda </userinput>\n"
+"Clase de inicio de sesión [predeterminado]:\n"
+"Shell (sh csh tcsh zsh nologin) [sh]: <userinput> zsh </userinput>\n"
+"Directorio de inicio [/ home / jru]:\n"
+"Permisos del directorio de inicio (déjelo en blanco por defecto):\n"
+"¿Usar autenticación basada en contraseña? [si]:\n"
+"¿Usar una contraseña vacía? (sí / no) [no]:\n"
+"¿Usar una contraseña aleatoria? (sí / no) [no]:\n"
+"Introducir la contraseña:\n"
+"Ingrese de nuevo la contraseña:\n"
+"¿Bloquear la cuenta después de la creación? [No]:\n"
+"Nombre de usuario: jru\n"
+"Contraseña   : ****\n"
+"Nombre completo: J. Usuario aleatorio\n"
+"Uid: 1001\n"
+"Clase      :\n"
+"Grupos: rueda jru\n"
+"Inicio: / inicio / jru\n"
+"Shell: / usr / local / bin / zsh\n"
+"Bloqueado: no\n"
+"¿De acuerdo? (sí / no): <userinput> sí </userinput>\n"
+"adduser: INFO: agregado exitosamente (jru) a la base de datos del usuario.\n"
+"¿Agregar otro usuario? (sí / no): <userinput> no </userinput>\n"
+"¡Adiós!\n"
+"<prompt>#</prompt>\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:354
@@ -996,17 +1080,23 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:368
+#, fuzzy
 msgid ""
 "Removes the incoming mail files belonging to the user from [.filename]#/var/"
 "mail#."
 msgstr ""
+"Elimina los archivos de correo entrante que pertenecen al usuario "
+"de<filename>/var/mail</filename>."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:369
+#, fuzzy
 msgid ""
 "Removes all files owned by the user from temporary file storage areas such "
 "as [.filename]#/tmp#."
 msgstr ""
+"Elimina todos los archivos que son propiedad del usuario de las áreas de "
+"almacenamiento de archivos temporales, como <filename>/tmp</filename>."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:370
@@ -1099,7 +1189,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:425
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "#Changing user database information for jru.\n"
 "Login: jru\n"
@@ -1117,6 +1207,21 @@ msgid ""
 "Home Phone:\n"
 "Other information:\n"
 msgstr ""
+"#Cambio de la información de la base de datos de usuarios para jru.\n"
+"Iniciar sesión: jru\n"
+"Contraseña: *\n"
+"Uid [#]: 1001\n"
+"Gid [# o nombre]: 1001\n"
+"Cambiar [mes día año]:\n"
+"Caducidad [mes día año]:\n"
+"Clase:\n"
+"Directorio de inicio: / inicio / jru\n"
+"Shell: / usr / local / bin / zsh\n"
+"Nombre completo: J. Usuario aleatorio\n"
+"Localización de la oficina:\n"
+"Telefono de oficina:\n"
+"Teléfono de casa:\n"
+"Otra información:\n"
 
 #. type: Block title
 #: documentation/content/en/books/handbook/basics/_index.adoc:429
@@ -1126,7 +1231,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:441
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "#Changing user database information for jru.\n"
 "Shell: /usr/local/bin/zsh\n"
@@ -1136,6 +1241,13 @@ msgid ""
 "Home Phone:\n"
 "Other information:\n"
 msgstr ""
+"#Cambio de la información de la base de datos de usuarios para jru.\n"
+"Shell: /usr/local/bin/zsh\n"
+"Nombre completo: J. Usuario aleatorio\n"
+"Localización de la oficina:\n"
+"Telefono de oficina:\n"
+"Teléfono de casa:\n"
+"Otra información:\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:447
@@ -1238,12 +1350,19 @@ msgstr "Administrar grupos"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:499
+#, fuzzy
 msgid ""
 "A group is a list of users. A group is identified by its group name and GID. "
 "In FreeBSD, the kernel uses the UID of a process, and the list of groups it "
 "belongs to, to determine what the process is allowed to do. Most of the "
 "time, the GID of a user or process usually means the first group in the list."
 msgstr ""
+"Un grupo es una lista de usuarios. Un grupo se identifica por su nombre de "
+"grupo y <acronym>GID</acronym>. En FreeBSD, el kernel usa el <acronym>UID</"
+"acronym> de un proceso, y la lista de grupos a los que pertenece, para "
+"determinar qué puede hacer el proceso. La mayor parte del tiempo, "
+"<acronym>GID</acronym> de un usuario o proceso generalmente significa el "
+"primer grupo de la lista."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:501
@@ -1331,11 +1450,16 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:542
+#, fuzzy
 msgid ""
 "In this example, the argument to `-m` is a comma-delimited list of users who "
 "are to be added to the group. Unlike the previous example, these users are "
 "appended to the group and do not replace existing users in the group."
 msgstr ""
+"En este ejemplo, el argumento para <option>-m</option> es una lista "
+"delimitada por comas de usuarios que se agregarán al grupo. A diferencia del "
+"ejemplo anterior, estos usuarios se agregan al grupo y no reemplazan a los "
+"usuarios existentes en el grupo."
 
 #. type: Block title
 #: documentation/content/en/books/handbook/basics/_index.adoc:543
@@ -1484,6 +1608,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:620
+#, fuzzy
 msgid ""
 "The first (leftmost) character in the first column indicates whether this "
 "file is a regular file, a directory, a special character device, a socket, "
@@ -1498,14 +1623,34 @@ msgid ""
 "table above, the permissions for this file would be `644`, where each digit "
 "represents the three parts of the file's permission."
 msgstr ""
+"El primer carácter (más a la izquierda) de la primera columna indica si este "
+"archivo es un archivo normal, un directorio, un dispositivo de caracteres "
+"especiales, un conector o cualquier otro dispositivo de pseudoarchivo "
+"especial. En este ejemplo, el <literal>-</literal> indica un archivo normal. "
+"Los siguientes tres personajes, <literal>rw-</literal> en este ejemplo, "
+"otorgue los permisos para el propietario del archivo. Los siguientes tres "
+"personajes, <literal>r--</literal>, otorgue los permisos para el grupo al "
+"que pertenece el archivo. Los últimos tres personajes, <literal>r--</"
+"literal>, otorgue los permisos para el resto del mundo. Un guión significa "
+"que el permiso está desactivado. En este ejemplo, los permisos se establecen "
+"para que el propietario pueda leer y escribir en el archivo, el grupo pueda "
+"leer el archivo y el resto del mundo solo pueda leer el archivo. Según la "
+"tabla anterior, los permisos para este archivo serían <literal>644</"
+"literal>, donde cada dígito representa las tres partes del permiso del "
+"archivo."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:622
+#, fuzzy
 msgid ""
 "How does the system control permissions on devices? FreeBSD treats most "
 "hardware devices as a file that programs can open, read, and write data to. "
 "These special device files are stored in [.filename]#/dev/#."
 msgstr ""
+"¿Cómo controla el sistema los permisos en los dispositivos? FreeBSD trata la "
+"mayoría de los dispositivos de hardware como un archivo en el que los "
+"programas pueden abrir, leer y escribir datos. Estos archivos de "
+"dispositivos especiales se almacenan en <filename>/dev/</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:624
@@ -1520,12 +1665,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:626
+#, fuzzy
 msgid ""
 "In order to perform a directory listing, the read permission must be set on "
 "the directory. In order to delete a file that one knows the name of, it is "
 "necessary to have write _and_ execute permissions to the directory "
 "containing the file."
 msgstr ""
+"Para realizar una lista de directorios, el permiso de lectura debe "
+"establecerse en el directorio. Para borrar un archivo cuyo nombre se conoce, "
+"es necesario tener escritura <emphasis>y</emphasis> ejecutar permisos al "
+"directorio que contiene el archivo."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:628
@@ -1797,11 +1947,13 @@ msgstr "En la terminal A:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:772
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Changing local password for trhodes\n"
 "Old Password:\n"
 msgstr ""
+"Cambio de contraseña local para trhodes\n"
+"Contraseña anterior:\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:775
@@ -1831,12 +1983,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:790
+#, fuzzy
 msgid ""
 "The `setgid` permission performs the same function as the `setuid` "
 "permission; except that it alters the group settings. When an application or "
 "utility executes with this setting, it will be granted the permissions based "
 "on the group that owns the file, not the user who started the process."
 msgstr ""
+"El <literal>setgid</literal> El permiso realiza la misma función que el "
+"<literal>setuid</literal> permiso; excepto que altera la configuración del "
+"grupo. Cuando una aplicación o utilidad se ejecuta con esta configuración, "
+"se le otorgarán los permisos según el grupo que posee el archivo, no el "
+"usuario que inició el proceso."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:792
@@ -1882,12 +2040,19 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:813
+#, fuzzy
 msgid ""
 "When the `sticky bit` is set on a directory, it allows file deletion only by "
 "the file owner. This is useful to prevent file deletion in public "
 "directories, such as [.filename]#/tmp#, by users who do not own the file. To "
 "utilize this permission, prefix the permission set with a one (1):"
 msgstr ""
+"Cuando el <literal>poco pegajoso</literal> está configurado en un "
+"directorio, solo permite la eliminación de archivos por parte del "
+"propietario del archivo. Esto es útil para evitar la eliminación de archivos "
+"en directorios públicos, como<filename>/tmp</filename>, por usuarios que no "
+"son propietarios del archivo. Para utilizar este permiso, anteponga el "
+"conjunto de permisos con uno (1):"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:817
@@ -1922,6 +2087,7 @@ msgstr "Estructura de directorios"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:835
+#, fuzzy
 msgid ""
 "The FreeBSD directory hierarchy is fundamental to obtaining an overall "
 "understanding of the system. The most important directory is root or, \"/\". "
@@ -1930,6 +2096,13 @@ msgid ""
 "operation. The root directory also contains mount points for other file "
 "systems that are mounted during the transition to multi-user operation."
 msgstr ""
+"La jerarquía de directorios de FreeBSD es fundamental para obtener una "
+"comprensión general del sistema. El directorio más importante es root o, "
+"<quote>/</quote>. Este directorio es el primero que se monta en el momento "
+"del arranque y contiene el sistema base necesario para preparar el sistema "
+"operativo para la operación de múltiples usuarios. El directorio raíz "
+"también contiene puntos de montaje para otros sistemas de archivos que se "
+"montan durante la transición a la operación multiusuario."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:837
@@ -2072,6 +2245,7 @@ msgstr "Organización del disco"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:953
+#, fuzzy
 msgid ""
 "The smallest unit of organization that FreeBSD uses to find files is the "
 "filename. Filenames are case-sensitive, which means that [.filename]#readme."
@@ -2079,6 +2253,12 @@ msgid ""
 "use the extension of a file to determine whether the file is a program, "
 "document, or some other form of data."
 msgstr ""
+"La unidad de organización más pequeña que utiliza FreeBSD para buscar "
+"archivos es el nombre del archivo. Los nombres de archivo distinguen entre "
+"mayúsculas y minúsculas, lo que significa que<filename>readme.txt</filename> "
+"y <filename>README.TXT</filename> son dos archivos separados. FreeBSD no usa "
+"la extensión de un archivo para determinar si el archivo es un programa, "
+"documento o alguna otra forma de datos."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:955
@@ -2310,6 +2490,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1004
+#, fuzzy
 msgid ""
 "FreeBSD also uses disk space for _swap space_ to provide _virtual memory_. "
 "This allows your computer to behave as though it has much more memory than "
@@ -2317,6 +2498,12 @@ msgid ""
 "that is not currently being used to the swap space, and moves it back in "
 "(moving something else out) when it needs it."
 msgstr ""
+"FreeBSD también usa espacio en disco para <firstterm>swap space</"
+"firstterm>Para proveer <firstterm>memoria virtual</firstterm>. Esto permite "
+"que su computadora se comporte como si tuviera mucha más memoria de la que "
+"realmente tiene. Cuando FreeBSD se queda sin memoria, mueve algunos de los "
+"datos que no se están utilizando actualmente al espacio de intercambio y los "
+"vuelve a colocar (sacando algo más) cuando los necesita."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1006
@@ -2780,8 +2967,11 @@ msgstr "Monte el sistema de archivos de lectura y escritura."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1184
+#, fuzzy
 msgid "The following options can be passed to `-o` as a comma-separated list:"
 msgstr ""
+"Las siguientes opciones se pueden pasar a <option>-o</option> como una lista "
+"separada por comas:"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/basics/_index.adoc:1185
@@ -2856,6 +3046,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1205
+#, fuzzy
 msgid ""
 "Some programs are not designed to be run with continuous user input and "
 "disconnect from the terminal at the first opportunity. For example, a web "
@@ -2866,6 +3057,15 @@ msgid ""
 "performs useful tasks. This is why the BSD mascot is the cheerful-looking "
 "daemon with sneakers and a pitchfork."
 msgstr ""
+"Algunos programas no están diseñados para ejecutarse con la entrada continua "
+"del usuario y desconectarse del terminal a la primera oportunidad. Por "
+"ejemplo, un servidor web responde a las solicitudes web, en lugar de la "
+"entrada del usuario. Los servidores de correo son otro ejemplo de este tipo "
+"de aplicación. Estos tipos de programas se conocen como <firstterm>demonios</"
+"firstterm>. el término demonio proviene de la mitología griega y representa "
+"una entidad que no es ni buena ni mala, y que realiza tareas útiles de "
+"manera invisible. Es por eso que la mascota de BSD es el demonio de aspecto "
+"alegre con zapatillas y una horquilla."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1207
@@ -2976,6 +3176,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1253
+#, fuzzy
 msgid ""
 "The output is split into two sections. The header (the first five or six "
 "lines) shows the PID of the last process to run, the system load averages "
@@ -2986,6 +3187,16 @@ msgid ""
 "If the ZFS file system module has been loaded, an `ARC` line indicates how "
 "much data was read from the memory cache instead of from disk."
 msgstr ""
+"La salida se divide en dos secciones. El encabezado (las primeras cinco o "
+"seis líneas) muestra el <acronym>PID</acronym> del último proceso que se "
+"ejecutó, los promedios de carga del sistema (que son una medida de qué tan "
+"ocupado está el sistema), el tiempo de actividad del sistema (tiempo desde "
+"el último reinicio) y la hora actual. Las otras cifras del encabezado se "
+"refieren a cuántos procesos se están ejecutando, cuánta memoria y espacio de "
+"intercambio se ha utilizado y cuánto tiempo pasa el sistema en diferentes "
+"estados de la CPU. Si el <acronym>ZFS</acronym> se ha cargado el módulo del "
+"sistema de archivos, un <literal>ARC</literal> La línea indica cuántos datos "
+"se leyeron desde la memoria caché en lugar de desde el disco."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1255
@@ -3037,6 +3248,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1266
+#, fuzzy
 msgid ""
 "Two signals can be used to stop a process: `SIGTERM` and `SIGKILL`. "
 "`SIGTERM` is the polite way to kill a process as the process can read the "
@@ -3044,6 +3256,13 @@ msgid ""
 "is doing before shutting down. In some cases, a process may ignore `SIGTERM` "
 "if it is in the middle of some task that cannot be interrupted."
 msgstr ""
+"Se pueden usar dos señales para detener un proceso: <literal>SIGTERM</"
+"literal> y <literal>SIGKILL</literal>. <literal>SIGTERM</literal>es la forma "
+"educada de matar un proceso, ya que el proceso puede leer la señal, cerrar "
+"cualquier archivo de registro que pueda tener abierto e intentar terminar lo "
+"que está haciendo antes de cerrarse. En algunos casos, un proceso puede "
+"ignorar <literal>SIGTERM</literal> si está en medio de alguna tarea que no "
+"se pueda interrumpir."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1268
@@ -3067,6 +3286,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1272
+#, fuzzy
 msgid ""
 "For example, after changing a web server's configuration file, the web "
 "server needs to be told to re-read its configuration. Restarting `httpd` "
@@ -3075,6 +3295,14 @@ msgid ""
 "different behavior, so refer to the documentation for the daemon to "
 "determine if `SIGHUP` will achieve the desired results."
 msgstr ""
+"Por ejemplo, después de cambiar el archivo de configuración de un servidor "
+"web, se debe indicar al servidor web que vuelva a leer su configuración. "
+"Reiniciando <command>httpd</command> daría lugar a un breve período de "
+"interrupción en el servidor web. En su lugar, envíe el demonio "
+"<literal>SIGHUP</literal> señal. Tenga en cuenta que los diferentes demonios "
+"tendrán un comportamiento diferente, así que consulte la documentación del "
+"demonio para determinar si <literal>SIGHUP</literal> logrará los resultados "
+"deseados."
 
 #. type: Block title
 #: documentation/content/en/books/handbook/basics/_index.adoc:1275
