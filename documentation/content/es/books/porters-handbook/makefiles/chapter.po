@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-14 11:02-0300\n"
-"PO-Revision-Date: 2021-04-02 12:03+0000\n"
+"PO-Revision-Date: 2021-04-10 02:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/booksporters-handbookmakefileschapter/es/>\n"
@@ -42,10 +42,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:36
+#, fuzzy
 msgid ""
 "Consider these problems in sequence during the design of the new [."
 "filename]#Makefile#:"
 msgstr ""
+"Considere estos problemas en secuencia durante el diseño del nuevo "
+"<filename>Makefile</filename>:"
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:38
@@ -78,10 +81,13 @@ msgstr "Nombrar"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:48
+#, fuzzy
 msgid ""
 "The first part of the port's [.filename]#Makefile# names the port, describes "
 "its version number, and lists it in the correct category."
 msgstr ""
+"La primera parte del puerto <filename>Makefile</filename> names the port, "
+"describes its version number, and lists it in the correct category."
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:50
@@ -494,10 +500,13 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:267
+#, fuzzy
 msgid ""
 "Changes to the port [.filename]#Makefile# to enable or disable compile-time "
 "options in the package."
 msgstr ""
+"Cambios en el puerto <filename>Makefile</filename> para habilitar o "
+"deshabilitar las opciones de tiempo de compilación en el paquete."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:268
@@ -522,12 +531,19 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:270
+#, fuzzy
 msgid ""
 "Silent changes to the port distfile which have significant functional "
 "differences. For example, changes to the distfile requiring a correction to "
 "[.filename]#distinfo# with no corresponding change to `DISTVERSION`, where a "
 "`diff -ru` of the old and new versions shows non-trivial changes to the code."
 msgstr ""
+"cambios silenciosos en el archivo distfile del puerto que tienen diferencias "
+"funcionales significativas. Por ejemplo, cambios en el archivo dist que "
+"requieren una corrección para <filename>distinfo</filename> sin cambio "
+"correspondiente a <varname>DISTVERSION</varname>, donde a <command>diff -ru</"
+"command> de las versiones antiguas y nuevas muestra cambios no triviales en "
+"el código."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:272
@@ -563,6 +579,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:277
+#, fuzzy
 msgid ""
 "Build fixes which cause a package to become compilable where it was "
 "previously failing. As long as the changes do not introduce any functional "
@@ -571,9 +588,16 @@ msgid ""
 "previously buildable then there is no need to increase `PORTREVISION` to "
 "mark a change."
 msgstr ""
+"Cree arreglos que hacen que un paquete se vuelva compilable donde antes "
+"fallaba. Siempre que los cambios no introduzcan ningún cambio funcional en "
+"ninguna otra plataforma en la que el puerto se construyó anteriormente. Ya "
+"que <varname>PORTREVISION</varname> refleja el contenido del paquete, si el "
+"paquete no se podía construir previamente, no hay necesidad de aumentar "
+"<varname>PORTREVISION</varname> para marcar un cambio."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:279
+#, fuzzy
 msgid ""
 "A rule of thumb is to decide whether a change committed to a port is "
 "something which _some_ people would benefit from having. Either because of "
@@ -582,6 +606,13 @@ msgid ""
 "regularly updates their ports tree to be compelled to update. If yes, "
 "`PORTREVISION` must be bumped."
 msgstr ""
+"Una regla general es decidir si un cambio comprometido en un puerto es algo "
+"que <emphasis>some</emphasis> la gente se beneficiaría de tener. Ya sea "
+"debido a una mejora, corrección o en virtud de que el nuevo paquete "
+"realmente funcionará. Luego, sopese eso con el hecho de que hará que todos "
+"los que actualicen regularmente su árbol de puertos se vean obligados a "
+"actualizar. En caso afirmativo, <varname>PORTREVISION</varname> debe ser "
+"golpeado."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:283
@@ -637,6 +668,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:305
+#, fuzzy
 msgid ""
 "In situations such as this, `PORTEPOCH` must be increased. If `PORTEPOCH` is "
 "nonzero it is appended to the package name as described in section 0 above. "
@@ -648,6 +680,17 @@ msgid ""
 "tools and found to be greater than the implied suffix `,0` on the earlier "
 "package."
 msgstr ""
+"En situaciones como esta, <varname>PORTEPOCH</varname> debe aumentarse. "
+"Si<varname>PORTEPOCH</varname> es distinto de cero, se agrega al nombre del "
+"paquete como se describe en la sección 0 anterior. <varname>PORTEPOCH</"
+"varname> nunca debe disminuirse o restablecerse a cero, porque eso haría que "
+"la comparación con un paquete de una época anterior fallara. Por ejemplo, el "
+"paquete no se detectaría como desactualizado. El nuevo número de versión, "
+"<literal>1.0,1</literal> en el ejemplo anterior, sigue siendo numéricamente "
+"menor que la versión anterior, 20000801, pero el <literal>,1</literal> El "
+"sufijo es tratado especialmente por herramientas automatizadas y se "
+"encuentra que es mayor que el sufijo implícito. <literal>,0</literal> en el "
+"paquete anterior."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:307
@@ -659,6 +702,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:309
+#, fuzzy
 msgid ""
 "It is expected that `PORTEPOCH` will not be used for the majority of ports, "
 "and that sensible use of `DISTVERSION`, or that use `PORTVERSION` carefully, "
@@ -669,6 +713,16 @@ msgid ""
 "release date, which will cause problems as in the example above when a new "
 "\"official\" release is made."
 msgstr ""
+"Se espera que <varname>PORTEPOCH</varname> no se utilizará para la mayoría "
+"de los puertos, y ese uso sensato de  <varname>DISTVERSION</varname>, o ese "
+"uso <varname>PORTVERSION</varname> con cuidado, a menudo puede evitar que "
+"sea necesario si una versión futura del software cambia la estructura de la "
+"versión. Sin embargo, los porteros de FreeBSD deben tener cuidado cuando se "
+"realiza un lanzamiento de un proveedor sin un número de versión oficial, "
+"como un código <quote>snapshot</quote> lanzamiento. La tentación es "
+"etiquetar el lanzamiento con la fecha de lanzamiento, lo que causará "
+"problemas como en el ejemplo anterior cuando un nuevo <quote>official</"
+"quote> se hace la liberación."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:311
@@ -850,11 +904,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:382
+#, fuzzy
 msgid ""
 "If the port is specific to a certain region within the language area, add "
 "the two letter country code as well. Examples are `en_US` for US English and "
 "`fr_CH` for Swiss French."
 msgstr ""
+"Si el puerto es específico de una región determinada dentro del área de "
+"idioma, agregue también el código de país de dos letras. Ejemplos son "
+"<literal>en_US</literal> para inglés de EE. UU. y <literal>fr_CH</literal> "
+"Para el francés suizo."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:384
@@ -951,12 +1010,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:408
+#, fuzzy
 msgid ""
 "Here are some (real) examples on how to convert the name as called by the "
 "software authors to a suitable package name, for each line, only one of "
 "`DISTVERSION` or `PORTVERSION` is set in, depending on which would be used "
 "in the port's [.filename]#Makefile#:"
 msgstr ""
+"Aquí hay algunos ejemplos (reales) sobre cómo convertir el nombre tal como "
+"lo llamaron los autores del software en un nombre de paquete adecuado, para "
+"cada línea, solo uno de <varname>DISTVERSION</varname> o "
+"<varname>PORTVERSION</varname> está configurado, dependiendo de cuál se "
+"usaría en el puerto <filename>Makefile</filename>:"
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:409
@@ -1114,6 +1179,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:540
+#, fuzzy
 msgid ""
 "When a package is created, it is put under [.filename]#/usr/ports/packages/"
 "All# and links are made from one or more subdirectories of [.filename]#/usr/"
@@ -1123,6 +1189,14 @@ msgid ""
 "Please take a look at the <<porting-categories,current list of categories>> "
 "and pick the ones that are suitable for the port."
 msgstr ""
+"Cuando se crea un paquete, se coloca bajo <filename>/usr/ports/packages/All</"
+"filename> y los enlaces están hechos de uno o más subdirectorios de "
+"<filename>/usr/ports/packages</filename>. Los nombres de estos "
+"subdirectorios los especifica la variable <varname>CATEGORIES</varname>. "
+"Tiene la intención de hacer la vida más fácil para el usuario cuando está "
+"revisando la pila de paquetes en el sitio FTP o el CDROM. Por favor, eche un "
+"vistazo a <link linkend=\"porting-categories\">lista actual de categorías</"
+"link> y elija los que sean adecuados para el puerto."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:542
@@ -1576,11 +1650,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:951
+#, fuzzy
 msgid ""
 "Language specific categories always come first. For example, if the port "
 "installs Japanese X11 fonts, then the `CATEGORIES` line would read [."
 "filename]#japanese x11-fonts#."
 msgstr ""
+"Las categorías específicas del idioma siempre son lo primero. Por ejemplo, "
+"si el puerto instala fuentes japonesas X11, entonces el <varname>CATEGORIES</"
+"varname> la línea leería<filename>japanese x11-fonts</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:952
@@ -1627,9 +1705,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:957
+#, fuzzy
 msgid ""
 "If the port truly does not belong anywhere else, put it in [.filename]#misc#."
 msgstr ""
+"Si el puerto realmente no pertenece a ningún otro lugar, colóquelo en "
+"<filename>misc</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:959
@@ -1764,12 +1845,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:986
+#, fuzzy
 msgid ""
 "Proposing a new virtual category is similar to the above but much less "
 "involved, since no ports will actually have to move. In this case, the only "
 "patches to include in the PR would be those to add the new category to "
 "`CATEGORIES` of the affected ports."
 msgstr ""
+"Proponer una nueva categoría virtual es similar a lo anterior pero mucho "
+"menos complicado, ya que ningún puerto tendrá que moverse. En este caso, los "
+"únicos parches para incluir en el PR serían aquellos para agregar la nueva "
+"categoría a <varname>CATEGORIAS</varname> de los puertos afectados."
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:988
@@ -1806,10 +1892,13 @@ msgstr "Los archivos de distribución"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:996
+#, fuzzy
 msgid ""
 "The second part of the [.filename]#Makefile# describes the files that must "
 "be downloaded to build the port, and where they can be downloaded."
 msgstr ""
+"La segunda parte del <filename>Makefile</filename> describe los archivos que "
+"deben descargarse para crear el puerto y dónde se pueden descargar."
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:998
@@ -2075,10 +2164,14 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1124
+#, fuzzy
 msgid ""
 "Record the directory part of the FTP/HTTP-URL pointing at the original "
 "tarball in `MASTER_SITES`. Do not forget the trailing slash ([.filename]#/#)!"
 msgstr ""
+"Registre la parte del directorio de la URL FTP / HTTP apuntando al tarball "
+"original en <varname>MASTER_SITES</varname>. No olvides la barra "
+"diagonal<filename>/</filename>)!"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1126
@@ -2100,6 +2193,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1132
+#, fuzzy
 msgid ""
 "`MASTER_SITES` must not be blank. It must point to the actual site hosting "
 "the distribution files. It cannot point to web archives, or the FreeBSD "
@@ -2107,6 +2201,13 @@ msgid ""
 "that do not have any distribution files. For example, meta-ports do not have "
 "any distribution files, so `MASTER_SITES` does not need to be set."
 msgstr ""
+"<varname>MASTER_SITES</varname>no debe estar en blanco. Debe apuntar al "
+"sitio real que aloja los archivos de distribución. No puede apuntar a "
+"archivos web ni a los sitios de caché de archivos de distribución de "
+"FreeBSD. La única excepción a esta regla son los puertos que no tienen "
+"archivos de distribución. Por ejemplo, los metapuertos no tienen archivos de "
+"distribución, por lo que <varname>MASTER_SITES</varname> no es necesario "
+"configurarlo."
 
 #. type: Title ====
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1135
@@ -2228,12 +2329,18 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1211
+#, fuzzy
 msgid ""
 "Several \"magic\" macros exist for popular sites with a predictable "
 "directory structure. For these, just use the abbreviation and the system "
 "will choose a subdirectory automatically. For a port named `Stardict`, of "
 "version `1.2.3`, and hosted on SourceForge, adding this line:"
 msgstr ""
+"Varios <quote>magic</quote> Existen macros para sitios populares con una "
+"estructura de directorio predecible. Para estos, solo use la abreviatura y "
+"el sistema elegirá un subdirectorio automáticamente. Para un puerto llamado "
+"<literal>Stardict</literal>,de versión <literal>1.2.3</literal>, y alojado "
+"en SourceForge, agregando esta línea:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1215
@@ -2738,11 +2845,15 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1518
+#, fuzzy
 msgid ""
 "`GH_TUPLE` can also be used when there are a lot of distribution files. It "
 "helps keep the account, project, tagname, and group information at the same "
 "place."
 msgstr ""
+"<varname>GH_TUPLE</varname> también se puede utilizar cuando hay muchos "
+"archivos de distribución. Ayuda a mantener la cuenta, el proyecto, el nombre "
+"de la etiqueta y la información del grupo en el mismo lugar."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1520
@@ -3022,6 +3133,7 @@ msgstr ""
 
 #. type: delimited block * 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1670
+#, fuzzy
 msgid ""
 "While getting the information from GitHub seems more straightforward, the "
 "information found using `git submodule status` will provide more meaningful "
@@ -3029,13 +3141,23 @@ msgid ""
 "correspond to `v3.4.0`. Both can be used interchangeably, but when a tag is "
 "available, use it."
 msgstr ""
+"Si bien obtener la información de GitHub parece más sencillo, la información "
+"que se encuentra usando <command>git submodule status</command> "
+"proporcionará información más significativa. Por ejemplo, aqui, <literal>lib/"
+"wxsqlite3</literal>'s commit hash <literal>fb66eb2</literal>corresponden a "
+"las <literal>v3.4.0</literal>. Ambos se pueden usar indistintamente, pero "
+"cuando haya una etiqueta disponible, úsela."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1673
+#, fuzzy
 msgid ""
 "Now that all the required information has been gathered, the [."
 "filename]#Makefile# can be written (only GitHub-related lines are shown):"
 msgstr ""
+"Ahora que se ha recopilado toda la información necesaria, "
+"<filename>Makefile</filename> se puede escribir (solo se muestran las líneas "
+"relacionadas con GitHub):"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1679
@@ -3203,10 +3325,13 @@ msgstr ""
 
 #. type: delimited block * 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1776
+#, fuzzy
 msgid ""
 "``GL_SITE``'s protocol, port and webroot can all be modified in the same "
 "variable."
 msgstr ""
+"<varname>GL_SITE</varname>'s el protocolo, el puerto y la raíz web se pueden "
+"modificar en la misma variable."
 
 #. type: Title ====
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1781
@@ -3233,11 +3358,15 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1788
+#, fuzzy
 msgid ""
 "`GL_TUPLE` can also be used when there are a lot of distribution files. It "
 "helps keep the site, account, project, commit, and group information at the "
 "same place."
 msgstr ""
+"<varname>GL_TUPLE</varname>  también se puede utilizar cuando hay muchos "
+"archivos de distribución. Ayuda a mantener la información del sitio, la "
+"cuenta, el proyecto, el compromiso y el grupo en el mismo lugar."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1803
@@ -3425,12 +3554,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1902
+#, fuzzy
 msgid ""
 "Sometimes the names of the files to be downloaded have no resemblance to the "
 "name of the port. For example, it might be called [.filename]#source.tar.gz# "
 "or similar. In other cases the application's source code might be in several "
 "different archives, all of which must be downloaded."
 msgstr ""
+"A veces, los nombres de los archivos que se descargarán no se parecen al "
+"nombre del puerto. Por ejemplo, podría llamarse <filename>source.tar.gz</"
+"filename> o similar. En otros casos, el código fuente de la aplicación puede "
+"estar en varios archivos diferentes, todos los cuales deben descargarse."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1904
@@ -3460,11 +3594,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1916
+#, fuzzy
 msgid ""
 "If only some of the `DISTFILES` must be extracted-for example, one of them "
 "is the source code, while another is an uncompressed document-list the "
 "filenames that must be extracted in `EXTRACT_ONLY`."
 msgstr ""
+"si solo algunos de los <varname>DISTFILES</varname>deben extraerse (por "
+"ejemplo, uno de ellos es el código fuente, mientras que otro es un documento "
+"sin comprimir) enumere los nombres de archivo que deben extraerse "
+"<varname>EXTRACT_ONLY</varname>."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1921
@@ -3534,10 +3673,14 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1945
+#, fuzzy
 msgid ""
 "If there are multiple patches and they need mixed values for the strip "
 "parameter, it can be added alongside the patch name in `PATCHFILES`, e.g:"
 msgstr ""
+"Si hay varios parches y necesitan valores mixtos para el parámetro de tira, "
+"se puede agregar junto con el nombre del parche en <varname>PATCHFILES</"
+"varname>, ejemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:1949
@@ -3674,6 +3817,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2000
+#, fuzzy
 msgid ""
 "Some applications consist of multiple distribution files that must be "
 "downloaded from a number of different sites. For example, Ghostscript "
@@ -3682,6 +3826,13 @@ msgid ""
 "are supplied with the core, but many others must be downloaded from a "
 "variety of different sites."
 msgstr ""
+"Algunas aplicaciones constan de varios archivos de distribución que deben "
+"descargarse de varios sitios diferentes. Por ejemplo, "
+"<application>Ghostscript</application> consta del núcleo del programa, y "
+"luego una gran cantidad de archivos de controlador que se utilizan "
+"dependiendo de la impresora del usuario. Algunos de estos archivos de "
+"controladores se suministran con el núcleo, pero muchos otros deben "
+"descargarse de una variedad de sitios diferentes."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2002
@@ -3753,11 +3904,16 @@ msgstr "Información detallada"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2042
+#, fuzzy
 msgid ""
 "Okay, so the previous example did not reflect the new port's needs? In this "
 "section we will explain in detail how the fine grained fetching mechanism "
 "`MASTER_SITES:n` works and how it can be used."
 msgstr ""
+"Bien, ¿entonces el ejemplo anterior no reflejaba las necesidades del nuevo "
+"puerto? En esta sección explicaremos en detalle cómo el mecanismo de "
+"búsqueda de grano fino <literal>MASTER_SITES:n</literal> funciona y cómo se "
+"puede utilizar."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2044
@@ -3802,8 +3958,9 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2054
+#, fuzzy
 msgid "  These examples are equivalent but the first one is preferred:"
-msgstr ""
+msgstr "  Estos ejemplos son equivalentes pero se prefiere el primero:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2058
@@ -3845,8 +4002,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2073
+#, fuzzy
 msgid "  All these examples are equivalent but the last one is preferred:"
-msgstr ""
+msgstr "  Todos estos ejemplos son equivalentes pero se prefiere el último:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2077
@@ -4103,10 +4261,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2203
+#, fuzzy
 msgid ""
 "[.filename]#something.tar.gz# will be fetched from all sites within "
 "SourceForge."
 msgstr ""
+"<filename>something.tar.gz</filename> se obtendrá de todos los sitios dentro "
+"de SourceForge."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2205
@@ -4266,12 +4427,19 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2260
+#, fuzzy
 msgid ""
 "Only a single address without the comment part is allowed as a `MAINTAINER` "
 "value. The format used is `user@hostname.domain`. Please do not include any "
 "descriptive text such as a real name in this entry. That merely confuses the "
 "Ports infrastructure and most tools using it."
 msgstr ""
+"Solo se permite una única dirección sin la parte de comentario como "
+"<varname>MAINTAINER</varname> valor. El formato utilizado es "
+"<literal>user@hostname.domain</literal>. No incluya ningún texto "
+"descriptivo, como un nombre real, en esta entrada. Eso simplemente confunde "
+"la infraestructura de los puertos y la mayoría de las herramientas que la "
+"utilizan."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2262
@@ -4370,10 +4538,13 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2282
+#, fuzzy
 msgid ""
 "The comment is a one-line description of a port shown by `pkg info`. Please "
 "follow these rules when composing it:"
 msgstr ""
+"El comentario es una descripción de una línea de un puerto mostrado por "
+"<command>pkg info</command>. Siga estas reglas al redactarlo:"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2284
@@ -4417,16 +4588,19 @@ msgstr "Aquí hay un ejemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2296
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "COMMENT=\tCat chasing a mouse all over the screen\n"
-msgstr ""
+msgstr "COMMENT= Gato persiguiendo un ratón por toda la pantalla.\n"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2299
+#, fuzzy
 msgid ""
 "The COMMENT variable immediately follows the MAINTAINER variable in the [."
 "filename]#Makefile#."
 msgstr ""
+"La variable COMMENT sigue inmediatamente a la variable MAINTAINER en el "
+"<filename>Makefile</filename>."
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2301
@@ -4489,12 +4663,18 @@ msgstr "Uso más simple, licencias predefinidas"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2322
+#, fuzzy
 msgid ""
 "When the [.filename]#README# of some software says \"This software is under "
 "the terms of the GNU Lesser General Public License as published by the Free "
 "Software Foundation; either version 2.1 of the License, or (at your option) "
 "any later version.\" but does not provide the license file, use this:"
 msgstr ""
+"Cuando el <filename>README</filename> de algún software dice <quote>Este "
+"software se encuentra bajo los términos de la Licencia Pública General "
+"Reducida GNU publicada por la Free Software Foundation; ya sea la versión "
+"2.1 de la Licencia o (a su elección) cualquier versión posterior.</quote> "
+"pero no proporciona el archivo de licencia, use esto:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:2326
@@ -5689,11 +5869,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3123
+#, fuzzy
 msgid ""
 "will check for a shared jpeg library with any version, and descend into the "
 "[.filename]#graphics/jpeg# subdirectory of the ports tree to build and "
 "install it if it is not found."
 msgstr ""
+"buscará una biblioteca jpeg compartida con cualquier versión, y descenderá a "
+"la <filename>graphics/jpeg</filename> subdirectorio del árbol de ports para "
+"construirlo e instalarlo si no se encuentra."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3125
@@ -5775,12 +5959,18 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3160
+#, fuzzy
 msgid ""
 "A quite common situation is when `RUN_DEPENDS` is literally the same as "
 "`BUILD_DEPENDS`, especially if ported software is written in a scripted "
 "language or if it requires the same build and run-time environment. In this "
 "case, it is both tempting and intuitive to directly assign one to the other:"
 msgstr ""
+"Una situación bastante común es cuando <varname>RUN_DEPENDS</varname> Es "
+"literalmente lo mismo que <varname>BUILD_DEPENDS</varname>, especialmente si "
+"el software portado está escrito en un lenguaje de script o si requiere el "
+"mismo entorno de compilación y tiempo de ejecución. En este caso, es a la "
+"vez tentador e intuitivo asignar directamente uno al otro:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3164
@@ -5844,11 +6034,15 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3192
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3223
+#, fuzzy
 msgid ""
 "will check for an executable called `unzip`, and descend into the [."
 "filename]#archivers/unzip# subdirectory of the ports tree to build and "
 "install it if it is not found."
 msgstr ""
+"buscará un ejecutable llamado <command>unzip</command>, y desciende al "
+"<filename>archivers/unzip</filename> subdirectorio del árbol de ports para "
+"construirlo e instalarlo si no se encuentra."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3196
@@ -5881,11 +6075,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3209
+#, fuzzy
 msgid ""
 "will check for an executable called `ncftp2`, and descend into the [."
 "filename]#net/ncftp2# subdirectory of the ports tree to build and install it "
 "if it is not found."
 msgstr ""
+"buscará un ejecutable llamado <command>ncftp2</command>, y desciende al "
+"<filename>net/ncftp2</filename> subdirectorio del árbol de ports para "
+"construirlo e instalarlo si no se encuentra."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3211
@@ -5953,10 +6151,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3242
+#, fuzzy
 msgid ""
 "will descend into the [.filename]#java/jfc# subdirectory of the ports tree "
 "to extract it."
 msgstr ""
+"descenderá al <filename>java/jfc</filename> subdirectorio del árbol de "
+"puertos para extraerlo."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3244
@@ -5973,11 +6174,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3249
+#, fuzzy
 msgid ""
 "Parameters can be added to define different features and dependencies used "
 "by the port. They are specified by adding this line to the [."
 "filename]#Makefile#:"
 msgstr ""
+"Se pueden agregar parámetros para definir diferentes características y "
+"dependencias utilizadas por el puerto. Se especifican agregando esta línea "
+"al <filename>Makefile</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3253
@@ -6121,12 +6326,17 @@ msgstr ""
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3313
+#, fuzzy
 msgid ""
 "....  p5-Spiffy>=0.26:devel/p5-Spiffy ....  The first field contains a "
 "dependent package name, which must match the entry in the package database, "
 "a comparison sign, and a package version. The dependency is satisfied if p5-"
 "Spiffy-0.26 or newer is installed on the machine."
 msgstr ""
+"El primer campo contiene un nombre de paquete dependiente, que debe "
+"coincidir con la entrada en la base de datos del paquete, un signo de "
+"comparación y una versión del paquete. La dependencia se satisface si "
+"p5-Spiffy-0.26 o más reciente está instalado en la máquina."
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3314
@@ -6167,14 +6377,15 @@ msgstr "Las dependencias circulares son fatales"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3335
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Do not introduce any circular dependencies into the ports tree!\n"
 "====\n"
-msgstr ""
+msgstr "¡No introduzca ninguna dependencia circular en el árbol de puertos!\n"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3339
+#, fuzzy
 msgid ""
 "The ports building technology does not tolerate circular dependencies. If "
 "one is introduced, someone, somewhere in the world, will have their FreeBSD "
@@ -6184,6 +6395,14 @@ msgid ""
 "slow on older machines, but it may be able to save a large number of people, "
 "including yourself, a lot of grief in the process."
 msgstr ""
+"La tecnología de construcción de puertos no tolera dependencias circulares. "
+"Si se presenta uno, alguien, en algún lugar del mundo, tendrá su instalación "
+"de FreeBSD interrumpida casi de inmediato, y muchos otros lo seguirán "
+"rápidamente. Estos pueden ser realmente difíciles de detectar. En caso de "
+"duda, antes de realizar ese cambio, asegúrese de ejecutar: <command>cd /usr/"
+"ports; make index</command>. Ese proceso puede ser bastante lento en las "
+"máquinas más antiguas, pero puede salvar a una gran cantidad de personas, "
+"incluido usted mismo, mucho dolor en el proceso."
 
 #. type: Title ===
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3340
@@ -6193,11 +6412,16 @@ msgstr "Problemas causados por dependencias automáticas"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3344
+#, fuzzy
 msgid ""
 "Dependencies must be declared either explicitly or by using the <<makefile-"
 "options,OPTIONS framework>>. Using other methods like automatic detection "
 "complicates indexing, which causes problems for port and package management."
 msgstr ""
+"Las dependencias deben declararse explícitamente o mediante el <link linkend"
+"=\"makefile-options\">Marco de OPCIONES</link>. El uso de otros métodos, "
+"como la detección automática, complica la indexación, lo que causa problemas "
+"para la gestión de paquetes y puertos."
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3345
@@ -6604,19 +6828,28 @@ msgstr ""
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3486
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "When describing options, view it from the perspective of the user: \"What functionality does it change?\" and \"Why would I want to enable this?\" Do not just repeat the name. For example, describing the `NLS` option as \"include NLS support\" does not help the user, who can already see the option name but may not know what it means. Describing it as \"Native Language Support via gettext utilities\" is much more helpful.\n"
 "====\n"
 msgstr ""
+"Al describir las opciones, véalas desde la perspectiva del usuario: <quote>¿"
+"Qué funcionalidad cambia?</quote> y <quote>¿Por qué querría habilitar esto?</"
+"quote> No se limite a repetir el nombre. Por ejemplo, describiendo el "
+"<literal>NLS</literal> opción como <quote>incluir soporte NLS</quote> no "
+"ayuda al usuario, que ya puede ver el nombre de la opción, pero puede que no "
+"sepa lo que significa. Describiéndolo como<quote>Soporte de idioma nativo a "
+"través de utilidades gettext</quote> es mucho más útil.\n"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3491
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Option names are always in all uppercase. They cannot use mixed case or lowercase.\n"
 "====\n"
 msgstr ""
+"Los nombres de las opciones siempre están en mayúsculas. No pueden usar "
+"mayúsculas ni minúsculas.\n"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3495
@@ -6721,14 +6954,18 @@ msgstr ""
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3576
+#, fuzzy
 msgid ""
 "....  The form shown above is discouraged. The preferred method is using a "
 "configure knob to really enable and disable the feature to match the option:"
 msgstr ""
+"Se desaconseja el formulario que se muestra arriba. El método preferido es "
+"usar una perilla de configuración para habilitar y deshabilitar realmente la "
+"función para que coincida con la opción:"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3582
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "....\n"
 "# Will add --with-examples / --without-examples\n"
@@ -6737,6 +6974,8 @@ msgid ""
 "\n"
 "====\n"
 msgstr ""
+"# Agregará con --with-examples / --without-examples\n"
+"EXAMPLES_CONFIGURE_WITH=\texamples\n"
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3585
@@ -6833,6 +7072,7 @@ msgstr ""
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3662
+#, fuzzy
 msgid ""
 "In the example above, imagine a library libfoo is installed on the system. "
 "The user does not want this application to use libfoo, so he toggled the "
@@ -6842,6 +7082,14 @@ msgid ""
 "the system, the ports system does not protest (no dependency on libfoo was "
 "recorded) but the application breaks."
 msgstr ""
+"En el ejemplo anterior, imagine que una biblioteca libfoo está instalada en "
+"el sistema. El usuario no quiere que esta aplicación use libfoo, así que "
+"desactivó la opción en el <literal>make config</literal> diálogo. Pero el "
+"script de configuración de la aplicación detecta la biblioteca presente en "
+"el sistema e incluye su soporte en el ejecutable resultante. Ahora, cuando "
+"el usuario decide eliminar libfoo del sistema, el sistema de puertos no "
+"protesta (no se registró ninguna dependencia de libfoo) pero la aplicación "
+"se rompe."
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3663
@@ -6864,11 +7112,16 @@ msgstr ""
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3680
+#, fuzzy
 msgid ""
 "Under some circumstances, the shorthand conditional syntax can cause "
 "problems with complex constructs. The errors are usually `Malformed "
 "conditional`, an alternative syntax can be used."
 msgstr ""
+"En algunas circunstancias, la sintaxis condicional abreviada puede causar "
+"problemas con construcciones complejas. Los errores suelen ser "
+"<literal>Malformed conditional</literal>, se puede utilizar una sintaxis "
+"alternativa."
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:3682
@@ -8193,8 +8446,9 @@ msgstr ""
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:4447
+#, fuzzy
 msgid "`do-fetch`"
-msgstr ""
+msgstr "ir a buscar"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:4448
@@ -8208,13 +8462,15 @@ msgstr ""
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:4450
+#, fuzzy
 msgid "`do-extract`"
-msgstr ""
+msgstr "extraer"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:4451
+#, fuzzy
 msgid "`post-extract`"
-msgstr ""
+msgstr "post-extracción"
 
 #. type: Table
 #: documentation/content/en/books/porters-handbook/makefiles/chapter.adoc:4452
