@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-02 12:03+0000\n"
+"PO-Revision-Date: 2021-04-10 02:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/booksporters-handbookslow-portingchapter/es/>\n"
@@ -49,11 +49,16 @@ msgstr "Como funcionan las cosas"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:38
+#, fuzzy
 msgid ""
 "First, this is the sequence of events which occurs when the user first types "
 "`make` in the port's directory. Having [.filename]#bsd.port.mk# in another "
 "window while reading this really helps to understand it."
 msgstr ""
+"Primero, esta es la secuencia de eventos que ocurre cuando el usuario "
+"escribe por primera vez <command>make</command> en el directorio del puerto. "
+"Teniendo<filename>bsd.port.mk</filename> en otra ventana mientras lee esto "
+"realmente ayuda a entenderlo."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:40
@@ -185,11 +190,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:66
+#, fuzzy
 msgid ""
 "Now that what goes on when the user types `make install` is better "
 "understood, let us go through the recommended steps to create the perfect "
 "port."
 msgstr ""
+"Ahora que lo que sucede cuando el usuario escribe <command>make install</"
+"command> se entiende mejor, veamos los pasos recomendados para crear el "
+"puerto perfecto."
 
 #. type: Title ==
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:68
@@ -242,6 +251,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:79
+#, fuzzy
 msgid ""
 "If the port's distfile changes all the time without any kind of version "
 "update by the author, consider putting the distfile on a home page and "
@@ -253,6 +263,17 @@ msgid ""
 "recommended to house a backup on a home page and list it as the second "
 "`MASTER_SITES`."
 msgstr ""
+"Si el archivo distfile del puerto cambia todo el tiempo sin ningún tipo de "
+"actualización de la versión por parte del autor, considere poner el archivo "
+"dist en una página de inicio y listarlo como el primero. "
+"<varname>MASTER_SITES</varname>. Intente disuadir al autor del puerto de "
+"hacer esto; realmente ayuda a establecer algún tipo de control de código "
+"fuente. Alojar una versión específica evitará que los usuarios obtengan "
+"<errorname>checksum mismatch</errorname> errores, y también reducir la carga "
+"de trabajo de los mantenedores de nuestro sitio FTP. Además, si solo hay un "
+"sitio maestro para el puerto, se recomienda almacenar una copia de seguridad "
+"en una página de inicio y listarla como la segunda "
+"<varname>MASTER_SITES</varname>."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:81
@@ -272,6 +293,7 @@ msgstr "Modificar el puerto"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:86
+#, fuzzy
 msgid ""
 "Unpack a copy of the tarball in a private directory and make whatever "
 "changes are necessary to get the port to compile properly under the current "
@@ -280,6 +302,13 @@ msgid ""
 "or modification of files has to be doable using an automated script or patch "
 "file when the port is finished."
 msgstr ""
+"Desempaquete una copia del tarball en un directorio privado y realice los "
+"cambios necesarios para que el puerto se compile correctamente bajo la "
+"versión actual de FreeBSD. Mantener <emphasis>pista cuidadosa</emphasis> de "
+"pasos, ya que serán necesarios para automatizar el proceso en breve. Todo, "
+"incluida la eliminación, adición o modificación de archivos, tiene que ser "
+"factible mediante un script automatizado o un archivo de parche una vez "
+"finalizado el puerto."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:88
@@ -378,10 +407,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:120
+#, fuzzy
 msgid ""
 "A patch may modify multiple files if the changes are related and the patch "
 "is named appropriately. For example, [.filename]#patch-add-missing-stdlib.h#."
 msgstr ""
+"Un parche puede modificar varios archivos si los cambios están relacionados "
+"y el parche tiene el nombre apropiado. Por ejemplo, <filename>patch-add-"
+"missing-stdlib.h</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:121
@@ -527,12 +560,19 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:171
+#, fuzzy
 msgid ""
 "Quite often, software being ported uses the CR/LF convention in source "
 "files. This may cause problems with further patching, compiler warnings, or "
 "script execution (like `/bin/sh^M not found`.) To quickly convert all files "
 "from CR/LF to just LF, add this entry to the port [.filename]#Makefile#:"
 msgstr ""
+"con bastante frecuencia, el software que se transfiere utiliza la convención "
+"CR / LF en los archivos de origen. Esto puede causar problemas con más "
+"parches, advertencias del compilador o ejecución de scripts (como<literal>/"
+"bin/sh^M no encontrado</literal>.)Para convertir rápidamente todos los "
+"archivos de CR / LF a solo LF, agregue esta entrada al "
+"puerto<filename>Makefile</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:175
@@ -613,11 +653,16 @@ msgstr "Parcheo condicional"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:213
+#, fuzzy
 msgid ""
 "Some ports need patches that are only applied for specific FreeBSD versions "
 "or when a particular option is enabled or disabled. Conditional patches are "
 "specified by placing the full paths to the patch files in `EXTRA_PATCHES`."
 msgstr ""
+"Algunos puertos necesitan parches que solo se aplican para versiones "
+"específicas de FreeBSD o cuando una opción en particular está habilitada o "
+"deshabilitada. Los parches condicionales se especifican colocando las rutas "
+"completas a los archivos de parche en<varname>EXTRA_PATCHES</varname>."
 
 #. type: Block title
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:215
@@ -688,10 +733,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:255
+#, fuzzy
 msgid ""
 "Create a subdirectory in [.filename]#${PATCHDIR}#, and move the patches in "
 "it. For example:"
 msgstr ""
+"Cree un subdirectorio en <filename>${PATCHDIR}</filename>, y mueva los "
+"parches en él. Por ejemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:261
@@ -757,8 +805,13 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/slow-porting/chapter.adoc:284
+#, fuzzy
 msgid ""
 "It is also recommended that if there are reasonable default answers to the "
 "questions, `PACKAGE_BUILDING` be used to turn off the interactive script "
 "when it is set. This will allow us to build the packages for CDROMs and FTP."
 msgstr ""
+"También se recomienda que si hay respuestas predeterminadas razonables a las "
+"preguntas,<varname>PACKAGE_BUILDING</varname> se puede utilizar para "
+"desactivar el script interactivo cuando está configurado. Esto nos permitirá "
+"construir los paquetes para CDROM y FTP."
