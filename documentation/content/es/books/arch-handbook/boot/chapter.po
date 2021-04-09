@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-02 12:02+0000\n"
+"PO-Revision-Date: 2021-04-09 02:20+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/booksarch-handbookbootchapter/es/>\n"
@@ -37,15 +37,22 @@ msgstr "Sinopsis"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:36
+#, fuzzy
 msgid ""
 "This chapter is an overview of the boot and system initialization processes, "
 "starting from the BIOS (firmware) POST, to the first user process creation. "
 "Since the initial steps of system startup are very architecture dependent, "
 "the IA-32 architecture is used as an example."
 msgstr ""
+"Este capítulo es una descripción general de los procesos de inicio y de "
+"inicialización del sistema, comenzando por <acronym>BIOS</acronym> (firmware)"
+" <acronym>POST</acronym>, a la creación del primer proceso de usuario. Dado "
+"que los pasos iniciales del inicio del sistema dependen en gran medida de la "
+"arquitectura, se utiliza la arquitectura IA-32 como ejemplo."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:38
+#, fuzzy
 msgid ""
 "The FreeBSD boot process can be surprisingly complex. After control is "
 "passed from the BIOS, a considerable amount of low-level configuration must "
@@ -53,6 +60,12 @@ msgid ""
 "done in a simple and flexible manner, allowing the user a great deal of "
 "customization possibilities."
 msgstr ""
+"El proceso de arranque de FreeBSD puede ser sorprendentemente complejo. Una "
+"vez que se pasa el control del <acronym>BIOS</acronym>, se debe realizar una "
+"cantidad considerable de configuración de bajo nivel antes de que se pueda "
+"cargar y ejecutar el kernel. Esta configuración debe realizarse de forma "
+"sencilla y flexible, permitiendo al usuario una gran cantidad de "
+"posibilidades de personalización."
 
 #. type: Title ==
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:40
@@ -62,6 +75,7 @@ msgstr "Visión general"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:43
+#, fuzzy
 msgid ""
 "The boot process is an extremely machine-dependent activity. Not only must "
 "code be written for every computer architecture, but there may also be "
@@ -77,6 +91,22 @@ msgid ""
 "multi-boot loader stored in the very first sector. That boot code starts the "
 "FreeBSD three-stage boot process."
 msgstr ""
+"el proceso de arranque es una actividad extremadamente dependiente de la "
+"máquina. No solo se debe escribir código para cada arquitectura de "
+"computadora, sino que también puede haber varios tipos de arranque en la "
+"misma arquitectura. Por ejemplo, una lista de directorio de <filename>/usr/"
+"src/sys/boot</filename> revela una gran cantidad de código dependiente de la "
+"arquitectura. Hay un directorio para cada una de las diversas arquitecturas "
+"compatibles. En el x86 específico <filename>i386</filename> directorio, hay "
+"subdirectorios para diferentes estándares de arranque como <filename>mbr</"
+"filename> (Registro de arranque principal), <filename>gpt</filename> "
+"(<acronym>GUID</acronym>Tabla de particiones), y <filename>efi</filename> ("
+"Interfaz de firmware extensible). Cada estándar de arranque tiene sus "
+"propias convenciones y estructuras de datos. El siguiente ejemplo muestra "
+"cómo arrancar una computadora x86 desde una <acronym>MBR</acronym> disco "
+"duro con FreeBSD <filename>boot0</filename> cargador de arranque múltiple "
+"almacenado en el primer sector. Ese código de arranque inicia el proceso de "
+"arranque de tres etapas de FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:45
@@ -168,6 +198,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:112
+#, fuzzy
 msgid ""
 "When the computer powers on, the processor's registers are set to some "
 "predefined values. One of the registers is the _instruction pointer_ "
@@ -184,6 +215,24 @@ msgid ""
 "particular, the boot process relies on the services provided by the BIOS, "
 "and the BIOS itself works in legacy, 16-bit code."
 msgstr ""
+"Cuando la computadora se enciende, los registros del procesador se "
+"establecen en algunos valores predefinidos. Uno de los registros es el "
+"<emphasis>puntero de instrucción</emphasis>registro, y su valor después de "
+"un encendido está bien definido: es un valor de 32 bits de "
+"<literal>0xfffffff0</literal>. El registro de puntero de instrucción ("
+"también conocido como Contador de programa) apunta al código que debe "
+"ejecutar el procesador. Otro registro importante es el <literal>cr0</"
+"literal> Registro de control de 32 bits, y su valor justo después de un "
+"reinicio es <literal>0</literal>. Uno de <literal>cr0</literal>'sbits, el "
+"bit PE (protección habilitada), indica si el procesador está funcionando en "
+"modo protegido de 32 bits o en modo real de 16 bits. Dado que este bit se "
+"borra en el momento del arranque, el procesador arranca en modo real de 16 "
+"bits. El modo real significa, entre otras cosas, que las direcciones "
+"lineales y físicas son idénticas. La razón por la que el procesador no se "
+"inicia inmediatamente en el modo protegido de 32 bits es la compatibilidad "
+"con versiones anteriores. En particular, el proceso de arranque se basa en "
+"los servicios proporcionados por el <acronym>BIOS</acronym>, y el "
+"<acronym>BIOS</acronym> sí mismo funciona en código heredado de 16 bits."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:114
@@ -196,6 +245,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:116
+#, fuzzy
 msgid ""
 "The BIOS (Basic Input Output System) is a chip on the motherboard that has a "
 "relatively small amount of read-only memory (ROM). This memory contains "
@@ -204,9 +254,18 @@ msgid ""
 "which really resides in the BIOS's memory. Usually this address contains a "
 "jump instruction to the BIOS's POST routines."
 msgstr ""
+"El <acronym>BIOS</acronym> (Basic Input Output System) es un chip en la "
+"placa base que tiene una cantidad relativamente pequeña de memoria de solo "
+"lectura(<acronym>ROM</acronym>). Esta memoria contiene varias rutinas de "
+"bajo nivel que son específicas del hardware suministrado con la placa base. "
+"El procesador primero saltará a la dirección 0xfffffff0, que realmente "
+"reside en el <acronym>BIOS</acronym>'s memoria. Por lo general, esta "
+"dirección contiene una instrucción de salto al <acronym>BIOS</acronym>'s "
+"Rutinas POSTERIORES"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:118
+#, fuzzy
 msgid ""
 "The POST (Power On Self Test) is a set of routines including the memory "
 "check, system bus check, and other low-level initialization so the CPU can "
@@ -215,6 +274,14 @@ msgid ""
 "selection of a boot device, allowing booting from a floppy, CD-ROM, hard "
 "disk, or other devices."
 msgstr ""
+"El <acronym>POST</acronym> (Power On Self Test) es un conjunto de rutinas "
+"que incluyen la verificación de la memoria, la verificación del bus del "
+"sistema y otras inicializaciones de bajo nivel para que el <acronym>CPU</"
+"acronym> puede configurar la computadora correctamente. El paso importante "
+"de esta etapa es determinar el dispositivo de arranque. Moderno "
+"<acronym>BIOS</acronym> Las implementaciones permiten la selección de un "
+"dispositivo de arranque, lo que permite arrancar desde un disquete,<acronym"
+">CD-ROM</acronym>, disco duro u otros dispositivos."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:120
@@ -319,6 +386,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:142
+#, fuzzy
 msgid ""
 "The MBR must fit into 512 bytes, a single disk sector. This program uses low-"
 "level \"tricks\" like taking advantage of the side effects of certain "
@@ -327,6 +395,14 @@ msgid ""
 "when handling the partition table, which is embedded in the MBR itself. For "
 "these reasons, be very careful when modifying [.filename]#boot0.S#."
 msgstr ""
+"El <acronym>MBR</acronym> debe caber en 512 bytes, un solo sector de disco. "
+"Este programa utiliza bajo nivel <quote>tricks</quote> como aprovechar los "
+"efectos secundarios de ciertas instrucciones y reutilizar los valores de "
+"registro de operaciones anteriores para aprovechar al máximo la menor "
+"cantidad de instrucciones posibles. También se debe tener cuidado al "
+"manipular la tabla de partición, que está incrustada en el <acronym>MBR</"
+"acronym> sí mismo. Por estas razones, tenga mucho cuidado al "
+"modificar<filename>boot0.S</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:144
@@ -556,10 +632,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:229
+#, fuzzy
 msgid ""
 "Note that we assume `TEST` is not defined, so the conditional code in it is "
 "not assembled and will not appear in our executable [.filename]#boot0#."
 msgstr ""
+"Tenga en cuenta que asumimos <varname>TEST</varname> no está definido, por "
+"lo que el código condicional que contiene no está ensamblado y no aparecerá "
+"en nuestro ejecutable <filename>boot0</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:231
@@ -619,6 +699,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:261
+#, fuzzy
 msgid ""
 "It is important to note that the active flag for each entry is cleared, so "
 "after the scanning, _no_ partition entry is active in our memory copy of [."
@@ -626,6 +707,12 @@ msgid ""
 "partition. This ensures that only one active partition exists if the user "
 "chooses to write the changes back to disk."
 msgstr ""
+"Es importante tener en cuenta que la bandera activa para cada entrada se "
+"borra, por lo que después del escaneo, <emphasis>no</emphasis> La entrada de "
+"partición está activa en nuestra copia de memoria de <filename>boot0</"
+"filename>. posteriormente, la bandera activa se establecerá para la "
+"partición seleccionada. Esto asegura que solo exista una partición activa si "
+"el usuario elige volver a escribir los cambios en el disco."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:263
@@ -751,6 +838,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:314
+#, fuzzy
 msgid ""
 "Whether a key was pressed or the time expired, subsequent code validates the "
 "selection. Based on the selection, the register `%si` is set to point to the "
@@ -761,13 +849,26 @@ msgid ""
 "modified values is written back to the MBR on disk. We leave the details of "
 "this implementation to the reader."
 msgstr ""
+"Si se presionó una tecla o expiró el tiempo, el código posterior valida la "
+"selección. Basado en la selección, el registro <literal>%si</literal> está "
+"configurado para apuntar a la entrada de partición apropiada en la tabla de "
+"particiones. Esta nueva selección anula la anterior predeterminada. De "
+"hecho, se convierte en el nuevo valor predeterminado. Finalmente, se "
+"establece el indicador ACTIVO de la partición seleccionada. Si se habilitó "
+"en el momento de la compilación, la versión en memoria de <filename>boot0</"
+"filename> con estos valores modificados se vuelve a escribir en el "
+"<acronym>MBR</acronym> en disco. Dejamos los detalles de esta implementación "
+"al lector."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:316
+#, fuzzy
 msgid ""
 "We now end our study with the last code block from the [.filename]#boot0# "
 "program:"
 msgstr ""
+"Ahora terminamos nuestro estudio con el último bloque de código del "
+"<filename>boot0</filename> programa:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:329
@@ -839,6 +940,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:348
+#, fuzzy
 msgid ""
 "[.filename]#boot0# relocated itself to the location it was linked to execute "
 "(`0x600`), followed by a jump to continue execution at the appropriate "
@@ -846,6 +948,11 @@ msgid ""
 "FreeBSD slice to address `0x7c00`. Execution control was passed to that "
 "location."
 msgstr ""
+"<filename>boot0</filename> se trasladó a la ubicación donde estaba vinculado "
+"para ejecutar (<literal>0x600</literal>), seguido de un salto para continuar "
+"la ejecución en el lugar apropiado. Finalmente, <filename>boot0</filename> "
+"cargó el primer sector del disco desde el segmento FreeBSD a la dirección "
+"<literal>0x7c00</literal>.El control de ejecución se pasó a esa ubicación."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:350
@@ -884,10 +991,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:354
+#, fuzzy
 msgid ""
 "Let us now look in detail at what exactly is done by [.filename]#boot1#, "
 "starting like we did for [.filename]#boot0#, at its entry point:"
 msgstr ""
+"Veamos ahora en detalle lo que hace exactamente <filename>boot1</filename>, "
+"comenzando como lo hicimos para <filename>boot0</filename>, en su punto de "
+"entrada:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:359
@@ -1005,6 +1116,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:408
+#, fuzzy
 msgid ""
 "In particular, the LBA for this fake partition is hardcoded to zero. This is "
 "used as an argument to the BIOS for reading absolute sector one from the "
@@ -1012,6 +1124,12 @@ msgid ""
 "fake partition holds cylinder 0, head 0 and sector 1, which is equivalent to "
 "absolute sector one."
 msgstr ""
+"En particular, el <acronym>LBA</acronym> porque esta partición falsa está "
+"codificada a cero. Esto se utiliza como argumento para <acronym>BIOS</"
+"acronym> para leer el sector absoluto uno del disco duro. Alternativamente, "
+"se podría utilizar el direccionamiento CHS. En este caso, la partición falsa "
+"contiene el cilindro 0, la cabeza 0 y el sector 1, que es equivalente al "
+"sector uno absoluto."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:410
@@ -1491,10 +1609,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:610
+#, fuzzy
 msgid ""
 "The mechanism for building [.filename]#boot2# is far more elaborate. Let us "
 "point out the most relevant facts. The dependency list is as follows:"
 msgstr ""
+"El mecanismo de construcción <filename>boot2</filename> es mucho más "
+"elaborado. Señalemos los hechos más relevantes. La lista de dependencias es "
+"la siguiente:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:620
@@ -1517,12 +1639,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:624
+#, fuzzy
 msgid ""
 "Note that initially there is no header file [.filename]#boot2.h#, but its "
 "creation depends on [.filename]#boot1.out#, which we already have. The rule "
 "for its creation is a bit terse, but the important thing is that the output, "
 "[.filename]#boot2.h#, is something like this:"
 msgstr ""
+"Tenga en cuenta que inicialmente no hay un archivo de encabezado "
+"<filename>boot2.h</filename>, pero su creación depende de<filename>boot1."
+"out</filename>, que ya tenemos. La regla para su creación es un poco "
+"concisa, pero lo importante es que la salida, <filename>boot2.h</filename>, "
+"es algo como esto:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:628
@@ -1603,11 +1731,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:640
+#, fuzzy
 msgid ""
 "The BTX server prepares a simple environment and switches from 16-bit real "
 "mode to 32-bit protected mode, right before passing control to the client. "
 "This includes initializing and updating the following data structures:"
 msgstr ""
+"El <acronym>BTX</acronym> El servidor prepara un entorno simple y cambia del "
+"modo real de 16 bits al modo protegido de 32 bits, justo antes de pasar el "
+"control al cliente. Esto incluye inicializar y actualizar las siguientes "
+"estructuras de datos:"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:642
@@ -1618,12 +1751,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:643
+#, fuzzy
 msgid ""
 "The `Interrupt Descriptor Table (IDT)` is created. Entries are provided for "
 "processor exceptions, hardware interrupts, two system calls and V86 "
 "interface. The IDT provides exception and interrupt handlers for Protected-"
 "Mode code."
 msgstr ""
+"El <literal>Tabla de descriptores de interrupciones (IDT)</literal> es "
+"creado. Se proporcionan entradas para excepciones de procesador, "
+"interrupciones de hardware, dos llamadas al sistema e interfaz V86. El IDT "
+"proporciona manejadores de excepciones e interrupciones para el código en "
+"modo protegido."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:644
@@ -1783,7 +1922,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:720
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "/*\n"
 " * Update real mode IDT for reflecting hardware interrupts.\n"
@@ -1798,6 +1937,19 @@ msgid ""
 "\t\tadd $4,%bx\t\t\t# Next handler\n"
 "\t\tloop init.0\t\t\t# Next IRQ\n"
 msgstr ""
+"/*\n"
+" * Actualice el IDT en modo real para reflejar las interrupciones de "
+"hardware.\n"
+" */\n"
+"\t\tmov $intr20,%bx\t\t\t# Dirección del primer manejador\n"
+"\t\tmov $0x10,%cx\t\t\t# Número de manipuladores\n"
+"\t\tmov $0x20*4,%di\t\t\t# Primera entrada IDT en modo real\n"
+"init.0:\t\tmov %bx,(%di)\t\t\t# IP de la tienda\n"
+"\t\tinc %di\t\t\t\t# Dirección siguiente\n"
+"\t\tinc %di\t\t\t\t#  entrada\n"
+"\t\tstosw\t\t\t\t#  Almacenar CS\n"
+"\t\tadd $4,%bx\t\t\t# Siguiente controlador\n"
+"\t\tloop init.0\t\t\t# Next IRQ\n"
 
 #. type: Block title
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:722
@@ -1807,6 +1959,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:724
+#, fuzzy
 msgid ""
 "The next block creates the IDT (Interrupt Descriptor Table). The IDT is "
 "analogous, in protected mode, to the IVT in real mode. That is, the IDT "
@@ -1816,10 +1969,19 @@ msgid ""
 "complex, because segments in protected mode are different than in real mode, "
 "and various protection mechanisms apply:"
 msgstr ""
+"El siguiente bloque crea el <acronym>IDT</acronym> (Tabla de descriptores de "
+"interrupciones). los <acronym>IDT</acronym> es análogo, en modo protegido, "
+"al <acronym>IVT</acronym> en modo real. Eso es el <acronym>IDT</acronym> "
+"describe los diversos manejadores de excepciones e interrupciones que se "
+"utilizan cuando el procesador se ejecuta en modo protegido. En esencia, "
+"también consta de una matriz de pares de segmento / desplazamiento, aunque "
+"la estructura es algo más compleja, porque los segmentos en modo protegido "
+"son diferentes a los del modo real, y se aplican varios mecanismos de "
+"protección:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:751
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "/*\n"
 " * Create IDT.\n"
@@ -1846,6 +2008,30 @@ msgid ""
 "\t\tloop init.2\t\t\t# Till set done\n"
 "\t\tjmp init.1\t\t\t# Continue\n"
 msgstr ""
+"/*\n"
+" * Create IDT.\n"
+" */\n"
+"\t\tmov $0x5e00,%di\t\t\t#Dirección de IDT\n"
+"\t\tmov $idtctl,%si\t\t\t# Cadena de control\n"
+"init.1:\t\tlodsb\t\t\t\t# Obtener entrada\n"
+"\t\tcbw\t\t\t\t#  contar\n"
+"\t\txchg %ax,%cx\t\t\t#  como palabra\n"
+"\t\tjcxz init.4\t\t\t# Si esta hecho\n"
+"\t\tlodsb\t\t\t\t# Obtener segmento\n"
+"\t\txchg %ax,%dx\t\t\t#  P:DPL:tipo\n"
+"\t\tlodsw\t\t\t\t# Toma el control\n"
+"\t\txchg %ax,%bx\t\t\t#  conjunto\n"
+"\t\tlodsw\t\t\t\t# Obtener compensación de controlador\n"
+"\t\tmov $SEL_SCODE,%dh\t\t# Selector de segmento\n"
+"init.2:\t\tshr %bx\t\t\t\t# Maneja este int?\n"
+"\t\tjnc init.3\t\t\t# No\n"
+"\t\tmov %ax,(%di)\t\t\t# Establecer compensación de controlador\n"
+"\t\tmov %dh,0x2(%di)\t\t#  y selector\n"
+"\t\tmov %dl,0x5(%di)\t\t# Conjunto P:DPL:tipo\n"
+"\t\tadd $0x4,%ax\t\t\t# Siguiente controlador\n"
+"init.3:\t\tlea 0x8(%di),%di\t\t# Entrada siguiente\n"
+"\t\tloop init.2\t\t\t#Hasta que esté listo\n"
+"\t\tjmp init.1\t\t\t# Seguir\n"
 
 #. type: Block title
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:753
@@ -1908,6 +2094,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:770
+#, fuzzy
 msgid ""
 "Note that a value is given for the Privilege Level 0 stack pointer and stack "
 "segment in the TSS. This is needed because, if an interrupt or exception is "
@@ -1917,6 +2104,16 @@ msgid ""
 "is given a value, which is a 16-bit offset from the beginning of the TSS to "
 "the I/O Permission Bitmap and the Interrupt Redirection Bitmap."
 msgstr ""
+"Tenga en cuenta que se proporciona un valor para el puntero de pila de nivel "
+"de privilegio 0 y el segmento de pila en el <acronym>TSS</acronym>. Esto es "
+"necesario porque, si se recibe una interrupción o excepción durante la "
+"ejecución <filename>boot2</filename> en Privilege Level 3, el procesador "
+"realiza automáticamente un cambio al Privilege Level 0, por lo que se "
+"necesita una nueva pila de trabajo. Finalmente, el campo Dirección base del "
+"mapa de E / S del <acronym>TSS</acronym> se le da un valor, que es un "
+"desplazamiento de 16 bits desde el comienzo de la <acronym>TSS</acronym> al "
+"mapa de bits de permisos de E / S y al mapa de bits de redirección de "
+"interrupciones."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:772
@@ -1927,7 +2124,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:790
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "/*\n"
 " * Bring up the system.\n"
@@ -1945,6 +2142,21 @@ msgid ""
 "\t\tmovb $SEL_SDATA,%cl\t\t# To 32-bit\n"
 "\t\tmovw %cx,%ss\t\t\t#  stack\n"
 msgstr ""
+"/*\n"
+" * Trae el sistema.\n"
+" */\n"
+"\t\tmov $0x2820,%bx\t\t\t# Establecer modo protegido\n"
+"\t\tcallw setpic\t\t\t#  Compensaciones de IRQ\n"
+"\t\tlidt idtdesc\t\t\t# Establecer IDT\n"
+"\t\tlgdt gdtdesc\t\t\t# Establecer GDT\n"
+"\t\tmov %cr0,%eax\t\t\t# Cambiar a protegido\n"
+"\t\tinc %ax\t\t\t\t#  modo\n"
+"\t\tmov %eax,%cr0\t\t\t#\n"
+"\t\tljmp $SEL_SCODE,$init.8\t\t# A código de 32 bits\n"
+"\t\t.code32\n"
+"init.8:\t\txorl %ecx,%ecx\t\t\t# Cero\n"
+"\t\tmovb $SEL_SDATA,%cl\t\t# A 32-bit\n"
+"\t\tmovw %cx,%ss\t\t\t#  apilar\n"
 
 #. type: Block title
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:792
@@ -1954,6 +2166,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:794
+#, fuzzy
 msgid ""
 "First, a call is made to `setpic` to program the 8259A PIC (Programmable "
 "Interrupt Controller). This chip is connected to multiple hardware interrupt "
@@ -1973,19 +2186,47 @@ msgid ""
 "SEL_SDATA to the `%ss` register. This data segment also has a privilege "
 "level of `0`."
 msgstr ""
+"Primero, se hace una llamada a <literal>setpic</literal> para programar el "
+"8259A <acronym>PIC</acronym> (Controlador de interrupción programable). Este "
+"chip está conectado a múltiples fuentes de interrupción de hardware. Al "
+"recibir una interrupción de un dispositivo, envía una señal al procesador "
+"con el vector de interrupción apropiado. Esto se puede personalizar para que "
+"las interrupciones específicas se asocien con vectores de interrupción "
+"específicos, como se explicó antes. A continuación, el <acronym>IDTR</"
+"acronym> (Registro de tabla de descriptores de interrupción) y<acronym>GDTR</"
+"acronym> (Registro de tabla de descriptor global) se cargan con las "
+"instrucciones <literal>lidt</literal> y <literal>lgdt</literal>, "
+"respectivamente. Estos registros se cargan con la dirección base y la "
+"dirección límite para el  <acronym>IDT</acronym> y <acronym>GDT</acronym>. "
+"Las siguientes tres instrucciones establecen el bit de habilitación de "
+"protección (PE) del<literal>%cr0</literal>Registrarse. Esto cambia "
+"efectivamente el procesador al modo protegido de 32 bits. A continuación, se "
+"realiza un salto de longitud para <literal>init.8</literal> utilizando el "
+"selector de segmento SEL_SCODE, que selecciona el segmento de código de "
+"supervisor. El procesador se está ejecutando efectivamente en CPL 0, el "
+"nivel más privilegiado, después de este salto. Finalmente, el segmento de "
+"datos del supervisor se selecciona para la pila asignando el selector de "
+"segmento SEL_SDATA to the <literal>%ss</literal> registrar. Este segmento de "
+"datos también tiene un nivel de privilegio de <literal>0</literal>."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:796
+#, fuzzy
 msgid ""
 "Our last code block is responsible for loading the TR (Task Register) with "
 "the segment selector for the TSS we created earlier, and setting the User "
 "Mode environment before passing execution control to the [.filename]#boot2# "
 "client."
 msgstr ""
+"Nuestro último bloque de código es responsable de cargar el <acronym>TR</"
+"acronym> (Registro de tareas) con el selector de segmento para el "
+"<acronym>TSS</acronym> que creamos anteriormente y configuramos el entorno "
+"de modo de usuario antes de pasar el control de ejecución al<filename>boot2</"
+"filename> cliente."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:829
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "/*\n"
 " * Launch user task.\n"
@@ -2018,6 +2259,36 @@ msgid ""
 "\t\tpopl %gs\t\t\t#  registers\n"
 "\t\tiret\t\t\t\t# To user mode\n"
 msgstr ""
+"/*\n"
+" * Launch user task.\n"
+" */\n"
+"\t\tmovb $SEL_TSS,%cl\t\t# Establecer tarea\n"
+"\t\tltr %cx\t\t\t\t#  registrar\n"
+"\t\tmovl $0xa000,%edx\t\t# Dirección base de usuario\n"
+"\t\tmovzwl %ss:BDA_MEM,%eax\t\t# Obtenga memoria libre\n"
+"\t\tshll $0xa,%eax\t\t\t# A bytes\n"
+"\t\tsubl $ARGSPACE,%eax\t\t# Menos espacio arg\n"
+"\t\tsubl %edx,%eax\t\t\t# Menos base\n"
+"\t\tmovb $SEL_UDATA,%cl\t\t# Selector de datos de usuario\n"
+"\t\tpushl %ecx\t\t\t# Establecer SS\n"
+"\t\tpushl %eax\t\t\t# Establecer ESP\n"
+"\t\tpush $0x202\t\t\t# Establecer flags (IF set)\n"
+"\t\tpush $SEL_UCODE\t\t\t# Establecer CS\n"
+"\t\tpushl btx_hdr+0xc\t\t# Establecer EIP\n"
+"\t\tpushl %ecx\t\t\t# Establecer GS\n"
+"\t\tpushl %ecx\t\t\t# Establecer FS\n"
+"\t\tpushl %ecx\t\t\t# Establecer DS\n"
+"\t\tpushl %ecx\t\t\t# Establecer ES\n"
+"\t\tpushl %edx\t\t\t# Establecer EAX\n"
+"\t\tmovb $0x7,%cl\t\t\t# Establecer restante\n"
+"init.9:\t\tpush $0x0\t\t\t#  general\n"
+"\t\tloop init.9\t\t\t#  registros\n"
+"\t\tpopa\t\t\t\t# e inicializar\n"
+"\t\tpopl %es\t\t\t# Inicializar\n"
+"\t\tpopl %ds\t\t\t#  usuario\n"
+"\t\tpopl %fs\t\t\t#  segmento\n"
+"\t\tpopl %gs\t\t\t#  registros\n"
+"\t\tiret\t\t\t\t# Al modo de usuario\n"
 
 #. type: Block title
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:831
@@ -2027,6 +2298,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:833
+#, fuzzy
 msgid ""
 "Note that the client's environment include a stack segment selector and "
 "stack pointer (registers `%ss` and `%esp`). Indeed, once the TR is loaded "
@@ -2059,6 +2331,44 @@ msgid ""
 "%esp`) and the stack segment (`%ss`). Now, execution continues at "
 "``boot0``'s entry point."
 msgstr ""
+"Tenga en cuenta que el entorno del cliente incluye un selector de segmento "
+"de pila y un puntero de pila (registra <literal>%ss</literal> y "
+"<literal>%esp</literal>). De hecho, una vez que el <acronym>TR</acronym> se "
+"carga con el selector de segmento de pila apropiado (instrucción "
+"<literal>ltr</literal>), el puntero de la pila se calcula y se inserta en la "
+"pila junto con el selector de segmento de la pila. A continuación, el valor "
+"<literal>0x202</literal> se empuja hacia la pila; es el valor que obtendrá "
+"EFLAGS cuando el control se pase al cliente. Además, se presionan el "
+"selector de segmento de código del modo de usuario y el punto de entrada del "
+"cliente. Recuerde que este punto de entrada está parcheado en el "
+"<acronym>BTX</acronym> encabezado en el momento del enlace. Finalmente, los "
+"selectores de segmento (almacenados en el registro <literal>%ecx</literal>) "
+"para los registros de segmento <literal>%gs, %fs, %ds and %es</literal> se "
+"colocan en la pila, junto con el valor en <literal>%edx</literal> "
+"(<literal>0xa000</literal>). Tenga en cuenta los diversos valores que se han "
+"introducido en la pila (aparecerán en breve). A continuación, los valores de "
+"los registros de propósito general restantes también se insertan en la pila ("
+"tenga en cuenta el<literal>loop</literal> que empuja el valor <literal>0</"
+"literal> siete veces). Ahora, los valores comenzarán a salir de la pila. "
+"Primero el <literal>popa</literal>La instrucción emerge de la pila con los "
+"últimos siete valores insertados. Se almacenan en los registros de propósito "
+"general en orden <literal>%edi, %esi, %ebp, %ebx, %edx, %ecx, %eax</"
+"literal>. Luego, los diversos selectores de segmento presionados se "
+"introducen en los distintos registros de segmento. Aún quedan cinco valores "
+"en la pila. Se reventan cuando el <literal>iret</literal> se ejecuta la "
+"instrucción. Esta instrucción primero muestra el valor que fue empujado "
+"desde el<acronym>BTX</acronym> encabezamiento. Este valor es un puntero a "
+"<filename>boot2</filename>'s punto de entrada. Se coloca en el registro "
+"<literal>%eip</literal>, el registro de puntero de instrucción. A "
+"continuación, el selector de segmento para el segmento de código de usuario "
+"se abre y se copia para registrar <literal>%cs</literal>. Recuerde que el "
+"nivel de privilegio de este segmento es 3, el nivel menos privilegiado. Esto "
+"significa que debemos proporcionar valores para la pila de este nivel de "
+"privilegio. Esta es la razón por la que el procesador, además de extraer aún "
+"más el valor del registro EFLAGS, hace dos salidas más de la pila. Estos "
+"valores van al puntero de la pila(<literal>%esp</literal>) y el segmento de "
+"pila (<literal>%ss</literal>).Ahora, la ejecución continúa en "
+"<literal>boot0</literal>'s punto de entrada."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:835
@@ -2218,10 +2528,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:913
+#, fuzzy
 msgid ""
 "says that a kernel's entry point is the symbol `btext`. This symbol is "
 "defined in [.filename]#locore.s#:"
 msgstr ""
+"dice que el punto de entrada de un kernel es el símbolo 'btext'. Este "
+"símbolo se define en <filename>locore.s</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:924
@@ -2314,7 +2627,7 @@ msgstr "Luego, habilitando la paginación:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:981
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "/* Now enable paging */\n"
 "\tmovl\tR(_IdlePTD), %eax\n"
@@ -2323,6 +2636,12 @@ msgid ""
 "\torl\t$CR0_PE|CR0_PG,%eax\t\t/* enable paging */\n"
 "\tmovl\t%eax,%cr0\t\t\t/* and let's page NOW! */\n"
 msgstr ""
+"/* Now enable paging */\n"
+"\tmovl\tR(_IdlePTD), %eax\n"
+"\tmovl\t%eax,%cr3\t\t\t/* cargar ptd addr en mmu */\n"
+"\tmovl\t%cr0,%eax\t\t\t/* obtener palabra de control */\n"
+"\torl\t$CR0_PE|CR0_PG,%eax\t\t/*habilitar paginación */\n"
+"\tmovl\t%eax,%cr0\t\t\t/*y busquemos AHORA! */\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:984
@@ -2362,7 +2681,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:1004
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "sys/i386/i386/locore.s:\n"
 "\tmovl\tphysfree, %esi\n"
@@ -2371,6 +2690,12 @@ msgid ""
 "\tcall\t_mi_startup\t\t\t/* autoconfiguration, mountroot etc */\n"
 "\thlt\t\t/* never returns to here */\n"
 msgstr ""
+"<filename>sys/i386/i386/locore.s:</filename>\n"
+"\tmovl\tphysfree, %esi\n"
+"\tpushl\t%esi\t\t\t\t/* valor de primero para init386 (primero) */\n"
+"\tcall\t_init386\t\t\t/*chip de alambre 386 para operación Unix */\n"
+"\tcall\t_mi_startup\t\t\t/* autoconfiguración, mountroot, etc. */\n"
+"\thlt\t\t/* nunca vuelve a aqui*/\n"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:1006
@@ -2380,6 +2705,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:1009
+#, fuzzy
 msgid ""
 "`init386()` is defined in [.filename]#sys/i386/i386/machdep.c# and performs "
 "low-level initialization specific to the i386 chip. The switch to protected "
@@ -2388,6 +2714,12 @@ msgid ""
 "consider the tasks the processor must complete to initialize protected mode "
 "execution:"
 msgstr ""
+"<function>init386()</function> se define en <filename>sys/i386/i386/machdep."
+"c</filename> y realiza una inicialización de bajo nivel específica para el "
+"chip i386. El cambio al modo protegido fue realizado por el cargador. El "
+"cargador ha creado la primera tarea, en la que el kernel sigue funcionando. "
+"Antes de mirar el código, considere las tareas que el procesador debe "
+"completar para inicializar la ejecución del modo protegido:"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:1011
@@ -2498,6 +2830,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:1050
+#, fuzzy
 msgid ""
 "Then `init386()` prepares the Global Descriptors Table (GDT). Every task on "
 "an x86 is running in its own virtual address space, and this space is "
@@ -2511,6 +2844,19 @@ msgid ""
 "an index is not a selector itself, but the INDEX field of a selector). "
 "FreeBSD's GDT holds descriptors for 15 selectors per CPU:"
 msgstr ""
+"Luego <function>init386()</function> prepara la Tabla de descriptores "
+"globales (GDT). Cada tarea en un x86 se ejecuta en su propio espacio de "
+"direcciones virtuales, y este espacio está dirigido por un segmento: par de "
+"compensación. Digamos, por ejemplo, que la instrucción actual que ejecutará "
+"el procesador se encuentra en CS: EIP, entonces la dirección virtual lineal "
+"para esa instrucción sería <quote> la dirección virtual del segmento de "
+"código CS</quote> + EIP. Para mayor comodidad, los segmentos comienzan en la "
+"dirección virtual 0 y terminan en un límite de 4Gb. Por lo tanto, la "
+"dirección virtual lineal de la instrucción para este ejemplo sería "
+"simplemente el valor de EIP. Los registros de segmento como CS, DS, etc.son "
+"los selectores, es decir, los índices, en GDT (para ser más precisos, un "
+"índice no es un selector en sí mismo, sino el campo INDEX de un selector). "
+"El GDT de FreeBSD contiene descriptores para 15 selectores por CPU:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:1055
@@ -2560,6 +2906,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:1080
+#, fuzzy
 msgid ""
 "The next step is to initialize the Interrupt Descriptor Table (IDT). This "
 "table is referenced by the processor when a software or hardware interrupt "
@@ -2571,6 +2918,16 @@ msgid ""
 "records. The kernel allocates NIDT records for the IDT, where NIDT is the "
 "maximum (256):"
 msgstr ""
+"El siguiente paso es inicializar la tabla de descriptores de interrupciones "
+"(IDT). El procesador hace referencia a esta tabla cuando se produce una "
+"interrupción de software o hardware. Por ejemplo, para realizar una llamada "
+"al sistema, la aplicación de usuario emite <literal>INT 0x80</literal> "
+"instrucción. Esta es una interrupción de software, por lo que el hardware "
+"del procesador busca un registro con índice 0x80 en el IDT. Este registro "
+"apunta a la rutina que maneja esta interrupción, en este caso particular, "
+"esta será la puerta de llamada al sistema del kernel. El IDT puede tener un "
+"máximo de 256 (0x100) registros. El kernel asigna registros NIDT para el "
+"IDT, donde NIDT es el máximo (256):"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:1086
@@ -2665,12 +3022,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:1133
+#, fuzzy
 msgid ""
 "Next, proc0's Process Control Block (`struct pcb`) structure is initialized. "
 "proc0 is a `struct proc` structure that describes a kernel process. It is "
 "always present while the kernel is running, therefore it is declared as "
 "global:"
 msgstr ""
+"A continuación, el bloque de control de procesos de proc0(<literal>struct "
+"pcb</literal>) se inicializa la estructura. proc0 es un <literal>struct "
+"proc</literal> estructura que describe un proceso del kernel. Siempre está "
+"presente mientras se ejecuta el kernel, por lo tanto, se declara como global:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:1138
@@ -2682,11 +3044,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:1141
+#, fuzzy
 msgid ""
 "The structure `struct pcb` is a part of a proc structure. It is defined in [."
 "filename]#/usr/include/machine/pcb.h# and has a process's information "
 "specific to the i386 architecture, such as registers values."
 msgstr ""
+"La estructura <literal>struct pcb</literal>es parte de una estructura proc. "
+"Se define en <filename>/usr/include/machine/pcb.h</filename> y tiene "
+"información de un proceso específica para la arquitectura i386, como "
+"registros de valores."
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:1142
@@ -2848,6 +3215,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:1225
+#, fuzzy
 msgid ""
 "The first `__asm` instruction will create an ELF section within the kernel's "
 "executable. This will happen at kernel link time. The section will have the "
@@ -2858,6 +3226,15 @@ msgid ""
 "32-bit value, will be appended to the existing section, so forming an array "
 "of 32-bit pointers."
 msgstr ""
+"El primero <literal>__asm</literal>La instrucción creará una sección ELF "
+"dentro del ejecutable del kernel. Esto sucederá en el momento del enlace del "
+"kernel. La sección tendrá el nombre<literal>.set.sysinit_set</literal>. El "
+"contenido de esta sección es un valor de 32 bits, la dirección de la "
+"estructura publish_sys_init, y eso es lo que el segundo <literal>__asm</"
+"literal> es. El tercero <literal>__asm</literal> instrucción marca el final "
+"de una sección. Si antes se produjo una directiva con el mismo nombre de "
+"sección, el contenido, es decir, el valor de 32 bits, se agregará a la "
+"sección existente, formando una matriz de punteros de 32 bits."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:1227
@@ -2887,12 +3264,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:1246
+#, fuzzy
 msgid ""
 "This screen dump shows that the size of .set.sysinit_set section is 0x664 "
 "bytes, so `0x664/sizeof(void *)` sysinit objects are compiled into the "
 "kernel. The other sections such as `.set.sysctl_set` represent other linker "
 "sets."
 msgstr ""
+"Este volcado de pantalla muestra que el tamaño de la sección ."
+"set.sysinit_set es 0x664 bytes, por lo que <literal>0x664/sizeof(void *)</"
+"literal> Los objetos sysinit se compilan en el kernel. Las otras secciones "
+"como <literal>.set.sysctl_set</literal> representan otros conjuntos de "
+"enlazadores."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:1248
@@ -2936,15 +3319,20 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:1269
+#, fuzzy
 msgid ""
 "Returning to the `mi_startup()` discussion, it is must be clear now, how the "
 "sysinit objects are being organized. The `mi_startup()` function sorts them "
 "and calls each. The very last object is the system scheduler:"
 msgstr ""
+"Volviendo al <function>mi_startup()</function> discusión, debe quedar claro "
+"ahora, cómo se están organizando los objetos sysinit. "
+"los<function>mi_startup()</function> la función los ordena y llama a cada "
+"uno. El último objeto es el programador del sistema:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:1281
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "/usr/include/sys/kernel.h:\n"
 "enum sysinit_sub_id {\n"
@@ -2956,9 +3344,19 @@ msgid ""
 "\tSI_SUB_RUN_SCHEDULER\t= 0xfffffff\t/* scheduler: no return*/\n"
 "};\n"
 msgstr ""
+"<filename>/usr/include/sys/kernel.h:</filename>\n"
+"enum sysinit_sub_id {\n"
+"\tSI_SUB_DUMMY\t\t= 0x0000000,\t/* sin ejecutar; para enlazador*/\n"
+"\tSI_SUB_DONE\t\t= 0x0000001,\t/* procesada*/\n"
+"\tSI_SUB_CONSOLE\t\t= 0x0800000,\t/* consola*/\n"
+"\tSI_SUB_COPYRIGHT\t= 0x0800001,\t/* primer uso de la consola*/\n"
+"...\n"
+"\tSI_SUB_RUN_SCHEDULER\t= 0xfffffff\t/*Planificador: sin retorno*/\n"
+"};\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:1284
+#, fuzzy
 msgid ""
 "The system scheduler sysinit object is defined in the file [.filename]#sys/"
 "vm/vm_glue.c#, and the entry point for that object is `scheduler()`. That "
@@ -2966,6 +3364,11 @@ msgid ""
 "0, the swapper process. The proc0 structure, mentioned before, is used to "
 "describe it."
 msgstr ""
+"El objeto sysinit del programador del sistema se define en el archivo "
+"<filename>sys/vm/vm_glue.c</filename>, y el punto de entrada para ese objeto "
+"es <function>scheduler()</function>. Esa función es en realidad un bucle "
+"infinito y representa un proceso con PID 0, el proceso de intercambio. La "
+"estructura proc0, mencionada anteriormente, se usa para describirlo."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/boot/chapter.adoc:1286
