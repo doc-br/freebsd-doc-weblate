@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-04-04 12:57+0000\n"
+"PO-Revision-Date: 2021-04-11 02:08+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/articlesfreebsd-update-server_index/es/>\n"
@@ -68,6 +68,7 @@ msgstr "Introducción"
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:48
+#, fuzzy
 msgid ""
 "Experienced users or administrators are often responsible for several "
 "machines or environments.  They understand the difficult demands and "
@@ -78,6 +79,16 @@ msgid ""
 "slower Internet connection.  This article outlines the steps involved in "
 "creating an internal FreeBSD Update Server."
 msgstr ""
+"Los usuarios experimentados o administradores a menudo son responsables de "
+"múltiples máquinas o entornos. Entienden las complicadas demandas y los "
+"desafíos de mantener una infraestructura de este tipo. Ejecutar un "
+"<application>Servidor de actualizaciones de FreeBSD</application> facilita "
+"la implementación de parches de seguridad y software en las máquinas de "
+"pruebas seleccionadas antes de implementarlos en producción. Esto también "
+"significa que se pueden actualizar varios sistemas desde la red local en "
+"lugar de una conexión a Internet la cual sea potencialmente más lenta. Este "
+"artículo describe los pasos necesarios para crear un <application>servidor "
+"de actualizaciones de FreeBSD</application> propio."
 
 #. type: Title ==
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:50
@@ -159,17 +170,23 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:77
+#, fuzzy
 msgid ""
 "Update [.filename]#scripts/build.conf# appropriately.  It is sourced during "
 "all build operations."
 msgstr ""
+"Actualice el fichero <filename>scripts/build.conf</filename> apropiadamente. "
+"Se crea durante todas las operaciones de construcción (build)."
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:79
+#, fuzzy
 msgid ""
 "Here is the default [.filename]#build.conf#, which should be modified to "
 "suit your environment."
 msgstr ""
+"Aquí está el archivo <filename>build.conf</filename> predeterminado, que "
+"debe ser modificado para adaptarse a su entorno."
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:85
@@ -247,10 +264,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:111
+#, fuzzy
 msgid ""
 "<.> The name of the build host. This information will be displayed on "
 "updated systems when issuing:"
 msgstr ""
+"El nombre del host de compilación. Esta información se mostrará en los "
+"sistemas que estén actualizados cuando se ejecute el comando:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:115
@@ -271,22 +291,31 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:121
+#, fuzzy
 msgid "<.> Account for uploading files to the update server."
-msgstr ""
+msgstr "Cuenta para subir archivos al servidor de actualizaciones."
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:123
+#, fuzzy
 msgid "<.> Directory on the update server where files are uploaded to."
 msgstr ""
+"Directorio en el servidor de actualización donde se subirán los archivos."
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:125
+#, fuzzy
 msgid ""
 "The default [.filename]#build.conf# shipped with the freebsd-update-server "
 "sources is suitable for building i386 releases of FreeBSD. As an example of "
 "building an update server for other architectures, the following steps "
 "outline the configuration changes needed for amd64:"
 msgstr ""
+"El archivo <filename>build.conf</filename> predeterminado incluido con el "
+"código fuente de <application>freebsd-update-server</application> es "
+"adecuado para compilar versiones i386 de FreeBSD. Como ejemplo de creación "
+"de un servidor de actualizaciones para otras arquitecturas, los siguientes "
+"pasos describen los cambios necesarios en la configuración para amd64:"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:129
@@ -301,11 +330,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:136
+#, fuzzy
 msgid ""
 "Install a [.filename]#build.conf# in the newly created build directory. The "
 "build configuration options for FreeBSD 7.2-RELEASE on amd64 should be "
 "similar to:"
 msgstr ""
+"Coloque el archivo <filename>build.conf</filename> en el directorio de "
+"compilación que acaba de crear. Las opciones de configuración de la "
+"compilación para FreeBSD 7.2-RELEASE en la arquitectura amd64 deberían de "
+"ser similares a:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:147
@@ -355,12 +389,17 @@ msgstr "Compilando el código de actualización"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:167
+#, fuzzy
 msgid ""
 "The first step is to run [.filename]#scripts/make.sh#.  This will build some "
 "binaries, create directories, and generate an RSA signing key used for "
 "approving builds.  In this step, a passphrase will have to be supplied for "
 "the final creation of the signing key."
 msgstr ""
+"El primer paso es ejecutar <filename>scripts/make.sh</filename>. Esto creará "
+"algunos binarios, creará directorios y generará una clave RSA utilizada para "
+"aprobar las compilaciones. En este paso, se deberá proporcionar una "
+"contraseña para la creación de la clave de firma."
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:182
@@ -399,10 +438,14 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:195
+#, fuzzy
 msgid ""
 "Keep a note of the generated key fingerprint.  This value is required in [."
 "filename]#/etc/freebsd-update.conf# for binary updates."
 msgstr ""
+"Guarde una copia de seguridad de la huella digital generada. Este valor es "
+"necesario en el archivo <filename>/etc/freebsd-update.conf</filename> para "
+"las actualizaciones binarias."
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:198
@@ -473,10 +516,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:251
+#, fuzzy
 msgid ""
 "Then the build of the world is performed again, with world patches.  A more "
 "detailed explanation may be found in [.filename]#scripts/build.subr#."
 msgstr ""
+"Entonces, se vuelve a realizar el build de word, con los parches de world. "
+"Puede encontrar una explicación más detallada en <filename>scripts/build."
+"subr</filename>."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:257
@@ -584,12 +631,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:337
+#, fuzzy
 msgid ""
 "Approve the build if everything is correct.  More information on determining "
 "this can be found in the distributed source file named [.filename]#USAGE#. "
 "Execute [.filename]#scripts/approve.sh#, as directed.  This will sign the "
 "release, and move components into a staging area suitable for uploading."
 msgstr ""
+"Aprobar el build si todo es correcto. Puede encontrar más información sobre "
+"cómo determinar si es correcto en el archivo <filename>USAGE</filename>. "
+"Ejecute <filename>scripts/approve.sh</filename>, como se indica. Esto "
+"firmará la release y moverá los componentes a un área de preparación "
+"adecuada para la subida."
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:342
@@ -719,10 +772,13 @@ msgstr "Que ha realizado una compilación inicial para la versión 7.1-RELEASE."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:402
+#, fuzzy
 msgid ""
 "Create the patch directory of the respective release under [.filename]#/usr/"
 "local/freebsd-update-server/patches/#."
 msgstr ""
+"Cree el directorio de parches para la versión correspondiente en <filename>/"
+"usr/local/freebsd-update-server/patches/</filename>."
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:407
@@ -762,11 +818,16 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:427
+#, fuzzy
 msgid ""
 "When running a patch level build, it is assumed that previous patches are in "
 "place.  When a patch build is run, it will run all patches contained in the "
 "patch directory."
 msgstr ""
+"Cuando se ejecuta la compilación del parche, se asume que los parches "
+"anteriores están en su sitio. Cuando se ejecute la compilación de los "
+"parches, se ejecutarán todos los parches que se encuentren en el directorio "
+"de parches."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:429
@@ -807,7 +868,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:521
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# sh -e scripts/diff.sh amd64 7.1-RELEASE 7\n"
 "Wed Aug 26 10:09:59 PDT 2009 Extracting world+src for FreeBSD/amd64 7.1-RELEASE-p7\n"
@@ -881,6 +942,103 @@ msgid ""
 "Wed Aug 26 17:20:39 UTC 2009\n"
 "...\n"
 msgstr ""
+"<prompt>#</prompt> <userinput>sh -e scripts/diff.sh amd64 7.1-RELEASE "
+"7</userinput>\n"
+"Wed Aug 26 10:09:59 PDT 2009 Extracting world+src for FreeBSD/amd64 7."
+"1-RELEASE-p7\n"
+"Wed Aug 26 17:10:25 UTC 2009 Building world for FreeBSD/amd64 7.1-RELEASE-"
+"p7\n"
+"Wed Aug 26 18:05:11 UTC 2009 Distributing world for FreeBSD/amd64 7."
+"1-RELEASE-p7\n"
+"Wed Aug 26 18:06:16 UTC 2009 Building and distributing kernels for FreeBSD/"
+"amd64 7.1-RELEASE-p7\n"
+"Wed Aug 26 18:17:50 UTC 2009 Constructing world components for FreeBSD/amd64 "
+"7.1-RELEASE-p7\n"
+"Wed Aug 26 18:18:02 UTC 2009 Distributing source for FreeBSD/amd64 7."
+"1-RELEASE-p7\n"
+"Wed Aug 26 11:19:23 PDT 2009 Moving components into staging area for FreeBSD/"
+"amd64 7.1-RELEASE-p7\n"
+"Wed Aug 26 11:19:37 PDT 2009 Extracting extra docs for FreeBSD/amd64 7."
+"1-RELEASE-p7\n"
+"Wed Aug 26 11:19:42 PDT 2009 Indexing world0 for FreeBSD/amd64 7.1-RELEASE-"
+"p7\n"
+"Wed Aug 26 11:23:02 PDT 2009 Extracting world+src for FreeBSD/amd64 7."
+"1-RELEASE-p7\n"
+"Thu Sep 30 18:23:29 UTC 2010 Building world for FreeBSD/amd64 7.1-RELEASE-"
+"p7\n"
+"Thu Sep 30 19:18:15 UTC 2010 Distributing world for FreeBSD/amd64 7."
+"1-RELEASE-p7\n"
+"Thu Sep 30 19:19:18 UTC 2010 Building and distributing kernels for FreeBSD/"
+"amd64 7.1-RELEASE-p7\n"
+"Thu Sep 30 19:30:52 UTC 2010 Constructing world components for FreeBSD/amd64 "
+"7.1-RELEASE-p7\n"
+"Thu Sep 30 19:31:03 UTC 2010 Distributing source for FreeBSD/amd64 7."
+"1-RELEASE-p7\n"
+"Thu Sep 30 12:32:25 PDT 2010 Moving components into staging area for FreeBSD/"
+"amd64 7.1-RELEASE-p7\n"
+"Wed Aug 26 12:32:39 PDT 2009 Extracting extra docs for FreeBSD/amd64 7."
+"1-RELEASE-p7\n"
+"Wed Aug 26 12:32:43 PDT 2009 Indexing world1 for FreeBSD/amd64 7.1-RELEASE-"
+"p7\n"
+"Wed Aug 26 12:35:54 PDT 2009 Locating build stamps for FreeBSD/amd64 7."
+"1-RELEASE-p7\n"
+"Wed Aug 26 12:36:58 PDT 2009 Reverting changes due to build stamps for "
+"FreeBSD/amd64 7.1-RELEASE-p7\n"
+"Wed Aug 26 12:37:14 PDT 2009 Cleaning staging area for FreeBSD/amd64 7."
+"1-RELEASE-p7\n"
+"Wed Aug 26 12:37:14 PDT 2009 Preparing to copy files into staging area for "
+"FreeBSD/amd64 7.1-RELEASE-p7\n"
+"Wed Aug 26 12:37:15 PDT 2009 Copying data files into staging area for "
+"FreeBSD/amd64 7.1-RELEASE-p7\n"
+"Wed Aug 26 12:43:23 PDT 2009 Copying metadata files into staging area for "
+"FreeBSD/amd64 7.1-RELEASE-p7\n"
+"Wed Aug 26 12:43:25 PDT 2009 Constructing metadata index and tag for FreeBSD/"
+"amd64 7.1-RELEASE-p7\n"
+"...\n"
+"Files found which include build stamps:\n"
+"kernel|generic|/GENERIC/hptrr.ko\n"
+"kernel|generic|/GENERIC/kernel\n"
+"world|base|/boot/loader\n"
+"world|base|/boot/pxeboot\n"
+"world|base|/etc/mail/freebsd.cf\n"
+"world|base|/etc/mail/freebsd.submit.cf\n"
+"world|base|/etc/mail/sendmail.cf\n"
+"world|base|/etc/mail/submit.cf\n"
+"world|base|/lib/libcrypto.so.5\n"
+"world|base|/usr/bin/ntpq\n"
+"world|base|/usr/include/osreldate.h\n"
+"world|base|/usr/lib/libalias.a\n"
+"world|base|/usr/lib/libalias_cuseeme.a\n"
+"world|base|/usr/lib/libalias_dummy.a\n"
+"world|base|/usr/lib/libalias_ftp.a\n"
+"...\n"
+"Values of build stamps, excluding library archive headers:\n"
+"v1.2 (Aug 26 2009 18:13:46)\n"
+"v1.2 (Aug 26 2009 18:11:44)\n"
+"@(#)FreeBSD 7.1-RELEASE-p7 #0: Wed Aug 26 18:11:50 UTC 2009\n"
+"FreeBSD 7.1-RELEASE-p7 #0: Wed Aug 26 18:11:50 UTC 2009\n"
+"    root@server.myhost.com:/usr/obj/usr/src/sys/GENERIC\n"
+"7.1-RELEASE-p7\n"
+"Wed Aug 26 17:29:15 UTC 2009\n"
+"Wed Aug 26 17:29:15 UTC 2009\n"
+"##### built by root@server.myhost.com on Wed Aug 26 17:49:58 UTC 2009\n"
+"##### built by root@server.myhost.com on Wed Aug 26 17:49:58 UTC 2009\n"
+"##### built by root@server.myhost.com on Wed Aug 26 17:49:58 UTC 2009\n"
+"##### built by root@server.myhost.com on Wed Aug 26 17:49:58 UTC 2009\n"
+"Wed Aug 26 17:20:39 UTC 2009\n"
+"ntpq 4.2.4p5-a Wed Aug 26 17:29:42 UTC 2009 (1)\n"
+" * Copyright (c) 1992-2009 The FreeBSD Project.\n"
+"Wed Aug 26 17:20:39 UTC 2009\n"
+"Wed Aug 26 17:29:30 UTC 2009\n"
+"Aug 26 2009\n"
+"ntpd 4.2.4p5-a Wed Aug 26 17:29:41 UTC 2009 (1)\n"
+"ntpdate 4.2.4p5-a Wed Aug 26 17:29:42 UTC 2009 (1)\n"
+"ntpdc 4.2.4p5-a Wed Aug 26 17:29:42 UTC 2009 (1)\n"
+"Wed Aug 26 17:55:02 UTC 2009\n"
+"Wed Aug 26 17:55:02 UTC 2009\n"
+"Wed Aug 26 17:55:02 UTC 2009\n"
+"Wed Aug 26 17:20:39 UTC 2009\n"
+"...\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:524
@@ -889,7 +1047,7 @@ msgstr "Se muestran las actualizaciones y se le solicita aprobación."
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:543
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "New updates:\n"
 "kernel|generic|/GENERIC/kernel.symbols|f|0|0|0555|0|7c8dc176763f96ced0a57fc04e7c1b8d793f27e006dd13e0b499e1474ac47e10|\n"
@@ -908,6 +1066,27 @@ msgid ""
 " sh -e approve.sh amd64 7.1-RELEASE\n"
 "to sign the build.\n"
 msgstr ""
+"New updates:\n"
+"kernel|generic|/GENERIC/kernel.symbols|f|0|0|0555|0|7c8dc176763f96ced0a57fc04"
+"e7c1b8d793f27e006dd13e0b499e1474ac47e10|\n"
+"kernel|generic|/GENERIC/kernel|f|0|0|0555|0|33197e8cf15bbbac263d17f39c153c9d4"
+"89348c2c534f7ca1120a1183dec67b1|\n"
+"kernel|generic|/|d|0|0|0755|0||\n"
+"src|base|/|d|0|0|0755|0||\n"
+"src|bin|/|d|0|0|0755|0||\n"
+"src|cddl|/|d|0|0|0755|0||\n"
+"src|contrib|/contrib/bind9/bin/named/update.c|f|0|10000|0644|0|4d434abf0983df"
+"9bc47435670d307fa882ef4b348ed8ca90928d250f42ea0757|\n"
+"src|contrib|/contrib/bind9/lib/dns/openssldsa_link.c|f|0|10000|0644|0|c6805c3"
+"9f3da2a06dd3f163f26c314a4692d4cd9a2d929c0acc88d736324f550|\n"
+"src|contrib|/contrib/bind9/lib/dns/opensslrsa_link.c|f|0|10000|0644|0|fa0f741"
+"7ee9da42cc8d0fd96ad24e7a34125e05b5ae075bd6e3238f1c022a712|\n"
+"...\n"
+"FreeBSD/amd64 7.1-RELEASE update build complete.  Please review\n"
+"the list of build stamps printed above and the list of updated\n"
+"files to confirm that they look sensible, then run\n"
+"# sh -e approve.sh amd64 7.1-RELEASE\n"
+"to sign the build.\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:546
@@ -983,7 +1162,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:588
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# Compare ${WORKDIR}/release and ${WORKDIR}/$1, identify which parts\n"
 "# of the world|doc subcomponent are missing from the latter, and\n"
@@ -994,6 +1173,15 @@ msgid ""
 "addextradocs () { \n"
 "}\n"
 msgstr ""
+"# Compare ${WORKDIR}/release y ${WORKDIR}/$1, identifique qué partes\n"
+"# del subcomponente world|doc faltan en este último, y\n"
+"# construya el tarball con ellas.\n"
+"findextradocs () {\n"
+"}\n"
+"\n"
+"# Añadir documentos extra a ${WORKDIR}/$1\n"
+"addextradocs () { \n"
+"}\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:591
@@ -1030,9 +1218,12 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/freebsd-update-server/_index.adoc:612
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "_http._tcp.update.myserver.com.\t\tIN SRV   0 2 80   host1.myserver.com.\n"
 "\t\t\t\t\tIN SRV   0 1 80   host2.myserver.com.\n"
 "\t\t\t\t\tIN SRV   0 0 80   host3.myserver.com.\n"
 msgstr ""
+"_http._tcp.update.myserver.com.\t\tIN SRV   0 2 80   host1.myserver.com.\n"
+"\t\t\t\t\tIN SRV   0 1 80   host2.myserver.com.\n"
+"\t\t\t\t\tIN SRV   0 0 80   host3.myserver.com.\n"
