@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-04-04 12:57+0000\n"
+"PO-Revision-Date: 2021-04-11 02:08+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/articlesgeom-class_index/es/>\n"
@@ -31,11 +31,15 @@ msgstr "Resumen"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:27
+#, fuzzy
 msgid ""
 "This text documents some starting points in developing GEOM classes, and "
 "kernel modules in general.  It is assumed that the reader is familiar with C "
 "userland programming."
 msgstr ""
+"Este texto documenta algunos puntos de partida en el desarrollo de clases "
+"GEOM y módulos del kernel en general. Se asume que el lector está "
+"familiarizado con la programación en C."
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:29
@@ -56,6 +60,7 @@ msgstr "Documentación"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:40
+#, fuzzy
 msgid ""
 "Documentation on kernel programming is scarce - it is one of few areas where "
 "there is nearly nothing in the way of friendly tutorials, and the phrase "
@@ -63,6 +68,11 @@ msgid ""
 "pieces (some of them seriously outdated) floating around that should be "
 "studied before beginning to code:"
 msgstr ""
+"La documentación sobre la programación del kernel es escasa — es una de las "
+"pocas áreas donde casi no hay tutoriales amigables, y la frase, <quote>¡usa "
+"el código fuente!</quote>, realmente es cierta. Sin embargo, hay algunos "
+"trozos (algunos de ellos muy desactualizados) flotando alrededor que deben "
+"estudiarse antes de comenzar a programar:"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:42
@@ -90,9 +100,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:45
+#, fuzzy
 msgid ""
 "The man pages in section 9 - for important documentation on kernel functions."
 msgstr ""
+"Las páginas man en la sección 9 — para documentación importante sobre las "
+"funciones del kernel."
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:46
@@ -125,6 +138,7 @@ msgstr "Preliminares"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:57
+#, fuzzy
 msgid ""
 "The best way to do kernel development is to have (at least) two separate "
 "computers.  One of these would contain the development environment and "
@@ -135,6 +149,15 @@ msgid ""
 "require a proper display.  Instead, it could be connected with a serial "
 "cable or KVM to the first one."
 msgstr ""
+"La mejor forma de  hacer el desarrollo del kernel es tener (al menos) dos "
+"ordenadores separados. Uno de ellos debería de tener el entorno de "
+"desarrollo y el código fuente, y el otro sería usado para probar el código "
+"recién escrito, inicializando a través de la red y montando su sistema de "
+"archivos desde el primer ordenador. De esta forma, si el nuevo código "
+"contiene errores y bloquea el ordenador, esto no dañará el código fuente (ni "
+"ningún otro dato que este ejecutándose en <quote>caliente</quote>). El "
+"segundo sistema ni siquiera necesita un monitor adecuado. En su lugar, "
+"podría estar conectado con un cable serie o KVM al primer ordenador."
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:60
@@ -154,18 +177,24 @@ msgstr "Modificar un sistema para el desarrollo"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:65
+#, fuzzy
 msgid ""
 "For any kernel programming a kernel with `INVARIANTS` enabled is a must-"
 "have. So enter these in your kernel configuration file:"
 msgstr ""
+"Para cualquier programación del kernel, es obligatoria tener activada la "
+"opción <option>INVARIANTS</option>. Así que añada estas líneas a su archivo "
+"de configuración del kernel:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/geom-class/_index.adoc:70
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "options INVARIANT_SUPPORT\n"
 "options INVARIANTS\n"
 msgstr ""
+"options INVARIANT_SUPPORT\n"
+"options INVARIANTS\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:73
@@ -178,11 +207,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/geom-class/_index.adoc:78
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "options WITNESS_SUPPORT\n"
 "options WITNESS\n"
 msgstr ""
+"options WITNESS_SUPPORT\n"
+"options WITNESS\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:81
@@ -193,9 +224,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/geom-class/_index.adoc:85
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "  makeoptions    DEBUG=-g\n"
-msgstr ""
+msgstr "  makeoptions    DEBUG=-g\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:90
@@ -208,20 +239,27 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:93
+#, fuzzy
 msgid ""
 "Another convenience is enabling the kernel debugger so you can examine a "
 "kernel panic when it happens.  For this, enter the following lines in your "
 "kernel configuration file:"
 msgstr ""
+"Otra convención es habilitar la depuración del kernel para que pueda "
+"examinar el kernel panic cuando suceda. Para esto, introduzca las siguientes "
+"líneas en su archivo de configuración del kernel:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/geom-class/_index.adoc:99
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "options KDB\n"
 "options DDB\n"
 "options KDB_TRACE\n"
 msgstr ""
+"options KDB\n"
+"options DDB\n"
+"options KDB_TRACE\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:102
@@ -233,12 +271,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/geom-class/_index.adoc:106
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "  debug.debugger_on_panic=1\n"
-msgstr ""
+msgstr "  debug.debugger_on_panic=1\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:114
+#, fuzzy
 msgid ""
 "Kernel panics will happen, so care should be taken with the filesystem "
 "cache.  In particular, having softupdates might mean the latest file version "
@@ -249,15 +288,28 @@ msgid ""
 "shortened.  There are three sysctl's that are useful for this (best to be "
 "set in [.filename]#/etc/sysctl.conf#):"
 msgstr ""
+"Ocurrirán kernel panics, por lo que se debe tener cuidado con la cache del "
+"sistema de archivos. En particular, tener habilitadas las softupdates puede "
+"significar que la última versión del archivo podría perderse si se produce "
+"un kernel panic antes de que se haya hecho commit al almacenamiento. "
+"Deshabilitar las softupdates produce un gran impacto en el rendimiento, y no "
+"garantiza la consistencia de los datos. Para eso es necesario montar el "
+"sistema de archivos con la opción <quote>sync</quote>. Como propuesta, los "
+"delays de la cache de softupdates pueden ser acortados. Hay tres sysctls que "
+"son útiles para esto (lo mejor es establecerlas en <filename>/etc/sysctl."
+"conf</filename>):"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/geom-class/_index.adoc:120
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "kern.filedelay=5\n"
 "kern.dirdelay=4\n"
 "kern.metadelay=3\n"
 msgstr ""
+"kern.filedelay=5\n"
+"kern.dirdelay=4\n"
+"kern.metadelay=3\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:123
@@ -266,6 +318,7 @@ msgstr "Los números representan segundos."
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:131
+#, fuzzy
 msgid ""
 "For debugging kernel panics, kernel core dumps are required.  Since a kernel "
 "panic might make filesystems unusable, this crash dump is first written to a "
@@ -275,14 +328,24 @@ msgid ""
 "checked and mounted, and before swap is enabled.  This is controlled with "
 "two [.filename]#/etc/rc.conf# variables:"
 msgstr ""
+"Para depurar los kernel panics, los volcados del kernel son necesarios. Dado "
+"que un kernel panic podría inutilizar los sistemas de archivos, este volcado "
+"de memoria se graba primero en una partición sin formato (raw). Por lo "
+"general, esta es la partición swap. Esta partición debe ser al menos tan "
+"grande como la RAM física del ordenador. En el siguiente arranque, el "
+"volcado se copia en un archivo normal. Esto sucede después de que los "
+"sistemas de archivos se verifiquen y monten, y antes de habilitar la swap. "
+"Esto se controla con dos variables en <filename>/etc/rc.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/geom-class/_index.adoc:136
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "dumpdev=\"/dev/ad0s4b\"\n"
 "dumpdir=\"/usr/core\n"
 msgstr ""
+"dumpdev=\"/dev/ad0s4b\"\n"
+"dumpdir=\"/usr/core\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:139
@@ -293,6 +356,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:142
+#, fuzzy
 msgid ""
 "Writing kernel core dumps is slow and takes a long time so if you have lots "
 "of memory (>256M) and lots of panics it could be frustrating to sit and wait "
@@ -300,35 +364,52 @@ msgid ""
 "filesystem).  It is convenient then to limit the amount of RAM the system "
 "will use via a [.filename]#/boot/loader.conf# tunable:"
 msgstr ""
+"Escribir volcados del kernel es lento y lleva mucho tiempo, por lo que si "
+"tiene mucha memoria (&gt;256M) y muchos kernel panics, puede ser frustrante "
+"sentarse y esperar mientras se hace (dos veces — primero escribirlo en el "
+"swap, luego reubicarlo al sistema de archivos). Es conveniente limitar la "
+"cantidad de RAM que utilizará el sistema a través de una variable en "
+"<filename>/boot/loader.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/geom-class/_index.adoc:146
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "  hw.physmem=\"256M\"\n"
-msgstr ""
+msgstr "  hw.physmem=\"256M\"\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:149
+#, fuzzy
 msgid ""
 "If the panics are frequent and filesystems large (or you simply do not trust "
 "softupdates+background fsck) it is advisable to turn background fsck off via "
 "[.filename]#/etc/rc.conf# variable:"
 msgstr ""
+"Si los kernel panics son frecuentes y los sistemas de archivos son grandes ("
+"o simplemente no confía en softupdates + fsck en segundo plano), es "
+"aconsejable desactivar fsck en segundo plano mediante la siguiente variable "
+"en <filename>/etc/rc.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/geom-class/_index.adoc:153
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "  background_fsck=\"NO\"\n"
-msgstr ""
+msgstr "  background_fsck=\"NO\"\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:158
+#, fuzzy
 msgid ""
 "This way, the filesystems will always get checked when needed.  Note that "
 "with background fsck, a new panic could happen while it is checking the "
 "disks.  Again, the safest way is not to have many local filesystems by using "
 "another computer as an NFS server."
 msgstr ""
+"De esta forma, los sistemas de archivos siempre serán verificados cuando sea "
+"necesario. Tenga en cuenta que con fsck en segundo plano, podría producirse "
+"un nuevo kernel panic mientras comprueba los discos. Una vez más, la forma "
+"más segura es no tener muchos sistemas de archivos locales utilizando otro "
+"ordenador como servidor NFS."
 
 #. type: Title ===
 #: documentation/content/en/articles/geom-class/_index.adoc:160
@@ -338,11 +419,15 @@ msgstr "Empezando el proyecto"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:164
+#, fuzzy
 msgid ""
 "For the purpose of creating a new GEOM class, an empty subdirectory has to "
 "be created under an arbitrary user-accessible directory.  You do not have to "
 "create the module directory under [.filename]#/usr/src#."
 msgstr ""
+"Con el fin de crear una nueva clase GEOM, se debe crear un subdirectorio "
+"vacío bajo un directorio arbitrario que sea accesible por el usuario. No es "
+"necesario crear el directorio del módulo en <filename>/usr/src</filename>."
 
 #. type: Title ===
 #: documentation/content/en/articles/geom-class/_index.adoc:166
@@ -352,18 +437,27 @@ msgstr "El Makefile"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:169
+#, fuzzy
 msgid ""
 "It is good practice to create [.filename]#Makefiles# for every nontrivial "
 "coding project, which of course includes kernel modules."
 msgstr ""
+"Es una buena práctica crear <filename>Makefile</filename>s para cada "
+"proyecto de programación que no sea trivial, esto incluye obviamente módulos "
+"del kernel."
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:172
+#, fuzzy
 msgid ""
 "Creating the [.filename]#Makefile# is simple thanks to an extensive set of "
 "helper routines provided by the system.  In short, here is how a minimal [."
 "filename]#Makefile# looks for a kernel module:"
 msgstr ""
+"Crear el archivo <filename>Makefile</filename> es sencillo gracias a un "
+"extenso conjunto de rutinas de ayuda proporcionadas por el sistema. En "
+"resumen, aquí un ejemplo de cómo un archivo <filename>Makefile</filename> "
+"con lo mínimo busca un módulo del kernel:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/geom-class/_index.adoc:177
@@ -381,12 +475,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:183
+#, fuzzy
 msgid ""
 "This [.filename]#Makefile# (with changed filenames) will do for any kernel "
 "module, and a GEOM class can reside in just one kernel module.  If more than "
 "one file is required, list it in the `SRCS` variable, separated with "
 "whitespace from other filenames."
 msgstr ""
+"Este <filename>Makefile</filename> (con nombres de archivo modificados) "
+"funcionará para cualquier módulo del kernel, y una clase GEOM puede residir "
+"en un solo módulo del kernel. Si se necesita más de un archivo, enumérelo en "
+"la variable <envar>SRCS</envar>, separado con espacios en blanco de los "
+"otros nombres de archivos."
 
 #. type: Title ==
 #: documentation/content/en/articles/geom-class/_index.adoc:185
@@ -417,9 +517,11 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/geom-class/_index.adoc:199
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "  static MALLOC_DEFINE(M_GJOURNAL, \"gjournal data\", \"GEOM_JOURNAL Data\");\n"
 msgstr ""
+"  static MALLOC_DEFINE(M_GJOURNAL, \"gjournal data\", \"GEOM_JOURNAL Data\");"
+"\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:202
@@ -514,12 +616,18 @@ msgstr "Ggate"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:239
+#, fuzzy
 msgid ""
 "If maximum performance is not needed, a much simpler way of making a data "
 "transformation is to implement it in userland via the ggate (GEOM gate) "
 "facility.  Unfortunately, there is no easy way to convert between, or even "
 "share code between the two approaches."
 msgstr ""
+"Si no se necesita el máximo rendimiento, una forma mucho más sencilla de "
+"realizar una transformación de datos es implementarla en el espacio de "
+"usuario a través de la función ggate (GEOM gate). Desafortunadamente, no hay "
+"una manera fácil de convertir o incluso compartir código entre las dos "
+"aproximaciones."
 
 #. type: Title ===
 #: documentation/content/en/articles/geom-class/_index.adoc:241
@@ -559,10 +667,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:252
+#, fuzzy
 msgid ""
 "`.taste` is called next, once for each provider the system has available. If "
 "applicable, this function will usually create and start a geom instance."
 msgstr ""
+"A continuación se llama a <function>.taste</function>, una vez por cada "
+"proveedor que el sistema tenga disponible. Si corresponde, esta función "
+"generalmente creará e iniciará una instancia geom"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:253
@@ -604,6 +716,7 @@ msgstr "Softc"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:268
+#, fuzzy
 msgid ""
 "The name \"softc\" is a legacy term for \"driver private data\".  The name "
 "most probably comes from the archaic term \"software control block\".  In "
@@ -611,6 +724,13 @@ msgid ""
 "attached to a geom instance to hold whatever data is private to the geom "
 "instance.  Most GEOM classes have the following members:"
 msgstr ""
+"El nombre <quote>softc</quote> es un término legado para <quote>driver "
+"private data</quote>. El nombre probablemente proviene del término arcaico "
+"<quote>software control block</quote>. En GEOM, es una estructura (para ser "
+"más precisos: un pointer a una estructura) que se puede adjuntar a una "
+"instancia de geom para mantener cualquier información que sea privada para "
+"la instancia de geom. La mayoría de las clases de GEOM tienen los siguientes "
+"elementos:"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:270
@@ -775,9 +895,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/geom-class/_index.adoc:316
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "  verb [-options] geomname [other]\n"
-msgstr ""
+msgstr "  verb [-options] geomname [other]\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:319
@@ -786,15 +906,19 @@ msgstr "Los verbos comunes son:"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:321
+#, fuzzy
 msgid ""
 "label - to write metadata to devices so they can be recognized at tasting "
 "and brought up in geoms"
 msgstr ""
+"label — para escribir metadatos en los dispositivos para que puedan ser "
+"reconocidos en la cata y creados en geoms"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:322
+#, fuzzy
 msgid "destroy - to destroy metadata, so the geoms get destroyed"
-msgstr ""
+msgstr "destroy — para destruir los metadatos, así se destruyen los geoms."
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:324
@@ -829,10 +953,14 @@ msgstr "Geoms"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:337
+#, fuzzy
 msgid ""
 "Geoms are instances of GEOM classes.  They have internal data (a softc "
 "structure) and some functions with which they respond to external events."
 msgstr ""
+"Los Geoms son instancias de clases GEOM. Tienen datos internos (una "
+"estructura softc) y algunas funciones con las que responden a eventos "
+"externos."
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:339
@@ -866,19 +994,28 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:347
+#, fuzzy
 msgid ""
 "These functions are called from the `g_down` kernel thread and there can be "
 "no sleeping in this context, (see definition of sleeping elsewhere) which "
 "limits what can be done quite a bit, but forces the handling to be fast."
 msgstr ""
+"Estas funciones se llaman desde el thread <function>g_down</function> del "
+"kernel y no puede haber inactividad en este contexto, (vea la definición de "
+"inactividad en otra parte) lo que limita un poco lo que se puede hacer, pero "
+"obliga a que el manejo sea rápido."
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:349
+#, fuzzy
 msgid ""
 "Of these, the most important function for doing actual useful work is the `."
 "start`() function, which is called when a BIO request arrives for a provider "
 "managed by a instance of geom class."
 msgstr ""
+"De estas funciones, la más importante para realizar un trabajo útil real es "
+"la función <function>.start</function>(), que se llama cuando una solicitud "
+"BIO llega a un provider administrado por una instancia de la clase geom."
 
 #. type: Title ===
 #: documentation/content/en/articles/geom-class/_index.adoc:351
@@ -932,10 +1069,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:363
+#, fuzzy
 msgid ""
 "The request ends up as a call to the `.start`() function made on the g_down "
 "thread and reaches the top-level geom instance."
 msgstr ""
+"La solicitud termina como una llamada a la función <function>."
+"start</function>() realizada en el thread g_down y llega a la instancia de "
+"geom de nivel superior"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:364
@@ -1016,6 +1157,7 @@ msgstr "sx y otros sleepable locks"
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:382
+#, fuzzy
 msgid ""
 "This restriction is here to stop GEOM code clogging the I/O request path, "
 "since sleeping is usually not time-bound and there can be no guarantees on "
@@ -1024,6 +1166,13 @@ msgid ""
 "example, almost any complex thing requires memory allocation.  Fortunately, "
 "there is a way out: creating additional kernel threads."
 msgstr ""
+"Esta restricción está aquí para impedir que el código GEOM obstruya la ruta "
+"de las solicitudes de E/S, ya que el sleeping no tiene limite de tiempo y "
+"puede no haber garantías sobre cuánto tiempo tardará (también hay algunas "
+"otras razones más técnicas). También significa que no hay mucho que se pueda "
+"hacer en estos threads; por ejemplo, prácticamente cualquier cosa compleja "
+"requiere asignación de memoria. Afortunadamente, hay una salida: crear "
+"threads adicionales en el kernel."
 
 #. type: Title ===
 #: documentation/content/en/articles/geom-class/_index.adoc:384
@@ -1041,6 +1190,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:390
+#, fuzzy
 msgid ""
 "In GEOM code, the usual use of threads is to offload processing of requests "
 "from `g_down` thread (the `.start`() function).  These threads look like "
@@ -1049,9 +1199,18 @@ msgid ""
 "must be protected by a mutex), take the events from the list one by one and "
 "process them in a big `switch`() statement."
 msgstr ""
+"En el código GEOM, el uso habitual de los threads es para descargar el "
+"procesamiento de peticiones del thread <literal>g_down</literal> (la función "
+"<function>.start</function>()). Estos threads parecen <quote>event "
+"handlers</quote>: tienen vinculada una lista de eventos asociados a ellos ("
+"en los cuales los eventos pueden publicarse mediante varias funciones en "
+"varios threads, por lo que deben estar protegidos por un mutex), toma los "
+"eventos de la lista, uno por uno, y los procesa en una gran instrucción "
+"<literal>switch</literal>()."
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:395
+#, fuzzy
 msgid ""
 "The main benefit of using a thread to handle I/O requests is that it can "
 "sleep when needed.  Now, this sounds good, but should be carefully thought "
@@ -1060,6 +1219,14 @@ msgid ""
 "classes probably should do all the work in `.start`() function call, taking "
 "great care to handle out-of-memory and similar errors."
 msgstr ""
+"La principal ventaja de utilizar un thread para manejar las solicitudes de E/"
+"S es que pueden dormir (sleep) cuando sea necesario. Ahora, esto suena bien, "
+"pero se debe pensar cuidadosamente. Dormir(sleeping) es bueno y muy "
+"conveniente, pero puede ser muy efectivo destruyendo el rendimiento de la "
+"transformación de geom. Las clases extremadamente sensibles al rendimiento "
+"probablemente deberían de hacer todo el trabajo en la llamada a la función "
+"<function>.start</function>(), teniendo mucho cuidado de manejar los errores "
+"de falta de memoria y similares."
 
 #. type: Plain text
 #: documentation/content/en/articles/geom-class/_index.adoc:399
