@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-04-04 12:56+0000\n"
+"PO-Revision-Date: 2021-04-10 12:25+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/articlespam_index/es/>\n"
@@ -68,6 +68,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:37
+#, fuzzy
 msgid ""
 "PAM was defined and developed in 1995 by Vipin Samar and Charlie Lai of Sun "
 "Microsystems, and has not changed much since.  In 1997, the Open Group "
@@ -76,6 +77,12 @@ msgid ""
 "integrated) sign-on.  At the time of this writing, this specification has "
 "not yet been adopted as a standard."
 msgstr ""
+"PAM fue definido y desarrollado en 1995 por Vipin Samar y Charlie Lai de Sun "
+"Microsystems, y no ha cambiado mucho desde entonces. En 1997, el Open Group "
+"publicó la especificación preliminar X/Open Single Sign-on (XSSO), que "
+"estandarizó la API de PAM y añadió las extensiones para el single sign-on. "
+"En el momento de escribir este artículo, esta especificación aún no se ha "
+"adoptado como estándar."
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:39
@@ -99,6 +106,7 @@ msgstr "Definiciones"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:51
+#, fuzzy
 msgid ""
 "The terminology surrounding PAM is rather confused.  Neither Samar and Lai's "
 "original paper nor the XSSO specification made any attempt at formally "
@@ -111,6 +119,17 @@ msgid ""
 "attempt, heavily inspired by Morgan, to define precise and unambiguous terms "
 "for all actors and entities involved in PAM."
 msgstr ""
+"La terminología que rodea PAM es bastante confusa. Ni el documento original "
+"de Samar y Lai, ni la especificación XSSO hicieron ningún intento de definir "
+"formalmente los términos para los diversos actores y entidades involucradas "
+"en PAM, y los términos que usan (pero no definen) a veces son engañosos y "
+"ambiguos. El primer intento de establecer una terminología coherente e "
+"inequívoca fue un documento técnico escrito por Andrew G. Morgan (autor de "
+"Linux-PAM) en 1999. Si bien la terminología elegida por parte de Morgan fue "
+"un gran avance, en opinión de este autor, no es de ninguna manera perfecta. "
+"Las definiciones que se muestran son un intento, fuertemente inspiradas por "
+"Morgan, de definir de forma precisa y sin ambigüedades los terminos para "
+"todos los actores y entidades involucradas en PAM."
 
 #. type: Labeled list
 #: documentation/content/en/articles/pam/_index.adoc:52
@@ -158,11 +177,15 @@ msgstr "chain"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:64
+#, fuzzy
 msgid ""
 "A sequence of modules that will be invoked in response to a PAM request.  "
 "The chain includes information about the order in which to invoke the "
 "modules, what arguments to pass to them, and how to interpret the results."
 msgstr ""
+"Una secuencia de módulos que se invocarán en respuesta a una solicitud PAM. "
+"El chain incluye información sobre el orden en el que invocar los módulos, "
+"qué argumentos pasarles y cómo interpretar los resultados."
 
 #. type: Labeled list
 #: documentation/content/en/articles/pam/_index.adoc:65
@@ -223,12 +246,17 @@ msgstr "policy"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:77
+#, fuzzy
 msgid ""
 "The complete set of configuration statements describing how to handle PAM "
 "requests for a particular service.  A policy normally consists of four "
 "chains, one for each facility, though some services do not use all four "
 "facilities."
 msgstr ""
+"El conjunto completo de instrucciones de configuración que describen cómo "
+"manejar las solicitudes PAM para un servicio en particular. Una policy "
+"normalmente consta de cuatro chains, una para cada facility, aunque algunos "
+"servicios no utilizan las cuatro facilities."
 
 #. type: Labeled list
 #: documentation/content/en/articles/pam/_index.adoc:78
@@ -255,12 +283,17 @@ msgstr "service"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:84
+#, fuzzy
 msgid ""
 "A class of servers providing similar or related functionality and requiring "
 "similar authentication.  PAM policies are defined on a per-service basis, so "
 "all servers that claim the same service name will be subject to the same "
 "policy."
 msgstr ""
+"Una clase de servidores que proporcionan una funcionalidad similar o "
+"relacionada y que requieren una autenticación similar. Las políticas de PAM "
+"se definen por cada service, por lo que todos los servidores que reclaman el "
+"mismo nombre de service estarán sujetos a la misma política."
 
 #. type: Labeled list
 #: documentation/content/en/articles/pam/_index.adoc:85
@@ -270,11 +303,15 @@ msgstr "session"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:88
+#, fuzzy
 msgid ""
 "The context within which service is rendered to the applicant by the "
 "server.  One of PAM's four facilities, session management, is concerned "
 "exclusively with setting up and tearing down this context."
 msgstr ""
+"El contexto dentro del cual el servidor presta el servicio al applicant. Una "
+"de las cuatro facilities de PAM, la gestión de sesiones, se ocupa "
+"exclusivamente de establecer y destruir este contexto."
 
 #. type: Labeled list
 #: documentation/content/en/articles/pam/_index.adoc:89
@@ -422,11 +459,11 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/pam/_index.adoc:144
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Welcome to FreeBSD!\n"
 "%\n"
-msgstr ""
+msgstr "¡Bienvenido a FreeBSD!\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:148
@@ -471,7 +508,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/pam/_index.adoc:166
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "sshd\tauth\t\trequired\tpam_nologin.so\tno_warn\n"
 "sshd\tauth\t\trequired\tpam_unix.so\tno_warn try_first_pass\n"
@@ -480,6 +517,12 @@ msgid ""
 "sshd\tsession\t\trequired\tpam_lastlog.so\tno_fail\n"
 "sshd\tpassword\trequired\tpam_permit.so\n"
 msgstr ""
+"sshd\tauth\t\trequired\tpam_nologin.so\tno_warn\n"
+"sshd\tauth\t\trequired\tpam_unix.so\tno_warn try_first_pass\n"
+"sshd\taccount\t\trequired\tpam_login_access.so\n"
+"sshd\taccount\t\trequired\tpam_unix.so\n"
+"sshd\tsession\t\trequired\tpam_lastlog.so\tno_fail\n"
+"sshd\tpassword\trequired\tpam_permit.so\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:169
@@ -561,11 +604,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:190
+#, fuzzy
 msgid ""
 "_Account management._ This facility handles non-authentication-related "
 "issues of account availability, such as access restrictions based on the "
 "time of day or the server's work load.  It provides a single primitive:"
 msgstr ""
+"<emphasis>Account management.</emphasis> Esta función se encarga de los "
+"problemas de disponibilidad con las cuentas, que no están relacionados con "
+"la autenticación, como restricciones de acceso según la hora del día o la "
+"carga del servidor de trabajo. Proporciona una primitive única:"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:192
@@ -609,11 +657,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:203
+#, fuzzy
 msgid ""
 "_Password management._ This facility is used to change the authentication "
 "token associated with an account, either because it has expired or because "
 "the user wishes to change it.  It provides a single primitive:"
 msgstr ""
+"<emphasis>Gestión de contraseñas.</emphasis>  Esta función se usa para "
+"cambiar el token de autenticación asociado a una cuenta, ya sea porque ha "
+"caducado o porque el usuario desea cambiarla. Proporciona una primitive "
+"única:"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:205
@@ -663,6 +716,7 @@ msgstr "Versionado de módulos"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:225
+#, fuzzy
 msgid ""
 "FreeBSD's original PAM implementation, based on Linux-PAM, did not use "
 "version numbers for PAM modules.  This would commonly cause problems with "
@@ -670,9 +724,15 @@ msgid ""
 "system libraries, as there was no way to load a matching version of the "
 "required modules."
 msgstr ""
+"La implementación original de PAM en FreeBSD, basada en Linux-PAM, no usaba "
+"números de versión para los módulos PAM. Esto normalmente causaría problemas "
+"con las aplicaciones heredadas (legacy), que podrían estar vinculadas con "
+"versiones anteriores de las bibliotecas del sistema, ya que no había forma "
+"de cargar una versión correspondiente de los módulos requeridos."
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:228
+#, fuzzy
 msgid ""
 "OpenPAM, on the other hand, looks for modules that have the same version "
 "number as the PAM library (currently 2), and only falls back to an "
@@ -680,6 +740,12 @@ msgid ""
 "modules can be provided for legacy applications, while allowing new (or "
 "newly built) applications to take advantage of the most recent modules."
 msgstr ""
+"OpenPAM, por otro lado, busca módulos que tengan el mismo número de versión "
+"que la biblioteca PAM (actualmente 2), y solo recurre a un módulo sin "
+"versión si no se puede cargar un módulo que tenga versión. Por lo tanto, se "
+"pueden proporcionar módulos heredados (legacy) para aplicaciones heredadas "
+"(legacy), lo cual permite que las aplicaciones nuevas (o compiladas de nuevo)"
+" aprovechen los módulos más recientes."
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:230
@@ -708,19 +774,28 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:240
+#, fuzzy
 msgid ""
 "A policy consists of four chains, one for each of the four PAM facilities.  "
 "Each chain is a sequence of configuration statements, each specifying a "
 "module to invoke, some (optional) parameters to pass to the module, and a "
 "control flag that describes how to interpret the return code from the module."
 msgstr ""
+"Una policy consta de cuatro chains, una para cada una de las cuatro "
+"facilities de PAM. Cada chain es una secuencia de instalaciones de "
+"configuración, cada una especifica un módulo a invocar, algunos parámetros "
+"(opcionales) para pasar al módulo y una flag de control que describe cómo "
+"interpretar el código de retorno del módulo."
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:243
+#, fuzzy
 msgid ""
 "Understanding the control flags is essential to understanding PAM "
 "configuration files.  There are four different control flags:"
 msgstr ""
+"Comprender las flags de control es esencial para comprender los archivos de "
+"configuración de PAM. Hay cuatro flags de control diferentes:"
 
 #. type: Labeled list
 #: documentation/content/en/articles/pam/_index.adoc:244
@@ -730,12 +805,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:247
+#, fuzzy
 msgid ""
 "If the module succeeds and no earlier module in the chain has failed, the "
 "chain is immediately terminated and the request is granted.  If the module "
 "fails, the rest of the chain is executed, but the request is ultimately "
 "denied."
 msgstr ""
+"Si el módulo tiene éxito y ningún módulo anterior en el chain ha fallado, el "
+"chain se terminará de inmediato y se otorgará la solicitud. Si el módulo "
+"falla, el resto de la chain se ejecuta, pero la solicitud finalmente se "
+"deniega."
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:249
@@ -746,59 +826,75 @@ msgstr ""
 
 #. type: Labeled list
 #: documentation/content/en/articles/pam/_index.adoc:249
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "`required`"
-msgstr ""
+msgstr "required"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:252
+#, fuzzy
 msgid ""
 "If the module succeeds, the rest of the chain is executed, and the request "
 "is granted unless some other module fails.  If the module fails, the rest of "
 "the chain is also executed, but the request is ultimately denied."
 msgstr ""
+"Si el módulo tiene éxito, el resto del chain se ejecutará, y la solicitud se "
+"otorgará a menos que otro módulo falle. Si el módulo falla, el resto del "
+"chain también se ejecutará, pero la solicitud será denegada al final."
 
 #. type: Labeled list
 #: documentation/content/en/articles/pam/_index.adoc:253
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "`requisite`"
-msgstr ""
+msgstr "requisite"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:256
+#, fuzzy
 msgid ""
 "If the module succeeds, the rest of the chain is executed, and the request "
 "is granted unless some other module fails.  If the module fails, the chain "
 "is immediately terminated and the request is denied."
 msgstr ""
+"Si el módulo tiene éxito, el resto del chain se ejecutará y la solicitud se "
+"aceptará a menos que falle algún otro módulo. Si el módulo falla, el chain "
+"terminará inmediatamente y la solicitud será denegada."
 
 #. type: Labeled list
 #: documentation/content/en/articles/pam/_index.adoc:257
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "`sufficient`"
-msgstr ""
+msgstr "sufficient"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:260
+#, fuzzy
 msgid ""
 "If the module succeeds and no earlier module in the chain has failed, the "
 "chain is immediately terminated and the request is granted.  If the module "
 "fails, the module is ignored and the rest of the chain is executed."
 msgstr ""
+"Si el módulo tiene éxito y ningún módulo anterior del chain ha fallado, el "
+"chain terminará de inmediato y se aceptará la solicitud. Si el módulo fala, "
+"se ignorará y se ejecutará el resto del chain."
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:262
+#, fuzzy
 msgid ""
 "As the semantics of this flag may be somewhat confusing, especially when it "
 "is used for the last module in a chain, it is recommended that the `binding` "
 "control flag be used instead if the implementation supports it."
 msgstr ""
+"Como la semántica de este flag puede ser algo confusa, especialmente cuando "
+"se usa para el último módulo de un chain, se recomienda usar el flag de "
+"control del <literal>binding</literal> si la implementación lo admite."
 
 #. type: Labeled list
 #: documentation/content/en/articles/pam/_index.adoc:262
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "`optional`"
-msgstr ""
+msgstr "optional"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:265
@@ -809,6 +905,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:268
+#, fuzzy
 msgid ""
 "When a server invokes one of the six PAM primitives, PAM retrieves the chain "
 "for the facility the primitive belongs to, and invokes each of the modules "
@@ -818,9 +915,19 @@ msgid ""
 "failed.)  The request is granted if and only if at least one module was "
 "invoked, and all non-optional modules succeeded."
 msgstr ""
+"Cuando un server invoca una de las seis primitives de PAM, PAM recupera el "
+"chain para la facility a la que pertenece la primitive e invoca cada uno de "
+"los módulos enumerados en el chain, en el orden en el que se enumeran, hasta "
+"que llega al final, o determina que no es necesario ningún procesamiento "
+"adicional (porque un módulo <literal>binding</literal> o "
+"<literal>sufficient</literal> tuvo éxito, o porque falló un módulo "
+"<literal>requisite</literal>). La solicitud es aceptada si y solo si se "
+"invocó al menos un módulo, y todos los módulos que no sean opcionales "
+"tuvieron éxito."
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:272
+#, fuzzy
 msgid ""
 "Note that it is possible, though not very common, to have the same module "
 "listed several times in the same chain.  For instance, a module that looks "
@@ -829,6 +936,12 @@ msgid ""
 "contact.  PAM treat different occurrences of the same module in the same "
 "chain as different, unrelated modules."
 msgstr ""
+"Tenga en cuenta que es posible, aunque no muy común, tener el mismo módulo "
+"listado varias veces en el mismo chain. Por ejemplo, un módulo que busca "
+"nombres de usuario y contraseñas en un servidor de directorio podría "
+"invocarse varias veces con diferentes parámetros que especifican diferentes "
+"servidores de directorio para contactar. PAM trata diferentes ocurrencias "
+"del mismo módulo en el mismo chain como módulos diferentes no relacionados."
 
 #. type: Title ===
 #: documentation/content/en/articles/pam/_index.adoc:274
@@ -838,11 +951,16 @@ msgstr "Transacciones"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:278
+#, fuzzy
 msgid ""
 "The lifecycle of a typical PAM transaction is described below.  Note that if "
 "any of these steps fails, the server should report a suitable error message "
 "to the client and abort the transaction."
 msgstr ""
+"El ciclo de vida de una transacción PAM típica se describe a continuación. "
+"Tenga en cuenta que si alguno de estos pasos falla, el servidor debe "
+"informar con un mensaje de error adecuado al cliente y cancelar la "
+"transacción."
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:280
@@ -907,10 +1025,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:288
+#, fuzzy
 msgid ""
 "The server now performs whatever service the client requested-for instance, "
 "provide the applicant with a shell."
 msgstr ""
+"El server ahora realiza cualquier servicio que solicite el cliente—por "
+"ejemplo, proporciona al applicant un shell."
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:289
@@ -947,28 +1068,39 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:303
+#, fuzzy
 msgid ""
 "The traditional PAM policy file is [.filename]#/etc/pam.conf#.  This file "
 "contains all the PAM policies for your system.  Each line of the file "
 "describes one step in a chain, as shown below:"
 msgstr ""
+"El archivo de configuración tradicional de PAM es <filename>/etc/pam.conf</"
+"filename>.  Este archivo contiene todas las configuraciones de PAM para su "
+"sistema. Cada línea del archivo describe un paso es un chain, como se "
+"muestra a continuación:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/pam/_index.adoc:307
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "login   auth    required        pam_nologin.so  no_warn\n"
-msgstr ""
+msgstr "login   auth    required        pam_nologin.so  no_warn\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:311
+#, fuzzy
 msgid ""
 "The fields are, in order: service name, facility name, control flag, module "
 "name, and module arguments.  Any additional fields are interpreted as "
 "additional module arguments."
 msgstr ""
+"Los campos son, en orden de aparición: nombre del servicio, nombre del "
+"facility, flag de control, nombre del módulo y argumentos del módulo. "
+"Cualquier campo adicional se interpreta como un argumento adicional del "
+"módulo."
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:315
+#, fuzzy
 msgid ""
 "A separate chain is constructed for each service / facility pair, so while "
 "the order in which lines for the same service and facility appear is "
@@ -978,6 +1110,15 @@ msgid ""
 "does that, but FreeBSD's stock configuration groups configuration lines by "
 "service.  Either way is fine; either way makes equal sense."
 msgstr ""
+"Se contruye un chain separado para cada par service/facility, por lo tanto, "
+"si bien el orden en que aparecen las líneas para el mismo service y facility "
+"es significativo, el orden en que se enumeran los services y facilities no "
+"lo es. Los ejemplos en el documento PAM original agruparon las líneas de "
+"configuración por facility, y el <filename>pam.conf</filename> que hay por "
+"defecto en <trademark>Solaris</trademark> todavía lo hace, pero la "
+"configuración por defecto de FreeBSD agrupa las líneas de configuración por "
+"service. De todas formas está bien; de cualquier forma, tiene el mismo "
+"sentido."
 
 #. type: Title ====
 #: documentation/content/en/articles/pam/_index.adoc:317
@@ -987,12 +1128,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:322
+#, fuzzy
 msgid ""
 "OpenPAM and Linux-PAM support an alternate configuration mechanism, which is "
 "the preferred mechanism in FreeBSD.  In this scheme, each policy is "
 "contained in a separate file bearing the name of the service it applies to.  "
 "These files are stored in [.filename]#/etc/pam.d/#."
 msgstr ""
+"OpenPAM y Linux-PAM soportan un mecanismo de configuración alternativo, que "
+"es el mecanismo preferido en FreeBSD. En este esquema, cada policy está "
+"contenida en un archivo separado con el nombre del service al que se aplica. "
+"Estos archivos se almacenan en <filename>/etc/pam.d/</filename>."
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:325
@@ -1005,18 +1151,23 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/pam/_index.adoc:329
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "auth    required        pam_nologin.so  no_warn\n"
-msgstr ""
+msgstr "auth    required        pam_nologin.so  no_warn\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:333
+#, fuzzy
 msgid ""
 "As a consequence of this simplified syntax, it is possible to use the same "
 "policy for multiple services by linking each service name to a same policy "
 "file.  For instance, to use the same policy for the `su` and `sudo` "
 "services, one could do as follows:"
 msgstr ""
+"Como resultado de esta sintaxis simplificada, es posible utilizar la misma "
+"policy para múltiples services vinculando cada nombre de service al mismo "
+"archivo de policy. Por ejemplo, para utilizar la misma policy para "
+"<literal>su</literal> y <literal>sudo</literal>, puede hacer lo siguiente:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/pam/_index.adoc:338
@@ -1039,11 +1190,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:343
+#, fuzzy
 msgid ""
 "Since each service's policy is stored in a separate file, the [."
 "filename]#pam.d# mechanism also makes it very easy to install additional "
 "policies for third-party software packages."
 msgstr ""
+"Como la policy de cada service se almacena en un archivo separado, el "
+"mecanismo <filename>pam.d</filename> también facilita la instalación de "
+"policies adicionales para paquetes de software de terceros."
 
 #. type: Title ====
 #: documentation/content/en/articles/pam/_index.adoc:345
@@ -1053,10 +1208,14 @@ msgstr "El orden de búsqueda del policy"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:349
+#, fuzzy
 msgid ""
 "As we have seen above, PAM policies can be found in a number of places.  "
 "What happens if policies for the same service exist in multiple places?"
 msgstr ""
+"Como hemos visto anteriormente, las policies de PAM se pueden encontrar en "
+"varios sitios. ¿Qué sucede si existen policies para el mismo service en "
+"varios sitios?"
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:351
@@ -1083,12 +1242,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:359
+#, fuzzy
 msgid ""
 "The service name is generally (though not always) the name of the "
 "application the statement applies to.  If you are unsure, refer to the "
 "individual application's documentation to determine what service name it "
 "uses."
 msgstr ""
+"El nombre del service suele ser (aunque no siempre) el nombre de la "
+"aplicación a la que se aplica la declaración. Si no está seguro, consulte la "
+"documentación de la aplicación para determinar qué nombre de service utiliza."
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:361
@@ -1144,6 +1307,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:379
+#, fuzzy
 msgid ""
 "When the application later calls one of the six PAM primitives, the PAM "
 "library retrieves the chain for the corresponding facility and calls the "
@@ -1153,6 +1317,14 @@ msgid ""
 "function are used to determine what happens next.  With a few exceptions, "
 "which we discuss below, the following table applies:"
 msgstr ""
+"Cuando la aplicación llama más tarde a una de los seis primitives de PAM, la "
+"biblioteca PAM recupera el chain para la facility correspondiente y llama a "
+"la función apropiada del service en cada módulo del listado en el chain, en "
+"el orden en el que fueron listados en la configuración. Después de cada "
+"llamada a una función del service, el tipo de módulo y el código de error "
+"devuelto por la función del service se utilizan para determinar qué sucede a "
+"continuación. Con algunas excepciones, que se analizaran a continuación, se "
+"aplica la siguiente tabla:"
 
 #. type: Block title
 #: documentation/content/en/articles/pam/_index.adoc:380
@@ -1205,12 +1377,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:418
+#, fuzzy
 msgid ""
 "The first exception of note is that the error code `PAM_NEW_AUTHTOK_REQD` is "
 "treated like a success, except that if no module failed, and at least one "
 "module returned `PAM_NEW_AUTHTOK_REQD`, the dispatcher will return "
 "`PAM_NEW_AUTHTOK_REQD`."
 msgstr ""
+"La primera excepción es que el código de error "
+"<literal>PAM_NEW_AUTHTOK_REQD</literal> se trata como un éxito, si ningún "
+"módulo falla y al menos un módulo devuelve <literal>PAM_NEW_AUTHTOK_REQD</"
+"literal>, el dispatcher devolverá <literal>PAM_NEW_AUTHTOK_REQD</literal>."
 
 #. type: Plain text
 #: documentation/content/en/articles/pam/_index.adoc:420
