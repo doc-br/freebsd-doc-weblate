@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-03-28 15:05+0000\n"
+"PO-Revision-Date: 2021-04-11 02:08+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/articlesleap-seconds_index/es/>\n"
@@ -37,19 +37,29 @@ msgstr "Introducción"
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:27
+#, fuzzy
 msgid ""
 "A _leap second_ is an one second adjustment made at specific times of year "
 "to UTC to synchronize atomic time scales with variations in the rotation of "
 "the Earth.  This article describes how FreeBSD interacts with leap seconds."
 msgstr ""
+"Un <emphasis>segundo intercalar</emphasis> es un ajuste de un segundo "
+"realizado en momentos específicos del año a UTC para sincronizar escalas de "
+"tiempo atómicas con variaciones en la rotación de la Tierra. Este artículo "
+"describe cómo FreeBSD interactúa con segundos intercalares."
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:30
+#, fuzzy
 msgid ""
 "As of this writing, the next leap second will occur at 2015-Jun-30 23:59:60 "
 "UTC.  This leap second will occur during a business day for North and South "
 "America and the Asia/Pacific region."
 msgstr ""
+"En el momento de escribir estas líneas, el próximo segundo intercalar "
+"ocurrirá el 30 de junio del 2015 a las 23:59:60 UTC. Este segundo intercalar "
+"ocurrirá durante un dí­a laboral para América del Norte y del Sur y la "
+"región Asia/Pací­fico."
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:32
@@ -121,12 +131,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:57
+#, fuzzy
 msgid ""
 "However, we caution that practically no applications have ever asked the "
 "kernel about leap seconds.  Our experience is that, as designed, leap "
 "seconds are essentially a replay of the second before the leap second, and "
 "this is a surprise to most application programmers."
 msgstr ""
+"De todas formas, asumimos que prácticamente ninguna aplicación ha requerido "
+"información del kernel acerca del segundo intercalar. Nuestra experiencia es "
+"que, tal como está diseñado, el segundo intercalar es esencialmente una "
+"repetición del segundo antes del segundo intercalar, esto es una sorpresa "
+"para la mayoría de los programadores."
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:59
@@ -138,11 +154,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:61
+#, fuzzy
 msgid ""
 "It is not unheard of for computers to crash because of leap seconds, and "
 "experience has shown that a large fraction of all public NTP servers might "
 "handle and announce the leap second incorrectly."
 msgstr ""
+"No es extraño que las computadoras fallen a causa del segundo intercalar, y "
+"la experiencia ha demostrado que una gran parte de los servidores públicos "
+"de <acronym>NTP</acronym> pueden manejar y anunciar incorrectamente el "
+"segundo intercalar."
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:63
@@ -160,12 +181,18 @@ msgstr "Pruebas"
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:71
+#, fuzzy
 msgid ""
 "It is possible to test whether a leap second will be used.  Due to the "
 "nature of NTP, the test might work up to 24 hours before the leap second.  "
 "Some major reference clock sources only announce leap seconds one hour ahead "
 "of the event.  Query the NTP daemon:"
 msgstr ""
+"Es posible probar si un segundo intercalar será usado. Debido a la "
+"naturaleza de <acronym>NTP</acronym>, la prueba puede funcionar hasta 24 "
+"horas antes del segundo intercalar. Algunas fuentes importantes de "
+"referencia de tiempo solo anuncian el segundo intercalar una hora antes del "
+"acontecimiento. Realice una consulta al demonio de <acronym>NTP</acronym>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/leap-seconds/_index.adoc:75
@@ -175,11 +202,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:79
+#, fuzzy
 msgid ""
 "Output that includes `leap_add_sec` indicates proper support of the leap "
 "second.  Before the 24 hours leading up to the leap second, or after the "
 "leap second has passed, `leap_none` will be shown."
 msgstr ""
+"Una salida que incluya <literal>leap_add_sec</literal> indica el soporte "
+"para el segundo intercalar. Cuando falten más de 24 horas para el segundo "
+"intercalar, o cuando este haya pasado, <literal>leap_none</literal> será "
+"mostrado por pantalla."
 
 #. type: Title ==
 #: documentation/content/en/articles/leap-seconds/_index.adoc:81
@@ -189,8 +221,12 @@ msgstr "Conclusión"
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:84
+#, fuzzy
 msgid ""
 "In practice, leap seconds are usually not a problem on FreeBSD.  We hope "
 "that this overview helps clarify what to expect and how to make the leap "
 "second event proceed more smoothly."
 msgstr ""
+"En la práctica, los segundos intercalares no suelen ser un problema en "
+"FreeBSD. Esperamos que esta breve reseña ayude a clarificar qué esperar y "
+"cómo hacer que el segundo intercalar pase sin contratiempos."
