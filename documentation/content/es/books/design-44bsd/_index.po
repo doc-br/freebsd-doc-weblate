@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-04 12:57+0000\n"
+"PO-Revision-Date: 2021-04-11 02:07+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/booksdesign-44bsd_index/es/>\n"
@@ -417,6 +417,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:163
+#, fuzzy
 msgid ""
 "<<table-mach-indep>> summarizes the machine-independent software that "
 "constitutes the 4.4BSD kernel for the HP300. The numbers in column 2 are for "
@@ -426,9 +427,19 @@ msgid ""
 "mach-dep>> show, the machine-dependent software, excluding HP/UX and device "
 "support, accounts for a minuscule 6.9 percent of the kernel."
 msgstr ""
+"<xref linkend=\"table-mach-indep\"/> resume el software independiente de la "
+"máquina que constituye el kernel 4.4BSD para la HP300. Los números en la "
+"columna 2 son para líneas de código fuente C, archivos de encabezado y "
+"lenguaje ensamblador. Prácticamente todo el software del kernel está escrito "
+"en lenguaje de programación C; menos del 2 por ciento está escrito en "
+"lenguaje ensamblador. Como las estadísticas en <xref linkend=\"table-mach-"
+"dep\"/> show, el software dependiente de la máquina, excluyendo HP/UX y la "
+"compatibilidad con dispositivos, representa un minúsculo 6,9 por ciento del "
+"kernel."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:165
+#, fuzzy
 msgid ""
 "Only a small part of the kernel is devoted to initializing the system. This "
 "code is used when the system is _bootstrapped_ into operation and is "
@@ -442,6 +453,18 @@ msgid ""
 "throughout, and it usually appears in places logically associated with what "
 "is being initialized."
 msgstr ""
+"Solo una pequeña parte del kernel se dedica a inicializar el sistema. Este "
+"código se utiliza cuando el sistema está <emphasis>bootstrapped</emphasis> "
+"en funcionamiento y es responsable de configurar el entorno de hardware y "
+"software del kernel (consulte el Capítulo 14). Algunos sistemas operativos ("
+"especialmente aquellos con memoria física limitada) descartan o "
+"<emphasis>overlay</emphasis>  el software que realiza estas funciones "
+"después de que se haya ejecutado ese software. El núcleo 4.4BSD no recupera "
+"la memoria utilizada por el código de inicio porque ese espacio de memoria "
+"es apenas el 0,5 por ciento de los recursos del núcleo utilizados en una "
+"máquina típica. Además, el código de inicio no aparece en un solo lugar del "
+"kernel; está disperso por todas partes y, por lo general, aparece en lugares "
+"asociados lógicamente con lo que se está inicializando."
 
 #. type: Title ===
 #: documentation/content/en/books/design-44bsd/_index.adoc:167
@@ -451,6 +474,7 @@ msgstr "Servicios de kernel"
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:170
+#, fuzzy
 msgid ""
 "The boundary between the kernel- and user-level code is enforced by hardware-"
 "protection facilities provided by the underlying hardware. The kernel "
@@ -468,9 +492,28 @@ msgid ""
 "process waits, but will usually return from the system call before the "
 "kernel buffer is written to the disk."
 msgstr ""
+"El límite entre el código de nivel de kernel y de usuario es reforzado por "
+"las instalaciones de protección de hardware proporcionadas por el hardware "
+"subyacente. El kernel opera en un espacio de direcciones separado que es "
+"inaccesible para los procesos del usuario. Las operaciones privilegiadas, "
+"como iniciar E / S y detener la unidad central de procesamiento (CPU), solo "
+"están disponibles para el kernel. Las aplicaciones solicitan servicios del "
+"kernel con <emphasis>llamadas al sistema</emphasis> Las llamadas al sistema "
+"se utilizan para hacer que el kernel ejecute operaciones complicadas, como "
+"escribir datos en el almacenamiento secundario, y operaciones simples, como "
+"devolver la hora actual del día. Aparecen todas las llamadas al sistema "
+"<emphasis>sincrónico</emphasis> a las aplicaciones: la aplicación no se "
+"ejecuta mientras el núcleo realiza las acciones asociadas con una llamada al "
+"sistema. El kernel puede finalizar algunas operaciones asociadas con una "
+"llamada al sistema después de haber regresado. Por ejemplo, un "
+"<emphasis>escriba</emphasis> La llamada al sistema copiará los datos que se "
+"escribirán desde el proceso del usuario a un búfer del núcleo mientras el "
+"proceso espera, pero normalmente regresará de la llamada al sistema antes de "
+"que el búfer del núcleo se escriba en el disco."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:172
+#, fuzzy
 msgid ""
 "A system call usually is implemented as a hardware trap that changes the "
 "CPU's execution mode and the current address-space mapping. Parameters "
@@ -487,6 +530,23 @@ msgid ""
 "programming language, this error code is stored in the global variable "
 "_errno_, and the function that executed the system call returns the value -1."
 msgstr ""
+"Una llamada al sistema generalmente se implementa como una trampa de "
+"hardware que cambia el modo de ejecución de la CPU y la asignación actual "
+"del espacio de direcciones. Los parámetros proporcionados por los usuarios "
+"en las llamadas al sistema son validados por el kernel antes de ser "
+"utilizados. Dicha verificación asegura la integridad del sistema. Todos los "
+"parámetros que se pasan al kernel se copian en el espacio de direcciones del "
+"kernel, para garantizar que los parámetros validados no se modifiquen como "
+"un efecto secundario de la llamada al sistema. Los resultados de las "
+"llamadas al sistema son devueltos por el kernel, ya sea en registros de "
+"hardware o copiando sus valores a direcciones de memoria especificadas por "
+"el usuario. Al igual que los parámetros que se pasan al kernel, las "
+"direcciones utilizadas para la devolución de resultados deben validarse para "
+"garantizar que formen parte del espacio de direcciones de una aplicación. Si "
+"el kernel encuentra un error al procesar una llamada al sistema, devuelve un "
+"código de error al usuario. Para el lenguaje de programación C, este código "
+"de error se almacena en la variable global <emphasis>errno</emphasis>, y la "
+"función que ejecutó la llamada al sistema devuelve el valor -1."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:174
@@ -514,6 +574,7 @@ msgstr "Gestión de proceso"
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:179
+#, fuzzy
 msgid ""
 "4.4BSD supports a multitasking environment. Each task or thread of execution "
 "is termed a _process_. The _context_ of a 4.4BSD process consists of user-"
@@ -527,9 +588,25 @@ msgid ""
 "used by the kernel to identify a process when reporting status changes to a "
 "user, and by a user when referencing a process in a system call."
 msgstr ""
+"4.4BSD admite un entorno multitarea. Cada tarea o hilo de ejecución se "
+"denomina proceso de <emphasis>process</emphasis>. El <emphasis>contexto</"
+"emphasis> de un proceso 4.4BSD consiste en el estado a nivel de usuario, "
+"incluido el contenido de su espacio de direcciones y el entorno de tiempo de "
+"ejecución, y el estado a nivel de kernel, que incluye parámetros de "
+"programación, controles de recursos e información de identificación. El "
+"contexto incluye todo lo que utiliza el kernel para proporcionar servicios "
+"para el proceso. Los usuarios pueden crear procesos, controlar la ejecución "
+"de los procesos y recibir notificaciones cuando cambia el estado de "
+"ejecución de los procesos. A cada proceso se le asigna un valor único, "
+"denominado<emphasis>identificador de proceso</emphasis>  (PID). Este valor "
+"lo usa el kernel para identificar un proceso cuando informa cambios de "
+"estado a un usuario y un usuario cuando hace referencia a un proceso en una "
+"llamada al sistema.\n"
+"Español."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:181
+#, fuzzy
 msgid ""
 "The kernel creates a process by duplicating the context of another process. "
 "The new process is termed a _child process_ of the original _parent process_ "
@@ -537,6 +614,13 @@ msgid ""
 "execution state of the process and the process's system state managed by the "
 "kernel. Important components of the kernel state are described in Chapter 4."
 msgstr ""
+"El kernel crea un proceso duplicando el contexto de otro proceso. El nuevo "
+"proceso se denomina <emphasis>proceso hijo</emphasis>del "
+"original<emphasis>proceso padre</emphasis> el contexto duplicado en la "
+"creación del proceso incluye tanto el estado de ejecución del proceso a "
+"nivel de usuario como el estado del sistema del proceso administrado por el "
+"kernel. Los componentes importantes del estado del kernel se describen en el "
+"Capítulo 4."
 
 #. type: Block title
 #: documentation/content/en/books/design-44bsd/_index.adoc:183
@@ -564,6 +648,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:189
+#, fuzzy
 msgid ""
 "Although there are occasions when the new process is intended to be a copy "
 "of the parent, the loading and execution of a different program is a more "
@@ -574,9 +659,19 @@ msgid ""
 "binary-executable file or a file that causes the execution of a specified "
 "interpreter program to process its contents."
 msgstr ""
+"Aunque hay ocasiones en las que se pretende que el nuevo proceso sea una "
+"copia del padre, la carga y ejecución de un programa diferente es una acción "
+"más útil y típica. Un proceso puede superponerse a sí mismo con la imagen de "
+"memoria de otro programa, pasando a la imagen recién creada un conjunto de "
+"parámetros, utilizando la llamada al sistema <emphasis>execve</emphasis>. Un "
+"parámetro es el nombre de un archivo cuyo contenido está en un formato "
+"reconocido por el sistema, ya sea un archivo ejecutable binario o un archivo "
+"que hace que la ejecución de un programa de interpretación específico "
+"procese su contenido."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:191
+#, fuzzy
 msgid ""
 "A process may terminate by executing an _exit_ system call, sending 8 bits "
 "of exit status to its parent. If a process wants to communicate more than a "
@@ -585,6 +680,12 @@ msgid ""
 "intermediate file. Interprocess communication is discussed extensively in "
 "Chapter 11."
 msgstr ""
+"Un proceso puede terminar ejecutando un <emphasis>salir</emphasis> llamada "
+"al sistema, enviando 8 bits de estado de salida a su padre. Si un proceso "
+"desea comunicar más de un byte de información con su padre, debe configurar "
+"un canal de comunicación entre procesos utilizando tuberías o sockets, o "
+"utilizar un archivo intermedio. La comunicación entre procesos se analiza "
+"ampliamente en el Capítulo 11."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:193
@@ -612,6 +713,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:197
+#, fuzzy
 msgid ""
 "Processes are scheduled for execution according to a _process-priority_ "
 "parameter. This priority is managed by a kernel-based scheduling algorithm. "
@@ -620,6 +722,13 @@ msgid ""
 "obligated to share the underlying CPU resources according to the kernel's "
 "scheduling policy."
 msgstr ""
+"Los procesos están programados para su ejecución de acuerdo con un "
+"<emphasis>proceso parámetro. Esta prioridad es administrada por un algoritmo "
+"de programación basado en kernel. Los usuarios pueden influir en la "
+"programación de un proceso especificando un parámetro "
+"(<emphasis>nice</emphasis>) que pondera la prioridad de programación "
+"general, pero aún están obligados a compartir los recursos de CPU "
+"subyacentes de acuerdo con la política de programación del kernel."
 
 #. type: Title ====
 #: documentation/content/en/books/design-44bsd/_index.adoc:198
@@ -629,6 +738,7 @@ msgstr "Señales"
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:201
+#, fuzzy
 msgid ""
 "The system defines a set of _signals_ that may be delivered to a process. "
 "Signals in 4.4BSD are modeled after hardware interrupts. A process may "
@@ -641,9 +751,21 @@ msgid ""
 "setting a global variable). If the handler returns, the signal is unblocked "
 "and can be generated (and caught) again."
 msgstr ""
+"El sistema define un conjunto de <emphasis>signals</emphasis> que se puede "
+"entregar a un proceso. Las señales en 4.4BSD se modelan a partir de las "
+"interrupciones de hardware. Un proceso puede especificar una subrutina a "
+"nivel de usuario para ser un <emphasis>handler</emphasis> al que se debe "
+"enviar una señal. Cuando se genera una señal, se bloquea para que no vuelva "
+"a ocurrir mientras se está <emphasis>caught</emphasis> por el manejador. La "
+"captura de una señal implica guardar el contexto del proceso actual y crear "
+"uno nuevo en el que ejecutar el controlador. Luego, la señal se envía al "
+"controlador, que puede abortar el proceso o regresar al proceso en ejecución "
+"(quizás después de establecer una variable global). Si el manejador regresa, "
+"la señal se desbloquea y se puede generar (y capturar) nuevamente."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:203
+#, fuzzy
 msgid ""
 "Alternatively, a process may specify that a signal is to be _ignored_, or "
 "that a default action, as determined by the kernel, is to be taken. The "
@@ -651,6 +773,12 @@ msgid ""
 "termination may be accompanied by creation of a _core file_ that contains "
 "the current memory image of the process for use in postmortem debugging."
 msgstr ""
+"Alternativamente, un proceso puede especificar que una señal debe ser "
+"<emphasis>ignored</emphasis>, o que se debe tomar una acción predeterminada, "
+"según lo determine el kernel. La acción predeterminada de ciertas señales es "
+"terminar el proceso. Esta terminación puede ir acompañada de la creación de "
+"un <emphasis>core file</emphasis>  que contiene la imagen de memoria actual "
+"del proceso para su uso en la depuración post mortem."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:205
@@ -681,6 +809,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:209
+#, fuzzy
 msgid ""
 "All signals have the same _priority_. If multiple signals are pending "
 "simultaneously, the order in which signals are delivered to a process is "
@@ -689,6 +818,13 @@ msgid ""
 "are provided so that processes can protect critical sections of code against "
 "the occurrence of specified signals."
 msgstr ""
+"Todas las señales tienen lo mismo <emphasis>prioridad</emphasis>. Si hay "
+"varias señales pendientes simultáneamente, el orden en el que se envían las "
+"señales a un proceso es específico de la implementación. Los manejadores de "
+"señales se ejecutan con la señal que provocó el bloqueo de su invocación, "
+"pero aún pueden ocurrir otras señales. Se proporcionan mecanismos para que "
+"los procesos puedan proteger secciones críticas de código contra la "
+"aparición de señales específicas."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:211
@@ -707,6 +843,7 @@ msgstr "Grupos de procesos y sesiones"
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:215
+#, fuzzy
 msgid ""
 "Processes are organized into _process groups_. Process groups are used to "
 "control access to terminals and to provide a means of distributing signals "
@@ -716,9 +853,18 @@ msgid ""
 "Creating a new process group is easy; the value of a new process group is "
 "ordinarily the process identifier of the creating process."
 msgstr ""
+"Los procesos se organizan en <emphasis>process groups</emphasis>. Los grupos "
+"de procesos se utilizan para controlar el acceso a terminales y para "
+"proporcionar un medio de distribuir señales a colecciones de procesos "
+"relacionados. Un proceso hereda su grupo de procesos de su proceso padre. El "
+"kernel proporciona mecanismos para permitir que un proceso altere su grupo "
+"de procesos o el grupo de procesos de sus descendientes. Crear un nuevo "
+"grupo de procesos es fácil; el valor de un nuevo grupo de procesos es "
+"normalmente el identificador de proceso del proceso de creación."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:217
+#, fuzzy
 msgid ""
 "The group of processes in a process group is sometimes referred to as a "
 "_job_ and is manipulated by high-level system software, such as the shell. A "
@@ -728,6 +874,15 @@ msgid ""
 "forth. The shell creates such a job by forking a process for each stage of "
 "the pipeline, then putting all those processes into a separate process group."
 msgstr ""
+"El grupo de procesos en un grupo de procesos a veces se denomina un "
+"<emphasis>job</emphasis> y es manipulado por software de sistema de alto "
+"nivel, como el shell. Un tipo común de trabajo creado por un shell es un "
+"<emphasis>pipeline</emphasis> de varios procesos conectados por tuberías, de "
+"modo que la salida del primer proceso es la entrada del segundo, la salida "
+"del segundo es la entrada del tercero, y así sucesivamente. El caparazón "
+"crea un trabajo de este tipo mediante la bifurcación de un proceso para cada "
+"etapa de la tubería y luego coloca todos esos procesos en un grupo de "
+"procesos separado."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:219
@@ -745,6 +900,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:221
+#, fuzzy
 msgid ""
 "A terminal has a process-group identifier assigned to it. This identifier is "
 "normally set to the identifier of a process group associated with the "
@@ -758,9 +914,22 @@ msgid ""
 "a terminal among several different jobs. This arbitration is called _job "
 "control_ and is described, with process groups, in Section 4.8."
 msgstr ""
+"Un terminal tiene asignado un identificador de grupo de procesos. Este "
+"identificador normalmente se establece en el identificador de un grupo de "
+"procesos asociado con el terminal. Un shell de control de trabajos puede "
+"crear varios grupos de procesos asociados con el mismo terminal; la terminal "
+"es la <emphasis>controlando terminal</emphasis> para cada proceso en estos "
+"grupos. Un proceso puede leer de un descriptor para su terminal de control "
+"solo si el identificador del grupo de procesos del terminal coincide con el "
+"del proceso. Si los identificadores no coinciden, el proceso se bloqueará si "
+"intenta leer desde el terminal. Al cambiar el identificador de grupo de "
+"procesos del terminal, un shell puede arbitrar un terminal entre varios "
+"trabajos diferentes. Este arbitraje se llama <emphasis>job control</"
+"emphasis> y se describe, con grupos de procesos, en la Sección 4.8."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:223
+#, fuzzy
 msgid ""
 "Just as a set of related processes can be collected into a process group, a "
 "set of process groups can be collected into a _session_. The main uses for "
@@ -768,6 +937,11 @@ msgid ""
 "children, and to collect together a user's login shell and the jobs that "
 "that shell spawns."
 msgstr ""
+"Así como un conjunto de procesos relacionados se puede recopilar en un grupo "
+"de procesos, un conjunto de grupos de procesos se puede recopilar en un "
+"<emphasis>session</emphasis>. Los usos principales de las sesiones son crear "
+"un entorno aislado para un proceso daemon y sus hijos, y recopilar el shell "
+"de inicio de sesión de un usuario y los trabajos que genera ese shell."
 
 #. type: Title ===
 #: documentation/content/en/books/design-44bsd/_index.adoc:225
@@ -777,6 +951,7 @@ msgstr "Gestión de la memoria"
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:228
+#, fuzzy
 msgid ""
 "Each process has its own private address space. The address space is "
 "initially divided into three logical segments: _text_, _data_, and _stack_. "
@@ -792,9 +967,26 @@ msgid ""
 "segments of a child process are duplicates of the segments of a parent "
 "process."
 msgstr ""
+"Cada proceso tiene su propio espacio de direcciones privadas. El espacio de "
+"direcciones se divide inicialmente en tres segmentos lógicos: "
+"<emphasis>text</emphasis>,<emphasis>data</emphasis>, y <emphasis>stack</"
+"emphasis>. El segmento de texto es de solo lectura y contiene las "
+"instrucciones de máquina de un programa. Los segmentos de datos y de pila "
+"son tanto legibles como de escritura. El segmento de datos contiene las "
+"porciones de datos inicializadas y no inicializadas de un programa, mientras "
+"que el segmento de pila contiene la pila de tiempo de ejecución de la "
+"aplicación. En la mayoría de las máquinas, el núcleo amplía automáticamente "
+"el segmento de la pila a medida que se ejecuta el proceso. Un proceso puede "
+"expandir o contraer su segmento de datos al realizar una llamada al sistema, "
+"mientras que un proceso puede cambiar el tamaño de su segmento de texto solo "
+"cuando el contenido del segmento se superpone con datos del sistema de "
+"archivos o cuando se realiza la depuración. El contenido inicial de los "
+"segmentos de un proceso hijo son duplicados de los segmentos de un proceso "
+"padre."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:230
+#, fuzzy
 msgid ""
 "The entire contents of a process address space do not need to be resident "
 "for a process to execute. If a process references a part of its address "
@@ -809,6 +1001,21 @@ msgid ""
 "process may, however, advise the system about expected future memory "
 "utilization as a performance aid."
 msgstr ""
+"No es necesario que todo el contenido de un espacio de direcciones de "
+"proceso sea residente para que se ejecute un proceso. Si un proceso hace "
+"referencia a una parte de su espacio de direcciones que no reside en la "
+"memoria principal, el sistema<emphasis>pages</emphasis> la información "
+"necesaria en la memoria. Cuando los recursos del sistema son escasos, el "
+"sistema utiliza un enfoque de dos niveles para mantener los recursos "
+"disponibles. Si hay una cantidad modesta de memoria disponible, el sistema "
+"quitará recursos de memoria a los procesos si estos recursos no se han "
+"utilizado recientemente. Si hubiera una grave escasez de recursos, el "
+"sistema recurrirá a <emphasis>swapping</emphasis> todo el contexto de un "
+"proceso al almacenamiento secundario. los <emphasis>demand paging</emphasis> "
+"y <emphasis>swapping</emphasis> realizadas por el sistema son efectivamente "
+"transparentes a los procesos. Sin embargo, un proceso puede informar al "
+"sistema sobre la utilización de memoria futura esperada como ayuda para el "
+"rendimiento."
 
 #. type: Title ====
 #: documentation/content/en/books/design-44bsd/_index.adoc:231
@@ -818,6 +1025,7 @@ msgstr "Decisiones de diseño de gestión de memoria BSD"
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:234
+#, fuzzy
 msgid ""
 "The support of large sparse address spaces, mapped files, and shared memory "
 "was a requirement for 4.2BSD. An interface was specified, called _mmap_, "
@@ -829,6 +1037,16 @@ msgid ""
 "_mmap_ interface, because of pressure to make other features, such as "
 "networking, available."
 msgstr ""
+"El soporte de grandes espacios de direcciones dispersos, archivos mapeados y "
+"memoria compartida era un requisito para 4.2BSD. Se especificó una interfaz, "
+"llamada <emphasis>mmap</emphasis>, que permitía a los procesos no "
+"relacionados solicitar un mapeo compartido de un archivo en sus espacios de "
+"direcciones. Si varios procesos mapearon el mismo archivo en sus espacios de "
+"direcciones, los cambios en la porción del archivo de un espacio de "
+"direcciones por un proceso se reflejarían en el área mapeada por los otros "
+"procesos, así como en el archivo mismo. Finalmente, 4.2BSD se envió sin el "
+"<emphasis>mmap</emphasis> interfaz, debido a la presión para hacer "
+"disponibles otras funciones, como redes."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:236
@@ -935,6 +1153,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:246
+#, fuzzy
 msgid ""
 "If the process is allowed to keep a copy of the page (as it is in current "
 "4.4BSD semantics), the page must be made _copy-on-write_. A copy-on-write "
@@ -944,6 +1163,15 @@ msgid ""
 "Unfortunately, the typical process will immediately try to write new data to "
 "its output buffer, forcing the data to be copied anyway."
 msgstr ""
+"Si al proceso se le permite mantener una copia de la página (como está en la "
+"semántica 4.4BSD actual), la página debe hacerse <emphasis>copy-on-write</"
+"emphasis>. Una página de copia en escritura es aquella que está protegida "
+"contra la escritura al convertirse en solo lectura. Si el proceso intenta "
+"modificar la página, el kernel tiene un error de escritura. El kernel luego "
+"hace una copia de la página que el proceso puede modificar. "
+"Desafortunadamente, el proceso típico intentará inmediatamente escribir "
+"nuevos datos en su búfer de salida, lo que obligará a copiar los datos de "
+"todos modos."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:247
@@ -1140,6 +1368,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:278
+#, fuzzy
 msgid ""
 "Every valid descriptor has an associated _file offset_ in bytes from the "
 "beginning of the object. Read and write operations start at this offset, "
@@ -1148,6 +1377,14 @@ msgid ""
 "Ordinary files permit random access, and some devices do, as well. Pipes and "
 "sockets do not."
 msgstr ""
+"Cada descriptor válido tiene asociado un <emphasis>file offset</emphasis> en "
+"bytes desde el principio del objeto. Las operaciones de lectura y escritura "
+"comienzan en este desplazamiento, que se actualiza después de cada "
+"transferencia de datos. Para los objetos que permiten el acceso aleatorio, "
+"el desplazamiento del archivo también se puede establecer con el "
+"<emphasis>lseek</emphasis> llamada al sistema. Los archivos ordinarios "
+"permiten el acceso aleatorio, y algunos dispositivos también lo hacen. Las "
+"tuberías y los enchufes no."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:280
@@ -1199,6 +1436,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:288
+#, fuzzy
 msgid ""
 "Pipes allow the output of one program to be input to another program without "
 "rewriting or even relinking of either program. Instead of descriptor 1 "
@@ -1209,6 +1447,16 @@ msgid ""
 "two processes and the connecting pipe is known as a _pipeline_. Pipelines "
 "can be arbitrarily long series of processes connected by pipes."
 msgstr ""
+"Las tuberías permiten que la salida de un programa se introduzca en otro "
+"programa sin tener que volver a escribir o incluso volver a vincular ninguno "
+"de los programas. En lugar de configurar el descriptor 1 (salida estándar) "
+"del programa fuente para escribir en el terminal, se configura para ser el "
+"descriptor de entrada de una tubería. De manera similar, el descriptor 0 ("
+"entrada estándar) del programa de sumidero está configurado para hacer "
+"referencia a la salida de la tubería, en lugar del teclado del terminal. El "
+"conjunto resultante de dos procesos y la tubería de conexión se conoce como "
+"<emphasis>pipeline</emphasis>. Las Pipelines pueden ser series "
+"arbitrariamente largas de procesos conectados por tuberías."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:290
@@ -1235,6 +1483,7 @@ msgstr "Dispositivos"
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:294
+#, fuzzy
 msgid ""
 "Hardware devices have filenames, and may be accessed by the user via the "
 "same system calls used for regular files. The kernel can distinguish a "
@@ -1245,6 +1494,16 @@ msgid ""
 "peculiarities are kept in the kernel as much as possible, and even in the "
 "kernel most of them are segregated in the device drivers."
 msgstr ""
+"Los dispositivos de hardware tienen nombres de archivo y el usuario puede "
+"acceder a ellos a través de las mismas llamadas al sistema que se utilizan "
+"para los archivos normales. El kernel puede distinguir un <emphasis>device "
+"special file</emphasis> o <emphasis>special file</emphasis>, y puede "
+"determinar a qué dispositivo se refiere, pero la mayoría de los procesos no "
+"necesitan hacer esta determinación. Se accede a los terminales, impresoras y "
+"unidades de cinta como si fueran flujos de bytes, como archivos de disco "
+"4.4BSD. Por lo tanto, las dependencias y peculiaridades de los dispositivos "
+"se mantienen en el kernel tanto como sea posible, e incluso en el kernel la "
+"mayoría de ellas están segregadas en los controladores de dispositivos."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:296
@@ -1320,6 +1579,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:308
+#, fuzzy
 msgid ""
 "The 4.2BSD kernel introduced an IPC mechanism more flexible than pipes, "
 "based on _sockets_. A socket is an endpoint of communication referred to by "
@@ -1334,9 +1594,23 @@ msgid ""
 "can be set up by two unrelated processes, possibly residing on different "
 "machines."
 msgstr ""
+"El kernel 4.2BSD introdujo un mecanismo IPC más flexible que las pipes, "
+"basado en <emphasis>sockets</emphasis>. Un socket es un punto final de "
+"comunicación al que se refiere un descriptor, como un archivo o una tubería. "
+"Dos procesos pueden crear cada uno un socket y luego conectar esos dos "
+"extremos para producir un flujo de bytes confiable. Una vez conectados, los "
+"descriptores de los sockets pueden ser leídos o escritos por procesos, tal "
+"como lo haría este último con una tubería. La transparencia de los sockets "
+"permite al núcleo redirigir la salida de un proceso a la entrada de otro "
+"proceso que reside en otra máquina. Una diferencia importante entre tuberías "
+"y enchufes es que las tuberías requieren un proceso principal común para "
+"configurar el canal de comunicaciones. Se puede establecer una conexión "
+"entre sockets mediante dos procesos no relacionados, que posiblemente "
+"residen en máquinas diferentes."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:310
+#, fuzzy
 msgid ""
 "System V provides local interprocess communication through FIFOs (also known "
 "as _named pipes_). FIFOs appear as an object in the filesystem that "
@@ -1348,6 +1622,17 @@ msgid ""
 "are implemented in 4.4BSD only because they are required by the POSIX.1 "
 "standard. Their functionality is a subset of the socket interface."
 msgstr ""
+"System V proporciona comunicación entre procesos locales a través de FIFO ("
+"también conocido como <emphasis>named pipes</emphasis>). Los FIFO aparecen "
+"como un objeto en el sistema de archivos que los procesos no relacionados "
+"pueden abrir y enviar datos de la misma manera en que se comunicarían a "
+"través de una tubería. Por lo tanto, los FIFO no requieren un padre común "
+"para configurarlos; se pueden conectar después de que un par de procesos "
+"estén en funcionamiento. A diferencia de los sockets, los FIFO solo se "
+"pueden utilizar en una máquina local; no se pueden utilizar para comunicarse "
+"entre procesos en diferentes máquinas. Los FIFO se implementan en 4.4BSD "
+"solo porque son requeridos por el estándar POSIX.1. Su funcionalidad es un "
+"subconjunto de la interfaz de socket."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:312
@@ -1468,6 +1753,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:331
+#, fuzzy
 msgid ""
 "A few variants of 4.4BSD, such as FreeBSD, allow filesystems to be loaded "
 "dynamically when the filesystems are first referenced by the _mount_ system "
@@ -1475,6 +1761,12 @@ msgid ""
 "routines are described in Section 6.6; several of the special-purpose "
 "filesystems are described in Section 6.7."
 msgstr ""
+"Algunas variantes de 4.4BSD, como FreeBSD, permiten que los sistemas de "
+"archivos se carguen dinámicamente cuando los sistemas de archivos son "
+"referenciados por primera vez por el <emphasis>mount</emphasis> llamada al "
+"sistema. La interfaz vnode se describe en la Sección 6.5; sus rutinas de "
+"soporte auxiliar se describen en la Sección 6.6; varios de los sistemas de "
+"archivos de propósito especial se describen en la Sección 6.7."
 
 #. type: Title ===
 #: documentation/content/en/books/design-44bsd/_index.adoc:333
@@ -1526,6 +1818,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:344
+#, fuzzy
 msgid ""
 "a small one is shown in <<fig-small-fs>>. Directories may contain "
 "subdirectories, and there is no inherent limitation to the depth with which "
@@ -1534,6 +1827,13 @@ msgid ""
 "filesystem may include not only plain files and directories, but also "
 "references to other objects, such as devices and sockets."
 msgstr ""
+"uno pequeño se muestra en <xref linkend=\"fig-small-fs\"/>. Los directorios "
+"pueden contener subdirectorios y no existe una limitación inherente a la "
+"profundidad con la que puede ocurrir el anidamiento de directorios. Para "
+"proteger la coherencia del sistema de archivos, el kernel no permite que los "
+"procesos escriban directamente en directorios. Un sistema de archivos puede "
+"incluir no solo archivos y directorios sin formato, sino también referencias "
+"a otros objetos, como dispositivos y sockets."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:346
@@ -1594,6 +1894,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:356
+#, fuzzy
 msgid ""
 "System utilities and databases are kept in certain well-known directories. "
 "Part of the well-defined hierarchy includes a directory that contains the "
@@ -1603,9 +1904,19 @@ msgid ""
 "directories, users can create directories as easily as they can regular "
 "files. Thus, a user can build arbitrarily complex subhierarchies."
 msgstr ""
+"Las utilidades del sistema y las bases de datos se guardan en ciertos "
+"directorios conocidos. Parte de la jerarquía bien definida incluye un "
+"directorio que contiene el <emphasis>home directory</emphasis>para cada "
+"usuario, por ejemplo, <filename>/usr/staff/mckusick</filename> y <filename>/"
+"usr/staff/karels</filename> en la Fig. 2.2. Cuando los usuarios inician "
+"sesión, el directorio de trabajo actual de su shell se establece en el "
+"directorio de inicio. Dentro de sus directorios personales, los usuarios "
+"pueden crear directorios tan fácilmente como archivos normales. Por tanto, "
+"un usuario puede construir subjerarquías arbitrariamente complejas."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:358
+#, fuzzy
 msgid ""
 "The user usually knows of only one filesystem, but the system may know that "
 "this one virtual filesystem is really composed of several physical "
@@ -1620,6 +1931,20 @@ msgid ""
 "it are converted transparently by the kernel into references to the root "
 "directory of the mounted filesystem."
 msgstr ""
+"el usuario normalmente conoce un solo sistema de archivos, pero el sistema "
+"puede saber que este sistema de archivos virtual está realmente compuesto "
+"por varios sistemas de archivos físicos, cada uno en un dispositivo "
+"diferente. Un sistema de archivos físico no puede abarcar varios "
+"dispositivos de hardware. Dado que la mayoría de los dispositivos de disco "
+"físico se dividen en varios dispositivos lógicos, puede haber más de un "
+"sistema de archivos por dispositivo físico, pero no habrá más de uno por "
+"dispositivo lógico. Un sistema de archivos, el sistema de archivos que ancla "
+"todos los nombres de ruta absolutos, se llama <emphasis>root filesystem</"
+"emphasis>, y está siempre disponible. Otros pueden montarse; es decir, "
+"pueden integrarse en la jerarquía de directorios del sistema de archivos "
+"raíz. Las referencias a un directorio que tiene un sistema de archivos "
+"montado en él son convertidas de forma transparente por el kernel en "
+"referencias al directorio raíz del sistema de archivos montado."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:360
@@ -1913,6 +2238,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:407
+#, fuzzy
 msgid ""
 "The memory-based filesystem is designed to store data in virtual memory. It "
 "is used for filesystems that need to support fast but temporary data, such "
@@ -1920,6 +2246,12 @@ msgid ""
 "packed as compactly as possible to minimize the usage of virtual-memory "
 "resources."
 msgstr ""
+"El sistema de archivos basado en memoria está diseñado para almacenar datos "
+"en la memoria virtual. Se utiliza para sistemas de archivos que necesitan "
+"admitir datos rápidos pero temporales, como <filename>/tmp</filename>. El "
+"objetivo del sistema de archivos basado en memoria es mantener el "
+"almacenamiento empaquetado lo más compacto posible para minimizar el uso de "
+"recursos de memoria virtual."
 
 #. type: Title ===
 #: documentation/content/en/books/design-44bsd/_index.adoc:409
@@ -2019,6 +2351,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:425
+#, fuzzy
 msgid ""
 "Layered above the terminal device drivers are line disciplines that provide "
 "various degrees of character processing. The default line discipline is "
@@ -2027,6 +2360,13 @@ msgid ""
 "standard line-oriented editing functions, and input is presented to a "
 "process on a line-by-line basis."
 msgstr ""
+"En capas por encima de los controladores de dispositivos terminales hay "
+"disciplinas de línea que proporcionan varios grados de procesamiento de "
+"caracteres. La disciplina de línea predeterminada se selecciona cuando se "
+"utiliza un puerto para un inicio de sesión interactivo. La disciplina de "
+"línea se ejecuta en <emphasis>canonical mode</emphasis>; la entrada se "
+"procesa para proporcionar funciones de edición estándar orientadas a líneas "
+"y la entrada se presenta a un proceso línea por línea."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:427
@@ -2138,6 +2478,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:447
+#, fuzzy
 msgid ""
 "Each socket has associated with it a _communication protocol_. This protocol "
 "provides the semantics required by the socket according to the latter's "
@@ -2145,6 +2486,11 @@ msgid ""
 "or may allow the system to select a protocol that is appropriate for the "
 "type of socket being created."
 msgstr ""
+"Cada socket tiene asociado un <emphasis>communication protocol</emphasis>. "
+"Este protocolo proporciona la semántica requerida por el socket según el "
+"tipo de este último. Las aplicaciones pueden solicitar un protocolo "
+"específico al crear un socket, o pueden permitir que el sistema seleccione "
+"un protocolo que sea apropiado para el tipo de socket que se está creando."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:449
@@ -2161,6 +2507,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:451
+#, fuzzy
 msgid ""
 "Normal data transmitted and received through sockets are untyped. Data-"
 "representation issues are the responsibility of libraries built on top of "
@@ -2169,6 +2516,14 @@ msgid ""
 "reception of specially typed data, termed _access rights_. The local domain, "
 "for example, uses this facility to pass descriptors between processes."
 msgstr ""
+"Los datos normales transmitidos y recibidos a través de sockets no están "
+"tipificados. Los problemas de representación de datos son responsabilidad de "
+"las bibliotecas creadas sobre las instalaciones de comunicación entre "
+"procesos. Además de transportar datos normales, los dominios de comunicación "
+"pueden admitir la transmisión y recepción de datos especialmente "
+"mecanografiados, denominados <emphasis>access rights</emphasis>. El dominio "
+"local, por ejemplo, utiliza esta función para pasar descriptores entre "
+"procesos."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:453
@@ -2185,6 +2540,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:455
+#, fuzzy
 msgid ""
 "Another benefit is that the new interface is highly portable. Shortly after "
 "a test release was available from Berkeley, the socket interface had been "
@@ -2197,6 +2553,17 @@ msgid ""
 "interface was used as the basis for Microsoft's Winsock networking interface "
 "for Windows."
 msgstr ""
+"Otro beneficio es que la nueva interfaz es altamente portátil. Poco después "
+"de que Berkeley dispusiera de una versión de prueba, un proveedor de UNIX "
+"transfirió la interfaz de socket a System III (aunque AT&amp;T no admitió la "
+"interfaz de socket hasta el lanzamiento de System V Release 4, y en su lugar "
+"decidió utilizar el mecanismo de transmisión de la octava edición). La "
+"interfaz de socket también fue adaptada para funcionar en muchas placas "
+"Ethernet por proveedores, como Excelan e Interlan, que estaban vendiendo en "
+"el mercado de PC, donde las máquinas eran demasiado pequeñas para funcionar "
+"en red en el procesador principal. Más recientemente, la interfaz de socket "
+"se utilizó como base para la interfaz de red Winsock de Microsoft para "
+"Windows."
 
 #. type: Title ===
 #: documentation/content/en/books/design-44bsd/_index.adoc:457
@@ -2206,6 +2573,7 @@ msgstr "Red de comunicacion"
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:460
+#, fuzzy
 msgid ""
 "Some of the communication domains supported by the _socket_ IPC mechanism "
 "provide access to network protocols. These protocols are implemented as a "
@@ -2214,6 +2582,14 @@ msgid ""
 "message routing, standardized interfaces to the protocols, and interfaces to "
 "the network interface drivers for the use of the various network protocols."
 msgstr ""
+"Algunos de los dominios de comunicación admitidos por <emphasis>socket</"
+"emphasis> El mecanismo de IPC proporciona acceso a los protocolos de red. "
+"Estos protocolos se implementan como una capa de software separada "
+"lógicamente debajo del software de socket en el kernel. El kernel "
+"proporciona muchos servicios auxiliares, como administración de búfer, "
+"enrutamiento de mensajes, interfaces estandarizadas para los protocolos e "
+"interfaces para los controladores de interfaz de red para el uso de varios "
+"protocolos de red."
 
 #. type: Plain text
 #: documentation/content/en/books/design-44bsd/_index.adoc:462
