@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-04 12:57+0000\n"
+"PO-Revision-Date: 2021-04-11 02:07+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/booksporters-handbookplistchapter/es/>\n"
@@ -61,12 +61,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:40
+#, fuzzy
 msgid ""
 "For instance, if a port installs many files in a version-specific "
 "subdirectory, use a placeholder for the version so that [.filename]#pkg-"
 "plist# does not have to be regenerated every time the port is updated. For "
 "example:"
 msgstr ""
+"Por ejemplo, si un puerto instala muchos archivos en un subdirectorio "
+"específico de la versión, use un marcador de posición para la versión para "
+"que <filename>pkg-plist</filename> no tiene que regenerarse cada vez que se "
+"actualiza el puerto. Por ejemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:45
@@ -216,11 +221,15 @@ msgstr "Crear directorios vacíos"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:102
+#, fuzzy
 msgid ""
 "Empty directories created during port installation need special attention. "
 "They must be present when the package is created. If they are not created by "
 "the port code, create them in the [.filename]#Makefile#:"
 msgstr ""
+"Los directorios vacíos creados durante la instalación del puerto necesitan "
+"una atención especial. Deben estar presentes cuando se crea el paquete. Si "
+"no los crea el código de puerto, créelos en el <filename>Makefile</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:107
@@ -232,9 +241,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:110
+#, fuzzy
 msgid ""
 "Add the directory to [.filename]#pkg-plist# like any other. For example:"
 msgstr ""
+"Agregue el directorio a <filename>pkg-plist</filename> como cualquier otro. "
+"Por ejemplo:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:114
@@ -293,12 +305,17 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:139
+#, fuzzy
 msgid ""
 "The sample configuration files should always have the [.filename]#.sample# "
 "suffix. If for some historical reason using the standard suffix is not "
 "possible, or if the sample files come from some other directory, use this "
 "construct:"
 msgstr ""
+"Los archivos de configuración de muestra siempre deben tener la <filename>."
+"sample</filename> sufijo. Si por alguna razón histórica no es posible usar "
+"el sufijo estándar, o si los archivos de muestra provienen de algún otro "
+"directorio, use esta construcción:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:143
@@ -330,6 +347,7 @@ msgstr "Lista de paquetes dinámicos versus estáticos"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:159
+#, fuzzy
 msgid ""
 "A _static package list_ is a package list which is available in the Ports "
 "Collection either as [.filename]#pkg-plist# (with or without variable "
@@ -340,6 +358,16 @@ msgid ""
 "static list, since it is possible to examine it without having to download "
 "or compile the distfile."
 msgstr ""
+"uno <emphasis>static package list</emphasis> es una lista de paquetes que "
+"está disponible en la colección de puertos, ya sea como <filename>pkg-plist</"
+"filename> (con o sin sustitución de variable), o incrustado en el "
+"<filename>Makefile</filename> via <varname>PLIST_FILES</varname> y "
+"<varname>PLIST_DIRS</varname>. Incluso si el contenido es generado "
+"automáticamente por una herramienta o un objetivo en el Makefile "
+"<emphasis>antes</emphasis>la inclusión en la Colección de Ports por un "
+"confirmador (por ejemplo, usando<command>make makeplist</command>), esto "
+"todavía se considera una lista estática, ya que es posible examinarla sin "
+"tener que descargar o compilar el archivo dist."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:161
@@ -709,12 +737,18 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:319
+#, fuzzy
 msgid ""
 "This is used to handle installation of configuration files, through example "
 "files bundled with the package. The \"actual\", non-sample, file is either "
 "the second filename, if present, or the first filename without the [."
 "filename]#.sample# extension."
 msgstr ""
+"Esto se usa para manejar la instalación de archivos de configuración, a "
+"través de archivos de ejemplo incluidos con el paquete. los <quote>actual</"
+"quote>, no muestra, archivo es el segundo nombre de archivo, si está "
+"presente, o el primer nombre de archivo sin el <filename>.sample</filename> "
+"extensión."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:321
@@ -885,10 +919,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:377
+#, fuzzy
 msgid ""
 "Expand to the last filename extracted (as specified). In the example case [."
 "filename]#bin/emacs#."
 msgstr ""
+"Expanda hasta el último nombre de archivo extraído (como se especifica). En "
+"el caso de ejemplo <filename>bin/emacs</filename>."
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:378
@@ -911,11 +948,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:383
+#, fuzzy
 msgid ""
 "Expand to the basename of the fully qualified filename, that is, the current "
 "directory prefix plus the last filespec, minus the trailing filename. In the "
 "example case, that would be [.filename]#/usr/local/bin#."
 msgstr ""
+"Expanda al nombre base del nombre de archivo completo, es decir, el prefijo "
+"del directorio actual más la última especificación de archivo, menos el "
+"nombre de archivo final. En el caso de ejemplo, eso sería <filename>/usr/"
+"local/bin</filename>."
 
 #. type: Labeled list
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:384
@@ -932,12 +974,17 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:390
+#, fuzzy
 msgid ""
 "These keywords are here to help you set up the package so that it is as "
 "ready to use as possible. They _must not_ be abused to start services, stop "
 "services, or run any other commands that will modify the currently running "
 "system."
 msgstr ""
+"Estas palabras clave están aquí para ayudarlo a configurar el paquete para "
+"que esté lo más listo para usar posible. Ellos <emphasis>no debe</emphasis> "
+"ser abusado para iniciar servicios, detener servicios o ejecutar cualquier "
+"otro comando que modifique el sistema en ejecución."
 
 #. type: Title ====
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:393
@@ -1005,6 +1052,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:421
+#, fuzzy
 msgid ""
 "Declare directory name. By default, directories created under `PREFIX` by a "
 "package installation are automatically removed. Use this when an empty "
@@ -1014,6 +1062,15 @@ msgid ""
 "have a `@dir` entry whereas [.filename]#${PREFIX}/shared/${PORTNAME}# does "
 "not if it contains files or uses the default owner, group, and mode."
 msgstr ""
+"Declare el nombre del directorio. Por defecto, los directorios creados bajo "
+"<varname>PREFIX</varname> por la instalación de un paquete se eliminan "
+"automáticamente. Use esto cuando un directorio vacío debajo <varname>PREFIX</"
+"varname> debe crearse, o cuando el directorio debe tener propietario, grupo "
+"o modo no predeterminado. Directorios fuera de <varname>PREFIX</varname> "
+"necesita estar registrado. Por ejemplo, <filename>/var/db/${PORTNAME}</"
+"filename> necesita tener un <literal>@dir</literal> entrada mientras que "
+"<filename>${PREFIX}/share/${PORTNAME}</filename> no lo hace si contiene "
+"archivos o usa el propietario, grupo y modo predeterminados."
 
 #. type: Title ====
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:423
@@ -1036,11 +1093,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:431
+#, fuzzy
 msgid ""
 "Declare directory name to be deleted at deinstall time. By default, "
 "directories created under `PREFIX` by a package installation are deleted "
 "when the package is deinstalled."
 msgstr ""
+"Declare el nombre del directorio que se eliminará en el momento de la "
+"desinstalación. Por defecto, los directorios creados bajo <varname>PREFIX</"
+"varname> por la instalación de un paquete se eliminan cuando se desinstala "
+"el paquete."
 
 #. type: Title ====
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:433
@@ -1101,8 +1163,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:448
+#, fuzzy
 msgid "`post-deinstall`"
-msgstr ""
+msgstr "post-desinstalación"
 
 #. type: Plain text
 #: documentation/content/en/books/porters-handbook/plist/chapter.adoc:449
