@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-04-04 12:57+0000\n"
+"PO-Revision-Date: 2021-04-10 12:26+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/articlesremote-install_index/es/>\n"
@@ -83,12 +83,17 @@ msgstr "Introducción"
 
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:51
+#, fuzzy
 msgid ""
 "This section will summarize the purpose of this article and better explain "
 "what is covered herein.  The instructions included in this article will "
 "benefit those using services provided by colocation facilities not "
 "supporting FreeBSD."
 msgstr ""
+"Esta sección resumirá el propósito del artículo y explicará mejor lo que se "
+"trata en este documento. Las instrucciones incluidas beneficiarán a quienes "
+"utilicen los servicios proporcionados por las instalaciones de colocación de "
+"servidores que no admiten FreeBSD."
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/remote-install/_index.adoc:55
@@ -157,6 +162,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:75
+#, fuzzy
 msgid ""
 "Before FreeBSD may be installed on the target system, it is necessary to "
 "build the minimal FreeBSD operating system image which will boot from the "
@@ -164,6 +170,10 @@ msgid ""
 "the rest of the installation can be done without remote access to the system "
 "console."
 msgstr ""
+"Antes de poder instalar FreeBSD en el sistema de destino, es necesario crear "
+"la imagen mínima de FreeBSD que se iniciará desde el disco duro. De esta "
+"manera, se puede acceder al nuevo sistema desde la red, y el resto de la "
+"instalación se puede hacer sin acceso remoto a la consola del sistema."
 
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:80
@@ -209,6 +219,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:100
+#, fuzzy
 msgid ""
 "Before booting mfsBSD, a few important configuration options have to be "
 "set.  The most important that we have to get right is, naturally, the "
@@ -217,6 +228,13 @@ msgid ""
 "will use, and the network interface driver to be loaded for our hardware.  "
 "We will see how mfsBSD can be configured in either case."
 msgstr ""
+"Antes de iniciar <application>mfsBSD</application>, deben establecerse "
+"algunas opciones de configuración importantes. Lo más importante que tenemos "
+"que configurar bien es, naturalmente, la configuración de red. El método más "
+"adecuado para configurar las opciones de red dependerá de si conocemos "
+"previamente el tipo de interfaz de red que usaremos, y el controlador de red "
+"que se cargará para nuestro hardware. Veremos cómo se puede configurar "
+"<application>mfsBSD</application> en cualquier caso."
 
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:104
@@ -233,21 +251,30 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:109
+#, fuzzy
 msgid ""
 "When the installed network interface card is unknown, it is possible to use "
 "the auto-detection features of mfsBSD.  The startup scripts of mfsBSD can "
 "detect the correct driver to use, based on the MAC address of the interface, "
 "if we set the following options in [.filename]#conf/interfaces.conf#:"
 msgstr ""
+"Cuando se desconoce la tarjeta de red instalada, es posible utilizar las "
+"funciones de detección automática de <application>mfsBSD</application>. Los "
+"scripts de inicio de <application>mfsBSD</application> pueden detectar el "
+"controlador correcto, según la dirección MAC de la interfaz, si configuramos "
+"las siguientes opciones en <filename>conf/interfaces.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/remote-install/_index.adoc:115
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "mac_interfaces=\"ext1\"\n"
 "ifconfig_ext1_mac=\"00:00:00:00:00:00\"\n"
 "ifconfig_ext1=\"inet 192.168.0.2/24\"\n"
 msgstr ""
+"mac_interfaces=\"ext1\"\n"
+"ifconfig_ext1_mac=\"00:00:00:00:00:00\"\n"
+"ifconfig_ext1=\"inet 192.168.0.2/24\"\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:118
@@ -258,9 +285,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/remote-install/_index.adoc:122
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "defaultrouter=\"192.168.0.1\"\n"
-msgstr ""
+msgstr "defaultrouter=\"192.168.0.1\"\n"
 
 #. type: Title ====
 #: documentation/content/en/articles/remote-install/_index.adoc:124
@@ -285,11 +312,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/remote-install/_index.adoc:135
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "defaultrouter=\"192.168.0.1\"\n"
 "ifconfig_re0=\"inet 192.168.0.2/24\"\n"
 msgstr ""
+"defaultrouter=\"192.168.0.1\"\n"
+"ifconfig_re0=\"inet 192.168.0.2/24\"\n"
 
 #. type: Title ===
 #: documentation/content/en/articles/remote-install/_index.adoc:138
@@ -431,10 +460,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:209
+#, fuzzy
 msgid ""
 "At the start, mark all system disks as empty.  Repeat the following command "
 "for each hard drive:"
 msgstr ""
+"Al principio, marque todos los discos del sistema como vacíos. Repita el "
+"siguiente comando para cada disco duro:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/remote-install/_index.adoc:213
@@ -489,16 +521,23 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:242
+#, fuzzy
 msgid ""
 "<.> Create a slice covering the entire disk and initialize the boot code "
 "contained in sector 0 of the given disk. Repeat this command for all hard "
 "drives in the system."
 msgstr ""
+"Cree una slice que use todo el disco e inicialice el boot code del sector 0 "
+"del disco seleccionado. Repita este comando para todos los discos duros en "
+"el sistema."
 
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:244
+#, fuzzy
 msgid "<.> Write a standard label for each disk including the bootstrap code."
 msgstr ""
+"Escriba una etiqueta estándar para cada disco, incluido el código de "
+"arranque."
 
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:246
@@ -512,10 +551,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:248
+#, fuzzy
 msgid ""
 "<.> Import the recently created label for the second hard drive, so both "
 "hard drives will be labeled in the same way."
 msgstr ""
+"Importe la etiqueta creada recientemente para el segundo disco duro, de modo "
+"que ambos discos estén etiquetados de la misma manera."
 
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:250
@@ -543,6 +585,7 @@ msgstr "Instalación del sistema"
 
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:260
+#, fuzzy
 msgid ""
 "This is the most important part.  This section will describe how to actually "
 "install the minimal distribution of FreeBSD on the hard drives that we have "
@@ -550,6 +593,11 @@ msgid ""
 "need to be mounted so `sysinstall` may write the contents of FreeBSD to the "
 "hard drives:"
 msgstr ""
+"Esta es la parte más importante. Esta sección describirá cómo instalar la "
+"distribución mínima de FreeBSD en los discos duros que hemos preparado en la "
+"sección anterior. Para lograr este objetivo, todos los sistemas de archivos "
+"deben montarse, para que <application>sysinstall</application> pueda "
+"escribir el contenido de FreeBSD en los discos duros:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/remote-install/_index.adoc:267
@@ -618,12 +666,17 @@ msgstr "Pasos posteriores a la instalación"
 
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:300
+#, fuzzy
 msgid ""
 "The FreeBSD operating system should be installed now; however, the process "
 "is not finished yet.  It is necessary to perform some post installation "
 "steps in order to allow FreeBSD to boot in the future and to be able to log "
 "in to the system."
 msgstr ""
+"El sistema operativo FreBSD ya debería estar instalado; sin embargo, el "
+"proceso aún no ha terminado. Es necesario realizar algunos pasos posteriores "
+"a la instalación para permitir que FreeBSD se inicie en el futuro y pueda "
+"iniciar sesión en el sistema."
 
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:303
@@ -665,7 +718,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/remote-install/_index.adoc:328
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# Device                Mountpoint      FStype  Options         Dump    Pass#\n"
 "/dev/mirror/swap        none            swap    sw              0       0\n"
@@ -674,6 +727,13 @@ msgid ""
 "/dev/mirror/var         /var            ufs     rw              2       2\n"
 "/dev/cd0                /cdrom          cd9660  ro,noauto       0       0\n"
 msgstr ""
+"# Device                Mountpoint      FStype  Options         Dump    Pass#"
+"\n"
+"/dev/mirror/swap        none            swap    sw              0       0\n"
+"/dev/mirror/root        /               ufs     rw              1       1\n"
+"/dev/mirror/usr         /usr            ufs     rw              2       2\n"
+"/dev/mirror/var         /var            ufs     rw              2       2\n"
+"/dev/cd0                /cdrom          cd9660  ro,noauto       0       0\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:330
@@ -682,11 +742,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/remote-install/_index.adoc:335
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "geom_mirror_load=\"YES\"\n"
 "zfs_load=\"YES\"\n"
 msgstr ""
+"geom_mirror_load=\"YES\"\n"
+"zfs_load=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:337
@@ -729,11 +791,15 @@ msgstr "ZFS"
 
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:354
+#, fuzzy
 msgid ""
 "If your system survived the reboot, it should now be possible to log in.  "
 "Welcome to the fresh FreeBSD installation, performed remotely without the "
 "use of a remote console!"
 msgstr ""
+"Si su sistema sobrevivió al reinicio, ahora debería poder iniciar sesión. ¡"
+"Bienvenido a la nueva instalación de FreeBSD, realizada de forma remota sin "
+"el uso de una consola remota!"
 
 #. type: Plain text
 #: documentation/content/en/articles/remote-install/_index.adoc:357
