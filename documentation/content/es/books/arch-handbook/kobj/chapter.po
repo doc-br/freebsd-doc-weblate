@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-04 12:57+0000\n"
+"PO-Revision-Date: 2021-04-11 02:07+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/booksarch-handbookkobjchapter/es/>\n"
@@ -32,12 +32,18 @@ msgstr "Objetos del kernel"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:33
+#, fuzzy
 msgid ""
 "Kernel Objects, or _Kobj_ provides an object-oriented C programming system "
 "for the kernel. As such the data being operated on carries the description "
 "of how to operate on it. This allows operations to be added and removed from "
 "an interface at run time and without breaking binary compatibility."
 msgstr ""
+"Objetos del núcleo, o <firstterm>Kobj</firstterm> proporciona un sistema de "
+"programación C orientado a objetos para el kernel. Como tal, los datos con "
+"los que se opera llevan la descripción de cómo operar con ellos. Esto "
+"permite agregar y eliminar operaciones de una interfaz en tiempo de "
+"ejecución y sin romper la compatibilidad binaria."
 
 #. type: Title ==
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:35
@@ -164,9 +170,9 @@ msgstr "Estructuras"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:71
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "struct kobj_method\n"
-msgstr ""
+msgstr "método kobj_method\n"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:73
@@ -224,12 +230,17 @@ msgstr "Crear una plantilla de interfaz"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:106
+#, fuzzy
 msgid ""
 "The first step in using Kobj is to create an Interface. Creating the "
 "interface involves creating a template that the script [.filename]#src/sys/"
 "kern/makeobjops.pl# can use to generate the header and code for the method "
 "declarations and method lookup functions."
 msgstr ""
+"El primer paso para utilizar Kobj es crear una interfaz. Crear la interfaz "
+"implica crear una plantilla que el script <filename>src/sys/kern/makeobjops."
+"pl</filename> puede utilizar para generar el encabezado y el código para las "
+"declaraciones de métodos y las funciones de búsqueda de métodos."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:108
@@ -363,6 +374,7 @@ msgstr "Crear una clase"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:180
+#, fuzzy
 msgid ""
 "The second step in using Kobj is to create a class. A class consists of a "
 "name, a table of methods, and the size of objects if Kobj's object handling "
@@ -371,6 +383,12 @@ msgid ""
 "NULL entry. Each non-NULL entry may be created using the macro "
 "`KOBJMETHOD()`."
 msgstr ""
+"El segundo paso para usar Kobj es crear una clase. Una clase consta de un "
+"nombre, una tabla de métodos y el tamaño de los objetos si se utilizan las "
+"funciones de manejo de objetos de Kobj. Para crear la clase usa la macro "
+"<function>DEFINE_CLASS()</function>. Para crear la tabla de métodos, cree "
+"una matriz de kobj_method_t terminado por una entrada NULL. Cada entrada que "
+"no sea NULL se puede crear usando la macro <function>KOBJMETHOD()</function>."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:186
@@ -407,6 +425,7 @@ msgstr "Crear un objeto"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:199
+#, fuzzy
 msgid ""
 "The third step in using Kobj involves how to define the object. Kobj object "
 "creation routines assume that Kobj data is at the head of an object. If this "
@@ -416,6 +435,14 @@ msgid ""
 "automatically. `kobj_init()` may also be used to change the class that an "
 "object uses."
 msgstr ""
+"El tercer paso para utilizar Kobj implica cómo definir el objeto. Las "
+"rutinas de creación de objetos de Kobj asumen que los datos de Kobj están a "
+"la cabeza de un objeto. Si esto no es apropiado, tendrá que asignar el "
+"objeto usted mismo y luego usar <function>kobj_init()</function> en la "
+"porción de Kobj; de lo contrario, puede usar <function>kobj_create()</"
+"function> para asignar e inicializar la parte Kobj del objeto "
+"automáticamente. <function>kobj_init()</function> también se puede usar para "
+"cambiar la clase que usa un objeto."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/kobj/chapter.adoc:201
