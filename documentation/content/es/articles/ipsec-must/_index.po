@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-04-04 12:57+0000\n"
+"PO-Revision-Date: 2021-04-11 02:08+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/articlesipsec-must_index/es/>\n"
@@ -31,10 +31,13 @@ msgstr "Resumen"
 
 #. type: Plain text
 #: documentation/content/en/articles/ipsec-must/_index.adoc:27
+#, fuzzy
 msgid ""
 "You installed IPsec and it seems to be working.  How do you know? I describe "
 "a method for experimentally verifying that IPsec is working."
 msgstr ""
+"Instaló IPsec y parece estar funcionando. ¿Cómo lo sabe? Describo un método "
+"para verificar de forma experimental que IPsec está funcionando."
 
 #. type: Plain text
 #: documentation/content/en/articles/ipsec-must/_index.adoc:29
@@ -86,6 +89,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/ipsec-must/_index.adoc:50
+#, fuzzy
 msgid ""
 "Suppose you could measure the entropy of the data to- and from- your network "
 "interface.  Then you could see the difference between unencrypted data and "
@@ -93,6 +97,11 @@ msgid ""
 "mode\" was not encrypted---as the outermost IP header must be if the packet "
 "is to be routable."
 msgstr ""
+"Suponga que usted pudiera medir la entropía de los datos que van hacia -y "
+"desde- su interfaz de red. Entonces podría ver la diferencia entre los datos "
+"no cifrados y los cifrados. Esto sería verdad incluso si algunos de los "
+"datos en <quote>modo cifrado</quote> no lo estuvieran---ya que el encabezado "
+"IP más externo debe estarlo para que el paquete sea enrutable."
 
 #. type: Title ===
 #: documentation/content/en/articles/ipsec-must/_index.adoc:52
@@ -207,6 +216,7 @@ msgstr "Advertencia"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ipsec-must/_index.adoc:111
+#, fuzzy
 msgid ""
 "This experiment shows that IPsec _does_ seem to be distributing the payload "
 "data __uniformly__, as encryption should.  However, the experiment described "
@@ -215,6 +225,14 @@ msgid ""
 "or keys being visible to others, use of weak algorithms, kernel subversion, "
 "etc.  Study the source; know the code."
 msgstr ""
+"Este experimento muestra que IPsec <emphasis>parece</emphasis> estar "
+"distribuyendo los datos de la carga útil <emphasis>uniformemente</emphasis>, "
+"como debe hacerlo el cifrado. Sin embargo, el experimento aquí descrito "
+"<emphasis>puede no</emphasis> detectar muchas de las posibles fallas del "
+"sistema (para las cuales no tengo evidencias). Esto incluye la generación o "
+"intercambio de claves deficientes, datos o claves visibles para otros, uso "
+"de algoritmos débiles, subversión del kernel, etc. Estudie el código; "
+"conozca el código."
 
 #. type: Title ==
 #: documentation/content/en/articles/ipsec-must/_index.adoc:113
@@ -224,6 +242,7 @@ msgstr "IPsec---Definición"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/ipsec-must/_index.adoc:119
+#, fuzzy
 msgid ""
 "Internet Protocol security extensions to IPv4; required for IPv6.  A "
 "protocol for negotiating encryption and authentication at the IP (host-to-"
@@ -231,6 +250,11 @@ msgid ""
 "login; PGP secures only a specified file or message.  IPsec encrypts "
 "everything between two hosts."
 msgstr ""
+"Extensiones de seguridad del Protocolo de Internet para IPv4; requerido para "
+"IPv6. Un protocolo para negociar el cifrado y la autenticación a nivel de IP "
+"(host a host). SSL solo protege un socket de aplicación. <application>SSH</"
+"application> protege solo el login. <application>PGP</application> protege "
+"un archivo o mensaje específico. IPsec encripta todo entre dos hosts."
 
 #. type: Title ==
 #: documentation/content/en/articles/ipsec-must/_index.adoc:121
@@ -270,9 +294,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/ipsec-must/_index.adoc:137
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "device\tbpf\n"
-msgstr ""
+msgstr "device\tbpf\n"
 
 #. type: Title ==
 #: documentation/content/en/articles/ipsec-must/_index.adoc:140
