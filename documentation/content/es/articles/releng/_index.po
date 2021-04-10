@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-04-04 12:57+0000\n"
+"PO-Revision-Date: 2021-04-11 02:08+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/articlesreleng_index/es/>\n"
@@ -41,6 +41,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:51
+#, fuzzy
 msgid ""
 "This paper describes the approach used by the FreeBSD release engineering "
 "team to make production quality releases of the FreeBSD Operating System.  "
@@ -48,6 +49,13 @@ msgid ""
 "describes the tools available for those interested in producing customized "
 "FreeBSD releases for corporate rollouts or commercial productization."
 msgstr ""
+"Este artículo describe la aproximación utilizada por el equipo de ingeniería "
+"de productos de FreeBSD para generar releases de calidad y listas para "
+"utilizar en entornos de producción. Se detalla la metodología utilizada para "
+"generar la release oficial de FreeBSD y se describen las herramientas "
+"disponibles para aquellas personas interesadas en generar sus propias "
+"releases a medida de sus necesidades, en particular para demostraciones de "
+"empresa o para comercializar el producto."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:53
@@ -96,6 +104,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:78
+#, fuzzy
 msgid ""
 "A set of more stable branches are maintained, known as \"FreeBSD-STABLE\" or "
 "\"-STABLE\" for short.  All branches live in a master Subversion repository "
@@ -106,9 +115,19 @@ msgid ""
 "assumption that they have first gone into FreeBSD-CURRENT and have been "
 "thoroughly tested by our user community."
 msgstr ""
+"Se mantiene un conjunto de ramas más estables, conocidas como <quote>FreeBSD-"
+"STABLE</quote> o <quote>-STABLE</quote> para abreviar. Todas las ramas viven "
+"en un repositorio maestro de Subversion mantenido por el Proyecto FreeBSD. "
+"FreeBSD-CURRENT es el <quote>punto de inflexión</quote> del desarrollo de "
+"FreeBSD donde todos los nuevos cambios entran primero en el sistema. FreeBSD-"
+"STABLE es la rama de desarrollo a partir de la cual se hacen las principales "
+"versiones. Los cambios entran en esta rama a un ritmo diferente, y con la "
+"suposición general de que primero han entrado en FreeBSD-CURRENT y han sido "
+"probados a fondo por nuestra comunidad de usuarios."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:83
+#, fuzzy
 msgid ""
 "The term _stable_ in the name of the branch refers to the presumed "
 "Application Binary Interface stability, which is promised by the project.  "
@@ -119,6 +138,16 @@ msgid ""
 "unmodified on newer systems, including __HEAD__, assuming that the system "
 "management interfaces are not used."
 msgstr ""
+"El término <emphasis>estable</emphasis> en el nombre de la rama se refiere a "
+"la presunta estabilidad de la interfaz binaria de la aplicación, que se "
+"garantiza en el proyecto. Esto significa que una aplicación de usuario "
+"compilada en una versión antigua del sistema de la misma rama funciona en un "
+"sistema más nuevo de la misma rama. La estabilidad de la ABI ha mejorado "
+"mucho en comparación con las versiones anteriores. En la mayoría de los "
+"casos, los binarios de los sistemas <emphasis>STABLE</emphasis> más antiguos "
+"funcionan sin modificaciones en los sistemas más nuevos, incluido "
+"<emphasis>HEAD</emphasis>, suponiendo que no se utilizan las interfaces de "
+"gestión del sistema."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:86
@@ -248,6 +277,7 @@ msgstr "Proceso de liberación"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:125
+#, fuzzy
 msgid ""
 "New releases of FreeBSD are released from the -STABLE branch at "
 "approximately four month intervals.  The FreeBSD release process begins to "
@@ -257,9 +287,18 @@ msgid ""
 "code freeze.  During this time, many developers perform what have become "
 "known as \"MFC sweeps\"."
 msgstr ""
+"Los nuevos lanzamientos de FreeBSD son liberados de la rama -STABLE en "
+"intervalos de aproximadamente cuatro meses. El proceso de liberación de "
+"FreeBSD comienza a acelerarse 70-80 días antes de la fecha prevista de "
+"liberación cuando el ingeniero de liberación envía un correo electrónico a "
+"las listas de correo de desarrollo para recordar a los desarrolladores que "
+"sólo tienen 15 días para integrar los nuevos cambios antes de que el código "
+"se congele. Durante este tiempo, muchos desarrolladores realizan lo que se "
+"conoce como <quote>MFC sweeps</quote>."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:129
+#, fuzzy
 msgid ""
 "MFC stands for \"Merge From CURRENT\" and it describes the process of "
 "merging a tested change from our -CURRENT development branch to our -STABLE "
@@ -271,6 +310,16 @@ msgid ""
 "period is 3 days, which is typically used only for trivial or critical "
 "bugfixes."
 msgstr ""
+"<acronym>MFC</acronym> significa <quote>Merge From CURRENT</quote> y "
+"describe el proceso de fusión de un cambio probado de nuestra rama de "
+"desarrollo actual a nuestra rama estable. La política del proyecto requiere "
+"que cualquier cambio se aplique primero al tronco, y se fusione a las ramas -"
+"STABLE después de que los usuarios de -CURRENT hayan realizado suficientes "
+"pruebas externas (se espera que los desarrolladores prueben ampliamente el "
+"cambio antes de comprometerse con -CURRENT, pero es imposible que una "
+"persona ejerza todos los usos del sistema operativo de propósito general). "
+"El período mínimo de MFC es de 3 días, que normalmente se utiliza sólo para "
+"correcciones de errores triviales o críticos."
 
 #. type: Title ===
 #: documentation/content/en/articles/releng/_index.adoc:130
@@ -326,6 +375,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:147
+#, fuzzy
 msgid ""
 "Shortly after the code freeze is started, a _BETA1_ image is built and "
 "released for widespread testing.  During the code freeze, at least one beta "
@@ -336,6 +386,15 @@ msgid ""
 "all of the different components required for a successful release are "
 "available."
 msgstr ""
+"Poco después de que se inicia la congelación del código, se construye una "
+"imagen <emphasis>BETA1</emphasis> y se libera para su prueba generalizada. "
+"Durante la congelación de código, al menos una imagen beta o candidata a ser "
+"liberada cada dos semanas hasta que la liberación final esté lista. Durante "
+"los días anteriores a la liberación final, el equipo de ingeniería de "
+"liberación está en constante comunicación con el equipo de seguridad, los "
+"encargados de la documentación y los encargados de los puertos para asegurar "
+"que todos los diferentes componentes requeridos para una liberación exitosa "
+"estén disponibles."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:150
@@ -357,11 +416,15 @@ msgstr "Lista de control de liberación final"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:154
+#, fuzzy
 msgid ""
 "When several BETA images have been made available for widespread testing and "
 "all major issues have been resolved, the final release \"polishing\" can "
 "begin."
 msgstr ""
+"Cuando varias imágenes BETA han sido puestas a disposición para ser probadas "
+"ampliamente y todos los problemas importantes han sido resueltos, el "
+"<quote>pulido</quote> de la versión final puede comenzar."
 
 #. type: Title ====
 #: documentation/content/en/articles/releng/_index.adoc:156
@@ -534,8 +597,10 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:212
+#, fuzzy
 msgid "[.filename]#doc/en_US.ISO8859-1/books/handbook/mirrors/chapter.xml#"
 msgstr ""
+"<filename>doc/en_US.ISO8859-1/books/handbook/mirrors/chapter.xml</filename>"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:213
@@ -625,8 +690,10 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:231
+#, fuzzy
 msgid "[.filename]#src/release/doc/en_US.ISO8859-1/relnotes/common/new.xml#"
 msgstr ""
+"<filename>src/release/doc/en_US.ISO8859-1/relnotes/common/new.xml</filename>"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:232
@@ -769,17 +836,24 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:289
+#, fuzzy
 msgid ""
 "After running these commands, all prepared release files are available in [."
 "filename]#/local3/release/R# directory."
 msgstr ""
+"Después de ejecutar estos comandos, todos los archivos de liberación "
+"preparados están disponibles en el directorio <filename>/local3/release/"
+"R</filename>."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:291
+#, fuzzy
 msgid ""
 "The release [.filename]#Makefile# can be broken down into several distinct "
 "steps."
 msgstr ""
+"La liberación <filename>Makefile</filename> puede ser dividida en varios "
+"pasos distintos."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:293
@@ -1131,6 +1205,7 @@ msgstr "Extensibilidad"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:407
+#, fuzzy
 msgid ""
 "Although FreeBSD forms a complete operating system, there is nothing that "
 "forces you to use the system exactly as we have packaged it up for "
@@ -1143,6 +1218,17 @@ msgid ""
 "form of advanced installation and administration tools, for example, but we "
 "cannot be expected to answer questions about it."
 msgstr ""
+"Aunque FreeBSD forma un sistema operativo completo, no hay nada que le "
+"obligue a usar el sistema exactamente como lo hemos empaquetado para su "
+"distribución. Hemos intentado diseñar el sistema para que sea lo más "
+"extensible posible, de modo que pueda servir como una plataforma sobre la "
+"que se puedan construir otros productos comerciales. La única <quote>regla</"
+"quote> que tenemos sobre esto es que si va a distribuir FreeBSD con cambios "
+"no triviales, ¡le animamos a documentar sus mejoras! La comunidad de FreeBSD "
+"sólo puede ayudar a apoyar a los usuarios del software que proporcionamos. "
+"Ciertamente alentamos la innovación en la forma de instalación avanzada y "
+"herramientas de administración, por ejemplo, pero no se puede esperar que "
+"respondamos a preguntas sobre ello."
 
 #. type: Title ===
 #: documentation/content/en/articles/releng/_index.adoc:408
@@ -1181,6 +1267,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:425
+#, fuzzy
 msgid ""
 "Our user community has made it very clear that the security and stability of "
 "a FreeBSD release should not be sacrificed for any self-imposed deadlines or "
@@ -1189,6 +1276,13 @@ msgid ""
 "never been more apparent.  This will become even more important as FreeBSD "
 "is ported to new platforms."
 msgstr ""
+"Nuestra comunidad de usuarios ha dejado muy claro que la seguridad y la "
+"estabilidad de una versión de FreeBSD no debería sacrificarse por ningún "
+"plazo o fecha de lanzamiento que se imponga a sí misma. El Proyecto FreeBSD "
+"ha crecido enormemente durante su vida y la necesidad de procedimientos de "
+"ingeniería de liberación estandarizados nunca ha sido más evidente. Esto se "
+"hará aún más importante a medida que FreeBSD se vaya portando a nuevas "
+"plataformas."
 
 #. type: Title ==
 #: documentation/content/en/articles/releng/_index.adoc:427
@@ -1198,11 +1292,16 @@ msgstr "Direcciones futuras"
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:431
+#, fuzzy
 msgid ""
 "It is imperative for our release engineering activities to scale with our "
 "growing userbase.  Along these lines we are working very hard to document "
 "the procedures involved in producing FreeBSD releases."
 msgstr ""
+"Es imperativo que nuestras actividades de ingeniería de liberación se "
+"escalen con nuestra creciente base de usuarios. En esta línea estamos "
+"trabajando muy duro para documentar los procedimientos involucrados en la "
+"producción de releases de FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/articles/releng/_index.adoc:433
