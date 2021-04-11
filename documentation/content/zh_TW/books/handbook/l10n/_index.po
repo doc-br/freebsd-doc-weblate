@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: 2021-04-05 20:20+0000\n"
+"PO-Revision-Date: 2021-04-12 20:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookl10n_index/zh_TW/>\n"
@@ -197,6 +197,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:110
+#, fuzzy
 msgid ""
 "Some languages, such as Chinese or Japanese, cannot be represented using "
 "ASCII characters and require an extended language encoding using either wide "
@@ -207,6 +208,9 @@ msgid ""
 "compile an application with wide or multibyte character support, or to "
 "configure it correctly."
 msgstr ""
+"某些語言，如中文或日文，無法使用 <acronym>ASCII</acronym> 字元表示，會需要使用寬 (Wide) 字元或多位元組 "
+"(Multibyte) 字元來擴充的語言編碼。EUC 與 Big5 即是使用寬子元或多位元組字元的例子。舊的應用程式會誤判這些字元為控制字元，新的應用程式"
+"則通常可以辨識這些字元，依實作的需要，使用者可能需要開啟寬字元或多位元組字元支援或者使用正確的字元設定來編譯應用程式。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:114
@@ -215,11 +219,14 @@ msgstr "FreeBSD 使用 Xorg 相容的語系編碼。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:117
+#, fuzzy
 msgid ""
 "The rest of this section describes the various methods for configuring the "
 "locale on a FreeBSD system. The next section will discuss the considerations "
 "for finding and compiling applications with i18n support."
 msgstr ""
+"本節剩餘的部份將說明各種在 FreeBSD 系統上設定語系的方法。下一節將會探討如何尋找以及編譯使用 <acronym>i18n</acronym> "
+"支援的應用程式。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/l10n/_index.adoc:119
@@ -252,10 +259,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:129
+#, fuzzy
 msgid ""
 "In addition to the user's shell configuration, these variables should also "
 "be set for specific application configuration and Xorg configuration."
-msgstr ""
+msgstr "除了使用者的 Shell 設定外，這些變數也應針對特定應用程式設定以及 <application>Xorg</application> 設定。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:131
@@ -274,19 +282,24 @@ msgstr "登入類別 (Login Class) 法"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:136
+#, fuzzy
 msgid ""
 "This first method is the recommended method as it assigns the required "
 "environment variables for locale name and MIME character sets for every "
 "possible shell. This setup can either be performed by each user or it can be "
 "configured for all users by the superuser."
 msgstr ""
+"第一種方式，同時也是建議使用的方法，它可以對任何可能的 Shell 設定需要的語系及 MIME "
+"字元集變數。此設定也可由每位使用者自行設定或者由超級管理者為所有使用者設定。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:138
+#, fuzzy
 msgid ""
 "This minimal example sets both variables for Latin-1 encoding in the "
 "[.filename]#.login_conf# of an individual user's home directory:"
 msgstr ""
+"以下精簡範例示範在一個使用者的家目錄中的 <filename>.login_conf</filename> 設定 Latin-1 編碼使用的兩個環境變數："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:144
@@ -299,12 +312,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:147
+#, fuzzy
 msgid ""
 "Here is an example of a user's [.filename]#~/.login_conf# that sets the "
 "variables for Traditional Chinese in BIG-5 encoding. More variables are "
 "needed because some applications do not correctly respect locale variables "
 "for Chinese, Japanese, and Korean:"
 msgstr ""
+"以下使用者的 <filename>~/.login_conf</filename> 範例設定了繁體中文於 BIG-5 "
+"編碼使用到的環境變數。有一部份應用程式無法正確處理中文、日文及韓文的語系變數，因此需要額外多做一些設定："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:157
@@ -361,10 +377,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:182
+#, fuzzy
 msgid ""
 "Whenever [.filename]#/etc/login.conf# is edited, remember to execute the "
 "following command to update the capability database:"
 msgstr ""
+"每次編輯 <filename>/etc/login.conf</filename> 之後，請記得要執行以下指令來更新登入類別的能力資料庫("
+"Capability database)："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:186
@@ -387,10 +406,11 @@ msgstr "變更登入類別的工具"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:196
+#, fuzzy
 msgid ""
 "In addition to manually editing [.filename]#/etc/login.conf#, several "
 "utilities are available for setting the locale for newly created users."
-msgstr ""
+msgstr "除了手動編輯 <filename>/etc/login.conf</filename> 之外，尚有需多工具可用來為新建立的使用者設定語系。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:198
@@ -475,6 +495,7 @@ msgstr "Shell 啟動檔 (Startup File) 法"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:241
+#, fuzzy
 msgid ""
 "This second method is not recommended as each shell that is used requires "
 "manual configuration, where each shell has a different configuration file "
@@ -484,6 +505,10 @@ msgid ""
 "[.filename]#/etc/profile# or [.filename]#/usr/share/skel/dot.profile# to set "
 "that shell for all users:"
 msgstr ""
+"第二種方法，較不建議使用，因每一種使用到的 Shell 都需要手動設定，而每一種 Shell 都有不同的設定檔以及語法。例如將一位使用者的 "
+"<command>sh</command> shell 設定為德語，需要將下列行加到 <filename>~/.profile</filename>，"
+"若要設定給使用該 Shell 的所有使用者則必須將下列行加到 <filename>/etc/profile</filename> 或 "
+"<filename>/usr/share/skel/dot.profile</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:246
@@ -556,10 +581,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:283
+#, fuzzy
 msgid ""
 "The keymap and screenmap can be set by adding the following to "
 "[.filename]#/etc/rc.conf#:"
 msgstr ""
+"鍵盤對應表 (Keymap) 及螢幕對應表 (Screenmap) 用可加入下行到 <filename>/etc/rc.conf</filename> "
+"來設定："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:289
@@ -572,6 +600,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:292
+#, fuzzy
 msgid ""
 "To see the list of available screenmaps, type `ls "
 "/usr/share/syscons/scrnmaps`. Do not include the [.filename]#.scm# suffix "
@@ -580,6 +609,10 @@ msgid ""
 "adapter's font character matrix so that letters are moved out of the "
 "pseudographics area if the screen font uses a bit 8 column."
 msgstr ""
+"要查看可用的螢幕對應表，可輸入 <command>ls /usr/share/syscons/scrnmaps</command>。在設定螢幕對應表 "
+"<replaceable>screenmap_name</replaceable> 時請去掉 <filename>.scm</filename> 字尾。"
+"在 VGA Adapter 的字型字元矩陣擴充位元 8 到位元 9 時會需要使用螢幕對應表與相關的字型對應來解決，因此若螢幕字型使用位元 8 的欄位，"
+"字母會移出虛擬繪圖區 (Pseudographics area)。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:294
@@ -592,11 +625,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:296
+#, fuzzy
 msgid ""
 "The `keychange` entry is usually needed to program function keys to match "
 "the selected terminal type because function key sequences cannot be defined "
 "in the keymap."
-msgstr ""
+msgstr "<literal>keychange</literal> 項目用在當功能鍵序列無法定義在鍵盤對應表時，可設定對應選擇終對機類型的功能鍵。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:298
