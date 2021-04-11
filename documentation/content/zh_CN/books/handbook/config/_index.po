@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: 2021-04-05 12:38+0000\n"
+"PO-Revision-Date: 2021-04-11 12:24+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookconfig_index/zh_CN/>\n"
@@ -115,6 +115,7 @@ msgstr "启动服务"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:67
+#, fuzzy
 msgid ""
 "Many users install third party software on FreeBSD from the Ports Collection "
 "and require the installed services to be started upon system "
@@ -123,6 +124,9 @@ msgid ""
 "be started during system initialization. This section explains the "
 "procedures available for starting third party software."
 msgstr ""
+"许多使用者会使用Port套件集安装第三方软件到FreeBSD且需要安装服务在系统初始化时可启动该软件。服务，例如<package>mail/"
+"postfix</package>或<package>www/"
+"apache22</package>仅只是在众多需要在系统初始化时启动的软件之中的两个。本章节将说明可用来启动第三方软件的程序。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:69
@@ -213,16 +217,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:104
+#, fuzzy
 msgid ""
 "This application could then have the following line placed in "
 "[.filename]#/etc/rc.conf#:"
-msgstr ""
+msgstr "接着此应用程序便可将下行放到<filename>/etc/rc.conf</filename>中："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:108
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "utility_enable=\"YES\"\n"
-msgstr ""
+msgstr "utility_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:111
@@ -303,8 +308,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:130
+#, fuzzy
 msgid "Here is a sample entry from the system crontab, [.filename]#/etc/crontab#:"
-msgstr ""
+msgstr "以下为系统crontab <filename>/etc/crontab</filename>的示例项目："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:143
@@ -404,28 +410,35 @@ msgstr "加入这些行到crontab档的最上方来设定环境变数以及备�
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:173
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "SHELL=/bin/sh\n"
 "PATH=/etc:/bin:/sbin:/usr/bin:/usr/sbin\n"
 "# Order of crontab fields\n"
 "# minute\thour\tmday\tmonth\twday\tcommand\n"
 msgstr ""
+"SHELL=/bin/sh\n"
+"PATH=/etc:/bin:/sbin:/usr/bin:/usr/sbin\n"
+"# Order of crontab fields\n"
+"# minute\thour\tmday\tmonth\twday\tcommand\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:176
+#, fuzzy
 msgid ""
 "Then add a line for each command or script to run, specifying the time to "
 "run the command. This example runs the specified custom Bourne shell script "
 "every day at two in the afternoon. Since the path to the script is not "
 "specified in `PATH`, the full path to the script is given:"
 msgstr ""
+"然后每一个要执行的指令或Script加入一行，指定要执行指令的时间。这个例子会每天在下午2点执行指定的自定义Bourne shell "
+"script，由于没有在<literal>PATH</literal>指定Script的路径，所以必须给予完整的Script路径："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:180
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "0\t14\t*\t*\t*\t/usr/home/dru/bin/mycustomscript.sh\n"
-msgstr ""
+msgstr "0\t14\t*\t*\t*\t/usr/home/dru/bin/mycustomscript.sh\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:186
@@ -514,9 +527,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:226
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "natd_enable=\"YES\"\n"
-msgstr ""
+msgstr "natd_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:229
@@ -605,9 +618,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:268
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Starting background file system checks in 60 seconds.\n"
-msgstr ""
+msgstr "在 60 秒内启动后台文件系统检查。\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:271
@@ -688,12 +701,15 @@ msgstr "管理系统特定的设定"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:291
+#, fuzzy
 msgid ""
 "The principal location for system configuration information is "
 "[.filename]#/etc/rc.conf#. This file contains a wide range of configuration "
 "information and it is read at system startup to configure the system. It "
 "provides the configuration information for the [.filename]#rc*# files."
 msgstr ""
+"系统设定信息的主要位于<filename>/etc/rc.conf</filename>，这个文件的设定信息范围非常广且会在系统启动时读取来设定系统，它也"
+"提供设定信息给<filename>rc*</filename>文件使用。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:293
@@ -706,6 +722,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:295
+#, fuzzy
 msgid ""
 "A number of strategies may be applied in clustered applications to separate "
 "site-wide configuration from system-specific configuration in order to "
@@ -713,30 +730,38 @@ msgid ""
 "system-specific configuration into [.filename]#/etc/rc.conf.local#. For "
 "example, these entries in [.filename]#/etc/rc.conf# apply to all systems:"
 msgstr ""
+"在丛集应用时要将系统特定的设定与各站特定的设定分开，借此减少管理成本有好几种方法，建议的方法是将系统特定的设定放置在<filename>/etc/rc."
+"conf.local</filename>，例如以下将要套用到所有系统的设定项目放在<filename>/etc/rc.conf</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:301
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "sshd_enable=\"YES\"\n"
 "keyrate=\"fast\"\n"
 "defaultrouter=\"10.1.1.254\"\n"
 msgstr ""
+"sshd_enable=\"YES\"\n"
+"keyrate=\"fast\"\n"
+"defaultrouter=\"10.1.1.254\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:304
+#, fuzzy
 msgid ""
 "Whereas these entries in [.filename]#/etc/rc.conf.local# apply to this "
 "system only:"
-msgstr ""
+msgstr "而只套用到此系统的设定放在<filename>/etc/rc.conf.local</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:309
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "hostname=\"node1.example.org\"\n"
 "ifconfig_fxp0=\"inet 10.1.1.1/8\"\n"
 msgstr ""
+"hostname=\"node1.example.org\"\n"
+"ifconfig_fxp0=\"inet 10.1.1.1/8\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:312
@@ -748,10 +773,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:314
+#, fuzzy
 msgid ""
 "Upgrading the system will not overwrite [.filename]#/etc/rc.conf#, so system "
 "configuration information will not be lost."
-msgstr ""
+msgstr "升级系统并不会复写<filename>/etc/rc.conf</filename>，所以系统设定信息不会因此遗失。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:319
@@ -812,7 +838,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:350
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "dc0: <82c169 PNIC 10/100BaseTX> port 0xa000-0xa0ff mem 0xd3800000-0xd38\n"
 "000ff irq 15 at device 11.0 on pci0\n"
@@ -829,6 +855,22 @@ msgid ""
 "dc1: Ethernet address: 00:a0:cc:da:da:db\n"
 "dc1: [ITHREAD]\n"
 msgstr ""
+"dc0: &lt;82c169 PNIC 10/100BaseTX&gt; port 0xa000-0xa0ff mem 0xd3800000-"
+"0xd38\n"
+"000ff irq 15 at device 11.0 on pci0\n"
+"miibus0: &lt;MII bus&gt; on dc0\n"
+"bmtphy0: &lt;BCM5201 10/100baseTX PHY&gt; PHY 1 on miibus0\n"
+"bmtphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto\n"
+"dc0: Ethernet address: 00:a0:cc:da:da:da\n"
+"dc0: [ITHREAD]\n"
+"dc1: &lt;82c169 PNIC 10/100BaseTX&gt; port 0x9800-0x98ff mem 0xd3000000-"
+"0xd30\n"
+"000ff irq 11 at device 12.0 on pci0\n"
+"miibus1: &lt;MII bus&gt; on dc1\n"
+"bmtphy1: &lt;BCM5201 10/100baseTX PHY&gt; PHY 1 on miibus1\n"
+"bmtphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto\n"
+"dc1: Ethernet address: 00:a0:cc:da:da:db\n"
+"dc1: [ITHREAD]\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:353
@@ -867,6 +909,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:361
+#, fuzzy
 msgid ""
 "Unfortunately, there are still many vendors that do not provide schematics "
 "for their drivers to the open source community because they regard such "
@@ -875,6 +918,9 @@ msgid ""
 "long and pain-staking process of reverse engineering or using the existing "
 "driver binaries available for Microsoft(R) Windows(R) platforms."
 msgstr ""
+"很不幸的，仍有很多供应商并没有提供它们驱动程序的技术文件给开源社群，因为这些文件涉及商业机密。因此，FreeBSD及其他操作系统的开发人员只剩下两种方案可"
+"以选择：通过长期艰苦的做逆向工程来开发驱动程序或是使用现有供<trademark class=\"registered\">Microsoft</"
+"trademark> <trademark class=\"registered\">Windows</trademark>平台用的二进制驱动程序。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:363
@@ -985,7 +1031,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:407
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "ndis0: <Wireless-G PCI Adapter> mem 0xf4100000-0xf4101fff irq 3 at device "
 "8.0 on pci1\n"
@@ -994,6 +1040,12 @@ msgid ""
 "ndis0: 11b rates: 1Mbps 2Mbps 5.5Mbps 11Mbps\n"
 "ndis0: 11g rates: 6Mbps 9Mbps 12Mbps 18Mbps 36Mbps 48Mbps 54Mbps\n"
 msgstr ""
+"ndis0: &lt;Wireless-G PCI Adapter&gt; mem 0xf4100000-0xf4101fff irq 3 at "
+"device 8.0 on pci1\n"
+"ndis0: NDIS API version: 5.0\n"
+"ndis0: Ethernet address: 0a:b1:2c:d3:4e:f5\n"
+"ndis0: 11b rates: 1Mbps 2Mbps 5.5Mbps 11Mbps\n"
+"ndis0: 11g rates: 6Mbps 9Mbps 12Mbps 18Mbps 36Mbps 48Mbps 54Mbps\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:410
@@ -1011,9 +1063,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:416
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "W32DRIVER_SYS_load=\"YES\"\n"
-msgstr ""
+msgstr "W32DRIVER_SYS_load=\"YES\"\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/config/_index.adoc:418
@@ -1089,8 +1141,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:456
+#, fuzzy
 msgid "In this example, [.filename]#dc0# is up and running. The key indicators are:"
-msgstr ""
+msgstr "在此例中，<filename>dc0</filename>已经上线并且执行中。主要的依据有："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:458
@@ -1143,7 +1196,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:474
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "dc0: flags=8843<BROADCAST,SIMPLEX,MULTICAST> metric 0 mtu 1500\n"
 "\toptions=80008<VLAN_MTU,LINKSTATE>\n"
@@ -1151,6 +1204,11 @@ msgid ""
 "\tmedia: Ethernet autoselect (100baseTX <full-duplex>)\n"
 "\tstatus: active\n"
 msgstr ""
+"dc0: flags=8843&lt;BROADCAST,SIMPLEX,MULTICAST&gt; metric 0 mtu 1500\n"
+"\toptions=80008&lt;VLAN_MTU,LINKSTATE&gt;\n"
+"\tether 00:a0:cc:da:da:da\n"
+"\tmedia: Ethernet autoselect (100baseTX &lt;full-duplex&gt;)\n"
+"\tstatus: active\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:477
@@ -1169,9 +1227,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:483
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ifconfig_dc0=\"DHCP\"\n"
-msgstr ""
+msgstr "ifconfig_dc0=\"DHCP\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:486
@@ -1202,11 +1260,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:500
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "ifconfig_dc0=\"inet 192.168.1.3 netmask 255.255.255.0\"\n"
 "ifconfig_dc1=\"inet 10.0.0.1 netmask 255.255.255.0 media 10baseT/UTP\"\n"
 msgstr ""
+"ifconfig_dc0=\"inet 192.168.1.3 netmask 255.255.255.0\"\n"
+"ifconfig_dc1=\"inet 10.0.0.1 netmask 255.255.255.0 media 10baseT/UTP\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:503
@@ -1249,12 +1309,15 @@ msgstr "测试和故障排除"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:522
+#, fuzzy
 msgid ""
 "Once the necessary changes to [.filename]#/etc/rc.conf# are saved, a reboot "
 "can be used to test the network configuration and to verify that the system "
 "restarts without any configuration errors. Alternatively, apply the settings "
 "to the networking system with this command:"
 msgstr ""
+"必要的变更储存到<filename>/etc/rc."
+"conf</filename>之后，需要重新启动系统来测试网络设定并检查系统重新启动是否没有任何设定错误。或者使用这个指令将设定套用到网络系统："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:526
@@ -1264,10 +1327,11 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:531
+#, fuzzy
 msgid ""
 "If a default gateway has been set in [.filename]#/etc/rc.conf#, also issue "
 "this command:"
-msgstr ""
+msgstr "若预设的通信闸已设定于<filename>/etc/rc.conf</filename>也同样要下这个指令："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:535
@@ -1356,6 +1420,7 @@ msgstr "故障排除"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:580
+#, fuzzy
 msgid ""
 "When troubleshooting hardware and software configurations, check the simple "
 "things first. Is the network cable plugged in? Are the network services "
@@ -1364,6 +1429,9 @@ msgid ""
 "Notes, update the version of FreeBSD to the latest STABLE version, check the "
 "mailing list archives, and search the Internet."
 msgstr ""
+"在排除硬件及软件设定问题时，要先检查几件简单的事。网路线插上了没？网络的服务都正确设定了吗？防火墙设定是否正确？FreeBSD是否支持该<acronym>"
+"NIC</acronym>？在回报问题之前，永远要先检查Hardware "
+"Notes、更新FreeBSD到最新的STABLE版本、检查邮递论坛封存记录以及上网查询。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:582
@@ -1375,12 +1443,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:584
+#, fuzzy
 msgid ""
 "Some users experience one or two `device timeout` messages, which is normal "
 "for some cards. If they continue, or are bothersome, determine if the device "
 "is conflicting with another device. Double check the cable "
 "connections. Consider trying another card."
 msgstr ""
+"部份使用者会遇到一次或两次<errorname>device timeout</errorname>的信息，在对某些界面卡是正常的。若信息持续发生或很烦的"
+"，请确认是否有与其他的装置冲突，再次检查网路线，或考虑使用其他介面卡。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:586
@@ -1444,9 +1515,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:603
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ifconfig_fxp0_alias0=\"inet xxx.xxx.xxx.xxx netmask xxx.xxx.xxx.xxx\"\n"
-msgstr ""
+msgstr "ifconfig_fxp0_alias0=\"inet xxx.xxx.xxx.xxx netmask xxx.xxx.xxx.xxx\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:606
@@ -1480,14 +1551,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:612
+#, fuzzy
 msgid ""
 "The following [.filename]#/etc/rc.conf# entries configure the adapter "
 "correctly for this scenario:"
-msgstr ""
+msgstr "在此情境下正确设定网络界面的方式如下<filename>/etc/rc.conf</filename>中的项目："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:624
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "ifconfig_fxp0=\"inet 10.1.1.1 netmask 255.255.255.0\"\n"
 "ifconfig_fxp0_alias0=\"inet 10.1.1.2 netmask 255.255.255.255\"\n"
@@ -1499,6 +1571,15 @@ msgid ""
 "ifconfig_fxp0_alias6=\"inet 202.0.75.19 netmask 255.255.255.255\"\n"
 "ifconfig_fxp0_alias7=\"inet 202.0.75.20 netmask 255.255.255.255\"\n"
 msgstr ""
+"ifconfig_fxp0=\"inet 10.1.1.1 netmask 255.255.255.0\"\n"
+"ifconfig_fxp0_alias0=\"inet 10.1.1.2 netmask 255.255.255.255\"\n"
+"ifconfig_fxp0_alias1=\"inet 10.1.1.3 netmask 255.255.255.255\"\n"
+"ifconfig_fxp0_alias2=\"inet 10.1.1.4 netmask 255.255.255.255\"\n"
+"ifconfig_fxp0_alias3=\"inet 10.1.1.5 netmask 255.255.255.255\"\n"
+"ifconfig_fxp0_alias4=\"inet 202.0.75.17 netmask 255.255.255.240\"\n"
+"ifconfig_fxp0_alias5=\"inet 202.0.75.18 netmask 255.255.255.255\"\n"
+"ifconfig_fxp0_alias6=\"inet 202.0.75.19 netmask 255.255.255.255\"\n"
+"ifconfig_fxp0_alias7=\"inet 202.0.75.20 netmask 255.255.255.255\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:627
@@ -1510,9 +1591,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:631
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ifconfig_fxp0_aliases=\"inet 10.1.1.1-5/24 inet 202.0.75.17-20/28\"\n"
-msgstr ""
+msgstr "ifconfig_fxp0_aliases=\"inet 10.1.1.1-5/24 inet 202.0.75.17-20/28\"\n"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/config/_index.adoc:634
@@ -1573,6 +1654,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:647
+#, fuzzy
 msgid ""
 "This configuration file contains one line per action, where the syntax for "
 "each line is a selector field followed by an action field. The syntax of the "
@@ -1585,10 +1667,16 @@ msgid ""
 "remote log host. As an example, here is the default [.filename]#syslog.conf# "
 "from FreeBSD:"
 msgstr ""
+"此配置文件中一行代表一个动作，每一行的格式皆为一个选择器字段（Selector field）接着一个动作字段（Action "
+"field）。选择器字段的格式为<replaceable>facility.level</replaceable>可以用来比对来自<replaceable"
+">facility</replaceable>于层级<replaceable>level</replaceable>或更高层的日志信息，也可以在层级前加入"
+"选择性的比对旗标来更确切的指定记录的内容。同样一个动作可以使用多个选择器字段并使用分号（<literal>；</literal>）来分隔。用<litera"
+"l>*</literal>可以比对任何东西。动作字段可用来指定传送日志信息的目标，如一个文件或远端日志主机。示例为以下为FreeBSD预设的<filena"
+"me>syslog.conf</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:685
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# $FreeBSD$\n"
 "#\n"
@@ -1627,6 +1715,42 @@ msgid ""
 "*.*                                             /var/log/ppp.log\n"
 "!*\n"
 msgstr ""
+"# <_:phrase-1/>\n"
+"#\n"
+"#       Spaces ARE valid field separators in this file. However,\n"
+"#       other *nix-like systems still insist on using tabs as field\n"
+"#       separators. If you are sharing this file between systems, you\n"
+"#       may want to use only tabs as field separators here.\n"
+"#       Consult the syslog.conf(5) manpage.\n"
+"*.err;kern.warning;auth.notice;mail.crit                /dev/console\n"
+"*.notice;authpriv.none;kern.debug;lpr.info;mail.crit;news.err   /var/log/"
+"messages\n"
+"security.*                                      /var/log/security\n"
+"auth.info;authpriv.info                         /var/log/auth.log\n"
+"mail.info                                       /var/log/maillog\n"
+"lpr.info                                        /var/log/lpd-errs\n"
+"ftp.info                                        /var/log/xferlog\n"
+"cron.*                                          /var/log/cron\n"
+"!-devd\n"
+"*.=debug                                        /var/log/debug.log\n"
+"*.emerg                                         *\n"
+"# uncomment this to log all writes to /dev/console to /var/log/console.log\n"
+"#console.info                                   /var/log/console.log\n"
+"# uncomment this to enable logging of all log messages to /var/log/all.log\n"
+"# touch /var/log/all.log and chmod it to mode 600 before it will work\n"
+"#*.*                                            /var/log/all.log\n"
+"# uncomment this to enable logging to a remote loghost named loghost\n"
+"#*.*                                            @loghost\n"
+"# uncomment these if you're running inn\n"
+"# news.crit                                     /var/log/news/news.crit\n"
+"# news.err                                      /var/log/news/news.err\n"
+"# news.notice                                   /var/log/news/news.notice\n"
+"# Uncomment this if you wish to see messages produced by devd\n"
+"# !devd\n"
+"# *.&gt;=info\n"
+"!ppp\n"
+"*.*                                             /var/log/ppp.log\n"
+"!*\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:688
@@ -1688,9 +1812,10 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:703
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "daemon.notice                                        /var/log/daemon.log\n"
 msgstr ""
+"daemon.notice                                        /var/log/daemon.log\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:706
@@ -1733,7 +1858,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:754
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# configuration file for newsyslog\n"
 "# $FreeBSD$\n"
@@ -1778,6 +1903,48 @@ msgid ""
 "/var/log/weekly.log                     640  5     1    $W6D0 JN\n"
 "/var/log/xferlog                        600  7     100  *     JC\n"
 msgstr ""
+"# configuration file for newsyslog\n"
+"# <_:phrase-1/>\n"
+"#\n"
+"# Entries which do not specify the '/pid_file' field will cause the\n"
+"# syslogd process to be signalled when that log file is rotated.  This\n"
+"# action is only appropriate for log files which are written to by the\n"
+"# syslogd process (ie, files listed in /etc/syslog.conf).  If there\n"
+"# is no process which needs to be signalled when a given log file is\n"
+"# rotated, then the entry for that file should include the 'N' flag.\n"
+"#\n"
+"# The 'flags' field is one or more of the letters: BCDGJNUXZ or a '-'.\n"
+"#\n"
+"# Note: some sites will want to select more restrictive protections than "
+"the\n"
+"# defaults.  In particular, it may be desirable to switch many of the 644\n"
+"# entries to 640 or 600.  For example, some sites will consider the\n"
+"# contents of maillog, messages, and lpd-errs to be confidential.  In the\n"
+"# future, these defaults may change to more conservative ones.\n"
+"#\n"
+"# logfilename          [owner:group]    mode count size when  flags "
+"[/pid_file] [sig_num]\n"
+"/var/log/all.log                        600  7     *    @T00  J\n"
+"/var/log/amd.log                        644  7     100  *     J\n"
+"/var/log/auth.log                       600  7     100  @0101T JC\n"
+"/var/log/console.log                    600  5     100  *     J\n"
+"/var/log/cron                           600  3     100  *     JC\n"
+"/var/log/daily.log                      640  7     *    @T00  JN\n"
+"/var/log/debug.log                      600  7     100  *     JC\n"
+"/var/log/kerberos.log                   600  7     100  *     J\n"
+"/var/log/lpd-errs                       644  7     100  *     JC\n"
+"/var/log/maillog                        640  7     *    @T00  JC\n"
+"/var/log/messages                       644  5     100  @0101T JC\n"
+"/var/log/monthly.log                    640  12    *    $M1D0 JN\n"
+"/var/log/pflog                          600  3     100  *     JB    /var/run/"
+"pflogd.pid\n"
+"/var/log/ppp.log        root:network    640  3     100  *     JC\n"
+"/var/log/devd.log                       644  3     100  *     JC\n"
+"/var/log/security                       600  10    100  *     JC\n"
+"/var/log/sendmail.st                    640  10    *    168   B\n"
+"/var/log/utx.log                        644  3     *    @01T05 B\n"
+"/var/log/weekly.log                     640  5     1    $W6D0 JN\n"
+"/var/log/xferlog                        600  7     100  *     JC\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:757
@@ -1855,12 +2022,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:773
+#, fuzzy
 msgid ""
 "The logging server and all client machines must have forward and reverse "
 "entries in the local DNS. If the network does not have a DNS server, create "
 "entries in each system's [.filename]#/etc/hosts#. Proper name resolution is "
 "required so that log entries are not rejected by the logging server."
 msgstr ""
+"日志记录服务器和所有客户端计算机必须具有本地 <acronym> DNS </acronym> 中的正向和反向条目。如果网络没有 <acronym> "
+"DNS </acronym> 服务器，请在每个系统的 <filename>/etc/"
+"hosts</filename>中创建条目。需要正确的名称解析，以便日志记录服务器不会拒绝日志条目。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:775
@@ -1880,11 +2051,13 @@ msgstr "日志服务器设定示例"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:784
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "+logclient.example.com\n"
 "*.*     /var/log/logclient.log\n"
 msgstr ""
+"+logclient.example.com\n"
+"*.*     /var/log/logclient.log\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:789
@@ -1901,11 +2074,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:796
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "syslogd_enable=\"YES\"\n"
 "syslogd_flags=\"-a logclient.example.com -v -v\"\n"
 msgstr ""
+"syslogd_enable=\"YES\"\n"
+"syslogd_flags=\"-a logclient.example.com -v -v\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:799
@@ -1971,18 +2146,21 @@ msgstr "日志客户端是一台发送日志信息到日志服务器的机器，
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:824
+#, fuzzy
 msgid ""
 "Once a logging server has been configured, edit [.filename]#/etc/rc.conf# on "
 "the logging client:"
-msgstr ""
+msgstr "配置日志记录服务器后, 在日志记录客户端上编辑 <filename>/etc/rc.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:829
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "syslogd_enable=\"YES\"\n"
 "syslogd_flags=\"-s -v -v\"\n"
 msgstr ""
+"syslogd_enable=\"YES\"\n"
+"syslogd_flags=\"-s -v -v\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:832
@@ -1994,18 +2172,21 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:834
+#, fuzzy
 msgid ""
 "Next, define the logging server in the client's "
 "[.filename]#/etc/syslog.conf#. In this example, all logged facilities are "
 "sent to a remote system, denoted by the `@` symbol, with the specified "
 "hostname:"
 msgstr ""
+"日志服务器必须在客户端的 <filename>/etc/syslog.conf</filename> 中指明。 在此例中， <literal>@</"
+"literal> 符号被用来表示发送日志数据到远程的服务器， 看上去差不多如下这样："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:838
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "*.*\t\t@logserv.example.com\n"
-msgstr ""
+msgstr "*.*\t\t@logserv.example.com\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:841
@@ -2034,10 +2215,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:855
+#, fuzzy
 msgid ""
 "This message should now exist both in [.filename]#/var/log/messages# on the "
 "client and [.filename]#/var/log/logclient.log# on the log server."
 msgstr ""
+"这段消息现在应该同时出现在客户机的 <filename>/var/log/messages</filename> 以及日志服务器的 <filename>/"
+"var/log/logclient.log</filename> 中。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/config/_index.adoc:856
@@ -2072,9 +2256,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:865
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "syslogd_flags=\"-d -a logclient.example.com -v -v\"\n"
-msgstr ""
+msgstr "syslogd_flags=\"-d -a logclient.example.com -v -v\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:873
@@ -2085,7 +2269,7 @@ msgstr "重启后控制台上会显示调试信息："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:884
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "logmsg: pri 56, flags 4, from logserv.example.com, msg syslogd: restart\n"
 "syslogd: restarted\n"
@@ -2098,14 +2282,26 @@ msgid ""
 "logclient.example.com;\n"
 "rejected in rule 0 due to name mismatch.\n"
 msgstr ""
+"logmsg: pri 56, flags 4, from logserv.example.com, msg syslogd: restart\n"
+"syslogd: restarted\n"
+"logmsg: pri 6, flags 4, from logserv.example.com, msg syslogd: kernel boot "
+"file is /boot/kernel/kernel\n"
+"Logging to FILE /var/log/messages\n"
+"syslogd: kernel boot file is /boot/kernel/kernel\n"
+"cvthname(192.168.1.10)\n"
+"validate: dgram from IP 192.168.1.10, port 514, name logclient.example.com;\n"
+"rejected in rule 0 due to name mismatch.\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:887
+#, fuzzy
 msgid ""
 "In this example, the log messages are being rejected due to a typo which "
 "results in a hostname mismatch. The client's hostname should be `logclient`, "
 "not `logclien`. Fix the typo, issue a restart, and verify the results:"
 msgstr ""
+"在此示例中，由于拼写错误导致主机名不匹配，日志消息被拒绝。客户端的主机名应该是<literal>logclient</literal>，而非<litera"
+"l>logclien</literal>。修复拼写错误并重新启动，验证结果："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:903
@@ -2145,6 +2341,7 @@ msgstr "安全注意事项"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:910
+#, fuzzy
 msgid ""
 "As with any network service, security requirements should be considered "
 "before implementing a logging server. Log files may contain sensitive data "
@@ -2154,6 +2351,9 @@ msgid ""
 "package:security/stunnel[], which will transmit the logging data over an "
 "encrypted tunnel."
 msgstr ""
+"就像其他的网络服务一样， 在实现配置之前需要考虑安全性。 有时日志文件也包含了敏感信息， 比如本地主机上所启用的服务， 用户帐号和配置数据。 "
+"从客户端发出的数据经过网络到达服务器， 这期间既没有加密也没有密码保护。 如果有加密需要的话， 可以使用 <package>security/"
+"stunnel</package>， 它将在一个加密的隧道中传输数据。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:912
@@ -2261,12 +2461,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:975
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "search example.com\n"
 "nameserver 147.11.1.11\n"
 "nameserver 147.11.100.30\n"
 msgstr ""
+"search example.com\n"
+"nameserver 147.11.1.11\n"
+"nameserver 147.11.100.30\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:980
@@ -2301,7 +2504,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1022
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# $FreeBSD$\n"
 "#\n"
@@ -2337,6 +2540,38 @@ msgid ""
 "# from your regional registry (ARIN, APNIC, LACNIC, RIPE NCC, or AfriNIC.)\n"
 "#\n"
 msgstr ""
+"# <_:phrase-1/>\n"
+"#\n"
+"#\n"
+"# Host Database\n"
+"#\n"
+"# This file should contain the addresses and aliases for local hosts that\n"
+"# share this file.  Replace 'my.domain' below with the domainname of your\n"
+"# machine.\n"
+"#\n"
+"# In the presence of the domain name service or NIS, this file may\n"
+"# not be consulted at all; see /etc/nsswitch.conf for the resolution order.\n"
+"#\n"
+"#\n"
+"::1\t\t\tlocalhost localhost.my.domain\n"
+"127.0.0.1\t\tlocalhost localhost.my.domain\n"
+"#\n"
+"# Imaginary network.\n"
+"#10.0.0.2\t\tmyname.my.domain myname\n"
+"#10.0.0.3\t\tmyfriend.my.domain myfriend\n"
+"#\n"
+"# According to RFC 1918, you can use the following IP networks for\n"
+"# private nets which will never be connected to the Internet:\n"
+"#\n"
+"#\t10.0.0.0\t-   10.255.255.255\n"
+"#\t172.16.0.0\t-   172.31.255.255\n"
+"#\t192.168.0.0\t-   192.168.255.255\n"
+"#\n"
+"# In case you want to be able to connect to the Internet, you need\n"
+"# real official assigned numbers.  Do not try to invent your own network\n"
+"# numbers but instead get one from your network provider (if any) or\n"
+"# from your regional registry (ARIN, APNIC, LACNIC, RIPE NCC, or AfriNIC.)\n"
+"#\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1025
@@ -2345,9 +2580,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1029
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "[Internet address] [official hostname] [alias1] [alias2] ...\n"
-msgstr ""
+msgstr "[Internet address] [official hostname] [alias1] [alias2] ...\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1032
@@ -2356,9 +2591,9 @@ msgstr "例如："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1036
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "10.0.0.1 myRealHostname.example.com myRealHostname foobar1 foobar2\n"
-msgstr ""
+msgstr "10.0.0.1 myRealHostname.example.com myRealHostname foobar1 foobar2\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1039
@@ -2457,11 +2692,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1080
+#, fuzzy
 msgid ""
 "For example, to turn off logging of fatal signal exits and prevent users "
 "from seeing processes started by other users, the following tunables can be "
 "set in [.filename]#/etc/sysctl.conf#:"
 msgstr ""
+"例如，要关闭严重信号（Fatal signal）中止的记录并避免使用者看到其他使用者所执行的程序，可加入以下设定到<filename>/etc/"
+"sysctl.conf</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1085
@@ -2502,11 +2740,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1102
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "cbb0: Could not map register memory\n"
 "device_probe_and_attach: cbb0 attach returned 12\n"
 msgstr ""
+"cbb0: Could not map register memory\n"
+"device_probe_and_attach: cbb0 attach returned 12\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1105
@@ -2709,6 +2949,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1155
+#, fuzzy
 msgid ""
 "Soft Updates is recommended for UFS file systems as it drastically improves "
 "meta-data performance, mainly file creation and deletion, through the use of "
@@ -2721,6 +2962,10 @@ msgid ""
 "installworld`, can cause the file system to run out of space and the update "
 "to fail."
 msgstr ""
+"软更新（Soft Update）推荐用于<acronym>UFS</acronym>文件系统，因为它通过使用内存缓存，大幅提高了元数据的性能，主要是文件的"
+"创建和删除。软更新有两个缺点需要注意。第一，软更新保证了文件系统在崩溃时的一致性，但在更新物理磁盘时很容易出现几秒甚至一分钟的延迟。如果系统崩溃，未写入的"
+"数据可能会丢失。其次，软更新会推迟文件系统块的释放。如果根文件系统几乎满了，执行重大更新，如<command>make "
+"installworld</command>，会导致文件系统空间耗尽，更新失败。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/config/_index.adoc:1156
@@ -2784,6 +3029,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1165
+#, fuzzy
 msgid ""
 "The usual solution for this problem is to implement _dirty region logging_, "
 "which is also referred to as _journaling_. Meta-data updates are still "
@@ -2799,6 +3045,12 @@ msgid ""
 "quickly rolled back or completed from the logging area after the system "
 "comes up again, resulting in a fast file system startup."
 msgstr ""
+"这个问题通常的解决办法是使用 <emphasis>dirty region logging</emphasis> 或者 "
+"<emphasis>journaling</emphasis> 尽管它不是一贯的被使用并且有时候应用到其他的事务纪录中更好。 "
+"这种方法元数据更新依然同步写入，但是只写到磁盘的一个小区域。 过后他们将会被移动到正确的位置。因为纪录区很小， "
+"磁盘上接近的区域磁头不需要移动很长的距离，所以这些比写同步快一些。 另外这个方法的复杂性有限，所以出现错误的机会也很少。缺点是元数据要写两次 "
+"(一次写到纪录区域，一次写到正确的区域)。正常情况下， 悲观的性能可能会发生。从另一方面来讲， "
+"崩溃的时候所有未发生的元数据操作可以很快的在系统启动之后从记录中恢复过来。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1167
@@ -2888,6 +3140,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1184
+#, fuzzy
 msgid ""
 "In older FreeBSD releases, the default value of `kern.maxfiles` is derived "
 "from `maxusers` in the kernel configuration file. `kern.maxfiles` grows "
@@ -2897,6 +3150,11 @@ msgid ""
 "limits. Even though a production machine may not have 256 concurrent users, "
 "the resources needed may be similar to a high-scale web server."
 msgstr ""
+"在早期版本的 FreeBSD 中， <varname>kern.maxfiles</varname> 的默认值， 是根据您内核配置文件中的 "
+"<option>maxusers</option> 选项计算的。 <varname>kern.maxfiles</varname> 这个数值， 会随 "
+"<option>maxusers</option> 成比例地增减。 当编译定制的内核时， 按照您系统的用途来修改这个值是个好主意。 "
+"这个数字同时还决定内核的许多预设的限制值。 有时， 尽管并不会真的有 256 个用户同时连接一台生产服务器， 但对于高负载的 web 服务器而言， "
+"却可能需要与之类似的资源。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1186
@@ -3061,6 +3319,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1221
+#, fuzzy
 msgid ""
 "This feature is useful when serving data over modems, Gigabit Ethernet, high "
 "speed `WAN` links, or any other link with a high bandwidth delay product, "
@@ -3077,6 +3336,13 @@ msgid ""
 "data transmission such as uploading. It has no effect on data reception or "
 "downloading."
 msgstr ""
+"这一特性在您的服务器同时向使用普通调制解调器， 千兆以太网， 乃至更高速度的光与网络连接 (或其他带宽延迟积很大的连接) 的时候尤为重要， "
+"特别是当您同时使用滑动窗缩放， 或使用了大的发送窗口的时候。 如果启用了这个选项， 您还应该把 <varname>net.inet.tcp."
+"inflight.debug</varname> 设置为 <literal>0</literal> (禁用调试)， 对于生产环境而言， 将 "
+"<varname>net.inet.tcp.inflight.min</varname> 设置成至少 <literal>6144</literal> "
+"会很有好处。 然而， 需要注意的是， 这个值设置过大事实上相当于禁用了连接带宽延迟积限制功能。 这个限制特性减少了在路由和交换包队列的堵塞数据数量， "
+"也减少了在本地主机接口队列阻塞的数据的数量。在少数的等候队列中、 交互式连接，尤其是通过慢速的调制解调器，也能用低的 "
+"<emphasis>往返时间</emphasis>操作。但是，注意这只影响到数据发送 (上载/服务端)。对数据接收(下载)没有效果。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1223
@@ -3106,6 +3372,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1229
+#, fuzzy
 msgid ""
 "A vnode is the internal representation of a file or directory. Increasing "
 "the number of vnodes available to the operating system reduces disk "
@@ -3114,6 +3381,9 @@ msgid ""
 "running out of vnodes, this setting needs to be increased. The amount of "
 "inactive and free RAM will need to be taken into account."
 msgstr ""
+"vnode 是对文件或目录的一种内部表达。 因此， 增加可以被操作系统利用的 vnode 数量将降低磁盘的 I/O。 一般而言， "
+"这是由操作系统自行完成的， 也不需要加以修改。 但在某些时候磁盘 I/O 会成为瓶颈， 而系统的 vnode 不足， 则这一配置应被增加。 "
+"此时需要考虑是非活跃和空闲内存的数量。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1231
@@ -3204,19 +3474,23 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1271
+#, fuzzy
 msgid ""
 "It is possible to use any partition not currently mounted, even if it "
 "already contains data. Using `swapon` on a partition that contains data will "
 "overwrite and destroy that data. Make sure that the partition to be added as "
 "swap is really the intended partition before running `swapon`."
 msgstr ""
+"可以使用任何尚未挂载过、甚至已经有内含数据的分割区做为交换空间，但在含有数据的分割区上使用<command>swapon</command>会复写并清除该"
+"分割区上所有的数据，请在执行<command>swapon</command>之前确认真的要使用该分割区增加交换空间。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1274
+#, fuzzy
 msgid ""
 "To automatically add this swap partition on boot, add an entry to "
 "[.filename]#/etc/fstab#:"
-msgstr ""
+msgstr "要在开机时自动加入此交换分割区，可加入以下项目到<filename>/etc/fstab</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1278
@@ -3241,10 +3515,11 @@ msgstr "建立交换档"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1286
+#, fuzzy
 msgid ""
 "These examples create a 512M swap file called [.filename]#/usr/swap0# "
 "instead of using a partition."
-msgstr ""
+msgstr "以下例子会建立一个512M的交换文件，位于<filename>/usr/swap0</filename>，来替代 swap 分区。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1288
@@ -3279,16 +3554,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1309
+#, fuzzy
 msgid ""
 "Inform the system about the swap file by adding a line to "
 "[.filename]#/etc/fstab#:"
-msgstr ""
+msgstr "加入行到<filename>/etc/fstab</filename>以让系统知道交换档的信息："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1313
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "md99\tnone\tswap\tsw,file=/usr/swap0,late\t0\t0\n"
-msgstr ""
+msgstr "md99\tnone\tswap\tsw,file=/usr/swap0,late\t0\t0\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1316
@@ -3318,6 +3594,7 @@ msgstr "电源与资源管理"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1329
+#, fuzzy
 msgid ""
 "It is important to utilize hardware resources in an efficient manner. Power "
 "and resource management allows the operating system to monitor system limits "
@@ -3332,6 +3609,12 @@ msgid ""
 "platform. An APM driver in the operating system mediates access to the APM "
 "Software Interface, which allows management of power levels."
 msgstr ""
+"以有效率的方式运用硬件资源是很重要的，电源与资源管理让操作系统可以监控系统的限制，并且在系统温度意外升高时能够发出警报。早期提供电源管理的规范是进阶电源管"
+"理（Advanced Power Management，<acronym>APM</acronym>），<acronym>APM</acronym>可根据"
+"系统的使用状况来来控制电源用量。然而，使用<acronym>APM</acronym>要操作系统来管理系统的电源用量和温度属性是困难且没有弹性的，因为硬件"
+"是由<acronym>BIOS</acronym>所管理，使用者对电源管理设定只有有限的设定性与可见性，且<acronym>APM</acronym> <"
+"acronym>BIOS</acronym>是由供应商提供且特定于某些硬件平台，而操作系统中必透过<acronym>APM</acronym>驱动程序做为"
+"中介存取<acronym>APM</acronym>软件界面才能够管理电源等级。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1331
@@ -3428,6 +3711,7 @@ msgstr "常见问题"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1356
+#, fuzzy
 msgid ""
 "ACPI is present in all modern computers that conform to the ia32 (x86) and "
 "amd64 (AMD) architectures. The full standard has many features including CPU "
@@ -3438,6 +3722,9 @@ msgid ""
 "management support as well. Laptops also have suspend and resume, with their "
 "own associated complexity."
 msgstr ""
+"所有符合 ia32 （x86） 和 amd64 （<acronym>AMD</acronym>） 体系结构的现代计算机都有<acronym>ACPI</a"
+"cronym>。全标准具有多种功能，包括<acronym>CPU</acronym>性能管理、电源平面控制、热区、各种电池系统、嵌入式控制器和总线枚举。大"
+"多数系统实施不到完整的标准。例如，桌面系统通常只实现总线枚举，而笔记本电脑可能也有冷却和电池管理支持。笔记本电脑也有挂起和恢复，与它们相关的复杂性。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1358
@@ -3480,11 +3767,15 @@ msgstr "鼠标问题"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1366
+#, fuzzy
 msgid ""
 "In some cases, resuming from a suspend operation will cause the mouse to "
 "fail. A known work around is to add `hint.psm.0.flags=\"0x3000\"` to "
 "[.filename]#/boot/loader.conf#."
 msgstr ""
+"某些时候， 唤醒操作会导致鼠标不再正常工作。 已知的绕过这一问题的方法， 是在 <filename>/boot/loader.conf</"
+"filename> 文件中添加 <literal>hint.psm.0.flags=\"0x3000\"</literal> 设置。 "
+"如果这样做不能解决问题， 请考虑按前面介绍的方法提交问题报告。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/config/_index.adoc:1367
@@ -3511,11 +3802,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1377
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "hw.acpi.supported_sleep_state: S3 S4 S5\n"
 "hw.acpi.s4bios: 0\n"
 msgstr ""
+"hw.acpi.supported_sleep_state: S3 S4 S5\n"
+"hw.acpi.s4bios: 0\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1380
@@ -3554,6 +3847,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1393
+#, fuzzy
 msgid ""
 "This test emulates the suspend/resume cycle of all device drivers without "
 "actually going into `S3` state. In some cases, problems such as losing "
@@ -3562,6 +3856,10 @@ msgid ""
 "state, which means devices may not lose power, and many will work fine even "
 "if suspend/resume methods are totally missing, unlike real `S3` state."
 msgstr ""
+"这个测试会模拟休眠和恢复过程而不真的进入 <literal>S3</literal> 状态。 有时， 您会用这种方式很容易地抓住问题 (例如， "
+"丢失固件状态、 设备 watchdog 超时， 以及一直重试等)。 注意系统不会真的进入 <literal>S3</literal> 状态， "
+"这意味着这些设备可能不会掉电， 而许多设备在完全不提供休眠和恢复方法时仍可正常工作， 而不像使用真的 <literal>S3</literal> "
+"状态那样。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1395
@@ -3697,21 +3995,27 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1429
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "ACPI-1287: *** Error: Method execution failed [\\\\_SB_.PCI0.LPC0.FIGD._STA] "
 "\\\\\n"
 "(Node 0xc3f6d160), AE_NOT_FOUND\n"
 msgstr ""
+"ACPI-1287: *** Error: Method execution failed [\\\\_SB_.PCI0.LPC0.FIGD._STA] "
+"\\\\\n"
+"(Node 0xc3f6d160), AE_NOT_FOUND\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1432
+#, fuzzy
 msgid ""
 "Often, these problems may be resolved by updating the BIOS to the latest "
 "revision. Most console messages are harmless, but if there are other "
 "problems, like the battery status is not working, these messages are a good "
 "place to start looking for problems."
 msgstr ""
+"通常，这些问题可以通过将<acronym>BIOS</acronym>更新到最新版本来解决。大多数控制台消息是无害的，但如果存在其他问题，如电池状态不工作"
+"，这些消息是开始查找问题的好地方。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/config/_index.adoc:1433
@@ -3765,12 +4069,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1449
+#, fuzzy
 msgid ""
 "Other workarounds may require [.filename]#my.asl# to be customized. If this "
 "file is edited, compile the new ASL using the following command. Warnings "
 "can usually be ignored, but errors are bugs that will usually prevent ACPI "
 "from working correctly."
 msgstr ""
+"一些解决方案可能需要修改<filename>my.asl</filename>。修改完成后需要使用以下命令将其编译城<acronym>AML</acron"
+"ym>。一些警告可以忽略，但编译过程中出现的错误不可忽略，这些错误可能让 ACPI 工作异常。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1453
@@ -3796,11 +4103,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1463
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "acpi_dsdt_load=\"YES\"\n"
 "acpi_dsdt_name=\"/boot/DSDT.aml\"\n"
 msgstr ""
+"acpi_dsdt_load=\"YES\"\n"
+"acpi_dsdt_name=\"/boot/DSDT.aml\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1466
@@ -3859,11 +4168,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1485
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "debug.acpi.layer=\"ACPI_ALL_COMPONENTS ACPI_ALL_DRIVERS\"\n"
 "debug.acpi.level=\"ACPI_LV_ERROR\"\n"
 msgstr ""
+"debug.acpi.layer=\"ACPI_ALL_COMPONENTS ACPI_ALL_DRIVERS\"\n"
+"debug.acpi.level=\"ACPI_LV_ERROR\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1488
