@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-05 12:38+0000\n"
+"PO-Revision-Date: 2021-04-11 12:24+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookaudit_index/zh_CN/>\n"
@@ -111,15 +111,19 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:67
+#, fuzzy
 msgid ""
 "The audit facility has some known limitations. Not all security-relevant "
 "system events are auditable and some login mechanisms, such as Xorg-based "
 "display managers and third-party daemons, do not properly configure auditing "
 "for user login sessions."
 msgstr ""
+"审计机制中存在一些已知的限制，例如并不是所有与安全有关的系统事件都可以审计，另外某些登录机制，例如基于 <application>Xorg</"
+"application> 显示管理器，以及第三方服务的登录机制，都不会在用户的登录会话中正确配置审计。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:69
+#, fuzzy
 msgid ""
 "The security event auditing facility is able to generate very detailed logs "
 "of system activity. On a busy system, trail file data can be very large when "
@@ -130,6 +134,9 @@ msgid ""
 "that other file systems are not affected if the audit file system becomes "
 "full."
 msgstr ""
+"安全审计机制能够对系统活动生成非常详细的记录信息。在繁忙的系统中，记帐数据如果配置不当会非常的大，并在一周内迅速超过几个 GB "
+"的尺寸。管理员应考虑审计配置中的导致磁盘空间需求的这些问题。例如，可能需要为 <filename>/var/audit</filename> "
+"目录单独分配一个文件系统， 以防止在审计日志所用的文件系统被填满时影响其它文件系统。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/audit/_index.adoc:72
@@ -173,12 +180,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:80
+#, fuzzy
 msgid ""
 "_trail_: a log file consisting of a series of audit records describing "
 "security events. Trails are in roughly chronological order with respect to "
 "the time events completed. Only authorized processes are allowed to commit "
 "records to the audit trail."
 msgstr ""
+"<emphasis>账目 (trail)</emphasis>：审计账目，或日志文件，包含了一系列描述安全事件的审计记录。典型情况下，审计账目基本上是以事"
+"件发生的时间顺序记录的。只有获得授权的进程，才能够向审计账目中提交记录。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:81
@@ -189,6 +199,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:82
+#, fuzzy
 msgid ""
 "_preselection_: the process by which the system identifies which events are "
 "of interest to the administrator. The preselection configuration uses a "
@@ -196,9 +207,13 @@ msgid ""
 "for which users, as well as global settings that apply to both authenticated "
 "and unauthenticated processes."
 msgstr ""
+"<emphasis>预选 "
+"(preselection)</emphasis>：系统通过这一过程来识别事件是否是管理员所感兴趣的，从而避免为他们不感兴趣的事件生成记录。 "
+"预选配置使用一系列选择表达式，用以识别事件类别、 要审计的用户，以及适用于验证过用户身份，以及未验证用户身份的进程的全局配置。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:83
+#, fuzzy
 msgid ""
 "_reduction_: the process by which records from existing audit trails are "
 "selected for preservation, printing, or analysis. Likewise, the process by "
@@ -208,6 +223,9 @@ msgid ""
 "but after that, trails might be reduced in order to preserve only login "
 "information for archival purposes."
 msgstr ""
+"<emphasis>浓缩 (reduction)</emphasis>：从现有的审计记帐中筛选出用于保留、打印或分析的过程。 "
+"除此之外，它也表示从审计记帐中删去不需要的审计记录的过程。 通过使用浓缩操作，管理员可以实现预留审计数据的策略。 "
+"例如，详细的审计记帐信息，可能会保留一个月之久，但在这之后，则对这些记帐信息执行浓缩操作，只保留登录信息用于存档。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/audit/_index.adoc:85
@@ -226,9 +244,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:92
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "auditd_enable=\"YES\"\n"
-msgstr ""
+msgstr "auditd_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:95
@@ -250,9 +268,9 @@ msgstr "如果您使用的是定制内核， 就必须在内核配置文件中�
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:106
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "options\tAUDIT\n"
-msgstr ""
+msgstr "options\tAUDIT\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/audit/_index.adoc:108
@@ -381,10 +399,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:204
+#, fuzzy
 msgid ""
 "These audit event classes may be customized by modifying the "
 "[.filename]#audit_class# and [.filename]#audit_event# configuration files."
 msgstr ""
+"这些审计事件， 可以通过修改 <filename>audit_class</filename> 和 <filename>audit_event</"
+"filename> 这两个配置文件来进行定制。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:206
@@ -440,9 +461,9 @@ msgstr "下面例子中的筛选字符串表示筛选成功和失败的登录/�
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:237
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "lo,+ex\n"
-msgstr ""
+msgstr "lo,+ex\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/audit/_index.adoc:239
@@ -452,37 +473,44 @@ msgstr "配置文件"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:242
+#, fuzzy
 msgid ""
 "The following configuration files for security event auditing are found in "
 "[.filename]#/etc/security#:"
-msgstr ""
+msgstr "所有用于安全审计的配置文件，都放在 <filename>/etc/security</filename>："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:244
+#, fuzzy
 msgid "[.filename]#audit_class#: contains the definitions of the audit classes."
-msgstr ""
+msgstr "<filename>audit_class</filename> - 包含对于审计类的定义。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:245
+#, fuzzy
 msgid ""
 "[.filename]#audit_control#: controls aspects of the audit subsystem, such as "
 "default audit classes, minimum disk space to leave on the audit log volume, "
 "and maximum audit trail size."
 msgstr ""
+"<filename>audit_control</filename> - 控制审计子系统的特性， 例如默认审计类、 在审计日志所在的卷上保留的最小空间、 "
+"审计日志的最大尺寸， 等等。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:246
+#, fuzzy
 msgid ""
 "[.filename]#audit_event#: textual names and descriptions of system audit "
 "events and a list of which classes each event is in."
-msgstr ""
+msgstr "<filename>audit_event</filename> - 文字化的系统审计事件名称和描述， 以及每个事件属于哪个类别。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:247
+#, fuzzy
 msgid ""
 "[.filename]#audit_user#: user-specific audit requirements to be combined "
 "with the global defaults at login."
-msgstr ""
+msgstr "<filename>audit_user</filename> - 针对特定用户的审计需求， 这些配置在登录时会与全局的默认值合并。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:248
@@ -502,12 +530,15 @@ msgstr "在编辑和维护审计配置文件时一定要小心， 因为配置�
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:256
+#, fuzzy
 msgid ""
 "In most cases, administrators will only need to modify "
 "[.filename]#audit_control# and [.filename]#audit_user#. The first file "
 "controls system-wide audit properties and policies and the second file may "
 "be used to fine-tune auditing by user."
 msgstr ""
+"多数情况下， 在配置审计系统时， 管理员只需修改两个文件： <filename>audit_control</filename> 和 "
+"<filename>audit_user</filename>。 前者控制系统级的审计属性和策略， 而后者则用于针对具体的用户来微调。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/audit/_index.adoc:258
@@ -517,14 +548,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:261
+#, fuzzy
 msgid ""
 "A number of defaults for the audit subsystem are specified in "
 "[.filename]#audit_control#:"
 msgstr ""
+"<filename>audit_control</filename> 文件指定了一系列用于审计子系统的默认设置。 通过查看这个文件， "
+"我们可以看到下面的内容："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:272
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "dir:/var/audit\n"
 "dist:off\n"
@@ -535,9 +569,18 @@ msgid ""
 "filesz:2M\n"
 "expire-after:10M\n"
 msgstr ""
+"dir:/var/audit\n"
+"dist:off\n"
+"flags:lo,aa\n"
+"minfree:5\n"
+"naflags:lo,aa\n"
+"policy:cnt,argv\n"
+"filesz:2M\n"
+"expire-after:10M\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:275
+#, fuzzy
 msgid ""
 "The `dir` entry is used to set one or more directories where audit logs will "
 "be stored. If more than one directory entry appears, they will be used in "
@@ -545,6 +588,8 @@ msgid ""
 "stored on a dedicated file system, in order to prevent interference between "
 "the audit subsystem and other subsystems if the file system fills."
 msgstr ""
+"这里的 <option>dir</option> 选项可以用来设置用于保存审计日志的一个或多个目录。 如果指定了多个目录， 则将在填满一个之后换用下一个。"
+" 一般而言， 审计通常都会配置为保存在一个专用的文件系统之下， 以避免审计系统与其它子系统在文件系统满的时候所产生的冲突。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:277
@@ -555,12 +600,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:279
+#, fuzzy
 msgid ""
 "The `flags` field sets the system-wide default preselection mask for "
 "attributable events. In the example above, successful and failed "
 "login/logout events as well as authentication and authorization are audited "
 "for all users."
 msgstr ""
+"<option>flags</option> 字段用于为有主事件配置系统级的预选条件。 在前面的例子中， 所有用户成功和失败的登录和注销都会被审计。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:281
@@ -571,11 +618,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:283
+#, fuzzy
 msgid ""
 "The `naflags` entry specifies audit classes to be audited for non-attributed "
 "events, such as the login/logout process and authentication and "
 "authorization."
-msgstr ""
+msgstr "<option>naflags</option> 选项表示审计类审计无主事件， 例如作为登录进程和系统服务的那些进程的事件。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:285
@@ -589,12 +637,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:287
+#, fuzzy
 msgid ""
 "The `filesz` entry specifies the maximum size for an audit trail before "
 "automatically terminating and rotating the trail file. A value of `0` "
 "disables automatic log rotation. If the requested file size is below the "
 "minimum of 512k, it will be ignored and a log message will be generated."
 msgstr ""
+"<option>filesz</option> 选项指明了审计日志在自动停止记录和翻转之前允许的最大尺寸。 默认值 0 表示禁用自动日志翻转。 "
+"如果配置的值不是零， 但小于最小值 512k， 则这个配置会被忽略， 并在日志中记录这一消息。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:289
@@ -631,11 +682,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:301
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "root:lo,+ex:no\n"
 "www:fc,+ex:no\n"
 msgstr ""
+"root:lo,+ex:no\n"
+"www:fc,+ex:no\n"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/audit/_index.adoc:304
@@ -645,6 +698,7 @@ msgstr "管理审计子系统"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:307
+#, fuzzy
 msgid ""
 "Since audit trails are stored in the BSM binary format, several built-in "
 "tools are available to modify or convert these trails to text. To convert "
@@ -654,6 +708,12 @@ msgid ""
 "including event type, event class, user, date or time of the event, and the "
 "file path or object acted on."
 msgstr ""
+"审计记帐是以 BSM 二进制格式保存的， 因此必须使用工具来对其进行修改， 或将其转换为文本。 <citerefentry><refentrytitle>"
+"praudit</refentrytitle><manvolnum>1</manvolnum></citerefentry> "
+"命令能够将记帐文件转换为简单的文本格式； 而 <citerefentry><refentrytitle>auditreduce</refentrytitl"
+"e><manvolnum>1</manvolnum></citerefentry> 命令则可以为分析、 存档或打印目的来压缩审计日志文件。 "
+"<command>auditreduce</command> 支持一系列筛选参数， 包括事件类型、 事件类、 用户、 事件的日期和时间， "
+"以及文件路径或操作对象。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:309
@@ -684,7 +744,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:328
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "header,133,10,execve(2),0,Mon Sep 25 15:58:03 2006, + 384 msec\n"
 "exec arg,finger,doug\n"
@@ -694,6 +754,13 @@ msgid ""
 "return,success,0\n"
 "trailer,133\n"
 msgstr ""
+"header,133,10,execve(2),0,Mon Sep 25 15:58:03 2006, + 384 msec\n"
+"exec arg,finger,doug\n"
+"path,/usr/bin/finger\n"
+"attribute,555,root,wheel,90,24918,104944\n"
+"subject,robert,root,wheel,root,wheel,38439,38032,42086,128.232.9.100\n"
+"return,success,0\n"
+"trailer,133\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:331
@@ -779,9 +846,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:357
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "add path 'auditpipe*' mode 0440 group audit\n"
-msgstr ""
+msgstr "add path 'auditpipe*' mode 0440 group audit\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:360
@@ -792,6 +859,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:365
+#, fuzzy
 msgid ""
 "It is easy to produce audit event feedback cycles, in which the viewing of "
 "each audit event results in the generation of more audit events. For "
@@ -801,6 +869,11 @@ msgid ""
 "reason, it is advisable to run `praudit` on an audit pipe device from "
 "sessions without fine-grained I/O auditing."
 msgstr ""
+"很容易配置出审计事件反馈循环， 也就是查看事件的操作本身会产生更多的事件。 例如， 如果所有的网络 <acronym>I/O</acronym> "
+"均被审计， 又在 SSH 会话中执行 <citerefentry><refentrytitle>praudit</refentrytitle><manvo"
+"lnum>1</manvolnum></citerefentry>， 就会以很高的速率产生持续的审计事件流， 因为每显示一个事件都会产生新的事件。 "
+"建议您在需要在审计管道设备上执行 <command>praudit</command> 时， 选择一个没有进行细粒度 <acronym>I/O</"
+"acronym> 审计的会话来运行。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/audit/_index.adoc:367
@@ -836,21 +909,26 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:379
+#, fuzzy
 msgid ""
 "Adding the following line to [.filename]#/etc/crontab# will schedule this "
 "rotation every twelve hours:"
 msgstr ""
+"在 <filename>/etc/crontab</filename> 加入如下设置， 将使 "
+"<citerefentry><refentrytitle>cron</refentrytitle><manvolnum>8</manvolnum></"
+"citerefentry> 每十二小时将日志轮转一次："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:383
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "0     */12       *       *       *       root    /usr/sbin/audit -n\n"
-msgstr ""
+msgstr "0     */12       *       *       *       root    /usr/sbin/audit -n\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:386
+#, fuzzy
 msgid "The change will take effect once [.filename]#/etc/crontab# is saved."
-msgstr ""
+msgstr "这些修改会在您保存 <filename>/etc/crontab</filename> 后生效。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:388
@@ -862,6 +940,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:390
+#, fuzzy
 msgid ""
 "As audit trail files can become very large, it is often desirable to "
 "compress or otherwise archive trails once they have been closed by the audit "
@@ -871,10 +950,13 @@ msgid ""
 "following may be added to [.filename]#/etc/security/audit_warn# to compress "
 "audit trails on close:"
 msgstr ""
+"由于审计记帐文件会变得很大， 通常会希望在审计服务关闭它时， 对其进行压缩或归档。 <filename>audit_warn</filename> "
+"脚本可以用来在一系列与审计有关的事件发生时， 执行一些用户定义的操作， 这也包括在审计记帐翻转时进行清理操作。 举例而言， 可以在 <filename>/"
+"etc/security/audit_warn</filename> 脚本中加入下列内容来在审计记帐关闭时压缩它："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:399
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "#\n"
 "# Compress audit trail files on close.\n"
@@ -883,6 +965,12 @@ msgid ""
 "        gzip -9 $2\n"
 "fi\n"
 msgstr ""
+"#\n"
+"# Compress audit trail files on close.\n"
+"#\n"
+"if [ \"$1\" = closefile ]; then\n"
+"        gzip -9 $2\n"
+"fi\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:401
