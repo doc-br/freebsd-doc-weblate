@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-05 12:39+0000\n"
+"PO-Revision-Date: 2021-04-12 20:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/booksarch-handbookscsichapter/zh_CN/>\n"
@@ -46,8 +46,11 @@ msgstr "本文档假定读者对FreeBSD的设备驱动程序和SCSI协议有大�
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:38
+#, fuzzy
 msgid "ncr ([.filename]#/sys/pci/ncr.c#) by Wolfgang Stanglmeier and Stefan Esser"
 msgstr ""
+"ncr (<filename>/sys/pci/ncr.c</filename>) by Wolfgang Stanglmeier and Stefan "
+"Esser"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:39
@@ -56,17 +59,23 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:40
+#, fuzzy
 msgid "aic7xxx ([.filename]#/sys/dev/aic7xxx/aic7xxx.c#) by Justin T. Gibbs"
 msgstr ""
+"aic7xxx (<filename>/sys/dev/aic7xxx/aic7xxx.c</filename>) by Justin T. Gibbs"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:42
+#, fuzzy
 msgid ""
 "and from the CAM code itself (by Justin T. Gibbs, see "
 "[.filename]#/sys/cam/*#). When some solution looked the most logical and was "
 "essentially verbatim extracted from the code by Justin T. Gibbs, I marked it "
 "as \"recommended\"."
 msgstr ""
+"和从CAM的代码本身（作者 Justin T. Gibbs，见<filename>/sys/cam/"
+"*</filename>）中摘录。当一些解决方法看起来极具逻辑性，并且基本上是从 Justin T. Gibbs "
+"的代码中一字不差地摘录时，我将其标记为<quote>recommended</quote>。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:44
@@ -163,6 +172,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:70
+#, fuzzy
 msgid ""
 "The first thing each SIM driver must do is register itself with the CAM "
 "subsystem. This is done during the driver's `xxx_attach()` function (here "
@@ -170,6 +180,9 @@ msgid ""
 "`xxx_attach()` function itself is called by the system bus "
 "auto-configuration code which we do not describe here."
 msgstr ""
+"每个SIM驱动程序必须做的第一件事情是向CAM子系统注册它自己。这在驱动程序的<function>xxx_attach()</function>函数（此处"
+"和以后的xxx_用于指带唯一的驱动程序名字前缀）期间完成。<function>xxx_attach()</function>函数自身由系统总线自动配置代码"
+"调用，我们在此不描述这部分代码。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:72
@@ -195,17 +208,21 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:83
+#, fuzzy
 msgid ""
 "Here `SIZE` is the size of the queue to be allocated, maximal number of "
 "requests it could contain. It is the number of requests that the SIM driver "
 "can handle in parallel on one SCSI card. Commonly it can be calculated as:"
 msgstr ""
+"此处 <literal>SIZE</literal> 为要分配的队列的大小，它能包含的最大请求数目。 它是 SIM驱动程序在 SCSI "
+"卡上能够并行处理的请求的数目。一般可以如下估算："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:87
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "SIZE = NUMBER_OF_SUPPORTED_TARGETS * MAX_SIMULTANEOUS_COMMANDS_PER_TARGET\n"
 msgstr ""
+"SIZE = NUMBER_OF_SUPPORTED_TARGETS * MAX_SIMULTANEOUS_COMMANDS_PER_TARGET\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:90
@@ -220,7 +237,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:101
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "    if(( sim = cam_sim_alloc(action_func, poll_func, driver_name,\n"
 "            softc, unit, mtx, max_dev_transactions,\n"
@@ -229,6 +246,14 @@ msgid ""
 "        error; /* some code to handle the error */\n"
 "    }\n"
 msgstr ""
+"    struct cam_sim *sim;\n"
+"\n"
+"    if(( sim = cam_sim_alloc(action_func, poll_func, driver_name,\n"
+"            softc, unit, mtx, max_dev_transactions,\n"
+"            max_tagged_dev_transactions, devq) )==NULL) {\n"
+"        cam_simq_free(devq);\n"
+"        error; /* some code to handle the error */\n"
+"    }\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:104
@@ -349,13 +374,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:142
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "    if(xpt_bus_register(sim, softc, bus_number) != CAM_SUCCESS) {\n"
 "        cam_sim_free(sim, /*free_devq*/ TRUE);\n"
 "        error; /* some code to handle the error */\n"
 "    }\n"
 msgstr ""
+"    if(xpt_bus_register(sim, softc, bus_number) != CAM_SUCCESS) {\n"
+"        cam_sim_free(sim, /*free_devq*/ TRUE);\n"
+"        error; /* some code to handle the error */\n"
+"    }\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:145
@@ -388,6 +417,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:151
+#, fuzzy
 msgid ""
 "A typical example of such an event is a device reset. Each transaction and "
 "event identifies the devices to which it applies by the means of "
@@ -402,6 +432,11 @@ msgid ""
 "bus. So we can create the path for the future bus reset events in advance "
 "and avoid problems with the future memory shortage:"
 msgstr ""
+"这种事件的一个典型例子就是设备复位。每个事务和事件以 <quote>path</quote>的方式区分它们所作用的设备。目标特定的事件 "
+"通常在与设备进行事务处理期间发生。因此那个事务的路径可以被重用 来报告此事件（这是安全的，因为事件路径的拷贝是在事件报告例程中进行的， "
+"而且既不会被deallocate也不作进一步传递）。在任何时刻，包括中断例程中， 动态分配路径也是安全的，尽管那样会导致某些额外开销，并且这种方法 "
+"可能存在的一个问题是碰巧那时可能没有空闲内存。对于总线复位事件， 我们需要定义包括总线上所有设备在内的通配符路径。这样我们就能提前为 "
+"以后的总线复位事件创建路径，避免以后内存不足的问题："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:155
@@ -525,6 +560,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:205
+#, fuzzy
 msgid ""
 "Do some action on request of the CAM subsystem. Sim describes the SIM for "
 "the request, CCB is the request itself. CCB stands for \"CAM Control "
@@ -532,14 +568,20 @@ msgid ""
 "for some type of transactions. All of these instances share the CCB header "
 "where the common part of arguments is stored."
 msgstr ""
+"响应CAM子系统的请求采取某些动作。Sim描述了请求的SIM，CCB为 请求本身。CCB代表<quote>CAM Control "
+"Block</quote>。它是很多特定 实例的联合，每个实例为某些类型的事务描述参量。所有这些实例共享 "
+"存储着参量公共部分的CCB头部。（译注：这一段不很准确，请自行参考原文）"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:207
+#, fuzzy
 msgid ""
 "CAM supports the SCSI controllers working in both initiator (\"normal\") "
 "mode and target (simulating a SCSI device) mode. Here we only consider the "
 "part relevant to the initiator mode."
 msgstr ""
+"CAM既支持SCSI控制器工作于发起者(initiator)(<quote>normal</quote>) "
+"模式，也支持SCSI控制器工作于目标(target)（模拟SCSI设备）模式。这儿 我们只考虑与发起者模式有关的部分。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:209
@@ -577,10 +619,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:217
+#, fuzzy
 msgid ""
 "To identify the device, `xxx_action()` can get the unit number and pointer "
 "to its structure softc using these functions."
-msgstr ""
+msgstr "为了识别设备，<function>xxx_action()</function>可以使用这些 函数得到单元号和指向它的softc结构的指针。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:219
@@ -623,6 +666,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:240
+#, fuzzy
 msgid ""
 "`xpt_done()` does not have to be called from `xxx_action()`: For example an "
 "I/O request may be enqueued inside the SIM driver and/or its SCSI "
@@ -630,6 +674,10 @@ msgid ""
 "processing of this request is complete `xpt_done()` may be called from the "
 "interrupt handling routine."
 msgstr ""
+"<function>xpt_done()</function>不必从 <function>xxx_action()</function>中调用：例如I/"
+"O请求可以在SIM驱动程序 和/或它的SCSI控制器中排队。（译注：它指I/O请求？） "
+"然后，当设备传递(post)一个中断信号，指示对此请求的处理已结束时， "
+"<function>xpt_done()</function>可以从中断处理例程中被调用。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:242
@@ -648,6 +696,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:244
+#, fuzzy
 msgid ""
 "_CAM_DEV_QFRZN_ - if the SIM driver gets a serious error (for example, the "
 "device does not respond to the selection or breaks the SCSI protocol) when "
@@ -657,9 +706,14 @@ msgid ""
 "troublesome CCB and call `xpt_done()`. This flag causes the CAM subsystem to "
 "unfreeze the queue after it handles the error."
 msgstr ""
+"<emphasis>CAM_DEV_QFRZN</emphasis> - 当处理CCB时， 如果SIM驱动程序得到一个严重错误（例如，"
+"驱动程序不能响应选择或违反 了SCSI协议），它应当调用<function>xpt_freeze_simq()</function>冻结 "
+"请求队列，把此设备的其他已入队但尚未被处理的CCB返回到CAM队列， 然后为有问题的CCB设置这个旗标并调用 "
+"<function>xpt_done()</function>。这个旗标会使得CAM子系统处理错误后 解冻队列。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:245
+#, fuzzy
 msgid ""
 "_CAM_AUTOSNS_VALID_ - if the device returned an error condition and the flag "
 "CAM_DIS_AUTOSENSE is not set in CCB the SIM driver must execute the REQUEST "
@@ -667,6 +721,9 @@ msgid ""
 "information) data from the device. If this attempt was successful the sense "
 "data should be saved in the CCB and this flag set."
 msgstr ""
+"<emphasis>CAM_AUTOSNS_VALID</emphasis> - 如果设备 "
+"返回错误条件，且CCB中未设置旗标CAM_DIS_AUTOSENSE，SIM驱动程序 必须自动执行REQUEST "
+"SENSE命令来从设备抽取sense（扩展错误信息） 数据。如果这个尝试成功，sense数据应当被保存在CCB中且设置此旗标。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:246
@@ -695,6 +752,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:250
+#, fuzzy
 msgid ""
 "The function `xxx_action()` is not allowed to sleep, so all the "
 "synchronization for resource access must be done using SIM or device queue "
@@ -702,6 +760,9 @@ msgid ""
 "functions `xpt_release_simq()` and `xpt_release_devq()` to unfreeze the "
 "queues directly, without passing a CCB to CAM."
 msgstr ""
+"函数<function>xxx_action()</function>不允许睡眠，因此对资源 "
+"访问的所有同步必须通过冻结SIM或设备队列来完成。除了前述的旗标外， CAM子系统提供了函数<function>xpt_release_simq()</"
+"function>和 <function>xpt_release_devq()</function>来直接解冻队列，而不必将 CCB传递到CAM。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:252
@@ -737,6 +798,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:259
+#, fuzzy
 msgid ""
 "_flags_ - various bits of information about the request spriv_ptr0, "
 "spriv_ptr1 - fields reserved for private use by the SIM driver (such as "
@@ -746,7 +808,7 @@ msgid ""
 "sim_priv.entries[0].bytes and sim_priv.entries[1].bytes are byte arrays of "
 "the size consistent with the other incarnations of the union and "
 "sim_priv.bytes is one array, twice bigger."
-msgstr ""
+msgstr "<emphasis>flags</emphasis> - 有关请求的各个 信息位"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:261
@@ -758,11 +820,13 @@ msgstr "使用CCB的SIM私有字段的建议方法是为它们定义一些有意
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:266
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "#define ccb_some_meaningful_name    sim_priv.entries[0].bytes\n"
 "#define ccb_hcb spriv_ptr1 /* for hardware control block */\n"
 msgstr ""
+"#define ccb_some_meaningful_name    sim_priv.entries[0].bytes\n"
+"#define ccb_hcb spriv_ptr1 /* for hardware control block */\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:269
@@ -823,6 +887,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:282
+#, fuzzy
 msgid ""
 "_sense_len_ - the length of that buffer (if it happens to be higher than "
 "size of sense_data the SIM driver must silently assume the smaller value) "
@@ -833,6 +898,8 @@ msgid ""
 "buffer) an approximate value will do as well. For a successfully completed "
 "transfer they must be set to zero."
 msgstr ""
+"<emphasis>sense_len</emphasis> - 缓冲区的长度（如果碰巧大于sense_data的大小，SIM驱动程序必须 "
+"悄悄地采用较小值）（译注：一点改动，参考原文及代码）"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:283
@@ -856,15 +923,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:288
+#, fuzzy
 msgid "  The general logic of handling this request is the following:"
-msgstr ""
+msgstr "  处理请求的通常逻辑如下："
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:290
+#, fuzzy
 msgid ""
 "  The first thing to do is to check for possible races, to make sure that "
 "the command did not get aborted when it was sitting in the queue:"
-msgstr ""
+msgstr "  要做的第一件事情是检查可能的竞争条件，确保命令位于队列中时 不会被中止："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:294
@@ -884,12 +953,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:302
+#, fuzzy
 msgid "  Also we check that the device is supported at all by our controller:"
-msgstr ""
+msgstr "  我们也检查我们的控制器完全支持设备："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:316
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "    if(ccb_h->target_id > OUR_MAX_SUPPORTED_TARGET_ID\n"
 "    || cch_h->target_id == OUR_SCSI_CONTROLLERS_OWN_ID) {\n"
@@ -903,9 +973,21 @@ msgid ""
 "        return;\n"
 "    }\n"
 msgstr ""
+"    if(ccb_h-&gt;target_id &gt; OUR_MAX_SUPPORTED_TARGET_ID\n"
+"    || cch_h-&gt;target_id == OUR_SCSI_CONTROLLERS_OWN_ID) {\n"
+"        ccb_h-&gt;status = CAM_TID_INVALID;\n"
+"        xpt_done(ccb);\n"
+"        return;\n"
+"    }\n"
+"    if(ccb_h-&gt;target_lun &gt; OUR_MAX_SUPPORTED_LUN) {\n"
+"        ccb_h-&gt;status = CAM_LUN_INVALID;\n"
+"        xpt_done(ccb);\n"
+"        return;\n"
+"    }\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:319
+#, fuzzy
 msgid ""
 "  Then allocate whatever data structures (such as card-dependent hardware "
 "control block) we need to process this request. If we can not then freeze "
@@ -915,6 +997,9 @@ msgid ""
 "`CAM_SIMQ_RELEASE` bit set in its status. Otherwise, if all went well, link "
 "the CCB with the hardware control block (HCB) and mark it as queued."
 msgstr ""
+"  然后分配我们处理请求所需的数据结构（如卡相关的硬件控制块等）。 如果我们不能分配则冻结SIM队列，记录下我们有一个挂起的操作，返回 "
+"CCB，请求CAM将CCB重新入队。以后当资源可用时，必须通过返回其 状态中设置 <literal>CAM_SIMQ_RELEASE</literal> "
+"位的ccb来解冻SIM队列。否则，如果所有 正常，则将CCB与硬件控制块（HCB）链接，并将其标志为已入队。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:323
@@ -945,6 +1030,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:337
+#, fuzzy
 msgid ""
 "  Extract the target data from CCB into the hardware control block. Check if "
 "we are asked to assign a tag and if yes then generate an unique tag and "
@@ -952,10 +1038,12 @@ msgid ""
 "negotiations with the devices to set the maximal mutually supported bus "
 "width, synchronous rate and offset."
 msgstr ""
+"  从CCB中提取目标数据到硬件控制块。检查是否要求我们分配一个 标签，如果是则产生一个唯一的标签并构造SCSI标签信息。SIM驱动程序 "
+"也负责与设备协商设定彼此支持的最大总线宽度、同步速率和偏移。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:346
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "    hcb->target = ccb_h->target_id; hcb->lun = ccb_h->target_lun;\n"
 "    generate_identify_message(hcb);\n"
@@ -964,6 +1052,13 @@ msgid ""
 "    if( !target_negotiated(hcb) )\n"
 "        generate_negotiation_messages(hcb);\n"
 msgstr ""
+"    hcb-&gt;target = ccb_h-&gt;target_id; hcb-&gt;lun = ccb_h-&gt;target_lun;"
+"\n"
+"    generate_identify_message(hcb);\n"
+"    if( ccb_h-&gt;tag_action != CAM_TAG_ACTION_NONE )\n"
+"        generate_unique_tag_message(hcb, ccb_h-&gt;tag_action);\n"
+"    if( !target_negotiated(hcb) )\n"
+"        generate_negotiation_messages(hcb);\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:349
@@ -1007,12 +1102,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:371
+#, fuzzy
 msgid ""
 "  Now it is time to set up the data. Again, the data storage may be "
 "specified in the CCB in many interesting ways, specified by the CCB "
 "flags. First we get the direction of the data transfer. The simplest case is "
 "if there is no data to transfer:"
 msgstr ""
+"  现在是设置数据的时候了，又一次，可以在CCB中以多种有趣的方式 指定数据存储，这些方式由CCB中的旗标指定。首先我们得到数据传输的 "
+"方向。最简单的情况是没有数据需要传输的情况："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:375
@@ -1030,6 +1128,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:381
+#, fuzzy
 msgid ""
 "  Then we check if the data is in one chunk or in a scatter-gather list, and "
 "the addresses are physical or virtual. The SCSI controller may be able to "
@@ -1045,6 +1144,11 @@ msgid ""
 "least the case for a single non-scattered virtual buffer must be "
 "implemented, it is actively used by CAM."
 msgstr ""
+"  然后我们检查数据在一个chunk中还是在分散/集中列表中，并且是 物理地址还是虚地址。SCSI控制器可能只能处理有限数目有限长度的 "
+"大块。如果请求到达到这个限制我们就返回错误。我们使用一个特殊 函数返回CCB，并在一个地方处理HCB资源短缺。增加chunk的函数是 "
+"驱动程序相关的，此处我们不进入它们的详细实现。对于地址翻译问题 的细节可以参看SCSI命令(CDB)处理的描述。如果某些变体对于特定的卡 "
+"太困难或不可能实现，返回状态 <errorname>CAM_REQ_INVALID</errorname> 是可以的。实际上， "
+"现在的CAM代码中似乎哪儿也没有使用分散/集中能力。但至少必须实现 单个非分散虚拟缓冲区的情况，CAM中这种情况用得很多。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:385
@@ -1118,10 +1222,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:435
+#, fuzzy
 msgid ""
 "  If disconnection is disabled for this CCB we pass this information to the "
 "hcb:"
-msgstr ""
+msgstr "  如果这个CCB不允许断开连接，我们就传递这个信息到hcb："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:440
@@ -1133,34 +1238,44 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:443
+#, fuzzy
 msgid ""
 "  If the controller is able to run REQUEST SENSE command all by itself then "
 "the value of the flag CAM_DIS_AUTOSENSE should also be passed to it, to "
 "prevent automatic REQUEST SENSE if the CAM subsystem does not want it."
 msgstr ""
+"  如果控制器能够完全自己运行REQUEST SENSE命令，则也应当将旗标 CAM_DIS_AUTOSENSE的值传递给它，"
+"这样可以在CAM子系统不想REQUEST SENSE 时阻止自动REQUEST SENSE。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:445
+#, fuzzy
 msgid ""
 "  The only thing left is to set up the timeout, pass our hcb to the hardware "
 "and return, the rest will be done by the interrupt handler (or timeout "
 "handler)."
-msgstr ""
+msgstr "  剩下的唯一事情是设置超时，将我们的hcb传递给硬件并返回，余下的 由中断处理函数（或超时处理函数）完成。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:452
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "    ccb_h->timeout_ch = timeout(xxx_timeout, (caddr_t) hcb,\n"
 "        (ccb_h->timeout * hz) / 1000); /* convert milliseconds to ticks */\n"
 "    put_hcb_into_hardware_queue(hcb);\n"
 "    return;\n"
 msgstr ""
+"    ccb_h-&gt;timeout_ch = timeout(xxx_timeout, (caddr_t) hcb,\n"
+"        (ccb_h-&gt;timeout * hz) / 1000); /* convert milliseconds to ticks */"
+"\n"
+"    put_hcb_into_hardware_queue(hcb);\n"
+"    return;\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:455
+#, fuzzy
 msgid "  And here is a possible implementation of the function returning CCB:"
-msgstr ""
+msgstr "  这儿是返回CCB的函数的一个可能实现："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:462
@@ -1200,6 +1315,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:482
+#, fuzzy
 msgid ""
 "  There is no data transferred in CCB except the header and the most "
 "interesting argument of it is target_id. Depending on the controller "
@@ -1211,14 +1327,19 @@ msgid ""
 "the disconnected transactions for this target must be aborted (probably in "
 "the interrupt routine)."
 msgstr ""
+"  除了头部外CCB中没有数据传输，其中最让人感兴趣的参量为target_id。 依赖于控制器硬件，硬件控制块就像XPT_SCSI_IO请求中那样被创建 "
+"（参看XPT_SCSI_IO请求的描述）并被发送到控制器，或者立即编程让SCSI 控制器发送RESET消息到设备，或者这个请求可能只是不被支持 （"
+"并返回状态 <errorname>CAM_REQ_INVALID</errorname>）。而且请求完成时，目标的所有已断开 "
+"连接(disconnected)的事务必须被中止（可能在中断例程中）。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:484
+#, fuzzy
 msgid ""
 "  Also all the current negotiations for the target are lost on reset, so "
 "they might be cleaned too. Or they clearing may be deferred, because anyway "
 "the target would request re-negotiation on the next transaction."
-msgstr ""
+msgstr "  而且目标的所有当前协商在复位时会丢失，因此它们也可能被清除。 或者清除可能被延迟，因为不管怎样目标将会在下一次事务时请求重新协商。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:485
@@ -1227,26 +1348,31 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:487
+#, fuzzy
 msgid ""
 "  No arguments are passed in the CCB, the only interesting argument is the "
 "SCSI bus indicated by the struct sim pointer."
-msgstr ""
+msgstr "  CCB中并不传递参量，唯一感兴趣的参量是由指向结构sim的指针标识 的SCSI总线。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:489
+#, fuzzy
 msgid ""
 "  A minimalistic implementation would forget the SCSI negotiations for all "
 "the devices on the bus and return the status CAM_REQ_CMP."
-msgstr ""
+msgstr "  最小实现会忘记总线上所有设备的SCSI协商，并返回状态 CAM_REQ_CMP。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:491
+#, fuzzy
 msgid ""
 "  The proper implementation would in addition actually reset the SCSI bus "
 "(possible also reset the SCSI controller) and mark all the CCBs being "
 "processed, both those in the hardware queue and those being disconnected, as "
 "done with the status CAM_SCSI_BUS_RESET. Like:"
 msgstr ""
+"  恰当的实现实际上会另外复位SCSI总线（可能也复位SCSI控制器）并 将所有在硬件队列中的和断开连接的那些正被处理的CCB的完成状态标记为 "
+"CAM_SCSI_BUS_RESET。像这样："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:498
@@ -1346,11 +1472,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:545
+#, fuzzy
 msgid ""
 "  Implementing the SCSI bus reset as a function may be a good idea because "
 "it would be re-used by the timeout function as a last resort if the things "
 "go wrong."
-msgstr ""
+msgstr "  将SCSI总线复位作为函数来实现可能是个好主意，因为如果事情出了差错， 它会被超时函数作为最后的报告来重用。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:546
@@ -1371,18 +1498,20 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:552
+#, fuzzy
 msgid ""
 "  If the abort is not supported just return the status CAM_UA_ABORT. This is "
 "also the easy way to minimally implement this call, return CAM_UA_ABORT in "
 "any case."
-msgstr ""
+msgstr "  如果不支持中断就返回CAM_UA_ABORT。这也是最小化实现这个调用的 简易方式，任何情况下都返回CAM_UA_ABORT。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:554
+#, fuzzy
 msgid ""
 "  The hard way is to implement this request honestly. First check that abort "
 "applies to a SCSI transaction:"
-msgstr ""
+msgstr "  困难方式则是真正地实现这个请求。首先检查应用到SCSI事务的中止："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:559
@@ -1405,11 +1534,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:569
+#, fuzzy
 msgid ""
 "  Then it is necessary to find this CCB in our queue. This can be done by "
 "walking the list of all our hardware control blocks in search for one "
 "associated with this CCB:"
-msgstr ""
+msgstr "  然后需要在我们的队列中找到这个CCB。这可以通过遍历我们所有硬件 控制块列表，查找与这个CCB关联的控制块来完成："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:573
@@ -1459,6 +1589,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:598
+#, fuzzy
 msgid ""
 "  Now we look at the current processing status of the HCB. It may be either "
 "sitting in the queue waiting to be sent to the SCSI bus, being transferred "
@@ -1468,6 +1599,9 @@ msgid ""
 "being aborted, so that if this HCB is about to be sent to the SCSI bus the "
 "SCSI controller will see this flag and skip it."
 msgstr ""
+"  现在我们来看一下HCB当前的处理状态。它可能或呆在队列中正等待 被发送到SCSI总线，或此时正在传输中，或已断开连接并等待命令结果， "
+"或者实际上已由硬件完成但尚未被软件标记为完成。为了确保我们不会 与硬件产生竞争条件，我们将HCB标记为中止(aborted)，这样如果这个 "
+"HCB要被发送到SCSI总线的话，SCSI控制器将会看到这个旗标并跳过它。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:602
@@ -1523,7 +1657,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:638
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "    case HCB_BEING_TRANSFERRED:\n"
 "        untimeout(xxx_timeout, (caddr_t) hcb, "
@@ -1540,6 +1674,22 @@ msgid ""
 "            goto abort_again;\n"
 "        }\n"
 msgstr ""
+"    case HCB_BEING_TRANSFERRED:\n"
+"        untimeout(xxx_timeout, (caddr_t) hcb, abort_ccb-&gt;ccb_h."
+"timeout_ch);\n"
+"        abort_ccb-&gt;ccb_h.timeout_ch =\n"
+"            timeout(xxx_timeout, (caddr_t) hcb, 10 * hz);\n"
+"        abort_ccb-&gt;ccb_h.status = CAM_REQ_ABORTED;\n"
+"        /* ask the controller to abort that HCB, then generate\n"
+"         * an interrupt and stop\n"
+"         */\n"
+"        if(signal_hardware_to_abort_hcb_and_stop(hcb) &lt; 0) {\n"
+"            /* oops, we missed the race with hardware, this transaction\n"
+"             * got off the bus before we aborted it, try again */\n"
+"            goto abort_again;\n"
+"        }\n"
+"\n"
+"        break;\n"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:640
@@ -1549,15 +1699,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:643
+#, fuzzy
 msgid ""
 "  If the CCB is in the list of disconnected then set it up as an abort "
 "request and re-queue it at the front of hardware queue. Reset the timeout "
 "and report the abort request to be completed."
-msgstr ""
+msgstr "  如果CCB位于断开连接的列表中，则将它设置为中止请求，并在硬件 队列的前端将它重新入队。复位超时，并报告中止请求完成。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:657
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "    case HCB_DISCONNECTED:\n"
 "        untimeout(xxx_timeout, (caddr_t) hcb, "
@@ -1572,6 +1723,18 @@ msgid ""
 "    xpt_done(ccb);\n"
 "    return;\n"
 msgstr ""
+"    case HCB_DISCONNECTED:\n"
+"        untimeout(xxx_timeout, (caddr_t) hcb, abort_ccb-&gt;ccb_h."
+"timeout_ch);\n"
+"        abort_ccb-&gt;ccb_h.timeout_ch =\n"
+"            timeout(xxx_timeout, (caddr_t) hcb, 10 * hz);\n"
+"        put_abort_message_into_hcb(hcb);\n"
+"        put_hcb_at_the_front_of_hardware_queue(hcb);\n"
+"        break;\n"
+"    }\n"
+"    ccb-&gt;ccb_h.status = CAM_REQ_CMP;\n"
+"    xpt_done(ccb);\n"
+"    return;\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:660
@@ -1584,6 +1747,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:662
+#, fuzzy
 msgid ""
 "  Implementing the CCB abort as a function may be quite a good idea, this "
 "function can be re-used if an I/O transaction times out. The only difference "
@@ -1591,6 +1755,8 @@ msgid ""
 "CAM_CMD_TIMEOUT for the timed out request. Then the case XPT_ABORT would be "
 "small, like that:"
 msgstr ""
+"  将CCB中止作为函数来实现可能是个很好的主意，因为如果I/O事务超时 这个函数能够被重用。唯一的不同是超时事务将为超时请求返回状态 "
+"CAM_CMD_TIMEOUT。于是XPT_ABORT的case语句就会很小，像下面这样："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:668
@@ -1690,14 +1856,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:702
+#, fuzzy
 msgid ""
 "_CCB_TRANS_USER_SETTINGS_ - remember the desired user values sync_period, "
 "sync_offset - self-explanatory, if sync_offset==0 then the asynchronous mode "
 "is requested bus_width - bus width, in bits (not bytes)"
-msgstr ""
+msgstr "<emphasis>CCB_TRANS_USER_SETTINGS</emphasis> - 记住希望的用户值"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:704
+#, fuzzy
 msgid ""
 "  Two sets of negotiated parameters are supported, the user settings and the "
 "current settings. The user settings are not really used much in the SIM "
@@ -1707,9 +1875,12 @@ msgid ""
 "SCSI controller does a negotiation it must never set the values higher than "
 "the user parameters, so it is essentially the top boundary."
 msgstr ""
+"  支持两组协商参数，用户设置和当前设置。用户设置在SIM驱动程序中 实际上用得不多，这通常只是一片内存，供上层存储（并在以后恢复）其关于 "
+"参数的一些主张。设置用户参数并不会导致重新协商传输速率。但当SCSI 控制器协商时，它必须永远不能设置高于用户参数的值，因此它实质上是 上限。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:706
+#, fuzzy
 msgid ""
 "  The current settings are, as the name says, current. Changing them means "
 "that the parameters must be re-negotiated on the next transfer. Again, these "
@@ -1720,20 +1891,25 @@ msgid ""
 "this parameter must be silently truncated to 8-bit transfers before sending "
 "it to the device."
 msgstr ""
+"  当前设置，正如其名字所示，指当前的。改变它们意味着下一次传输时 必须重新协商参数。又一次，这些<quote>new current "
+"settings</quote> 并没有被假定为强制用于设备上，它们只是用作协商的起始步骤。此外， "
+"它们必须受SCSI控制器的实际能力限制：例如，如果SCSI控制器有8位总线， 而请求要求设置16位传输，则在发送给设备前参数必须被悄悄地截取为8位。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:708
+#, fuzzy
 msgid ""
 "  One caveat is that the bus width and synchronous parameters are per target "
 "while the disconnection and tag enabling parameters are per lun."
-msgstr ""
+msgstr "  一个需要注意的问题就是总线宽度和同步两个参数是针对每目标的而言的， 而断开连接和启用标签两个参数是针对每lun而言的。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:710
+#, fuzzy
 msgid ""
 "  The recommended implementation is to keep 3 sets of negotiated (bus width "
 "and synchronous transfer) parameters:"
-msgstr ""
+msgstr "  建议的实现是保持3组协商参数（总线宽度和同步传输）："
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:712
@@ -1752,8 +1928,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:716
+#, fuzzy
 msgid "  The code looks like:"
-msgstr ""
+msgstr "  代码看起来像："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:722
@@ -1827,11 +2004,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:769
+#, fuzzy
 msgid ""
 "  Then when the next I/O request will be processed it will check if it has "
 "to re-negotiate, for example by calling the function "
 "target_negotiated(hcb). It can be implemented like this:"
 msgstr ""
+"  此后当下一次要处理I/O请求时，它会检查其是否需要重新协商， 例如通过调用函数target_negotiated(hcb)。它可以如下实现："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:777
@@ -1861,6 +2040,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:788
+#, fuzzy
 msgid ""
 "  After the values are re-negotiated the resulting values must be assigned "
 "to both current and goal parameters, so for future I/O transactions the "
@@ -1870,6 +2050,10 @@ msgid ""
 "the goal and current values must be initialized to the maximal values "
 "supported by controller."
 msgstr ""
+"  重新协商这些值后，结果值必须同时赋给当前和目的(goal)参数， 这样对于以后的I/O事务当前和目的参数将相同，且 "
+"<function>target_negotiated()</function>会返回TRUE。当初始化卡 "
+"（在<function>xxx_attach()</function>中）当前协商值必须被初始化为 "
+"最窄同步模式，目的和当前值必须被初始化为控制器所支持的最大值。 （译注：原文可能有误，此处未改）"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:790
@@ -1878,6 +2062,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:792
+#, fuzzy
 msgid ""
 "  This operations is the reverse of XPT_SET_TRAN_SETTINGS. Fill up the CCB "
 "instance \"struct ccb_trans_setting cts\" with data as requested by the "
@@ -1885,6 +2070,9 @@ msgid ""
 "then the existing drivers return the current settings). Set all the bits in "
 "the valid field."
 msgstr ""
+"  此操作为XPT_SET_TRAN_SETTINGS的逆操作。用通过旗标 "
+"CCB_TRANS_CURRENT_SETTINGS或CCB_TRANS_USER_SETTINGS（如果同时设置则 现有驱动程序返回当前设置）"
+"所请求而得的数据填充CCB实例 <quote>struct ccb_trans_setting cts</quote>."
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:794
@@ -1972,29 +2160,37 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:832
+#, fuzzy
 msgid ""
 "  This gives the general idea, the exact calculation depends on the quirks "
 "of the particular BIOS. If BIOS provides no way set the \"extended "
 "translation\" flag in EEPROM this flag should normally be assumed equal to "
 "1. Other popular geometries are:"
 msgstr ""
+"  这给出了一般思路，精确计算依赖于特定BIOS的癖好(quirk)。如果 BIOS没有提供方法设置EEPROM中的<quote>extended "
+"translation</quote> 旗标，则此旗标通常应当假定等于1。其他流行结构有："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:837
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "    128 heads, 63 sectors - Symbios controllers\n"
 "    16 heads, 63 sectors - old controllers\n"
 msgstr ""
+"    128 heads, 63 sectors - Symbios controllers\n"
+"    16 heads, 63 sectors - old controllers\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:840
+#, fuzzy
 msgid ""
 "  Some system BIOSes and SCSI BIOSes fight with each other with variable "
 "success, for example a combination of Symbios 875/895 SCSI and Phoenix BIOS "
 "can give geometry 128/63 after power up and 255/63 after a hard reset or "
 "soft reboot."
 msgstr ""
+"  一些系统BIOS和SCSI BIOS会相互竞争，胜负不定，例如Symbios 875/895 SCSI和Phoenix "
+"BIOS的结合在系统加电时会给出结构128/63， 而当冷启动或软启动后会是255/63。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:841
@@ -2169,8 +2365,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:874
+#, fuzzy
 msgid "  The recommended way of setting the string fields is using strncpy, like:"
-msgstr ""
+msgstr "  设置字符串字段的建议方法是使用strncpy，如："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:878
@@ -2180,10 +2377,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:881
+#, fuzzy
 msgid ""
 "  After setting the values set the status to CAM_REQ_CMP and mark the CCB as "
 "done."
-msgstr ""
+msgstr "  设置这些值后将状态设置为CAM_REQ_CMP，并将CCB标记为完成。"
 
 #. type: Title ==
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:883
@@ -2219,7 +2417,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:901
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "static void\n"
 "xxx_poll(struct cam_sim *sim)\n"
@@ -2227,6 +2425,11 @@ msgid ""
 "    xxx_intr((struct xxx_softc *)cam_sim_softc(sim)); /* for PCI device */\n"
 "}\n"
 msgstr ""
+"static void\n"
+"xxx_poll(struct cam_sim *sim)\n"
+"{\n"
+"    xxx_intr((struct xxx_softc *)cam_sim_softc(sim)); /* for PCI device */\n"
+"}\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:904
@@ -2235,7 +2438,7 @@ msgstr "或"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:912
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "static void\n"
 "xxx_poll(struct cam_sim *sim)\n"
@@ -2243,6 +2446,11 @@ msgid ""
 "    xxx_intr(cam_sim_unit(sim)); /* for ISA device */\n"
 "}\n"
 msgstr ""
+"static void\n"
+"xxx_poll(struct cam_sim *sim)\n"
+"{\n"
+"    xxx_intr(cam_sim_unit(sim)); /* for ISA device */\n"
+"}\n"
 
 #. type: Title ==
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:915
@@ -2259,12 +2467,15 @@ msgstr "如果建立了异步事件回调，则应当定义回调函数。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:923
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "static void\n"
 "ahc_async(void *callback_arg, u_int32_t code, struct cam_path *path, void "
 "*arg)\n"
 msgstr ""
+"static void\n"
+"ahc_async(void *callback_arg, u_int32_t code, struct cam_path *path, void "
+"*arg)\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:926
@@ -2342,6 +2553,7 @@ msgstr "中断例程的确切类型依赖于SCSI控制器所连接到的外围�
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:965
+#, fuzzy
 msgid ""
 "The interrupt routines of the SIM drivers run at the interrupt level "
 "splcam. So `splcam()` should be used in the driver to synchronize activity "
@@ -2354,6 +2566,11 @@ msgid ""
 "section. To make sure that the interrupt level will be always restored a "
 "wrapper function can be defined, like:"
 msgstr ""
+"SIM驱动程序的中断例程运行在中断级别splcam上。因此应当在驱动 程序中使用<function>splcam()</"
+"function>来同步中断例程与驱动程序 剩余部分的活动（对于能察觉多处理器的驱动程序，事情更要有趣，但 "
+"此处我们忽略这种情况）。本文档中的伪代码简单地忽略了同步问题。 实际代码一定不能忽略它们。一个较笨的办法就是在进入其他例程的 "
+"入口点处设<function>splcam()</function>，并在返回时将它复位，从而 用一个大的临界区保护它们。为了确保中断级别总是会被恢复，"
+"可以定义 一个包装函数，如："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:976
@@ -2382,6 +2599,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:985
+#, fuzzy
 msgid ""
 "This approach is simple and robust but the problem with it is that "
 "interrupts may get blocked for a relatively long time and this would "
@@ -2389,6 +2607,8 @@ msgid ""
 "of the `spl()` family have rather high overhead, so vast amount of tiny "
 "critical sections may not be good either."
 msgstr ""
+"这种方法简单而且健壮，但它存在的问题是中断可能会被阻塞相对 很长的事件，这会对系统性能产生负面影响。另一方面， "
+"<function>spl()</function>函数族有相当高的额外开销，因此大量 很小的临界区可能也不好。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:987
@@ -2576,11 +2796,13 @@ msgstr "首先我们检查HCB是否完成，如果完成我们就检查返回的
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:1082
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "    if(hcb_status == COMPLETED) {\n"
 "        scsi_status = get_completion_status(hcb);\n"
 msgstr ""
+"    if(hcb_status == COMPLETED) {\n"
+"        scsi_status = get_completion_status(hcb);\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:1085
@@ -2591,7 +2813,7 @@ msgstr "然后看这个状态是否与REQUEST SENSE命令有关，如果有关�
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:1099
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "        if(hcb->flags & DOING_AUTOSENSE) {\n"
 "            if(scsi_status == GOOD) { /* autosense was successful */\n"
@@ -2606,6 +2828,19 @@ msgid ""
 "            return;\n"
 "        }\n"
 msgstr ""
+"        if(hcb-&gt;flags &amp; DOING_AUTOSENSE) {\n"
+"            if(scsi_status == GOOD) { /* autosense was successful */\n"
+"                hcb-&gt;ccb-&gt;ccb_h.status |= CAM_AUTOSNS_VALID;\n"
+"                free_hcb_and_ccb_done(hcb, hcb-&gt;ccb, "
+"CAM_SCSI_STATUS_ERROR);\n"
+"            } else {\n"
+"        autosense_failed:\n"
+"                free_hcb_and_ccb_done(hcb, hcb-&gt;ccb, CAM_AUTOSENSE_FAIL);"
+"\n"
+"            }\n"
+"            schedule_next_hcb(softc);\n"
+"            return;\n"
+"        }\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:1102
@@ -2873,7 +3108,7 @@ msgstr "然后我们检查一些其他情况，处理(processing)基本上仅限
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:1279
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "    case SELECTION_TIMEOUT:\n"
 "        ccb_status = CAM_SEL_TIMEOUT;\n"
@@ -2897,6 +3132,27 @@ msgid ""
 "        break;\n"
 "    }\n"
 msgstr ""
+"    case SELECTION_TIMEOUT:\n"
+"        ccb_status = CAM_SEL_TIMEOUT;\n"
+"        /* request the further code to freeze the queue */\n"
+"        hcb-&gt;ccb-&gt;ccb_h.status |= CAM_DEV_QFRZN;\n"
+"        lun_to_freeze = CAM_LUN_WILDCARD;\n"
+"        break;\n"
+"    case PARITY_ERROR:\n"
+"        ccb_status = CAM_UNCOR_PARITY;\n"
+"        break;\n"
+"    case DATA_OVERRUN:\n"
+"    case ODD_WIDE_TRANSFER:\n"
+"        ccb_status = CAM_DATA_RUN_ERR;\n"
+"        break;\n"
+"    default:\n"
+"        /* all other errors are handled in a generic way */\n"
+"        ccb_status = CAM_REQ_CMP_ERR;\n"
+"        /* request the further code to freeze the queue */\n"
+"        hcb-&gt;ccb-&gt;ccb_h.status |= CAM_DEV_QFRZN;\n"
+"        lun_to_freeze = CAM_LUN_WILDCARD;\n"
+"        break;\n"
+"    }\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:1282
@@ -2969,12 +3225,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:1312
+#, fuzzy
 msgid ""
 "_CAM_RESRC_UNAVAIL_ - some resource is temporarily unavailable and the SIM "
 "driver cannot generate an event when it will become available. An example of "
 "this resource would be some intra-controller hardware resource for which the "
 "controller does not generate an interrupt when it becomes available."
 msgstr ""
+"<emphasis>CAM_RESRC_UNAVAIL</emphasis> - 某些资源 暂时不可用，并且当其变为可用时SIM驱动程序不能产生事件。"
+"这种资源 的一个例子就是某些控制器内部硬件资源，当其可用时控制器不会为其 产生中断。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:1313
@@ -3050,6 +3309,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:1326
+#, fuzzy
 msgid ""
 "_CAM_REQUEUE_REQ_ - this request should be re-queued to preserve transaction "
 "ordering. This typically occurs when the SIM recognizes an error that should "
@@ -3059,6 +3319,9 @@ msgid ""
 "cases the troublesome command returns the status indicating the error, the "
 "and the other commands which have not be sent to the bus yet get re-queued."
 msgstr ""
+"<emphasis>CAM_REQUEUE_REQ</emphasis> - 此请求应当被重新入队以保持事务的次序性。这典型地出现在下列 "
+"时刻：SIM识别出了应当冻结队列的错误，并且必须在sim级别上将目标的 其他入队请求放回到XPT队列。这些错误的典型情况有选择超时、命令 "
+"超时和其他类似情况。这些情况下出问题的命令返回状态来指示错误， 此命令和其他还没有被发送到总线的命令被重新入队。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/scsi/chapter.adoc:1327
