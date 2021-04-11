@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-14 11:02-0300\n"
-"PO-Revision-Date: 2021-04-05 15:15+0000\n"
+"PO-Revision-Date: 2021-04-11 12:25+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://translate-dev.freebsd.org/"
 "projects/documentation/booksfaq_index/zh_TW/>\n"
@@ -148,6 +148,7 @@ msgstr "不要移除和修改版權"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:106
+#, fuzzy
 msgid ""
 "Many of us have a significant investment in the project and would certainly "
 "not mind a little financial compensation now and then, but we definitely do "
@@ -157,9 +158,13 @@ msgid ""
 "This, we believe, is one of the most fundamental goals of Free Software and "
 "one that we enthusiastically support."
 msgstr ""
+"我們許多人在這個計畫投入很多心血，並不會介意獲得一些財務上的報酬，但是我們並沒有堅持一定要有。我們相信我們首要的<quote>任務</quote>是將程式"
+"碼提供給所有使用者，無論他們有任何的目的，這麼一來，這些程式碼才能被用在最多地方，也才能發揮它們最大的利益。我們相信這就是自由軟體最基本的目標之一，而且我"
+"們會盡全力去支持它。"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:108
+#, fuzzy
 msgid ""
 "Code in our source tree which falls under the https://www.FreeBSD.org/"
 "copyright/COPYING[GNU General Public License (GPL)] or https://www.FreeBSD."
@@ -171,6 +176,13 @@ msgid ""
 "https://www.FreeBSD.org/copyright/freebsd-license/[FreeBSD license] whenever "
 "possible."
 msgstr ""
+"在我們 source tree 中有部份的程式碼是採用所謂的<link xlink:href=\"https://www.FreeBSD.org/"
+"copyright/COPYING\">GNU General Public License (GPL)</link> 或 <link "
+"xlink:href=\"https://www.FreeBSD.org/copyright/COPYING.LIB\">GNU Library "
+"General Public License (LGPL)</link>版權宣告，雖然這些版權宣告是用來保障而非限制使用者的權 利，畢竟是不那麼自由了些。"
+"由於這些 GPL 的軟體在商業使用上會引起 非常複雜的版權問題，因此只要有機會，我們會盡量以採用比較鬆的 <link xlink:href=\"https"
+"://www.FreeBSD.org/copyright/freebsd-license.html\">FreeBSD 版權</link> "
+"的軟體來取代這些 GPL 版權宣告的軟體。"
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:110
@@ -186,6 +198,7 @@ msgstr "對大部份的人來說是這樣沒錯，但事實上這問題並沒有
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:115
+#, fuzzy
 msgid ""
 "Most people do not actually use an operating system. They use applications. "
 "The applications are what really use the operating system. FreeBSD is "
@@ -195,6 +208,10 @@ msgid ""
 "Most of these applications can be managed through the https://www.FreeBSD."
 "org/ports/[Ports Collection]."
 msgstr ""
+"大部份的人並不是真正在使用一個作業系統。他們使用的是應用程式 ；而那些應用程式才是真正用到作業系統的東西。FreeBSD 是設計用來提供一個強韌且功能完整"
+"的作業環境給應用程式來執行。它支援了多種瀏覽器，辦公室套件軟體，電子郵件閱讀軟體，繪圖程式，程式設計環境，網路伺服器軟體，以及幾乎所有你想要的東西。"
+"大部份的程式都可以靠 <link xlink:href=\"https://www.FreeBSD.org/ports/\">Ports "
+"Collection</link> 來管理。"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:117
@@ -330,12 +347,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:150
+#, fuzzy
 msgid ""
 "Releases are made <<release-freq,every few months>>. While many people stay "
 "more up-to-date with the FreeBSD sources (see the questions on <<current,"
 "FreeBSD-CURRENT>> and <<stable,FreeBSD-STABLE>>) than that, doing so is more "
 "of a commitment, as the sources are a moving target."
 msgstr ""
+"Releases 版 <link linkend=\"release-freq\">每幾個月</link> 才會發行一次。 雖然如此，有很多人和 "
+"FreeBSD 原始碼同步更新 (詳見 <link linkend=\"current\">FreeBSD-CURRENT</link> 和 <link "
+"linkend=\"stable\">FreeBSD-STABLE</link>的相關問題) "
+"，但因為原始碼是一直不斷地在變動的，所以如果要這麼做的話得要花上更多的精力。"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:152
@@ -466,11 +488,14 @@ msgstr "測試最新版的安裝程式。"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:185
+#, fuzzy
 msgid ""
 "To give people who would like to run _-CURRENT_ or _-STABLE_ but who do not "
 "have the time or bandwidth to follow it on a day-to-day basis an easy way of "
 "bootstrapping it onto their systems."
 msgstr ""
+"提供一個簡單的方法給那些喜歡使用 <emphasis>-CURRENT</emphasis> 或是 <emphasis>-STABLE</"
+"emphasis> 但是沒有時間和頻寬去每天昇級的使用者。"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:186
@@ -528,11 +553,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:200
+#, fuzzy
 msgid ""
 "However, most non-trivial changes are discussed in advance in the <<mailing,"
 "mailing lists>>, and there are no restrictions on who may take part in the "
 "discussion."
 msgstr ""
+"無論如何，大多數的改變都會事前在 <link linkend=\"mailing\">郵件論壇</link>先討論過，而且不分角色，每個人都可以參與討論。"
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:202
@@ -653,11 +680,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:238
+#, fuzzy
 msgid ""
 "The document's language and encoding. These are based on the locale names "
 "found under [.filename]#/usr/share/locale# on a FreeBSD system. The current "
 "languages and encodings are as follows:"
 msgstr ""
+"文件的語言與編碼。他們是基於 FreeBSD 系統中 <filename>/usr/share/locale</filename> "
+"裡所見到的語系名稱。目前包含的語言與編碼如下："
 
 #. type: Table
 #: documentation/content/en/books/faq/_index.adoc:301
@@ -765,9 +795,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:329
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "The compression and packaging scheme.\n"
-msgstr ""
+msgstr "壓縮和打包方式\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:330
@@ -822,6 +852,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:347
+#, fuzzy
 msgid ""
 "If the file is compressed, tar will automatically detect the appropriate "
 "format and decompress it correctly, resulting in a collection of [."
@@ -829,6 +860,9 @@ msgid ""
 "which will contain the table of contents, introductory material, and links "
 "to the other parts of the document."
 msgstr ""
+"如果檔案被壓縮過的話，<application>tar</application> 會自動偵測正確的格式並解壓縮出一堆  <filename>."
+"html</filename> 檔案。主要的檔案是 <filename>index."
+"html</filename>，包含了主目錄跟介紹以及連接到文件其他部份的連結。"
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:349
@@ -865,6 +899,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:360
+#, fuzzy
 msgid ""
 "Channel `#FreeBSD` on http://freenode.net/[Freenode] is a general help "
 "channel with many users at any time. The conversations have been known to "
@@ -876,6 +911,11 @@ msgid ""
 "the question in English first and then relocate to `##freebsd-lang` as "
 "appropriate."
 msgstr ""
+"<link xlink:href=\"http://freenode.net/\">Freenode</link> 上的 "
+"<literal>#FreeBSD</literal> 頻道是一個有許多使用者的一般求助頻道。這個頻道時常聊一些題外話，但主要還是讓使用者問 "
+"FreeBSD 相關問題的地方。其他使用者可以協助解答一些基本的問題，並請盡量提供使用手冊的參考或是提供連結來提供更深入的資訊。雖然這個頻道有來自世界各地"
+"的使用者，但這是一個英文為主的頻道。非母語人士應該以英文提問，並在必要的時候移駕到 <literal>##freebsd-lang</literal> "
+"頻道。"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:361
@@ -3488,11 +3528,15 @@ msgstr "L2ARC 是什麼？"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1280
+#, fuzzy
 msgid ""
 "The L2ARC is a read cache stored on a fast device such as an SSD. This cache "
 "is not persistent across reboots. Note that RAM is used as the first layer "
 "of cache and the L2ARC is only needed if there is insufficient RAM."
 msgstr ""
+"The <acronym>L2ARC</acronym> (Second Level Adaptive Replacement Cache) "
+"是存於快速儲存設備 <acronym>SSD</acronym> 上的讀取快取，此快取在重新開機後會消失，請注意記憶體是第一層的快取，"
+"只有在記憶體不足的情況下才需要 L2ARC。"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1282
@@ -3593,16 +3637,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1315
+#, fuzzy
 msgid ""
 "ZFS TRIM is enabled by default, and can be turned off by adding this line to "
 "[.filename]#/etc/sysctl.conf#:"
 msgstr ""
+"ZFS TRIM 預設就已開啟，也可以將其關閉，只要加入一行設定到  <filename>/etc/sysctl.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1319
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "vfs.zfs.trim.enabled=0\n"
-msgstr ""
+msgstr "vfs.zfs.trim.enabled=0\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/faq/_index.adoc:1324
