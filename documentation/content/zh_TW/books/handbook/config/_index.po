@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: 2021-04-05 20:20+0000\n"
+"PO-Revision-Date: 2021-04-11 12:24+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookconfig_index/zh_TW/>\n"
@@ -116,6 +116,7 @@ msgstr "啟動服務"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:67
+#, fuzzy
 msgid ""
 "Many users install third party software on FreeBSD from the Ports Collection "
 "and require the installed services to be started upon system "
@@ -124,6 +125,9 @@ msgid ""
 "be started during system initialization. This section explains the "
 "procedures available for starting third party software."
 msgstr ""
+"許多使用者會使用 Port 套件集安裝第三方軟體到 FreeBSD 且需要安裝服務在系統初始化時可啟動該軟體。服務，例如 <package>mail/"
+"postfix</package> 或 <package>www/apache22</package> "
+"僅只是在眾多需要在系統初始化時啟動的軟體之中的兩個。本章節將說明可用來啟動第三方軟體的程序。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:69
@@ -214,10 +218,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:104
+#, fuzzy
 msgid ""
 "This application could then have the following line placed in "
 "[.filename]#/etc/rc.conf#:"
-msgstr ""
+msgstr "接著此應用程式便可將下行放到 <filename>/etc/rc.conf</filename> 中："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:108
@@ -304,8 +309,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:130
+#, fuzzy
 msgid "Here is a sample entry from the system crontab, [.filename]#/etc/crontab#:"
-msgstr ""
+msgstr "以下為系統 crontab <filename>/etc/crontab</filename> 的範例項目："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:143
@@ -415,12 +421,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:176
+#, fuzzy
 msgid ""
 "Then add a line for each command or script to run, specifying the time to "
 "run the command. This example runs the specified custom Bourne shell script "
 "every day at two in the afternoon. Since the path to the script is not "
 "specified in `PATH`, the full path to the script is given:"
 msgstr ""
+"然後每一個要執行的指令或 Script 加入一行，指定要執行指令的時間。這個例子會每天在下午 2 點執行指定的自訂 Bourne shell "
+"script，由於沒有在 <literal>PATH</literal> 指定 Script 的路徑，所以必須給予完整的 Script 路徑："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:180
@@ -690,12 +699,15 @@ msgstr "管理系統特定的設定"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:291
+#, fuzzy
 msgid ""
 "The principal location for system configuration information is "
 "[.filename]#/etc/rc.conf#. This file contains a wide range of configuration "
 "information and it is read at system startup to configure the system. It "
 "provides the configuration information for the [.filename]#rc*# files."
 msgstr ""
+"系統設定資訊的主要位於 <filename>/etc/rc.conf</filename>，這個檔案的設定資訊範圍非常廣且會在系統啟動時讀取來設定系統，"
+"它也提供設定資訊給 <filename>rc*</filename> 檔案使用。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:293
@@ -708,6 +720,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:295
+#, fuzzy
 msgid ""
 "A number of strategies may be applied in clustered applications to separate "
 "site-wide configuration from system-specific configuration in order to "
@@ -715,6 +728,8 @@ msgid ""
 "system-specific configuration into [.filename]#/etc/rc.conf.local#. For "
 "example, these entries in [.filename]#/etc/rc.conf# apply to all systems:"
 msgstr ""
+"在叢集應用時要將系統特定的設定與各站特定的設定分開，藉此減少管理成本有好幾種方法，建議的方法是將系統特定的設定放置在 <filename>/etc/rc."
+"conf.local</filename>，例如以下將要套用到所有系統的設定項目放在 <filename>/etc/rc.conf</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:301
@@ -727,10 +742,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:304
+#, fuzzy
 msgid ""
 "Whereas these entries in [.filename]#/etc/rc.conf.local# apply to this "
 "system only:"
-msgstr ""
+msgstr "而只套用到此系統的設定放在 <filename>/etc/rc.conf.local</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:309
@@ -750,10 +766,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:314
+#, fuzzy
 msgid ""
 "Upgrading the system will not overwrite [.filename]#/etc/rc.conf#, so system "
 "configuration information will not be lost."
-msgstr ""
+msgstr "升級系統並不會覆寫 <filename>/etc/rc.conf</filename>，所以系統設定資訊不會因此遺失。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:319
@@ -1091,8 +1108,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:456
+#, fuzzy
 msgid "In this example, [.filename]#dc0# is up and running. The key indicators are:"
-msgstr ""
+msgstr "在此例中，<filename>dc0</filename> 已經上線並且執行中。主要的依據有："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:458
@@ -1251,12 +1269,15 @@ msgstr "測試與疑難排解"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:522
+#, fuzzy
 msgid ""
 "Once the necessary changes to [.filename]#/etc/rc.conf# are saved, a reboot "
 "can be used to test the network configuration and to verify that the system "
 "restarts without any configuration errors. Alternatively, apply the settings "
 "to the networking system with this command:"
 msgstr ""
+"必要的變更儲存到 <filename>/etc/rc.conf</filename> "
+"之後，需要重新啟動系統來測試網路設定並檢查系統重新啟動是否沒有任何設定錯誤。或者使用這個指令將設定套用到網路系統："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:526
@@ -1266,10 +1287,11 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:531
+#, fuzzy
 msgid ""
 "If a default gateway has been set in [.filename]#/etc/rc.conf#, also issue "
 "this command:"
-msgstr ""
+msgstr "若預設的通訊閘已設定於 <filename>/etc/rc.conf</filename> 也同樣要下這個指令："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:535
@@ -1358,6 +1380,7 @@ msgstr "疑難排解"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:580
+#, fuzzy
 msgid ""
 "When troubleshooting hardware and software configurations, check the simple "
 "things first. Is the network cable plugged in? Are the network services "
@@ -1366,6 +1389,9 @@ msgid ""
 "Notes, update the version of FreeBSD to the latest STABLE version, check the "
 "mailing list archives, and search the Internet."
 msgstr ""
+"在排除硬體及軟體設定問題時，要先檢查幾件簡單的事。網路線插上了沒？網路的服務都正確設定了嗎？防火牆設定是否正確？FreeBSD 是否支援該 "
+"<acronym>NIC</acronym>？在回報問題之前，永遠要先檢查 Hardware Notes、更新 FreeBSD 到最新的 STABLE "
+"版本、檢查郵遞論壇封存記錄以及上網查詢。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:582
@@ -1377,12 +1403,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:584
+#, fuzzy
 msgid ""
 "Some users experience one or two `device timeout` messages, which is normal "
 "for some cards. If they continue, or are bothersome, determine if the device "
 "is conflicting with another device. Double check the cable "
 "connections. Consider trying another card."
 msgstr ""
+"部份使用者會遇到一次或兩次 <errorname>device timeout</errorname> "
+"的訊息，在對某些介面卡是正常的。若訊息持續發生或很煩的，請確認是否有與其他的裝置衝突，再次檢查網路線，或考慮使用其他介面卡。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:586
@@ -1482,10 +1511,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:612
+#, fuzzy
 msgid ""
 "The following [.filename]#/etc/rc.conf# entries configure the adapter "
 "correctly for this scenario:"
-msgstr ""
+msgstr "在此情境下正確設定網路介面的方式如下 <filename>/etc/rc.conf</filename> 中的項目："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:624
@@ -1575,6 +1605,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:647
+#, fuzzy
 msgid ""
 "This configuration file contains one line per action, where the syntax for "
 "each line is a selector field followed by an action field. The syntax of the "
@@ -1587,6 +1618,13 @@ msgid ""
 "remote log host. As an example, here is the default [.filename]#syslog.conf# "
 "from FreeBSD:"
 msgstr ""
+"此設定檔中一行代表一個動作，每一行的格式皆為一個選擇器欄位 (Selector field) 接著一個動作欄位 (Action field)。"
+"選擇器欄位的格式為 <replaceable>facility.level</replaceable> 可以用來比對來自 "
+"<replaceable>facility</replaceable> 於層級 <replaceable>level</replaceable> "
+"或更高層的日誌訊息，也可以在層級前加入選擇性的比對旗標來更確切的指定記錄的內容。同樣一個動作可以使用多個選擇器欄位並使用分號 "
+"(<literal>;</literal>) 來分隔。用 <literal>*</literal> "
+"可以比對任何東西。動作欄位可用來指定傳送日誌訊息的目標，如一個檔案或遠端日誌主機。範例為以下為 FreeBSD 預設的 <filename>syslog."
+"conf</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:685
@@ -2457,11 +2495,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1080
+#, fuzzy
 msgid ""
 "For example, to turn off logging of fatal signal exits and prevent users "
 "from seeing processes started by other users, the following tunables can be "
 "set in [.filename]#/etc/sysctl.conf#:"
 msgstr ""
+"例如，要關閉嚴重信號 (Fatal signal) 中止的記錄並避免使用者看到其他使用者所執行的程序，可加入以下設定到 <filename>/etc/"
+"sysctl.conf</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1085
@@ -3202,19 +3243,23 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1271
+#, fuzzy
 msgid ""
 "It is possible to use any partition not currently mounted, even if it "
 "already contains data. Using `swapon` on a partition that contains data will "
 "overwrite and destroy that data. Make sure that the partition to be added as "
 "swap is really the intended partition before running `swapon`."
 msgstr ""
+"可以使用任何尚未掛載過、甚至已經有內含資料的分割區做為交換空間，但在含有資料的分割區上使用 <command>swapon</command> "
+"會覆寫並清除該分割區上所有的資料，請在執行 <command>swapon</command> 之前確認真的要使用該分割區增加交換空間。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1274
+#, fuzzy
 msgid ""
 "To automatically add this swap partition on boot, add an entry to "
 "[.filename]#/etc/fstab#:"
-msgstr ""
+msgstr "要在開機時自動加入此交換分割區，可加入以下項目到 <filename>/etc/fstab</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1278
@@ -3277,10 +3322,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/config/_index.adoc:1309
+#, fuzzy
 msgid ""
 "Inform the system about the swap file by adding a line to "
 "[.filename]#/etc/fstab#:"
-msgstr ""
+msgstr "加入行到 <filename>/etc/fstab</filename> 以讓系統知道交換檔的資訊："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1313
@@ -3316,6 +3362,7 @@ msgstr "電源與資源管理"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1329
+#, fuzzy
 msgid ""
 "It is important to utilize hardware resources in an efficient manner. Power "
 "and resource management allows the operating system to monitor system limits "
@@ -3330,6 +3377,13 @@ msgid ""
 "platform. An APM driver in the operating system mediates access to the APM "
 "Software Interface, which allows management of power levels."
 msgstr ""
+"以有效率的方式運用硬體資源是很重要的，電源與資源管理讓作業系統可以監控系統的限制，並且在系統溫度意外升高時能夠發出警報。"
+"早期提供電源管理的規範是進階電源管理 (Advanced Power Management, "
+"<acronym>APM</acronym>)，<acronym>APM</acronym> 可根據系統的使用狀況來來控制電源用量。然而，使用 "
+"<acronym>APM</acronym> 要作業系統來管理系統的電源用量和溫度屬性是困難且沒有彈性的，因為硬體是由 <acronym>BIOS</"
+"acronym> 所管理，使用者對電源管理設定只有有限的設定性與可見性，且 <acronym>APM</acronym> <acronym>BIOS</"
+"acronym> 是由供應商提供且特定於某些硬體平台，而作業系統中必透過 <acronym>APM</acronym> 驅動程式做為中介存取 "
+"<acronym>APM</acronym> 軟體介面才能夠管理電源等級。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/config/_index.adoc:1331
