@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-04-05 20:20+0000\n"
+"PO-Revision-Date: 2021-04-11 12:24+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookcutting-edge_index/zh_TW/>\n"
@@ -44,6 +44,7 @@ msgstr "概述"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:52
+#, fuzzy
 msgid ""
 "FreeBSD is under constant development between releases.  Some people prefer "
 "to use the officially released versions, while others prefer to keep in sync "
@@ -54,6 +55,9 @@ msgid ""
 "to track the development system and the basic tools for keeping a FreeBSD "
 "system up-to-date."
 msgstr ""
+"FreeBSD 在每次的發佈之間持續在開發。有些人偏好正式發佈的版本，也有另一群人喜歡使用最新的開發版本。然而，即使是正式發佈的版本也時常會有安全性與其他"
+"緊急修復的更新，因此，無論使用哪種版本，FreeBSD 都提供所有必要的工具來讓系統能維持最新的版本，且讓各種版本都能簡單的升級。"
+"本章將說明如何追蹤開發版本的系統及讓 FreeBSD 系統維持最新版本的基本工具。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:54
@@ -125,12 +129,15 @@ msgstr "FreeBSD 更新"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:76
+#, fuzzy
 msgid ""
 "Applying security patches in a timely manner and upgrading to a newer "
 "release of an operating system are important aspects of ongoing system "
 "administration.  FreeBSD includes a utility called `freebsd-update` which "
 "can be used to perform both these tasks."
 msgstr ""
+"隨時套用安全性更新以及升級到新發佈的作業系統版本對管理一個持續運作的系統是非常重要的任務，FreeBSD 內含可以執行這兩項任務的工具程式，叫做 "
+"<command>freebsd-update</command>。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:80
@@ -162,12 +169,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:91
+#, fuzzy
 msgid ""
 "This section describes the configuration file used by `freebsd-update`, "
 "demonstrates how to apply a security patch and how to upgrade to a minor or "
 "major operating system release, and discusses some of the considerations "
 "when upgrading the operating system."
 msgstr ""
+"本節將說明 <command>freebsd-update</command> 使用的設定檔， "
+"示範如何套用安全性修補及如何升級到主要或次要的作業系統發行版，並討論升級作業系統的需要考量的事項。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:93
@@ -195,6 +205,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:110
+#, fuzzy
 msgid ""
 "This parameter controls which parts of FreeBSD will be kept up-to-date.  The "
 "default is to update the entire base system and the kernel.  Individual "
@@ -204,6 +215,9 @@ msgid ""
 "this could have disastrous consequences as source code and binaries may "
 "become out of sync."
 msgstr ""
+"這個參數控制 FreeBSD 要保持最新版本的部份。 預設是更新整個基礎系統 (Base system) 和核心。 "
+"可指定個別元件，例如：<literal>src/base</literal> 或 <literal>src/sys</literal>。 "
+"雖然如此，最好的選項是維持預設值，因為更改指定特定項目時需列出每一個需要的項目。時間一久可能會因為原始碼和 Binary 檔案沒有更新而造成慘重的後果。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:116
@@ -273,11 +287,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:155
+#, fuzzy
 msgid ""
 "This directory is where all patches and temporary files are placed.  In "
 "cases where the user is doing a version upgrade, this location should have "
 "at least a gigabyte of disk space available."
-msgstr ""
+msgstr "這個目錄是所有修補檔和暫存檔的存放處。當使用者進行版本升級時，這個位置應該要有至少 1GB 的可用磁碟空間。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:163
@@ -316,12 +331,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:177
+#, fuzzy
 msgid ""
 "FreeBSD security patches may be downloaded and installed using the following "
 "commands.  The first command will determine if any outstanding patches are "
 "available, and if so, will list the files that will be modifed if the "
 "patches are applied.  The second command will apply the patches."
 msgstr ""
+"FreeBSD 安全性修補可以使用以下指令下載並安裝。 "
+"第一個指令會偵測是否有可用的修補，如果有，將列出若執行修補後會變更的檔案清單。第二個指令將會套用修補。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:182
@@ -333,12 +351,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:186
+#, fuzzy
 msgid ""
 "If the update applies any kernel patches, the system will need a reboot in "
 "order to boot into the patched kernel.  If the patch was applied to any "
 "running binaries, the affected applications should be restarted so that the "
 "patched version of the binary is used."
 msgstr ""
+"如果更新套用了任何核心修補，系統將會需要重新開機以使用修補過的核心。如果修補套用在任何執行中的 Binary，受影響的應用程式應重新啟動來使用修補過的 "
+"Binary 版本。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:191
@@ -350,10 +371,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:194
+#, fuzzy
 msgid ""
 "The system can be configured to automatically check for updates once every "
 "day by adding this entry to [.filename]#/etc/crontab#:"
-msgstr ""
+msgstr "加入以下項目至 <filename>/etc/crontab</filename> 可設定系統每天自動檢查更新一次："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:198
@@ -371,10 +393,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:204
+#, fuzzy
 msgid ""
 "If anything goes wrong, `freebsd-update` has the ability to roll back the "
 "last set of changes with the following command:"
-msgstr ""
+msgstr "如果有發生任何錯誤，<command>freebsd-update</command> 可以使用以下指令還原最後所做的變更："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:209
@@ -421,6 +444,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:235
+#, fuzzy
 msgid ""
 "The updates distributed by `freebsd-update` do not always involve the "
 "kernel.  It is not necessary to rebuild a custom kernel if the kernel "
@@ -433,6 +457,12 @@ msgid ""
 "systems, as it allows for a quick assessment of the updates installed in "
 "each one."
 msgstr ""
+"以 <command>freebsd-update</command> 發行的更新並非總是會更新核心。若核心的原始碼沒有被 <command"
+">freebsd-update install</command> 修改則不需要重新編譯自訂的核心。雖然如此 <command>freebsd-"
+"update</command> 總是會更新 <filename>/usr/src/sys/conf/newvers.sh</filename>，"
+"目前修補的版本如 <command>uname -r</command> 執行結果中的 <literal>-p</literal> "
+"數字，便是由該檔取得。即使沒有做任何其他變更，重新編譯自訂核心可讓 <command>uname</command> "
+"準確的回報系統目前的修補版本。當維護多個系統時這會特別有用，因其可讓你快速評估每個系統安裝的更新。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:237
@@ -474,12 +504,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:259
+#, fuzzy
 msgid ""
 "After the command has been received, `freebsd-update` will evaluate the "
 "configuration file and current system in an attempt to gather the "
 "information necessary to perform the upgrade.  A screen listing will display "
 "which components have and have not been detected.  For example:"
 msgstr ""
+"收到這個指令後，<command>freebsd-update</command> 會開始評估設定檔和目前的系統來收集升級所需的資訊。 "
+"螢幕會顯示偵測到或沒偵測到的元件清單。例如："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:266
@@ -519,11 +552,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:282
+#, fuzzy
 msgid ""
 "At this point, `freebsd-update` will attempt to download all files required "
 "for the upgrade.  In some cases, the user may be prompted with questions "
 "regarding what to install or how to proceed."
 msgstr ""
+"此時，<command>freebsd-update</command> 將會嘗試下載所有升級需要的檔案。 "
+"在某些情況，會詢問使用者一些關於要安裝什麼或要如何繼續。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:284
@@ -544,14 +580,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:295
+#, fuzzy
 msgid ""
 "This warning may be safely ignored at this point.  The updated [."
 "filename]#GENERIC# kernel will be used as an intermediate step in the "
 "upgrade process."
-msgstr ""
+msgstr "這時的警告可以安全地忽略，升級過程將會使用更新過的 <filename>GENERIC</filename> 核心來進行。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:304
+#, fuzzy
 msgid ""
 "Once all the patches have been downloaded to the local system, they will be "
 "applied.  This process may take a while, depending on the speed and workload "
@@ -563,16 +601,21 @@ msgid ""
 "backup of [.filename]#/etc# and manually merge important files, such as [."
 "filename]#master.passwd# or [.filename]#group# at a later time."
 msgstr ""
+"所有的修補都下載到本地系統之後， 將會開始套用更新。這個過程可能會花點時間，取決於機器的速度和工作量。設定檔將會被合併。 "
+"合併的過程中當檔案被合併或是手動合併畫面上出現編輯器時需要使用者操作。 每一個成功合併的結果將會顯示給使用者並繼續程序，失敗或忽略合併將會使程序中斷。"
+"使用者可能想要備份 <filename>/etc</filename> 並稍後手動合併重要的檔案，例如：<filename>master.passwd</"
+"filename> 或 <filename>group</filename>。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:311
+#, fuzzy
 msgid ""
 "The system is not being altered yet as all patching and merging is happening "
 "in another directory.  Once all patches have been applied successfully, all "
 "configuration files have been merged and it seems the process will go "
 "smoothly, the changes can be committed to disk by the user using the "
 "following command:"
-msgstr ""
+msgstr "所有的修補與合併動作會在另一個目錄進行，並不會直接修改。當成功套用所有修補，所有設定檔已合併且過程順利，使用者可使用以下指令將變更安裝到磁碟："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:315
@@ -598,6 +641,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:335
+#, fuzzy
 msgid ""
 "Before rebooting with the [.filename]#GENERIC# kernel, make sure it contains "
 "all the drivers required for the system to boot properly and connect to the "
@@ -608,6 +652,10 @@ msgid ""
 "facility.  It is recommended to disable non-essential services as well as "
 "any disk and network mounts until the upgrade process is complete."
 msgstr ""
+"若機器在遠端進行更新，請在使用 <filename>GENERIC</filename> "
+"核心重新開機前，請確定該核心含有所有系統所需的驅動程式以正常開機並連線至網路。特別是在執行的自訂核心有使用到由核心模組提供內建功能，"
+"請確定將這些模組已暫時使用 <filename>/boot/loader.conf</filename> 設定檔載入到 "
+"<filename>GENERIC</filename> 核心。建議關閉非必須的服務和磁碟與網路掛載直到升級程序完成。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:338
@@ -623,12 +671,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:347
+#, fuzzy
 msgid ""
 "Once the system has come back online, restart `freebsd-update` using the "
 "following command.  Since the state of the process has been saved, `freebsd-"
 "update` will not start from the beginning, but will instead move on to the "
 "next phase and remove all old shared libraries and object files."
 msgstr ""
+"一旦系統重新上線，使用以下指令繼續 <command>freebsd-update</command>。 由於程序的狀態已被儲存，<command"
+">freebsd-update</command> 不會重頭開始，但會進行下一個階段並移除所有舊的共用程式庫和目標檔。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:356
@@ -662,6 +713,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:371
+#, fuzzy
 msgid ""
 "If a custom kernel has been built more than once or if it is unknown how "
 "many times the custom kernel has been built, obtain a copy of the `GENERIC` "
@@ -669,6 +721,8 @@ msgid ""
 "physical access to the system is available, a copy of the `GENERIC` kernel "
 "can be installed from the installation media:"
 msgstr ""
+"若有編譯自訂核心過超過一次，或已經不曉得編譯自訂核心的次數，則需取得與目前作業系統版本相符的 <literal>GENERIC</literal> "
+"核心複本。若可直接操作實體系統，則可以從安裝媒體取得 <literal>GENERIC</literal> 核心複本："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:377
@@ -728,6 +782,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:405
+#, fuzzy
 msgid ""
 "A forced upgrade of all installed packages will replace the packages with "
 "fresh versions from the repository even if the version number has not "
@@ -735,6 +790,8 @@ msgid ""
 "upgrading between major versions of FreeBSD.  The forced upgrade can be "
 "accomplished by performing:"
 msgstr ""
+"強制升級所有已安裝的套件會使用檔案庫中新版本的套件來取得目前套件，即使該版號沒有增加。由於在升級 FreeBSD 主要版本時會變更 ABI "
+"版本，因此這是必要動作。強制升級可以執行以下指令來完成："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:409
@@ -757,20 +814,24 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:420
+#, fuzzy
 msgid ""
 "This command will display the configuration screens for each application "
 "that has configurable options and wait for the user to interact with those "
 "screens.  To prevent this behavior, and use only the default options, "
 "include `-G` in the above command."
 msgstr ""
+"這個指令會在安裝每個應用程式有可設定選項時顯示設定畫面，並會等待使用者操作該畫面，要避免這種情況並使用預設的設定選項，可在上述指令加上 "
+"<option>-G</option> 參數。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:423
+#, fuzzy
 msgid ""
 "Once the software upgrades are complete, finish the upgrade process with a "
 "final call to `freebsd-update` in order to tie up all the loose ends in the "
 "upgrade process:"
-msgstr ""
+msgstr "完成軟體升級後，最後需執行 <command>freebsd-update</command> 來完成最後的升級動作："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:431
@@ -782,10 +843,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:434
+#, fuzzy
 msgid ""
 "Reboot the machine into the new FreeBSD version.  The upgrade process is now "
 "complete."
-msgstr ""
+msgstr "重新開機使用新的 FreeBSD 版本後，升級程序便正式完成。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:436
@@ -795,12 +857,16 @@ msgstr "比對系統狀態"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:440
+#, fuzzy
 msgid ""
 "The state of the installed FreeBSD version against a known good copy can be "
 "tested using `freebsd-update IDS`.  This command evaluates the current "
 "version of system utilities, libraries, and configuration files and can be "
 "used as a built-in Intrusion Detection System (IDS)."
 msgstr ""
+"已安裝的 FreeBSD 版本狀態可以使用 <command>freebsd-update IDS</command> "
+"與另一個已知良好的複本來做比對測試。 這個指令會評估目前版本的系統工具，程式庫和設定檔，可做為內建的入侵偵測系統來使用 (Intrusion "
+"Detection System, <acronym>IDS</acronym>)。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:448
@@ -830,19 +896,23 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:458
+#, fuzzy
 msgid ""
 "The system will now be inspected and a lengthy listing of files, along with "
 "the SHA256 hash values for both the known value in the release and the "
 "current installation, will be sent to the specified output file."
 msgstr ""
+"系統將會開始檢查並且會產生相當長的檔案清單，內容包含發佈版本已知的與目前安裝版本的 <acronym>SHA256</acronym> "
+"雜湊值會儲存到指定的輸出檔。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:461
+#, fuzzy
 msgid ""
 "The entries in the listing are extremely long, but the output format may be "
 "easily parsed.  For instance, to obtain a list of all files which differ "
 "from those in the release, issue the following command:"
-msgstr ""
+msgstr "清單中的項目會相當的多，但輸出的格式可以很簡單的用來分析。例如，要取得與發佈版本不同的檔案清單，可使用以下指令："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:469
@@ -857,6 +927,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:476
+#, fuzzy
 msgid ""
 "This sample output has been truncated as many more files exist.  Some files "
 "have natural modifications.  For example, [.filename]#/etc/passwd# will be "
@@ -865,6 +936,10 @@ msgid ""
 "directories, add them to the `IDSIgnorePaths` option in [.filename]#/etc/"
 "freebsd-update.conf#."
 msgstr ""
+"實際的檔案會更多，此範例的輸出已精簡。部份檔案可能本來就會被修改。例如 <filename>/etc/passwd</filename> "
+"在新增使用者到系統時會被修改，核心模組也有可能因使用 <command>freebsd-update</command> 更新而有所不同。"
+"要排除特定的檔案或目錄可將這些檔案或目錄加入到 <filename>/etc/freebsd-update.conf</filename> 中的 "
+"<literal>IDSIgnorePaths</literal> 選項。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:478
@@ -926,10 +1001,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:503
+#, fuzzy
 msgid ""
 "The initial download of the documentation sources may take a while.  Let it "
 "run until it completes."
-msgstr ""
+msgstr "第一次下載文件原始碼需要一些時間，請耐心等候執行完畢。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:505
@@ -944,11 +1020,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:513
+#, fuzzy
 msgid ""
 "Once an up-to-date snapshot of the documentation sources has been fetched to "
 "[.filename]#/usr/doc#, everything is ready for an update of the installed "
 "documentation."
-msgstr ""
+msgstr "下載最新的文件原始碼到 <filename>/usr/doc</filename> 之後，便完成要更新已安裝文件的準備動作。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:515
@@ -991,15 +1068,19 @@ msgstr "使用 FreeBSD-CURRENT"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:534
+#, fuzzy
 msgid ""
 "FreeBSD-CURRENT is the \"bleeding edge\" of FreeBSD development and FreeBSD-"
 "CURRENT users are expected to have a high degree of technical skill.  Less "
 "technical users who wish to track a development branch should track FreeBSD-"
 "STABLE instead."
 msgstr ""
+"FreeBSD-CURRENT 是 FreeBSD 開發的 <quote>最前線</quote>，FreeBSD-CURRENT "
+"的使用者需具備較強的技術能力。技術能力較弱的使用者應改追蹤 FreeBSD-STABLE 開發分支。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:538
+#, fuzzy
 msgid ""
 "FreeBSD-CURRENT is the very latest source code for FreeBSD and includes "
 "works in progress, experimental changes, and transitional mechanisms that "
@@ -1010,6 +1091,9 @@ msgid ""
 "brings disaster or new functionality can be a matter of when the source code "
 "was synced."
 msgstr ""
+"FreeBSD-CURRENT 是 FreeBSD 最新的原始碼，其中包括正在進行的開發工作、實驗性的變更以及不一定會在下一個官方發行版出現的過渡機制。 "
+"雖然 FreeBSD 開發者每天編譯 FreeBSD-CURRENT 原始碼，但仍可能有短暫時間原始碼是無法編譯的。雖然這些問題會儘快被解決，但是無論 "
+"FreeBSD-CURRENT 帶來災難或是新功能，同步原始碼時都要考量這個問題。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:540
@@ -1089,12 +1173,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:559
+#, fuzzy
 msgid ""
 "Due to the size of the repository, some users choose to only synchronize the "
 "sections of source that interest them or which they are contributing patches "
 "to. However, users that plan to compile the operating system from source "
 "must download _all_ of FreeBSD-CURRENT, not just selected portions."
 msgstr ""
+"考量到檔案庫的大小，部份使用者選擇只同步他們有興趣或貢獻修補的部份原始碼。然而， 計劃要從原始碼編譯整個作業系統的使用者須下載 "
+"<emphasis>全部</emphasis> 的 FreeBSD-CURRENT，不可只有選擇的部份。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:562
@@ -1124,6 +1211,7 @@ msgstr "使用 FreeBSD-STABLE"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:572
+#, fuzzy
 msgid ""
 "FreeBSD-STABLE is the development branch from which major releases are "
 "made.  Changes go into this branch at a slower pace and with the general "
@@ -1134,6 +1222,10 @@ msgid ""
 "not have the resources to perform testing should instead run the most recent "
 "release of FreeBSD."
 msgstr ""
+"FreeBSD-STABLE 是一個開發分支，會在主要的版本更新後產生，進入這個分支的步伐會比較緩慢，而且通常會假定已經在 FreeBSD-"
+"CURRENT 中做過測試，所以問題會比較少，但這<emphasis>仍然</emphasis>是一個開發分支，在任何時間點，FreeBSD-"
+"STABLE 中的原始碼不能保証能供一般使用，它只是另一個開發支線，並不是供最終使用者使用的資源，若沒有任何資源可以做測試的使用者應改使用最新版本的 "
+"FreeBSD 發佈版。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:574
@@ -1147,6 +1239,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:579
+#, fuzzy
 msgid ""
 "While the FreeBSD-STABLE branch should compile and run at all times, this "
 "cannot be guaranteed.  Since more people run FreeBSD-STABLE than FreeBSD-"
@@ -1156,6 +1249,10 @@ msgid ""
 "important _not_ to update any production servers to FreeBSD-STABLE without "
 "thoroughly testing the code in a development or testing environment."
 msgstr ""
+"雖然 FreeBSD-STABLE 分支應該已經做過編譯並執行過，但這仍然無法保証不會出任何問題。由於使用 FreeBSD-STABLE 的人比 "
+"FreeBSD-CURRENT 更多，因此不可避免的，有時仍會在 FreeBSD-STABLE 中發現未在 FreeBSD-CURRENT "
+"中出現的問題與特殊狀況。基於這個原因，任何人都不應盲目的追蹤 FreeBSD-STABLE，特別重要的是 <emphasis>不</emphasis> "
+"要將任何產線上的伺服器更新成未經開發或測試環境中測試過的 FreeBSD-STABLE。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:581
@@ -1228,6 +1325,7 @@ msgstr "從原始碼更新 FreeBSD"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:602
+#, fuzzy
 msgid ""
 "Updating FreeBSD by compiling from source offers several advantages over "
 "binary updates.  Code can be built with options to take advantage of "
@@ -1237,6 +1335,9 @@ msgid ""
 "updates, but allows complete customization to produce a tailored version of "
 "FreeBSD."
 msgstr ""
+"從編譯原始碼來更新 FreeBSD 比起用 Binary "
+"更新有幾項優點，在編譯程式碼時可以自訂選項來充分運用特定硬體，部份基礎系統可以使用非預設的設定值編譯，或是在不需要或不想要的時候跳過編譯。"
+"使用編譯的程序來更新系統比起安裝 Binary 來更新會耗時許多，但能夠完整自訂一個量身定做版本的 FreeBSD。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:604
@@ -1281,21 +1382,24 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:629
+#, fuzzy
 msgid ""
 "<.> Check [.filename]#/usr/src/UPDATING# for any manual steps required "
 "before or after building from source."
-msgstr ""
+msgstr "檢查 <filename>/usr/src/UPDATING</filename> 看是否有任後在原始碼編譯之前或之後需要手動操作的步驟。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:631
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:639
+#, fuzzy
 msgid "<.> Go to the source directory."
-msgstr ""
+msgstr "前往原始碼目錄。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:633
+#, fuzzy
 msgid "<.> Compile the world, everything except the kernel."
-msgstr ""
+msgstr "編譯世界 (World)，即除了核心 (Kernel) 外的所有東西。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:635
@@ -1306,13 +1410,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:637
+#, fuzzy
 msgid "<.> Reboot the system to the new kernel."
-msgstr ""
+msgstr "重新啟動系統以使用新的核心。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:641
+#, fuzzy
 msgid "<.> Install the world."
-msgstr ""
+msgstr "安裝世界。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:643
@@ -1321,8 +1427,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:645
+#, fuzzy
 msgid "<.> Restart the system to use the newly-built world and kernel."
-msgstr ""
+msgstr "重新啟動系統以使用新編譯好的世界與核心。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:648
@@ -1332,10 +1439,12 @@ msgstr "準備原始碼更新"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:651
+#, fuzzy
 msgid ""
 "Read [.filename]#/usr/src/UPDATING#. Any manual steps that must be performed "
 "before or after an update are described in this file."
 msgstr ""
+"閱讀 <filename>/usr/src/UPDATING</filename>，從原始碼編譯之前與之後任何需要手動操作步驟會在此檔案中說明。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:653
@@ -1376,11 +1485,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:677
+#, fuzzy
 msgid ""
 "The update process can take some time if the directory has not been updated "
 "recently.  After it finishes, the source code is up to date and the build "
 "process described in the next section can begin."
-msgstr ""
+msgstr "若該目錄最近沒有更新過，可能會需要一些時間來完成更新動作。在更新完成之後，原始碼便為最新版本，並可開始依下一章節的說明來編譯程序。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:681
@@ -1458,10 +1568,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:727
+#, fuzzy
 msgid ""
 "<.> Move the old directory out of the way. If there are no local "
 "modifications in this directory, it can be deleted."
-msgstr ""
+msgstr "將舊的目錄移到其他地方，若沒有在這個目錄做過任何本地修改，可直接刪除這個目錄。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:729
@@ -1535,6 +1646,7 @@ msgstr "設定工作數量"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:768
+#, fuzzy
 msgid ""
 "Increasing the number of build jobs on multi-core processors can improve "
 "build speed.  Determine the number of cores with `sysctl hw.ncpu`.  "
@@ -1544,6 +1656,9 @@ msgid ""
 "between half and double the number of cores.  The number of jobs is "
 "specified with `-j`."
 msgstr ""
+"在多核處理器上增加編譯工作的數量可增加編譯速度，可使用 <command>sysctl hw.ncpu</command> 來查看有多少核心，"
+"不同處理器使用不同版本的 FreeBSD 編譯系統，所以唯一能了解不同工作數量對編譯速度影響的方式便是測試。在一開始可考慮選擇一個介於 1/2 到 2 "
+"倍核心數之間的數值，工作的數量可使用 <option>-j</option> 來指定。"
 
 #. type: Block title
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:770
@@ -1592,6 +1707,7 @@ msgstr "編譯自訂核心"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:801
+#, fuzzy
 msgid ""
 "The standard FreeBSD kernel is based on a _kernel config file_ called [."
 "filename]#GENERIC#.  The [.filename]#GENERIC# kernel includes the most "
@@ -1599,14 +1715,18 @@ msgid ""
 "necessary to build a custom kernel, adding or removing device drivers or "
 "options to fit a specific need."
 msgstr ""
+"標準的 FreeBSD 核心是以一個名為 <filename>GENERIC</filename> 的<emphasis>核心設定檔 (Kernel "
+"config file)</emphasis>為基礎，<filename>GENERIC</filename> "
+"核心中內含了所有最常用的裝置驅動程式與選項，有時這個檔案對編譯自訂核心也非常有用，可根據其來加入或移除裝置驅動程式或選項來滿足特定需求。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:803
+#, fuzzy
 msgid ""
 "For example, someone developing a small embedded computer with severely "
 "limited RAM could remove unneeded device drivers or options to make the "
 "kernel slightly smaller."
-msgstr ""
+msgstr "例如，要開發一個 <acronym>RAM</acronym> 受到嚴重限制的小型嵌入式電腦，便可移除不需要的裝置驅動程式或選項來縮小核心。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:806
@@ -1619,6 +1739,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:812
+#, fuzzy
 msgid ""
 "[.filename]#/usr/src# can be deleted or recreated, so it is preferable to "
 "keep custom kernel config files in a separate directory, like [.filename]#/"
@@ -1626,14 +1747,20 @@ msgid ""
 "If that directory is deleted or overwritten, the kernel config can be re-"
 "linked into the new one."
 msgstr ""
+"<filename>/usr/src</filename> 可以被刪除或重建，所以較建議將自訂核心設定檔放在另一個目錄，如 "
+"<filename>/root</filename>，並將核心設定檔以連結放至 <filename>conf</filename> "
+"目錄，若該目錄被刪除或覆寫，便可重新建立一個新的核心設定的連結。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:816
+#, fuzzy
 msgid ""
 "A custom config file can be created by copying the [.filename]#GENERIC# "
 "config file.  In this example, the new custom kernel is for a storage "
 "server, so is named [.filename]#STORAGESERVER#:"
 msgstr ""
+"自訂設定檔可由複製 <filename>GENERIC</filename> 設定檔來建立，在此範例，新的自訂核心要用在儲存伺服器，所以將其命名為 "
+"<filename>STORAGESERVER</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:822
@@ -1716,11 +1843,12 @@ msgstr "完成更新"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:865
+#, fuzzy
 msgid ""
 "A few final tasks complete the update.  Any modified configuration files are "
 "merged with the new versions, outdated libraries are located and removed, "
 "then the system is restarted."
-msgstr ""
+msgstr "還有最後一些的工作要做來完成更新，任何修改過的設定檔要與新版本的設定檔合併、移除找到的過時程式庫，然後重新啟動系統。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:867
@@ -1764,10 +1892,11 @@ msgstr "檢查過時的檔案與程式庫"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:886
+#, fuzzy
 msgid ""
 "Some obsolete files or directories can remain after an update.  These files "
 "can be located:"
-msgstr ""
+msgstr "部份廢棄的檔案或目錄可以在更新之後保留，可使用以下指令找出這些檔案："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:890
@@ -1788,8 +1917,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:901
+#, fuzzy
 msgid "Some obsolete libraries can also remain.  These can be detected with:"
-msgstr ""
+msgstr "部份廢棄的程式庫也可以保留下來，可使用以下指令來偵測這些程式庫："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:905
@@ -1810,11 +1940,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:916
+#, fuzzy
 msgid ""
 "Programs which were still using those old libraries will stop working when "
 "the library has been deleted.  These programs must be rebuilt or replaced "
 "after deleting the old libraries."
-msgstr ""
+msgstr "那些仍使用舊程式庫的程式將在刪除程式庫之後無法正常運作，而這些程式須要在刪除舊程式庫之後重新編譯或更換。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/cutting-edge/_index.adoc:922
