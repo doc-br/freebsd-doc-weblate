@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-05 01:29+0000\n"
+"PO-Revision-Date: 2021-04-11 12:25+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/booksarch-handbookusbchapter/zh_CN/>\n"
@@ -63,12 +63,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/usb/chapter.adoc:38
+#, fuzzy
 msgid ""
 "_Lennart Augustsson has done most of the implementation of the USB support "
 "for the NetBSD project. Many thanks for this incredible amount of work. Many "
 "thanks also to Ardy and Dirk for their comments and proofreading of this "
 "paper._"
 msgstr ""
+"<emphasis>Lennart Augustsson已经完成了NetBSD项目中USB支持的 大部分实现。十分感谢这项工作量惊人的工作。"
+"也十分感谢Ardy和Dirk 对本文稿的评论和校对。</emphasis>"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/usb/chapter.adoc:40
@@ -246,6 +249,7 @@ msgstr "USB总线上的设备和设备驱动程序间的大型传输被主控器
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/usb/chapter.adoc:71
+#, fuzzy
 msgid ""
 "Device requests (control transfers) to the default endpoints are "
 "special. They consist of two or three phases: SETUP, DATA (optional) and "
@@ -269,6 +273,14 @@ msgid ""
 "for each frame. OHCI type controllers are much more independent by providing "
 "a more abstract interface doing a lot of work themselves."
 msgstr ""
+"到默认端点的设备请求（控制传输）有些特殊。它们由两或三个阶段 组成：启动（SETUP），数据（DATA，可选）和状态（STATUS）。设置（set-up）"
+" 包被发送到设备。如果存在数据阶段，数据包的方向在设置包中给出。 状态阶段中的方向与数据阶段期间的方向相反，或者当没有数据阶段时 "
+"为IN。主控器硬件也提供寄存器，用于保存根端口的当前状态和自从 状态改变寄存器最后一次复位以来所发生的改变。USB规范[2]建议使用一个 "
+"虚拟hub来提供对这些寄存器的访问。虚拟hub必须符合规范第11章中给出的 hub设备类。它必须提供一个默认管道使得设备请求可以发送给它。它返回 "
+"标准和hub类特定的一组描述符。它也应当提供一个中断管道用来报告其 端口发生的变化。当前可用的主控器规范有两个：通用主控器接口（<acronym>UHCI"
+"</acronym>；英特尔）和开放主控器接口（<acronym>OHCI</acronym>；康柏，微软，国家半导体）。 "
+"<acronym>UHCI</acronym>规范的设计通过要求主控器驱动程序为每帧的传输提供完整的调度， 从而减少了硬件复杂性。"
+"OHCI类型的控制器自身提供一个更抽象的接口来 完成很多工作，从而更加独立。"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/usb/chapter.adoc:72
@@ -391,12 +403,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/usb/chapter.adoc:89
+#, fuzzy
 msgid ""
 "See the UHCI Specification for a more elaborate description. The middle "
 "layer provides access to the device in a controlled way and maintains "
 "resources in use by the different drivers and the services layer. The layer "
 "takes care of the following aspects:"
 msgstr ""
+"更详尽的描述请看<acronym>UHCI</acronym>标准描述。服务层，即中间层，提供了以可控的方式 "
+"对设备进行访问，并维护着由不同驱动程序和服务层所使用的资源。 此层处理下面几方面："
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/usb/chapter.adoc:91
