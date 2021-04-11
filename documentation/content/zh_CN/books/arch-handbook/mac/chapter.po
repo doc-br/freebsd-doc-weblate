@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-05 01:29+0000\n"
+"PO-Revision-Date: 2021-04-11 12:25+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/booksarch-handbookmacchapter/zh_CN/>\n"
@@ -38,6 +38,7 @@ msgstr "MAC 文档版权声明"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:41
+#, fuzzy
 msgid ""
 "This documentation was developed for the FreeBSD Project by Chris Costello "
 "at Safeport Network Services and Network Associates Laboratories, the "
@@ -45,6 +46,10 @@ msgid ""
 "contract N66001-01-C-8035 (\"CBOSS\"), as part of the DARPA CHATS research "
 "program."
 msgstr ""
+"本文档是作为 DARPA CHATS 研究计划的一部分，由供职于 Security Research Division of Network "
+"Associates公司Safeport Network Services and Network Associates Laboratories "
+"的Chris Costello依据 DARPA/SPAWAR 合同 N66001-01-C-8035 (<quote>CBOSS</quote>)，为 "
+"FreeBSD 项目编写的。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:43
@@ -479,6 +484,7 @@ msgstr "策略注册"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:130
+#, fuzzy
 msgid ""
 "The MAC Framework maintains two lists of active policies: a static list, and "
 "a dynamic list. The lists differ only with regards to their locking "
@@ -493,6 +499,13 @@ msgid ""
 "(some policies may only be loaded prior to boot). Likewise, de-registration "
 "may fail if a policy is flagged as not unloadable."
 msgstr ""
+"为了记录当前使用的策略模块集合，MAC 框架维护两个链表：一个静态链表和一个动态链表。\n"
+"       两个链表的数据结构和操作基本相同，只是动态链表还额外使用了一个\"引用计数\"以同步对其的访问操作。\n"
+"       当包含 MAC 框架策略的内核模块被加载时，该策略模块会通过 <literal>SYSINIT</literal> 调用一个注册函数；\n"
+"       相对应的，每当一个策略模块被卸载，<literal>SYSINIT</literal> "
+"也会调用一个注销函数。只有当遇到下列情况之一时，注册过程才会失败： 一个策略模块被加载多次，或者系统资源不足不能满足注册过程的需要（例如，策略模块需要对内"
+"核对象添加标记而可用资源不足），或者其他的策略加载前提条件不满足（有些策略要求只能在系统引导之前加载）。类似的，如果一个策略被标记为不可卸载的，对其调用注"
+"销过程将会失败。"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:132
@@ -582,6 +595,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:147
+#, fuzzy
 msgid ""
 "In-memory labels are stored in slab-allocated `struct label`, which consists "
 "of a fixed-length array of unions, each holding a `void *` pointer and a "
@@ -598,6 +612,13 @@ msgid ""
 "is the process credential, which must be manually dereferenced to access the "
 "credential label. This may change in future revisions of the MAC Framework."
 msgstr ""
+"内存中的标记实例被存放在由 slab 分配的<varname remap=\"structname\">struct "
+"label</varname>数据结构中。该结构是一个固定长度的数组，每个元素是由一个 <literal>void *</literal>指针和一个 "
+"<literal>long</literal>组成的联合结构。申请标记存储的策略模块在向 MAC "
+"注册时，将被分配一个“slot”值，作为框架分配给其使用的策略标记元素在整个标记存储结构中的位置索引。而所分配的存储空间的语义则完全由该策略模块来决定："
+"MAC 框架向策略模块提供了一系列入口函数用于对内核对象生命周期的各种事件进行控制，包括，对象的初始化、标记的关联/创建和对象的注销。使用这些接口，可以实"
+"现诸如访问计数等存储模型。MAC 框架总是给入口函数传入一个指向相关对象的指针和一个指向该对象标记的指针，因此，策略模块能够直接访问标记而无需知悉该对象的"
+"内部结构。唯一的例外是进程信任状结构，指向其标记的指针必须由策略模块手动解析计算。今后的 MAC 框架实现可能会对此进行改进。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:149
@@ -627,6 +648,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:151
+#, fuzzy
 msgid ""
 "In the case of file system labels, special support is provided for the "
 "persistent storage of security labels in extended attributes. Where "
@@ -640,6 +662,11 @@ msgid ""
 "extended attribute need not be directly accessed with every access control "
 "check."
 msgstr ""
+"对于文件系统对象的标记，MAC 框架在文件的扩展属性中为其分配永久存储。只要可能，扩展属性的原子化的事务操作就被用于保证对 vnode "
+"上安全标记的复合更新操作的一致性－－目前，该特性只被 UFS2 "
+"文件系统支持。为了实现细粒度的文件系统对象标记（即每个文件系统对象一个标记），策略编写者可能选择使用一个（或者若干）扩展属性块。为了提高性能，"
+"\tvnode 数据结构中有一个标记 (<literal>v_label</literal>)字段，用作磁盘标记的缓冲；vnode "
+"结构实例化时，策略可以将标记值装入该缓冲，并在需要时对其进行更新。如此，不必在每次进行访问控制检查时，均无条件地访问磁盘上的扩展属性。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:155
@@ -667,6 +694,7 @@ msgstr "MAC 框架向应用程序提供了一组系统调用：其中大多数�
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:163
+#, fuzzy
 msgid ""
 "The label management calls accept a label description structure, `struct "
 "mac`, which contains a series of MAC label elements. Each element contains a "
@@ -679,6 +707,11 @@ msgid ""
 "memory allocation and error handling, simplifying user applications that "
 "must manage labels."
 msgstr ""
+"这些标记管理系统调用，接受一个标记描述结构， <varname remap=\"structname\">struct "
+"mac</varname>，作为输入参数。这个结构的主体是一个数组，其中每个元素包含了一个应用级的 MAC 标记形式。每个元素又由两部分组成:一个字符串名"
+"字，和其对应的值。每个策略可以向系统声明一个特定的元素名字，这样一来，如果需要，就可以将若干个相互独立的元素作为一个整体进行处理。策略模块经由入口函数，在"
+"内核标记和用户提供的标记之间作翻译转换的工作，这种实现提供了标记元素语义上的高度灵活性。标记管理系统调用通常有对应的库函数包装，这些包装函数可以提供内存分"
+"配和错误处理功能，从而简化了用户应用程序的标记管理工作。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:165
@@ -727,11 +760,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:173
+#, fuzzy
 msgid ""
 "`mac_syscall()` permits policy modules to create new system calls without "
 "modifying the system call table; it accepts a target policy name, operation "
 "number, and opaque argument for use by the policy."
 msgstr ""
+"<function>mac_syscall()</function> "
+"通过复用该系统调用,策略模块能够在不修改系统调用表的前提下创建新的系统调用；其调用参数包括：目标策略名字、 操作编号和将被该策略内部使用的参数。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:174
@@ -758,12 +794,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:177
+#, fuzzy
 msgid ""
 "`mac_execve()` is identical to the `execve()` system call, only it also "
 "accepts a requested label to set the process label to when beginning "
 "execution of a new program. This change in label on execution is referred to "
 "as a \"transition\"."
 msgstr ""
+"<function>mac_execve()</function> 与<function>execve()</function> "
+"功能类似，只是前者还可以在开始执行一个新程序时,根据传入的请求参数,设置执行进程的安全标记。由于执行一个新程序而导致的进程安全标记的改变,被称为“转换”。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:178
@@ -850,6 +889,7 @@ msgstr "策略注销"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:198
+#, fuzzy
 msgid ""
 "Modules may be declared using the `MAC_POLICY_SET()` macro, which names the "
 "policy, provides a reference to the MAC entry point vector, provides "
@@ -857,6 +897,9 @@ msgid ""
 "policy, and optionally requests the allocation of label state by the "
 "framework."
 msgstr ""
+"策略模块可以使用\t<function>MAC_POLICY_SET()</function> "
+"宏来声明。该宏完成以下工作：为该策略命名（向系统声明该策略提供的名字）；提交策略定义的 MAC 入口函数向量的地址；按照策略的要求设置该策略的加载标志位，"
+"保证 MAC 框架将以策略所期望的方式对其进行操作；另外，还可能请求框架为策略分配标记状态 slot 值。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:212
@@ -877,6 +920,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:215
+#, fuzzy
 msgid ""
 "The MAC policy entry point vector, `mac__policy__ops` in this example, "
 "associates functions defined in the module with specific entry points. A "
@@ -894,6 +938,14 @@ msgid ""
 "careful about what kernel primitives they invoke so as to avoid lock "
 "ordering or sleeping problems."
 msgstr ""
+"如上所示，MAC 策略入口函数向量，<varname>mac_<replaceable>policy</replaceable>_ops</varname"
+">，将策略模块中定义的功能函数挂接到特定的入口函数地址上。在稍后的“入口函数参考”小节中，将提供可用入口函数功能描述和原型的完整列表。与模块注册相关的入口"
+"函数有两个：<symbol>.mpo_destroy</symbol>和<symbol>."
+"mpo_init</symbol>。当某个策略向模块框架注册操作成功时，<symbol>.mpo_init</symbol>将被调用，此后其他的入口函数才"
+"能被使用。这种特殊的设计使得策略有机会根据自己的需要，进行特定的分配和初始化操作，比如对特殊数据或锁的初始化。卸载一个策略模块时，将调用 <symbol>"
+".mpo_destroy</symbol> 用来释放策略分配的内存空间或注销其申请的锁。目前，为了防止其他入口函数被同时调用，"
+"调用上述两个入口函数的进程必须持有 MAC "
+"策略链表的互斥锁：这种限制将被放开，但与此同时，将要求策略必须谨慎使用内核原语,以避免由于上锁次序或睡眠造成死锁。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:217
@@ -961,6 +1013,7 @@ msgstr "MPC_LOADTIME_FLAG_LABELMBUFS"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:231
+#, fuzzy
 msgid ""
 "This flag indicates that the policy module requires labeling of Mbufs, and "
 "that memory should always be allocated for the storage of Mbuf labels. By "
@@ -971,9 +1024,14 @@ msgid ""
 "allocate Mbuf label storage regardless of the setting of this flag, and may "
 "be useful in some environments."
 msgstr ""
+"表示该策略模块要求为 Mbuf 指定安全标记，并且为存储其标记所需的内存空间总是提前分配好的。缺省情况下，MAC 框架并不会为 Mbuf "
+"分配标记存储，除非系统中注册的策略模块中至少有一个设置了该标志。这种做法在没有策略需要对 Mbuf 做标记时，显著地提升了系统网络性能。另外，在某些特殊环"
+"境下，可以通过设置内核选项，<literal>MAC_ALWAYS_LABEL_MBUF</literal>，强制 MAC 框架为 Mbuf "
+"的安全标记分配存储，而不论上述标志如何设置。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:235
+#, fuzzy
 msgid ""
 "Policies using the `MPC_LOADTIME_FLAG_LABELMBUFS` without the "
 "`MPC_LOADTIME_FLAG_NOTLATE` flag set must be able to correctly handle `NULL` "
@@ -983,6 +1041,10 @@ msgid ""
 "is active (i.e., the policy is not being loaded late), then all Mbufs are "
 "guaranteed to have label storage."
 msgstr ""
+"<literal>MPC_LOADTIME_FLAG_NOTLATE</literal> 标志的策略模块必须能够正确地处理通过入口函数传入的值为 "
+"<literal>NULL</literal>的 Mbuf 安全标记指针。这是因为那些没有分配标记存储的处理中的 Mbuf 在一个需要 Mbuf "
+"安全标记的策略模块加载之后，其安全标记的指针将仍然为空。如果策略在网络子系统活跃之前被加载（即，该策略不是被推迟加载的），那么所有的 Mbuf "
+"的标记存储的分配就可以得到保证。"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:238
@@ -992,6 +1054,7 @@ msgstr "策略入口函数"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:241
+#, fuzzy
 msgid ""
 "Four classes of entry points are offered to policies registered with the "
 "framework: entry points associated with the registration and management of "
@@ -1002,6 +1065,9 @@ msgid ""
 "entry point is provided so that policies may extend the kernel interface "
 "without registering new system calls."
 msgstr ""
+"MAC 框架为注册的策略提供四种类型的入口函数：策略注册和管理入口函数；用于处理内核对象声明周期事件，如初始化、创建和销毁，的入口函数；处理该策略模块感兴"
+"趣的访问控制决策事件的入口函数；以及用于管理对象安全标记的调用入口函数。此外，还有一个 <function>mac_syscall()</"
+"function> 入口函数，被策略模块用于在不注册新的系统调用的前提下，扩展内核接口。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:243
@@ -1198,6 +1264,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:360
+#, fuzzy
 msgid ""
 "This entry point permits policy modules to perform MAC-related events when a "
 "thread returns to user space, via a system call return, trap return, or "
@@ -1214,6 +1281,12 @@ msgid ""
 "ordering relating to scheduling an AST and the AST being performed may be "
 "complex and interlaced in multithreaded applications."
 msgstr ""
+"使用该入口函数，策略模块能够在线程返回用户空间时（系统调用返回、异常返回等等）进行 MAC 相关的处理工作。使用动态进程标记的策略需要使用该入口函数，因为"
+"在处理系统调用的过程中，并不是在任意时刻都能申请到进程锁的；进程的标记可能表示传统的认证信息、进程历史记录或者其他数据。为使用该入口函数，"
+"对进程信任状所作的修改可能被存放在 <literal>p_label</literal> ,该域受一个进程级自旋锁的保护；接下来，设置线程级的<liter"
+"al>TDF_ASTPENDING</literal>标志位和进程级的<literal>PS_MACPENDM</literal>标志位，"
+"表明将调度一个对 userret 入口函数的调用。通过该入口函数，策略可以在相对简单的同步上下文中创建信任状的替代品。策略编程人员必须清楚，"
+"需要保证与调度一个 AST 相关的事件执行次序，同时所执行的 AST 可能很复杂，而且在处理多线程应用程序时可能被重入。"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:362
@@ -2487,6 +2560,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:1559
+#, fuzzy
 msgid ""
 "Object specific events do not generally fall into the other broad classes of "
 "label events, but will generally provide an opportunity to modify or update "
@@ -2495,6 +2569,8 @@ msgid ""
 "entry point as a result of the acceptance of an additional mbuf to that "
 "queue."
 msgstr ""
+"对象特有的事件一般不会引发其他的标记事件，但是在对象上下文发生改变时，策略使用它们可以对相关标记进行修改或更新操作。例如，在<symbol>MAC_UPD"
+"ATE_IPQ</symbol> 入口函数之内，某个 IP 分片重组队列的标记可能会因为队列中接收了新的 mbuf 而被更新。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:1561
@@ -2511,6 +2587,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:1565
+#, fuzzy
 msgid ""
 "In addition to labels associated with specific kernel objects, an additional "
 "class of labels exists: temporary labels. These labels are used to store "
@@ -2519,6 +2596,8 @@ msgid ""
 "MAC_INTERNALIZE, which accepts a user label to be converted to an in-kernel "
 "representation."
 msgstr ""
+"除了与特定内核对象绑定的普通标记之外，还有一种额外的标记类型：临时标记。这些标记用于存放由用户进程提交的更新信息。它们的初始化和销毁操作与其他标记一样，只"
+"是创建事件，<symbol>MAC_INTERNALIZE</symbol>，略有不同：该函数接受用户提交的标记，负责将其转化为内核表示形式。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:1567
@@ -4159,12 +4238,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2852
+#, fuzzy
 msgid ""
 "Set the label on the mbuf header of a newly created datagram generated by "
 "the IP stack in response to an existing received datagram (`oldmbuf`). This "
 "call may be made in a number of situations, including when responding to "
 "ICMP request datagrams."
 msgstr ""
+"为由 IP 堆栈因为响应接收数据报（<parameter>oldmbuf</parameter>）而新建的数据报设置其 mbuf "
+"头部的标记。许多情况下需要调用该函数，比如，响应 ICMP 请求数据报时。"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2854
@@ -4213,6 +4295,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2893
+#, fuzzy
 msgid ""
 "Determine whether an mbuf header containing an IP datagram (`fragment`) "
 "fragment matches the label of the passed IP fragment reassembly queue "
@@ -4224,6 +4307,11 @@ msgid ""
 "policy does not permit them to be reassembled based on the label or other "
 "information."
 msgstr ""
+"根据所传入的 IP 分片重组队列（<parameter>ipq</parameter>）的标记，检查包含一个 IP "
+"数据报（<parameter>fragment</parameter>）的 mbuf 的头部是否符合其要求。符合，则返回<returnvalue>1</r"
+"eturnvalue>。否则，返回<returnvalue>0</returnvalue>。每当 IP 堆栈尝试将一个刚刚接收到的分片放入某个已有的分片重"
+"组队列中时，将调用该函数进行安全检查；如果失败，将为分片重新实例化一个新的分片重组队列。策略可以利用该入口函数，根据标记或者其他信息阻止不期望的 IP "
+"分片重组。"
 
 #. type: Title =====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:2895
@@ -6150,6 +6238,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:4455
+#, fuzzy
 msgid ""
 "Determine whether the subject credential can retrieve the extended attribute "
 "with the passed namespace and name from the passed vnode. Policies "
@@ -6158,6 +6247,10 @@ msgid ""
 "or an `errno` value for failure. Suggested failure: EACCES for label "
 "mismatch, or EPERM for lack of privilege."
 msgstr ""
+"确定相关主体信任状是否有权查询给定 vnode "
+"上给定名字空间和名字的扩展属性。使用扩展属性实现标记存储的策略模块可能会需要对这些扩展属性的操作进行特殊处理。成功，则返回 <returnvalue>0<"
+"/returnvalue>；否则，返回一个<varname>errno</varname>值。建议使用的错误编码：<errorcode>EACCES</e"
+"rrorcode>，用于标记不匹配；<errorcode>EPERM</errorcode>，用于权限不够。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:4457
@@ -6904,6 +6997,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:5102
+#, fuzzy
 msgid ""
 "Determine whether the subject credential can set the extended attribute of "
 "passed name and passed namespace on the passed vnode. Policies implementing "
@@ -6915,6 +7009,11 @@ msgid ""
 "for success, or an `errno` value for failure. Suggested failure: EACCES for "
 "label mismatch, or EPERM for lack of privilege."
 msgstr ""
+"确定相关主体信任状是否有权设置给定 vnode 上给定名字空间中给定名字的扩展属性的值。使用扩展属性备份安全标记的策略模块可能需要对其使用的属性实施额外的"
+"保护。另外，由于在检查和实际操作时间可能存在的竞争，策略模块应该避免根据来自<parameter>uio</parameter>中的数据做出决策。如果正在"
+"执行一个删除操作，则参数 <parameter>uio</parameter> 的值也可能为 <literal>NULL</literal>。成功，"
+"则返回 <returnvalue>0</returnvalue>；否则，返回一个<varname>errno</varname>值。建议使用的错误编码：<"
+"errorcode>EACCES</errorcode>，用于标记不匹配；<errorcode>EPERM</errorcode>，用于权限不够。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/mac/chapter.adoc:5104
