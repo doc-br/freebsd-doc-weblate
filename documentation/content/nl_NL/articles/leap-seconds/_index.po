@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-04-05 03:25+0000\n"
+"PO-Revision-Date: 2021-04-12 20:54+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Dutch <https://translate-dev.freebsd.org/projects/"
 "documentation/articlesleap-seconds_index/nl_NL/>\n"
@@ -45,11 +45,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:30
+#, fuzzy
 msgid ""
 "As of this writing, the next leap second will occur at 2015-Jun-30 23:59:60 "
 "UTC.  This leap second will occur during a business day for North and South "
 "America and the Asia/Pacific region."
 msgstr ""
+"Op het moment van schrijven zal de volgende schrikkelseconde plaatsvinden op "
+"2015-juni-30 23:59:60 UTC. Deze schrikkelseconde zal plaatsvinden op een "
+"werkdag voor Noord- en Zuid-Amerika en het Aziatische/Pacifische gebied."
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:32
@@ -121,12 +125,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:57
+#, fuzzy
 msgid ""
 "However, we caution that practically no applications have ever asked the "
 "kernel about leap seconds.  Our experience is that, as designed, leap "
 "seconds are essentially a replay of the second before the leap second, and "
 "this is a surprise to most application programmers."
 msgstr ""
+"We waarschuwen echter dat praktisch geen enkele toepassing de kernel ooit om "
+"schrikkelseconden heeft gevraagd. Onze verwachting is dat, zoals ontworpen, "
+"schrikkelseconden in feite een herhaling zijn van de seconde voor de "
+"schrikkelseconde, wat een verassing is voor de meeste "
+"toepassingsprogrammeurs."
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:59
@@ -138,11 +148,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:61
+#, fuzzy
 msgid ""
 "It is not unheard of for computers to crash because of leap seconds, and "
 "experience has shown that a large fraction of all public NTP servers might "
 "handle and announce the leap second incorrectly."
 msgstr ""
+"Het komt voor dat computers crashen vanwege schrikkelseconden, en ervaring "
+"laat zien dat een groot gedeelte van alle publieke <acronym>NTP</acronym>-"
+"servers de schrikkelseconde onjuist kunnen aankondigen en afhandelen."
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:63
@@ -160,12 +174,18 @@ msgstr "Testen"
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:71
+#, fuzzy
 msgid ""
 "It is possible to test whether a leap second will be used.  Due to the "
 "nature of NTP, the test might work up to 24 hours before the leap second.  "
 "Some major reference clock sources only announce leap seconds one hour ahead "
 "of the event.  Query the NTP daemon:"
 msgstr ""
+"Het is mogelijk om te kijken of een schrikkelseconde zal worden gebruikt. "
+"Vanwege de aard van <acronym>NTP</acronym> kan de test tot 24 uur voor de "
+"schrikkelseconde werken. Sommige grote bronnen van referentieklokken "
+"kondigen schrikkelseconden slechts één uur van te voren aan. Ondervraag de "
+"daemon <acronym>NTP</acronym>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/leap-seconds/_index.adoc:75
@@ -175,11 +195,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:79
+#, fuzzy
 msgid ""
 "Output that includes `leap_add_sec` indicates proper support of the leap "
 "second.  Before the 24 hours leading up to the leap second, or after the "
 "leap second has passed, `leap_none` will be shown."
 msgstr ""
+"Uitvoer die <literal>leap_add_sec</literal> bevat wijst op correcte "
+"ondersteuning van de schrikkelseconde. Voorafgaand aan de 24 uur die tot de "
+"schrikkelseconde leiden, of nadat de schrikkelseconde is verstreken, zal "
+"<literal>leap_none</literal> zichtbaar zijn."
 
 #. type: Title ==
 #: documentation/content/en/articles/leap-seconds/_index.adoc:81
@@ -189,8 +214,12 @@ msgstr "Conclusie"
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:84
+#, fuzzy
 msgid ""
 "In practice, leap seconds are usually not a problem on FreeBSD.  We hope "
 "that this overview helps clarify what to expect and how to make the leap "
 "second event proceed more smoothly."
 msgstr ""
+"In de praktijk zijn schrikkelseconden meestal geen probleem op FreeBSD. We "
+"hopen dat dit overzicht helpt met wat te verwachten en hoe schrikkelseconden "
+"gladder te laten verlopen."
