@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-05 01:29+0000\n"
+"PO-Revision-Date: 2021-04-11 12:25+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/booksarch-handbookjailchapter/zh_CN/>\n"
@@ -387,7 +387,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/jail/chapter.adoc:203
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "/usr/include/sys/jail.h:\n"
 "struct prison {\n"
@@ -415,6 +415,29 @@ msgid ""
 "*/\n"
 "};\n"
 msgstr ""
+"<filename>/usr/include/sys/jail.h</filename>:\n"
+"struct prison {\n"
+"        LIST_ENTRY(prison) pr_list;                     /* (a) all prisons */"
+"\n"
+"        int              pr_id;                         /* (c) prison id */\n"
+"        int              pr_ref;                        /* (p) refcount */\n"
+"        char             pr_path[MAXPATHLEN];           /* (c) chroot path */"
+"\n"
+"        struct vnode    *pr_root;                       /* (c) vnode to rdir "
+"*/\n"
+"        char             pr_host[MAXHOSTNAMELEN];       /* (p) jail hostname "
+"*/\n"
+"        u_int32_t        pr_ip;                         /* (c) ip addr host "
+"*/\n"
+"        void            *pr_linux;                      /* (p) linux abi */\n"
+"        int              pr_securelevel;                /* (p) securelevel */"
+"\n"
+"        struct task      pr_task;                       /* (d) destroy task "
+"*/\n"
+"        struct mtx       pr_mtx;\n"
+"      void            **pr_slots;                     /* (p) additional data "
+"*/\n"
+"};\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/jail/chapter.adoc:206
@@ -823,6 +846,7 @@ msgstr "网络协议"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/jail/chapter.adoc:387
+#, fuzzy
 msgid ""
 "There are certain protocols which are very common, such as TCP, UDP, IP and "
 "ICMP. IP and ICMP are on the same level: the network layer 2. There are "
@@ -837,6 +861,13 @@ msgid ""
 "disallows any processes from jail to be able to specify the address that "
 "does not belong to the jail in which the calling process exists."
 msgstr ""
+"网络协议TCP, UDP, IP和ICMP很常见。IP和ICMP处于同一协议层次：第二层，网络层。当参数<literal>nam</literal>被设置"
+"时，有一些限制措施会防止被囚禁的程序绑定到一些网络接口上。<literal>nam</literal>是一个指向<literal>sockaddr</li"
+"teral>结构体的指针，描述可以绑定服务的地址。一个更确切的定义：<literal>sockaddr</literal>“是一个模板，包含了地址的标识符"
+"和地址的长度”。在函数<literal>in_pcbbind_setup()</literal>中<literal>sin</literal>是一个指向<"
+"literal>sockaddr_in</literal>结构体的指针，这个结构体包含了套接字可以绑定的端口、地址、长度、协议族。这就禁止了在<appli"
+"cation>jail</application>中的进程指定不属于这个进程所存在于的<application>jail</application>的IP"
+"地址。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/jail/chapter.adoc:424
