@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-05 20:20+0000\n"
+"PO-Revision-Date: 2021-04-11 12:24+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookpreface_index/zh_TW/>\n"
@@ -340,6 +340,7 @@ msgstr "本書架構"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/preface/_index.adoc:85
+#, fuzzy
 msgid ""
 "This book is split into five logically distinct sections. The first section, "
 "_Getting Started_, covers the installation and basic usage of FreeBSD. It is "
@@ -354,6 +355,11 @@ msgid ""
 "Communication_, covers networking and server topics. The fifth section "
 "contains appendices of reference information."
 msgstr ""
+"本書主要分為五大部分，第一部份<emphasis>入門</emphasis>：介紹 FreeBSD 的安裝、基本操作。 "
+"讀者可根據自己的程度，循序或者跳過一些熟悉的主題來閱讀； 第二部分<emphasis>一般作業</emphasis>：介紹 FreeBSD "
+"常用功能，這部分可以不按順序來讀。 每章前面都會有概述，概述會描述本章節涵蓋的內容和讀者應該已知的， 這主要是讓讀者可以挑喜歡的章節閱讀； "
+"第三部分<emphasis>系統管理</emphasis>：介紹 FreeBSD 老手所感興趣的各種主題部分； "
+"第四部分<emphasis>網路通訊</emphasis>：則包括網路和各式伺服器主題；而第五部分則為附錄包含各種有關 FreeBSD 的資源。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/preface/_index.adoc:86
@@ -822,10 +828,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/preface/_index.adoc:195
+#, fuzzy
 msgid ""
 "An _italic_ font is used for filenames, URLs, emphasized text, and the first "
 "usage of technical terms."
-msgstr ""
+msgstr "<emphasis>斜體字</emphasis>用於：檔名、目錄、網址 (URL)、 強調語氣、以及第一次提及的技術詞彙。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/preface/_index.adoc:196
@@ -934,11 +941,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/preface/_index.adoc:235
+#, fuzzy
 msgid ""
 "Examples starting with % indicate a command that should be invoked from a "
 "normal user account. Unless otherwise noted, C-shell syntax is used for "
 "setting environment variables and other shell commands."
 msgstr ""
+"範例以 <prompt>%</prompt> 為開頭代表在 FreeBSD 中以一般使用者帳號執行的指令。 除非有提到其他用法，否則都是預設為 C-"
+"shell 語法，用來設定環境變數以及下其他指令的意思。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/preface/_index.adoc:239
@@ -962,6 +972,7 @@ msgstr "您所看到的這本書是經過數百個分散在世界各地的人所
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/preface/_index.adoc:246
+#, fuzzy
 msgid ""
 "Several companies have supported the development of this document by paying "
 "authors to work on it full-time, paying for publication, etc. In particular, "
@@ -976,3 +987,9 @@ msgid ""
 "Inc], paid several contributors to improve the Handbook in preparation for "
 "the third printed edition."
 msgstr ""
+"也有一些公司透過提供資金讓作者專注於撰稿、提供出版資金等模式來支持文件的寫作。 其中，BSDi (之後併入 <link xlink:href=\"http"
+"://www.windriver.com\">Wind River Systems</link>) 資助 FreeBSD "
+"文件計劃成員來專職改善這本書直到 2000 年 3 月第一版的出版。(ISBN 1-57176-241-8) Wind River Systems "
+"同時資助其他作者來對輸出架構做很多改進，以及給文章增加一些附加章節。這項工作結束於 2001 年 11 月第二版。(ISBN 1-57176-303-1)"
+" 在 2003-2004 兩年中，<link xlink:href=\"http://www.freebsdmall.com\">FreeBSD "
+"Mall, Inc</link> 把報酬支付給改進這本手冊以使第三版印刷版本能夠出版的志工。"
