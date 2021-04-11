@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: 2021-04-05 12:38+0000\n"
+"PO-Revision-Date: 2021-04-12 20:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookl10n_index/zh_CN/>\n"
@@ -197,6 +197,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:110
+#, fuzzy
 msgid ""
 "Some languages, such as Chinese or Japanese, cannot be represented using "
 "ASCII characters and require an extended language encoding using either wide "
@@ -207,6 +208,9 @@ msgid ""
 "compile an application with wide or multibyte character support, or to "
 "configure it correctly."
 msgstr ""
+"某些语言（如中文或日语）无法使用<acronym>ASCII</acronym>字符表示，并且需要使用宽字符或多字节字符进行扩展语言编码。"
+"宽或多字节编码的示例包括 EUC 和 Big5。较旧的应用程序可能会将这些编码误认为控制字符，而较新的应用程序通常可识别这些字符。根据实现的不同，用户可能"
+"需要编译具有宽或多字节字符支持的应用程序，或正确配置它。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:114
@@ -215,11 +219,14 @@ msgstr "FreeBSD 使用与 Xorg 兼容的区域设置编码。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:117
+#, fuzzy
 msgid ""
 "The rest of this section describes the various methods for configuring the "
 "locale on a FreeBSD system. The next section will discuss the considerations "
 "for finding and compiling applications with i18n support."
 msgstr ""
+"本节的其余部分描述了在FreeBSD系统上配置语言环境的各种方法。下一节将讨论使用 <acronym>i18n</acronym> "
+"支持查找和编译应用程序的注意事项。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/l10n/_index.adoc:119
@@ -252,10 +259,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:129
+#, fuzzy
 msgid ""
 "In addition to the user's shell configuration, these variables should also "
 "be set for specific application configuration and Xorg configuration."
-msgstr ""
+msgstr "除了用户的shell配置之外，还应该为特定的应用程序配置和<application>Xorg</application>配置设置这些变量。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:131
@@ -274,41 +282,51 @@ msgstr "Login Classes 方法"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:136
+#, fuzzy
 msgid ""
 "This first method is the recommended method as it assigns the required "
 "environment variables for locale name and MIME character sets for every "
 "possible shell. This setup can either be performed by each user or it can be "
 "configured for all users by the superuser."
 msgstr ""
+"推荐使用第一种方法，因为它为每个可能的 shell 分配区域设置名称和 MIME "
+"字符集所需的环境变量。此设置可以由每个用户执行，也可以由超级用户为所有用户配置。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:138
+#, fuzzy
 msgid ""
 "This minimal example sets both variables for Latin-1 encoding in the "
 "[.filename]#.login_conf# of an individual user's home directory:"
-msgstr ""
+msgstr "最简单的例子：在用户目录中的<filename>.login_conf</filename>中设置两个 Latin-1编码变量："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:144
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "me:\\\n"
 "\t:charset=ISO-8859-1:\\\n"
 "\t:lang=de_DE.ISO8859-1:\n"
 msgstr ""
+"me:\\\n"
+"\t:charset=ISO-8859-1:\\\n"
+"\t:lang=de_DE.ISO8859-1:\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:147
+#, fuzzy
 msgid ""
 "Here is an example of a user's [.filename]#~/.login_conf# that sets the "
 "variables for Traditional Chinese in BIG-5 encoding. More variables are "
 "needed because some applications do not correctly respect locale variables "
 "for Chinese, Japanese, and Korean:"
 msgstr ""
+"这是一个为<filename>.login_conf</filename>设置繁体中文的BIG-5编码的例子。应该设置下面的大部分变量， "
+"因为有些应用程序不正确地识别中文、日文和韩文的语言环境变量："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:157
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "#Users who do not wish to use monetary units or time formats\n"
 "#of Taiwan can manually change each variable\n"
@@ -318,6 +336,15 @@ msgid ""
 "\t:charset=big5:\\\n"
 "\t:xmodifiers=\"@im=gcin\": #Set gcin as the XIM Input Server\n"
 msgstr ""
+"#Users who do not wish to use monetary units or time formats\n"
+"#of Taiwan can manually change each variable\n"
+"me:\\\n"
+"\t:lang=zh_TW.Big5:\\\n"
+"\t:setenv=LC_ALL=zh_TW.Big5,LC_COLLATE=zh_TW.Big5,LC_CTYPE=zh_TW."
+"Big5,LC_MESSAGES=zh_TW.Big5,LC_MONETARY=zh_TW.Big5,LC_NUMERIC=zh_TW."
+"Big5,LC_TIME=zh_TW.Big5:\\\n"
+"\t:charset=big5:\\\n"
+"\t:xmodifiers=\"@im=gcin\": #Set gcin as the XIM Input Server\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:160
@@ -344,13 +371,17 @@ msgstr "所以，之前的 Latin-1 示例如下所示："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:177
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "german|German Users Accounts:\\\n"
 "\t:charset=ISO-8859-1:\\\n"
 "\t:lang=de_DE.ISO8859-1:\\\n"
 "\t:tc=default:\n"
 msgstr ""
+"german|German Users Accounts:\\\n"
+"\t:charset=ISO-8859-1:\\\n"
+"\t:lang=de_DE.ISO8859-1:\\\n"
+"\t:tc=default:\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:180
@@ -361,10 +392,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:182
+#, fuzzy
 msgid ""
 "Whenever [.filename]#/etc/login.conf# is edited, remember to execute the "
 "following command to update the capability database:"
-msgstr ""
+msgstr "每当编辑<filename>/etc/login.conf</filename>时，请记住执行以下命令以更新数据库："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:186
@@ -387,10 +419,11 @@ msgstr "修改登入类的工具"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:196
+#, fuzzy
 msgid ""
 "In addition to manually editing [.filename]#/etc/login.conf#, several "
 "utilities are available for setting the locale for newly created users."
-msgstr ""
+msgstr "除了手动编辑<filename>/etc/login.conf</filename>之外，还有几个实用程序可用于为新创建的用户设置区域设置。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:198
@@ -456,10 +489,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:230
+#, fuzzy
 msgid ""
 "To change the login class of an existing user, `chpass` can be used. Invoke "
 "it as superuser and provide the username to edit as the argument."
-msgstr ""
+msgstr "要更改现有用户的登录类，可以使用<command>chpass</command>。调用它作为超级用户，并提供用户名编辑作为参数。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:234
@@ -475,6 +509,7 @@ msgstr "Shell 启动文件方法"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:241
+#, fuzzy
 msgid ""
 "This second method is not recommended as each shell that is used requires "
 "manual configuration, where each shell has a different configuration file "
@@ -484,6 +519,10 @@ msgid ""
 "[.filename]#/etc/profile# or [.filename]#/usr/share/skel/dot.profile# to set "
 "that shell for all users:"
 msgstr ""
+"第二种方法，较不建议使用，因每一种使用到的Shell都需要手动设定，而每一种Shell都有不同的配置文件以及语法。例如将一位使用者的<command>sh"
+"</command> shell设定为德语，需要将下列行加到<filename>~/."
+"profile</filename>，若要设定给使用该Shell的所有使用者则必须将下列行加到<filename>/etc/"
+"profile</filename>或<filename>/usr/share/skel/dot.profile</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:246
@@ -556,10 +595,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:283
+#, fuzzy
 msgid ""
 "The keymap and screenmap can be set by adding the following to "
 "[.filename]#/etc/rc.conf#:"
 msgstr ""
+"键盘对应表（Keymap）及屏幕对应表（Screenmap）用可加入下行到<filename>/etc/rc.conf</filename>来设定："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:289
@@ -572,6 +613,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:292
+#, fuzzy
 msgid ""
 "To see the list of available screenmaps, type `ls "
 "/usr/share/syscons/scrnmaps`. Do not include the [.filename]#.scm# suffix "
@@ -580,6 +622,10 @@ msgid ""
 "adapter's font character matrix so that letters are moved out of the "
 "pseudographics area if the screen font uses a bit 8 column."
 msgstr ""
+"要查看可用的屏幕对应表，可输入<command>ls /usr/share/syscons/scrnmaps</command>。在设定屏幕对应表<rep"
+"laceable>screenmap_name</replaceable>时请去掉<filename>.scm</filename>后缀。在VGA "
+"Adapter的字体字元矩阵扩充位8到位元9时会需要使用屏幕对应表与相关的字体对应来解决，因此若屏幕字体使用位8的字段，字母会移出虚拟绘图区（"
+"Pseudographics area）。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:294
@@ -592,11 +638,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:296
+#, fuzzy
 msgid ""
 "The `keychange` entry is usually needed to program function keys to match "
 "the selected terminal type because function key sequences cannot be defined "
 "in the keymap."
-msgstr ""
+msgstr "<literal>keychange</literal>项目用在当功能键序列无法定义在键盘对应表时，可设定对应选择终对机类型的功能键。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:298
@@ -695,9 +742,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:360
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "mousechar_start=3\n"
-msgstr ""
+msgstr "mousechar_start=3\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/l10n/_index.adoc:362
@@ -899,26 +946,31 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:492
+#, fuzzy
 msgid ""
 "To set this locale for the login shell, add the following lines to each "
 "user's [.filename]#~/.login_conf#:"
-msgstr ""
+msgstr "若要为登录shell设置此区域设置，请将以下行添加到每个用户的 <filename> ~/.login_conf </filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:498
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "me:My Account:\\\n"
 "\t:charset=KOI8-R:\\\n"
 "\t:lang=ru_RU.KOI8-R:\n"
 msgstr ""
+"me:My Account:\\\n"
+"\t:charset=KOI8-R:\\\n"
+"\t:lang=ru_RU.KOI8-R:\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:501
+#, fuzzy
 msgid ""
 "To configure the console, add the following lines to "
 "[.filename]#/etc/rc.conf#:"
-msgstr ""
+msgstr "要配置控制台，请将以下行添加到<filename>/etc/rc.conf</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:510
@@ -951,12 +1003,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:521
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "lp|Russian local line printer:\\\n"
 "\t:sh:of=/usr/libexec/lpr/ru/koi2alt:\\\n"
 "\t:lp=/dev/lpt0:sd=/var/spool/output/lpd:lf=/var/log/lpd-errs:\n"
 msgstr ""
+"lp|Russian local line printer:\\\n"
+"\t:sh:of=/usr/libexec/lpr/ru/koi2alt:\\\n"
+"\t:lp=/dev/lpt0:sd=/var/spool/output/lpd:lf=/var/log/lpd-errs:\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:524
@@ -973,9 +1028,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:530
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "/dev/ad0s2      /dos/c  msdos   rw,-Lru_RU.KOI8-R 0 0\n"
-msgstr ""
+msgstr "/dev/ad0s2      /dos/c  msdos   rw,-Lru_RU.KOI8-R 0 0\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:533
@@ -993,9 +1048,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:539
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "FontPath   \"/usr/local/lib/X11/fonts/cyrillic\"\n"
-msgstr ""
+msgstr "FontPath   \"/usr/local/lib/X11/fonts/cyrillic\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:542
@@ -1011,11 +1066,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:549
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Option \"XkbLayout\"   \"us,ru\"\n"
 "Option \"XkbOptions\"  \"grp:toggle\"\n"
 msgstr ""
+"Option \"XkbLayout\"   \"us,ru\"\n"
+"Option \"XkbOptions\"  \"grp:toggle\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:552
@@ -1041,17 +1098,20 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:560
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Option \"XkbVariant\" \",winkeys\"\n"
-msgstr ""
+msgstr "Option \"XkbVariant\" \",winkeys\"\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/l10n/_index.adoc:565
+#, fuzzy
 msgid ""
 "The Russian XKB keyboard may not work with non-localized "
 "applications. Minimally localized applications should call a "
 "`XtSetLanguageProc (NULL, NULL, NULL);` function early in the program."
 msgstr ""
+"俄语的 XKB 键盘可能并不为某些不具备本地化功能的应用程序所支持。本地化程序最低限度应在程序启动时调用 "
+"<function>XtSetLanguageProc (NULL, NULL, NULL);</function> 函数。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/l10n/_index.adoc:568
