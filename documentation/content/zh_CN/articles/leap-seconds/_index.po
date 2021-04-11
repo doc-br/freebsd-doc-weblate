@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-04-11 02:08+0000\n"
-"Last-Translator: Hongyou Bai <bhy1924@gmail.com>\n"
+"PO-Revision-Date: 2021-04-12 20:51+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/articlesleap-seconds_index/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -38,19 +38,21 @@ msgstr "介绍"
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:27
+#, fuzzy
 msgid ""
 "A _leap second_ is an one second adjustment made at specific times of year "
 "to UTC to synchronize atomic time scales with variations in the rotation of "
 "the Earth.  This article describes how FreeBSD interacts with leap seconds."
-msgstr ""
+msgstr "<emphasis>闰秒</emphasis>是为了同步地球自转，而对原子钟标准时间所做的特定修正。本文描述了 FreeBSD 如何处理闰秒。"
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:30
+#, fuzzy
 msgid ""
 "As of this writing, the next leap second will occur at 2015-Jun-30 23:59:60 "
 "UTC.  This leap second will occur during a business day for North and South "
 "America and the Asia/Pacific region."
-msgstr ""
+msgstr "截至本文完稿时，下一个闰秒将会发生在2015年6月30日23:59:60 UTC。这个闰秒将会发生在南北美洲和亚太地区的一个工作日里。"
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:32
@@ -122,12 +124,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:57
+#, fuzzy
 msgid ""
 "However, we caution that practically no applications have ever asked the "
 "kernel about leap seconds.  Our experience is that, as designed, leap "
 "seconds are essentially a replay of the second before the leap second, and "
 "this is a surprise to most application programmers."
 msgstr ""
+"然而我们要警告，事实上没有应用程序会向内核询问关于闰秒的事。我们的经验是，闰秒正如设计的一样，本质上是闰秒前一秒的重播，这对大部分应用程序开发者来说是意想"
+"不到的事。"
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:59
@@ -139,11 +144,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:61
+#, fuzzy
 msgid ""
 "It is not unheard of for computers to crash because of leap seconds, and "
 "experience has shown that a large fraction of all public NTP servers might "
 "handle and announce the leap second incorrectly."
-msgstr ""
+msgstr "电脑因为闰秒而崩溃并非闻所未闻，经验显示，大量的公共 <acronym>NTP</acronym> 服务器可能会错误处理和公告闰秒。"
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:63
@@ -159,12 +165,15 @@ msgstr "测试"
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:71
+#, fuzzy
 msgid ""
 "It is possible to test whether a leap second will be used.  Due to the "
 "nature of NTP, the test might work up to 24 hours before the leap second.  "
 "Some major reference clock sources only announce leap seconds one hour ahead "
 "of the event.  Query the NTP daemon:"
 msgstr ""
+"测试是否将使用闰秒是可行的。由于 <acronym>NTP</acronym> "
+"的性质，测试可能要运行到闰秒前24小时。有些主要的参考时钟来源只在闰秒事件前一小时公告。查询 <acronym>NTP</acronym> 守护进程："
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/leap-seconds/_index.adoc:75
@@ -174,11 +183,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:79
+#, fuzzy
 msgid ""
 "Output that includes `leap_add_sec` indicates proper support of the leap "
 "second.  Before the 24 hours leading up to the leap second, or after the "
 "leap second has passed, `leap_none` will be shown."
 msgstr ""
+"包含 <literal>leap_add_sec</literal> 的输出表明了对于闰秒的正确支持。<literal>leap_none</"
+"literal> 会在闰秒前24小时或闰秒过后显示。"
 
 #. type: Title ==
 #: documentation/content/en/articles/leap-seconds/_index.adoc:81
@@ -188,8 +200,9 @@ msgstr "结论"
 
 #. type: Plain text
 #: documentation/content/en/articles/leap-seconds/_index.adoc:84
+#, fuzzy
 msgid ""
 "In practice, leap seconds are usually not a problem on FreeBSD.  We hope "
 "that this overview helps clarify what to expect and how to make the leap "
 "second event proceed more smoothly."
-msgstr ""
+msgstr "在实践中，FreeBSD 中的闰秒通常不是个问题。我们希望这篇文章能解释清楚这方面可能出现的状况，以及如何使闰秒事件进行得更顺利。"
