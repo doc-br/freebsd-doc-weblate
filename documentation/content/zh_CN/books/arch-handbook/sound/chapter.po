@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-05 12:39+0000\n"
+"PO-Revision-Date: 2021-04-12 20:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/booksarch-handbooksoundchapter/zh_CN/>\n"
@@ -53,12 +53,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:40
+#, fuzzy
 msgid ""
 "A system call interface (read, write, ioctls) to digitized sound and mixer "
 "functions. The ioctl command set is compatible with the legacy _OSS_ or "
 "_Voxware_ interface, allowing common multimedia applications to be ported "
 "without modification."
 msgstr ""
+"一个到数字化声音和混音器函数的系统调用接口（read, write, ioctls）。ioctl命令集合兼容老的<emphasis>OSS</"
+"emphasis> 或<emphasis>Voxware</emphasis>接口，允许一般多媒体应用程序 不加修改地移植。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:41
@@ -81,18 +84,21 @@ msgstr "对某些通用硬件接口（ac97）或共享的硬件特定代码 （�
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:45
+#, fuzzy
 msgid ""
 "The support for specific sound cards is implemented by hardware-specific "
 "drivers, which provide channel and mixer interfaces to plug into the generic "
 "[.filename]#pcm# code."
 msgstr ""
+"对特定声卡的支持是通过硬件特定的驱动程序来实现的，这些驱动程序 提供通道和混音器接口，插入到通用<filename>pcm</filename>代码中。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:47
+#, fuzzy
 msgid ""
 "In this chapter, the term [.filename]#pcm# will refer to the central, common "
 "part of the sound driver, as opposed to the hardware-specific modules."
-msgstr ""
+msgstr "本章中，术语<filename>pcm</filename>将指声音驱动程序的 中心，通用部分，这是对比硬件特定的模块而言的。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:49
@@ -123,11 +129,14 @@ msgstr "文件"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:56
+#, fuzzy
 msgid ""
 "All the relevant code lives in [.filename]#/usr/src/sys/dev/sound/#, except "
 "for the public ioctl interface definitions, found in "
 "[.filename]#/usr/src/sys/sys/soundcard.h#"
 msgstr ""
+"除<filename>/usr/src/sys/sys/soundcard.h</filename>中的公共 ioctl接口定义外，所有的相关代码当前("
+"FreeBSD 4.4)位于 <filename>/usr/src/sys/dev/sound/</filename>。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:58
@@ -234,19 +243,24 @@ msgstr "有两种可能的方法来处理非PnP设备："
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:89
+#, fuzzy
 msgid ""
 "Use a `device_identify()` method (example: "
 "[.filename]#sound/isa/es1888.c#). The `device_identify()` method probes for "
 "the hardware at known addresses and, if it finds a supported device, creates "
 "a new pcm device which is then passed to probe/attach."
 msgstr ""
+"使用<function>device_identify()</function>方法 （范例：<filename>sound/isa/es1888."
+"c</filename>）。 <function>device_identify()</function>方法在已知地址探测硬件， "
+"如果发现支持的设备就会创建一个新的pcm设备，这个pcm设备接着 会被传递到probe/attach。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:90
+#, fuzzy
 msgid ""
 "Use a custom kernel configuration with appropriate hints for pcm devices "
 "(example: [.filename]#sound/isa/mss.c#)."
-msgstr ""
+msgstr "使用定制内核配置的方法，为pcm设备设置适当的hints（范例： <filename>sound/isa/mss.c</filename>）。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:92
@@ -425,11 +439,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:147
+#, fuzzy
 msgid ""
 "<.> The function should return a pointer to the private area used to control "
 "this channel. This will be passed as a parameter to other channel interface "
 "calls."
-msgstr ""
+msgstr "函数应当返回一个指针，此指针指向用于控制此通道的私有 区域。它将作为参数被传递到对其他通道接口的调用。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:148
@@ -446,7 +461,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:161
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "          static int\n"
 "          xxxchannel_setformat(kobj_t obj, void *data, u_int32_t format) "
@@ -457,6 +472,13 @@ msgid ""
 "              return 0;\n"
 "           }\n"
 msgstr ""
+"          static int\n"
+"          xxxchannel_setspeed(kobj_t obj, void *data, u_int32_t speed)\n"
+"          {\n"
+"              struct xxx_chinfo *ch = data;\n"
+"               ...\n"
+"              return speed;\n"
+"           }\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:164
@@ -478,7 +500,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:178
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "          static int\n"
 "          xxxchannel_setspeed(kobj_t obj, void *data, u_int32_t speed)\n"
@@ -488,6 +510,13 @@ msgid ""
 "              return speed;\n"
 "           }\n"
 msgstr ""
+"          static int\n"
+"          xxxchannel_setspeed(kobj_t obj, void *data, u_int32_t speed)\n"
+"          {\n"
+"              struct xxx_chinfo *ch = data;\n"
+"               ...\n"
+"              return speed;\n"
+"           }\n"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:180
@@ -497,6 +526,7 @@ msgstr "channel_setblocksize"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:183
+#, fuzzy
 msgid ""
 "`xxxchannel_setblocksize()` sets the block size, which is the size of unit "
 "transactions between [.filename]#pcm# and the sound driver, and between the "
@@ -505,6 +535,9 @@ msgid ""
 "should call [.filename]#pcm#'s `chn_intr()` every time this size has been "
 "transferred."
 msgstr ""
+"<function>xxxchannel_setblocksize()</function>设置块大小， "
+"这是<filename>pcm</filename>与声音驱动程序，以及声音驱动 程序与设备之间的传输单位的大小。传输期间，每次传输这样大小的 "
+"数据后，声音驱动程序都应当调用<filename>pcm</filename>的 <function>chn_intr()</function>。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:185
@@ -515,7 +548,7 @@ msgstr "大多数驱动程序只注意这儿的块大小，因为当实际传输
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:195
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "          static int\n"
 "          xxxchannel_setblocksize(kobj_t obj, void *data, u_int32_t "
@@ -526,14 +559,24 @@ msgid ""
 "              return blocksize; <.>\n"
 "           }\n"
 msgstr ""
+"          static int\n"
+"          xxxchannel_setspeed(kobj_t obj, void *data, u_int32_t speed)\n"
+"          {\n"
+"              struct xxx_chinfo *ch = data;\n"
+"               ...\n"
+"              return speed;\n"
+"           }\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:198
+#, fuzzy
 msgid ""
 "<.> The function returns the possibly adjusted block size. In case the block "
 "size is indeed changed, `sndbuf_resize()` should be called to adjust the "
 "buffer."
 msgstr ""
+"函数返回可能调整过的块大小。如果块大小真的变化了， 这种情况下应当调用<function>sndbuf_resize()</function>调整 "
+"缓冲区的大小。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:200
@@ -568,11 +611,14 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:220
+#, fuzzy
 msgid ""
 "If the driver uses ISA DMA, `sndbuf_isadma()` should be called before "
 "performing actions on the device, and will take care of the DMA chip side of "
 "things."
 msgstr ""
+"如果驱动程序使用ISA DMA，则应当在设备上执行动作前 调用<function>sndbuf_isadma()</function>，"
+"并处理DMA芯片一方的 事情。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:222
@@ -596,12 +642,15 @@ msgstr "channel_free"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:229
+#, fuzzy
 msgid ""
 "`xxxchannel_free()` is called to free up channel resources, for example when "
 "the driver is unloaded, and should be implemented if the channel data "
 "structures are dynamically allocated or if `sndbuf_alloc()` was not used for "
 "buffer allocation."
 msgstr ""
+"调用<function>xxxchannel_free()</function>来释放通道资源， 例如当驱动程序卸载时，并且如果通道数据结构是动态分配的，"
+"或者 如果不使用<function>sndbuf_alloc()</function>进行缓冲区分配， 则应当实现这个函数。"
 
 #. type: Title ====
 #: documentation/content/en/books/arch-handbook/sound/chapter.adoc:230
