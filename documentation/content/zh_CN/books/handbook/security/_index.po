@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-14 11:02-0300\n"
-"PO-Revision-Date: 2021-04-05 12:40+0000\n"
+"PO-Revision-Date: 2021-04-12 20:54+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbooksecurity_index/zh_CN/>\n"
@@ -157,6 +157,7 @@ msgstr "介绍"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:76
+#, fuzzy
 msgid ""
 "Security is everyone's responsibility. A weak entry point in any system "
 "could allow intruders to gain access to critical information and cause havoc "
@@ -164,9 +165,12 @@ msgid ""
 "the CIA triad, which stands for the Confidentiality, Integrity, and "
 "Availability of information systems."
 msgstr ""
+"保安是每个人的责任，任何系统中的弱点都可让入侵者取得对关键信息的存取权并导致整个网络的浩劫。信息安全的其中一个核心原则便是<acronym>CIA</ac"
+"ronym>三字诀，代表着信息系统的机密性（Confidentiality）、完整性（Integrity）以及可用性（Availability）。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:78
+#, fuzzy
 msgid ""
 "The CIA triad is a bedrock concept of computer security as customers and "
 "users expect their data to be protected. For example, a customer expects "
@@ -174,9 +178,12 @@ msgid ""
 "that their orders are not changed behind the scenes (integrity), and that "
 "they have access to their order information at all times (availablility)."
 msgstr ""
+"<acronym>CIA</acronym>三字诀是电脑安全的基石，就如同客户与使用者期望他们的数据得到保护一样重要。例如，一个客户会期望他们的信用卡信息"
+"被安全的保存（机密性）、他们的订单不会在私底下被窜改（完整性）以及他们随时可以存取他们的订单信息（可用性）。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:80
+#, fuzzy
 msgid ""
 "To provide CIA, security professionals apply a defense in depth strategy. "
 "The idea of defense in depth is to add several layers of security to prevent "
@@ -187,6 +194,9 @@ msgid ""
 "implement an effective security strategy, one must understand threats and "
 "how to defend against them."
 msgstr ""
+"要提供<acronym>CIA</acronym>，安全专家会应用防御深度的策略。防御深度的概念是增加数个保全阶层来避免单一阶层失效便导致整个安全系统瓦解"
+"。例如，系统管理者不能直接打开防火墙与评价网路或系统的安全性，还要同时稽查帐号、检查Binary的完整性与确保未被安装恶意工具。要执行有效的保安策略，必须"
+"了解威胁以及如何抵御威胁。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:82
@@ -215,6 +225,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:86
+#, fuzzy
 msgid ""
 "When applying security to systems, it is recommended to start by securing "
 "the basic accounts and system configuration, and then to secure the network "
@@ -226,6 +237,9 @@ msgid ""
 "operating procedures (SOPs) already exist. When in doubt, ask the security "
 "team."
 msgstr ""
+"当要应用保安到系统上时，建议由基本帐号以及系统设定开始保全，接着确保网络层，使其遵守系统政策以及组织的安全程序。许多组织已经有涵盖科技装置设置的安全性政策"
+"，该政策应包含工作站、台式机、行动装置、手机、上线服务器、开发服务器的安全设置。在大多数案例中，也都已经有标准操作程序（<acronym>SOP</acr"
+"onym>），当有疑虑时，请向安全团队咨询。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:88
@@ -266,11 +280,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:102
+#, fuzzy
 msgid ""
 "The second method is to prevent login access by changing the shell to [."
 "filename]#/usr/sbin/nologin#. Only the superuser can change the shell for "
 "other users:"
 msgstr ""
+"第二种方法是通过将 shell 更改为<filename>/usr/sbin/nologin</filename>来阻止登录访问。"
+"只有超级用户可以为其他用户更改 shell："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:106
@@ -280,10 +297,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:109
+#, fuzzy
 msgid ""
 "The [.filename]#/usr/sbin/nologin# shell prevents the system from assigning "
 "a shell to the user when they attempt to login."
-msgstr ""
+msgstr "<filename>/usr/sbin/nologin</filename> shell可以避免系统分配Shell给尝试登入的使用者。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:111
@@ -307,12 +325,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:116
+#, fuzzy
 msgid ""
 "The second, and recommended, method to permit privilege escalation is to "
 "install the package:security/sudo[] package or port. This software provides "
 "additional auditing, more fine-grained user control, and can be configured "
 "to lock users into running only the specified privileged commands."
 msgstr ""
+"第二种方式，也是较建议的方式，安装<package>security/"
+"sudo</package>套件或Port来提升权限。这个软件提供了额外的稽查、更细微的使用者控制，然后可以设定锁定使用者只能执行特定需权限的指令。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:118
@@ -351,11 +372,14 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:134
+#, fuzzy
 msgid ""
 "Blowfish is not part of AES and is not considered compliant with any Federal "
 "Information Processing Standards (FIPS). Its use may not be permitted in "
 "some environments."
 msgstr ""
+"Blowfish不是<acronym>AES</acronym>的一部份且不符合任何联邦信息处理标准（Federal Information "
+"Processing Standards，<acronym>FIPS</acronym>），在某些环境可能不会允许使用这种加密方式。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:137
@@ -389,9 +413,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:149
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "        :passwd_format=sha512:\\\n"
-msgstr ""
+msgstr "        :passwd_format=sha512:\\\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:152
@@ -401,9 +425,9 @@ msgstr "要更改算法为Blowfish，可修改该行如下："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:156
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "        :passwd_format=blf:\\\n"
-msgstr ""
+msgstr "        :passwd_format=blf:\\\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:159
@@ -435,12 +459,15 @@ msgstr "强制密码政策"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:166
+#, fuzzy
 msgid ""
 "Enforcing a strong password policy for local accounts is a fundamental "
 "aspect of system security. In FreeBSD, password length, password strength, "
 "and password complexity can be implemented using built-in Pluggable "
 "Authentication Modules (PAM)."
 msgstr ""
+"强制在本地帐号使用高强度密码的政策是系统安全的基础之一。在FreeBSD密码长度、密码强度以及密码复杂性可使用内置的可插拔认证模块（Pluggable "
+"Authentication Modules，<acronym>PAM</acronym>）来执行。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:168
@@ -500,12 +527,14 @@ msgstr "一这个文件储存之后，更改密码的使用者将会看到如下
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:187
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "% passwd\n"
 "Changing local password for trhodes\n"
 "Old Password:\n"
 msgstr ""
+"Changing local password for trhodes\n"
+"Old Password:\n"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:198
@@ -542,9 +571,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:207
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "#       :passwordtime=90d:\\\n"
-msgstr ""
+msgstr "#       :passwordtime=90d:\\\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:210
@@ -593,12 +622,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:226
+#, fuzzy
 msgid ""
 "A rootkit does do one thing useful for administrators: once detected, it is "
 "a sign that a compromise happened at some point. But, these types of "
 "applications tend to be very well hidden. This section demonstrates a tool "
 "that can be used to detect rootkits, package:security/rkhunter[]."
 msgstr ""
+"Rootkit 对管理者而言唯一有帮助的是：一但侦测到，便代表某处已经被渗透，但这类型的应用程序躲藏的非常好，本节将会示范一个可以用来侦测 "
+"rootkit 的工具，<package>security/rkhunter</package>。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:228
@@ -616,6 +648,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:235
+#, fuzzy
 msgid ""
 "After the process completes, a status message will be printed to the screen. "
 "This message will include the amount of files checked, suspect files, "
@@ -624,9 +657,13 @@ msgid ""
 "and known vulnerable versions of installed software. These can be handled "
 "now or after a more detailed analysis has been performed."
 msgstr ""
+"该程序完成之后，目前状态的信息便会显示在画面上。这个信息包含了已检查过多少文件、可疑的文件、可能的rootkit以及其他更多资讯。在检查的过程中，可能会产"
+"生一些有关隐藏文件、<application>OpenSSH</application>通信协定选择及已安装软件已知漏洞版本的通用的安全性警告、这些问题可"
+"以立即处理或在更详细的分析之后再处理。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:237
+#, fuzzy
 msgid ""
 "Every administrator should know what is running on the systems they are "
 "responsible for. Third-party tools like rkhunter and package:sysutils/"
@@ -635,6 +672,9 @@ msgid ""
 "questions when something seems out of place, and be paranoid. While "
 "preventing a compromise is ideal, detecting a compromise is a must."
 msgstr ""
+"每位管理者应了解在系统上执行了那些程序以及这些程序的用途。第三方工具如<application>rkhunter</application>与<packa"
+"ge>sysutils/lsof</package>以及原生指令如<command>netstat</command>与<command>ps</comm"
+"and>可以系统上大量的信息，记录下那一些是正常的，当有不适当的程序出现时提出疑问，然后找出答案。虽然理想要避免渗透，但也必须侦测是否已被渗透了。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:239
@@ -644,15 +684,19 @@ msgstr "Binary检验"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:242
+#, fuzzy
 msgid ""
 "Verification of system files and binaries is important because it provides "
 "the system administration and security teams information about system "
 "changes. A software application that monitors the system for changes is "
 "called an Intrusion Detection System (IDS)."
 msgstr ""
+"检验系统文件与Binary是很重要的，因为它可以提供系统管理者与资安团队有关系统变更的信息，能够监视系统变更的软件应用程序称为入侵侦测系统（"
+"Intrusion Detection System，<acronym>IDS</acronym>）。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:244
+#, fuzzy
 msgid ""
 "FreeBSD provides native support for a basic IDS system. While the nightly "
 "security emails will notify an administrator of changes, the information is "
@@ -662,6 +706,9 @@ msgid ""
 "a read-only, root-owned directory or, preferably, on a removable USB disk or "
 "remote rsync server."
 msgstr ""
+"FreeBSD原生提供了基础的<acronym>IDS</acronym>系统，虽然每天晚上会有安全性的信件会通知管理者相关的变更，但这些信息是储存在本地"
+"的，这让恶意的使用者有机会能够修改这些信息来隐藏其对系统的变更。也因此，会建议建立一个独立的Binary签名并将这些签名储存在唯度、root拥有的目录或在"
+"可移除的<acronym>USB</acronym>磁盘或远端<application>rsync</application>服务器更好。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:246
@@ -694,10 +741,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:256
+#, fuzzy
 msgid ""
 "Viewing [.filename]#/root/.bin_cksum_mtree# should yield output similar to "
 "the following:"
-msgstr ""
+msgstr "检视<filename>/root/.bin_cksum_mtree</filename>应会产生类似以下的输出结果："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:263
@@ -759,6 +807,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:292
+#, fuzzy
 msgid ""
 "This should produce the same checksum for [.filename]#/bin# that was "
 "produced when the specification was created. If no changes have occurred to "
@@ -766,6 +815,9 @@ msgid ""
 "output file will be empty. To simulate a change, change the date on [."
 "filename]#/bin/cat# using `touch` and run the verification command again:"
 msgstr ""
+"这个动作应会产生与上次建立<filename>/bin</filename>规格档时产生的校验码相同，若在此目录的Binary没有被变更过，那么<file"
+"name>/root/.bin_chksum_output</filename>这个输出档将会是空的。要模拟变更，可以使用<command>touch</"
+"command>更改<filename>/root/.bin_chksum_output</filename>的日期然后再执行检验指令一次："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:300
@@ -817,12 +869,15 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:314
+#, fuzzy
 msgid ""
 "Any time a setting is changed with `sysctl`, the chance to cause undesired "
 "harm is increased, affecting the availability of the system. All changes "
 "should be monitored and, if possible, tried on a testing system before being "
 "used on a production system."
 msgstr ""
+"任何时间使用<xref linkend=\"configtuning-sysctl\""
+"/>做的设定变更都会让造成不想要的伤害的可能性上升，影响到系统的可用性。因此应要对所有的变更做监视，若可能的话，先在测试系统上实验，再到上线的系统上使用。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:317
@@ -899,6 +954,7 @@ msgstr "一次性密码"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:338
+#, fuzzy
 msgid ""
 "By default, FreeBSD includes support for One-time Passwords In Everything "
 "(OPIE). OPIE is designed to prevent replay attacks, in which an attacker "
@@ -907,6 +963,11 @@ msgid ""
 "attacker. OPIE uses a secure hash and a challenge/response system to manage "
 "passwords. The FreeBSD implementation uses the MD5 hash by default."
 msgstr ""
+"预设FreeBSD已内置一次性密码（One-time Passwords In "
+"Everything，<acronym>OPIE</acronym>）。<acronym>OPIE</acronym>设计用来避免重送攻击（Replay "
+"attack），重送攻击指的是攻击者发现了某位使用者的密码，然后使用该密码来存取系统。由于在<acronym>OPIE</acronym>的环境下，一组密"
+"码只能被使用一次，被发现的密码对攻击者而言便没有什么作用。<acronym>OPIE</acronym>使用了安全的加密方式与诘问/响应系统（"
+"Challenge/response system）来管理密码。FreeBSD在实作上预设采用<acronym>MD5</acronym>加密。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:340
@@ -950,6 +1011,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:346
+#, fuzzy
 msgid ""
 "This section describes four different sorts of operations. The first is how "
 "to set up one-time-passwords for the first time over a secure connection. "
@@ -958,6 +1020,8 @@ msgid ""
 "a number of keys which can be written down or printed out to use at insecure "
 "locations."
 msgstr ""
+"本章节将介绍四种不同的操作，第一是如何在安全联机下做第一次的一次性密码设定，第二是如何使用在不安全的联机下使用<command>opiepasswd</c"
+"ommand>，第三是如何在不安全的联机下登入系统，第四是如何产生数个可以被记录或打印下来在不安全的场所使的密钥。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:347
@@ -1016,6 +1080,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:371
+#, fuzzy
 msgid ""
 "The `ID` line lists the login name (`unfurl`), default iteration count "
 "(`499`), and default seed (`to4268`). When logging in, the system will "
@@ -1024,6 +1089,9 @@ msgid ""
 "corresponds to those parameters and the secret password. At the next login, "
 "use this one-time password."
 msgstr ""
+"<literal>ID</literal>行会列出登入名称（<literal>unfurl</literal>）、预设的叠代次数（<literal>499"
+"</literal>）以及预设的种子码（<literal>to4268</literal>）。在进行登入时，系统会记住这些参数并且显示出来，这也代表不需要"
+"另外记录这些信息。最后一行会列出根据这些参数与秘密密码所产生出来的一次性密码，在下一次登入时便要使用这个一次性密码。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:372
@@ -1194,6 +1262,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:459
+#, fuzzy
 msgid ""
 "The `-n 5` requests five keys in sequence, and `30` specifies what the last "
 "iteration number should be. Note that these are printed out in _reverse_ "
@@ -1201,6 +1270,9 @@ msgid ""
 "hand; otherwise, print the list. Each line shows both the iteration count "
 "and the one-time password. Scratch off the passwords as they are used."
 msgstr ""
+"<option>-n 5</option>会请求产生连续五个密钥，而<option>30</option>则是指定最后一个叠代的编号。注意这些打印出的结果"
+"的顺序与使用的顺序<emphasis>相反</emphasis>。十足的偏执狂可能会想要用手写下结果，否则就列印出清单。每一行会同时显示叠代次数及一次性密"
+"码，在密码使用过后便可划掉。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:460
@@ -1224,9 +1296,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:469
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "permit 192.168.0.0 255.255.0.0\n"
-msgstr ""
+msgstr "permit 192.168.0.0 255.255.0.0\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:472
@@ -1262,12 +1334,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:481
+#, fuzzy
 msgid ""
 "TCP Wrapper should not be considered a replacement for a properly configured "
 "firewall. Instead, TCP Wrapper should be used in conjunction with a firewall "
 "and other security enhancements in order to provide another layer of "
 "protection in the implementation of a security policy."
 msgstr ""
+"然而，<application>TCP Wrapper</application>不应被视为好的防火墙的替代品。<application>TCP "
+"Wrapper</application> 应结合防火墙或其他安全加强设施一并使用， 为系统多提供一层安全防护。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:482
@@ -1284,11 +1359,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:490
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "inetd_enable=\"YES\"\n"
 "inetd_flags=\"-Ww\"\n"
 msgstr ""
+"inetd_enable=\"YES\"\n"
+"inetd_flags=\"-Ww\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:493
@@ -1305,12 +1382,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:500
+#, fuzzy
 msgid ""
 "In the simplest configuration, daemon connection policies are set to either "
 "permit or block, depending on the options in [.filename]#/etc/hosts.allow#. "
 "The default configuration in FreeBSD is to allow all connections to the "
 "daemons started with inetd."
 msgstr ""
+"在最简单的配置中， 服务程序的连接策略是根据 <filename>/etc/hosts.allow</filename> 允许或阻止。 FreeBSD "
+"中的默认配置是允许一切发到由 <application>inetd</application> 所启动的服务的连接请求。 "
+"在基本配置之后将讨论更复杂的情况。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:502
@@ -1333,11 +1414,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:509
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# This line is required for POP3 connections:\n"
 "qpopper : ALL : allow\n"
 msgstr ""
+"# This line is required for POP3 connections:\n"
+"qpopper : ALL : allow\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:512
@@ -1358,6 +1441,7 @@ msgstr "高级配置"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:521
+#, fuzzy
 msgid ""
 "TCP Wrapper provides advanced options to allow more control over the way "
 "connections are handled. In some cases, it may be appropriate to return a "
@@ -1367,9 +1451,13 @@ msgid ""
 "possible through the use of configuration options known as wildcards, "
 "expansion characters, and external command execution."
 msgstr ""
+"<acronym>TCP</acronym> Wrappers 也有一些高级的配置选项； 它们能够用来对如何处理连接实施更多的控制。 一些时候， "
+"返回一个说明到特定的主机或请求服务的连接可能是更好的办法。 其他情况下， 记录日志或者发送邮件给管理员可能更为适合。 另外， "
+"一些服务可能只希望为本机提供。 这些需求都可以通过使用 <literal>通配符</literal>， 扩展字符以及外部命令来实现。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:523
+#, fuzzy
 msgid ""
 "Suppose that a situation occurs where a connection should be denied yet a "
 "reason should be sent to the host who attempted to establish that "
@@ -1377,16 +1465,23 @@ msgid ""
 "is made, `twist` executes a shell command or script. An example exists in [."
 "filename]#hosts.allow#:"
 msgstr ""
+"假设由于发生了某种状况， 而导致连接应该被拒绝掉， 而将其原因发送给发起连接的人。 如何完成这样的任务呢？ 这样的动作可以通过使用 "
+"<option>twist</option> 选项来实现。 当发起了连接请求时， <option>twist</option> 将调用一个命令或脚本。 "
+"在 <filename>hosts.allow</filename> 文件中已经给出了一个例子："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:530
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# The rest of the daemons are protected.\n"
 "ALL : ALL \\\n"
 "\t: severity auth.info \\\n"
 "\t: twist /bin/echo \"You are not welcome to use %d from %h.\"\n"
 msgstr ""
+"# The rest of the daemons are protected.\n"
+"ALL : ALL \\\n"
+"\t: severity auth.info \\\n"
+"\t: twist /bin/echo \"You are not welcome to use %d from %h.\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:533
@@ -1417,7 +1512,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:549
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# We do not allow connections from example.com:\n"
 "ALL : .example.com \\\n"
@@ -1425,6 +1520,11 @@ msgid ""
 "\t  /var/log/connections.log) \\\n"
 "\t: deny\n"
 msgstr ""
+"# We do not allow connections from example.com:\n"
+"ALL : .example.com \\\n"
+"\t: spawn (/bin/echo %a from %h attempted to access %d &gt;&gt; \\\n"
+"\t  /var/log/connections.log) \\\n"
+"\t: deny\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:552
@@ -1448,11 +1548,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:559
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# Block possibly spoofed requests to sendmail:\n"
 "sendmail : PARANOID : deny\n"
 msgstr ""
+"# Block possibly spoofed requests to sendmail:\n"
+"sendmail : PARANOID : deny\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:565
@@ -1470,10 +1572,11 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:572
+#, fuzzy
 msgid ""
 "When adding new configuration lines, make sure that any unneeded entries for "
 "that daemon are commented out in [.filename]#hosts.allow#."
-msgstr ""
+msgstr "添加新的配置行时，请确保在 <filename>hosts.allow</filename> 主机中注释该守护进程的任何不需要的条目。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/security/_index.adoc:575
@@ -1483,6 +1586,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:578
+#, fuzzy
 msgid ""
 "Kerberos is a network authentication protocol which was originally created "
 "by the Massachusetts Institute of Technology (MIT) as a way to securely "
@@ -1494,15 +1598,24 @@ msgid ""
 "Kerberos, their communications can be encrypted to assure privacy and data "
 "integrity."
 msgstr ""
+"<application>Kerberos</application> 是一种网络身份验证协议，最初由麻省理工学院 (<acronym> MIT "
+"</acronym>) 开发作为在潜在的恶意网络上安全地提供身份验证的一种方式。<application> Kerberos </"
+"application> 协议使用强加密技术, 以便客户端和服务器都可以在不通过网络发送任何未加密的机密的情况下证明其身份。<application> "
+"Kerberos </application> 可以描述为身份验证代理系统和受信任的第三方身份验证系统。在用户使用 <application> "
+"Kerberos </application> 进行身份验证后, 可以对其通信进行加密, 以确保隐私和数据完整性。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:580
+#, fuzzy
 msgid ""
 "The only function of Kerberos is to provide the secure authentication of "
 "users and servers on the network. It does not provide authorization or "
 "auditing functions. It is recommended that Kerberos be used with other "
 "security methods which provide authorization and audit services."
 msgstr ""
+"<application>Kerberos</application> 只提供一种功能 ── 在网络上安全地完成用户的身份验证。 它并不提供授权功能 "
+"(也就是说用户能够做什么操作) 或审计功能 (记录用户作了什么操作)。因此， 强烈建议将 <application>Kerberos</"
+"application> 同其它提供授权和审计服务的安全手段联用。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:582
@@ -1586,8 +1699,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:604
+#, fuzzy
 msgid "To begin, install the package:security/heimdal[] package as follows:"
-msgstr ""
+msgstr "在开始前，使用以下命令安装 <package>security/heimdal</package>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:608
@@ -1754,11 +1868,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:702
+#, fuzzy
 msgid ""
 "While there will not be any kerberized daemons running at this point, it is "
 "possible to confirm that the KDC is functioning by obtaining a ticket for "
 "the principal that was just created:"
 msgstr ""
+"管此时还没有任何正在运行的 Kerberos 服务， 但您仍然可以通过获取并列出您刚刚创建的那个 principal (用户) 的 ticket 来查看 "
+"<acronym>KDC</acronym> 是否正常工作："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:707
@@ -1914,9 +2031,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:767
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "GSSAPIAuthentication yes\n"
-msgstr ""
+msgstr "GSSAPIAuthentication yes\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:770
@@ -1933,10 +2050,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:774
+#, fuzzy
 msgid ""
 "As it was for the server, the client requires configuration in [.filename]#/"
 "etc/krb5.conf#. Copy the file in place (securely) or re-enter it as needed."
 msgstr ""
+"设置客户机是非常简单的。 在正确配置了 <application>Kerberos</application> 的网络中， 只需要将位于 "
+"<filename>/etc/krb5.conf</filename> 的配置文件进行一下设置就可以了。 这一步骤可以简单地通过安全的方式将文件从 "
+"<acronym>KDC</acronym> 复制到客户机上来完成。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:776
@@ -1952,10 +2073,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:778
+#, fuzzy
 msgid ""
 "When testing a Kerberized application, try using a packet sniffer such as "
 "`tcpdump` to confirm that no sensitive information is sent in the clear."
 msgstr ""
+"测试 Kerberized 应用程序时，请尝试使用抓包软件（如 <command>tcpdump</command>），来确定没有以明文形式发送敏感信息。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:780
@@ -1988,11 +2111,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:789
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "tillman@example.org\n"
 "jdoe@example.org\n"
 msgstr ""
+"tillman@example.org\n"
+"jdoe@example.org\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:792
@@ -2034,7 +2159,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:808
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "kdc_program=\"/usr/local/sbin/kdc\"\n"
 "kadmind_program=\"/usr/local/sbin/kadmind\"\n"
@@ -2042,6 +2167,11 @@ msgid ""
 "kdc_enable=\"YES\"\n"
 "kadmind_enable=\"YES\"\n"
 msgstr ""
+"kdc_program=\"/usr/local/sbin/kdc\"\n"
+"kadmind_program=\"/usr/local/sbin/kadmind\"\n"
+"kdc_flags=\"\"\n"
+"kdc_enable=\"YES\"\n"
+"kadmind_enable=\"YES\"\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:810
@@ -2082,6 +2212,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:818
+#, fuzzy
 msgid ""
 "All hosts in the realm must be both forward and reverse resolvable in DNS "
 "or, at a minimum, exist in [.filename]#/etc/hosts#. CNAMEs will work, but "
@@ -2089,6 +2220,10 @@ msgid ""
 "unresolvable hosts is not intuitive: `Kerberos5 refuses authentication "
 "because Read req failed: Key table entry not found`."
 msgstr ""
+"域中的所有主机必须在<acronym>DNS</acronym>中正向和反向解析，或者至少在<filename>/etc/"
+"hosts</filename>中存在。CNAME 也可以使用，但 A 和 PTR 记录必须正确和到位。无法解析主机的错误提示信息并不直观："
+"<errorname>Kerberos5 refuses authentication because Read req failed: Key "
+"table entry not found</errorname>。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:819
@@ -2185,12 +2320,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:833
+#, fuzzy
 msgid ""
 "If the KDC is unavailable, network services are unusable as authentication "
 "cannot be performed. This can be alleviated with a single master KDC and one "
 "or more slaves, and with careful implementation of secondary or fall-back "
 "authentication using PAM."
 msgstr ""
+"如果<acronym>KDC</acronym>不可用，网络服务将无法使用，因为无法认证。这可以通过一个主<acronym>KDC</"
+"acronym>和一个或多个从 kDC ，并通过使用<acronym>PAM</acronym>仔细执行二级或后备验证来缓解。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:835
@@ -2256,6 +2394,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:850
+#, fuzzy
 msgid ""
 "The version of OpenSSL included in FreeBSD supports the Secure Sockets Layer "
 "3.0 (SSLv3) and Transport Layer Security 1.0/1.1/1.2 (TLSv1/TLSv1.1/TLSv1.2) "
@@ -2263,6 +2402,10 @@ msgid ""
 "library. In FreeBSD 12.0-RELEASE and above, OpenSSL also supports Transport "
 "Layer Security 1.3 (TLSv1.3)."
 msgstr ""
+"FreeBSD 中的 OpenSSL 支持 Secure Sockets Layer 3.0 (SSLv3) 和 Transport Layer "
+"Security 1.0/1.1/1.2 (TLSv1/TLSv1.1/TLSv1.2) 等网络安全协议，可以像普通的加密库一样掉用，在 FreeBSD "
+"12.0-RELEASE 之后，FreeBSD 中默认的 OpenSSL 也支持 Transport Layer Security 1.3 (TLSv1."
+"3)。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:852
@@ -2278,9 +2421,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:856
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "DEFAULT_VERSIONS+= ssl=openssl\n"
-msgstr ""
+msgstr "DEFAULT_VERSIONS+= ssl=openssl\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:859
@@ -2376,6 +2519,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:900
+#, fuzzy
 msgid ""
 "This command will create two files in the current directory. The certificate "
 "request, [.filename]#req.pem#, can be sent to a CA who will validate the "
@@ -2384,6 +2528,9 @@ msgid ""
 "certificate and should be stored in a secure location. If this falls in the "
 "hands of others, it can be used to impersonate the user or the server."
 msgstr ""
+"此命令将在当前目录下创建两个文件：证书请求文件，<filename>req.pem</filename>，需要发送到 "
+"CA，此文件将用于验证输入的凭据，签名请求，并返回已签名的证书。私钥，<filename>cert."
+"key</filename>，应存储在安全位置。如果这落在其他人手中，则可以使用它来模拟用户或服务器。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:902
@@ -2450,10 +2597,12 @@ msgstr "使用证书"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:939
+#, fuzzy
 msgid ""
 "One use for a certificate is to encrypt connections to the Sendmail mail "
 "server in order to prevent the use of clear text authentication."
 msgstr ""
+"证书的可用于加密客户端与邮件服务器（例如<application>Sendmail</application>）之间的连接，避免使用明文身份验证。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:943
@@ -2498,11 +2647,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:962
+#, fuzzy
 msgid ""
 "If all went well, there will be no error messages in [.filename]#/var/log/"
 "maillog#. For a simple test, connect to the mail server's listening port "
 "using `telnet`:"
 msgstr ""
+"如果一切正常，<filename>/var/log/maillog</filename> 中不会产生错误消息。使用 <command>telnet</"
+"command> 连接邮件服务器进行简单测试："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:985
@@ -2613,11 +2765,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1010
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "options   IPSEC        IP security\n"
 "device    crypto\n"
 msgstr ""
+"options   IPSEC        #IP security\n"
+"device    crypto\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1013
@@ -2628,9 +2782,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1017
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "options   IPSEC_DEBUG  debug for IP security\n"
-msgstr ""
+msgstr "options   IPSEC_DEBUG  #debug for IP security\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1020
@@ -2672,11 +2826,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1028
+#, fuzzy
 msgid ""
 "To begin, package:security/ipsec-tools[] must be installed from the Ports "
 "Collection. This software provides a number of applications which support "
 "the configuration."
 msgstr ""
+"首先从 Ports 中安装 <package>security/ipsec-tools</package>。该软件用于配置 IPsec VPN。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1030
@@ -2706,13 +2862,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1046
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "gif0: flags=8051 mtu 1280\n"
 "tunnel inet 172.16.5.4 --> 192.168.1.12\n"
 "inet6 fe80::2e0:81ff:fe02:5881%gif0 prefixlen 64 scopeid 0x6\n"
 "inet 10.246.38.1 --> 10.0.0.5 netmask 0xffffff00\n"
 msgstr ""
+"gif0: flags=8051 mtu 1280\n"
+"tunnel inet 172.16.5.4 --&gt; 192.168.1.12\n"
+"inet6 fe80::2e0:81ff:fe02:5881%gif0 prefixlen 64 scopeid 0x6\n"
+"inet 10.246.38.1 --&gt; 10.0.0.5 netmask 0xffffff00\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1049
@@ -2721,13 +2881,17 @@ msgstr "这是 Gateway 2 的配置："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1056
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "gif0: flags=8051 mtu 1280\n"
 "tunnel inet 192.168.1.12 --> 172.16.5.4\n"
 "inet 10.0.0.5 --> 10.246.38.1 netmask 0xffffff00\n"
 "inet6 fe80::250:bfff:fe3a:c1f%gif0 prefixlen 64 scopeid 0x4\n"
 msgstr ""
+"gif0: flags=8051 mtu 1280\n"
+"tunnel inet 192.168.1.12 --&gt; 172.16.5.4\n"
+"inet 10.0.0.5 --&gt; 10.246.38.1 netmask 0xffffff00\n"
+"inet6 fe80::250:bfff:fe3a:c1f%gif0 prefixlen 64 scopeid 0x4\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1059
@@ -2769,12 +2933,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1085
+#, fuzzy
 msgid ""
 "As expected, both sides have the ability to send and receive ICMP packets "
 "from the privately configured addresses. Next, both gateways must be told "
 "how to route packets in order to correctly send traffic from either network. "
 "The following commands will achieve this goal:"
 msgstr ""
+"正如预期的那样，双方能够从私有地址发送和接收<acronym>ICMP</acronym>包。接下来，必须告知两个网关数据包的转发路径，以便从任一网络正确"
+"发送流量。以下命令将实现此目标："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1092
@@ -2929,10 +3096,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1185
+#, fuzzy
 msgid ""
 "For descriptions of each available option, refer to the manual page for [."
 "filename]#racoon.conf#."
-msgstr ""
+msgstr "欲知每个选项的含义，请参阅 <filename>racoon.conf</filename>。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1187
@@ -2943,15 +3111,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1189
+#, fuzzy
 msgid ""
 "This can be achieved with a shell script, similar to the following, on the "
 "corporate gateway. This file will be used during system initialization and "
 "should be saved as [.filename]#/usr/local/etc/racoon/setkey.conf#."
 msgstr ""
+"这可以通过在公司网关上使用 shell 脚本来实现，类似于下面的内容。此文件将在系统初始化过程中使用，并应保存为 <filename>/usr/"
+"local/etc/racoon/setkey.conf</filename>。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1197
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "flush;\n"
 "spdflush;\n"
@@ -2959,6 +3130,13 @@ msgid ""
 "spdadd 10.246.38.0/24 10.0.0.0/24 any -P out ipsec esp/tunnel/172.16.5.4-192.168.1.12/use;\n"
 "spdadd 10.0.0.0/24 10.246.38.0/24 any -P in ipsec esp/tunnel/192.168.1.12-172.16.5.4/use;\n"
 msgstr ""
+"flush;\n"
+"spdflush;\n"
+"# To the home network\n"
+"spdadd 10.246.38.0/24 10.0.0.0/24 any -P out ipsec esp/tunnel/172.16.5.4-192."
+"168.1.12/use;\n"
+"spdadd 10.0.0.0/24 10.246.38.0/24 any -P in ipsec esp/tunnel/192.168.1.12-172"
+".16.5.4/use;\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1200
@@ -2980,7 +3158,7 @@ msgstr "输出像这样："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1222
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "corp-net# /usr/local/sbin/racoon -F -f /usr/local/etc/racoon/racoon.conf\n"
 "Foreground mode.\n"
@@ -2995,6 +3173,26 @@ msgid ""
 "2006-01-30 01:36:18: INFO: IPsec-SA established: ESP/Tunnel 192.168.1.12[0]->172.16.5.4[0] spi=124397467(0x76a279b)\n"
 "2006-01-30 01:36:18: INFO: IPsec-SA established: ESP/Tunnel 172.16.5.4[0]->192.168.1.12[0] spi=175852902(0xa7b4d66)\n"
 msgstr ""
+"corp-net<prompt>#</prompt> <userinput>/usr/local/sbin/racoon -F -f /usr/"
+"local/etc/racoon/racoon.conf</userinput>\n"
+"Foreground mode.\n"
+"2006-01-30 01:35:47: INFO: begin Identity Protection mode.\n"
+"2006-01-30 01:35:48: INFO: received Vendor ID: KAME/racoon\n"
+"2006-01-30 01:35:55: INFO: received Vendor ID: KAME/racoon\n"
+"2006-01-30 01:36:04: INFO: ISAKMP-SA established 172.16.5.4[500]-192.168.1."
+"12[500] spi:623b9b3bd2492452:7deab82d54ff704a\n"
+"2006-01-30 01:36:05: INFO: initiate new phase 2 negotiation: 172.16.5.4[0]192"
+".168.1.12[0]\n"
+"2006-01-30 01:36:09: INFO: IPsec-SA established: ESP/Tunnel 192.168.1."
+"12[0]-&gt;172.16.5.4[0] spi=28496098(0x1b2d0e2)\n"
+"2006-01-30 01:36:09: INFO: IPsec-SA established: ESP/Tunnel 172.16.5."
+"4[0]-&gt;192.168.1.12[0] spi=47784998(0x2d92426)\n"
+"2006-01-30 01:36:13: INFO: respond new phase 2 negotiation: 172.16.5.4[0]192."
+"168.1.12[0]\n"
+"2006-01-30 01:36:18: INFO: IPsec-SA established: ESP/Tunnel 192.168.1."
+"12[0]-&gt;172.16.5.4[0] spi=124397467(0x76a279b)\n"
+"2006-01-30 01:36:18: INFO: IPsec-SA established: ESP/Tunnel 172.16.5."
+"4[0]-&gt;192.168.1.12[0] spi=175852902(0xa7b4d66)\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1225
@@ -3019,12 +3217,18 @@ msgstr "控制台上应显示类似于以下内容的数据。如果没有，则
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1238
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "01:47:32.021683 IP corporatenetwork.com > 192.168.1.12.privatenetwork.com: ESP(spi=0x02acbf9f,seq=0xa)\n"
 "01:47:33.022442 IP corporatenetwork.com > 192.168.1.12.privatenetwork.com: ESP(spi=0x02acbf9f,seq=0xb)\n"
 "01:47:34.024218 IP corporatenetwork.com > 192.168.1.12.privatenetwork.com: ESP(spi=0x02acbf9f,seq=0xc)\n"
 msgstr ""
+"01:47:32.021683 IP corporatenetwork.com &gt; 192.168.1.12.privatenetwork.com:"
+" ESP(spi=0x02acbf9f,seq=0xa)\n"
+"01:47:33.022442 IP corporatenetwork.com &gt; 192.168.1.12.privatenetwork.com:"
+" ESP(spi=0x02acbf9f,seq=0xb)\n"
+"01:47:34.024218 IP corporatenetwork.com &gt; 192.168.1.12.privatenetwork.com:"
+" ESP(spi=0x02acbf9f,seq=0xc)\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1241
@@ -3038,13 +3242,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1248
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "ipfw add 00201 allow log esp from any to any\n"
 "ipfw add 00202 allow log ah from any to any\n"
 "ipfw add 00203 allow log ipencap from any to any\n"
 "ipfw add 00204 allow log udp from any 500 to any\n"
 msgstr ""
+"ipfw add 00201 allow log esp from any to any\n"
+"ipfw add 00202 allow log ah from any to any\n"
+"ipfw add 00203 allow log ipencap from any to any\n"
+"ipfw add 00204 allow log udp from any 500 to any\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1253
@@ -3062,7 +3270,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1269
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "pass in quick proto esp from any to any\n"
 "pass in quick proto ah from any to any\n"
@@ -3075,6 +3283,16 @@ msgid ""
 "pass out quick proto udp from any port = 500 to any port = 500\n"
 "pass out quick on gif0 from any to any\n"
 msgstr ""
+"pass in quick proto esp from any to any\n"
+"pass in quick proto ah from any to any\n"
+"pass in quick proto ipencap from any to any\n"
+"pass in quick proto udp from any port = 500 to any port = 500\n"
+"pass in quick on gif0 from any to any\n"
+"pass out quick proto esp from any to any\n"
+"pass out quick proto ah from any to any\n"
+"pass out quick proto ipencap from any to any\n"
+"pass out quick proto udp from any port = 500 to any port = 500\n"
+"pass out quick on gif0 from any to any\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1272
@@ -3085,13 +3303,18 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1279
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "ipsec_enable=\"YES\"\n"
 "ipsec_program=\"/usr/local/sbin/setkey\"\n"
 "ipsec_file=\"/usr/local/etc/racoon/setkey.conf\" # allows setting up spd policies on boot\n"
 "racoon_enable=\"yes\"\n"
 msgstr ""
+"ipsec_enable=\"YES\"\n"
+"ipsec_program=\"/usr/local/sbin/setkey\"\n"
+"ipsec_file=\"/usr/local/etc/racoon/setkey.conf\" # allows setting up spd "
+"policies on boot\n"
+"racoon_enable=\"yes\"\n"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/security/_index.adoc:1282
@@ -3129,12 +3352,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1291
+#, fuzzy
 msgid ""
 "This section provides an overview of the built-in client utilities to "
 "securely access other systems and securely transfer files from a FreeBSD "
 "system. It then describes how to configure a SSH server on a FreeBSD system. "
 "More information is available in the man pages mentioned in this chapter."
 msgstr ""
+"本节会简单介绍如何使用内置的客户端工具安全的存取其他系统及安全的传输文件到FreeBSD系统，然后会说明如何设定在FreeBSD系统上的<acronym>"
+"SSH</acronym>服务器。更多的信息可于本章节所提及的操作手册（Man page）取得。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:1292
@@ -3237,6 +3463,7 @@ msgstr "以密钥为基础的认证"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1331
+#, fuzzy
 msgid ""
 "Instead of using passwords, a client can be configured to connect to the "
 "remote machine using keys. To generate RSA authentication keys, use `ssh-"
@@ -3244,6 +3471,8 @@ msgid ""
 "and follow the prompts. It is recommended to protect the keys with a "
 "memorable, but hard to guess passphrase."
 msgstr ""
+"除了使用密码之外，客户端可以设定成使用密钥来联机到远端的主机。要产生<acronym>RSA</acronym>认证密钥可使用<command>ssh-"
+"keygen</command>。要产生成对的公钥与私钥，可指定密钥的类型并依提示操作。建议使用容易记住但较难猜出的密码来保护这个密钥。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1355
@@ -3319,20 +3548,27 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1373
+#, fuzzy
 msgid ""
 "Authentication is handled by `ssh-agent`, using the private keys that are "
 "loaded into it. `ssh-agent` can be used to launch another application like a "
 "shell or a window manager."
 msgstr ""
+"认证可用<command>ssh-agent</command>来管理，只要将私钥加载，<command>ssh-"
+"agent</command>可用在执行其他应用程序，如Shell或视窗管理程序。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1375
+#, fuzzy
 msgid ""
 "To use `ssh-agent` in a shell, start it with a shell as an argument. Add the "
 "identity by running `ssh-add` and entering the passphrase for the private "
 "key. The user will then be able to `ssh` to any host that has the "
 "corresponding public key installed. For example:"
 msgstr ""
+"要在Shell使用<command>ssh-agent</command>，使用Shell做为参数来启动<command>ssh-"
+"agent</command>。执行<command>ssh-add</command>来加入识别码，然后输入私钥的密码。使用者将可使用<command>"
+"ssh</command>联机到任何有安装对应公钥的主机，例如："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1383
@@ -3347,8 +3583,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1386
+#, fuzzy
 msgid "<.> Enter the passphrase for the key."
-msgstr ""
+msgstr "输入密钥的密码。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1388
@@ -3422,10 +3659,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1416
+#, fuzzy
 msgid ""
 "Indicates no command, or tunnel only. If omitted, `ssh` initiates a normal "
 "session."
-msgstr ""
+msgstr "代表不需下指令、只建立信道。若省略这个选项<command>ssh</command>会初始化一个正常的联机。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/security/_index.adoc:1417
@@ -3545,12 +3783,15 @@ msgstr "跳过防火墙"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1465
+#, fuzzy
 msgid ""
 "Some firewalls filter both incoming and outgoing connections. For example, a "
 "firewall might limit access from remote machines to ports 22 and 80 to only "
 "allow SSH and web surfing. This prevents access to any other service which "
 "uses a port other than 22 or 80."
 msgstr ""
+"有些防火墙会同时过滤传入与传出的联机。例如，防火墙很可能会限制来自远端主机只能存取Port "
+"22与80来只让<acronym>SSH</acronym>与网页浏览器联机，这会使得Port使用22或80以外的服务无法存取。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1467
@@ -3601,16 +3842,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1489
+#, fuzzy
 msgid ""
 "If the service is not running, add the following line to [.filename]#/etc/rc."
 "conf#."
-msgstr ""
+msgstr "若服务未执行，请加入下行到<filename>/etc/rc.conf</filename>。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1493
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "sshd_enable=\"YES\"\n"
-msgstr ""
+msgstr "sshd_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1496
@@ -3627,12 +3869,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1503
+#, fuzzy
 msgid ""
 "The first time sshd starts on a FreeBSD system, the system's host keys will "
 "be automatically created and the fingerprint will be displayed on the "
 "console. Provide users with the fingerprint so that they can verify it the "
 "first time they connect to the server."
 msgstr ""
+"在FreeBSD系统第一次启动<application>sshd</application>时便会自动产生系统的主机密钥且会显示指纹在Console上，这"
+"个指纹可供使用者在第一次联机到服务器时验证用。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1505
@@ -3657,12 +3902,15 @@ msgstr "SSH服务器安全性"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1511
+#, fuzzy
 msgid ""
 "While sshd is the most widely used remote administration facility for "
 "FreeBSD, brute force and drive by attacks are common to any system exposed "
 "to public networks. Several additional parameters are available to prevent "
 "the success of these attacks and will be described in this section."
 msgstr ""
+"在FreeBSD广泛使用<application>sshd</application>做为远端管理基础设施的同时，所有暴露在公有网络上的系统也会时常受到暴"
+"力攻击（Brute force attack）与路过攻击（Drive by attack）。在本节会介绍一些可用来避免这些攻击的参数。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1513
@@ -3675,9 +3923,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1517
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "AllowUsers root@192.168.1.32\n"
-msgstr ""
+msgstr "AllowUsers root@192.168.1.32\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1520
@@ -3688,9 +3936,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1524
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "AllowUsers admin\n"
-msgstr ""
+msgstr "AllowUsers admin\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1527
@@ -3699,9 +3947,9 @@ msgstr "有多位使用者也应列在同一行，例如："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1531
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "AllowUsers root@192.168.1.32 admin\n"
-msgstr ""
+msgstr "AllowUsers root@192.168.1.32 admin\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1534
@@ -3741,9 +3989,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1550
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "AuthenticationMethods publickey\n"
-msgstr ""
+msgstr "AuthenticationMethods publickey\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1556
@@ -3778,9 +4026,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1568
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "options UFS_ACL\n"
-msgstr ""
+msgstr "options UFS_ACL\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1571
@@ -3833,6 +4081,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1584
+#, fuzzy
 msgid ""
 "It is desirable to discourage accidental mounting without ACLs enabled "
 "because nasty things can happen if ACLs are enabled, then disabled, then re-"
@@ -3843,6 +4092,13 @@ msgid ""
 "have since had their permissions changed, resulting in unpredictable "
 "behavior."
 msgstr ""
+"可以修改 <acronym>ACL</acronym> 行为， 以允许在没有执行一次全新的 "
+"<citerefentry><refentrytitle>mount</refentrytitle><manvolnum>8</manvolnum></"
+"citerefentry> 的情况下启用它， 但我们认为， 不鼓励在未启用 <acronym>ACL</acronym> 时这么做是有必要的， "
+"因为如果启用了 <acronym>ACL</acronym>， 然后关掉它， 然后在没有刷新扩展属性的情况下重新启用它是很容易造成问题的。 一般而言， "
+"一旦启用了文件系统的 <acronym>ACL</acronym> 就不应该再关掉它， 因为此时的文件系统的保护措施可能和用户所期待的样子不再兼容， "
+"而重新启用 <acronym>ACL</acronym> 将重新把先前的 <acronym>ACL</acronym> 附着到文件上， "
+"而由于它们的权限发生了变化， 就很可能造成无法预期的行为。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1587
@@ -3853,7 +4109,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1595
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "drwx------  2 robert  robert  512 Dec 27 11:54 private\n"
 "drwxrwx---+ 2 robert  robert  512 Dec 23 10:57 directory1\n"
@@ -3861,6 +4117,11 @@ msgid ""
 "drwxrwx---+ 2 robert  robert  512 Dec 27 11:57 directory3\n"
 "drwxr-xr-x  2 robert  robert  512 Nov 10 11:54 public_html\n"
 msgstr ""
+"drwx------  2 robert  robert  512 Dec 27 11:54 private\n"
+"drwxrwx---+ 2 robert  robert  512 Dec 23 10:57 directory1\n"
+"drwxrwx---+ 2 robert  robert  512 Dec 22 10:20 directory2\n"
+"drwxrwx---+ 2 robert  robert  512 Dec 27 11:57 directory3\n"
+"drwxr-xr-x  2 robert  robert  512 Nov 10 11:54 public_html\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1598
@@ -3924,12 +4185,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1629
+#, fuzzy
 msgid ""
 "In this example, there were no pre-defined entries, as they were removed by "
 "the previous command. This command restores the default options and assigns "
 "the options listed. If a user or group is added which does not exist on the "
 "system, an `Invalid argument` error will be displayed."
 msgstr ""
+"由于之前已经删除了所有条目，本例中没有预定义的 ACL 条目，于是默认的选项被恢复，并附加上指定的选项。 请小心地检查，如果您加入了一个不存在的用户或组，"
+"那么将会在 <filename>stdout</filename> 得到一条 <errorname>Invalid argument</"
+"errorname> 的错误提示。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1631
@@ -3956,6 +4221,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1638
+#, fuzzy
 msgid ""
 "Vulnerability assessment is a key factor in security. While FreeBSD releases "
 "advisories for the base system, doing so for every third party utility is "
@@ -3964,6 +4230,9 @@ msgid ""
 "FreeBSD add on utility known as pkg includes options explicitly for this "
 "purpose."
 msgstr ""
+"漏洞的评估是安全的一个关键因素， 尽管 FreeBSD 会发布基本系统的安全公告， 然而为每一个第三方工具都发布安全公告则超出了 FreeBSD "
+"Project 的能力。 在这一前提下， 一种减轻第三方漏洞的威胁， 并警告管理员存在已知的安全问题的方法也就应运而生。 名为 "
+"<application>pkg</application> 的 FreeBSD 附加工具能够帮助您达成这一目的。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1640
@@ -4033,12 +4302,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1666
+#, fuzzy
 msgid ""
 "By pointing a web browser to the displayed URL, an administrator may obtain "
 "more information about the vulnerability. This will include the versions "
 "affected, by FreeBSD port version, along with other web sites which may "
 "contain security advisories."
 msgstr ""
+"通过访问上面给出的 <acronym>URL</acronym>， 管理员能够了解关于那个漏洞的进一步信息。 这些信息通常包括受到影响的 FreeBSD "
+"Port 版本， 以及其他可能包含安全公告的网站。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1668
@@ -4458,11 +4730,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1834
+#, fuzzy
 msgid ""
 "The `Module` field refers to the component location. In this example, the "
 "`bind` module is affected; therefore, this vulnerability affects an "
 "application installed with the operating system."
 msgstr ""
+"<literal>Module</literal>(模块) 一栏给出了组件的具体位置，在这个例子中， 可以看到 <literal>bind</"
+"literal> 模块是存在问题的； 因此， 这个漏洞会影响操作系统中安装的应用程序。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1835
@@ -4488,6 +4763,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1838
+#, fuzzy
 msgid ""
 "The `Corrected` field indicates the date, time, time offset, and releases "
 "that were corrected. The section in parentheses shows each branch for which "
@@ -4497,6 +4773,9 @@ msgid ""
 "followed by a number, indicating the sequence number of the patch, allowing "
 "users to track which patches have already been applied to the system."
 msgstr ""
+"<literal>Corrected</literal>字段表示被修正的日期、时间、时间偏移和版本号。括号中的部分显示了每个被合并了修复的分支，以及该分支"
+"中相应版本的版本号。版本标识符本身包括版本号，如果合适的话，还包括补丁级别。补丁级别是字母<literal>p</literal>，后面是一个数字，表示补"
+"丁的序列号，允许用户跟踪哪些补丁已经应用到系统中。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1839
@@ -4512,11 +4791,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1841
+#, fuzzy
 msgid ""
 "The `Problem Description` field explains the vulnerability. This can include "
 "information about the flawed code and how the utility could be maliciously "
 "used."
 msgstr ""
+"<literal>Problem Description</literal>(问题描述) 一栏深入阐述安全漏洞的技术细节。 "
+"这部分有时会包括有问题的代码相关的详细情况， 甚至是这个部件如何能够被恶意利用并打开漏洞的细节。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1842
@@ -4684,11 +4966,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1890
+#, fuzzy
 msgid ""
 "`rctl` can be used to provide a more fine-grained method for controlling "
 "resource limits. This command supports more than user limits as it can also "
 "be used to set resource constraints on processes and jails."
 msgstr ""
+"<command>rctl</command>可提供更细粒度的资源限制。此命令可提供比用户限制更强大的功能，它还可以用于限制进程和 jail 的资源。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1892
@@ -4717,10 +5001,13 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1901
+#, fuzzy
 msgid ""
 "Whenever [.filename]#/etc/login.conf# is edited, the [.filename]#/etc/login."
 "conf.db# must be updated by executing the following command:"
 msgstr ""
+"每次修改 <filename>/etc/login.conf</filename> 之后，必须通过执行以下命令更新 <filename>/etc/"
+"login.conf.db</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1905
@@ -4730,6 +5017,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1910
+#, fuzzy
 msgid ""
 "Resource limits differ from the default login capabilities in two ways. "
 "First, for every limit, there is a _soft_ and _hard_ limit. A soft limit may "
@@ -4738,6 +5026,10 @@ msgid ""
 "raised by the superuser. Second, most resource limits apply per process to a "
 "specific user."
 msgstr ""
+"资源限制与普通登录限制是有区别的。 首先， 对于每种限制， 有软限制 (比较常见) 和硬限制之分。 一个软限制可能被用户调整过， 但不会超过硬限制。 "
+"越往后可能越低， 但不会升高。 其次， 绝大多数资源限制会分配特定用户的每个进程， 而不是该用户的全部进程。 注意， "
+"这些区别是资源限制的特殊操作所规定的， 不是登录功能框架的完成 (也就是说, 他们<emphasis>实际上</emphasis> "
+"不是一个登录功能的特例)。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1912
@@ -4849,11 +5141,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1964
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "options         RACCT\n"
 "options         RCTL\n"
 msgstr ""
+"options         RACCT\n"
+"options         RCTL\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1967
@@ -4871,9 +5165,9 @@ msgstr "语法规则：主体：主体-ID：要限制的资源：动作。示例
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1973
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "user:trhodes:maxproc:deny=10/user\n"
-msgstr ""
+msgstr "user:trhodes:maxproc:deny=10/user\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1976
@@ -4888,12 +5182,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1978
+#, fuzzy
 msgid ""
 "Some care must be taken when adding rules. Since this user is constrained to "
 "`10` processes, this example will prevent the user from performing other "
 "tasks after logging in and executing a `screen` session. Once a resource "
 "limit has been hit, an error will be printed, as in this example:"
 msgstr ""
+"创建规则时请注意：因为此用户被限制只能创建10个进程，因此本示例将阻止用户在登录并执行<command>screen</"
+"command>会话后执行其他任务 。一旦出发资源限制规则，系统会打印错误，像下面这样："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1984
@@ -4927,11 +5224,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1999
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# Block jail from using more than 2G memory:\n"
 "jail:httpd:memoryuse:deny=2G/jail\n"
 msgstr ""
+"# Block jail from using more than 2G memory:\n"
+"jail:httpd:memoryuse:deny=2G/jail\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2002
@@ -5017,15 +5316,19 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2032
+#, fuzzy
 msgid ""
 "After the installation is complete, the installed `visudo` will open the "
 "configuration file with a text editor. Using `visudo` is highly recommended "
 "as it comes with a built in syntax checker to verify there are no errors "
 "before the file is saved."
 msgstr ""
+"安装完成之后，可用安装的<command>visudo</command>以文字编辑器开启配置文件，强烈建议使用<command>visudo</comm"
+"and>来编辑配置文件，由于它有内置的语法检查程序可在文件储存之前检验是否有误。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2034
+#, fuzzy
 msgid ""
 "The configuration file is made up of several small sections which allow for "
 "extensive configuration. In the following example, web application "
@@ -5033,12 +5336,15 @@ msgid ""
 "known as _webservice_. To grant this user permission to perform these tasks, "
 "add this line to the end of [.filename]#/usr/local/etc/sudoers#:"
 msgstr ""
+"配置文件由个小节所组成，透过这些小节可做常广泛的设定，在以下的示例中，网站应用程序维护人员user1需要启动、停止与重新启动名称为<replaceable"
+">webservice</replaceable>的网站应用程序。要授权此使用者执行这些工作的权限，可加入此行到<filename>/usr/local/"
+"etc/sudoers</filename>的最后："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:2038
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "user1   ALL=(ALL)       /usr/sbin/service webservice *\n"
-msgstr ""
+msgstr "user1   ALL=(ALL)       /usr/sbin/service webservice *\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2041
@@ -5053,6 +5359,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2048
+#, fuzzy
 msgid ""
 "While this configuration allows a single user access to the webservice "
 "service; however, in most organizations, there is an entire web team in "
@@ -5060,6 +5367,8 @@ msgid ""
 "entire group. These steps will create a web group, add a user to this group, "
 "and allow all members of the group to manage the service:"
 msgstr ""
+"虽然这项设定可以让一位使用者存取<application>webservice</application>服务，但在大部份组织中会有一整个网站小组负责管理"
+"该服务，因此也可以一行来授予整个群组存取权，以下步骤会建立一个网站群组、加入使用者到这个群组，然后让该群组中的所有成员能够管理服务："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:2052
@@ -5088,9 +5397,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:2066
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "%webteam   ALL=(ALL)       /usr/sbin/service webservice *\n"
-msgstr ""
+msgstr "%webteam   ALL=(ALL)       /usr/sbin/service webservice *\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2069
@@ -5121,9 +5430,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:2080
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "%webteam   ALL=(ALL)       NOPASSWD: /usr/sbin/service webservice *\n"
-msgstr ""
+msgstr "%webteam   ALL=(ALL)       NOPASSWD: /usr/sbin/service webservice *\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:2085
@@ -5144,12 +5453,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:2092
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Defaults iolog_dir=/var/log/sudo-io/%{user}\n"
-msgstr ""
+msgstr "Defaults iolog_dir=/var/log/sudo-io/%{user}\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:2098
+#, fuzzy
 msgid ""
 "This directory will be created automatically after the logging is "
 "configured. It is best to let the system create directory with default "
@@ -5157,6 +5467,8 @@ msgid ""
 "administrators who use the sudoreplay command. To change this behavior, read "
 "and uncomment the logging options inside [.filename]#sudoers#."
 msgstr ""
+"这个目录会在记录功能设定之后自动建立，最好让系统以预设的权限来建立目录比较保险，除此之外，这个设定项目也会记录使用<application>sudorep"
+"lay</application>指令的管理者，要更改设定请阅读并取消在<filename>sudoers</filename>中记录选项的注释。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2101
@@ -5169,9 +5481,11 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:2105
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "%webteam ALL=(ALL) NOPASSWD: LOG_INPUT: LOG_OUTPUT: /usr/sbin/service webservice *\n"
 msgstr ""
+"%webteam ALL=(ALL) NOPASSWD: LOG_INPUT: LOG_OUTPUT: /usr/sbin/service "
+"webservice *\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2108
@@ -5203,12 +5517,15 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:2125
+#, fuzzy
 msgid ""
 "While sessions are logged, any administrator is able to remove sessions and "
 "leave only a question of why they had done so. It is worthwhile to add a "
 "daily check through an intrusion detection system (IDS) or similar software "
 "so that other administrators are alerted to manual alterations."
 msgstr ""
+"虽然所有联机阶段都会被记录，但任何管理者都可以移除联机阶段，使得没人知道它们做了什么事，所以非常值得在入侵侦测系统（<acronym>IDS</acron"
+"ym>）或类似的软件加入每日检查，以便在有人为修改时通知其他管理人员。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2128
