@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:55-0300\n"
-"PO-Revision-Date: 2021-04-05 12:39+0000\n"
+"PO-Revision-Date: 2021-04-12 20:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookjails_index/zh_CN/>\n"
@@ -44,6 +44,7 @@ msgstr "简介"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:48
+#, fuzzy
 msgid ""
 "Since system administration is a difficult task, many tools have been "
 "developed to make life easier for the administrator. These tools often "
@@ -52,6 +53,9 @@ msgid ""
 "_jails_. Jails have been available since FreeBSD 4.X and continue to be "
 "enhanced in their usefulness, performance, reliability, and security."
 msgstr ""
+"由于系统管理是一项艰巨的任务，故程序员开发了许多工具，使管理员的工作更轻松。这些工具通常增强系统的安装、配置和维护方式。其中一个可以用来增强 "
+"FreeBSD 系统安全性的工具是 <firstterm>jails</firstterm>。Jail 自 FreeBSD 4.X "
+"以来就已可用，并在其实用性、性能、可靠性和安全性方面不断得到增强。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:50
@@ -215,12 +219,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:87
+#, fuzzy
 msgid ""
 "The environment of processes running in a \"chroot\". This includes "
 "resources such as the part of the file system which is visible, user and "
 "group IDs which are available, network interfaces and other IPC mechanisms, "
 "etc."
 msgstr ""
+"在 <quote>chroot</quote> 中运行的进程环境。 这包括类似文件系统中的可见部分、 可用的用户及用户组 ID、 网络接口以及其他 "
+"IPC 机制等资源。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/jails/_index.adoc:88
@@ -274,6 +281,7 @@ msgstr "创建和控制 Jail"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:101
+#, fuzzy
 msgid ""
 "Some administrators divide jails into the following two types: \"complete\" "
 "jails, which resemble a real FreeBSD system, and \"service\" jails, "
@@ -283,6 +291,9 @@ msgid ""
 "options for the source of the userland: use prebuilt binaries (such as those "
 "supplied on an install media) or build from source."
 msgstr ""
+"一些系统管理员喜欢将 jail 分为两类： <quote>完整的</quote> jail， 通常包含真正的 FreeBSD 系统， 以及 "
+"<quote>服务</quote> jail， 专用于执行一个可能使用特权的应用或服务。 这只是一种概念上的区分， 并不影响如何建立 jail 的过程。"
+"创建完整的 jail 时，用户可以从使用已经编译好的用户环境或从源码编译用户环境。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/jails/_index.adoc:102
@@ -326,11 +337,12 @@ msgstr "从 ISO 文件创建 Jail"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:120
+#, fuzzy
 msgid ""
 "To install the userland from installation media, first create the root "
 "directory for the jail. This can be done by setting the `DESTDIR` variable "
 "to the proper location."
-msgstr ""
+msgstr "从安装包中安装用户环境：首先创建 jail 的 root 目录。可通设置<varname>DESTDIR</varname>变量设置。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:122
@@ -478,10 +490,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:183
+#, fuzzy
 msgid ""
 "Jails are often started at boot time and the FreeBSD [.filename]#rc# "
 "mechanism provides an easy way to do this."
 msgstr ""
+"Jail 通常应在系统启动时启动， 因此， FreeBSD <filename>rc</filename> 机制提供了一些很方便的机制来简化这些工作。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:186
@@ -511,9 +525,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:206
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "jail_enable=\"YES\"   # Set to NO to disable starting of any jails\n"
-msgstr ""
+msgstr "jail_enable=\"YES\"   # 如果设为 NO 则表示不自动启动 jail\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:209
@@ -858,12 +872,17 @@ msgstr "尽可能节省空间和 inode。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:326
+#, fuzzy
 msgid ""
 "This design relies on a single, read-only master template which is mounted "
 "into each jail and one read-write device per jail. A device can be a "
 "separate physical disc, a partition, or a vnode backed memory device. This "
 "example uses read-write nullfs mounts."
 msgstr ""
+"这个设计极大程度上依赖于将一份只读的主模板 (known as <application>nullfs</application>) 挂接到每一个 "
+"jail 中， 并为每个 jail 配置一个可读写的设备。 这种设备可以是物理磁盘、 分区， 或以 vnode 为后端的内存盘（<citerefentry"
+"><refentrytitle>md</refentrytitle><manvolnum>4</manvolnum></citerefentry>）设备。"
+" 在这个例子中， 我们将使用可读写的 <application>nullfs</application> 挂接。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:328
@@ -877,43 +896,49 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:331
+#, fuzzy
 msgid "Each jail will be mounted under the [.filename]#/home/j# directory."
-msgstr ""
+msgstr "每个 jail 挂接到 <filename>/home/j</filename> 目录下的一个目录。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:332
+#, fuzzy
 msgid ""
 "The template for each jail and the read-only partition for all of the jails "
 "is [.filename]#/home/j/mroot#."
-msgstr ""
+msgstr "<filename>/home/j/mroot</filename> 是每个 jail 共用的模板， 对于所有的 jail 而言都是只读的。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:333
+#, fuzzy
 msgid ""
 "A blank directory will be created for each jail under the "
 "[.filename]#/home/j# directory."
-msgstr ""
+msgstr "在 <filename>/home/j</filename> 目录中， 每个 jail 有一个对应的空目录。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:334
+#, fuzzy
 msgid ""
 "Each jail will have a [.filename]#/s# directory that will be linked to the "
 "read-write portion of the system."
-msgstr ""
+msgstr "每个 jail 中都有一个 <filename>/s</filename> 目录， 这个目录将连接到系统中的可读写部分。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:335
+#, fuzzy
 msgid ""
 "Each jail will have its own read-write system that is based upon "
 "[.filename]#/home/j/skel#."
-msgstr ""
+msgstr "每个 jail 应基于 <filename>/home/j/skel</filename> 建立其可读写空间。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:336
+#, fuzzy
 msgid ""
 "The read-write portion of each jail will be created in "
 "[.filename]#/home/js#."
-msgstr ""
+msgstr "每个 jailspace (jail 中的可读写部分) 应创建到 <filename>/home/js</filename>。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/jails/_index.adoc:338
@@ -1034,25 +1059,30 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:402
+#, fuzzy
 msgid ""
 "As a last step, create a generic [.filename]#/home/j/skel/etc/make.conf# "
 "containing this line:"
-msgstr ""
+msgstr "最后， 创建一个默认的包含下列配置的 <filename>/home/j/skel/etc/make.conf</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:406
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "WRKDIRPREFIX?=  /s/portbuild\n"
-msgstr ""
+msgstr "WRKDIRPREFIX?=  /s/portbuild\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:409
+#, fuzzy
 msgid ""
 "  This makes it possible to compile FreeBSD ports inside each jail. Remember "
 "that the ports directory is part of the read-only system. The custom path "
 "for `WRKDIRPREFIX` allows builds to be done in the read-write portion of "
 "every jail."
 msgstr ""
+"  配置 <literal>WRKDIRPREFIX</literal> 使得在每个 jail 中分别编译 FreeBSD 成为可能。 请注意 "
+"ports 目录是只读系统的一部分。 而自订的 <literal>WRKDIRPREFIX</literal> 则使得联编过程得以在 jail "
+"中的可读写部分完成。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/jails/_index.adoc:411
@@ -1070,15 +1100,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:417
+#, fuzzy
 msgid ""
 "Add the following lines to [.filename]#/etc/fstab#, so that the read-only "
 "template for the jails and the read-write space will be available in the "
 "respective jails:"
-msgstr ""
+msgstr "在 <filename>/etc/fstab</filename> 文件中加入下列配置， 以便让系统自动挂接 jail 的只读模板和读写空间："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:426
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "/home/j/mroot   /home/j/ns     nullfs  ro  0   0\n"
 "/home/j/mroot   /home/j/mail   nullfs  ro  0   0\n"
@@ -1087,6 +1118,12 @@ msgid ""
 "/home/js/mail   /home/j/mail/s nullfs  rw  0   0\n"
 "/home/js/www    /home/j/www/s  nullfs  rw  0   0\n"
 msgstr ""
+"/home/j/mroot   /home/j/ns     nullfs  ro  0   0\n"
+"/home/j/mroot   /home/j/mail   nullfs  ro  0   0\n"
+"/home/j/mroot   /home/j/www    nullfs  ro  0   0\n"
+"/home/js/ns     /home/j/ns/s   nullfs  rw  0   0\n"
+"/home/js/mail   /home/j/mail/s nullfs  rw  0   0\n"
+"/home/js/www    /home/j/www/s  nullfs  rw  0   0\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:429
@@ -1103,7 +1140,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:448
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "jail_enable=\"YES\"\n"
 "jail_set_hostname_allow=\"NO\"\n"
@@ -1121,6 +1158,21 @@ msgid ""
 "jail_www_rootdir=\"/usr/home/j/www\"\n"
 "jail_www_devfs_enable=\"YES\"\n"
 msgstr ""
+"jail_enable=\"YES\"\n"
+"jail_set_hostname_allow=\"NO\"\n"
+"jail_list=\"ns mail www\"\n"
+"jail_ns_hostname=\"ns.example.org\"\n"
+"jail_ns_ip=\"192.168.3.17\"\n"
+"jail_ns_rootdir=\"/usr/home/j/ns\"\n"
+"jail_ns_devfs_enable=\"YES\"\n"
+"jail_mail_hostname=\"mail.example.org\"\n"
+"jail_mail_ip=\"192.168.3.18\"\n"
+"jail_mail_rootdir=\"/usr/home/j/mail\"\n"
+"jail_mail_devfs_enable=\"YES\"\n"
+"jail_www_hostname=\"www.example.org\"\n"
+"jail_www_ip=\"62.123.43.14\"\n"
+"jail_www_rootdir=\"/usr/home/j/www\"\n"
+"jail_www_devfs_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:451
@@ -1146,10 +1198,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:459
+#, fuzzy
 msgid ""
 "Install the read-write template into each jail using "
 "package:sysutils/cpdup[]:"
 msgstr ""
+"在 jail 中安装可读写的模板。 注意您需要使用 <package>sysutils/cpdup</package>， "
+"它能够帮助您确保每个目录都是正确地复制的："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:466
@@ -1228,10 +1283,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:501
+#, fuzzy
 msgid ""
 "The first step is to upgrade the host system. Then, create a new temporary "
 "read-only template in [.filename]#/home/j/mroot2#."
 msgstr ""
+"第一步是按通常的方法升级主机的系统。 接着， 在 <filename>/home/j/mroot2</filename> 中建立一个新的临时模板。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:510
@@ -1291,10 +1348,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:541
+#, fuzzy
 msgid ""
 "Unmount the original file systems as the read-write systems are attached to "
 "the read-only system ([.filename]#/s#):"
-msgstr ""
+msgstr "将文件系统从读写状模式换为只读模式（<filename>/s</filename>）："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:550
@@ -1384,18 +1442,21 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:587
+#, fuzzy
 msgid ""
 "To keep jail loopback traffic off the host's loopback network interface "
 "`lo0`, a second loopback interface is created by adding an entry to "
 "[.filename]#/etc/rc.conf#:"
 msgstr ""
+"为了将 jail 回环流量从主机的环回网络接口<literal>lo0</literal>上保留下来，通过向<filename>/etc/rc."
+"conf</filename>添加条目来创建第二个回回接口："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:591
 #: documentation/content/en/books/handbook/jails/_index.adoc:962
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "cloned_interfaces=\"lo1\"\n"
-msgstr ""
+msgstr "cloned_interfaces=\"lo1\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:594
@@ -1415,10 +1476,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:603
+#, fuzzy
 msgid ""
 "  Jails can be allowed to use aliases of this secondary loopback interface "
 "without interfering with the host."
-msgstr ""
+msgstr "  可以允许 Jail 使用此辅助回环接口的别名，不会干扰主机。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:605
@@ -1455,9 +1517,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:620
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ezjail_enable=\"YES\"\n"
-msgstr ""
+msgstr "ezjail_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:623
@@ -1502,12 +1564,15 @@ msgstr "在 jail 中使用 FreeBSD-RELEASE"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:642
+#, fuzzy
 msgid ""
 "  For a basejail based on the FreeBSD RELEASE matching that of the host "
 "computer, use `install`. For example, on a host computer running FreeBSD "
 "10-STABLE, the latest RELEASE version of FreeBSD -10 will be installed in "
 "the jail):"
 msgstr ""
+"  对于基于 FreeBSD RELEASE 版本的 basejail， 请使用 <command>install</command>。例如， 在运行 "
+"FreeBSD 10-STABLE 的主机上， 将会在 jail中安装最新的 FreeBSD -10 的 RELEASE 版本："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:646
@@ -1742,11 +1807,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:751
+#, fuzzy
 msgid ""
 "  Enter configuration settings in [.filename]#/etc/rc.conf#. This is much "
 "like configuring a full computer. The host name and IP address are not set "
 "here. Those values are already provided by the jail configuration."
 msgstr ""
+"  在<filename>/etc/rc.conf</filename>中输入配置信息。这和配置一台完整的计算机很像。这里不设置主机名和 "
+"<acronym>IP</acronym>地址。这些值已经由 jail 配置提供了。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:753
@@ -1965,10 +2033,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:866
+#, fuzzy
 msgid ""
 "After a major version update it is recommended by package:sysutils/ezjail[] "
 "to make sure your `pkg` is of the correct version. Therefore enter:"
 msgstr ""
+"<package>sysutils/ezjail</package> 升级到合适版本后后还需将 <command>pkg</command> "
+"升级到正确版本，输入："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:870
@@ -2081,11 +2152,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:923
+#, fuzzy
 msgid ""
 "The archive file can be copied elsewhere as a backup, or an existing jail "
 "can be restored from it with `restore`. A new jail can be created from the "
 "archive, providing a convenient way to clone existing jails."
 msgstr ""
+"可以将存档文件复制到其他地方作为备份，或者用<command>restore</command>还原现有的 jail。可以从存档中创建一个新的 jail，"
+"为克隆现有的 jail 提供了一种方便的方法。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:925
@@ -2163,10 +2237,11 @@ msgstr "在Jail中执行BIND"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:958
+#, fuzzy
 msgid ""
 "Create a cloned loopback interface by adding a line to "
 "[.filename]#/etc/rc.conf#:"
-msgstr ""
+msgstr "将以下行添加到 <filename>/etc/rc.conf</filename> 创建克隆的环回接口："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:965
@@ -2216,11 +2291,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:1000
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "nameserver 10.0.0.62\n"
 "nameserver 10.0.0.61\n"
 msgstr ""
+"nameserver 10.0.0.62\n"
+"nameserver 10.0.0.61\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:1003
@@ -2235,10 +2312,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:1010
+#, fuzzy
 msgid ""
 "Configure the name server by editing "
 "[.filename]#/usr/local/etc/namedb/named.conf#."
-msgstr ""
+msgstr "通过<filename>/usr/local/etc/namedb/named.conf</filename>配置域名服务器。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:1012
@@ -2284,9 +2362,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:1033
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "\tlisten-on\t{ 192.168.1.240; };\n"
-msgstr ""
+msgstr "\tlisten-on\t{ 192.168.1.240; };\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:1036
@@ -2297,7 +2375,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:1044
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "/*\n"
 "\tforwarders {\n"
@@ -2305,6 +2383,11 @@ msgid ""
 "\t};\n"
 "*/\n"
 msgstr ""
+"/*\n"
+"\tforwarders {\n"
+"\t\t127.0.0.1;\n"
+"\t};\n"
+"*/\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:1047
@@ -2340,9 +2423,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:1065
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "named_enable=\"YES\"\n"
-msgstr ""
+msgstr "named_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:1068
@@ -2366,9 +2449,9 @@ msgstr "回应中应包含以下信息"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:1082
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ";; Got answer;\n"
-msgstr ""
+msgstr ";; Got answer;\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:1085
@@ -2379,9 +2462,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:1089
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ";; connection timed out; no servers could be reached\n"
-msgstr ""
+msgstr ";; connection timed out; no servers could be reached\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:1092
@@ -2400,9 +2483,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/jails/_index.adoc:1098
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "nameserver 192.168.1.240\n"
-msgstr ""
+msgstr "nameserver 192.168.1.240\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:1101
