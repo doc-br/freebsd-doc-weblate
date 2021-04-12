@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:55-0300\n"
-"PO-Revision-Date: 2021-04-05 12:40+0000\n"
+"PO-Revision-Date: 2021-04-12 20:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookkernelconfig_index/zh_CN/>\n"
@@ -137,6 +137,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:70
+#, fuzzy
 msgid ""
 "Building a custom kernel is often a rite of passage for advanced BSD "
 "users. This process, while time consuming, can provide benefits to the "
@@ -145,6 +146,9 @@ msgid ""
 "support for that computer's hardware. This has a number of benefits, such "
 "as:"
 msgstr ""
+"编译自定义的核心几乎是每位进阶的BSD使用者所必须经历的过程。尽管这项工作可能比较耗时，但在FreeBSD的使用上会有许多好处。跟必须支持大多数各式硬件的"
+"<filename>GENERIC</filename>核心相比的话，自定义的核心可以更『体贴』，只支持『自己硬件』的部分就好。自定义核心有许多项优点，如"
+"："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:72
@@ -155,6 +159,7 @@ msgstr "加速开机，因为自定义的核心只需要侦测您系统上存在
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:73
+#, fuzzy
 msgid ""
 "Lower memory usage. A custom kernel often uses less memory than the "
 "[.filename]#GENERIC# kernel by omitting unused features and device "
@@ -163,13 +168,16 @@ msgid ""
 "applications. For this reason, a custom kernel is useful on a system with a "
 "small amount of RAM."
 msgstr ""
+"减少內存使用，自定义的核心通常会比<filename>GENERIC</filename>核心使用更少的內存，这很重要，因为核心必须一直存放在实体记忆体内"
+"，会让其他应用程序无法使用。因此，自定义核心对于记忆体较小的系统来说，发挥很大的作用。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:74
+#, fuzzy
 msgid ""
 "Additional hardware support. A custom kernel can add support for devices "
 "which are not present in the [.filename]#GENERIC# kernel."
-msgstr ""
+msgstr "支持额外的硬件，自定义的核心可以增加一些<filename>GENERIC</filename>核心没有提供的硬件支持。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:76
@@ -210,10 +218,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:90
+#, fuzzy
 msgid ""
 "In some cases, there is no associated module in "
 "[.filename]#/boot/kernel#. This is mostly true for certain subsystems."
-msgstr ""
+msgstr "部份情况在<filename>/boot/kernel</filename>会没有相关的模块，这对于某些子系统大多是真的。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:92
@@ -293,10 +302,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:128
+#, fuzzy
 msgid ""
 "This output shows that the [.filename]#ath# driver located a wireless "
 "Ethernet device."
-msgstr ""
+msgstr "以上输出信息说明<filename>ath</filename>驱动程序已经找到一个无线以太网络装置。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:130
@@ -360,6 +370,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:150
+#, fuzzy
 msgid ""
 "Do not make edits to [.filename]#GENERIC#. Instead, copy the file to a "
 "different name and make edits to the copy. The convention is to use a name "
@@ -368,6 +379,10 @@ msgid ""
 "hostname. This example creates a copy, named [.filename]#MYKERNEL#, of the "
 "[.filename]#GENERIC# configuration file for the `amd64` architecture:"
 msgstr ""
+"请不要直接对<filename>GENERIC</filename>文件做编辑。复制该文件为另一个名称，并对复制出来的文件做编辑，习惯上文件名会全部使用大"
+"写字元。当维护多台安装不同的硬件的FreeBSD机器时，将文件名后方加上机器的主机名称（Host name）是个不错的方法。以下示例使用<literal>"
+"amd64</literal>构架的<filename>GENERIC</filename>配置文件建立了一个复本名称为<filename>MYKERNE"
+"L</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:155
@@ -387,6 +402,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:160
+#, fuzzy
 msgid ""
 "The format of the kernel configuration file is simple. Each line contains a "
 "keyword that represents a device or subsystem, an argument, and a brief "
@@ -395,6 +411,9 @@ msgid ""
 "of the line representing that device or subsystem. Do not add or remove a "
 "`#` for any line that you do not understand."
 msgstr ""
+"核心配置文件的格式很简单，每一行会含有代表装置（Device）或子系统（Subsystem）的关键字、参数以及简短的说明。任何在<literal>#</l"
+"iteral>符号之后的文字会被当做注释并且略过。要移除核心对某个装置或子系统的支持，仅需要在代表该装置或子系统的行前加上<literal>#</lite"
+"ral>符号。请不要在您还不了解用途的行前加上或移除<literal>#</literal>符号。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:165
@@ -407,6 +426,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:168
+#, fuzzy
 msgid ""
 "In addition to the brief descriptions provided in this file, additional "
 "descriptions are contained in [.filename]#NOTES#, which can be found in the "
@@ -414,13 +434,17 @@ msgid ""
 "architecture independent options, refer to "
 "[.filename]#/usr/src/sys/conf/NOTES#."
 msgstr ""
+"除了在配置文件中提供的简短说明之外，尚有其他的说明在<filename>NOTES</filename>文件中，可在与该构架<filename>GENER"
+"IC</filename>相同的目录底下找到。要查看所有构架通用的选项，请参考<filename>/ usr/src/sys/conf/"
+"NOTES</filename>。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:173
+#, fuzzy
 msgid ""
 "When finished customizing the kernel configuration file, save a backup copy "
 "to a location outside of [.filename]#/usr/src#."
-msgstr ""
+msgstr "当完成自定义的核心配置文件，请备份到<filename>/usr/src</filename>位置之外。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:175
@@ -441,6 +465,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:187
+#, fuzzy
 msgid ""
 "An `include` directive is available for use in configuration files. This "
 "allows another configuration file to be included in the current one, making "
@@ -449,6 +474,9 @@ msgid ""
 "delta to be maintained with respect to [.filename]#GENERIC#, as seen in this "
 "example:"
 msgstr ""
+"配置文件中可以使用<literal>include</literal>指令（Directive）。该指令可以引用其他配置文件到目前的配置文件，这让只需根据"
+"现有文件设定做些微调整时更简单。若只有少量的额外选项或驱动程序需要设定，该指令可引用<filename>GENERIC</filename>并设定额外增加"
+"的选项，如示例所示："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:192
@@ -513,9 +541,9 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:220
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Change to this directory:\n"
-msgstr ""
+msgstr "切换至此目录：\n"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:224
@@ -575,9 +603,9 @@ msgstr "例如，使用以下变数可指定要编译的模块清单来替代预
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:249
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "MODULES_OVERRIDE = linux acpi\n"
-msgstr ""
+msgstr "MODULES_OVERRIDE = linux acpi\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:252
@@ -588,9 +616,9 @@ msgstr "或者，可使用以下变数来从编译程序中排除要编译的模
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:256
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "WITHOUT_MODULES = linux acpi sound\n"
-msgstr ""
+msgstr "WITHOUT_MODULES = linux acpi sound\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:259
@@ -626,9 +654,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:271
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "config: line 17: syntax error\n"
-msgstr ""
+msgstr "config: line 17: syntax error\n"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/kernelconfig/_index.adoc:273
