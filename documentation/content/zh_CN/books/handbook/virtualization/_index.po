@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-14 11:02-0300\n"
-"PO-Revision-Date: 2021-04-05 12:40+0000\n"
+"PO-Revision-Date: 2021-04-12 20:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookvirtualization_index/zh_CN/>\n"
@@ -306,9 +306,9 @@ msgstr ""
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:127
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:202
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:288
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "kern.hz=100\n"
-msgstr ""
+msgstr "kern.hz=100\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:130
@@ -604,10 +604,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:225
+#, fuzzy
 msgid ""
 "This will load the New Virtual Machine Assistant. Click [."
 "guimenuitem]#Continue# to proceed:"
 msgstr ""
+"这个动做会加载New Virtual Machine Assistant，点选<guimenuitem>Continue</guimenuitem>继续："
 
 #. type: Target for macro image
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:226
@@ -734,6 +736,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:270
+#, fuzzy
 msgid ""
 "The last thing to change is how the virtual machine will connect to the "
 "network. To allow connections to the virtual machine from other machines "
@@ -742,6 +745,9 @@ msgid ""
 "connection (NAT)# is preferred so that the virtual machine can have access "
 "to the Internet, but the network cannot access the virtual machine."
 msgstr ""
+"最后一件事是更改虚拟机器联机到网络的方式，要允许除了主端以外的机器联机到虚拟机器，请选择<guimenuitem>Connect directly to "
+"the physical network（Bridged）</guimenuitem>。否则会偏好使用<guimenuitem> Share the "
+"host's internet connection（NAT）</guimenuitem>来让虚拟机器可以存取网际网络，但外部网络无法联机到虚拟机器。"
 
 #. type: Target for macro image
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:271
@@ -855,10 +861,13 @@ msgstr "以下指令均是在FreeBSD客端中执行。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:317
+#, fuzzy
 msgid ""
 "First, install the package:emulators/virtualbox-ose-additions[] package or "
 "port in the FreeBSD guest. This will install the port:"
 msgstr ""
+"首先，在FreeBSD客端安装<package>emulators/virtualbox-ose-"
+"additions</package>套件或Port，以下指令会安装Port："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:321
@@ -873,11 +882,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:329
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "vboxguest_enable=\"YES\"\n"
 "vboxservice_enable=\"YES\"\n"
 msgstr ""
+"vboxguest_enable=\"YES\"\n"
+"vboxservice_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:332
@@ -887,9 +898,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:336
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "vboxservice_flags=\"--disable-timesync\"\n"
-msgstr ""
+msgstr "vboxservice_flags=\"--disable-timesync\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:339
@@ -900,7 +911,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:348
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Section \"Device\"\n"
 "\tIdentifier \"Card0\"\n"
@@ -909,6 +920,12 @@ msgid ""
 "\tBoardName \"VirtualBox Graphics Adapter\"\n"
 "EndSection\n"
 msgstr ""
+"Section \"Device\"\n"
+"\tIdentifier \"Card0\"\n"
+"\tDriver \"vboxvideo\"\n"
+"\tVendorName \"InnoTek Systemberatung GmbH\"\n"
+"\tBoardName \"VirtualBox Graphics Adapter\"\n"
+"EndSection\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:351
@@ -919,13 +936,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:358
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Section \"InputDevice\"\n"
 "\tIdentifier \"Mouse0\"\n"
 "\tDriver \"vboxmouse\"\n"
 "EndSection\n"
 msgstr ""
+"Section \"InputDevice\"\n"
+"\tIdentifier \"Mouse0\"\n"
+"\tDriver \"vboxmouse\"\n"
+"EndSection\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:361
@@ -1085,29 +1106,32 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:438
+#, fuzzy
 msgid ""
 "To ensure the module is always loaded after a reboot, add this line to [."
 "filename]#/boot/loader.conf#:"
-msgstr ""
+msgstr "要确保该模块在重启后会加载，可加入下行到<filename>/boot/loader.conf</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:442
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "vboxdrv_load=\"YES\"\n"
-msgstr ""
+msgstr "vboxdrv_load=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:445
+#, fuzzy
 msgid ""
 "To use the kernel modules that allow bridged or host-only networking, add "
 "this line to [.filename]#/etc/rc.conf# and reboot the computer:"
 msgstr ""
+"要使用可支持桥接或仅限主端（Host-only）的网络，可加入下行到<filename>/etc/rc.conf</filename>，然后重新启动电脑："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:449
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "vboxnet_enable=\"YES\"\n"
-msgstr ""
+msgstr "vboxnet_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:452
@@ -1125,10 +1149,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:459
+#, fuzzy
 msgid ""
 "The default permissions for [.filename]#/dev/vboxnetctl# are restrictive and "
 "need to be changed for bridged networking:"
-msgstr ""
+msgstr "<filename>/dev/vboxnetctl</filename>的预设权限是受限的，需要更改后才可使用桥接网络："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:464
@@ -1140,18 +1165,21 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:467
+#, fuzzy
 msgid ""
 "To make this permissions change permanent, add these lines to [.filename]#/"
 "etc/devfs.conf#:"
-msgstr ""
+msgstr "要永久变更权限，可加入下列几行到<filename>/etc/devfs.conf</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:472
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "own     vboxnetctl root:vboxusers\n"
 "perm    vboxnetctl 0660\n"
 msgstr ""
+"own     vboxnetctl root:vboxusers\n"
+"perm    vboxnetctl 0660\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:475
@@ -1203,30 +1231,34 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:496
+#, fuzzy
 msgid ""
 "Then, add the following to [.filename]#/etc/devfs.rules#, or create this "
 "file if it does not exist yet:"
-msgstr ""
+msgstr "然后将以下内容添加到<filename>/etc/devfs.rules</filename>，或者创建此文件 (如果该文件尚不存在）："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:501
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "[system=10]\n"
 "add path 'usb/*' mode 0660 group operator\n"
 msgstr ""
+"[system=10]\n"
+"add path 'usb/*' mode 0660 group operator\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:504
+#, fuzzy
 msgid ""
 "To load these new rules, add the following to [.filename]#/etc/rc.conf#:"
-msgstr ""
+msgstr "要加载这些新规则，请在<filename>/etc/rc.conf</filename>中添加以下内容："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:508
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "devfs_system_ruleset=\"system\"\n"
-msgstr ""
+msgstr "devfs_system_ruleset=\"system\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:511
@@ -1275,9 +1307,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:529
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "hald_enable=\"YES\"\n"
-msgstr ""
+msgstr "hald_enable=\"YES\"\n"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:534
@@ -1297,12 +1329,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:543
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "perm cd* 0660\n"
 "perm xpt0 0660\n"
 "perm pass* 0660\n"
 msgstr ""
+"perm cd* 0660\n"
+"perm xpt0 0660\n"
+"perm pass* 0660\n"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:551
@@ -1466,10 +1501,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:617
+#, fuzzy
 msgid ""
 "In order to boot operating systems other than FreeBSD, the package:sysutils/"
 "grub2-bhyve[] port must be first installed."
-msgstr ""
+msgstr "为了在客户机中启动非 FreeBSD 操作系统，请先安装<package>sysutils/grub2-bhyve</package>。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:619
@@ -1493,11 +1529,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:631
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "(hd0) ./linux.img\n"
 "(cd0) ./somelinux.iso\n"
 msgstr ""
+"(hd0) ./linux.img\n"
+"(cd0) ./somelinux.iso\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:634
@@ -1850,9 +1888,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:822
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "net.link.tap.up_on_open=1\n"
-msgstr ""
+msgstr "net.link.tap.up_on_open=1\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:825
@@ -1890,6 +1928,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:839
+#, fuzzy
 msgid ""
 "Xen(TM) is a bare-metal hypervisor, which means that it is the first program "
 "loaded after the BIOS. A special privileged guest called the Domain-0 "
@@ -1903,6 +1942,11 @@ msgid ""
 "other hypervisor solutions, while the DomU is where individual guest VMs are "
 "run."
 msgstr ""
+"<trademark>Xen</trademark>是一个裸机管理程序，这意味着它是BIOS之后加载的第一个程序。然后启动一个名为Domain-0的特殊特"
+"权客体（简称为<literal>Dom0</literal>）。Dom0利用其特殊权限直接访问底层物理硬件，使其成为高性能的解决方案。它能够直接访问磁盘控"
+"制器和网络适配器。Dom0还可以使用<trademark>Xen</trademark>管理工具来管理和控制<trademark>Xen</tradema"
+"rk>虚拟机，用于创建、列出和销毁虚拟机。Dom0为非特权域提供虚拟磁盘和网络，通常被称为<literal>DomU</literal>。<tradema"
+"rk>Xen</trademark> Dom0可以与其他虚拟机解决方案的服务控制台相提并论，而DomU则是运行单个访客虚拟机的地方。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:841
@@ -1959,6 +2003,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:858
+#, fuzzy
 msgid ""
 "Configuration files must be edited to prepare the host for the Dom0 "
 "integration after the Xen packages are installed. An entry to [.filename]#/"
@@ -1966,6 +2011,8 @@ msgid ""
 "to be wired. Otherwise, DomU VMs with higher memory requirements will not "
 "run."
 msgstr ""
+"必须编辑配置文件，以便在安装 Xen 包后为主机集成 Dom0。<filename>/etc/sysctl."
+"conf</filename>中的一个条目将禁用允许连接的内存页数限制。否则，对内存要求较高的 DomU 虚拟机将无法运行。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:862
@@ -2005,6 +2052,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:880
+#, fuzzy
 msgid ""
 "Selecting a Xen(TM) kernel in [.filename]#/boot/loader.conf# activates the "
 "Dom0. Xen(TM) also requires resources like CPU and memory from the host "
@@ -2013,6 +2061,9 @@ msgid ""
 "GB of memory and 4 virtual CPUs are made available for the Dom0. The serial "
 "console is also activated and logging options are defined."
 msgstr ""
+"在<filename>/boot/loader.conf</filename>中选择<trademark>Xen</trademark>内核，会激活Dom"
+"0。<trademark>Xen</trademark>也需要主机上的资源，如CPU和内存等资源，用于自己和其他 DomU域。CPU "
+"和内存的多少取决于个人需求和硬件能力。在本例中，为 Dom0 提供了 8GB 内存和 4 个虚拟 CPU。串行控制台也被激活，并定义了记录选项。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:882
@@ -2066,12 +2117,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:914
+#, fuzzy
 msgid ""
 "These settings are enough to start a Dom0-enabled system. However, it lacks "
 "network functionality for the DomU machines. To fix that, define a bridged "
 "interface with the main NIC of the system which the DomU VMs can use to "
 "connect to the network. Replace _em0_ with the host network interface name."
 msgstr ""
+"这些设置足以启动一个支持Dom0的系统。但是，它缺乏DomU机器的网络功能。要解决这个问题，请定义一个与系统的主网卡的桥接接口，DomU虚拟机可以用它来连"
+"接到网络。将<replaceable>em0</replaceable>替换为主机网络接口名称。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:920
@@ -2146,10 +2200,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:951
+#, fuzzy
 msgid ""
 "A ZFS volume of 20 GB called [.filename]#xendisk0# is created to serve as "
 "the disk space for the VM."
-msgstr ""
+msgstr "创建名为<filename>xendisk0</filename>的 20 GB 的 ZFS 卷，用作 VM 的磁盘空间。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:955
@@ -2159,12 +2214,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:958
+#, fuzzy
 msgid ""
 "The new DomU guest VM is defined in a file. Some specific definitions like "
 "name, keymap, and VNC connection details are also defined. The following [."
 "filename]#freebsd.cfg# contains a minimum DomU configuration for this "
 "example:"
 msgstr ""
+"新的 DomU guest VM定义在一个文件中。还定义了一些特定的配置，如名称、密钥映射和VNC连接细节。下面的<filename>freebsd."
+"cfg</filename>包含了本例中的最低限度的 DomU 配置："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:975
@@ -2235,6 +2293,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:998
+#, fuzzy
 msgid ""
 "Each time the Dom0 is restarted, the configuration file must be passed to "
 "`xl create` again to re-create the DomU. By default, only the Dom0 is "
@@ -2245,6 +2304,9 @@ msgid ""
 "backed up and kept available to be able to re-create the guest VM when "
 "needed."
 msgstr ""
+"每次重启Dom0时，必须再次将配置文件传递给<command>xl create</command>以重新创建 DomU。默认情况下，重启后只创建 Dom"
+"0，不创建单个虚拟机。虚拟机可以还原到被暂停的那一刻，因为它们在虚拟磁盘上存储了操作系统。虚拟机配置可以随时改变（例如，增加更多内存时）。必须妥善备份虚拟"
+"机配置文件并保持可用，以便在需要时重建虚拟机。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:1001
@@ -2263,6 +2325,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:1011
+#, fuzzy
 msgid ""
 "To begin the installation of the base operating system, start the VNC "
 "client, directing it to the main network address of the host or to the IP "
@@ -2275,6 +2338,12 @@ msgid ""
 "the parameter. Afterwards, recreate it using the modified [."
 "filename]*freebsd.cfg*."
 msgstr ""
+"要开始安装基础操作系统，请启动VNC客户端，将其引导到主机的主网络地址或<filename>freebsd."
+"cfg</filename>中<literal>vnclisten</literal>行中定义的IP地址。安装好操作系统后，关闭 DomU 并断开 "
+"VNC 查看器的连接。编辑<filename>freebsd.cfg</filename>，删除带有<literal>cdrom</literal>定义的"
+"那行，或者在该行的开头插入一个<literal>#</literal>字符，将其注释掉。要加载这个新配置，必须用<command>xl "
+"destroy</command>来删除旧的DomU，传递名称或id作为参数。然后，使用修改后的<filename>freebsd."
+"cfg</filename>重新创建。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:1016
@@ -2388,16 +2457,19 @@ msgstr "创建来宾时也会出现问题，以下尝试为那些尝试诊断来
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:1051
+#, fuzzy
 msgid ""
 "The most common cause of guest creation failures is the `xl` command "
 "spitting some error and exiting with a return code different than 0. If the "
 "error provided is not enough to help identify the issue, more verbose output "
 "can also be obtained from `xl` by using the `v` option repeatedly."
 msgstr ""
+"最常见的原因是 <literal>xl</literal>命令吐出一些错误，退出时返回值不为 0。 如果提供的错误还不足以帮助识别问题，还可以通过使用<l"
+"iteral>xl</literal>的<literal>v</literal>选项获取更详细的信息。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:1067
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# xl -vvv create freebsd.cfg\n"
 "Parsing config from freebsd.cfg\n"
@@ -2413,6 +2485,27 @@ msgid ""
 "libxl: debug: libxl_dom.c:988:libxl__load_hvm_firmware_module: Loading BIOS: /usr/local/shared/seabios/bios.bin\n"
 "...\n"
 msgstr ""
+"<prompt>#</prompt> <userinput>xl -vvv create freebsd.cfg</userinput>\n"
+"Parsing config from freebsd.cfg\n"
+"libxl: debug: libxl_create.c:1693:do_domain_create: Domain 0:ao 0x800d750a0: "
+"create: how=0x0 callback=0x0 poller=0x800d6f0f0\n"
+"libxl: debug: libxl_device.c:397:libxl__device_disk_set_backend: Disk "
+"vdev=xvda spec.backend=unknown\n"
+"libxl: debug: libxl_device.c:432:libxl__device_disk_set_backend: Disk "
+"vdev=xvda, using backend phy\n"
+"libxl: debug: libxl_create.c:1018:initiate_domain_create: Domain 1:running "
+"bootloader\n"
+"libxl: debug: libxl_bootloader.c:328:libxl__bootloader_run: Domain 1:not a "
+"PV/PVH domain, skipping bootloader\n"
+"libxl: debug: libxl_event.c:689:libxl__ev_xswatch_deregister: watch "
+"w=0x800d96b98: deregister unregistered\n"
+"domainbuilder: detail: xc_dom_allocate: cmdline=\"\", features=\"\"\n"
+"domainbuilder: detail: xc_dom_kernel_file: filename=\"/usr/local/lib/xen/"
+"boot/hvmloader\"\n"
+"domainbuilder: detail: xc_dom_malloc_filemap    : 326 kB\n"
+"libxl: debug: libxl_dom.c:988:libxl__load_hvm_firmware_module: Loading BIOS: "
+"/usr/local/share/seabios/bios.bin\n"
+"...\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:1069
