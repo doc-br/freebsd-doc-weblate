@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:55-0300\n"
-"PO-Revision-Date: 2021-04-05 12:39+0000\n"
+"PO-Revision-Date: 2021-04-12 20:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookusb-device-mode_index/zh_CN/>\n"
@@ -64,6 +64,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:52
+#, fuzzy
 msgid ""
 "There are two basic ways the hardware can provide the device mode "
 "functionality: with a separate \"client port\", which only supports the "
@@ -75,6 +76,11 @@ msgid ""
 "to switch to device mode. Single purpose \"client ports\" always work in "
 "device mode."
 msgstr ""
+"硬件提供设备模式功能的基本方式有两种：一种是单独的 \"客户端端口\"，只支持设备模式；另一种是USB OTG端口，可以同时提供设备和主机模式。"
+"对于<acronym>USB "
+"OTG</acronym>端口，<acronym>USB</acronym>堆栈会根据端口连接的内容，在主机端和设备端之间自动切换。将 "
+"<acronym>USB</acronym>设备（如内存条）连接到端口上会导致 FreeBSD 切换到主机模式。连接像计算机一样的 "
+"<acronym>USB</acronym> 主机会导致 FreeBSD 切换到设备模式。单用途的 \"客户端端口 \"总是在设备模式下工作。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:54
@@ -153,18 +159,21 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:73
+#, fuzzy
 msgid ""
 "To enable USB device mode serial ports, add those lines to "
 "[.filename]#/etc/ttys#:"
-msgstr ""
+msgstr "要永久变更权限，可加入下列几行到<filename>/etc/devfs.conf</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:78
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "ttyU0\t\"/usr/libexec/getty 3wire\"\tvt100\tonifconsole secure\n"
 "ttyU1\t\"/usr/libexec/getty 3wire\"\tvt100\tonifconsole secure\n"
 msgstr ""
+"ttyU0\t\"/usr/libexec/getty 3wire\"\tvt100\tonifconsole secure\n"
+"ttyU1\t\"/usr/libexec/getty 3wire\"\tvt100\tonifconsole secure\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:81
@@ -173,7 +182,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:91
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "notify 100 {\n"
 "\tmatch \"system\"\t\t\"DEVFS\";\n"
@@ -183,6 +192,13 @@ msgid ""
 "\taction \"/sbin/init q\";\n"
 "};\n"
 msgstr ""
+"notify 100 {\n"
+"\tmatch \"system\"\t\t\"DEVFS\";\n"
+"\tmatch \"subsystem\"\t\"CDEV\";\n"
+"\tmatch \"type\"\t\t\"CREATE\";\n"
+"\tmatch \"cdev\"\t\t\"ttyU[0-9]+\";\n"
+"\taction \"/sbin/init q\";\n"
+"};\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:94
@@ -198,19 +214,22 @@ msgstr ""
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:101
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:155
+#, fuzzy
 msgid ""
 "Make sure the necessary modules are loaded and the correct template is set "
 "at boot by adding those lines to [.filename]#/boot/loader.conf#, creating it "
 "if it does not already exist:"
-msgstr ""
+msgstr "要确保该模块在重启后会加载，可加入下行到<filename>/boot/loader.conf</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:106
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "umodem_load=\"YES\"\n"
 "hw.usb.template=3\n"
 msgstr ""
+"umodem_load=\"YES\"\n"
+"hw.usb.template=3\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:109
@@ -234,6 +253,7 @@ msgstr "从 FreeBSD 连接到 USB 设备模式串行端口"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:119
+#, fuzzy
 msgid ""
 "To connect to a board configured to provide USB device mode serial ports, "
 "connect the USB host, such as a laptop, to the boards USB OTG or USB client "
@@ -241,6 +261,9 @@ msgid ""
 "the list you should see a USB serial port, eg \"ttyU0\". To open the "
 "connection, use:"
 msgstr ""
+"要连接到配置为提供 USB 设备模式串行端口的主板，请将 USB 主机（如笔记本电脑）连接到主板 USB OTG 或 USB 客户端端口。"
+"使用主机上的<command>pstat -t</command>列出终端线路。在列表的末尾，您应该会看到一个 USB 串行端口，例如\"ttyU0\""
+"。要打开连接，请使用："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:123
@@ -296,6 +319,7 @@ msgstr "从微软 Windows 10 连接到 USB 设备模式串行端口"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:148
+#, fuzzy
 msgid ""
 "To connect to a board configured to provide USB device mode serial ports, "
 "connect the USB host, such as a laptop, to the boards USB OTG or USB client "
@@ -307,6 +331,11 @@ msgid ""
 "COMx obtained from Device Manager in the \"Serial line\" dialog box and "
 "click Open."
 msgstr ""
+"要连接到配置为提供USB设备模式串行端口的板子，请将USB主机（如笔记本电脑）连接到板子的USB OTG或USB客户端端口。要打开连接，你需要一个串行终端"
+"程序，如<application>PuTTY</application>。要检查Windows使用的COM端口名称，运行设备管理器，展开 \"端口("
+"COM &amp; LPT)\"。你会看到一个类似于 \"USB串行设备(COM4) \"的名称。运行你所选择的串行终端程序，例如<application"
+">PuTTY</application>。在<application>PuTTY</application>对话框中，将 \"连接类型 \"设置为 "
+"\"串联\"，在 \"串联线 \"对话框中输入从设备管理器中获得的 COMx，然后点击打开。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:150
@@ -325,11 +354,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:160
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "if_cdce_load=\"YES\"\n"
 "hw.usb.template=1\n"
 msgstr ""
+"if_cdce_load=\"YES\"\n"
+"hw.usb.template=1\n"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:168
@@ -379,9 +410,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:187
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "cfumass_enable=\"YES\"\n"
-msgstr ""
+msgstr "cfumass_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:190
@@ -396,12 +427,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:197
+#, fuzzy
 msgid ""
 "Differently from serial and network functionality, the template should not "
 "be set to 0 or 10 in [.filename]#/boot/loader.conf#. This is because the LUN "
 "must be set up before setting the template. The cfumass startup script sets "
 "the correct template number automatically when started."
 msgstr ""
+"与串行和网络功能不同，模板不应设置为 0 或 10 在<filename>/boot/loader.conf </filename>中。"
+"这是因为在设置模板之前必须设置 LUN。cfumass 启动脚本在启动时自动设置正确的模板编号。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:198
@@ -442,9 +476,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:214
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "cfumass_load=\"YES\"\n"
-msgstr ""
+msgstr "cfumass_load=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:217
@@ -485,7 +519,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:237
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "target naa.50015178f369f092 {\n"
 "\tlun 0 {\n"
@@ -494,6 +528,12 @@ msgid ""
 "\t}\n"
 "}\n"
 msgstr ""
+"target naa.50015178f369f092 {\n"
+"\tlun 0 {\n"
+"\t\tpath /data/target0\n"
+"\t\tsize 4G\n"
+"\t}\n"
+"}\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:240
@@ -514,9 +554,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:246
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ctld_enable=\"YES\"\n"
-msgstr ""
+msgstr "ctld_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/usb-device-mode/_index.adoc:249
