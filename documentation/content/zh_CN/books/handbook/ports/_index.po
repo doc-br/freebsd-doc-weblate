@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: 2021-04-05 12:39+0000\n"
+"PO-Revision-Date: 2021-04-12 20:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookports_index/zh_CN/>\n"
@@ -143,12 +143,15 @@ msgstr "测试和安装软件。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:71
+#, fuzzy
 msgid ""
 "A FreeBSD _port_ is a collection of files designed to automate the process "
 "of compiling an application from source code. The files that comprise a port "
 "contain all the necessary information to automatically download, extract, "
 "patch, compile, and install the application."
 msgstr ""
+"FreeBSD<emphasis>port</emphasis>是一组文件，旨在自动从源代码编译应用程序的过程。构成端口的文件包含自动下载、提取、修补、编"
+"译和安装应用程序所需的所有信息。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:73
@@ -238,14 +241,18 @@ msgstr "package 通常使用较为保守的编译选项，因为它必须适配�
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:92
+#, fuzzy
 msgid ""
 "Some applications have compile-time options relating to which features are "
 "installed. For example, Apache can be configured with a wide variety of "
 "different built-in options."
 msgstr ""
+"一些软件包已经把与它们相关的能做和不能做的事情的选项都编译进去了。 例如，<application>Apache</application> "
+"可能就配置了很多的选项。 从 Ports 中安装时，您不一定要接受默认的选项，可以自己来设置。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:94
+#, fuzzy
 msgid ""
 "  In some cases, multiple packages will exist for the same application to "
 "specify certain settings. For example, Ghostscript is available as a "
@@ -254,6 +261,10 @@ msgid ""
 "packages rapidly becomes impossible if an application has more than one or "
 "two different compile-time options."
 msgstr ""
+"  在一些例子中，一个软件有不同的配置存在多个package。 例如， <application>Ghostscript</application>存在 "
+"<filename>ghostscript</filename> package 和 <filename>ghostscript-nox11</"
+"filename> package 两个配置 package， 这取决于您是否安装了X11 服务器。这样的调整对 package 是可能的， "
+"但如果一个应用程序有超过一个或两个不同的编译时间选项时， 就不行了。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:95
@@ -321,6 +332,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:115
+#, fuzzy
 msgid ""
 "Dan Langille maintains http://www.FreshPorts.org/[FreshPorts.org] which "
 "provides a comprehensive search utility and also tracks changes to the "
@@ -328,6 +340,9 @@ msgid ""
 "customized watch list in order to receive an automated email when their "
 "watched ports are updated."
 msgstr ""
+"Dan Langille 维护着网站 FreshPorts，在 <uri xlink:href=\"http://www.FreshPorts.org/"
+"\">http://www.FreshPorts.org/</uri>。 FreshPort时刻 <quote>追踪</quote> 着在 ports "
+"中应用程序的变化。当有任何程序被升级时，他们就会发 email 提醒您。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:116
@@ -364,6 +379,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:135
+#, fuzzy
 msgid ""
 "  Package names include the version number and, in the case of ports based "
 "on python, the version number of the version of python the package was built "
@@ -374,6 +390,10 @@ msgid ""
 "the application by the port origin, which is the path in the ports "
 "tree. Repeat the `pkg search` with `-o` to list the origin of each package:"
 msgstr ""
+"  软件包名字中带有版本号。如果这个软件使用 Python 写的，包名中还会包含软件使用的 Python 版本号。一些软件可能会有很多个版本。以<appl"
+"ication>Subversion</application>为例，就有许多不同的版本，还有不同的编译参数。在本例中，静态链接的<application"
+">Subversion</application>版本。指示要安装哪个包时，最好按 Port 源指定应用程序，Port 源是 Port 树中的路径。使用 "
+"<command>pkg search -o</command> 列出每个包的来源："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:150
@@ -433,10 +453,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:170
+#, fuzzy
 msgid ""
 "  Note that this will also return any matched files downloaded into the "
 "[.filename]#/usr/ports/distfiles# directory."
-msgstr ""
+msgstr "  请注意，这也会显示已下载至<filename>/usr/ports/distfiles</filename>目录中任何已符合条件的文件。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:171
@@ -518,11 +539,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:212
+#, fuzzy
 msgid ""
 "pkg is the next generation replacement for the traditional FreeBSD package "
 "management tools, offering many features that make dealing with binary "
 "packages faster and easier."
-msgstr ""
+msgstr "<application>pkg</application>是新一代套件管理工具用来取代旧版工具，提供许多功能让处理二进制套件更快更简单。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:214
@@ -604,6 +626,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:248
+#, fuzzy
 msgid ""
 "When upgrading an existing system that originally used the older pkg_* "
 "tools, the database must be converted to the new format, so that the new "
@@ -611,6 +634,8 @@ msgid ""
 "installed, the package database must be converted from the traditional "
 "format to the new format by running this command:"
 msgstr ""
+"当升级原使用旧版pkg_*工具的既有系统时，必须将数据库转换成新的格式，如此新的工具才会知道有那些已安装过的套件。<application>pkg</ap"
+"plication>安装完后，必须执行以下指令将套件数据库从旧版格式转换到新版格式："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:252
@@ -634,6 +659,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:267
+#, fuzzy
 msgid ""
 "The package database conversion may emit errors as the contents are "
 "converted to the new version. Generally, these errors can be safely "
@@ -641,6 +667,8 @@ msgid ""
 "shown after `pkg2ng` finishes. These applications must be manually "
 "reinstalled."
 msgstr ""
+"套件数据库转换的过程可能会因内容转换为新版本产生错误。通常，这些错误皆可安全忽略，即使如此，仍然有在执行<command>pkg2ng</command>"
+"后无法成功转换的软件清单，这些应用程序则必须手动重新安装。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:270
@@ -698,12 +726,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:295
+#, fuzzy
 msgid ""
 "The rest of this section demonstrates common binary package management tasks "
 "which can be performed using pkg. Each demonstrated command provides many "
 "switches to customize its use. Refer to a command's help or man page for "
 "details and more examples."
 msgstr ""
+"本章节剩余部份将介绍如何使用<application>pkg</application>执行常用的Binary套件管理工作。每个示范的指令皆会提供多个参数"
+"可使用，请参考指令的说明或操作手册以取得详细信息或更多示例。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/ports/_index.adoc:297
@@ -713,6 +744,7 @@ msgstr "Ports 分支：Quarterly 和 Latest"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:300
+#, fuzzy
 msgid ""
 "The `Quarterly` branch provides users with a more predictable and stable "
 "experience for port and package installation and upgrades. This is done "
@@ -725,6 +757,11 @@ msgid ""
 "branch created in January 2016, is named 2016Q1. And the `Latest` branch "
 "provides the latest versions of the packages to the users."
 msgstr ""
+"<literal>Quarterly</literal> 分支为用户提供了更可预测和更稳定的 port "
+"和软件包安装和升级体验。这主要是通过只允许非功能更新来实现的。季度(Quarterly)分支的目标是接收安全修复 (可能是版本更新， 或提交的回溯)、 "
+"错误修复和 port 合规性或框架变化。季度分支在每个（年）季度的1月、4月、7月和10月开始时从HEAD中切出。分支是根据它们创建的年份 (YYYY) "
+"和季度 (Q1-4) 来命名的。例如，在2016年1月创建的季度分支，被命名为2016Q1。而<literal>Latest</literal>分支则为用"
+"户提供最新版本的软件包。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:302
@@ -753,7 +790,7 @@ msgstr "输出像这样："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:322
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "FreeBSD: {\n"
 "  url: \"pkg+http://pkg.FreeBSD.org/${ABI}/latest\",\n"
@@ -763,6 +800,13 @@ msgid ""
 "  enabled: yes\n"
 "}\n"
 msgstr ""
+"FreeBSD: {\n"
+"  url: \"pkg+http://pkg.FreeBSD.org/${ABI}/latest\",\n"
+"  mirror_type: \"srv\",\n"
+"  signature_type: \"fingerprints\",\n"
+"  fingerprints: \"/usr/share/keys/pkg\",\n"
+"  enabled: yes\n"
+"}\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:325
@@ -973,12 +1017,15 @@ msgstr "稽查已安装套件"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:422
+#, fuzzy
 msgid ""
 "Software vulnerabilities are regularly discovered in third-party "
 "applications. To address this, pkg includes a built-in auditing "
 "mechanism. To determine if there are any known vulnerabilities for the "
 "software installed on the system, run:"
 msgstr ""
+"在第三方的应用程序中偶尔可能会发现软件漏洞，要找出这些程序，可使用<application>pkg</application>内置的稽查机制。要查询已安装"
+"在系统上的软件是否有任何已知的漏洞可执行："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:426
@@ -1063,11 +1110,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:466
+#, fuzzy
 msgid ""
 "This list can be used to rebuild all packages installed on a system using "
 "build tools such as package:ports-mgmt/poudriere[] or "
 "package:ports-mgmt/synth[]."
 msgstr ""
+"此列表可用于使用构建工具（如<package> ports-mgmt/poudriere</package>，<package> ports-mgmt/"
+"synth</package>）等构建工具重建系统上安装的所有包。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:468
@@ -1268,10 +1318,11 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:573
+#, fuzzy
 msgid ""
 "By default, the Ports Collection itself is stored as a subdirectory of "
 "[.filename]#/usr/ports#."
-msgstr ""
+msgstr "预设，Port套件集储存在<filename>/usr/ports</filename>的子目录下。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:575
@@ -1299,10 +1350,11 @@ msgstr ""
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:584
+#, fuzzy
 msgid ""
 "To download a compressed snapshot of the Ports Collection into "
 "[.filename]#/var/db/portsnap#:"
-msgstr ""
+msgstr "要下载压缩后的Port套件集快照（Snapshot）到<filename>/var/db/portsnap</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:588
@@ -1421,6 +1473,7 @@ msgstr ""
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:651
+#, fuzzy
 msgid ""
 "The Ports Collection contains directories for software categories. Inside "
 "each category are subdirectories for individual applications. Each "
@@ -1428,41 +1481,51 @@ msgid ""
 "compile and install that program, called a _ports skeleton_. Each port "
 "skeleton includes these files and directories:"
 msgstr ""
+"Port套件集中含有代表不同软件分类的目录，每个分类底下的子目录代表每个应用程序，"
+"每个内含数个用来告诉FreeBSD如何编译与安装该程序文件的应用程序子目录即称作<emphasis>Port Skeleton</emphasis>，"
+"每个Port Skeleton会含有以下文件及目录："
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:653
+#, fuzzy
 msgid ""
 "[.filename]#Makefile#: contains statements that specify how the application "
 "should be compiled and where its components should be installed."
-msgstr ""
+msgstr "<filename>Makefile</filename>：内含用来说明应用程序要如何编译、要安装该程序到那的叙述句。"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:654
+#, fuzzy
 msgid ""
 "[.filename]#distinfo#: contains the names and checksums of the files that "
 "must be downloaded to build the port."
-msgstr ""
+msgstr "<filename>distinfo</filename>：内含编译Port必须下载的文件名称以及校验码（Checksum）。"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:655
+#, fuzzy
 msgid ""
 "[.filename]#files/#: this directory contains any patches needed for the "
 "program to compile and install on FreeBSD. This directory may also contain "
 "other files used to build the port."
 msgstr ""
+"<filename>files/"
+"</filename>：此目录含有编译与安装程序到FreeBSD时所需的修补档。此目录也可能含有其他用来编译Port的文件。"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:656
+#, fuzzy
 msgid "[.filename]#pkg-descr#: provides a more detailed description of the program."
-msgstr ""
+msgstr "<filename>pkg-descr</filename>：提供程序更详细的说明。"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:657
+#, fuzzy
 msgid ""
 "[.filename]#pkg-plist#: a list of all the files that will be installed by "
 "the port. It also tells the ports system which files to remove upon "
 "deinstallation."
-msgstr ""
+msgstr "<filename>pkg-plist</filename>:Port安装的所有文件清单，也同时会告诉Port系统卸载时要移除那一些文件。"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:659
@@ -1517,11 +1580,13 @@ msgstr "使用Port套件集会假设您拥有可正常联机的网络，同时�
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:676
+#, fuzzy
 msgid ""
 "To compile and install the port, change to the directory of the port to be "
 "installed, then type `make install` at the prompt. Messages will indicate "
 "the progress:"
 msgstr ""
+"要编译并安装Port，需切换目录到要安装的Port底下，然后输入<command>make install</command>，信息中会显示安装的进度："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:698
@@ -1570,14 +1635,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:714
+#, fuzzy
 msgid ""
 "Since `lsof` is a program that runs with increased privileges, a security "
 "warning is displayed as it is installed. Once the installation is complete, "
 "the prompt will be returned."
 msgstr ""
+"<command>lsof</command>是需要进阶权限才有办法执行的程序，因此当该程序安装完成时会显示安全性警告。一旦安装完成便会显示指令提示。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:716
+#, fuzzy
 msgid ""
 "Some shells keep a cache of the commands that are available in the "
 "directories listed in the `PATH` environment variable, to speed up lookup "
@@ -1586,6 +1654,10 @@ msgid ""
 "without specifying its full path. Use `hash -r` instead for the `sh` "
 "shell. Refer to the documentation for the shell for more information."
 msgstr ""
+"有些Shell会将<envar>PATH</envar>环境变数中所列目录中可用的指令做缓存，来增加在执行指这些指令时的查询速度。<command>tcs"
+"h</command> "
+"Shell的使用者应输入<command>rehash</command>来让新安装的指令不须指定完整路径便可使用。若在<command>sh</"
+"command> Shell则使用<command>hash -r</command>。请参考Shell的说明文件以取得更多资讯。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:718
@@ -1678,12 +1750,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:748
+#, fuzzy
 msgid ""
 "In rare cases, such as when an organization has a local distfiles "
 "repository, the `MASTER_SITES` variable can be used to override the download "
 "locations specified in the [.filename]#Makefile#. When using, specify the "
 "alternate location:"
 msgstr ""
+"在部份少数情况，例如当公司或组织有自己的本地distfiles文件库，可使用<varname>MASTER_SITES</varname>变数来覆盖在<f"
+"ilename>Makefile</filename>中指定的下载位址。当要指定替代的位址时可："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:754
@@ -1845,6 +1920,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:826
+#, fuzzy
 msgid ""
 "Before attempting an upgrade, read [.filename]#/usr/ports/UPDATING# from the "
 "top of the file to the date closest to the last time ports were upgraded or "
@@ -1855,6 +1931,9 @@ msgid ""
 "note of any instructions which match any of the ports that need upgrading "
 "and follow these instructions when performing the upgrade."
 msgstr ""
+"在尝试升级之前，请先从档首阅读<filename>/usr/ports/UPDATING</filename>来取得最近有那些Port已升级或系统已安装。"
+"这个文件中会说明各种问题及在升级Port时可能会需要使用者执行的额外步骤，例如文件格式更改、配置文件位置更改、或任何与先前版本不兼容的问题。留意那些与您要"
+"升级Port相关的指示，并依照这些指示执行升级。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/ports/_index.adoc:829
@@ -1892,12 +1971,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:844
+#, fuzzy
 msgid ""
 "package:ports-mgmt/portmaster[] is a very small utility for upgrading "
 "installed ports. It is designed to use the tools installed with the FreeBSD "
 "base system without depending on other ports or databases. To install this "
 "utility as a port:"
 msgstr ""
+"<package>ports-mgmt/portmaster</package>是可用来升级已安装Port的小巧工具，它只使用了随FreeBSD基础系统安"
+"装的工具，不需要相依其他Port或数据库便可在FreeBSD使用，要使用Port安装此工具可："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:849
@@ -2007,11 +2089,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:905
+#, fuzzy
 msgid ""
 "Portmaster can also be used to install new ports on the system, upgrading "
 "all dependencies before building and installing the new port. To use this "
 "function, specify the location of the port in the Ports Collection:"
 msgstr ""
+"<application>Portmaster</application>也可用来安装新的Port到系统，在编译及安装新Port前升级所有相依模块。要使用"
+"这个功能，要指定Port位于Port套件集中的位置："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:909
@@ -2034,11 +2119,14 @@ msgstr "使用Portupgrade升级Port"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:917
+#, fuzzy
 msgid ""
 "package:ports-mgmt/portupgrade[] is another utility that can be used to "
 "upgrade ports. It installs a suite of applications which can be used to "
 "manage ports. However, it is dependent upon Ruby. To install the port:"
 msgstr ""
+"<package>ports-mgmt/portupgrade</package>是另一个可以用来升级Port的工具，此工具会安装一套可以用来管理Port"
+"的应用程序，它需要相依Ruby。要安装该Port："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:922
@@ -2050,11 +2138,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:925
+#, fuzzy
 msgid ""
 "Before performing an upgrade using this utility, it is recommended to scan "
 "the list of installed ports using `pkgdb -F` and to fix all the "
 "inconsistencies it reports."
 msgstr ""
+"在执行升级之前使用此工具，建议使用<command>pkgdb -F</command>扫描已安装的Port并修正该指令回报的所有信息不一致的套件。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:927
@@ -2187,10 +2277,11 @@ msgstr "预设，若distfile应要被删除，这个指令会以互动的方式�
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:985
+#, fuzzy
 msgid ""
 "In addition to these commands, package:ports-mgmt/pkg_cutleaves[] automates "
 "the task of removing installed ports that are no longer needed."
-msgstr ""
+msgstr "除了以上指令外，<package>ports-mgmt/pkg_cutleaves</package>可自动移除不再需要使用的Port。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/ports/_index.adoc:987
@@ -2236,12 +2327,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:996
+#, fuzzy
 msgid ""
 "The number of processor cores detected is used to define how many builds "
 "will run in parallel. Supply enough virtual memory, either with `RAM` or "
 "swap space. If virtual memory runs out, the compilation jails will stop and "
 "be torn down, resulting in weird error messages."
 msgstr ""
+"侦测到的处理器数量可用来定义要同时执行多少个编译。并给予足够的虚拟內存，不论是<acronym>RAM</acronym>或交换空间，若虚拟內存不足，编译"
+"Jail的动作将会停止并被清除，会造成奇怪的错误讯息。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/ports/_index.adoc:998
@@ -2261,7 +2355,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:1048
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# poudriere jail -c -j 11amd64 -v 11.4-RELEASE\n"
 "[00:00:00] Creating 11amd64 fs at /poudriere/jails/11amd64... done\n"
@@ -2315,6 +2409,57 @@ msgid ""
 "[00:04:06] Recording filesystem state for clean... done\n"
 "[00:04:07] Jail 11amd64 11.4-RELEASE-p1 amd64 is ready to be used\n"
 msgstr ""
+"<prompt>#</prompt> <userinput>poudriere jail -c -j <replaceable>11amd64</"
+"replaceable> -v <replaceable>11.4-RELEASE</replaceable></userinput>\n"
+"[00:00:00] Creating 11amd64 fs at /poudriere/jails/11amd64... done\n"
+"[00:00:00] Using pre-distributed MANIFEST for FreeBSD 11.4-RELEASE amd64\n"
+"[00:00:00] Fetching base for FreeBSD 11.4-RELEASE amd64\n"
+"/poudriere/jails/11amd64/fromftp/base.txz              125 MB 4110 kBps    "
+"31s\n"
+"[00:00:33] Extracting base... done\n"
+"[00:00:54] Fetching src for FreeBSD 11.4-RELEASE amd64\n"
+"/poudriere/jails/11amd64/fromftp/src.txz               154 MB 4178 kBps    "
+"38s\n"
+"[00:01:33] Extracting src... done\n"
+"[00:02:31] Fetching lib32 for FreeBSD 11.4-RELEASE amd64\n"
+"/poudriere/jails/11amd64/fromftp/lib32.txz              24 MB 3969 kBps    "
+"06s\n"
+"[00:02:38] Extracting lib32... done\n"
+"[00:02:42] Cleaning up... done\n"
+"[00:02:42] Recording filesystem state for clean... done\n"
+"[00:02:42] Upgrading using ftp\n"
+"/etc/resolv.conf -&gt; /poudriere/jails/11amd64/etc/resolv.conf\n"
+"Looking up update.FreeBSD.org mirrors... 3 mirrors found.\n"
+"Fetching public key from update4.freebsd.org... done.\n"
+"Fetching metadata signature for 11.4-RELEASE from update4.freebsd.org... "
+"done.\n"
+"Fetching metadata index... done.\n"
+"Fetching 2 metadata files... done.\n"
+"Inspecting system... done.\n"
+"Preparing to download files... done.\n"
+"Fetching 124 patches.....10....20....30....40....50....60....70....80....90.."
+"..100....110....120.. done.\n"
+"Applying patches... done.\n"
+"Fetching 6 files... done.\n"
+"The following files will be added as part of updating to\n"
+"11.4-RELEASE-p1:\n"
+"/usr/src/contrib/unbound/.github\n"
+"/usr/src/contrib/unbound/.github/FUNDING.yml\n"
+"/usr/src/contrib/unbound/contrib/drop2rpz\n"
+"/usr/src/contrib/unbound/contrib/unbound_portable.service.in\n"
+"/usr/src/contrib/unbound/services/rpz.c\n"
+"/usr/src/contrib/unbound/services/rpz.h\n"
+"/usr/src/lib/libc/tests/gen/spawnp_enoexec.sh\n"
+"The following files will be updated as part of updating to\n"
+"11.4-RELEASE-p1:\n"
+"[…]\n"
+"Installing updates...Scanning //usr/share/certs/blacklisted for "
+"certificates...\n"
+"Scanning //usr/share/certs/trusted for certificates...\n"
+" done.\n"
+"11.4-RELEASE-p1\n"
+"[00:04:06] Recording filesystem state for clean... done\n"
+"[00:04:07] Jail 11amd64 11.4-RELEASE-p1 amd64 is ready to be used\n"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:1055
@@ -2357,13 +2502,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:1069
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "editors/emacs\n"
 "devel/git\n"
 "ports-mgmt/pkg\n"
 "...\n"
 msgstr ""
+"editors/emacs\n"
+"devel/git\n"
+"ports-mgmt/pkg\n"
+"...\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1072
@@ -2422,6 +2571,7 @@ msgstr "设定pkg客户端使用Poudriere文件库"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1094
+#, fuzzy
 msgid ""
 "While it is possible to use both a custom repository along side of the "
 "official repository, sometimes it is useful to disable the official "
@@ -2430,15 +2580,20 @@ msgid ""
 "[.filename]#/usr/local/etc/pkg/repos/FreeBSD.conf# that contains the "
 "following:"
 msgstr ""
+"虽然可以同时使用自定义的文件库与官方文件库，但有时关闭官方文件库会有帮助。这可以透过建立一个配置文件覆盖并关闭官方的配置文件来完成。建立<filename"
+">/usr/local/etc/pkg/repos/FreeBSD.conf</filename>包含以下内容："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ports/_index.adoc:1100
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "FreeBSD: {\n"
 "\tenabled: no\n"
 "}\n"
 msgstr ""
+"FreeBSD: {\n"
+"\tenabled: no\n"
+"}\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1103
@@ -2484,6 +2639,7 @@ msgstr "不论软件是从套件或Port安装，大部份的第三方应用程�
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1120
+#, fuzzy
 msgid ""
 "Most applications install at least one default configuration file in "
 "[.filename]#/usr/local/etc#. In cases where an application has a large "
@@ -2493,14 +2649,21 @@ msgid ""
 "reviewed and possibly edited to meet the system's needs. To edit a sample "
 "file, first copy it without the [.filename]#.sample# extension."
 msgstr ""
+"大部份应用程序安装会在<filename>/usr/local/"
+"etc</filename>安装至少一个预设的配置文件，若应用程序有大量配置文件的时则会建立一个子目录来存放这些配置文件。"
+"示例的配置文件案名称通常使用<filename> .sample</filename>结尾，配置文件应要仔细查看并可能要做一些编辑让配置文件符合系统的需求"
+"，要编辑配置文件模板前需先复制该文件并去除<filename>.sample</filename>扩展名。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1121
+#, fuzzy
 msgid ""
 "Applications which provide documentation will install it into "
 "[.filename]#/usr/local/shared/doc# and many applications also install manual "
 "pages. This documentation should be consulted before continuing."
 msgstr ""
+"应用程序提供的文件会安装到<filename>/usr/local/share/"
+"doc</filename>，且许多应用程序也同时会安装操作手册，在继续使用应用程序前应先查看这些文件。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ports/_index.adoc:1122
