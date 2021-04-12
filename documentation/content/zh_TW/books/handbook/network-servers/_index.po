@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-05 18:34+0000\n"
+"PO-Revision-Date: 2021-04-12 20:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbooknetwork-servers_index/zh_TW/>\n"
@@ -2451,6 +2451,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1078
+#, fuzzy
 msgid ""
 "The Lightweight Directory Access Protocol (LDAP) is an application layer "
 "protocol used to access, modify, and authenticate objects using a "
@@ -2462,9 +2463,15 @@ msgid ""
 "information, and internal website authentication might all make use of a "
 "single user account in the LDAP server's record base."
 msgstr ""
+"輕量級目錄存取協定 (Lightweight Directory Access Protocol, <acronym>LDAP</acronym>) "
+"是一個利用分散式目錄資訊服務來做到存取、修改與認証物件的應用層通訊協定，可以想像成是一本可以儲存數個階層、同質資訊的電話簿或記錄簿。它用在 Active "
+"Directory 及 <application>OpenLDAP</application> "
+"網路，允許使用者利用一個帳號來存取數個階層的內部資訊，例如：電子郵件認証、取得員工聯絡資訊及內部網站的認証皆可使用 <acronym>LDAP</"
+"acronym> 伺服器資料庫中的單一使用者帳號來存取。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1080
+#, fuzzy
 msgid ""
 "This section provides a quick start guide for configuring an LDAP server on "
 "a FreeBSD system. It assumes that the administrator already has a design "
@@ -2472,6 +2479,8 @@ msgid ""
 "will be used for, which users should have access to that information, and "
 "how to secure this information from unauthorized access."
 msgstr ""
+"本章節將介紹在 FreeBSD 系統上如何快速的設定一個 <acronym>LDAP</acronym> 伺服器。本章節假設管理者已做好規劃，這包含：要儲"
+"存何種類型的資訊、這些資訊要來做什麼、那些使用者擁有存取這些資訊的權限以及如何確保這些資訊不會被未經授權存取。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1081
@@ -2589,10 +2598,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1130
+#, fuzzy
 msgid ""
 "The installation creates the directory [.filename]#/var/db/openldap-data# to "
 "hold the data. The directory to store the certificates must be created:"
 msgstr ""
+"安裝程序會建立目錄 <filename>/var/db/openldap-data</filename> 來儲存資料，同時需要建立儲存憑證的目錄："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1134
@@ -2642,11 +2653,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1153
+#, fuzzy
 msgid ""
 "During the certificate generation process, be sure to correctly set the "
 "`Common Name` attribute. The Certificate Signing Request must be signed with "
 "the Certificate Authority in order to be used as a valid certificate:"
 msgstr ""
+"在憑証產生程序的過程中請確認 <literal>Common Name</literal> 屬性設定正確。憑証簽署請求 (Certificate "
+"Signing Request) 必須經過憑証機構簽署後才會成為有效的憑証："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1157
@@ -2674,11 +2688,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1168
+#, fuzzy
 msgid ""
 "Remember to use the same `Common Name` attribute when prompted. When "
 "finished, ensure that a total of eight (8) new files have been generated "
 "through the proceeding commands."
-msgstr ""
+msgstr "記得當提示時要使用同樣的 <literal>Common Name</literal> 屬性。完成之後，請確認執行的指令產生了 8 個新檔案。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1170
@@ -2729,6 +2744,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1197
+#, fuzzy
 msgid ""
 "The Certificate Authority, server certificate and server private key files "
 "must be specified here. It is recommended to let the clients choose the "
@@ -2738,6 +2754,12 @@ msgid ""
 "verification is mandatory for the server, it is not for the client: "
 "`olcTLSVerifyClient: never`."
 msgstr ""
+"這個檔案中必須指定憑証機構 (Certificate Authority)、伺服器憑証 (Server Certificate) 與伺服器私鑰 ("
+"Server Private Key)，建議可讓客戶端決定使用的安全密碼 (Security Cipher)，略過 "
+"<literal>olcTLSCipherSuite</literal> 選項 (此選項不相容 <filename>openssl</filename> "
+"以外的 TLS 客戶端)。選項 <literal>olcTLSProtocolMin</literal> "
+"讓伺服器可要求一個安全等級的最低限度，建議使用。伺服器有進行驗証的必要，但客戶端並不需要，因此可設定 "
+"<literal>olcTLSVerifyClient: never</literal>。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1199
@@ -2915,10 +2937,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1313
+#, fuzzy
 msgid ""
 "When the configuration is completed, [.filename]#slapd.ldif# must be placed "
 "in an empty directory. It is recommended to create it as:"
-msgstr ""
+msgstr "當設定完成之後，需將 <filename>slapd.ldif</filename> 放在一個空的目錄當中，建議如以下方式建立："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1317
@@ -3008,11 +3031,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1373
+#, fuzzy
 msgid ""
 "Both the CA and the server certificate are now correctly recognized in their "
 "respective roles. To verify this, run this command from the "
 "[.filename]#server.crt# directory:"
 msgstr ""
+"現在 CA 與伺服器憑証可以依其用途被辨識，可進入 <filename>server.crt</filename> 所在的目錄執行以下指令來檢查："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1377
@@ -3187,10 +3212,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1467
+#, fuzzy
 msgid ""
 "[.filename]#slapd.ldif# can then be edited and imported again. Please, "
 "follow this procedure only when no other solution is available."
-msgstr ""
+msgstr "可以修改 <filename>slapd.ldif</filename> 後再重新匯入一次。請注意，這個步驟只在沒有其他方式可用時才使用。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1469
@@ -3237,10 +3263,11 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1482
+#, fuzzy
 msgid ""
 "It should be noted that [.filename]#bpf# also allows privileged users to run "
 "network packet sniffers on that system."
-msgstr ""
+msgstr "另外要注意 <filename>bpf</filename> 也會讓有權限的使用者在該系統上可執行網路封包監聽程式。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1485
@@ -3293,10 +3320,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1496
+#, fuzzy
 msgid ""
 "This line in [.filename]#/etc/rc.conf# is used to configure background or "
 "asynchronous mode:"
-msgstr ""
+msgstr "在 <filename>/etc/rc.conf</filename> 中的這行用來設定採用背景 (非同步模式)："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1500
@@ -3394,20 +3422,28 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1533
+#, fuzzy
 msgid ""
 "This section demonstrates how to configure a FreeBSD system to act as a DHCP "
 "server using the Internet Systems Consortium (ISC) implementation of the "
 "DHCP server. This implementation and its documentation can be installed "
 "using the package:net/isc-dhcp43-server[] package or port."
 msgstr ""
+"本節將示範如何設定 FreeBSD 系統成為 <acronym>DHCP</acronym> 伺服器，使用 Internet Systems "
+"Consortium (<acronym>ISC</acronym>) 所實作的 <acronym>DHCP</acronym> 伺服器，"
+"這個伺服器及其文件可使用 <package>net/isc-dhcp43-server</package> 套件或 Port 安裝。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1535
+#, fuzzy
 msgid ""
 "The installation of package:net/isc-dhcp43-server[] installs a sample "
 "configuration file. Copy [.filename]#/usr/local/etc/dhcpd.conf.example# to "
 "[.filename]#/usr/local/etc/dhcpd.conf# and make any edits to this new file."
 msgstr ""
+"<package>net/isc-dhcp43-server</package> 的安裝程式會安裝一份範例設定檔，複製 <filename>/usr/"
+"local/etc/dhcpd.conf.example</filename> 到 <filename>/usr/local/etc/dhcpd."
+"conf</filename> 並在這個新檔案做編輯。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1537
@@ -3554,12 +3590,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1599
+#, fuzzy
 msgid ""
 "  The server configuration file needs to contain all the information that "
 "should be provided to clients, along with information regarding the "
 "operation of the server. This configuration file is described in "
 "dhcpd.conf(5)."
-msgstr ""
+msgstr "  伺服器設定檔需要含有所有要提供給客戶端的資訊以及有關伺服器運作的資訊。在 dhcpd.conf(5) 有此設定檔的說明。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1600
@@ -3581,6 +3618,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1605
+#, fuzzy
 msgid ""
 "  This daemon is used in advanced environments where one DHCP server "
 "forwards a request from a client to another DHCP server on a separate "
@@ -3588,6 +3626,9 @@ msgid ""
 "package:net/isc-dhcp43-relay[] package or port. The installation includes "
 "dhcrelay(8) which provides more detail."
 msgstr ""
+"  這個 Daemon 會用在更進階的環境中，在一個 <acronym>DHCP</acronym> 伺服器要轉發來自客戶端的請求到另一個網路的另一個 "
+"<acronym>DHCP</acronym> 伺服器的環境。若需要使用此功能，請安裝 <package>net/isc-dhcp43-relay</"
+"package> 套件或 Port，安裝會包含 dhcrelay(8)，裡面有提供更詳細的資訊。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1608
@@ -3597,6 +3638,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1611
+#, fuzzy
 msgid ""
 "Domain Name System (DNS) is the protocol through which domain names are "
 "mapped to IP addresses, and vice versa. DNS is coordinated across the "
@@ -3605,6 +3647,11 @@ msgid ""
 "individual domain information. It is not necessary to run a name server to "
 "perform DNS lookups on a system."
 msgstr ""
+"網域名稱系統 (Domain Name System, <acronym>DNS</acronym>) 是一種協定用來轉換網域名稱為 "
+"<acronym>IP</acronym> 位址，反之亦然。<acronym>DNS</acronym> 會協調網際網路上有權的根節點 ("
+"Authoritative root)、最上層網域 (Top Level Domain, <acronym>TLD</acronym>) "
+"及其他小規模名稱伺服器來取得結果，而這些伺服器可管理與快取個自的網域資訊。要在系統上做 <acronym>DNS</acronym> "
+"查詢並不需要架設一個名稱伺服器。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1613
@@ -4096,6 +4143,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1810
+#, fuzzy
 msgid ""
 "In FreeBSD, some modules can be compiled with the package:www/apache24[] "
 "port. Type `make config` within [.filename]#/usr/ports/www/apache24# to see "
@@ -4104,6 +4152,10 @@ msgid ""
 "way to install many modules. This section describes three of the most "
 "commonly used modules."
 msgstr ""
+"在 FreeBSD 中有些模組可以隨著 <package>www/apache24</package> Port 編譯，只要在 <filename>/"
+"usr/ports/www/apache24</filename> 輸入 <command>make config</command> "
+"便可查看有那一些模組是預設開啟的，若模組未與 Port 一併編譯，FreeBSD Port "
+"套件集也提供了一個簡單的方式可安裝各種模組，本節將介紹最常使用的三個模組。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1811
@@ -4546,6 +4598,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:1998
+#, fuzzy
 msgid ""
 "Django is a BSD-licensed framework designed to allow developers to write "
 "high performance, elegant web applications quickly. It provides an "
@@ -4555,6 +4608,12 @@ msgid ""
 "extensible template system so that the logic of the application is separated "
 "from the HTML presentation."
 msgstr ""
+"<application>Django</application> 是以 BSD 授權的框架 "
+"(Framework)，指在讓開發人員能快速的寫出高效、優雅的網頁應用程式。它提供了物件關聯對應器 (Object-relational mapper)，"
+"所以各種資料型態可當做 <application>Python</application> 的物件來開發，且提供了豐富的動態資料庫存取 "
+"<acronym>API</acronym> 給這些物件，讓開發人員不再需要寫 "
+"<acronym>SQL</acronym>。它也同時提供了可擴充的樣板系統，來讓應用程式的邏輯與 <acronym>HTML</acronym> "
+"呈現能夠被拆開。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2000
@@ -4613,12 +4672,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2022
+#, fuzzy
 msgid ""
 "Ruby on Rails is another open source web framework that provides a full "
 "development stack. It is optimized to make web developers more productive "
 "and capable of writing powerful applications quickly. On FreeBSD, it can be "
 "installed using the package:www/rubygem-rails[] package or port."
 msgstr ""
+"<application>Ruby on Rails</application> 是另外一套開放源碼的網站框架 "
+"(Framework)，提供了完整的開發堆疊，這使得網頁開發人員可以更有生產力且能夠快速的寫出強大的應用程式，在 FreeBSD 它可以使用 "
+"<package>www/rubygem-rails</package> 套件或 Port 安裝。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2024
@@ -4752,6 +4815,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2074
+#, fuzzy
 msgid ""
 "Be aware of the potential problems involved with running an anonymous FTP "
 "server. In particular, think twice about allowing anonymous users to upload "
@@ -4760,6 +4824,9 @@ msgid ""
 "required, then verify the permissions so that these files cannot be read by "
 "other anonymous users until they have been reviewed by an administrator."
 msgstr ""
+"要注意啟動匿名 <acronym>FTP</acronym> 伺服器可能的潛藏問題，尤其是要讓匿名使用者上傳檔案時要再次確認，因為這可能讓該 "
+"<acronym>FTP</acronym> 站變成用來交換未授權商業軟體的交流平台或者更糟的狀況。若真的需要匿名 <acronym>FTP</"
+"acronym> 上傳，那麼請檢查權限設定，讓這些檔案在尚未被管理者審查前不能夠被其他匿名使用者讀取。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2077
@@ -4858,10 +4925,11 @@ msgstr "全域設定"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2118
+#, fuzzy
 msgid ""
 "Settings that describe the network are added in "
 "[.filename]#/usr/local/etc/smb4.conf#:"
-msgstr ""
+msgstr "在 <filename>/usr/local/etc/smb4.conf</filename> 中加入用來描述網路環境的設定有："
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2119
@@ -4921,11 +4989,14 @@ msgstr "安全性設定"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2135
+#, fuzzy
 msgid ""
 "The most important settings in [.filename]#/usr/local/etc/smb4.conf# are the "
 "security model and the backend password format. These directives control the "
 "options:"
 msgstr ""
+"在 <filename>/usr/local/etc/smb4.conf</filename> "
+"中最重要的設定便是安全性模式以及後端密碼格式，以下項目管控的選項有："
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2136
@@ -4935,6 +5006,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2138
+#, fuzzy
 msgid ""
 "The most common settings are `security = share` and `security = user`. If "
 "the clients use usernames that are the same as their usernames on the "
@@ -4942,6 +5014,9 @@ msgid ""
 "security policy and it requires clients to first log on before they can "
 "access shared resources."
 msgstr ""
+"最常見的設定為 <literal>security = share</literal> 以及 <literal>security = "
+"user</literal>，若客戶端使用的使用者名稱與在 FreeBSD 主機上使用的使用者名稱相同，則應該使用使用者 (user) "
+"層級的安全性，這是預設的安全性原則且它會要求客戶端在存取共享資源前先登入。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2140
@@ -4959,6 +5034,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2143
+#, fuzzy
 msgid ""
 "Samba has several different backend authentication models. Clients may be "
 "authenticated with LDAP, NIS+, an SQL database, or a modified password "
@@ -4966,6 +5042,10 @@ msgid ""
 "networks and is covered here. For larger or more complex networks, `ldapsam` "
 "is recommended. `smbpasswd` was the former default and is now obsolete."
 msgstr ""
+"<application>Samba</application> 支援數種不同的後端認証模式，客戶端可以使用 LDAP, NIS+, SQL "
+"資料庫或修改過的密碼檔來認証，建議的認証方式是 <literal>tdbsam</literal>，適用於簡易的網路環境且在此處說明，"
+"對於較大或更複雜的網路則較建議使用 <literal>ldapsam</literal>，而 <literal>smbpasswd</literal> "
+"是舊版的預設值，現在已廢棄不使用。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2145
@@ -5070,6 +5150,7 @@ msgstr "NTP 時間校對"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2195
+#, fuzzy
 msgid ""
 "Over time, a computer's clock is prone to drift. This is problematic as many "
 "network services require the computers on a network to share the same "
@@ -5077,6 +5158,8 @@ msgid ""
 "stay consistent. The Network Time Protocol (NTP) is one way to provide clock "
 "accuracy in a network."
 msgstr ""
+"隨著使用時間，電腦的時鐘會逐漸偏移，這對需要網路上電腦有相同準確度時間的許多網路服務來說是一個大問題。準確的時間同樣能確保檔案時間戳記的一致性。"
+"網路時間協定 (Network Time Protocol, <acronym>NTP</acronym>) 是一種在網路上可以確保時間準確的方式。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/network-servers/_index.adoc:2197
