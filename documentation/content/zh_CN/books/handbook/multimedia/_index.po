@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-05 12:40+0000\n"
+"PO-Revision-Date: 2021-04-12 20:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookmultimedia_index/zh_CN/>\n"
@@ -44,6 +44,7 @@ msgstr "简介"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:48
+#, fuzzy
 msgid ""
 "FreeBSD supports a wide variety of sound cards, allowing users to enjoy high "
 "fidelity output from a FreeBSD system. This includes the ability to record "
@@ -52,6 +53,9 @@ msgid ""
 "contains many applications for editing recorded audio, adding sound effects, "
 "and controlling attached MIDI devices."
 msgstr ""
+"FreeBSD广泛地支持各种声卡，让使用者可以享受来自电脑上的高传真音质（Hi-Fi），此外还包括了录制和播放MPEG Audio Layer "
+"3（<acronym>MP3</acronym>）、Waveform Audio File（<acronym>WAV</acronym>）、Ogg "
+"Vorbis以及其他许多种格式声音的能力。同时FreeBSD Port套件集也包含了许多可让您可以录音、编修音效以及控制MIDI配备的应用程序。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:50
@@ -168,24 +172,28 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:83
+#, fuzzy
 msgid ""
 "To automate the loading of this driver at boot time, add the driver to "
 "[.filename]#/boot/loader.conf#. The line for this driver is:"
-msgstr ""
+msgstr "要开机时自动加载驱动程序，需将驱动程序加到<filename>/boot/loader.conf</filename>档，以此驱动程序为例："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:87
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "snd_hda_load=\"YES\"\n"
-msgstr ""
+msgstr "snd_hda_load=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:90
+#, fuzzy
 msgid ""
 "Other available sound modules are listed in "
 "[.filename]#/boot/defaults/loader.conf#. When unsure which driver to use, "
 "load the [.filename]#snd_driver# module:"
 msgstr ""
+"其他可用的声卡模块清单列于<filename>/boot/defaults/loader."
+"conf</filename>。当不确认要使用何种驱动程序时，可加载<filename>snd_driver</filename>模块："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:94
@@ -195,12 +203,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:97
+#, fuzzy
 msgid ""
 "This is a metadriver which loads all of the most common sound drivers and "
 "can be used to speed up the search for the correct driver. It is also "
 "possible to load all sound drivers by adding the metadriver to "
 "[.filename]#/boot/loader.conf#."
 msgstr ""
+"它是metadriver会加载所有最通用的音效驱动程序并且用来加速寻找正确的驱动程序。也可以把metadriver加入<filename>/boot/"
+"loader.conf</filename>档来加载所有音效驱动程序。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:99
@@ -233,9 +244,9 @@ msgstr "使用自定义内核提供声音支持时，请确保自定义内核配
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:109
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "device sound\n"
-msgstr ""
+msgstr "device sound\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:112
@@ -247,9 +258,9 @@ msgstr "接下来就是加入对我们所用声卡的支持了。假设我们使
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:116
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "device snd_hda\n"
-msgstr ""
+msgstr "device snd_hda\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:119
@@ -273,11 +284,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:126
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "device snd_sbc\n"
 "device snd_sb16\n"
 msgstr ""
+"device snd_sbc\n"
+"device snd_sb16\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:129
@@ -288,7 +301,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:137
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "hint.sbc.0.at=\"isa\"\n"
 "hint.sbc.0.port=\"0x220\"\n"
@@ -296,6 +309,11 @@ msgid ""
 "hint.sbc.0.drq=\"1\"\n"
 "hint.sbc.0.flags=\"0x15\"\n"
 msgstr ""
+"hint.sbc.0.at=\"isa\"\n"
+"hint.sbc.0.port=\"0x220\"\n"
+"hint.sbc.0.irq=\"5\"\n"
+"hint.sbc.0.drq=\"1\"\n"
+"hint.sbc.0.flags=\"0x15\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:140
@@ -320,11 +338,15 @@ msgstr "测试音效"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:147
+#, fuzzy
 msgid ""
 "After loading the required module or rebooting into the custom kernel, the "
 "sound card should be detected. To confirm, run `dmesg | grep pcm`. This "
 "example is from a system with a built-in Conexant CX20590 chipset:"
 msgstr ""
+"用修改过的内核重起，或者加载了需要的模块之后， 声卡将会出现在您的系统消息缓存中（<citerefentry><refentrytitle>dmesg</"
+"refentrytitle><manvolnum>8</manvolnum></citerefentry>），执行 <command>dmesg | "
+"grep pcm</command> 确认系统是否检测到声卡。本例使用 Conexant CX20590 芯片组:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:153
@@ -385,16 +407,20 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:183
+#, fuzzy
 msgid ""
 "Various applications, such as package:audio/workman[], provide a friendlier "
 "interface. The package:audio/mpg123[] port can be installed to listen to MP3 "
 "audio files."
 msgstr ""
+"许多应用程序，比如 <package>audio/workman</package> 可以提供一个友好的界面。 您可能想要安装一个应用程序比如 "
+"<package>audio/mpg123</package> 来听 MP3 音频文件。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:185
+#, fuzzy
 msgid "Another quick way to test the card is to send data to [.filename]#/dev/dsp#:"
-msgstr ""
+msgstr "另一种快速测试声卡的方法是将数据发送到 <filename>/dev/dsp</filename>，像这样："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:189
@@ -433,10 +459,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:204
+#, fuzzy
 msgid ""
 "To get Bluetooth sound sink working with FreeBSD's sound system, users have "
 "to install package:audio/virtual_oss[] first:"
-msgstr ""
+msgstr "要让FreeBSD 声音系统与蓝牙音箱一起正常工作，用户需安装<package>audio/virtual_oss</package>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:208
@@ -468,11 +495,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:225
+#, fuzzy
 msgid ""
 "To use headphones as a sound sink with package:audio/virtual_oss[], users "
 "need to create a virtual device after connecting to a Bluetooth audio "
 "device:"
-msgstr ""
+msgstr "要将耳机用作<package>audio/virtual_oss</package>的声音接收器，用户需要在连接到蓝牙音频设备后创建虚拟设备："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:229
@@ -555,7 +583,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:292
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "...\n"
 "hdac0: HDA Driver Revision: 20100226_0142\n"
@@ -575,6 +603,27 @@ msgid ""
 "pcm7: <HDA Realtek ALC889 PCM #3 Digital> at cad 2 nid 1 on hdac1\n"
 "...\n"
 msgstr ""
+"...\n"
+"hdac0: HDA Driver Revision: 20100226_0142\n"
+"hdac1: HDA Driver Revision: 20100226_0142\n"
+"hdac0: HDA Codec #0: NVidia (Unknown)\n"
+"hdac0: HDA Codec #1: NVidia (Unknown)\n"
+"hdac0: HDA Codec #2: NVidia (Unknown)\n"
+"hdac0: HDA Codec #3: NVidia (Unknown)\n"
+"pcm0: &lt;HDA NVidia (Unknown) PCM #0 DisplayPort&gt; at cad 0 nid 1 on "
+"hdac0\n"
+"pcm1: &lt;HDA NVidia (Unknown) PCM #0 DisplayPort&gt; at cad 1 nid 1 on "
+"hdac0\n"
+"pcm2: &lt;HDA NVidia (Unknown) PCM #0 DisplayPort&gt; at cad 2 nid 1 on "
+"hdac0\n"
+"pcm3: &lt;HDA NVidia (Unknown) PCM #0 DisplayPort&gt; at cad 3 nid 1 on "
+"hdac0\n"
+"hdac1: HDA Codec #2: Realtek ALC889\n"
+"pcm4: &lt;HDA Realtek ALC889 PCM #0 Analog&gt; at cad 2 nid 1 on hdac1\n"
+"pcm5: &lt;HDA Realtek ALC889 PCM #1 Analog&gt; at cad 2 nid 1 on hdac1\n"
+"pcm6: &lt;HDA Realtek ALC889 PCM #2 Digital&gt; at cad 2 nid 1 on hdac1\n"
+"pcm7: &lt;HDA Realtek ALC889 PCM #3 Digital&gt; at cad 2 nid 1 on hdac1\n"
+"...\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:295
@@ -613,11 +662,12 @@ msgstr "使用多个音效来源"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:312
+#, fuzzy
 msgid ""
 "It is often desirable to have multiple sources of sound that are able to "
 "play simultaneously. FreeBSD uses \"Virtual Sound Channels\" to multiplex "
 "the sound card's playback by mixing sound in the kernel."
-msgstr ""
+msgstr "有时我们希望多个音源能同时播放，FreeBSD 使用虚拟声音信道<quote>虚拟声道</quote>在内核里混合声音来混合声卡里播放的声道。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:314
@@ -680,9 +730,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:338
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "hint.pcm.0.vol=\"50\"\n"
-msgstr ""
+msgstr "hint.pcm.0.vol=\"50\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:341
@@ -723,12 +773,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:353
+#, fuzzy
 msgid ""
 "The package:audio/mpg123[] package or port provides an alternative, "
 "command-line `MP3` player. Once installed, specify the `MP3` file to play on "
 "the command line. If the system has multiple audio devices, the sound device "
 "can also be specified:"
 msgstr ""
+"<package>audio/mpg123</package> package 或 port 提供了命令行 <acronym> MP3 </"
+"acronym> 播放器。安装后指定要在命令行上播放的 <acronym> MP3 </acronym> "
+"文件。如果系统有多个音频设备，还可以指定声音设备："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:360
@@ -1002,12 +1056,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:459
+#, fuzzy
 msgid ""
 "It is a good idea to have a short MPEG test file for evaluating various "
 "players and options. Since some `DVD` applications look for `DVD` media in "
 "[.filename]#/dev/dvd# by default, or have this device name hardcoded in "
 "them, it might be useful to make a symbolic link to the proper device:"
 msgstr ""
+"为了评估各种播放器和设置，您需要有一小段用作测试的MPEG文件。 由于一些DVD播放器会默认地在 <filename>/dev/dvd</"
+"filename> 里去找DVD文件， 因此， 您会发现建立符号链接到恰当的设备会很有用："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:463
@@ -1026,9 +1083,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:470
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "link cd0 dvd\n"
-msgstr ""
+msgstr "link cd0 dvd\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:473
@@ -1046,11 +1103,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:480
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "kern.ipc.shmmax=67108864\n"
 "kern.ipc.shmall=32768\n"
 msgstr ""
+"kern.ipc.shmmax=67108864\n"
+"kern.ipc.shmall=32768\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:483
@@ -1078,12 +1137,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:491
+#, fuzzy
 msgid ""
 "XVideo: an extension to the Xorg interface which allows video to be directly "
 "displayed in drawable objects through a special acceleration. This extension "
 "provides good quality playback even on low-end machines. The next section "
 "describes how to determine if this extension is running."
 msgstr ""
+"XVideo：<application>Xorg</application>插件，允许通过特殊的加速在可绘制的对象中直接显示视频。即使在低端机器上，此插件"
+"也能提供高质量的回放。下一节介绍如何确定此插件是否正在运行。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:492
@@ -1136,7 +1198,7 @@ msgstr "如果显示结果如下，那您的显卡就支持XVideo："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:577
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "X-Video Extension version 2.2\n"
 "  screen #0\n"
@@ -1207,6 +1269,74 @@ msgid ""
 "        depth: 1\n"
 "        red, green, blue masks: 0x0, 0x0, 0x0\n"
 msgstr ""
+"X-Video Extension version 2.2\n"
+"  screen #0\n"
+"  Adaptor #0: \"Savage Streams Engine\"\n"
+"    number of ports: 1\n"
+"    port base: 43\n"
+"    operations supported: PutImage\n"
+"    supported visuals:\n"
+"      depth 16, visualID 0x22\n"
+"      depth 16, visualID 0x23\n"
+"    number of attributes: 5\n"
+"      \"XV_COLORKEY\" (range 0 to 16777215)\n"
+"              client settable attribute\n"
+"              client gettable attribute (current value is 2110)\n"
+"      \"XV_BRIGHTNESS\" (range -128 to 127)\n"
+"              client settable attribute\n"
+"              client gettable attribute (current value is 0)\n"
+"      \"XV_CONTRAST\" (range 0 to 255)\n"
+"              client settable attribute\n"
+"              client gettable attribute (current value is 128)\n"
+"      \"XV_SATURATION\" (range 0 to 255)\n"
+"              client settable attribute\n"
+"              client gettable attribute (current value is 128)\n"
+"      \"XV_HUE\" (range -180 to 180)\n"
+"              client settable attribute\n"
+"              client gettable attribute (current value is 0)\n"
+"    maximum XvImage size: 1024 x 1024\n"
+"    Number of image formats: 7\n"
+"      id: 0x32595559 (YUY2)\n"
+"        guid: 59555932-0000-0010-8000-00aa00389b71\n"
+"        bits per pixel: 16\n"
+"        number of planes: 1\n"
+"        type: YUV (packed)\n"
+"      id: 0x32315659 (YV12)\n"
+"        guid: 59563132-0000-0010-8000-00aa00389b71\n"
+"        bits per pixel: 12\n"
+"        number of planes: 3\n"
+"        type: YUV (planar)\n"
+"      id: 0x30323449 (I420)\n"
+"        guid: 49343230-0000-0010-8000-00aa00389b71\n"
+"        bits per pixel: 12\n"
+"        number of planes: 3\n"
+"        type: YUV (planar)\n"
+"      id: 0x36315652 (RV16)\n"
+"        guid: 52563135-0000-0000-0000-000000000000\n"
+"        bits per pixel: 16\n"
+"        number of planes: 1\n"
+"        type: RGB (packed)\n"
+"        depth: 0\n"
+"        red, green, blue masks: 0x1f, 0x3e0, 0x7c00\n"
+"      id: 0x35315652 (RV15)\n"
+"        guid: 52563136-0000-0000-0000-000000000000\n"
+"        bits per pixel: 16\n"
+"        number of planes: 1\n"
+"        type: RGB (packed)\n"
+"        depth: 0\n"
+"        red, green, blue masks: 0x1f, 0x7e0, 0xf800\n"
+"      id: 0x31313259 (Y211)\n"
+"        guid: 59323131-0000-0010-8000-00aa00389b71\n"
+"        bits per pixel: 6\n"
+"        number of planes: 3\n"
+"        type: YUV (packed)\n"
+"      id: 0x0\n"
+"        guid: 00000000-0000-0000-0000-000000000000\n"
+"        bits per pixel: 0\n"
+"        number of planes: 0\n"
+"        type: RGB (packed)\n"
+"        depth: 1\n"
+"        red, green, blue masks: 0x0, 0x0, 0x0\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:580
@@ -1222,12 +1352,15 @@ msgstr "如果结果看起来是这样："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:588
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "X-Video Extension version 2.2\n"
 "screen #0\n"
 "no adaptors present\n"
 msgstr ""
+"X-Video Extension version 2.2\n"
+"screen #0\n"
+"no adaptors present\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:591
@@ -1268,12 +1401,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:603
+#, fuzzy
 msgid ""
 "MPlayer can be installed using the package:multimedia/mplayer[] package or "
 "port. Several compile options are available and a variety of hardware checks "
 "occur during the build process. For these reasons, some users prefer to "
 "build the port rather than install the package."
 msgstr ""
+"可以使用<package>multimedia/mplayer</package> "
+"package或port安装<application>MPlayer</application>。有几个编译选项可用, "
+"并且在生成过程中会进行各种硬件检查。由于这些原因, 一些用户更喜欢生成port, 而不是安装package。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:605
@@ -1393,19 +1530,25 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:658
+#, fuzzy
 msgid ""
 "Each user can add commonly used options to their "
 "[.filename]#~/.mplayer/config# like so:"
 msgstr ""
+"为了让 mplayer 的命令行不是太长，使用者可以通过建立一个文件 <filename>.mplayer/config</filename> "
+"来设定如下默认选项："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:664
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "vo=xv\n"
 "fs=yes\n"
 "zoom=yes\n"
 msgstr ""
+"vo=xv\n"
+"fs=yes\n"
+"zoom=yes\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:667
@@ -1436,6 +1579,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:678
+#, fuzzy
 msgid ""
 "Before using `mencoder`, it is a good idea to become familiar with the "
 "options described at "
@@ -1445,6 +1589,10 @@ msgid ""
 "bad performance. Improper combinations of command line options can yield "
 "output files that are unplayable even by `mplayer`."
 msgstr ""
+"在使用<command>mencoder</command>之前, 最好熟悉<link xlink:href=\"http://www.mplayerhq"
+".hu/DOCS/HTML/en/mencoder.html\">mplayerhq.hu/DOCS/HTML/en/mencoder."
+"html</link>中描述的选项。有无数的方法来提高质量、更低的比特率和更改格式, "
+"其中一些选项可能会决定好的或坏的性能之间的区别。即使<command>mplayer</command>命令行选项的组合也会产生不可播放的输出文件。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:680
@@ -1609,11 +1757,14 @@ msgstr "电视卡"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:741
+#, fuzzy
 msgid ""
 "TV cards can be used to watch broadcast or cable TV on a computer. Most "
 "cards accept composite video via an `RCA` or S-video input and some cards "
 "include a `FM` radio tuner."
 msgstr ""
+"电视卡（TV card）可以让您用电脑来看无线、有线电视节目。许多卡都是透过<acronym>RCA</acronym>或S-"
+"video输入端子来接收视讯，而且有些卡还可接收<acronym>FM</acronym>广播的功能。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:743
@@ -1639,9 +1790,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:751
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "bktr_load=\"YES\"\n"
-msgstr ""
+msgstr "bktr_load=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:754
@@ -1653,13 +1804,17 @@ msgstr "或者可以将电视卡支持静态编译到自定义的核心当中，
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:761
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "device\t bktr\n"
 "device\tiicbus\n"
 "device\tiicbb\n"
 "device\tsmbus\n"
 msgstr ""
+"device\t bktr\n"
+"device\tiicbus\n"
+"device\tiicbb\n"
+"device\tsmbus\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:764
@@ -1677,7 +1832,7 @@ msgstr "要测试调谐器（Tuner）是否被正确的侦测，请先重新启�
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:775
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "bktr0: <BrookTree 848A> mem 0xd7000000-0xd7000fff irq 10 at device 10.0 on "
 "pci0\n"
@@ -1687,6 +1842,13 @@ msgid ""
 "smbus0: <System Management Bus> on bti2c0\n"
 "bktr0: Pinnacle/Miro TV, Philips SECAM tuner.\n"
 msgstr ""
+"bktr0: &lt;BrookTree 848A&gt; mem 0xd7000000-0xd7000fff irq 10 at device "
+"10.0 on pci0\n"
+"iicbb0: &lt;I2C bit-banging driver&gt; on bti2c0\n"
+"iicbus0: &lt;Philips I2C bus&gt; on iicbb0 master-only\n"
+"iicbus1: &lt;Philips I2C bus&gt; on iicbb0 master-only\n"
+"smbus0: &lt;System Management Bus&gt; on bti2c0\n"
+"bktr0: Pinnacle/Miro TV, Philips SECAM tuner.\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:778
@@ -1700,9 +1862,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:782
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "options OVERRIDE_TUNER=6\n"
-msgstr ""
+msgstr "options OVERRIDE_TUNER=6\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:785
@@ -1735,22 +1897,29 @@ msgstr "要使用您的电视卡，您需要安装下列应用程序之一："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:798
+#, fuzzy
 msgid ""
 "package:multimedia/fxtv[] provides TV-in-a-window and image/audio/video "
 "capture capabilities."
 msgstr ""
+"<package>multimedia/fxtv</package> 提供 <quote>窗口电视(TV-in-a-window)</quote> "
+"功能和图像/声音/图像采集功能。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:799
+#, fuzzy
 msgid "package:multimedia/xawtv[] is another TV application with similar features."
 msgstr ""
+"<package>multimedia/xawtv</package> 也是一款电视应用程序，功能同 <application>fxtv</"
+"application> 一样。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:800
+#, fuzzy
 msgid ""
 "package:audio/xmradio[] provides an application for using the FM radio tuner "
 "of a TV card."
-msgstr ""
+msgstr "<package>audio/xmradio</package>， 一款用于一些电视卡的调频电台调谐器的程序。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:802
@@ -1950,15 +2119,18 @@ msgstr "检查扫描仪"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:876
+#, fuzzy
 msgid ""
 "The [.filename]#GENERIC# kernel includes the device drivers needed to "
 "support `USB` scanners. Users with a custom kernel should ensure that the "
 "following lines are present in the custom kernel configuration file:"
 msgstr ""
+"默认的 <filename>GENERIC</filename> 内核包含了支持 USB 扫描仪需要的设备驱动。 如果您决定使用一个定制的内核， "
+"确保下面在您的内核配置文件中存在下面这些行："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:884
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "device usb\n"
 "device uhci\n"
@@ -1966,6 +2138,11 @@ msgid ""
 "device ehci\n"
 "device xhci\n"
 msgstr ""
+"device usb\n"
+"device uhci\n"
+"device ohci\n"
+"device ehci\n"
+"device xhci\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:887
@@ -2003,11 +2180,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:901
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "device scbus\n"
 "device pass\n"
 msgstr ""
+"device scbus\n"
+"device pass\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:904
@@ -2199,9 +2378,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:999
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "usb /dev/ugen0.2\n"
-msgstr ""
+msgstr "usb /dev/ugen0.2\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1002
@@ -2212,10 +2391,11 @@ msgstr "保存编辑并验证扫描仪是否标识了正确的后端名称和设
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1010
+#, fuzzy
 msgid ""
 "Once `scanimage -L` sees the scanner, the configuration is complete and the "
 "scanner is now ready to use."
-msgstr ""
+msgstr "一旦 <command>scanimage -L</command> 命令可以看到扫描仪， 配置就完成了。设备现在准备好等待扫描了。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1012
@@ -2269,12 +2449,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1031
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "[system=5]\n"
 "add path ugen0.2 mode 0660 group usb\n"
 "add path usb/0.2.0 mode 0666 group usb\n"
 msgstr ""
+"[system=5]\n"
+"add path ugen0.2 mode 0660 group usb\n"
+"add path usb/0.2.0 mode 0666 group usb\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1036
@@ -2286,12 +2469,15 @@ msgstr "设备节点会随着设备的增加或删除而发生变化，因此，
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1042
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "[system=5]\n"
 "add path 'ugen*' mode 0660 group usb\n"
 "add path 'usb/*' mode 0666 group usb\n"
 msgstr ""
+"[system=5]\n"
+"add path 'ugen*' mode 0660 group usb\n"
+"add path 'usb/*' mode 0666 group usb\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1047
@@ -2308,9 +2494,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1053
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "devfs_system_ruleset=\"system\"\n"
-msgstr ""
+msgstr "devfs_system_ruleset=\"system\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:1056
