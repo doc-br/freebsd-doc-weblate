@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:25-0300\n"
-"PO-Revision-Date: 2021-04-05 12:40+0000\n"
+"PO-Revision-Date: 2021-04-12 20:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookmirrors_index/zh_CN/>\n"
@@ -97,6 +97,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mirrors/_index.adoc:76
+#, fuzzy
 msgid ""
 "Additionally, FreeBSD is available via anonymous FTP from the following "
 "mirror sites. When obtaining FreeBSD via anonymous FTP, please try to use a "
@@ -109,6 +110,10 @@ msgid ""
 "but some sites also provide access via other methods. The access methods "
 "available for each site are provided in parentheses after the hostname."
 msgstr ""
+"FreeBSD 可以从下面这些镜像站点通过匿名 FTP 下载。如果您选择了通过匿名 FTP 获取 FreeBSD， 请尽量使用离您比较近的站点。被列为 "
+"<quote>主镜像站点</quote> 的镜像站点一般都有完整的 FreeBSD 文件 (针对每种体系结构的所有当前可用的版本)， "
+"您或许从您所在的国家或地区的站点下载会得到更快的下载速度。 每个站点提供了最流行的体系结构的最近的版本而有可能不提供完整的 FreeBSD 存档。"
+"所有的站点都提供匿名 FTP 访问而有些站点也提供其他的访问方式。对每个站点可用的访问方式 在其主机名后有所说明。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mirrors/_index.adoc:78
@@ -1367,10 +1372,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mirrors/_index.adoc:512
+#, fuzzy
 msgid ""
 "Because the initial checkout must download the full branch of the remote "
 "repository, it can take a while.  Please be patient."
-msgstr ""
+msgstr "由于首次取出的动作必须下载远端文件库中完整的分支，会需要花费一段时间，请耐心等候。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mirrors/_index.adoc:514
@@ -1793,9 +1799,9 @@ msgstr ""
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/mirrors/_index.adoc:687
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Mailing lists"
-msgstr ""
+msgstr "邮件列表"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mirrors/_index.adoc:690
@@ -2067,8 +2073,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mirrors/_index.adoc:813
+#, fuzzy
 msgid "To update [.filename]#/usr/ports# created in the example above, use:"
-msgstr ""
+msgstr "要更新上述示例所建立的<filename>/usr/ports</filename>可执行："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mirrors/_index.adoc:817
@@ -2131,9 +2138,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mirrors/_index.adoc:850
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "svn.FreeBSD.org\n"
-msgstr ""
+msgstr "svn.FreeBSD.org\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mirrors/_index.adoc:853
@@ -2146,11 +2153,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mirrors/_index.adoc:855
+#, fuzzy
 msgid ""
 "HTTPS is the preferred protocol, but the [.filename]#security/ca_root_nss# "
 "package will need to be installed in order to automatically validate "
 "certificates."
 msgstr ""
+"HTTPS 是首选协议，但需要安装<filename role=\"package\">security/"
+"ca_root_nss</filename>软件包才能正常使用。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/mirrors/_index.adoc:856
