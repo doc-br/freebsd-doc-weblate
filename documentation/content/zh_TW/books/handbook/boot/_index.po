@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-04-05 18:35+0000\n"
+"PO-Revision-Date: 2021-04-12 20:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookboot_index/zh_TW/>\n"
@@ -44,6 +44,7 @@ msgstr "概述"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:48
+#, fuzzy
 msgid ""
 "The process of starting a computer and loading the operating system is "
 "referred to as \"the bootstrap process\", or \"booting\". FreeBSD's boot "
@@ -52,6 +53,9 @@ msgid ""
 "operating systems installed on the same computer, different versions of the "
 "same operating system, or a different installed kernel."
 msgstr ""
+"從開啟電腦到載入作業系統的這段流程稱為 <quote>開機程序</quote> (Bootstrap process) 或 <quote>開機</"
+"quote> (Booting)。FreeBSD "
+"的開機程序提供大量的客製化彈性，包含可選擇安裝在同電腦的其他的作業系統、不同版本的作業系統或不同核心的作業系統的功能。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:50
@@ -161,6 +165,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:80
+#, fuzzy
 msgid ""
 "If only one operating system is installed, the MBR searches for the first "
 "bootable (active) slice on the disk, and then runs the code on that slice to "
@@ -168,9 +173,12 @@ msgid ""
 "are present, a different boot manager can be installed to display a list of "
 "operating systems so the user can select one to boot."
 msgstr ""
+"若只有安裝一個作業系統，<acronym>MBR</acronym> 會搜尋磁碟上第一個可開機的 (使用中) 切割區 (Slice)，然後執行在該切割區上"
+"的程式來載入剩下的作業系統。當有多個作業系統存在時，可以安裝可顯示作業系統清單的開機管理程式，以讓使用者可以選擇要啟動的作業系統。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:82
+#, fuzzy
 msgid ""
 "The remainder of the FreeBSD bootstrap system is divided into three stages. "
 "The first stage knows just enough to get the computer into a specific state "
@@ -180,6 +188,9 @@ msgid ""
 "limits on the size of the programs that can be run at stages one and two. "
 "Chaining the tasks together allows FreeBSD to provide a more flexible loader."
 msgstr ""
+"剩餘的 FreeBSD 開機系統分成三個階段，第一個階段只知道如何讓電腦進入特定狀態並執行第二階段，第二個階段在執行第三階段之前會做的事比較多一點，第三個"
+"階段會完成載入作業系統的工作。把工作分成三個階段的原因是 <acronym>MBR</acronym> 有限制在階段一與階段二能夠執行程式的大小。"
+"將這些工作連結在一起讓 FreeBSD 能夠提供更有彈性的載入程式。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:84
@@ -299,6 +310,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:128
+#, fuzzy
 msgid ""
 "Stage two, [.filename]#boot2#, is slightly more sophisticated, and "
 "understands the FreeBSD file system enough to find files. It can provide a "
@@ -307,6 +319,9 @@ msgid ""
 "the boot process is interrupted at stage two, the following interactive "
 "screen is displayed:"
 msgstr ""
+"階段二 <filename>boot2</filename> 稍微複雜一點，能夠理解 FreeBSD "
+"檔案系統來搜尋檔案。它可以提供一個簡單的介面來選擇要執行的核心或載入程式。它所執行的載入程式 "
+"(<application>loader</application>) 更複雜並能讀取開機設定檔。若開機程序在階段二中斷，則會顯示以下的互動畫面："
 
 #. type: Block title
 #: documentation/content/en/books/handbook/boot/_index.adoc:130
@@ -369,12 +384,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:163
+#, fuzzy
 msgid ""
 "During initialization, loader will probe for a console and for disks, and "
 "figure out which disk it is booting from. It will set variables accordingly, "
 "and an interpreter is started where user commands can be passed from a "
 "script or interactively."
 msgstr ""
+"在初始化的過程中，<application>loader</application> 會偵測 Console 與磁碟，並找出可以用來開機的磁碟。在由 "
+"Script 或互動輸入使用者指令的地方會設定相對的變數並啟動直譯器。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/boot/_index.adoc:165
@@ -667,12 +685,15 @@ msgstr "多使用者模式"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:316
+#, fuzzy
 msgid ""
 "If init finds the file systems to be in order, or once the user has finished "
 "their commands in single-user mode and has typed `exit` to leave single-user "
 "mode, the system enters multi-user mode, in which it starts the resource "
 "configuration of the system."
 msgstr ""
+"若 <application>init</application> 正常找到檔案系統或在單使用者模式的使用者完成了操作並輸入 "
+"<command>exit</command> 離開單使用者模式，系統便會進入多使用者模式，在這個模式便會開始系統的資源設置。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:318
@@ -726,10 +747,13 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:331
+#, fuzzy
 msgid ""
 "The syntax for [.filename]#/boot/device.hints# is one variable per line, "
 "using the hash \"#\" as comment markers. Lines are constructed as follows:"
 msgstr ""
+"<filename>/boot/device.hints</filename> 的語法為一個變數一行，使用井字號 <quote>#</quote> "
+"做為註解符號，每一行的結構如下："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/boot/_index.adoc:335
