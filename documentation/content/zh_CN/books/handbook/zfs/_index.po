@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-14 11:02-0300\n"
-"PO-Revision-Date: 2021-04-05 12:39+0000\n"
+"PO-Revision-Date: 2021-04-12 20:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookzfs_index/zh_CN/>\n"
@@ -78,12 +78,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:53
+#, fuzzy
 msgid ""
 "Performance: multiple caching mechanisms provide increased performance. "
 "<<zfs-term-arc,ARC>> is an advanced memory-based read cache. A second level "
 "of disk-based read cache can be added with <<zfs-term-l2arc,L2ARC>>, and "
 "disk-based synchronous write cache is available with <<zfs-term-zil,ZIL>>."
 msgstr ""
+"高性能：多级缓存机制提供更好的性能。<link linkend=\"zfs-term-arc\">ARC</link> 是一种高级的基于内存的读取缓存。"
+"第二级基于磁盘的读取缓存可以与 <link linkend=\"zfs-term-l2arc\">L2ARC</link> 一起添加，"
+"基于磁盘的同步写入缓存可用于 <link linkend=\"zfs-term-zil\">ZIL</link>。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:55
@@ -98,6 +102,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:60
+#, fuzzy
 msgid ""
 "ZFS is significantly different from any previous file system because it is "
 "more than just a file system. Combining the traditionally separate roles of "
@@ -121,6 +126,16 @@ msgid ""
 "to creating a number of different file systems and datasets rather than a "
 "single monolithic file system."
 msgstr ""
+"<acronym>ZFS</acronym> 与以往任何的文件系统有显著的不同，因为它不只是一个文件系统，<acronym>ZFS</acronym> "
+"的独特优点来自结合了以往被分开的磁盘区管理程序（Volume Manager）及文件系统两个角色，让文件系统也能够察觉磁盘底层结构的变动。传统在一个磁盘上"
+"只能建立一个文件系统，若有两个磁盘则会需要建立两个分开的文件系统，在传统要解决这个问题要使用硬 <acronym>RAID</acronym> "
+"来制作一个空间实际上由数颗实体磁盘所组成的单一的逻辑磁盘给文件系统，文件系统便可在这个逻辑磁盘上放置文件系统，即使是在那些使用 "
+"<acronym>GEMO</acronym> 提供的软 <acronym>RAID</acronym> 解决方案也是一样，把 "
+"<acronym>UFS</acronym> 文件系统放在 <acronym>RAID</acronym> "
+"Transform上面当做是一个单一的设备。<acronym>ZFS</acronym> 结合了磁盘区管理程序（Volume "
+"Manager）与文件系统来解决这个问题并让建立多个文件系统可以共用一个存储池（Pool）。<acronym>ZFS</acronym> 最大的优点是可以"
+"察觉实体磁盘配置的变动，当有额外的磁盘加入到存储池时可以自动扩增现有的文件系统，所有的文件系统便可使用这个新的空间。<acronym>ZFS</"
+"acronym> 也有数个不同的属性可以套用到各别文件系统上，比起单一文件系统，对建立数个不同文件系统与数据集（Dataset）时有许多的好处。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/zfs/_index.adoc:62
@@ -138,9 +153,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:69
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "zfs_enable=\"YES\"\n"
-msgstr ""
+msgstr "zfs_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:72
@@ -455,10 +470,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:248
+#, fuzzy
 msgid ""
 "Users data is now stored on the freshly-created [.filename]#/storage/home#. "
 "Test by adding a new user and logging in as that user."
-msgstr ""
+msgstr "现在用户的数据会储存在新建立的 <filename>/storage/home</filename>。 可以加入新用户并登入该使用者来测试。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:250
@@ -480,12 +496,15 @@ msgstr "只可以对整个卷进行快照，无法对个别目录使用快照。
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:259
+#, fuzzy
 msgid ""
 "The `@` character is a delimiter between the file system name or the volume "
 "name. If an important directory has been accidentally deleted, the file "
 "system can be backed up, then rolled back to an earlier snapshot when the "
 "directory still existed:"
 msgstr ""
+"<literal>@</literal> 字符用来区分文件系统（file "
+"system）或磁盘区（卷）名称，若有重要的目录意外被删除，文件系统系统可以备份然后还原到先前目录还存在时的快照："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:263
@@ -569,9 +588,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:310
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "daily_status_zfs_enable=\"YES\"\n"
-msgstr ""
+msgstr "daily_status_zfs_enable=\"YES\"\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/zfs/_index.adoc:313
@@ -601,9 +620,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:327
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "all pools are healthy\n"
-msgstr ""
+msgstr "all pools are healthy\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:330
@@ -676,10 +695,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:361
+#, fuzzy
 msgid ""
 "Now the system can be powered down to replace [.filename]#da1#. When the "
 "system is back online, the failed disk can replaced in the pool:"
-msgstr ""
+msgstr "现在系统可以关机然后更换 <filename>da1</filename>，当系统回复上线，就可以替换掉存储池中故障的磁盘："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:365
@@ -893,6 +913,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:485
+#, fuzzy
 msgid ""
 "Pools can also be constructed using partitions rather than whole disks. "
 "Putting ZFS in a separate partition allows the same disk to have other "
@@ -905,6 +926,10 @@ msgid ""
 "original actually has a slightly smaller capacity, the smaller partition "
 "will still fit, and the replacement disk can still be used."
 msgstr ""
+"存储池也可以不使用整个磁盘而改使用分区来建里。把 <acronym>ZFS</acronym> 放到不同的分区可让其他分区用于其他用途。尤其是有 "
+"Bootcode 与文件系统要用来开机的分区，这让磁盘可以用来开机也同样可以做为存储池的一部份。在 FreeBSD "
+"用分区来替代整个磁盘并不会对性能有影响。使用分区也让管理者可以对磁盘容量做 "
+"少算的预备，使用比完整容量少的容量，未来若要替换的磁盘号称与原磁盘相同，但实际上却比较小时，也可符合这个较小的分区容量，以使用替换的磁盘。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:487
@@ -942,6 +967,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:511
+#, fuzzy
 msgid ""
 "A pool that is no longer needed can be destroyed so that the disks can be "
 "reused. Destroying a pool involves first unmounting all of the datasets in "
@@ -950,6 +976,8 @@ msgid ""
 "with `-f`, but this can cause undefined behavior in applications which had "
 "open files on those datasets."
 msgstr ""
+"不需要的存储池可以删除以获得更多可用空间。删除一个存储池需要先卸载所有该存储池上的数据集。若数据集在使用中，卸载操作不会完成，存储池也不会被删除。"
+"可以使用 <option>-f</option> 选项来强制卸载数据集，但正在运行的应用程序可能会对数据集做出未定义的操作。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/zfs/_index.adoc:513
@@ -1094,6 +1122,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:580
+#, fuzzy
 msgid ""
 "When adding disks to the existing vdev is not an option, as for RAID-Z, an "
 "alternative method is to add another vdev to the pool. Additional vdevs "
@@ -1105,9 +1134,14 @@ msgid ""
 "disk will result in the loss of a fraction of every block that has been "
 "written to the pool."
 msgstr ""
+"若不想加入磁盘到现有的vdev，对<acronym>RAID-Z</acronym>来说，可选择另一种方式：加入到另一个vdev存储池。额外的vdev可以"
+"提供更好的性能，分散写入数据到vdev之间每个vdev成员负责自己的备份。也可以使用不同的vdev形态，但不建议这么做，例如混合使用<literal>mi"
+"rror</literal>和<literal>RAID-Z</literal>加入到另一个无备份的vdev到一个含有mirror或RAID-Z "
+"vdev的存储池会让数据损坏的风险扩大整个存储池，由于分散写入数据，若在无备份的磁盘上发生故障的结果便是遗失大半写到存储池的数据。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:582
+#, fuzzy
 msgid ""
 "Data is striped across each of the vdevs. For example, with two mirror "
 "vdevs, this is effectively a RAID 10 that stripes writes across two sets of "
@@ -1116,6 +1150,9 @@ msgid ""
 "free space, as a disproportionate amount of the data is written to the less "
 "full vdev."
 msgstr ""
+"在每个vdev 间的数据是串连的，例如，有两个mirror vdev，便跟 <acronym>RAID</acronym> 10 一样在两个mirror "
+"间分散写入数据，且会做空间的分配，因此 vdev 会在同时达到全满100% 的用量。若 vdev 间的可用空间量不同则会影响到效能，"
+"因为数据量会不成比例的写入到使用量较少的 vdev。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:584
@@ -1233,6 +1270,7 @@ msgstr "检擦存储池状态"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:665
+#, fuzzy
 msgid ""
 "Pool status is important. If a drive goes offline or a read, write, or "
 "checksum error is detected, the corresponding error count increases. The "
@@ -1240,6 +1278,8 @@ msgid ""
 "pool and the status of the entire pool. Actions that need to be taken and "
 "details about the last <<zfs-zpool-scrub,`scrub`>> are also shown."
 msgstr ""
+"存储池的状态很重要，若有磁盘机离线或侦测到读取、写入或校验码（Checksum）错误，对应的错误计数便会增加。 status "
+"会显示存储池中每一个磁盘机的设定与状态及整个存储池的状态。需要处置的方式与有关最近清洁（Scrub）S的详细资讯也会一并显示。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:673
@@ -1276,6 +1316,7 @@ msgstr "更换正在运行的设备"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:696
+#, fuzzy
 msgid ""
 "There are a number of situations where it may be desirable to replace one "
 "disk with a different disk. When replacing a working disk, the process keeps "
@@ -1286,6 +1327,11 @@ msgid ""
 "disk is larger than the old disk, it may be possible to grow the zpool, "
 "using the new space. See <<zfs-zpool-online,Growing a Pool>>."
 msgstr ""
+"可能有一些情况会需要更换磁盘为另一个磁盘，当要更换运作中的磁盘，此程序会维持旧有的磁盘在更换的过程为上线的状态，存储池不会进入降级（<link "
+"linkend=\"zfs-term-degraded\">degraded</link>）的状态，来减少数据遗失的风险。<command>zpool "
+"replace</command> 会复制所有旧磁盘的数据到新磁盘，操作完成之后旧磁盘便会与 vdev "
+"中断连线。若新磁盘容量较旧磁盘大，也可以会增加存储池来使用新的空间，请参考 <link linkend=\"zfs-zpool-online\""
+">扩展存储池</link>。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:698
@@ -1542,10 +1588,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:863
+#, fuzzy
 msgid ""
 "The next example demonstrates this self-healing behavior. A mirrored pool of "
 "disks [.filename]#/dev/ada0# and [.filename]#/dev/ada1# is created."
 msgstr ""
+"接下来的例子会示范自我修复会如何运作。建立一个使用磁盘 <filename>/dev/ada0</filename> 及<filename>/dev/"
+"ada1</filename> 做镜像的存储池。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:872
@@ -1583,11 +1632,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:886
+#, fuzzy
 msgid ""
 "Some important data that have to be protected from data errors using the "
 "self-healing feature are copied to the pool. A checksum of the pool is "
 "created for later comparison."
-msgstr ""
+msgstr "将一些需要使用自我修复功能来保护的重要数据复制到该存储池，建立一个存储池的校验码以供日后比对。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:896
@@ -1604,12 +1654,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:899
+#, fuzzy
 msgid ""
 "Data corruption is simulated by writing random data to the beginning of one "
 "of the disks in the mirror. To prevent ZFS from healing the data as soon as "
 "it is detected, the pool is exported before the corruption and imported "
 "again afterwards."
 msgstr ""
+"写入随机的资料到镜像的第一个磁盘来模拟资料损毁的情况。要避免 <acronym>ZFS</acronym> "
+"侦测到错误时马上做修复，接着要将存储池导出，待模拟资料损毁之后再导入。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:904
@@ -1676,11 +1729,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:941
+#, fuzzy
 msgid ""
 "The error was detected and handled by using the redundancy present in the "
 "unaffected [.filename]#ada0# mirror disk. A checksum comparison with the "
 "original one will reveal whether the pool is consistent again."
 msgstr ""
+"错误已经被检测到并且由未被影响的 <filename>ada0</filename> "
+"镜像磁盘上的备份提供数据。可与原来的校验码做比较来看存储池是否已修复为一致。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:948
@@ -1863,6 +1919,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1043
+#, fuzzy
 msgid ""
 "Importing a pool automatically mounts the datasets. This may not be the "
 "desired behavior, and can be prevented with `zpool import -N`. `zpool import "
@@ -1873,6 +1930,11 @@ msgid ""
 "`zpool import -a` imports all pools that do not appear to be in use by "
 "another system."
 msgstr ""
+"导入存储池会自动挂载数据集，若不想自动挂载，可以使用 <command>zpool import -N</command>。<command>zpool "
+"import -o</command> 可以设定在导入时暂时使用的属性。<command>zpool import altroot=</command> "
+"允许导入时指定基础挂载点（Base mount point）来替换文件系统根目录。若存储池先前用在不同的系统且不正常导出，可能会需要使用 "
+"<command>zpool import -f</command> 来强制导入。<command>zpool import -a</command> "
+"会导入所有没有被其他系统使用的存储池。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1045
@@ -1923,6 +1985,7 @@ msgstr "升级存储池"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1074
+#, fuzzy
 msgid ""
 "After upgrading FreeBSD, or if a pool has been imported from a system using "
 "an older version of ZFS, the pool can be manually upgraded to the latest "
@@ -1931,6 +1994,9 @@ msgid ""
 "way process. Older pools can be upgraded, but pools with newer features "
 "cannot be downgraded."
 msgstr ""
+"在升级 FreeBSD 之后或存储池是由其他使用旧版 <acronym>ZFS</acronym> 的系统汇入，存储池可以手动升级到最新版本的 "
+"<acronym>ZFS</acronym> "
+"来支持新的功能。在升级前请评估存储池是否还要在旧的系统做汇入，由于升级是一个单向的程序，旧的存储池可以升级，但有新功能的存储池无法降级。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1076
@@ -2138,6 +2204,7 @@ msgstr "显示已记录的存储池历史日志"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1203
+#, fuzzy
 msgid ""
 "Commands that modify the pool are recorded. Recorded actions include the "
 "creation of datasets, changing properties, or replacement of a disk. This "
@@ -2146,6 +2213,8 @@ msgid ""
 "is part of the pool itself. The command to review this history is aptly "
 "named `zpool history`:"
 msgstr ""
+"修改存储池的指令会被记录下来，会记录的动作包含数据集的建立，属性更改或更换磁盘。这个历史记录用来查看存储池是如何建立、由谁执行、什么动作及何时。历史记录并"
+"非储存在日志档（Log file），而是储存在存储池。查看这个历史记录的指令名称为 <command>zpool history</command>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1212
@@ -2161,12 +2230,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1215
+#, fuzzy
 msgid ""
 "The output shows `zpool` and `zfs` commands that were executed on the pool "
 "along with a timestamp. Only commands that alter the pool in some way are "
 "recorded. Commands like `zfs list` are not included. When no pool name is "
 "specified, the history of all pools is displayed."
 msgstr ""
+"输出结果显示曾在该存储池上执行的 <command>zpool</command> 与 <command>zfs</command> "
+"指令以及时间戳记。只有会修改存储池或类似的指令会被记录下来，像是 <command>zfs list</command> "
+"这种指令并不会被记录。当不指定存储池名称时，会列出所有存储池的历史记录。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1217
@@ -2193,11 +2266,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1232
+#, fuzzy
 msgid ""
 "More details can be shown by adding `-l`. History records are shown in a "
 "long format, including information like the name of the user who issued the "
 "command and the hostname on which the change was made."
 msgstr ""
+"更多详细的资讯可加上 <option>-l</option> "
+"来取得，历史记录会以较长的格式显示，包含的资讯有执行指令的使用者名称、主机名称以及更改的项目。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1241
@@ -2224,12 +2300,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1246
+#, fuzzy
 msgid ""
 "Both options to `zpool history` can be combined to give the most detailed "
 "information possible for any given pool. Pool history provides valuable "
 "information when tracking down the actions that were performed or when more "
 "detailed output is needed for debugging."
 msgstr ""
+"两个 <command>zpool history</command> "
+"选项可以合并使用来取得最完整的存储池详细资讯。存储池历史记录在追踪执行什么动作或要取得除错所需的输出结果提供了非常有用的资讯。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1248
@@ -2239,6 +2318,7 @@ msgstr "性能监控"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1251
+#, fuzzy
 msgid ""
 "A built-in monitoring system can display pool I/O statistics in real time. "
 "It shows the amount of free and used space on the pool, how many read and "
@@ -2247,6 +2327,9 @@ msgid ""
 "monitored and displayed. A pool name can be provided to limit monitoring to "
 "just that pool. A basic example:"
 msgstr ""
+"内建的监视系统可以即时显示存储池的 <acronym>I/O</acronym> "
+"统计资讯。它会显示存储池剩余的空间与使用的空间，每秒执行了多少读取与写入的操作，有多少 <acronym>I/O</acronym> "
+"带宽被使用。预设会监视所有在系统中的存储池都并显示出来，可以提供存储池名称来只显示该存储池的监视资讯。举一个简单的例子："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1259
@@ -2272,6 +2355,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1264
+#, fuzzy
 msgid ""
 "Even more detailed I/O statistics can be displayed with `-v`. Each device in "
 "the pool is shown with a statistics line. This is useful in seeing how many "
@@ -2279,6 +2363,8 @@ msgid ""
 "determine if any individual device is slowing down the pool. This example "
 "shows a mirrored pool with two devices:"
 msgstr ""
+"使用 <option>-v</option> 可以显示更详细的 <acronym>I/O</acronym> 统计资讯。每个在存储池中的设备会以一行统计资"
+"讯显示。这可以帮助了解每一个设备做了多少读取与写入的操作，并可协助确认是否有各别设备拖慢了整个存储池的速度。以下范例会显示有两个设备的镜像存储池："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1276
@@ -2303,6 +2389,7 @@ msgstr "分割存储池"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1282
+#, fuzzy
 msgid ""
 "A pool consisting of one or more mirror vdevs can be split into two pools. "
 "Unless otherwise specified, the last member of each mirror is detached and "
@@ -2311,6 +2398,9 @@ msgid ""
 "displayed without it actually being performed. This helps confirm that the "
 "operation will do what the user intends."
 msgstr ""
+"由一个或多个镜像 vdev "
+"所组成的存储池可以切分开成两个存储池。除非有另外指定，否则每个镜像的最后一个成员会被分离来然用来建立一个含有相同资料的新存储池。"
+"在做这个操作的第一次应先使用 <option>-n</option>，会显示预计会做的操作而不会真的执行，这可以协助确认操作是否与使用者所要的相同。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1284
@@ -2334,6 +2424,7 @@ msgstr "创建和删除数据集"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1292
+#, fuzzy
 msgid ""
 "Unlike traditional disks and volume managers, space in ZFS is _not_ "
 "preallocated. With traditional file systems, after all of the space is "
@@ -2352,6 +2443,18 @@ msgid ""
 "slower, and the mounting of hundreds or even thousands of datasets can slow "
 "the FreeBSD boot process."
 msgstr ""
+"不同于传统的磁盘与磁盘区管理程序（Volume manager），在 <acronym>ZFS</acronym> "
+"中的空间并<emphasis>不</emphasis>会预先分配。传统的文件系统在分割与分配空间完后，若没有增加新的磁盘便无法再增加额外的文件系统。在 "
+"<acronym>ZFS</acronym>，可以随时建立新的文件系统，每个数据集（<link linkend=\"zfs-term-dataset\">"
+"<emphasis>Dataset</emphasis></link>）都有自己的属性，包含压缩（Compression）、去重复（Deduplicati"
+"on）、快取（Caching）与配额（Quota）功能以及其他有用的属性如只读（Readonly）、区分大小写（Case "
+"sensitivity）、网路文件分享（Network file sharing）以及挂载点（Mount "
+"point）。数据集可以存在于其他数据集中，且子数据集会继承其父数据集的属性。每个数据集都可以作为一个单位来管理、委托（<link linkend"
+"=\"zfs-zfs-allow\">Delegate</link>）、备份（<link linkend=\"zfs-zfs-send\""
+">Replicate</link>）、快照（<link linkend=\"zfs-zfs-snapshot\">Snapshot</link>）、监禁（"
+"<link linkend=\"zfs-zfs-jail\">Jail</link>） "
+"与摧毁（Destroy），替每种不同类型或集合的文件建立各别的数据集还有许多的好处。唯一的缺点是在当有非常大数量的数据集时，部份指令例如 "
+"<command>zfs list</command> 会变的较缓慢，且挂载上百个或其至上千个数据集可能会使 FreeBSD 的开机程序变慢。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1294
@@ -2526,6 +2629,7 @@ msgstr "重命名数据集"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1401
+#, fuzzy
 msgid ""
 "The name of a dataset can be changed with `zfs rename`. The parent of a "
 "dataset can also be changed with this command. Renaming a dataset to be "
@@ -2534,6 +2638,9 @@ msgid ""
 "unmounted and then remounted in the new location (which is inherited from "
 "the new parent dataset). This behavior can be prevented with `-u`."
 msgstr ""
+"数据集的名称可以使用 <command>zfs rename</command> 更改。父数据集也同样可以使用这个指令来更改名称。重新命名一个数据集到另一"
+"个父数据集也会更改自父数据集继承的属性值。重新命名数据集后，会被卸载然后重新挂载到新的位置（依继承的新父数据集而定，可使用 <option>-u</"
+"option> 来避免重新挂载。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1403
@@ -2718,6 +2825,7 @@ msgstr "管理快照（Snapshot）"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1514
+#, fuzzy
 msgid ""
 "<<zfs-term-snapshot,Snapshots>> are one of the most powerful features of "
 "ZFS. A snapshot provides a read-only, point-in-time copy of the dataset. "
@@ -2737,9 +2845,18 @@ msgid ""
 "that are related or dependent upon each other. Without snapshots, a backup "
 "would have copies of the files from different points in time."
 msgstr ""
+"快照（<link linkend=\"zfs-term-snapshot\">Snapshot</link>）是 <acronym>ZFS</"
+"acronym> 最强大的功能之一，快照提供了数据集只读、单一时间点(Point-in-Time）的复制功能，使用了写入时复制（Copy-On-"
+"Write, <acronym>COW</acronym>）的技术，可以透过保存在磁盘上的旧版资料快速的建立快照。若没有快照存在，在资料被覆盖或删除时，便"
+"回收空间供未来使用。由于只记录前一个版本与目前数据集的差异，因此快照可节省磁盘空间。快照只允许在整个数据集上使用，无法在各别文件或目录。当建立了一个数据集"
+"的快照时，便备份了所有内含的资料，这包含了文件系统属性、文件、目录、权限等等。第一次建立快照时只会使用到更改参照到资料区块的空间，"
+"不会用到其他额外的空间.使用 <option>-r</option> 可以对使用同名的数据集及其所有子数据集的建立一个递回快照，提供一致且即时"
+"（Moment-in-"
+"time）的完整文件系统快照功能，这对于那些彼此有相关或相依文件存放在不同数据集的应用程序非常重要。不使用快照所备份的资料其实是分散不同时间点的。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1516
+#, fuzzy
 msgid ""
 "Snapshots in ZFS provide a variety of features that even other file systems "
 "with snapshot functionality lack. A typical example of snapshot use is to "
@@ -2757,6 +2874,11 @@ msgid ""
 "pool, but can be used as a quick and easy way to store a copy of the dataset "
 "at a specific point in time."
 msgstr ""
+"<acronym>ZFS</acronym> 中的快照提供了多种功能，即使是在其他缺乏快照功能的文件系统上。一个使用快照的典型例子是在安装软体或执行系统升"
+"级这种有风险的动作时，能有一个快速的方式可以备份文件系统目前的状态，若动作失败，可以使用快照还原（Roll back）到与快照建立时相同的系统状态，若升级"
+"成功，便可删除快照来释放空间。若没有快照功能，升级失败通常会需要使用备份来恢复（Restore）系统，而这个动作非常繁琐、耗时且可能会需要停机一段时间系统"
+"无法使用。使用快照可以快速的还原，即使系统正在执行一般的运作，只而要短暂或什至不需停机。能够节省大量在有数 TB 的储存系统上从备份复制所需资料的时间."
+"快照并非要用来取代存储池的完整备份，但可以用在快速且简单的保存某个特定时间点的数据集。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1518
@@ -2827,12 +2949,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1566
+#, fuzzy
 msgid ""
 "Snapshots are not mounted directly, so no path is shown in the `MOUNTPOINT` "
 "column. There is no mention of available disk space in the `AVAIL` column, "
 "as snapshots cannot be written to after they are created. Compare the "
 "snapshot to the original dataset from which it was created:"
 msgstr ""
+"快照并不会直接挂载，因此 <literal>MOUNTPOINT</literal> 栏中没有显示路径。在 <literal>AVAIL</"
+"literal> 栏位不会有可用的磁盘空间，因为快照建立之后便无法再写入。比较快照与其原来建立时的数据集："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1573
@@ -2886,6 +3011,7 @@ msgstr "对比快照"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1594
+#, fuzzy
 msgid ""
 "ZFS provides a built-in command to compare the differences in content "
 "between two snapshots. This is helpful when many snapshots were taken over "
@@ -2894,6 +3020,9 @@ msgid ""
 "contains a file that was accidentally deleted. Doing this for the two "
 "snapshots that were created in the previous section yields this output:"
 msgstr ""
+"ZFS 提供了内建指令可以用来比对两个快照（Snapshot）之间的差异，在使用者想要查看一段时间之间文件系统所的变更时非常有用。例如 "
+"<command>zfs diff</command> "
+"可以让使用者在最后一次快照中找到意外删除的文件。对前面一节所做的两个快照使用这个指令会产生以下结果："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1605
@@ -2974,11 +3103,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1646
+#, fuzzy
 msgid ""
 "A backup administrator can compare two snapshots received from the sending "
 "host and determine the actual changes in the dataset. See the <<zfs-zfs-send,"
 "Replication>> section for more information."
 msgstr ""
+"备份管理员可以比较从发送主机接收到的两个快照，并确定数据集中的实际更改。有关详细信息，请参阅<link linkend=\"zfs-zfs-send\""
+">Replication</link>。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1648
@@ -2988,6 +3120,7 @@ msgstr "使用快照还原"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1651
+#, fuzzy
 msgid ""
 "When at least one snapshot is available, it can be rolled back to at any "
 "time. Most of the time this is the case when the current state of the "
@@ -3008,6 +3141,12 @@ msgid ""
 "when some data is required later. This way, the user can roll back and forth "
 "between snapshots without losing data that is still valuable."
 msgstr ""
+"只要至少有一个可用的快照便可以随时还原。大多数在已不需要目前数据集，想要改用较旧版的资料的情况，例如，本地开发的测试发生错误、不良的系统更新破坏了系统的整"
+"体功能或需要还原意外删除文件或目录。 。。 等，都是非常常见的情形。幸运的，要还原到某个快照只需要简单输入 <command>zfs rollback <"
+"replaceable>snapshotname</replaceable></command>。会依快照所做的变更数量来决定处理的时间，还原的操作会在一"
+"段时间后完成。在这段时间中，数据集会一直保持一致的状态，类似一个符合 ACID 原则的资料库在做还原。还原可在数据集处于上线及可存取的情况下完成，不需要停"
+"机。还原到快照之后，数据集便回到当初执行快照时相同的状态，所有没有在快照中的其他资料便会被丢弃，因此往后若还有可能需要部份资料时，建议在还原到前一个快照之"
+"前先对目前的数据集做快照，这样一来，使用者便可以在快照之间来回快换，而不会遗失重要的资料。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1653
@@ -3035,12 +3174,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1670
+#, fuzzy
 msgid ""
 "At this point, the user realized that too many files were deleted and wants "
 "them back. ZFS provides an easy way to get them back using rollbacks, but "
 "only when snapshots of important data are performed on a regular basis. To "
 "get the files back and start over from the last snapshot, issue the command:"
 msgstr ""
+"在此时，使用者发现到删除了太多文件并希望能够还原。 <acronym>ZFS</acronym> 提供了简单的方可以取回文件，便是使用还原（Rollbac"
+"k），但这只在有定期对重要的资料使用快照时可用。要拿回文件并从最后一次快照重新开始，可执行以下指令："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1676
@@ -3053,12 +3195,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1679
+#, fuzzy
 msgid ""
 "The rollback operation restored the dataset to the state of the last "
 "snapshot. It is also possible to roll back to a snapshot that was taken much "
 "earlier and has other snapshots that were created after it. When trying to "
 "do this, ZFS will issue this warning:"
 msgstr ""
+"The rollback operation restored the dataset to the state of the last "
+"snapshot. It is also possible to roll back to a snapshot that was taken much "
+"earlier and has other snapshots that were created after it. When trying to "
+"do this, <acronym>ZFS</acronym> will issue this warning:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1692
@@ -3078,6 +3225,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1695
+#, fuzzy
 msgid ""
 "This warning means that snapshots exist between the current state of the "
 "dataset and the snapshot to which the user wants to roll back. To complete "
@@ -3088,6 +3236,10 @@ msgid ""
 "and the consequences of losing all intermediate snapshots is understood, the "
 "command can be issued:"
 msgstr ""
+"这个警告是因在该快照与数据集的目前状态之间有其他快照存在，然而使用者想要还原到该快照。要完成这样的还原动作，必须删除在这之间的快照，因为 "
+"<acronym>ZFS</acronym> 无法追踪不同数据集状态间的变更。在使用者未指定 <option>-r</option> "
+"来确认这个动作前，<acronym>ZFS</acronym> "
+"不会删除受影响的快照。若确定要这么做，那么必须要知道会遗失所有在这之间的快照，然后可执行以下指令："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1704
@@ -3116,6 +3268,7 @@ msgstr "从快照还原个别文件"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1712
+#, fuzzy
 msgid ""
 "Snapshots are mounted in a hidden directory under the parent dataset: [."
 "filename]#.zfs/snapshots/snapshotname#. By default, these directories will "
@@ -3126,6 +3279,12 @@ msgid ""
 "property to `visible` allows them to appear in the output of `ls` and other "
 "commands that deal with directory contents."
 msgstr ""
+"快照会挂载在父数据集下的隐藏目录：<filename>。zfs/snapshots/"
+"<replaceable>snapshotname</replaceable></filename>。预设不会显示这些目录，即使是用 "
+"<command>ls -a</command> 指令。虽然该目录不会显示，但该目录实际存在，而且可以像一般的目录一样存取。一个名称为 "
+"<literal>snapdir</literal> "
+"的属性可以控制是否在目录清单中显示这些隐藏目录，设定该属性为可见（<literal>visible</literal>）可以让这些目录出现在 "
+"<command>ls </command> 以及其他处理目录内容的指令中。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1723
@@ -3143,6 +3302,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1726
+#, fuzzy
 msgid ""
 "Individual files can easily be restored to a previous state by copying them "
 "from the snapshot back to the parent dataset. The directory structure below "
@@ -3152,6 +3312,9 @@ msgid ""
 "directory by copying it from the snapshot that contained the latest version "
 "of the file:"
 msgstr ""
+"通过将单个文件从快照复制到父数据集, 可以轻松地将它们还原到以前的状态。<filename>.zfs/snapshot</"
+"filename>具有与前面拍摄的快照完全相同的目录, 以便于识别它们。在下一个示例中, "
+"假定通过从包含该文件最新版本的快照复制文件来从隐藏的<filename>.zfs</filename>目录还原该文件:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1737
@@ -3169,6 +3332,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1740
+#, fuzzy
 msgid ""
 "When `ls .zfs/snapshot` was issued, the `snapdir` property might have been "
 "set to hidden, but it would still be possible to list the contents of that "
@@ -3178,6 +3342,9 @@ msgid ""
 "filename]#.zfs/snapshot# is simple enough. Trying it the other way around "
 "results in this error:"
 msgstr ""
+"执行 <command>ls .zfs/snapshot</command> 时，虽然 <literal>snapdir</literal> "
+"可能已经设为隐藏，但仍可能可以显示该目录中的内容，这取决于管理者是否要显示这些目录，可以只显示特定的数据集，而其他的则不显示。从这个隐藏的 "
+"<filename>。zfs/snapshot</filename> 复制文件或目录非常简单，除此之外，尝试其他的动作则会出现以下错误："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1745
@@ -3223,6 +3390,7 @@ msgstr "管理副本"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1757
+#, fuzzy
 msgid ""
 "A clone is a copy of a snapshot that is treated more like a regular dataset. "
 "Unlike a snapshot, a clone is not read only, is mounted, and can have its "
@@ -3235,6 +3403,10 @@ msgid ""
 "consumed. The clone can be mounted at any point within the ZFS file system "
 "hierarchy, not just below the original location of the snapshot."
 msgstr ""
+"复本（Clone）是快照的复制，但更像是一般的数据集，与快照不同的是，复本是非只读的（可写），且可挂载，可以有自己的属性。使用 <command>zfs "
+"clone</command> 建立复本之后，便无法再摧毁用来建立复本的快照。复本与快照的父/子关系可以使用 <command>zfs promote</"
+"command> 来对换。提升复本之后 ，快照便会成为复本的子数据集，而不是原来的父数据集，这个动作会改变空间计算的方式，但并不会实际改变空间的使用量。"
+"复本可以被挂载到 <acronym>ZFS</acronym> 文件系统阶层中的任何一点，并非只能位于原来快照的位置底下。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1759
@@ -3314,6 +3486,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1800
+#, fuzzy
 msgid ""
 "After making some changes like copying [.filename]#loader.conf# to the "
 "promoted clone, for example, the old directory becomes obsolete in this "
@@ -3322,6 +3495,10 @@ msgid ""
 "on the clone to name it like the old dataset (it could also get an entirely "
 "different name)."
 msgstr ""
+"做为部份更改之后，例如复制 <filename>loader.conf</filename> "
+"到提升后的复本，这个例子中的旧目录便无须保留，取而代之的是提升后的复本，这个动作可以用两个连续的指令来完成：在旧数据集上执行 <command>zfs "
+"destroy</command> 并在与旧资料相似名称(也可能用完全不同的名称）的复本上执行 <command>zfs "
+"rename</command>。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1811
@@ -3339,6 +3516,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1814
+#, fuzzy
 msgid ""
 "The cloned snapshot is now handled like an ordinary dataset. It contains all "
 "the data from the original snapshot plus the files that were added to it "
@@ -3351,6 +3529,10 @@ msgid ""
 "dataset. This saves time and administrative overhead when providing these "
 "jails."
 msgstr ""
+"快照的复本现在可以如同一般数据集一样使用，它的内容包含了所有来自原始快照的资料以及后来加入的文件，例如 <filename>loader."
+"conf</filename>。复本可以在许多不同的情境下使用提供ZFS 的使用者有用的功能，例如，Jail 可以透过含有已安装了各种应用程序集的快照来提"
+"供，使用者可以复制这些快照然后加入自己想要尝试的应用程序，一但更改可以满足需求，便可提升复本为完整的数据集然后提供给终端使用者，让终端使用者可以如同实际拥"
+"有数据集一般的使用，这个以节省提供这些Jail 的时间与管理成本。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1816
@@ -3360,6 +3542,7 @@ msgstr "备份"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1819
+#, fuzzy
 msgid ""
 "Keeping data on a single pool in one location exposes it to risks like theft "
 "and natural or human disasters. Making regular backups of the entire pool is "
@@ -3371,6 +3554,11 @@ msgid ""
 "snapshots>>). The commands used for replicating data are `zfs send` and `zfs "
 "receive`."
 msgstr ""
+"将资料保存在单一地点的单一存储池上会让资料暴露在盗窃、自然或人为的风险之下，定期备份整个存储池非常重要，<acronym>ZFS</acronym> 提供"
+"了内建的序列化（Serialization）功能可以将资料以串流传送到标准输出。使用这项技术，不仅可以将资料储存到另一个已连结到本地系统的存储池，也可以透"
+"过网路将资料传送到另一个系统，这种备份方式以快照为基础（请参考章节<link linkend =\"zfs-zfs-snapshot\""
+"><acronym>ZFS</acronym> 快照（Snapshot）</link>）。用来备份资料的指令为 <command>zfs send</"
+"command> 及 <command>zfs receive</command>。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1821
@@ -3389,6 +3577,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1831
+#, fuzzy
 msgid ""
 "The pool named _mypool_ is the primary pool where data is written to and "
 "read from on a regular basis. A second pool, _backup_ is used as a standby "
@@ -3399,6 +3588,12 @@ msgid ""
 "been created, it can be copied to the _backup_ pool. Only snapshots can be "
 "replicated. Changes made since the most recent snapshot will not be included."
 msgstr ""
+"名为 <replaceable>mypool</replaceable> 的存储池为主要的存储池，资料会定期写入与读取的位置。第二个存储池 "
+"<replaceable>backup</replaceable> "
+"用来待命（Standby），万一主要存储池无法使用时可替换。注意，<acronym>ZFS</acronym> 并不会自动做容错移转（Fail-"
+"over），必须要由系统管理者在需要的时候手动完成。快照会用来提供一个与档系统一致的版本来做备份，<replaceable>mypool</"
+"replaceable> 的快照建立之后，便可以复制到 <replaceable>backup</replaceable> "
+"存储池，只有快照可以做备份，最近一次快照之后所做的变更不会含在内容里面。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1838
@@ -3412,12 +3607,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1841
+#, fuzzy
 msgid ""
 "Now that a snapshot exists, `zfs send` can be used to create a stream "
 "representing the contents of the snapshot. This stream can be stored as a "
 "file or received by another pool. The stream is written to standard output, "
 "but must be redirected to a file or pipe or an error is produced:"
 msgstr ""
+"快照存在以后，便可以使用 <command>zfs send</command> "
+"来建立一个代表快照内容的串流，这个串流可以储存成文件或由其他存储池接收。串流会写入到标准输出，但是必须要重新导向到一个文件或转接到其他地方，否则会错误："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1847
@@ -3430,12 +3628,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1850
+#, fuzzy
 msgid ""
 "To back up a dataset with `zfs send`, redirect to a file located on the "
 "mounted backup pool. Ensure that the pool has enough free space to "
 "accommodate the size of the snapshot being sent, which means all of the data "
 "contained in the snapshot, not just the changes from the previous snapshot."
 msgstr ""
+"To back up a dataset with <command>zfs send</command>, redirect to a file "
+"located on the mounted backup pool. Ensure that the pool has enough free "
+"space to accommodate the size of the snapshot being sent, which means all of "
+"the data contained in the snapshot, not just the changes from the previous "
+"snapshot."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1858
@@ -3458,6 +3662,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1863
+#, fuzzy
 msgid ""
 "Instead of storing the backups as archive files, ZFS can receive them as a "
 "live file system, allowing the backed up data to be accessed directly. To "
@@ -3468,6 +3673,10 @@ msgid ""
 "the transfer is complete. A dataset can only be replicated to an empty "
 "dataset."
 msgstr ""
+"若不想将备份以封存文件储存，<acronym>ZFS</acronym> 可用实际的文件系统来接收资料，让备份的资料可以直接被存取。"
+"要取得实际包含在串流中的资料可以用 <command>zfs receive</command> 将串流转换回文件与目录。以下例子会以管线符号连接 "
+"<command>zfs send</command> 及 <command>zfs "
+"receive</command>，将资料从一个存储池复制到另一个，传输完成后可以直接使用接收存储池上的资料。一个数据集只可以被复制到另一个空的数据集。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1871
@@ -3498,11 +3707,13 @@ msgstr "增量备份"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1882
+#, fuzzy
 msgid ""
 "`zfs send` can also determine the difference between two snapshots and send "
 "only the differences between the two. This saves disk space and transfer "
 "time. For example:"
 msgstr ""
+"<command>zfs send</command> 也可以比较两个快照之间的差异，并且只传送两者之间的差异，这么做可以节省磁盘空间及传输时间。例如："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1894
@@ -3521,6 +3732,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1897
+#, fuzzy
 msgid ""
 "A second snapshot called _replica2_ was created. This second snapshot "
 "contains only the changes that were made to the file system between now and "
@@ -3529,6 +3741,9 @@ msgid ""
 "the data that has changed. This can only succeed if the initial snapshot "
 "already exists on the receiving side."
 msgstr ""
+"会建立一个名为 <replaceable>replica2</replaceable> 的第二个快照，这个快照只中只会含有目前与前次快照 "
+"<replaceable>replica1</replaceable> 之间文件系统所做的变更。使用 <command>zfs send -i</"
+"command> 并指定要用来产生渐进备份串流的快照，串流中只会含有做过更改的资料。这个动作只在接收端已经有初始快照时才可用。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1904
@@ -3575,6 +3790,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1925
+#, fuzzy
 msgid ""
 "The incremental stream was successfully transferred. Only the data that had "
 "changed was replicated, rather than the entirety of _replica1_. Only the "
@@ -3583,9 +3799,12 @@ msgid ""
 "to rely on slow networks or when costs per transferred byte must be "
 "considered."
 msgstr ""
+"如此一来，便成功传输渐进式的串流，只有做过更改的资料会被备份，不会传送完整的 <replaceable>replica1</replaceable>。由于"
+"不会备份完整的存储池，只传送差异的部份，所以可以减少传输的时间并节省磁盘空间，特别是在网路缓慢或需要考量每位元传输成本时非常有用。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1927
+#, fuzzy
 msgid ""
 "A new file system, _backup/mypool_, is available with all of the files and "
 "data from the pool _mypool_. If `-P` is specified, the properties of the "
@@ -3594,6 +3813,11 @@ msgid ""
 "will be copied, along with all of their properties. Sending and receiving "
 "can be automated so that regular backups are created on the second pool."
 msgstr ""
+"从存储池 <replaceable>mypool</replaceable> 复制所有文件与资料的新文件系统 <replaceable>backup/"
+"mypool</replaceable> 便可以使用。若指定 "
+"<option>-P</option>，会一并复制数据集的属性，这包含压缩（Compression）设定，配额（Quota）及挂载点（Mount "
+"point）若指定 "
+"<option>-R</option>，会复制所有指定数据集的子数据集，及这些子数据集的所有属性。可将传送与接收自动化来定期使用第二个存储池做备份。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1929
@@ -3715,6 +3939,7 @@ msgstr "数据集、用户和组配额"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1972
+#, fuzzy
 msgid ""
 "<<zfs-term-quota,Dataset quotas>> are used to restrict the amount of space "
 "that can be consumed by a particular dataset. <<zfs-term-refquota,Reference "
@@ -3724,6 +3949,11 @@ msgid ""
 "to prevent users or groups from using all of the space in the pool or "
 "dataset."
 msgstr ""
+"数据集配额（<link linkend=\"zfs-term-quota\">Dataset "
+"quota</link>）可用来限制特定数据集可以使用的的空间量。参考配额（<link linkend=\"zfs-term-refquota\""
+">Reference Quota</link>）的功能也非常相似，差在参考配额只会计算数据集自己使用的空间，不含快照与子数据集。类似的，使用者（"
+"<link linkend=\"zfs-term-userquota\">User</link>）与群组（<link linkend=\"zfs-"
+"term-groupquota\">Group</link>）配额可以用来避免使用者或群组用掉存储池或数据集的所有空间。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1974
@@ -3738,8 +3968,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1976
+#, fuzzy
 msgid "To enforce a dataset quota of 10 GB for [.filename]#storage/home/bob#:"
-msgstr ""
+msgstr "要设定 <filename>storage/home/bob</filename> 的数据集配额为 10 GB："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1980
@@ -3749,9 +3980,10 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1983
+#, fuzzy
 msgid ""
 "To enforce a reference quota of 10 GB for [.filename]#storage/home/bob#:"
-msgstr ""
+msgstr "设定 <filename>storage/home/bob</filename> 的参考配额为 10 GB："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:1987
@@ -3896,12 +4128,15 @@ msgstr "保留空间"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2053
+#, fuzzy
 msgid ""
 "<<zfs-term-reservation,Reservations>> guarantee a minimum amount of space "
 "will always be available on a dataset. The reserved space will not be "
 "available to any other dataset. This feature can be especially useful to "
 "ensure that free space is available for an important dataset or log files."
 msgstr ""
+"保留空间（<link linkend=\"zfs-term-reservation\">Reservation</link>）可以确保数据集最少可用的空间"
+"量，其他任何数据集无法使用保留的空间，这个功能在要确保有足够的可用空间来存放重要的数据集或日志档时特别有用。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2055
@@ -3937,10 +4172,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2071
+#, fuzzy
 msgid ""
 "This command shows any reservations or refreservations that exist on [."
 "filename]#storage/home/bob#:"
 msgstr ""
+"这个指令会显示任何已设定于 <filename>storage/home/bob</filename> 的 reservation 或 "
+"refreservation："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2076
@@ -4012,6 +4250,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2100
+#, fuzzy
 msgid ""
 "Compression can have an unexpected side effect when combined with <<zfs-term-"
 "userquota,User Quotas>>. User quotas restrict how much space a user can "
@@ -4024,6 +4263,11 @@ msgid ""
 "(the `logicalused` property), but the change in compression caused them to "
 "reach their quota limit."
 msgstr ""
+"压缩功能在与使用者配额（<link linkend=\"zfs-term-userquota\">User Quota</link>）一并使用时可能会产生"
+"无法预期的副作用。使用者配额会限制一个使用者在一个数据集上可以使用多少空间，但衡量的依据是以<emphasis>压缩后</emphasis> "
+"所使用的空间，因此，若一个使用者有10 GB 的配额，写入了10 GB 可压缩的资料，使用者将还会有空间储存额外的资料。若使用者在之后更新了一个文件，例如"
+"一个资料库，可能有更多或较少的可压缩资料，那么剩余可用的空间量也会因此而改变，这可能会造成奇怪的现象便是，一个使用者虽然没有增加实际的资料量（于<lite"
+"ral>logicalused</literal> 属性），但因为更改影响了压缩率，导致使用者达到配额的上限。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2102
@@ -4056,6 +4300,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2109
+#, fuzzy
 msgid ""
 "Zstd provides a large selection of compression levels, providing fine-"
 "grained control over performance versus compression ratio. One of the main "
@@ -4064,9 +4309,12 @@ msgid ""
 "allows the use of the highest compression levels without a read performance "
 "penalty."
 msgstr ""
+"<acronym>Zstd</acronym>提供了大量的压缩级别选择，可对性能与压缩比进行精细控制。<acronym>Zstd</acronym>的主要"
+"优势之一是解压速度与压缩级别无关。对于写入一次但读取多次的数据，<acronym>Zstd</acronym>使用最高的压缩级别时不会影响读取性能。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2111
+#, fuzzy
 msgid ""
 "Even when data is updated frequently, there are often performance gains that "
 "come from enabling compression. One of the biggest advantages comes from the "
@@ -4075,6 +4323,9 @@ msgid ""
 "needed. This allows the same amount of RAM to store more data and metadata, "
 "increasing the cache hit ratio."
 msgstr ""
+"即使数据更新频繁，也常常会因为启用压缩功能而获得性能提升。其中最大的优势来自于压缩的ARC功能。<acronym>ZFS</acronym>的自适应替换缓"
+"存(<acronym>ARC</acronym>)将数据的压缩版本缓存在<acronym>RAM</acronym>中，在每次需要时对其进行解压。这使得相"
+"同数量的<acronym>RAM</acronym>可以存储更多的数据和元数据，提高了缓存命中率。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2113
@@ -4152,12 +4403,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2138
+#, fuzzy
 msgid ""
 "The `DEDUP` column shows the actual rate of deduplication for the pool. A "
 "value of `1.00x` shows that data has not been deduplicated yet. In the next "
 "example, the ports tree is copied three times into different directories on "
 "the deduplicated pool created above."
 msgstr ""
+"<literal>DEDUP</literal> 栏位会显示存储池的实际去重复率，数值为 <literal>1.00x</literal> "
+"代表资料尚未被去重复.在下一个例子会在前面所建立的去重复存储池中复制三份 Port 树到不同的目录中。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2144
@@ -4184,12 +4438,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2156
+#, fuzzy
 msgid ""
 "The `DEDUP` column shows a factor of `3.00x`. Multiple copies of the ports "
 "tree data was detected and deduplicated, using only a third of the space. "
 "The potential for space savings can be enormous, but comes at the cost of "
 "having enough memory to keep track of the deduplicated blocks."
 msgstr ""
+"<literal>DEDUP</literal> 栏位显示有<literal>3.00x</literal> 的去重复率，"
+"这代表已侦测到多份复制的Port 树资料并做了去重复的动作，且只会使用第三份资料所占的空间."
+"去重复能节省空间的潜力可以非常巨大，但会需要消耗大量的内存来持续追踪去重复的资料区块。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2158
@@ -4277,6 +4535,7 @@ msgstr "委托管理"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2194
+#, fuzzy
 msgid ""
 "A comprehensive permission delegation system allows unprivileged users to "
 "perform ZFS administration functions. For example, if each user's home "
@@ -4287,6 +4546,10 @@ msgid ""
 "possible to delegate the ability to delegate permissions. Permission "
 "delegation is possible for each subcommand and most properties."
 msgstr ""
+"一个全面性的权限委托系统可能无权限的使用者执行 <acronym>ZFS</acronym> "
+"的管理功能。例如，若每个使用者的家目录均为一个数据集，便可以给予使用者权限建立与摧毁它们家目录中的快照。可以给予备份使用者使用备份功能的权限。"
+"一个使用量统计的 Script "
+"可以允许其在执行时能存取所有使用者的空间利用率资料。甚至可以将委托权限委托给其他人，每个子指令与大多数属性都可使用权限委托。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2196
@@ -4412,14 +4675,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2222
+#, fuzzy
 msgid ""
 "  Forcing 4 KB blocks is also useful on pools where disk upgrades are "
 "planned. Future disks are likely to use 4 KB sectors, and `ashift` values "
 "cannot be changed after a pool is created."
 msgstr ""
+"  强制使用 4KB 块在计划进行磁盘升级的池中也很有用。将来的磁盘可能会使用 4 KB "
+"扇区，并且在创建池后无法更改<varname>ashift</varname>值。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2224
+#, fuzzy
 msgid ""
 "  In some specific cases, the smaller 512-byte block size might be "
 "preferable. When used with 512-byte disks for databases, or as storage for "
@@ -4427,6 +4694,8 @@ msgid ""
 "can provide better performance, especially when using a smaller ZFS record "
 "size."
 msgstr ""
+"  在某些特定情况下，使用较小的 512 字节块大小可能更合适。当与 512 字节的数据库磁盘一起使用时，或用作虚拟机的存储时，在小型随机读取期间传输的数"
+"据较少。这可以提供更好的性能，尤其是在使用较小的<acronym>ZFS</acronym>记录大小时。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2225
@@ -4579,6 +4848,7 @@ msgstr "内存"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2243
+#, fuzzy
 msgid ""
 "As a bare minimum, the total system memory should be at least one gigabyte. "
 "The amount of recommended RAM depends upon the size of the pool and which "
@@ -4589,6 +4859,11 @@ msgid ""
 "to memory exhaustion. Further tuning may be required for systems with less "
 "than the recommended RAM requirements."
 msgstr ""
+"最低需求，总系统内存应至少有 1 GB，建议的 <acronym>RAM</acronym> 量需视存储池的大小以及使用的 <acronym>ZFS</"
+"acronym> 功能而定。一般的经验法则是每 1 TB 的储存空间需要 1 GB 的 RAM，若有开启去重复的功能，一般的经验法则是每 1 TB "
+"的要做去重复的储存空间需要 5 GB 的 RAM。虽然有部份使用者成功使用较少的 <acronym>RAM</acronym> 来运作 "
+"<acronym>ZFS</acronym>，但系统在负载较重时有可能会因为记忆用耗而导致当机，对于要使用低于建议 RAM "
+"需求量来运作的系统可能会需要更进一步的调校。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2244
@@ -4606,9 +4881,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2251
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "options        KVA_PAGES=512\n"
-msgstr ""
+msgstr "options        KVA_PAGES=512\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2254
@@ -4636,13 +4911,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2265
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "vm.kmem_size=\"330M\"\n"
 "vm.kmem_size_max=\"330M\"\n"
 "vfs.zfs.arc_max=\"40M\"\n"
 "vfs.zfs.vdev.cache.size=\"5M\"\n"
 msgstr ""
+"vm.kmem_size=\"330M\"\n"
+"vm.kmem_size_max=\"330M\"\n"
+"vfs.zfs.arc_max=\"40M\"\n"
+"vfs.zfs.vdev.cache.size=\"5M\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2268
@@ -4689,6 +4968,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2281
+#, fuzzy
 msgid ""
 "ZFS is a fundamentally different file system because it is more than just a "
 "file system. ZFS combines the roles of file system and volume manager, "
@@ -4704,6 +4984,13 @@ msgid ""
 "extensive partitioning where free space becomes fragmented across the "
 "partitions."
 msgstr ""
+"<acronym>ZFS</acronym> 是一个从本质上与众不同的文件系统，由于它并非只是一个文件系统，<acronym>ZFS</acronym> "
+"结合了文件系统及磁盘区管理程序，让额外的储存设备可以即时的加入到系统并可让既有的文件系统立即使用这些在存储池中空间。透过结合传统区分为二的两个角色，<ac"
+"ronym>ZFS</acronym> 能够克服以往 <acronym>RAID</acronym> 磁盘群组无法扩充的限制。每个在存储池顶层的设备称作<"
+"emphasis>vdev</emphasis>，其可以是一个简单的磁盘或是一个<acronym>RAID</acronym> "
+"如镜像或<acronym>RAID-Z</acronym > 阵列。 <acronym>ZFS</acronym> 的文件系统（称作<emphasis>数"
+"据集（Dataset）</emphasis>）每一个数据集均可存取整个存池所共通的可用空间，随着使用存储池来配置空间区块，存储池能给每个文件系统使用的可用"
+"空间就会减少，这个方法可以避免扩大分割区会使的可用空间分散分割区之间的常见问题。"
 
 #. type: Table
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2292
@@ -4733,11 +5020,13 @@ msgstr ""
 
 #. type: Table
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2298
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Using an entire disk as part of a bootable pool is strongly discouraged, as this may render the pool unbootable. Likewise, you should not use an entire disk as part of a mirror or RAID-Z vdev. These are because it is impossible to reliably determine the size of an unpartitioned disk at boot time and because there's no place to put in boot code.\n"
 "====\n"
 msgstr ""
+"强烈建议不要将整个磁盘用作可引导存储池的一部分，因为这可能会使存储池无法启动。同样，不应将整个磁盘用作镜像或<acronym>RAID-Z</"
+"acronym> vdev 的一部分。这是因为在引导时无法可靠地确定未分区磁盘的大小，并且无法放入引导代码。\n"
 
 #. type: Table
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2301
@@ -4782,12 +5071,15 @@ msgstr ""
 
 #. type: Table
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2311
+#, fuzzy
 msgid ""
 "  In a RAID-Z1 configuration with four disks, each 1 TB, usable storage is 3 "
 "TB and the pool will still be able to operate in degraded mode with one "
 "faulted disk. If an additional disk goes offline before the faulted disk is "
 "replaced and resilvered, all data in the pool can be lost."
 msgstr ""
+"  在<acronym>RAID-Z1</acronym> 配置4 个磁盘，每个磁盘1 TB，可用的储存空间则为3 TB，且若其中一个磁盘故障仍可以降级("
+"Degraded）的模式运作，若在故障磁盘尚未更换并修复(Resilver）之前又有磁盘故障，所有在存储池中的资料便会遗失。"
 
 #. type: Table
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2313
@@ -4801,6 +5093,7 @@ msgstr ""
 
 #. type: Table
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2315
+#, fuzzy
 msgid ""
 "  A configuration of two RAID-Z2 vdevs consisting of 8 disks each would "
 "create something similar to a RAID-60 array. A RAID-Z group's storage "
@@ -4809,6 +5102,10 @@ msgid ""
 "of approximately 3 TB, and an array of eight 1 TB disks in RAID-Z3 will "
 "yield 5 TB of usable space."
 msgstr ""
+"  两个 <acronym>RAID-Z2</acronym> vdev 的配置，每个 vdev 由 8 个硬盘组成，将创建类似于 "
+"<acronym>RAID-60</acronym> 的阵列。一个 <acronym>RAID-Z</acronym> 的存储容量大约是最小硬盘的大小乘以"
+"非同位硬盘的数量。在<acronym>RAID-Z1</acronym>中，4个1TB的硬盘的有效容量大约为3TB，而在<acronym>RAID-Z3<"
+"/acronym>中，8个1TB的硬盘组成的阵列可用空间为 5TB。"
 
 #. type: Table
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2316
@@ -4867,6 +5164,7 @@ msgstr ""
 
 #. type: Table
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2325
+#, fuzzy
 msgid ""
 "_Syncing_ - All of the data in the transaction group is written to stable "
 "storage. This process will in turn modify other data, such as metadata and "
@@ -4881,6 +5179,12 @@ msgid ""
 "completed. Once the sync state is complete, the transaction group in the "
 "quiescing state is advanced to the syncing state."
 msgstr ""
+"<emphasis>同步中(Syncing)</emphasis> - "
+"所有在交易群组中的资料会被写任到稳定的储存空间，这个程序会依序修改其他也需同样写入到稳定储存空间的资料，如Metadata "
+"与空间对应表。同步的程多会牵涉多个循环，首先是同步所有更改的资料区块，也是最大的部份，接着是 Metadata，这可能会需要多个循环来完成。"
+"由于要配置空间供资料区块使用会产生新的 Metadata，同步中状态在到达循环完成而不再需要分配任何额外空间的状态前无法结束。同步中状态也是完成 "
+"<emphasis>synctask</emphasis> 的地方，Synctask 是指管理操作，如：建立或摧毁快照与数据集，会修改 "
+"uberblock，也会在此时完成。同步状态完成后，其他处于状态中状态的交易群组便会进入同步中状态。"
 
 #. type: Table
 #: documentation/content/en/books/handbook/zfs/_index.adoc:2357
