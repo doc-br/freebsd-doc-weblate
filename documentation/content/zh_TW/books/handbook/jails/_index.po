@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:55-0300\n"
-"PO-Revision-Date: 2021-04-05 18:35+0000\n"
+"PO-Revision-Date: 2021-04-12 20:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookjails_index/zh_TW/>\n"
@@ -211,12 +211,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:87
+#, fuzzy
 msgid ""
 "The environment of processes running in a \"chroot\". This includes "
 "resources such as the part of the file system which is visible, user and "
 "group IDs which are available, network interfaces and other IPC mechanisms, "
 "etc."
 msgstr ""
+"指程序在 <quote>chroot</quote> 中執行的環境。包含的資源如：一部份可見的檔案系統、可用的使用者及群組 ID、網路介面及其他 IPC "
+"機制等。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/jails/_index.adoc:88
@@ -270,6 +273,7 @@ msgstr "建立和控制 Jail"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:101
+#, fuzzy
 msgid ""
 "Some administrators divide jails into the following two types: \"complete\" "
 "jails, which resemble a real FreeBSD system, and \"service\" jails, "
@@ -279,6 +283,10 @@ msgid ""
 "options for the source of the userland: use prebuilt binaries (such as those "
 "supplied on an install media) or build from source."
 msgstr ""
+"部份管理者將 Jail 分成兩種類型：<quote>完整的</quote> Jail，它像一個真正的 FreeBSD 系統以及 <quote>服務的</"
+"quote> Jail，專門用於某個應用程式或服務，可能使用管理權限執行。但這些只是概念上的區分，建立 Jail 的程序並不受這個概念的影響。"
+"當要建立一個 <quote>完整的</quote> Jail，Userland 有兩個來源選項：使用預先編譯的 Binary (如安裝媒體上提供的 "
+"Binary) 或從原始碼編譯。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/jails/_index.adoc:102
@@ -322,11 +330,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:120
+#, fuzzy
 msgid ""
 "To install the userland from installation media, first create the root "
 "directory for the jail. This can be done by setting the `DESTDIR` variable "
 "to the proper location."
 msgstr ""
+"要從安裝媒體安裝 Userland，需要先建立根目錄供 Jail 使用。這個動作可以透過設定 <varname>DESTDIR</varname> "
+"來到適當的位置來完成。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:122
@@ -474,10 +485,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:183
+#, fuzzy
 msgid ""
 "Jails are often started at boot time and the FreeBSD [.filename]#rc# "
 "mechanism provides an easy way to do this."
-msgstr ""
+msgstr "Jail 通常會需要隨著開機執行，使用 FreeBSD <filename>rc</filename> 機制可讓以簡單的達成這件事。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/jails/_index.adoc:186
