@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: 2021-04-05 12:40+0000\n"
+"PO-Revision-Date: 2021-04-12 20:54+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookprinting_index/zh_CN/>\n"
@@ -103,9 +103,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:81
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ":lp=/dev/lpt0:\\\n"
-msgstr ""
+msgstr ":lp=/dev/lpt0:\\\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:84
@@ -133,14 +133,15 @@ msgstr ""
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:97
 #: documentation/content/en/books/handbook/printing/_index.adoc:307
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "lpd_enable=\"YES\"\n"
-msgstr ""
+msgstr "lpd_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:100
+#, fuzzy
 msgid "  Start the service:"
-msgstr ""
+msgstr "  启动服务："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:105
@@ -236,10 +237,11 @@ msgstr ""
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:144
+#, fuzzy
 msgid ""
 "The parallel port device is [.filename]#/dev/lpt0#. This device appears "
 "whether a printer is attached or not, it is not autodetected."
-msgstr ""
+msgstr "并列端口装置使用<filename>/dev/lpt0</filename>，此装置不论打印机是否连接上都会存在，它并不会自动侦测。"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:146
@@ -326,6 +328,7 @@ msgstr "简介"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:167
+#, fuzzy
 msgid ""
 "Wired network connections are usually the easiest to set up and give the "
 "fastest printing. For direct connection to the computer, `USB` is preferred "
@@ -335,6 +338,9 @@ msgid ""
 "like baud rate and parity bits must add to the complexity. Fortunately, "
 "serial printers are rare."
 msgstr ""
+"有线网路连线通常是安装最简单的方式，且可以提供快速的打印。若要直接连接到电脑，较建议使用<acronym>USB</acronym>，由于较快速、简单。并"
+"列联机仍然可以使用，但有缆线长度与速度上的限制。而序列联机则比较难设定，不同型号的缆线布线方式不同，且通信参数如传输速率及同位检查增加了复杂性，所幸序列打"
+"印机并不多。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/printing/_index.adoc:169
@@ -357,6 +363,7 @@ msgstr ""
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:175
+#, fuzzy
 msgid ""
 "Plain `ASCII` text is the simplest way to send data to a printer. Characters "
 "correspond one to one with what will be printed: an `A` in the data prints "
@@ -366,6 +373,9 @@ msgid ""
 "little or no encoding or translation. The printed output corresponds "
 "directly with what was sent."
 msgstr ""
+"纯<acronym>ASCII</acronym>文字是传送数据到打印机最简单的方式，一个字元对应一个要打印的文字：数据中的<literal>A</lit"
+"eral>会打印一个<literal>A</literal>在页面。可以使用的格式非常少，没有办法选择字体或者比例间距。强迫使用简单的纯<acronym>"
+"ASCII</acronym>为的是让文字可以直接从电脑打印只需一点或甚至不需要编码或转译，打印的结果可直接对应传送的内容。"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:177
@@ -421,6 +431,7 @@ msgstr "以主机为基础（Host-Based）"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:189
+#, fuzzy
 msgid ""
 "Manufacturers can reduce the cost of a printer by giving it a simple "
 "processor and very little memory. These printers are not capable of printing "
@@ -428,6 +439,8 @@ msgid ""
 "the host computer and then sent to the printer. These are called "
 "_host-based_ printers."
 msgstr ""
+"制造商可能会使用简单的处理器和较小的內存来降低打印机的成本，这些打印机无法打印纯文字，相反的，文字与图形会先在机器上的驱动程序画完后传送到打印机。这些称为"
+"<emphasis>以主机为基础（Host-based）</emphasis>的打印机。"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:191
@@ -621,32 +634,37 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:284
+#, fuzzy
 msgid ""
 "<.> The device where the printer is connected. Replace this line with the "
 "appropriate one for the connection type shown here."
-msgstr ""
+msgstr "打印机所连接到装置。替换此行为正确的联机类型，如此处所示。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:286
+#, fuzzy
 msgid "<.> Suppress the printing of a header page at the start of a print job."
-msgstr ""
+msgstr "在打印工作开始时不打印首页。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:288
+#, fuzzy
 msgid "<.> Do not limit the maximum size of a print job."
-msgstr ""
+msgstr "不限制打印工作的最大尺寸。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:290
+#, fuzzy
 msgid ""
 "<.> The path to the spooling directory for this printer. Each printer uses "
 "its own spooling directory."
-msgstr ""
+msgstr "此打印机的缓冲（Spooling）目录路径，每台印表机会自己使用一个独立的缓冲（Spooling）目录。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:292
+#, fuzzy
 msgid "<.> The log file where errors on this printer will be reported."
-msgstr ""
+msgstr "回报此打印机的错误的日志档。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:294
@@ -690,12 +708,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:320
+#, fuzzy
 msgid ""
 "Documents are sent to the printer with `lpr`. A file to be printed can be "
 "named on the command line or piped into `lpr`. These two commands are "
 "equivalent, sending the contents of [.filename]#doc.txt# to the default "
 "printer:"
 msgstr ""
+"文档将用 <command> lpr </command> "
+"发送到打印机。要打印的文件可以在命令行上命名，也可以通过管道到<command>lpr</command>中。这两个命令是等效的, 将 "
+"<filename> doc.txt </filename> 的内容发送到默认打印机:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:325
@@ -783,18 +805,21 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:364
+#, fuzzy
 msgid ""
 "The backslash _line continuation_ characters at the end of the lines in "
 "[.filename]#printcap# entries reveal that an entry for a printer is really "
 "just one long line with entries delimited by colon characters. An earlier "
 "example can be rewritten as a single less-readable line:"
-msgstr ""
+msgstr "printcap项中行尾的反斜杠行连续字符表明，打印机项实际上只是一个长行，其中的项由冒号字符分隔。前面的示例可以重写为单个可读性较差的行："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:368
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "lp:lp=/dev/unlpt0:sh:mx#0:sd=/var/spool/lpd/lp:if=/usr/local/libexec/lf2crlf:lf=/var/log/lpd-errs:\n"
 msgstr ""
+"lp:lp=/dev/unlpt0:sh:mx#0:sd=/var/spool/lpd/lp:if=/usr/local/libexec/"
+"lf2crlf:lf=/var/log/lpd-errs:\n"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/printing/_index.adoc:373
@@ -811,30 +836,39 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:382
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "A printed file looks\n"
 "                    like the steps of a staircase\n"
 "                                                 scattered by the wind\n"
 msgstr ""
+"A printed file looks\n"
+"                    like the steps of a staircase\n"
+"                                                 scattered by the wind\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:385
+#, fuzzy
 msgid ""
 "A filter can convert the newline characters into carriage returns and "
 "newlines. The carriage returns make the printer return to the left after "
 "each line. Create [.filename]#/usr/local/libexec/lf2crlf# with these "
 "contents:"
 msgstr ""
+"过滤器可以将换行符转换为回车和换行符。回车使打印机在每行之后回到左边。用下列内容创建<filename>/usr/local/libexec/"
+"lf2crlf</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:391
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "#!/bin/sh\n"
 "CR=$'\\r'\n"
 "/usr/bin/sed -e \"s/$/${CR}/g\"\n"
 msgstr ""
+"#!/bin/sh\n"
+"CR=$'\\r'\n"
+"/usr/bin/sed -e \"s/$/${CR}/g\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:394
@@ -858,9 +892,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:405
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ":if=/usr/local/libexec/lf2crlf:\\\n"
-msgstr ""
+msgstr ":if=/usr/local/libexec/lf2crlf:\\\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:408
@@ -888,16 +922,19 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:415
+#, fuzzy
 msgid "Create [.filename]#/usr/local/libexec/enscript# with these contents:"
-msgstr ""
+msgstr "使用下列内容创建<filename>/usr/local/libexec/enscript</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:420
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "#!/bin/sh\n"
 "/usr/local/bin/enscript -o -\n"
 msgstr ""
+"#!/bin/sh\n"
+"/usr/local/bin/enscript -o -\n"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:427
@@ -907,9 +944,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:434
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ":if=/usr/local/libexec/enscript:\\\n"
-msgstr ""
+msgstr ":if=/usr/local/libexec/enscript:\\\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:437
@@ -944,12 +981,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:451
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "#!/bin/sh\n"
 "/usr/local/bin/gs -dSAFER -dNOPAUSE -dBATCH -q -sDEVICE=ljet4 -sOutputFile=- "
 "-\n"
 msgstr ""
+"#!/bin/sh\n"
+"/usr/local/bin/gs -dSAFER -dNOPAUSE -dBATCH -q -sDEVICE=ljet4 -sOutputFile=- "
+"-\n"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:458
@@ -972,9 +1012,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:467
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ":if=/usr/local/libexec/ps2pcl:\\\n"
-msgstr ""
+msgstr ":if=/usr/local/libexec/ps2pcl:\\\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:470
@@ -1046,9 +1086,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:517
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ":if=/usr/local/libexec/psif:\\\n"
-msgstr ""
+msgstr ":if=/usr/local/libexec/psif:\\\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:520
@@ -1468,6 +1508,7 @@ msgstr "标题页"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:734
+#, fuzzy
 msgid ""
 "It can be difficult for users to locate their documents in the stack of "
 "pages produced by a busy shared printer. _Header pages_ were created to "
@@ -1475,6 +1516,9 @@ msgid ""
 "printed before each print job. These pages are also sometimes called "
 "_banner_ or _separator_ pages."
 msgstr ""
+"用户很难在繁忙的共享打印机生成的页面堆栈中找到他们的文档。<emphasis>标题页（Header Page）</emphasis>用于解决此问题。在每个"
+"打印作业之前都会打印带有用户名和文档名的标题页。这些页面有时也被称为<emphasis>banner</emphasis> page 或 "
+"<emphasis>separator</emphasis> page。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:736
