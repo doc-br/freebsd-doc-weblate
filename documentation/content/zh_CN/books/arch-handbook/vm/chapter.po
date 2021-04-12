@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-05 12:38+0000\n"
+"PO-Revision-Date: 2021-04-12 20:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/booksarch-handbookvmchapter/zh_CN/>\n"
@@ -38,11 +38,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:36
+#, fuzzy
 msgid ""
 "Physical memory is managed on a page-by-page basis through the `vm_page_t` "
 "structure. Pages of physical memory are categorized through the placement of "
 "their respective `vm_page_t` structures on one of several paging queues."
 msgstr ""
+"物理内存通过结构体<literal>vm_page_t</literal>以页为基础进行管理。物理内存的页由它们各自对应的结构体<literal>vm_p"
+"age_t</literal>所代表，这些结构体存放在若干个页管理队列中的一个里面。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:38
@@ -70,11 +73,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:42
+#, fuzzy
 msgid ""
 "Additionally, a page may be held with a reference count or locked with a "
 "busy count. The VM system also implements an \"ultimate locked\" state for a "
 "page using the PG_BUSY bit in the page's flags."
 msgstr ""
+"此外，一个页可以有一个引用计数，可以被一个忙计数锁定。虚拟内存系统也实现了<quote>终极锁定</quote>(ultimate "
+"locked)状态，一个页可以用页标志PG_BUSY表示这一状态。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:44
@@ -152,6 +158,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:55
+#, fuzzy
 msgid ""
 "VM objects can be _shadowed_. That is, they can be stacked on top of each "
 "other. For example, you might have a swap-backed VM object stacked on top of "
@@ -159,6 +166,9 @@ msgid ""
 "stacking is also used to implement various sharing properties, including "
 "copy-on-write, for forked address spaces."
 msgstr ""
+"VM对象可以被<emphasis>影复制</emphasis>(shadowed)。它们可以被堆放到其它类别VM对象堆栈的顶端。例如，可以有一个交换VM对"
+"象，放置在文件VM对象堆栈的顶端，以实现MAP_PRIVATE的mmap()操作。这样的入栈操作也可以用来实现各种各样的共享特性，包括写入时复制"
+"(copy-on-write，用于日志文件系统)，以派生出地址空间。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:57
@@ -191,6 +201,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:64
+#, fuzzy
 msgid ""
 "The entities used to manage this are known as filesystem buffers, ``struct "
 "buf``'s, or ``bp``'s. When a filesystem needs to operate on a portion of a "
@@ -203,9 +214,15 @@ msgid ""
 "code which would rather operate on filesystem buffers instead of hard VM "
 "pages."
 msgstr ""
+"用来进行这些管理的实体就是众所周知的文件系统缓存，<literal>struct "
+"buf</literal>或<literal>bp</literal>。当文件系统需要对一个VM对象的一部分操作时，"
+"它常会将这个对象的这部分映射到struct buf，并且将struct buf中页映射到内核虚拟内存(KVM)中。同样的，磁盘输入/输出通常要先将VM对象"
+"的各部分映射到buf结构体中，然后对buf结构体进行输入/输出操作。下层的vm_page_t在输入/输出期间通常被标记为“忙”。文件系统缓存也会“忙”，这"
+"对于文件系统驱动程序非常有用，对文件系统缓存操作比对VM真实页(hard)操作更好。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:66
+#, fuzzy
 msgid ""
 "FreeBSD reserves a limited amount of KVM to hold mappings from struct bufs, "
 "but it should be made clear that this KVM is used solely to hold mappings "
@@ -215,6 +232,9 @@ msgid ""
 "the amount of concurrent I/O possible. However, as there are usually a few "
 "thousand filesystem buffers available, this is not usually a problem."
 msgstr ""
+"FreeBSD保留一定数量的内核虚拟内存来存放struct buf的映射，但是这些buf结构体应该是被清理过的。这些内核虚拟内存仅用来存放映射，并不限制缓"
+"存数据的能力。严格的说，物理数据缓存是<literal>vm_page_t</literal>的一个功能，不是文件系统缓存的功能。然而，由于文件系统缓存被"
+"用来处理输入/输出，他们固有的限制了同时进行输入/输出可能的数量。但是，由于通常有数千文件系统缓存可供使用，所以这并不会造成问题。"
 
 #. type: Title ==
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:68
@@ -264,6 +284,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:80
+#, fuzzy
 msgid ""
 "Unlike Linux, FreeBSD does _not_ map all of physical memory into KVM. This "
 "means that FreeBSD can handle memory configurations up to 4G on 32 bit "
@@ -272,6 +293,9 @@ msgid ""
 "platform. However, since most 32 bit platforms are only capable of mapping "
 "4GB of ram, this is a moot point."
 msgstr ""
+"不像Linux，FreeBSD<emphasis>不</emphasis>将所有的物理内存映射到KVM中。这意味着FreeBSD可以在32位平台上管理超过"
+"4GB的内存配置。事实上，如果mmu(译者注：可能是指“内存管理单元”，“Memory Management "
+"Unit”)有足够的能力，FreeBSD理论上可以在32位平台上管理最多8TB的内存配置。然而，大多数32平台只能映射4GB内存，这只能是一个争论点。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:82
@@ -291,6 +315,7 @@ msgstr "调整FreeBSD的虚拟内存系统"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:87
+#, fuzzy
 msgid ""
 "A concerted effort has been made to make the FreeBSD kernel dynamically tune "
 "itself. Typically you do not need to mess with anything beyond the "
@@ -300,9 +325,14 @@ msgid ""
 "available kernel configuration options can be found in "
 "[.filename]#/usr/src/sys/i386/conf/LINT#."
 msgstr ""
+"开发者的协同努力使得FreeBSD可以自行动态调整内核。一般来说，除了内核配置选项<option>maxusers</option>和<option>NM"
+"BCLUSTERS</option>，你不需要做任何杂乱的事情。这些内核编译配置选项(一般)被指定在<filename>/usr/src/sys/"
+"i386/conf/CONFIG_FILE</filename>之中。所有可用内核配置选项的描述可在<filename>/usr/src/sys/"
+"i386/conf/LINT</filename>中找到。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:89
+#, fuzzy
 msgid ""
 "In a large system configuration you may wish to increase `maxusers`. Values "
 "typically range from 10 to 128. Note that raising `maxusers` too high can "
@@ -310,6 +340,9 @@ msgid ""
 "operation. It is better to leave `maxusers` at some reasonable number and "
 "add other options, such as `NMBCLUSTERS`, to increase specific resources."
 msgstr ""
+"在一个大系统的配置中，你可能需要增加<option>maxusers</option>的值。数值范围通常在10到128。注意，过度增加<option>ma"
+"xusers</option>的值可能导致系统从实际可用的KVM中溢出，从而引起无法预知的操作。最好将<option>maxusers</option>设"
+"为一个合理的数值，并且添加其它选项，如<option>NMBCLUSTERS</option>，来增加特定的资源。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:91
@@ -320,6 +353,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:93
+#, fuzzy
 msgid ""
 "The `NBUF` parameter is also traditionally used to scale the system. This "
 "parameter determines the amount of KVA the system can use to map filesystem "
@@ -331,23 +365,32 @@ msgid ""
 "operation while too large a value can starve the page queues by causing too "
 "many pages to become wired down."
 msgstr ""
+"<literal>NBUF</literal>也是传统的规划系统的参数。这个参数决定系统可用来映射文件系统输入/输出缓存的KVM的数量。注意：这个参数与统"
+"一的缓存没有任何关系。这个参数可在3.0-CURRENT和以后的内核中被动态的调节，通常不应当被手动的调节。我们推荐你<emphasis>不要</emph"
+"asis>指定<literal>NBUF</literal>。让系统自行确定它。太小的值会导致非常低效的文件系统操作；太大的值会使用页队列中缺少页面，而大"
+"量的页处于在线状态。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:95
+#, fuzzy
 msgid ""
 "By default, FreeBSD kernels are not optimized. You can set debugging and "
 "optimization flags with the `makeoptions` directive in the kernel "
 "configuration. Note that you should not use `-g` unless you can accommodate "
 "the large (typically 7 MB+) kernels that result."
 msgstr ""
+"缺省情况下，FreeBSD内核编译时是不被优化的。你可以在内核配置文件中用<literal>makeoptions</literal>指定排错(debug"
+"ging)和优化标志。注意，你一般不应使用<option>-g</option>，除非你能够应付由此产生的大内核(典型的是7MB或更多)。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:100
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "makeoptions      DEBUG=\"-g\"\n"
 "makeoptions      COPTFLAGS=\"-O -pipe\"\n"
 msgstr ""
+"makeoptions      DEBUG=\"-g\"\n"
+"makeoptions      COPTFLAGS=\"-O -pipe\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:103
@@ -359,15 +402,19 @@ msgstr "Sysctl提供了在运行时调整内核的方式。你通常不需要指
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:105
+#, fuzzy
 msgid ""
 "Run time VM and system tuning is relatively straightforward. First, use Soft "
 "Updates on your UFS/FFS filesystems whenever "
 "possible. [.filename]#/usr/src/sys/ufs/ffs/README.softupdates# contains "
 "instructions (and restrictions) on how to configure it."
 msgstr ""
+"运行时VM和系统调整的影响相对直接一些。首先，应当尽可能在UFS/FFS文件系统上使用Soft Updates。在<filename>/usr/src/"
+"sys/ufs/ffs/README.softupdates</filename>里有关于如何配置的指示。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:107
+#, fuzzy
 msgid ""
 "Second, configure sufficient swap. You should have a swap partition "
 "configured on each physical disk, up to four, even on your \"work\" "
@@ -379,6 +426,10 @@ msgid ""
 "swap partition must be at least as large as main memory and "
 "[.filename]#/var/crash# must have sufficient free space to hold the dump."
 msgstr ""
+"其次，应当配置足够多的交换空间。你应当在每个物理磁盘上配置一个交换分区，最多4个，甚至在你的<quote>工作</quote>磁盘上。你应当有至少2倍于主"
+"内存的交换空间；假如你没有足够内存的话，交换分区还应更多。你也应当按照你期望中的最大内存配置决定交换分区的大小，这样以后就不再需要重新给磁盘分区了。如果你"
+"处理系统崩溃后的内存倾倒(crash dump)，第一个交换分区必须至少与主内存一样大，<filename>/var/"
+"crash</filename>必须有足够的空间来承装倾倒。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/vm/chapter.adoc:108
