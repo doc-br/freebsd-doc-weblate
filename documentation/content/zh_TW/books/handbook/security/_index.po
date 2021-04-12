@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-14 11:02-0300\n"
-"PO-Revision-Date: 2021-04-05 18:35+0000\n"
+"PO-Revision-Date: 2021-04-12 20:54+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbooksecurity_index/zh_TW/>\n"
@@ -157,6 +157,7 @@ msgstr "說明"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:76
+#, fuzzy
 msgid ""
 "Security is everyone's responsibility. A weak entry point in any system "
 "could allow intruders to gain access to critical information and cause havoc "
@@ -164,9 +165,13 @@ msgid ""
 "the CIA triad, which stands for the Confidentiality, Integrity, and "
 "Availability of information systems."
 msgstr ""
+"保安是每個人的責任，任何系統中的弱點都可讓入侵者取得對關鍵資訊的存取權並導致整個網路的浩劫。資訊安全的其中一個核心原則便是 <acronym>CIA</"
+"acronym> 三字訣，代表著資訊系統的機密性 (Confidentiality)、完整性 (Integrity) 以及可用性 "
+"(Availability)。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:78
+#, fuzzy
 msgid ""
 "The CIA triad is a bedrock concept of computer security as customers and "
 "users expect their data to be protected. For example, a customer expects "
@@ -174,9 +179,12 @@ msgid ""
 "that their orders are not changed behind the scenes (integrity), and that "
 "they have access to their order information at all times (availablility)."
 msgstr ""
+"<acronym>CIA</acronym> 三字訣是電腦安全的基石，就如同客戶與使用者期望他們的資料得到保護一樣重要。例如，"
+"一個客戶會期望他們的信用卡資訊被安全的保存 (機密性)、他們的訂單不會在私底下被竄改 (完整性) 以及他們隨時可以存取他們的訂單資訊 (可用性)。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:80
+#, fuzzy
 msgid ""
 "To provide CIA, security professionals apply a defense in depth strategy. "
 "The idea of defense in depth is to add several layers of security to prevent "
@@ -187,6 +195,9 @@ msgid ""
 "implement an effective security strategy, one must understand threats and "
 "how to defend against them."
 msgstr ""
+"要提供 <acronym>CIA</acronym>，安全專家會應用防禦深度的策略。防禦深度的概念是增加數個保全階層來避免單一階層失效便導致整個安全系統瓦"
+"解。例如，系統管理者不能直接打開防火牆與評估網路或系統的安全性，還要同時稽查帳號、檢查 Binary "
+"的完整性與確保未被安裝惡意工具。要執行有效的保安策略，必須了解威脅以及如何抵禦威脅。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:82
@@ -215,6 +226,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:86
+#, fuzzy
 msgid ""
 "When applying security to systems, it is recommended to start by securing "
 "the basic accounts and system configuration, and then to secure the network "
@@ -226,6 +238,9 @@ msgid ""
 "operating procedures (SOPs) already exist. When in doubt, ask the security "
 "team."
 msgstr ""
+"當要應用保安到系統上時，建議由基本帳號以及系統設定開始保全，接著確保網路層，使其遵守系統政策以及組織的安全程序。許多組織已經有涵蓋科技裝置設置的安全性政策"
+"，該政策應包含工作站、桌上型電腦、行動裝置、手機、上線伺服器、開發伺服器的安全設置。在大多數案例中，也都已經有標準操作程序 "
+"(<acronym>SOP</acronym>)，當有疑慮時，請向安全團隊諮詢。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:88
@@ -267,11 +282,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:102
+#, fuzzy
 msgid ""
 "The second method is to prevent login access by changing the shell to [."
 "filename]#/usr/sbin/nologin#. Only the superuser can change the shell for "
 "other users:"
 msgstr ""
+"第二種防止登入存取的方式是狀 Shell 更改為 <filename>/usr/sbin/nologin</filename>，"
+"只有超級使用者可以更改其他使用者的 Shell："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:106
@@ -281,10 +299,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:109
+#, fuzzy
 msgid ""
 "The [.filename]#/usr/sbin/nologin# shell prevents the system from assigning "
 "a shell to the user when they attempt to login."
-msgstr ""
+msgstr "<filename>/usr/sbin/nologin</filename> shell 可以避免系統分配 Shell 給嘗試登入的使用者。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:111
@@ -308,12 +327,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:116
+#, fuzzy
 msgid ""
 "The second, and recommended, method to permit privilege escalation is to "
 "install the package:security/sudo[] package or port. This software provides "
 "additional auditing, more fine-grained user control, and can be configured "
 "to lock users into running only the specified privileged commands."
 msgstr ""
+"第二種方式，也是較建議的方式，安裝 <package>security/sudo</package> 套件或 Port "
+"來提升權限。這個軟體提供了額外的稽查、更細微的使用者控制，然後可以設定鎖定使用者只能執行特定需權限的指令。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:118
@@ -352,11 +374,14 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:134
+#, fuzzy
 msgid ""
 "Blowfish is not part of AES and is not considered compliant with any Federal "
 "Information Processing Standards (FIPS). Its use may not be permitted in "
 "some environments."
 msgstr ""
+"Blowfish 不是 <acronym>AES</acronym> 的一部份且不符合任何聯邦資訊處理標準 (Federal Information "
+"Processing Standards, <acronym>FIPS</acronym>)，在某些環境可能不會允許使用這種加密方式。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:137
@@ -436,12 +461,15 @@ msgstr "強制密碼政策"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:166
+#, fuzzy
 msgid ""
 "Enforcing a strong password policy for local accounts is a fundamental "
 "aspect of system security. In FreeBSD, password length, password strength, "
 "and password complexity can be implemented using built-in Pluggable "
 "Authentication Modules (PAM)."
 msgstr ""
+"強制在本地帳號使用高強度密碼的政策是系統安全的基礎之一。在 FreeBSD 密碼長度、密碼強度以及密碼複雜性可使用內建的可插拔認証模組 ("
+"Pluggable Authentication Modules, <acronym>PAM</acronym>) 來執行。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:168
@@ -594,12 +622,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:226
+#, fuzzy
 msgid ""
 "A rootkit does do one thing useful for administrators: once detected, it is "
 "a sign that a compromise happened at some point. But, these types of "
 "applications tend to be very well hidden. This section demonstrates a tool "
 "that can be used to detect rootkits, package:security/rkhunter[]."
 msgstr ""
+"rootkit 對管理者而言唯一有幫助的是：一但偵測到，便代表某處已經被滲透，但這類型的應用程式躲藏的非常好，本節將會示範一個可以用來偵測 "
+"rootkit 的工具，<package>security/rkhunter</package>。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:228
@@ -617,6 +648,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:235
+#, fuzzy
 msgid ""
 "After the process completes, a status message will be printed to the screen. "
 "This message will include the amount of files checked, suspect files, "
@@ -625,9 +657,13 @@ msgid ""
 "and known vulnerable versions of installed software. These can be handled "
 "now or after a more detailed analysis has been performed."
 msgstr ""
+"該程序完成之後，目前狀態的訊息便會顯示在畫面上。這個訊息包含了已檢查過多少檔案、可疑的檔案、可能的 rootkit "
+"以及其他更多資訊。在檢查的過程中，可能會產生一些有關隱藏檔案、<application>OpenSSH</application> "
+"通訊協定選擇及已安裝軟體已知漏洞版本的通用的安全性警告、這些問題可以立即處理或在更詳細的分析之後再處理。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:237
+#, fuzzy
 msgid ""
 "Every administrator should know what is running on the systems they are "
 "responsible for. Third-party tools like rkhunter and package:sysutils/"
@@ -636,6 +672,10 @@ msgid ""
 "questions when something seems out of place, and be paranoid. While "
 "preventing a compromise is ideal, detecting a compromise is a must."
 msgstr ""
+"每位管理者應了解在系統上執行了那些程式以及這些程式的用途。第三方工具如 <application>rkhunter</application> 與 "
+"<package>sysutils/lsof</package> 以及原生指令如 <command>netstat</command> 與 "
+"<command>ps</command> "
+"可以系統上大量的資訊，記錄下那一些是正常的，當有不適當的程式出現時提出疑問，然後找出答案。雖然理想要避免滲透，但也必須偵測是否已被滲透了。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:239
@@ -645,15 +685,19 @@ msgstr "Binary 檢驗"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:242
+#, fuzzy
 msgid ""
 "Verification of system files and binaries is important because it provides "
 "the system administration and security teams information about system "
 "changes. A software application that monitors the system for changes is "
 "called an Intrusion Detection System (IDS)."
 msgstr ""
+"檢驗系統檔案與 Binary 是很重要的，因為它可以提供系統管理者與資安團隊有關系統變更的資訊，能夠監視系統變更的軟體應用程式稱為入侵偵測系統 ("
+"Intrusion Detection System, <acronym>IDS</acronym>)。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:244
+#, fuzzy
 msgid ""
 "FreeBSD provides native support for a basic IDS system. While the nightly "
 "security emails will notify an administrator of changes, the information is "
@@ -663,6 +707,10 @@ msgid ""
 "a read-only, root-owned directory or, preferably, on a removable USB disk or "
 "remote rsync server."
 msgstr ""
+"FreeBSD 原生提供了基礎的 <acronym>IDS</acronym> "
+"系統，雖然每天晚上會有安全性的信件會通知管理者相關的變更，但這些資訊是儲存在本地的，這讓惡意的使用者有機會能夠修改這些資訊來隱藏其對系統的變更。也因此，"
+"會建議建立一個獨立的 Binary 簽名並將這些簽名儲存在唯度、root 擁有的目錄或在可移除的 <acronym>USB</acronym> "
+"磁碟或遠端 <application>rsync</application> 伺服器更好。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:246
@@ -695,10 +743,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:256
+#, fuzzy
 msgid ""
 "Viewing [.filename]#/root/.bin_cksum_mtree# should yield output similar to "
 "the following:"
-msgstr ""
+msgstr "檢視 <filename>/root/.bin_cksum_mtree</filename> 應會產生類似以下的輸出結果："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:263
@@ -760,6 +809,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:292
+#, fuzzy
 msgid ""
 "This should produce the same checksum for [.filename]#/bin# that was "
 "produced when the specification was created. If no changes have occurred to "
@@ -767,6 +817,10 @@ msgid ""
 "output file will be empty. To simulate a change, change the date on [."
 "filename]#/bin/cat# using `touch` and run the verification command again:"
 msgstr ""
+"這個動作應會產生與上次建立 <filename>/bin</filename> 規格檔時產生的校驗碼相同，若在此目錄的 Binary 沒有被變更過，那麼 "
+"<filename>/root/.bin_chksum_output</filename> 這個輸出檔將會是空的。要模擬變更，可以使用 "
+"<command>touch</command> 更改 <filename>/root/.bin_chksum_output</filename> "
+"的日期然後再執行檢驗指令一次："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:300
@@ -818,12 +872,15 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:314
+#, fuzzy
 msgid ""
 "Any time a setting is changed with `sysctl`, the chance to cause undesired "
 "harm is increased, affecting the availability of the system. All changes "
 "should be monitored and, if possible, tried on a testing system before being "
 "used on a production system."
 msgstr ""
+"任何時間使用 <xref linkend=\"configtuning-sysctl\"/> "
+"做的設定變更都會讓造成不想要的傷害的可能性上升，影響到系統的可用性。因此應要對所有的變更做監視，若可能的話，先在測試系統上實驗，再到上線的系統上使用。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:317
@@ -900,6 +957,7 @@ msgstr "一次性密碼"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:338
+#, fuzzy
 msgid ""
 "By default, FreeBSD includes support for One-time Passwords In Everything "
 "(OPIE). OPIE is designed to prevent replay attacks, in which an attacker "
@@ -908,6 +966,12 @@ msgid ""
 "attacker. OPIE uses a secure hash and a challenge/response system to manage "
 "passwords. The FreeBSD implementation uses the MD5 hash by default."
 msgstr ""
+"預設 FreeBSD 已內建一次性密碼 (One-time Passwords In Everything, "
+"<acronym>OPIE</acronym>)。<acronym>OPIE</acronym> 設計用來避免重送攻擊 (Replay "
+"attack)，重送攻擊指的是攻擊者發現了某位使用者的密碼，然後使用該密碼來存取系統。由於在 <acronym>OPIE</acronym> "
+"的環境下，一組密碼只能被使用一次，被發現的密碼對攻擊者而言便沒有什麼作用。<acronym>OPIE</acronym> 使用了安全的加密方式與詰問/"
+"回應系統 (Challenge/response system) 來管理密碼。FreeBSD 在實作上預設採用 <acronym>MD5</"
+"acronym> 加密。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:340
@@ -951,6 +1015,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:346
+#, fuzzy
 msgid ""
 "This section describes four different sorts of operations. The first is how "
 "to set up one-time-passwords for the first time over a secure connection. "
@@ -959,6 +1024,8 @@ msgid ""
 "a number of keys which can be written down or printed out to use at insecure "
 "locations."
 msgstr ""
+"本章節將介紹四種不同的操作，第一是如何在安全連線下做第一次的一次性密碼設定，第二是如何使用在不安全的連線下使用 <command>opiepasswd</"
+"command>，第三是如何在不安全的連線下登入系統，第四是如何產生數個可以被記錄或列印下來在不安全的場所使的金鑰。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:347
@@ -1017,6 +1084,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:371
+#, fuzzy
 msgid ""
 "The `ID` line lists the login name (`unfurl`), default iteration count "
 "(`499`), and default seed (`to4268`). When logging in, the system will "
@@ -1025,6 +1093,9 @@ msgid ""
 "corresponds to those parameters and the secret password. At the next login, "
 "use this one-time password."
 msgstr ""
+"<literal>ID</literal> 行會列出登入名稱 (<literal>unfurl</literal>)、預設的疊代次數 "
+"(<literal>499</literal>) 以及預設的種子碼 (<literal>to4268</literal>)。在進行登入時，系統會記住這些參"
+"數並且顯示出來，這也代表不需要另外記錄這些資訊。最後一行會列出根據這些參數與秘密密碼所產生出來的一次性密碼，在下一次登入時便要使用這個一次性密碼。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:372
@@ -1195,6 +1266,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:459
+#, fuzzy
 msgid ""
 "The `-n 5` requests five keys in sequence, and `30` specifies what the last "
 "iteration number should be. Note that these are printed out in _reverse_ "
@@ -1202,6 +1274,9 @@ msgid ""
 "hand; otherwise, print the list. Each line shows both the iteration count "
 "and the one-time password. Scratch off the passwords as they are used."
 msgstr ""
+"<option>-n 5</option> 會請求產生連續五個金鑰，而 <option>30</option> 則是指定最後一個疊代的編號。注意這些列印出"
+"的結果的順序與使用的順序<emphasis>相反</emphasis>。十足的偏執狂可能會想要用手寫下結果，否則就列印出清單。每一行會同時顯示疊代次數及一"
+"次性密碼，在密碼使用過後便可劃掉。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:460
@@ -3128,12 +3203,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1291
+#, fuzzy
 msgid ""
 "This section provides an overview of the built-in client utilities to "
 "securely access other systems and securely transfer files from a FreeBSD "
 "system. It then describes how to configure a SSH server on a FreeBSD system. "
 "More information is available in the man pages mentioned in this chapter."
 msgstr ""
+"本節會簡單介紹如何使用內建的客戶端工具安全的存取其他系統及安全的傳輸檔案到 FreeBSD 系統，然後會說明如何設定在 FreeBSD 系統上的 "
+"<acronym>SSH</acronym> 伺服器。更多的資訊可於本章節所提及的操作手冊 (Man page) 取得。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/security/_index.adoc:1292
@@ -3236,6 +3314,7 @@ msgstr "以金鑰為基礎的認證"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1331
+#, fuzzy
 msgid ""
 "Instead of using passwords, a client can be configured to connect to the "
 "remote machine using keys. To generate RSA authentication keys, use `ssh-"
@@ -3243,6 +3322,8 @@ msgid ""
 "and follow the prompts. It is recommended to protect the keys with a "
 "memorable, but hard to guess passphrase."
 msgstr ""
+"除了使用密碼之外，客戶端可以設定成使用金鑰來連線到遠端的主機。要產生 <acronym>RSA</acronym> 認証金鑰可使用 <command"
+">ssh-keygen</command>。要產生成對的公鑰與私鑰，可指定金鑰的類型並依提示操作。建議使用容易記住但較難猜出的密碼來保護這個金鑰。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1355
@@ -3318,20 +3399,27 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1373
+#, fuzzy
 msgid ""
 "Authentication is handled by `ssh-agent`, using the private keys that are "
 "loaded into it. `ssh-agent` can be used to launch another application like a "
 "shell or a window manager."
 msgstr ""
+"認証可用 <command>ssh-agent</command> 來管理，只要將私鑰載入，<command>ssh-agent</command> "
+"可用在執行其他應用程式，如 Shell 或視窗管理程式。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1375
+#, fuzzy
 msgid ""
 "To use `ssh-agent` in a shell, start it with a shell as an argument. Add the "
 "identity by running `ssh-add` and entering the passphrase for the private "
 "key. The user will then be able to `ssh` to any host that has the "
 "corresponding public key installed. For example:"
 msgstr ""
+"要在 Shell 使用 <command>ssh-agent</command>，使用 Shell 做為參數來啟動 <command>ssh-"
+"agent</command>。執行 <command>ssh-add</command> 來加入識別碼，然後輸入私鑰的密碼。使用者將可使用 "
+"<command>ssh</command> 連線到任何有安裝對應公鑰的主機，例如："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1383
@@ -3346,8 +3434,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1386
+#, fuzzy
 msgid "<.> Enter the passphrase for the key."
-msgstr ""
+msgstr "輸入金鑰的密碼。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1388
@@ -3421,10 +3510,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1416
+#, fuzzy
 msgid ""
 "Indicates no command, or tunnel only. If omitted, `ssh` initiates a normal "
 "session."
-msgstr ""
+msgstr "代表不需下指令、只建立通道。若省略這個選項 <command>ssh</command> 會初始化一個正常的連線。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/security/_index.adoc:1417
@@ -3544,12 +3634,15 @@ msgstr "跳過防火牆"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1465
+#, fuzzy
 msgid ""
 "Some firewalls filter both incoming and outgoing connections. For example, a "
 "firewall might limit access from remote machines to ports 22 and 80 to only "
 "allow SSH and web surfing. This prevents access to any other service which "
 "uses a port other than 22 or 80."
 msgstr ""
+"有些防火牆會同時過濾傳入與傳出的連線。例如，防火牆很可能會限制來自遠端主機只能存取 Port 22 與 80 來只讓 <acronym>SSH</"
+"acronym> 與網頁瀏覽器連線，這會使得 Port 使用 22 或 80 以外的服務無法存取。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1467
@@ -3600,10 +3693,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1489
+#, fuzzy
 msgid ""
 "If the service is not running, add the following line to [.filename]#/etc/rc."
 "conf#."
-msgstr ""
+msgstr "若服務未執行，請加入下行到 <filename>/etc/rc.conf</filename>。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:1493
@@ -3626,12 +3720,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1503
+#, fuzzy
 msgid ""
 "The first time sshd starts on a FreeBSD system, the system's host keys will "
 "be automatically created and the fingerprint will be displayed on the "
 "console. Provide users with the fingerprint so that they can verify it the "
 "first time they connect to the server."
 msgstr ""
+"在 FreeBSD 系統第一次啟動 <application>sshd</application> 時便會自動產生系統的主機金鑰且會顯示指紋在  "
+"Console 上，這個指紋可供使用者在第一次連線到伺服器時驗證用。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1505
@@ -3656,12 +3753,16 @@ msgstr "SSH 伺服器安全性"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1511
+#, fuzzy
 msgid ""
 "While sshd is the most widely used remote administration facility for "
 "FreeBSD, brute force and drive by attacks are common to any system exposed "
 "to public networks. Several additional parameters are available to prevent "
 "the success of these attacks and will be described in this section."
 msgstr ""
+"在 FreeBSD 廣泛使用 <application>sshd</application> 做為遠端管理基礎設施的同時，"
+"所有暴露在公有網路上的系統也會時常受到暴力攻擊 (Brute force attack) 與路過攻擊 (Drive by "
+"attack)。在本節會介紹一些可用來避免這些攻擊的參數。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:1513
@@ -5011,15 +5112,19 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2032
+#, fuzzy
 msgid ""
 "After the installation is complete, the installed `visudo` will open the "
 "configuration file with a text editor. Using `visudo` is highly recommended "
 "as it comes with a built in syntax checker to verify there are no errors "
 "before the file is saved."
 msgstr ""
+"安裝完成之後，可用安裝的 <command>visudo</command> 以文字編輯器開啟設定檔，強烈建議使用 <command>visudo</"
+"command> 來編輯設定檔，由於它有內建的語法檢查程式可在檔案儲存之前檢驗是否有誤。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2034
+#, fuzzy
 msgid ""
 "The configuration file is made up of several small sections which allow for "
 "extensive configuration. In the following example, web application "
@@ -5027,6 +5132,9 @@ msgid ""
 "known as _webservice_. To grant this user permission to perform these tasks, "
 "add this line to the end of [.filename]#/usr/local/etc/sudoers#:"
 msgstr ""
+"設定檔由個小節所組成，透過這些小節可做常廣泛的設定，在以下的範例中，網站應用程式維護人員 user1 需要啟動、停止與重新啟動名稱為 "
+"<replaceable>webservice</replaceable> 的網站應用程式 。要授權此使用者執行這些工作的權限，可加入此行到 "
+"<filename>/usr/local/etc/sudoers</filename> 的最後："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:2038
@@ -5047,6 +5155,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2048
+#, fuzzy
 msgid ""
 "While this configuration allows a single user access to the webservice "
 "service; however, in most organizations, there is an entire web team in "
@@ -5054,6 +5163,8 @@ msgid ""
 "entire group. These steps will create a web group, add a user to this group, "
 "and allow all members of the group to manage the service:"
 msgstr ""
+"雖然這項設定可以讓一位使用者存取 <application>webservice</application> 服務，但在大部份組織中會有一整個網站小組負責"
+"管理該服務，因此也可以一行來授予整個群組存取權，以下步驟會建立一個網站群組、加入使用者到這個群組，然後讓該群組中的所有成員能夠管理服務："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/security/_index.adoc:2052
@@ -5144,6 +5255,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:2098
+#, fuzzy
 msgid ""
 "This directory will be created automatically after the logging is "
 "configured. It is best to let the system create directory with default "
@@ -5151,6 +5263,9 @@ msgid ""
 "administrators who use the sudoreplay command. To change this behavior, read "
 "and uncomment the logging options inside [.filename]#sudoers#."
 msgstr ""
+"這個目錄會在記錄功能設定之後自動建立，最好讓系統以預設的權限來建立目錄比較保險，除此之外，這個設定項目也會記錄使用 "
+"<application>sudoreplay</application> 指令的管理者，要更改設定請閱讀並取消在 <filename>sudoers</"
+"filename> 中記錄選項的註解。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2101
@@ -5197,12 +5312,15 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/security/_index.adoc:2125
+#, fuzzy
 msgid ""
 "While sessions are logged, any administrator is able to remove sessions and "
 "leave only a question of why they had done so. It is worthwhile to add a "
 "daily check through an intrusion detection system (IDS) or similar software "
 "so that other administrators are alerted to manual alterations."
 msgstr ""
+"雖然所有連線階段都會被記錄，但任何管理者都可以移除連線階段，使得沒人知道它們做了什麼事，所以非常值得在入侵偵測系統 "
+"(<acronym>IDS</acronym>) 或類似的軟體加入每日檢查，以便在有人為修改時通知其他管理人員。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/security/_index.adoc:2128
