@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-04-05 18:35+0000\n"
+"PO-Revision-Date: 2021-04-12 20:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookbsdinstall_index/zh_TW/>\n"
@@ -306,9 +306,9 @@ msgstr "一旦確定系統符合安裝 FreeBSD 的最低硬體需求，就可以
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:117
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "*Back Up Important Data*\n"
-msgstr ""
+msgstr "備份重要資料\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:119
@@ -320,17 +320,20 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:120
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "*Decide Where to Install FreeBSD*\n"
-msgstr ""
+msgstr "決定 FreeBSD 安裝在哪裡\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:122
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "\n"
 "If FreeBSD will be the only operating system installed, this step can be skipped. But if FreeBSD will share the disk with another operating system, decide which disk or partition will be used for FreeBSD.\n"
 msgstr ""
+"\n"
+"如果 FreeBSD 是唯一一套要安裝到電腦的作業系統，這個步驟可以略過。 但是假如 FreeBSD 要和其他作業系統共用磁碟空間的話，就要決定 "
+"FreeBSD 要安裝在哪個磁碟或是哪個分割區 (Partition)。\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:124
@@ -342,11 +345,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:126
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "\n"
 "The FreeBSD boot loader requires either a primary or GPT partition. If all of the primary or GPT partitions are already in use, one must be freed for FreeBSD. To create a partition without deleting existing data, use a partition resizing tool to shrink an existing partition and create a new partition using the freed space.\n"
 msgstr ""
+"\n"
+"FreeBSD 開機啟動程式需要主分割區或是 <acronym>GPT</acronym> 分割區。如果所有的主分割區或 <acronym>GPT</"
+"acronym> 分割區都已使用，必須釋放其中一個分割區讓 FreeBSD "
+"使用。如果要建立一個分割區而不刪除原有的資料，可以使用磁碟重設大小的工具來縮小現有的分割區，並使用釋放出來的空間建立新分割區。\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:128
@@ -379,25 +386,31 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:137
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "*Collect Network Information*\n"
-msgstr ""
+msgstr "收集網路資訊\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:139
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "\n"
 "Some FreeBSD installation methods require a network connection in order to download the installation files. After any installation, the installer will offer to setup the system's network interfaces.\n"
 msgstr ""
+"\n"
+"部份 FreeBSD 安裝方式需要網路連線來下載安裝檔，因此之後的安裝程序，安裝程式進入設定系統網路的介面。\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:141
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "\n"
 "If the network has a DHCP server, it can be used to provide automatic network configuration. If DHCP is not available, the following network information for the system must be obtained from the local network administrator or Internet service provider:\n"
 msgstr ""
+"\n"
+"如果網路中有 <acronym>DHCP</acronym> 伺服器，則可透過該伺服器自動設定網路，若無法使用 "
+"<acronym>DHCP</acronym>，則需要從區域網路管理者或是網際網路服務供應商 (Internet Service Provider, "
+"ISP) 取得以的網路資訊供系統使用：\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:144
@@ -431,9 +444,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:152
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "*Check for FreeBSD Errata*\n"
-msgstr ""
+msgstr "檢查 FreeBSD 勘誤表\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:154
@@ -464,12 +477,16 @@ msgstr "準備安裝的媒體"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:161
+#, fuzzy
 msgid ""
 "The FreeBSD installer is not an application that can be run from within "
 "another operating system. Instead, download a FreeBSD installation file, "
 "burn it to the media associated with its file type and size (CD, DVD, or "
 "USB), and boot the system to install from the inserted media."
 msgstr ""
+"FreeBSD 安裝程式並不是一個可以在其他作業系統上執行的應用程式，反而您需要下載 FreeBSD 安裝檔，燒錄安裝檔到符合其檔案類型與大小的媒體 "
+"(<acronym>CD</acronym>, <acronym>DVD</acronym> 或 "
+"<acronym>USB</acronym>)，然後開機從插入的媒體來安裝。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:163
@@ -559,11 +576,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:179
+#, fuzzy
 msgid ""
 "Compare the calculated checksum with the one shown in [.filename]#CHECKSUM."
 "SHA256#. The checksums must match exactly. If the checksums do not match, "
 "the image file is corrupt and must be downloaded again."
 msgstr ""
+"比對計算後的校驗碼與 <filename>CHECKSUM.SHA256</filename> "
+"檔案中的值，校驗碼應該要完全相符，若校驗碼不相符，則代表該映像檔是損壞的，必須再下載一次。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:181
@@ -658,9 +678,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:227
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "*Writing the Image with Image Writer*\n"
-msgstr ""
+msgstr "用 Image Writer 寫入映象檔\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:229
@@ -814,6 +834,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:283
+#, fuzzy
 msgid ""
 "By default, the menu will wait ten seconds for user input before booting "
 "into the FreeBSD installer or, if FreeBSD is already installed, before "
@@ -821,6 +842,9 @@ msgid ""
 "selections, press kbd:[Space]. To select an option, press its highlighted "
 "number, character, or key. The following options are available."
 msgstr ""
+"預設在開機進入 FreeBSD 安裝程式前選單會等候使用者輸入 10 秒鐘，若已經安裝 FreeBSD，則會在開機進入 FreeBSD "
+"前等候。要暫停開機計時器來仔細查看選項，請按 <keycap>Space</keycap> "
+"鍵。要選擇選項，按下明顯標示的數字、字元或按鍵。選單有以下選項可選。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:285
@@ -886,12 +910,15 @@ msgstr "開機選項選單分成兩個部份。第一個部份用來返回主開
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:298
+#, fuzzy
 msgid ""
 "The next section is used to toggle the available options to `On` or `Off` by "
 "pressing the option's highlighted number or character. The system will "
 "always boot using the settings for these options until they are modified. "
 "Several options can be toggled using this menu:"
 msgstr ""
+"第二個部份用來切換可用的選項為開 (<literal>On</literal>) 或關 (<literal>Off</literal>)，透過按下選項明顯"
+"標示的編號或字元。系統將會一直使用這些選項開機，直到選項被修改。有數個選項可以在這個選單做切換："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:300
@@ -1032,11 +1059,14 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:341
+#, fuzzy
 msgid ""
 "Pressing kbd:[Esc] will exit this menu and use the default keymap. If the "
 "choice of keymap is not clear, [.guimenuitem]#United States of America "
 "ISO-8859-1# is also a safe option."
 msgstr ""
+"按 <keycap>Esc</keycap> 會離開這個選單然後使用預設的鍵盤對應表，若不清楚要使用那種鍵盤對應表，"
+"<guimenuitem>United States of America ISO-8859-1</guimenuitem> 是也是保險的選項。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:344
@@ -1105,12 +1135,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:370
+#, fuzzy
 msgid ""
 "Deciding which components to install will depend largely on the intended use "
 "of the system and the amount of disk space available. The FreeBSD kernel and "
 "userland, collectively known as the _base system_, are always installed. "
 "Depending on the architecture, some of these components may not appear:"
 msgstr ""
+"決定要安裝的元件主要會根據系統的用途以及可用的磁碟空間容量。FreeBSD 核心 (Kernel) 及 Userland 統稱為 "
+"<firstterm>基礎系統 (Base system)</firstterm>，是必須安裝的部份。依據系統的架構，部份元件可能不會顯示："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:372
@@ -1280,6 +1313,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:419
+#, fuzzy
 msgid ""
 "The size of the [.filename]#/var# partition reflects the intended machine's "
 "usage. This partition is used to hold mailboxes, log files, and printer "
@@ -1288,6 +1322,9 @@ msgid ""
 "rarely need more than about a gigabyte of free disk space in [.filename]#/"
 "var#."
 msgstr ""
+"機器預期的用途會反映到 <filename>/var</filename> 分割區的大小，這個分割區用來保存郵件 (Mailbox)、日誌檔 (Log "
+"file) 及印表機緩衝 (Spool)。依使用者數及保存的期間，郵件及日誌檔可能成長到無法預期的大小，一般來說大部份的使用很少會在 "
+"<filename>/var</filename> 需要超過 1 GB 的可用磁碟空間。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:423
@@ -1301,11 +1338,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:426
+#, fuzzy
 msgid ""
 "The [.filename]#/usr# partition holds many of the files which support the "
 "system, including the FreeBSD Ports Collection and system source code. At "
 "least 2 gigabytes of space is recommended for this partition."
 msgstr ""
+"<filename>/usr</filename> 分割區保存了許多支持系統運作的檔案，包含 FreeBSD Port 套件集以及系統原始碼，"
+"這個分割區建議至少要有 2 GB 的空間。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:428
@@ -1316,15 +1356,20 @@ msgstr "在規劃分割區大小時，請牢記空間需求，當因某個分割
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:430
+#, fuzzy
 msgid ""
 "As a rule of thumb, the swap partition should be about double the size of "
 "physical memory (RAM). Systems with minimal RAM may perform better with more "
 "swap. Configuring too little swap can lead to inefficiencies in the VM page "
 "scanning code and might create issues later if more memory is added."
 msgstr ""
+"根據經驗，交換分割區應為是實體記憶體 (<acronym>RAM</acronym>) 的兩倍。使用最低需求的 <acronym>RAM</"
+"acronym> 來運作的系統會需要更多的交換空間來取得更好的表現。配置太小的交換交間可能導致 <acronym>VM</acronym> "
+"分頁掃描碼效率不佳，且往後增加更多記憶體時可能會產生問題。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:432
+#, fuzzy
 msgid ""
 "On larger systems with multiple SCSI disks or multiple IDE disks operating "
 "on different controllers, it is recommended that swap be configured on each "
@@ -1336,9 +1381,14 @@ msgid ""
 "much. It might be easier to recover from a runaway program before being "
 "forced to reboot."
 msgstr ""
+"在有數個 <acronym>SCSI</acronym> 磁碟或數個 <acronym>IDE</acronym> "
+"磁碟在不同控制器的大型系統建議在每個磁碟機上都設定交換空間，最多可至四個磁碟機。每個交換分割區的大小應接近相同。核心雖可以處以任意大小的交換空間，"
+"但內部資料結構擴充到 4 倍的最大交換分割區大小時，讓交換分割區擁有相同的大小可以讓核心可以最佳的方式串連各個磁碟的交換空間。規劃較大交換空間是可以的，即"
+"使沒有使用到多少交換空間，這也會讓要從失控的程式恢復運作更容易，而不需強制重新啟動系統。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:434
+#, fuzzy
 msgid ""
 "By properly partitioning a system, fragmentation introduced in the smaller "
 "write heavy partitions will not bleed over into the mostly read partitions. "
@@ -1348,6 +1398,9 @@ msgid ""
 "toward the edge of the disk will not lead to a significant performance "
 "improvement over moving [.filename]#/var# to the edge."
 msgstr ""
+"正確的做磁碟分割，可以區隔頻繁寫入所產生的資料碎片與經常讀取的分割區，將寫入頻繁的分割區放在磁碟的邊緣可以增加 <acronym>I/O</"
+"acronym> 效率。雖然較大的分割區可能也需要增加 <acronym>I/O</acronym> 效率，"
+"但將這些分割區往磁碟邊緣移動所增加的效率並不會比將 <filename>/var</filename> 移到磁碟邊緣所增加的效率來的顯著。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:436
@@ -1622,6 +1675,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:536
+#, fuzzy
 msgid ""
 "Proper sector alignment provides the best performance, and making partition "
 "sizes even multiples of 4K bytes helps to ensure alignment on drives with "
@@ -1631,6 +1685,10 @@ msgid ""
 "_freebsd-boot_ partition should be no larger than 512K due to current boot "
 "code limitations."
 msgstr ""
+"適當的對齊磁碟扇區 (Sector) 會提供最佳的效能，而且讓分割區大小為 4 KB 的偶數倍數可協助確保對齊在磁碟機上的 512-byte 或 4K-"
+"byte 扇區。一般來說，使用分割區大小為 1M 或 1G 的偶數倍數是最簡單的方式確保每個分割區以 4K "
+"的偶數倍數做為開始。唯一一個例外是：<emphasis>freebsd-boot</emphasis> 分割區因目前開機程式 (Boot code) "
+"的限制，不可大於 512K。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:539
@@ -2186,11 +2244,14 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:717
+#, fuzzy
 msgid ""
 "Once all requested distribution files have been extracted, bsdinstall "
 "displays the first post-installation configuration screen. The available "
 "post-configuration options are described in the next section."
 msgstr ""
+"所有選擇的發行版檔案取出後，<application>bsdinstall</application> "
+"會顯示第一次安裝後設定畫面，可用的安裝後設定選項會在下一節說明。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:719
@@ -2616,12 +2677,15 @@ msgstr "這裡是要輸入的資訊摘要："
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:835
+#, fuzzy
 msgid ""
 "`Username` - The name the user will enter to log in. A common convention is "
 "to use the first letter of the first name combined with the last name, as "
 "long as each username is unique for the system. The username is case "
 "sensitive and should not contain any spaces."
 msgstr ""
+"使用者名稱 (<literal>Username</literal>) - "
+"登入時使用者要輸入的名稱，常見的慣例是用姓的前一個字母與名結合，只要每個使用者名稱在系統唯一的皆可。使用者名稱區分大小寫且不應含有任何空白字元。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:836
@@ -2886,6 +2950,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:899
+#, fuzzy
 msgid ""
 "The messages that appeared during boot can be reviewed by pressing kbd:"
 "[Scroll-Lock] to turn on the scroll-back buffer. The kbd:[PgUp], kbd:[PgDn], "
@@ -2895,6 +2960,10 @@ msgid ""
 "time, type `less /var/run/dmesg.boot` from a command prompt. Press kbd:[q] "
 "to return to the command line after viewing."
 msgstr ""
+"要查看開機過程顯示的訊息可按 <keycap>Scroll-Lock</keycap> 鍵來開啟卷軸暫存，然後可使用 <keycap>PgUp</"
+"keycap>, <keycap>PgDn</keycap> 以及方向鍵來捲動訊息。查看完成之後再按 <keycap>Scroll-Lock</"
+"keycap> 鍵一次來解除畫面鎖定並返回 Console。系統開機一段時間之後要查看這些訊息可在指令提示後輸入 <command>less /var/"
+"run/dmesg.boot</command>，查看後按下 <keycap>q</keycap> 鍵便可返回指令列。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:901
@@ -3049,6 +3118,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:972
+#, fuzzy
 msgid ""
 "Next, enter the encryption information for connecting to the selected "
 "wireless network. WPA2 encryption is strongly recommended as older "
@@ -3056,6 +3126,9 @@ msgid ""
 "input the password, also known as the Pre-Shared Key (PSK). For security "
 "reasons, the characters typed into the input box are displayed as asterisks."
 msgstr ""
+"然後，輸入加密資訊來連線到選擇的無線網路。強列建議使用 <acronym>WPA2</acronym> 加密，因較舊的加密類型，如 "
+"<acronym>WEP</acronym> 僅提供微弱的安全性。若網路使用 <acronym>WPA2</acronym> 則需輸入密碼，也稱作 "
+"Pre-Shared Key (<acronym>PSK</acronym>)。考量安全性，輸入到輸入框的字元會以星號顯示。"
 
 #. type: Block title
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:974
@@ -3090,12 +3163,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:984
+#, fuzzy
 msgid ""
 "There are two methods of IPv4 configuration. DHCP will automatically "
 "configure the network interface correctly and should be used if the network "
 "provides a DHCP server. Otherwise, the addressing information needs to be "
 "input manually as a static configuration."
 msgstr ""
+"有兩種方式可以設定 <acronym>IPv4</acronym>。 <acronym>DHCP</acronym> 會自動設定網路介面卡且該網路上需有 "
+"<acronym>DHCP</acronym> 伺服器才可使用。否則，必須手動輸入位址的資訊來做靜態設定。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:988
@@ -3321,6 +3397,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:1051
+#, fuzzy
 msgid ""
 "Some installation problems can be avoided or alleviated by updating the "
 "firmware on various hardware components, most notably the motherboard. "
@@ -3328,6 +3405,8 @@ msgid ""
 "and computer manufacturers have a website for upgrades and upgrade "
 "information."
 msgstr ""
+"部份安裝問題可以透過更各種硬體元件的韌體來避免或緩解，特別是主機板。主機板的韌體通常稱為 "
+"<acronym>BIOS</acronym>，大部份主機板與電腦製造商會有網站可以取得升級程式與升級資訊。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/bsdinstall/_index.adoc:1053
