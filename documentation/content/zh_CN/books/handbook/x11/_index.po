@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-05 12:39+0000\n"
+"PO-Revision-Date: 2021-04-12 20:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookx11_index/zh_CN/>\n"
@@ -44,6 +44,7 @@ msgstr "简介"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:48
+#, fuzzy
 msgid ""
 "An installation of FreeBSD using bsdinstall does not automatically install a "
 "graphical user interface. This chapter describes how to install and "
@@ -51,6 +52,9 @@ msgid ""
 "provide a graphical environment. It then describes how to find and install a "
 "desktop environment or window manager."
 msgstr ""
+"使用<application>bsdinstall</application>安装FreeBSD并不会自动安装图型化使用者界面。本章将说明如何安装并设定<"
+"application>Xorg</application>，该应用程序提供开放源码的X "
+"Window系统来提供图型化环境。接着会说明如何找到并安装桌面环境或视窗管理程序。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:52
@@ -133,6 +137,7 @@ msgstr "X服务器（X Server）"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:75
+#, fuzzy
 msgid ""
 "X was designed from the beginning to be network-centric, and adopts a "
 "\"client-server\" model. In this model, the \"X server\" runs on the "
@@ -144,6 +149,10 @@ msgid ""
 "\"X server\" to be the big powerful machine down the hall, and the \"X "
 "client\" to be the machine on their desk."
 msgstr ""
+"X最初设计是以网络为中心，采用<quote>client-server</quote>构架。在此构架下<quote>X服务器</quote>在有键盘、屏幕"
+"、鼠标的电脑上运作。该服务器负责的工作包含管理显示、处理来自键盘、鼠标的输入及来自其他设备（如平板或或图像投影机）的输入或输出。这点可能会让人感到困惑，因"
+"为X使用的术语与一般的认知刚好相反。一般认知会以为<quote>X服务器</quote>是要在最强悍的主机上执行，而<quote>X客户端</quote>"
+"才是在桌机上面执行，实际上却是相反。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/x11/_index.adoc:76
@@ -180,6 +189,7 @@ msgstr "视窗管理程序（Window Manager）"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:83
+#, fuzzy
 msgid ""
 "X does not dictate what windows should look like on-screen, how to move them "
 "around with the mouse, which keystrokes should be used to move between "
@@ -193,6 +203,10 @@ msgid ""
 "desktop's look-and-feel. Window managers are available in the "
 "[.filename]#x11-wm# category of the Ports Collection."
 msgstr ""
+"X并不规定屏幕上的视窗该长什么样、要如何移动鼠标指标、要用什么键来在视窗切换、每个视窗的标题列长相，及是否该有关闭按钮，等等。事实上，X把这部分交给所谓的"
+"视窗管理程序来管理。可用的<link xlink:href=\"http://www.xwinman.org/\">视窗管理程序有很多种</link>，每"
+"一种视窗管理程序都提供不同的使用界面风格：有些支持虚拟桌面，有些允许自定义组合键来管理桌面，有些有<quote>开始</quote>钮，有些则是可更换布景"
+"主题，可自行安装新的布景主题以更换外观。视窗管理程序可在Port套件集的<filename>x11-wm</filename>分类找到。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:85
@@ -233,6 +247,7 @@ msgstr "视窗管理程序负责鼠标指标的聚焦政策。聚焦政策指的
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:93
+#, fuzzy
 msgid ""
 "One focus policy is called \"click-to-focus\". In this model, a window "
 "becomes active upon receiving a mouse click. In the \"focus-follows-mouse\" "
@@ -247,6 +262,12 @@ msgid ""
 "keystrokes will now be directed to this window, even if the cursor is moved "
 "to another window."
 msgstr ""
+"通常较为人熟悉的聚焦政策叫做<quote>click-to-"
+"focus</quote>，这个模式中，鼠标点选到的视窗便会处于作用中（Active）的状态。在<quote>focus-follows-"
+"mouse</quote>模式鼠标指标所在的视窗便是作用中的视窗，只要把鼠标移到其他视窗就可以改变作用中的视窗，若鼠标移到根视窗（Root "
+"Window），则会聚焦在根视窗。在<quote>sloppy-focus</quote>模式，既使鼠标移到根视窗，仍然会聚焦在最后聚焦的视窗上，此模式只"
+"有当鼠标进入新的视窗时才会聚焦于该视窗，而非离开目前视窗时。<quote>click-to-"
+"focus</quote>模式用鼠标点击来决定作用中的视窗，且该视窗会被置顶到所有其他视窗之前，即使鼠标移到其他视窗，所有的键盘输入仍会由该视窗所接收。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:95
@@ -266,6 +287,7 @@ msgstr "视窗元件（Widget）"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:98
+#, fuzzy
 msgid ""
 "Widget is a term for all of the items in the user interface that can be "
 "clicked or manipulated in some way. This includes buttons, check boxes, "
@@ -275,6 +297,9 @@ msgid ""
 "applications will have a different look and feel, depending upon which "
 "widget toolkit was used to create the application."
 msgstr ""
+"视窗元件指的是在所有在使用者界面上可被点选或操作的项目，这包括按钮、核选方块、单选按钮、图标及清单。视窗元件工具包（Widget toolkit）是指用来"
+"建立图型化应用程序的一系列的视窗元件。目前有数个有名的视窗元件工具包，包含<application>KDE</application>所使用的Qt、<ap"
+"plication>GNOME</application>所使用的GTK+。因此应用程序会依其开发时所选用的视窗元件工具包而有不同的外观。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/x11/_index.adoc:100
@@ -322,12 +347,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:122
+#, fuzzy
 msgid ""
 "A smaller version of the X system suitable for experienced users is "
 "available in package:x11/xorg-minimal[]. Most of the documents, libraries, "
 "and applications will not be installed. Some applications require these "
 "additional components to function."
 msgstr ""
+"较精简版本的X系统适合给有经验的使用者使用，可至<package>x11/xorg-"
+"minimal</package>取得。这个版本就不会安装大多数的文件、函数库以及应用程序，而部份应用程序会需要这些额外的元件才能运作。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/x11/_index.adoc:124
@@ -451,9 +479,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:182
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "kern.vty=vt\n"
-msgstr ""
+msgstr "kern.vty=vt\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/x11/_index.adoc:185
@@ -476,20 +504,25 @@ msgstr "目录"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:193
+#, fuzzy
 msgid ""
 "Xorg looks in several directories for configuration "
 "files. [.filename]#/usr/local/etc/X11/# is the recommended directory for "
 "these files on FreeBSD. Using this directory helps keep application files "
 "separate from operating system files."
 msgstr ""
+"<application>Xorg</application>会查看数个目录来寻找配置文件，在FreeBSD较建议使用<filename>/usr/"
+"local/etc/X11/</filename>来存放这些配置文件，使用这个目录可以帮助将应用程序文件与操作系统文件分离。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:195
+#, fuzzy
 msgid ""
 "Storing configuration files in the legacy [.filename]#/etc/X11/# still "
 "works. However, this mixes application files with the base FreeBSD files and "
 "is not recommended."
 msgstr ""
+"储存配置文件在传统的<filename>/etc/X11/</filename>仍可运作，但并不建议将应用程序文件与基础FreeBSD文件混合在一起存放。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/x11/_index.adoc:197
@@ -499,6 +532,7 @@ msgstr "单档或多档"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:200
+#, fuzzy
 msgid ""
 "It is easier to use multiple files that each configure a specific setting "
 "than the traditional single [.filename]#xorg.conf#. These files are stored "
@@ -506,6 +540,9 @@ msgid ""
 "directory. The full path is typically "
 "[.filename]#/usr/local/etc/X11/xorg.conf.d/#."
 msgstr ""
+"使用多档，每一个文件只设定一个指定项目会较传统使用单一<filename>xorg."
+"conf</filename>设定来的简单。这些文件会存放在主配置文件目录下的<filename>xorg.conf.d/"
+"</filename>子目录，完整路径通常为<filename>/usr/local/etc/X11/xorg.conf.d/</filename>。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:202
@@ -514,11 +551,14 @@ msgstr "于本节稍后会有这些文件的示例。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:204
+#, fuzzy
 msgid ""
 "The traditional single [.filename]#xorg.conf# still works, but is neither as "
 "clear nor as flexible as multiple files in the [.filename]#xorg.conf.d/# "
 "subdirectory."
 msgstr ""
+"传统单一<filename>xorg.conf</filename>的方式仍可运作，但比起在<filename>xorg.conf.d/"
+"</filename>子目录中的多档设定方式较不明了且没有弹性。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/x11/_index.adoc:206
@@ -528,12 +568,15 @@ msgstr "显卡"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:209
+#, fuzzy
 msgid ""
 "Because of changes made in recent versions of FreeBSD, it is now possible to "
 "use graphics drivers provided by the Ports framework or as packages. As "
 "such, users can use one of the following drivers available from "
 "package:graphics/drm-kmod[]."
 msgstr ""
+"随着 FreeBSD 的发展，最近几个版本的 FreeBSD 可以使用 Ports 和 pkg 安装图形驱动，用户可以从 <package>"
+"graphics/drm-kmod</package> 中选择要安装的驱动。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/x11/_index.adoc:211
@@ -645,10 +688,11 @@ msgstr "NVIDIA"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:245
+#, fuzzy
 msgid ""
 "Several NVIDIA drivers are available in the [.filename]#x11# category of the "
 "Ports Collection. Install the driver that matches the video card."
-msgstr ""
+msgstr "有数个NVIDIA驱动程序可于Port套件集中的<filename>x11</filename>分类取得，请安装其中与显卡相符的驱动程序。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:247
@@ -706,10 +750,11 @@ msgstr "其他显卡"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:260
+#, fuzzy
 msgid ""
 "Drivers for some less-common video cards can be found in the "
 "[.filename]#x11-drivers# directory of the Ports Collection."
-msgstr ""
+msgstr "较不常见的显卡驱动程序可在Port套件集的<filename>x11-drivers</filename>目录找到。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:262
@@ -752,7 +797,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:282
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Section \"Device\"\n"
 "\tIdentifier \"Card0\"\n"
@@ -760,6 +805,11 @@ msgid ""
 "\t# BusID    \"PCI:1:0:0\"\n"
 "EndSection\n"
 msgstr ""
+"Section \"Device\"\n"
+"\tIdentifier \"Card0\"\n"
+"\tDriver     \"intel\"\n"
+"\t# BusID    \"PCI:1:0:0\"\n"
+"EndSection\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:285
@@ -787,13 +837,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:301
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Section \"Device\"\n"
 "\tIdentifier \"Card0\"\n"
 "\tDriver     \"radeon\"\n"
 "EndSection\n"
 msgstr ""
+"Section \"Device\"\n"
+"\tIdentifier \"Card0\"\n"
+"\tDriver     \"radeon\"\n"
+"EndSection\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:306
@@ -813,13 +867,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:319
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Section \"Device\"\n"
 "\tIdentifier \"Card0\"\n"
 "\tDriver     \"vesa\"\n"
 "EndSection\n"
 msgstr ""
+"Section \"Device\"\n"
+"\tIdentifier \"Card0\"\n"
+"\tDriver     \"vesa\"\n"
+"EndSection\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:324
@@ -839,13 +897,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:337
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Section \"Device\"\n"
 "\tIdentifier \"Card0\"\n"
 "\tDriver     \"scfb\"\n"
 "EndSection\n"
 msgstr ""
+"Section \"Device\"\n"
+"\tIdentifier \"Card0\"\n"
+"\tDriver     \"scfb\"\n"
+"EndSection\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/x11/_index.adoc:341
@@ -1028,7 +1090,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:436
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Section \"Screen\"\n"
 "\tIdentifier \"Screen0\"\n"
@@ -1038,6 +1100,13 @@ msgid ""
 "\tEndSubSection\n"
 "EndSection\n"
 msgstr ""
+"Section \"Screen\"\n"
+"\tIdentifier \"Screen0\"\n"
+"\tDevice     \"Card0\"\n"
+"\tSubSection \"Display\"\n"
+"\tModes      \"1024x768\"\n"
+"\tEndSubSection\n"
+"EndSection\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:441
@@ -1060,7 +1129,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:454
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Section \"Monitor\"\n"
 "\tIdentifier   \"Monitor0\"\n"
@@ -1068,6 +1137,11 @@ msgid ""
 "\tVertRefresh  50-76   # Hz\n"
 "EndSection\n"
 msgstr ""
+"Section \"Monitor\"\n"
+"\tIdentifier   \"Monitor0\"\n"
+"\tHorizSync    30-83   # kHz\n"
+"\tVertRefresh  50-76   # Hz\n"
+"EndSection\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/x11/_index.adoc:459
@@ -1121,7 +1195,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:484
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Section\t\"InputClass\"\n"
 "\tIdentifier\t\"KeyboardDefaults\"\n"
@@ -1129,6 +1203,11 @@ msgid ""
 "\tOption\t\t\"XkbLayout\" \"fr\"\n"
 "EndSection\n"
 msgstr ""
+"Section\t\"InputClass\"\n"
+"\tIdentifier\t\"KeyboardDefaults\"\n"
+"\tMatchIsKeyboard\t\"on\"\n"
+"\tOption\t\t\"XkbLayout\" \"fr\"\n"
+"EndSection\n"
 
 #. type: Block title
 #: documentation/content/en/books/handbook/x11/_index.adoc:488
@@ -1152,7 +1231,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:502
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Section\t\"InputClass\"\n"
 "\tIdentifier\t\"All Keyboards\"\n"
@@ -1160,6 +1239,11 @@ msgid ""
 "\tOption\t\t\"XkbLayout\" \"us, es, ua\"\n"
 "EndSection\n"
 msgstr ""
+"Section\t\"InputClass\"\n"
+"\tIdentifier\t\"All Keyboards\"\n"
+"\tMatchIsKeyboard\t\"yes\"\n"
+"\tOption\t\t\"XkbLayout\" \"us, es, ua\"\n"
+"EndSection\n"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/x11/_index.adoc:507
@@ -1169,12 +1253,15 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:509
+#, fuzzy
 msgid ""
 "X can be closed with a combination of keys. By default, that key combination "
 "is not set because it conflicts with keyboard commands for some "
 "applications. Enabling this option requires changes to the keyboard "
 "`InputDevice` section:"
 msgstr ""
+"X可以使用组合键来关闭，预设并未设定组合键，因为该组合键与部份应用程序的键盘指令冲突。要开启这个选项需要更改键盘<literal>InputDevice<"
+"/literal>节："
 
 #. type: Block title
 #: documentation/content/en/books/handbook/x11/_index.adoc:510
@@ -1189,7 +1276,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:522
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Section\t\"InputClass\"\n"
 "\tIdentifier\t\"KeyboardDefaults\"\n"
@@ -1197,6 +1284,11 @@ msgid ""
 "\tOption\t\t\"XkbOptions\" \"terminate:ctrl_alt_bksp\"\n"
 "EndSection\n"
 msgstr ""
+"Section\t\"InputClass\"\n"
+"\tIdentifier\t\"KeyboardDefaults\"\n"
+"\tMatchIsKeyboard\t\"on\"\n"
+"\tOption\t\t\"XkbOptions\" \"terminate:ctrl_alt_bksp\"\n"
+"EndSection\n"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/x11/_index.adoc:527
@@ -1245,13 +1337,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:550
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Section \"InputDevice\"\n"
 "\tIdentifier  \"Mouse0\"\n"
 "\tOption      \"Buttons\" \"7\"\n"
 "EndSection\n"
 msgstr ""
+"Section \"InputDevice\"\n"
+"\tIdentifier  \"Mouse0\"\n"
+"\tOption      \"Buttons\" \"7\"\n"
+"EndSection\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/x11/_index.adoc:555
@@ -1295,11 +1391,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:575
+#, fuzzy
 msgid ""
 "The configuration file is saved to [.filename]#/root/xorg.conf.new#. Make "
 "any changes desired, then test that file (using `-retro` so there is a "
 "visible background) with:"
 msgstr ""
+"配置文件会储存至<filename>/root/xorg.conf."
+"new</filename>，做任何更改后，然后使用以下指令测试该配置文件（使用<option>-retro</option>标签，这样可以在后台看到）："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:579
@@ -1309,11 +1408,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:582
+#, fuzzy
 msgid ""
 "After the new configuration has been adjusted and tested, it can be split "
 "into smaller files in the normal location, "
 "[.filename]#/usr/local/etc/X11/xorg.conf.d/#."
 msgstr ""
+"在新配置文件调整与测试过后，便可分开成较小的文件放置到正常的位置<filename>/usr/local/etc/X11/xorg.conf.d/"
+"</filename>。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/x11/_index.adoc:584
@@ -1375,11 +1477,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:607
+#, fuzzy
 msgid ""
 "And likewise with the freefont or other collections. To have the X server "
 "detect these fonts, add an appropriate line to the X server configuration "
 "file ([.filename]#/etc/X11/xorg.conf#), which reads:"
 msgstr ""
+"同样的安装方式也适用Freefont或其他字体集。要让X服务器侦测到这些新安装的字体，可加入适当的设定到X服务器配置文件（<filename>/etc/"
+"X11/xorg.conf</filename>），内容为："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:611
@@ -1429,9 +1534,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:631
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Load  \"freetype\"\n"
-msgstr ""
+msgstr "Load  \"freetype\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:634
@@ -1567,12 +1672,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:691
+#, fuzzy
 msgid ""
 "Anti-aliasing makes borders slightly fuzzy, which makes very small text more "
 "readable and removes \"staircases\" from large text, but can cause eyestrain "
 "if applied to normal text. To exclude font sizes smaller than 14 point from "
 "anti-aliasing, include these lines:"
 msgstr ""
+"反锯齿效果会让文字的边缘变模糊，这会让非常小的文字更能阅读且去除大型文字的<quote>锯齿</quote>，但套用在一般的文字可能会造成眼睛的疲劳。要排"
+"除小于14点的字体大小使用反锯齿效果，可加入这些行："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:710
@@ -1650,12 +1758,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:749
+#, fuzzy
 msgid ""
 "Certain fonts, such as Helvetica, may have a problem when "
 "anti-aliased. Usually this manifests itself as a font that seems cut in half "
 "vertically. At worst, it may cause applications to crash. To avoid this, "
 "consider adding the following to [.filename]#local.conf#:"
 msgstr ""
+"部份字体，如Helvetica，在使用反锯齿时可能会发生问题，通常会呈现像垂直切成两半的字体，最差还可能会导致应用程序当掉。要避免这个问题，可考虑加入以下"
+"设定到<filename>local.conf</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:760
@@ -1688,12 +1799,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:767
+#, fuzzy
 msgid ""
 "One last point: with an LCD screen, sub-pixel sampling may be desired. This "
 "basically treats the (horizontally separated) red, green and blue components "
 "separately to improve the horizontal resolution; the results can be "
 "dramatic. To enable this, add the line somewhere in [.filename]#local.conf#:"
 msgstr ""
+"最后一点：若有使用LCD屏幕，可能会想要使用子像素取样（Sub-pixel sampling），这基本上会分开处理（水平分隔）红、绿、蓝色彩组成来提高垂直"
+"分辨率，结果可能是无法预料的。要开启这个功能，加入下行到<filename>local.conf</filename>的任一处："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:778
@@ -1757,9 +1871,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:799
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ttyv8   \"/usr/local/bin/xdm -nodaemon\"  xterm   off secure\n"
-msgstr ""
+msgstr "ttyv8   \"/usr/local/bin/xdm -nodaemon\"  xterm   off secure\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:802
@@ -1859,12 +1973,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:848
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "! SECURITY: do not listen for XDMCP or Chooser requests\n"
 "! Comment out this line if you want to manage X terminals with xdm\n"
 "DisplayManager.requestPort:     0\n"
 msgstr ""
+"! SECURITY: do not listen for XDMCP or Chooser requests\n"
+"! Comment out this line if you want to manage X terminals with xdm\n"
+"DisplayManager.requestPort:     0\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:851
@@ -1882,6 +1999,7 @@ msgstr "桌面环境"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:856
+#, fuzzy
 msgid ""
 "This section describes how to install three popular desktop environments on "
 "a FreeBSD system. A desktop environment can range from a simple window "
@@ -1889,6 +2007,8 @@ msgid ""
 "environments are available in the [.filename]#x11-wm# category of the Ports "
 "Collection."
 msgstr ""
+"本节将介绍如何在FreeBSD系统安装三种热门的桌面环境。一套桌面环境的范围可从简单的视窗管理程序到完整的桌面应用程序集。有上百套的桌面环境可在Port套"
+"件集的<filename>x11-wm</filename>分类取得。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/x11/_index.adoc:858
@@ -1898,6 +2018,7 @@ msgstr "GNOME"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:861
+#, fuzzy
 msgid ""
 "GNOME is a user-friendly desktop environment. It includes a panel for "
 "starting applications and displaying status, a desktop, a set of tools and "
@@ -1908,6 +2029,11 @@ msgid ""
 "contains additional documentation about installing, configuring, and "
 "managing GNOME on FreeBSD."
 msgstr ""
+"<application>GNOME</application>是一个拥有友善使用者界面的的桌面环境，它包括用于启动应用程序和显示状态的面板、一系列工具与"
+"应用程序及一套可让应用程序更容易进行合作、相互一致的协定。更多有关FreeBSD <application>GNOME</"
+"application>的信息可在<link xlink:href=\"https://www.FreeBSD.org/gnome\""
+">https://www.FreeBSD.org/"
+"gnome</link>取得，该网站包含了有关在FreeBSD安装、设定和管理<application>GNOME</application>的额外文件。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:863
@@ -1947,9 +2073,9 @@ msgstr ""
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:882
 #: documentation/content/en/books/handbook/x11/_index.adoc:946
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "proc           /proc       procfs  rw  0   0\n"
-msgstr ""
+msgstr "proc           /proc       procfs  rw  0   0\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:885
@@ -1964,9 +2090,9 @@ msgstr ""
 #: documentation/content/en/books/handbook/x11/_index.adoc:889
 #: documentation/content/en/books/handbook/x11/_index.adoc:953
 #: documentation/content/en/books/handbook/x11/_index.adoc:1010
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "dbus_enable=\"YES\"\n"
-msgstr ""
+msgstr "dbus_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:892
@@ -1979,9 +2105,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:896
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "gdm_enable=\"YES\"\n"
-msgstr ""
+msgstr "gdm_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:899
@@ -1992,9 +2118,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:903
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "gnome_enable=\"YES\"\n"
-msgstr ""
+msgstr "gnome_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:906
@@ -2038,6 +2164,7 @@ msgstr "KDE"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:925
+#, fuzzy
 msgid ""
 "KDE is another easy-to-use desktop environment. This desktop provides a "
 "suite of applications with a consistent look and feel, a standardized menu "
@@ -2047,6 +2174,11 @@ msgid ""
 "FreeBSD-specific information, consult "
 "http://freebsd.kde.org/[http://freebsd.kde.org]."
 msgstr ""
+"<application>KDE</application>是另一套易于使用的桌面环境。这个桌面环境提供了一致外观的应用程序、标准化的菜单和工具栏、组合键"
+"、配色方案、国际化与集中、对话框导向的桌面设定。更多有关<application>KDE</application>可在<link xlink:href="
+"\"http://www.kde.org/\">http://www.kde.org/</link>取得。要取得FreeBSD特定的信息，"
+"则可参考<link xlink:href=\"http://freebsd.kde.org/\">http://freebsd.kde."
+"org</link>。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:927
@@ -2061,12 +2193,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:934
+#, fuzzy
 msgid ""
 "To instead build the KDE port, use the following command. Installing the "
 "port will provide a menu for selecting which components to install. KDE is a "
 "large application and will take some time to compile, even on a fast "
 "computer."
 msgstr ""
+"或者要使用<application>KDE</application> Port编译，可使用以下指令，采用Port方式安装会有菜单可以选择要安装的元件。<"
+"application>KDE</application>是一个大型的应用程序，即使在较快的电脑上仍需要花费一段时间来编译。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:939
@@ -2112,9 +2247,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:967
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "sddm_enable=\"YES\"\n"
-msgstr ""
+msgstr "sddm_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:970
@@ -2126,9 +2261,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:974
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "exec ck-launch-session startplasma-x11\n"
-msgstr ""
+msgstr "exec ck-launch-session startplasma-x11\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:977
@@ -2145,10 +2280,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:984
+#, fuzzy
 msgid ""
 "Once KDE Plasma is started, refer to its built-in help system for more "
 "information on how to use its various menus and applications."
 msgstr ""
+"启动<application>KDE Plasma</application>之后，请参考内置的说明系统来取得更多有关如何使用各种菜单及应用程序的信息。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/x11/_index.adoc:986
@@ -2158,6 +2295,7 @@ msgstr "Xfce"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:989
+#, fuzzy
 msgid ""
 "Xfce is a desktop environment based on the GTK+ toolkit used by "
 "GNOME. However, it is more lightweight and provides a simple, efficient, "
@@ -2167,6 +2305,11 @@ msgid ""
 "ideal for older or slower machines with memory limitations. More information "
 "on Xfce can be found at http://www.xfce.org/[http://www.xfce.org]."
 msgstr ""
+"<application>Xfce</application>是以<application>GNOME</application>使用的GTK +工具包做"
+"为基础所开发的桌面环境，但是它更轻巧且提供了一种简单、高效、易于使用的桌面。它可完全自定义设定、附有选单、Applet及应用程序激活器的主面板、提供文件管"
+"理程序和音效管理程序并且可设定主题。由于它是快速、轻巧、高效的桌面环境，因此它非常适合有內存限制的较旧或较慢机器。更多有关<application> "
+"Xfce</application>的信息可至<link xlink:href=\"http://www.xfce.org/\">http://www."
+"xfce.org</link>取得。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:991
@@ -2255,12 +2398,15 @@ msgstr "设定FreeBSD nVidia驱动程序"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1037
+#, fuzzy
 msgid ""
 "Desktop effects can cause quite a load on the graphics card. For an "
 "nVidia-based graphics card, the proprietary driver is required for good "
 "performance. Users of other graphics cards can skip this section and "
 "continue with the [.filename]#xorg.conf# configuration."
 msgstr ""
+"桌面特效需要使用相当程度的显卡，对于以nVidia为基础的显卡，需要使用专用的驱动程序来取得较佳的性能。其他显卡的使用可以跳过这一节，并继续<filena"
+"me>xorg.conf</filename>设定。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1039
@@ -2289,16 +2435,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1050
+#, fuzzy
 msgid ""
 "The driver will create a kernel module, which needs to be loaded at system "
 "startup. Add the following line to [.filename]#/boot/loader.conf#:"
-msgstr ""
+msgstr "驱动程序会建立一个需要在系统启动时加载的核心模块，加入下行到<filename>/boot/loader.conf</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1054
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "nvidia_load=\"YES\"\n"
-msgstr ""
+msgstr "nvidia_load=\"YES\"\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1059
@@ -2311,10 +2458,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1062
+#, fuzzy
 msgid ""
 "With the kernel module loaded, you normally only need to change a single "
 "line in [.filename]#xorg.conf# to enable the proprietary driver:"
-msgstr ""
+msgstr "核心模块加载之后，您只需要更改<filename>xorg.conf</filename>的其中一行来开启专用的驱动程序："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1064
@@ -2323,9 +2471,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1068
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Driver      \"nv\"\n"
-msgstr ""
+msgstr "Driver      \"nv\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1071
@@ -2334,9 +2482,9 @@ msgstr "然后更改该行为："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1075
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Driver      \"nvidia\"\n"
-msgstr ""
+msgstr "Driver      \"nvidia\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1078
@@ -2365,12 +2513,15 @@ msgstr "加入以下Section来开启合成特效："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1091
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Section \"Extensions\"\n"
 "    Option         \"Composite\" \"Enable\"\n"
 "EndSection\n"
 msgstr ""
+"Section \"Extensions\"\n"
+"    Option         \"Composite\" \"Enable\"\n"
+"EndSection\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1094
@@ -2379,7 +2530,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1102
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Section \"Screen\"\n"
 "    Identifier     \"Screen0\"\n"
@@ -2387,6 +2538,11 @@ msgid ""
 "    Monitor        \"Monitor0\"\n"
 "    ...\n"
 msgstr ""
+"Section \"Screen\"\n"
+"    Identifier     \"Screen0\"\n"
+"    Device         \"Card0\"\n"
+"    Monitor        \"Monitor0\"\n"
+"    ...\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1105
@@ -2395,30 +2551,39 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1110
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "DefaultDepth    24\n"
 "Option         \"AddARGBGLXVisuals\" \"True\"\n"
 msgstr ""
+"DefaultDepth    24\n"
+"Option         \"AddARGBGLXVisuals\" \"True\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1113
+#, fuzzy
 msgid ""
 "Locate the \"Subsection\" that refers to the screen resolution that you wish "
 "to use. For example, if you wish to use 1280x1024, locate the section that "
 "follows. If the desired resolution does not appear in any subsection, you "
 "may add the relevant entry by hand:"
 msgstr ""
+"找到您欲使用的屏幕分辨率所在的<quote>Subsection</quote>，例如，您想要使用1280x1024，则找到如下所示的Section。若想"
+"要使用的分辨率不在任何Subsection之中，您可以手动加入对应的项目："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1120
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "SubSection     \"Display\"\n"
 "    Viewport    0 0\n"
 "    Modes      \"1280x1024\"\n"
 "EndSubSection\n"
 msgstr ""
+"SubSection     \"Display\"\n"
+"    Viewport    0 0\n"
+"    Modes      \"1280x1024\"\n"
+"EndSubSection\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1123
@@ -2429,7 +2594,7 @@ msgstr "桌面合成需要24 bit的色彩深度，更改上述Subsection为："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1131
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "SubSection     \"Display\"\n"
 "    Viewport    0 0\n"
@@ -2437,6 +2602,11 @@ msgid ""
 "    Modes      \"1280x1024\"\n"
 "EndSubSection\n"
 msgstr ""
+"SubSection     \"Display\"\n"
+"    Viewport    0 0\n"
+"    Depth       24\n"
+"    Modes      \"1280x1024\"\n"
+"EndSubSection\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1134
@@ -2447,13 +2617,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1141
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Section \"Module\"\n"
 "    Load           \"extmod\"\n"
 "    Load           \"glx\"\n"
 "    ...\n"
 msgstr ""
+"Section \"Module\"\n"
+"    Load           \"extmod\"\n"
+"    Load           \"glx\"\n"
+"    ...\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1144
@@ -2530,10 +2704,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1182
+#, fuzzy
 msgid ""
 "Save this in your home directory as, for example, [.filename]#start-compiz# "
 "and make it executable:"
-msgstr ""
+msgstr "储存这个Script到您的家目录所在位置，例如<filename>start-compiz</filename>，然后让该文件可以执行："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1186
@@ -2594,9 +2769,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1212
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Option \"AutoAddDevices\" \"false\"\n"
-msgstr ""
+msgstr "Option \"AutoAddDevices\" \"false\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1215
@@ -2669,10 +2844,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1247
+#, fuzzy
 msgid ""
 "[.filename]#/usr/local/shared/X11/xkb/rules/base.lst# lists the various "
 "keyboard, layouts and options available."
 msgstr ""
+"<filename>/usr/local/share/X11/xkb/rules/base."
+"lst</filename>中列出了各种可用的键盘、配置与设定。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1250
@@ -2686,7 +2864,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1260
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Section \"Monitor\"\n"
 "\tIdentifier   \"Monitor0\"\n"
@@ -2696,6 +2874,13 @@ msgid ""
 "\tVertRefresh  48-120\n"
 "EndSection\n"
 msgstr ""
+"Section \"Monitor\"\n"
+"\tIdentifier   \"Monitor0\"\n"
+"\tVendorName   \"Monitor Vendor\"\n"
+"\tModelName    \"Monitor Model\"\n"
+"\tHorizSync    30-107\n"
+"\tVertRefresh  48-120\n"
+"EndSection\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1263
@@ -2717,9 +2902,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1269
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Option       \"DPMS\"\n"
-msgstr ""
+msgstr "Option       \"DPMS\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1272
@@ -2731,7 +2916,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1286
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Section \"Screen\"\n"
 "\tIdentifier \"Screen0\"\n"
@@ -2745,6 +2930,17 @@ msgid ""
 "\tEndSubSection\n"
 "EndSection\n"
 msgstr ""
+"Section \"Screen\"\n"
+"\tIdentifier \"Screen0\"\n"
+"\tDevice     \"Card0\"\n"
+"\tMonitor    \"Monitor0\"\n"
+"\tDefaultDepth 24\n"
+"\tSubSection \"Display\"\n"
+"\t\tViewport  0 0\n"
+"\t\tDepth     24\n"
+"\t\tModes     \"1024x768\"\n"
+"\tEndSubSection\n"
+"EndSection\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1289
@@ -2884,7 +3080,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1339
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Section \"Screen\"\n"
 "Identifier \"Screen0\"\n"
@@ -2898,6 +3094,17 @@ msgid ""
 "EndSubSection\n"
 "EndSection\n"
 msgstr ""
+"Section \"Screen\"\n"
+"Identifier \"Screen0\"\n"
+"Device     \"Card0\"\n"
+"Monitor    \"Monitor0\"\n"
+"DefaultDepth 24\n"
+"SubSection \"Display\"\n"
+"\tViewport  0 0\n"
+"\tDepth     24\n"
+"\tModes     \"1680x1050\"\n"
+"EndSubSection\n"
+"EndSection\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1342
@@ -2918,7 +3125,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1352
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "(II) MGA(0): Supported additional Video Mode:\n"
 "(II) MGA(0): clock: 146.2 MHz   Image Size:  433 x 271 mm\n"
@@ -2929,6 +3136,14 @@ msgid ""
 "(II) MGA(0): Ranges: V min: 48  V max: 85 Hz, H min: 30  H max: 94 kHz, "
 "PixClock max 170 MHz\n"
 msgstr ""
+"(II) MGA(0): Supported additional Video Mode:\n"
+"(II) MGA(0): clock: 146.2 MHz   Image Size:  433 x 271 mm\n"
+"(II) MGA(0): h_active: 1680  h_sync: 1784  h_sync_end 1960 h_blank_end 2240 "
+"h_border: 0\n"
+"(II) MGA(0): v_active: 1050  v_sync: 1053  v_sync_end 1059 v_blanking: 1089 "
+"v_border: 0\n"
+"(II) MGA(0): Ranges: V min: 48  V max: 85 Hz, H min: 30  H max: 94 kHz, "
+"PixClock max 170 MHz\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1355
@@ -2952,7 +3167,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1372
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Section \"Monitor\"\n"
 "Identifier      \"Monitor1\"\n"
@@ -2963,6 +3178,13 @@ msgid ""
 "Option          \"DPMS\"\n"
 "EndSection\n"
 msgstr ""
+"Section \"Monitor\"\n"
+"Identifier      \"Monitor1\"\n"
+"VendorName      \"Bigname\"\n"
+"ModelName       \"BestModel\"\n"
+"ModeLine        \"1680x1050\" 146.2 1680 1784 1960 2240 1050 1053 1059 1089\n"
+"Option          \"DPMS\"\n"
+"EndSection\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1375
@@ -3003,14 +3225,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1386
+#, fuzzy
 msgid ""
 "If you check [.filename]#/var/log/Xorg.0.log#, you will probably find error "
 "messages during the X startup. The most common would be:"
 msgstr ""
+"若您检查<filename>/var/log/Xorg.0.log</filename>，您可能可以找到当X启动时所发生的错误讯息。最常发生的错误会是："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1394
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "(EE) NVIDIA(0):     Failed to initialize the GLX module; please check in "
 "your X\n"
@@ -3020,6 +3244,13 @@ msgid ""
 "(EE) NVIDIA(0):     you continue to encounter problems, Please try\n"
 "(EE) NVIDIA(0):     reinstalling the NVIDIA driver.\n"
 msgstr ""
+"(EE) NVIDIA(0):     Failed to initialize the GLX module; please check in "
+"your X\n"
+"(EE) NVIDIA(0):     log file that the GLX module has been loaded in your X\n"
+"(EE) NVIDIA(0):     server, and that the module is the NVIDIA GLX module.  "
+"If\n"
+"(EE) NVIDIA(0):     you continue to encounter problems, Please try\n"
+"(EE) NVIDIA(0):     reinstalling the NVIDIA driver.\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1396
