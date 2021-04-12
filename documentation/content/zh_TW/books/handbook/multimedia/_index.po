@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-05 18:35+0000\n"
+"PO-Revision-Date: 2021-04-12 20:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookmultimedia_index/zh_TW/>\n"
@@ -44,6 +44,7 @@ msgstr "概述"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:48
+#, fuzzy
 msgid ""
 "FreeBSD supports a wide variety of sound cards, allowing users to enjoy high "
 "fidelity output from a FreeBSD system. This includes the ability to record "
@@ -52,6 +53,9 @@ msgid ""
 "contains many applications for editing recorded audio, adding sound effects, "
 "and controlling attached MIDI devices."
 msgstr ""
+"FreeBSD 廣泛地支援各種音效卡， 讓使用者可以享受來自電腦上的高傳真音質(Hi-Fi)， 此外還包括了錄製和播放 MPEG Audio Layer "
+"3 (<acronym>MP3</acronym>)、 Waveform Audio File (<acronym>WAV</acronym>)、Ogg "
+"Vorbis 以及其他許多種格式聲音的能力。同時 FreeBSD Port 套件集也包含了許多可讓您可以錄音、編修音效以及控制 MIDI 配備的應用程式。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:50
@@ -168,10 +172,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:83
+#, fuzzy
 msgid ""
 "To automate the loading of this driver at boot time, add the driver to "
 "[.filename]#/boot/loader.conf#. The line for this driver is:"
 msgstr ""
+"要開機時自動載入驅動程式，需將驅動程式加到 <filename>/boot/loader.conf</filename> 檔，以此驅動程式為例："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:87
@@ -181,11 +187,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:90
+#, fuzzy
 msgid ""
 "Other available sound modules are listed in "
 "[.filename]#/boot/defaults/loader.conf#. When unsure which driver to use, "
 "load the [.filename]#snd_driver# module:"
 msgstr ""
+"其他可用的音效卡模組清單列於 <filename>/boot/defaults/loader."
+"conf</filename>。當不確認要使用何種驅動程式時，可載入 <filename>snd_driver</filename> 模組："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:94
@@ -195,12 +204,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:97
+#, fuzzy
 msgid ""
 "This is a metadriver which loads all of the most common sound drivers and "
 "can be used to speed up the search for the correct driver. It is also "
 "possible to load all sound drivers by adding the metadriver to "
 "[.filename]#/boot/loader.conf#."
 msgstr ""
+"它是 metadriver 會載入所有最通用的音效驅動程式並且用來加速尋找正確的驅動程式。也可以把 metadriver 加入 <filename>/"
+"boot/loader.conf</filename> 檔來載入所有音效驅動程式。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:99
@@ -1605,11 +1617,14 @@ msgstr "電視卡"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:741
+#, fuzzy
 msgid ""
 "TV cards can be used to watch broadcast or cable TV on a computer. Most "
 "cards accept composite video via an `RCA` or S-video input and some cards "
 "include a `FM` radio tuner."
 msgstr ""
+"電視卡 (TV card) 可以讓您用電腦來看無線、有線電視節目。許多卡都是透過 <acronym>RCA</acronym> 或 S-video "
+"輸入端子來接收視訊，而且有些卡還可接收 <acronym>FM</acronym> 廣播的功能。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/multimedia/_index.adoc:743
