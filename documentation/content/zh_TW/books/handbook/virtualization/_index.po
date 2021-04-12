@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-14 11:02-0300\n"
-"PO-Revision-Date: 2021-04-05 18:35+0000\n"
+"PO-Revision-Date: 2021-04-12 20:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookvirtualization_index/zh_TW/>\n"
@@ -604,10 +604,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:225
+#, fuzzy
 msgid ""
 "This will load the New Virtual Machine Assistant. Click [."
 "guimenuitem]#Continue# to proceed:"
 msgstr ""
+"這個動做會載入 New Virtual Machine Assistant，點選 <guimenuitem>Continue</guimenuitem> "
+"繼續："
 
 #. type: Target for macro image
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:226
@@ -734,6 +737,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:270
+#, fuzzy
 msgid ""
 "The last thing to change is how the virtual machine will connect to the "
 "network. To allow connections to the virtual machine from other machines "
@@ -742,6 +746,10 @@ msgid ""
 "connection (NAT)# is preferred so that the virtual machine can have access "
 "to the Internet, but the network cannot access the virtual machine."
 msgstr ""
+"最後一件事是更改虛擬機器連線到網路的方式，要允許除了主端以外的機器連線到虛擬機器，請選擇 <guimenuitem>Connect directly "
+"to the physical network (Bridged)</guimenuitem>。否則會偏好使用 <guimenuitem>Share "
+"the host's internet connection (NAT)</guimenuitem> "
+"來讓虛擬機器可以存取網際網路，但外部網路無法連線到虛擬機器。"
 
 #. type: Target for macro image
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:271
@@ -855,10 +863,13 @@ msgstr "以下指令均是在 FreeBSD 客端中執行。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:317
+#, fuzzy
 msgid ""
 "First, install the package:emulators/virtualbox-ose-additions[] package or "
 "port in the FreeBSD guest. This will install the port:"
 msgstr ""
+"首先，在 FreeBSD 客端安裝 <package>emulators/virtualbox-ose-additions</package> 套件或 "
+"Port，以下指令會安裝 Port："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:321
@@ -1085,10 +1096,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:438
+#, fuzzy
 msgid ""
 "To ensure the module is always loaded after a reboot, add this line to [."
 "filename]#/boot/loader.conf#:"
-msgstr ""
+msgstr "要確保該模組在重新開機後會載入，可加入下行到 <filename>/boot/loader.conf</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:442
@@ -1098,10 +1110,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:445
+#, fuzzy
 msgid ""
 "To use the kernel modules that allow bridged or host-only networking, add "
 "this line to [.filename]#/etc/rc.conf# and reboot the computer:"
 msgstr ""
+"要使用可支援橋接或僅限主端 (Host-only) 的網路，可加入下行到 <filename>/etc/rc."
+"conf</filename>，然後重新啟動電腦："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:449
@@ -1125,10 +1140,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:459
+#, fuzzy
 msgid ""
 "The default permissions for [.filename]#/dev/vboxnetctl# are restrictive and "
 "need to be changed for bridged networking:"
-msgstr ""
+msgstr "<filename>/dev/vboxnetctl</filename> 的預設權限是受限的，需要更改後才可使用橋接網路："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:464
@@ -1140,10 +1156,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:467
+#, fuzzy
 msgid ""
 "To make this permissions change permanent, add these lines to [.filename]#/"
 "etc/devfs.conf#:"
-msgstr ""
+msgstr "要永久變更權限，可加入下列幾行到 <filename>/etc/devfs.conf</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:472
@@ -1218,9 +1235,10 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:504
+#, fuzzy
 msgid ""
 "To load these new rules, add the following to [.filename]#/etc/rc.conf#:"
-msgstr ""
+msgstr "若服務未執行，請加入下行到 <filename>/etc/rc.conf</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/virtualization/_index.adoc:508
