@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: 2021-04-05 18:35+0000\n"
+"PO-Revision-Date: 2021-04-12 20:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookfirewalls_index/zh_TW/>\n"
@@ -44,6 +44,7 @@ msgstr "概述"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:48
+#, fuzzy
 msgid ""
 "Firewalls make it possible to filter the incoming and outgoing traffic that "
 "flows through a system. A firewall can use one or more sets of \"rules\" to "
@@ -52,6 +53,9 @@ msgid ""
 "inspect one or more characteristics of the packets such as the protocol "
 "type, source or destination host address, and source or destination port."
 msgstr ""
+"防火牆能夠過濾透過系統內送 (Incoming) 與外發 (Outgoing) 的流量，防火牆可使用一組或多組 <quote>規則 (Rules)</"
+"quote> 來檢查網路連線中進出的網路封包(Network packets)，並且能允許或阻擋其通過。 "
+"而防火牆規則可以檢查封包中一個或數個特徵，例如通訊協定類型、來源或目的主機位址，以及來源及目地的連接埠 (Port)。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:50
@@ -76,12 +80,16 @@ msgstr "限制或者禁止內部網路的主機存取網際網路服務。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:54
+#, fuzzy
 msgid ""
 "Support network address translation (NAT), which allows an internal network "
 "to use private IP addresses and share a single connection to the public "
 "Internet using either a single IP address or a shared pool of automatically "
 "assigned public addresses."
 msgstr ""
+"支援網路位址轉譯 (Network address translation, <acronym>NAT</acronym>)，可允許內部網路使用私有 "
+"<acronym>IP</acronym> 位址並共用一個連線使用一個 <acronym>IP</acronym> "
+"位址連到網際網路或者自動分配一個共用池當中的公開位址。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:56
@@ -162,6 +170,7 @@ msgstr "防火牆概念"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:80
+#, fuzzy
 msgid ""
 "A ruleset contains a group of rules which pass or block packets based on the "
 "values contained in the packet. The bi-directional exchange of packets "
@@ -174,6 +183,9 @@ msgid ""
 "the above parameters can be used as selection criteria to create rules which "
 "will pass or block services."
 msgstr ""
+"一個規則集 (Ruleset) 中會有一群根據封包內的資料來判斷通過或封鎖的規則，主機間雙向的封包交換構成一個連線階段的對話，防火牆規則集會同時處理接收自"
+"網際網路的封包以及由系統所產生的回應封包，每一個 <acronym>TCP/IP</acronym> 服務都會預先定義其通訊協定以及要傾聽的埠，要送往指定"
+"服務的封包會誕生在來源位址，使用一個不需特殊權限的埠並傳送給目標位址上特定服務的埠，所有上述過程中的參數均可用來當做建立規則的篩選條件，來允許或封鎖服務。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:82
@@ -204,12 +216,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:88
+#, fuzzy
 msgid ""
 "A firewall ruleset can be either \"exclusive\" or \"inclusive\". An "
 "exclusive firewall allows all traffic through except for the traffic "
 "matching the ruleset. An inclusive firewall does the reverse as it only "
 "allows traffic matching the rules through and blocks everything else."
 msgstr ""
+"防火牆規則集可以為排除式 (<quote>exclusive</quote>) 或者內含式 (<quote>inclusive</quote>)，一個排除"
+"式的防火牆會允許所有的連線通過除了符合規則集的連線，內含式的防火牆則會反過來只允許符合規則集的連線並封鎖其他任何的連線。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:90
@@ -234,11 +249,14 @@ msgstr "除非另有說明，否則所有在此章節的範例規則集均為內
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:97
+#, fuzzy
 msgid ""
 "Security can be tightened further using a \"stateful firewall\". This type "
 "of firewall keeps track of open connections and only allows traffic which "
 "either matches an existing connection or opens a new, allowed connection."
 msgstr ""
+"使用具狀態防火牆 (<quote>Stateful firewall</quote>) "
+"可以更進一步加強安全性，這種類型的防火牆可持續追蹤連線，只允許與現有連線相符的封包或符合允許條件的新連線通過。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:99
@@ -285,12 +303,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:107
+#, fuzzy
 msgid ""
 "NAT will automatically translate the private LAN IP address for each system "
 "on the LAN to the single public IP address as packets exit the firewall "
 "bound for the public Internet. It also performs the reverse translation for "
 "returning packets."
 msgstr ""
+"<acronym>NAT</acronym> 在當封包要外送到防火牆之外的網際網路時，會自動轉譯每一台電腦在私有 LAN 的 IP 位址成為一個公有 "
+"IP 位址，它也同樣會對回傳的封包做反向轉譯。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:109
