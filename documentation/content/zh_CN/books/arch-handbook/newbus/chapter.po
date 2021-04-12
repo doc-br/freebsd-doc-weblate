@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-05 12:38+0000\n"
+"PO-Revision-Date: 2021-04-12 20:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/booksarch-handbooknewbuschapter/zh_CN/>\n"
@@ -56,6 +56,7 @@ msgstr "设备驱动程序的目的"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:47
+#, fuzzy
 msgid ""
 "A device driver is a software component which provides the interface between "
 "the kernel's generic view of a peripheral (e.g., disk, network adapter) and "
@@ -63,6 +64,8 @@ msgid ""
 "(DDI)_ is the defined interface between the kernel and the device driver "
 "component."
 msgstr ""
+"设备驱动程序是软件组件，它在内核关于外围设备（例如，磁盘、网络 适配卡）的通用视图和外围设备的实际实现之间提供了接口。 "
+"<emphasis>设备驱动程序接口(DDI)</emphasis>是内核与设备驱动程序组件 之间定义的接口。"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:48
@@ -99,6 +102,7 @@ msgstr "伪设备驱动程序"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:58
+#, fuzzy
 msgid ""
 "_Block devices_ performed in a way that used fixed size blocks [of "
 "data]. This type of driver depended on the so-called _buffer cache_, which "
@@ -107,6 +111,9 @@ msgid ""
 "modified in memory it got synced to disk whenever the system did its "
 "periodical disk flushing, thus optimizing writes."
 msgstr ""
+"<emphasis>块设备</emphasis>以使用固定大小的[数据]块的方式运行。 这种类型的驱动程序依赖所谓的 <emphasis>缓冲区缓存("
+"buffer cache)</emphasis>，其目的 是在内存中的专用区域缓存访问过的数据块。这种缓冲区缓存常常基于后台写 (write-"
+"behind)，这意味着数据在内存中被修改后，当系统进行其周期性 磁盘刷新时才会被同步到磁盘，从而优化写操作。"
 
 #. type: Title ===
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:59
@@ -129,6 +136,7 @@ msgstr "Newbus概览"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:67
+#, fuzzy
 msgid ""
 "_Newbus_ is the implementation of a new bus architecture based on "
 "abstraction layers which saw its introduction in FreeBSD 3.0 when the Alpha "
@@ -137,6 +145,9 @@ msgid ""
 "provide a more object-oriented means of interconnecting the various busses "
 "and devices which a host system provides to the _Operating System_."
 msgstr ""
+"<emphasis>Newbus</emphasis>实现了一种基于抽象层的新型总线结构， 可以在FreeBSD 3.0中看到这种总线结构的介绍，"
+"当时Alpha的移植被导入到 代码树中。直到4.0它才成为设备驱动程序使用的默认系统。其目的是为主机 系统提供给<emphasis>操作系统</"
+"emphasis>的各种总线和设备的互连提供更加 面向对象的方法。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:69
@@ -239,6 +250,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:93
+#, fuzzy
 msgid ""
 "In order to normalize access to memory and port mapped resources, Newbus "
 "integrates the `bus_space` APIs from NetBSD. These provide a single API to "
@@ -246,6 +258,9 @@ msgid ""
 "that a single driver can easily use either memory-mapped registers or "
 "port-mapped registers (some hardware supports both)."
 msgstr ""
+"为了规范化对内存和端口映射资源的访问，Newbus整合了NetBSD的 <literal>bus_space</literal> "
+"API。他们提供了单一的API来代替inb/outb 和直接内存读写。这样做的优势在于单个驱动程序就可以使用内存映射寄存器 "
+"或端口映射寄存器（有些硬件支持两者）。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:95
@@ -265,6 +280,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:99
+#, fuzzy
 msgid ""
 "The core of the Newbus system is an extensible \"object-based programming\" "
 "model. Each device in the system has a table of methods which it "
@@ -273,9 +289,13 @@ msgid ""
 "defined by a number of \"interfaces\". An \"interface\" is simply a group of "
 "related methods which can be implemented by a device."
 msgstr ""
+"Newbus系统的核心是可扩展的<quote>基于对象编程(object-based "
+"programming)</quote>的模型。系统中的每个设备具有它所支持的一个方法表。 系统和其他设备使用这些方法来控制设备并请求服务。"
+"设备所支持的不同方法 被定义为多个<quote>接口</quote>。<quote>接口</quote>只是 设备实现的一组相关的方法。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:101
+#, fuzzy
 msgid ""
 "In the Newbus system, the methods for a device are provided by the various "
 "device drivers in the system. When a device is attached to a driver during "
@@ -284,15 +304,22 @@ msgid ""
 "with a new method table. This allows dynamic replacement of drivers which "
 "can be useful for driver development."
 msgstr ""
+"在Newbus系统中，设备方法是通过系统中的各种设备驱动程序提供的。当 <emphasis>自动配置(auto-"
+"configuration)</emphasis>期间设备被连接(attach) 到驱动程序，它使用驱动程序声明的方法表。以后设备可以从其驱动程序 "
+"<emphasis>分离(detach)</emphasis>，并 <emphasis>重新连接(re-"
+"attach)</emphasis>到具有新方法表的新驱动程序。这就 允许驱动程序的动态替换，而动态替换对于驱动程序的开发非常有用。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:103
+#, fuzzy
 msgid ""
 "The interfaces are described by an interface definition language similar to "
 "the language used to define vnode operations for file systems. The interface "
 "would be stored in a methods file (which would normally be named "
 "[.filename]#foo_if.m#)."
 msgstr ""
+"接口通过与文件系统中用于定义vnode操作的语言相似的接口定义语言来 描述。接口被保存在方法文件中（通常命名为<filename>foo_if."
+"m</filename>）。"
 
 #. type: Block title
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:104
@@ -348,20 +375,25 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:133
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "      int FOO_DOIT(device_t dev);\n"
 "      int FOO_DOIT_TO_CHILD(device_t dev, device_t child);\n"
 msgstr ""
+"      int FOO_DOIT(device_t dev);\n"
+"      int FOO_DOIT_TO_CHILD(device_t dev, device_t child);\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:136
+#, fuzzy
 msgid ""
 "A source file, \"[.filename]#foo_if.c#\" is also created to accompany the "
 "automatically generated header file; it contains implementations of those "
 "functions which look up the location of the relevant functions in the "
 "object's method table and call that function."
 msgstr ""
+"伴随自动产生的头文件，也会创建一个源文件 <quote><filename>foo_if."
+"c</filename></quote>；其中包含一些函数的实现， 这些函数用于在对象方法表中查找相关函数的位置并调用那个函数。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:138
@@ -444,10 +476,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:157
+#, fuzzy
 msgid ""
 "[.filename]#src/sys/dev/pci# - PCI bus support code resides in this "
 "directory."
-msgstr ""
+msgstr "<filename>src/sys/dev/pci</filename> - PCI总线支持代码位于 这个目录。"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:159
@@ -502,13 +535,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:177
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "\t  struct driver {\n"
 "\t\tKOBJ_CLASS_FIELDS;\n"
 "\t\tvoid\t*priv;\t\t\t/* driver private data */\n"
 "\t  };\n"
 msgstr ""
+"\t  struct driver {\n"
+"\t\tKOBJ_CLASS_FIELDS;\n"
+"\t\tvoid\t*priv;\t\t\t/* driver private data */\n"
+"\t  };\n"
 
 #. type: Plain text
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:180
@@ -526,7 +563,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/arch-handbook/newbus/chapter.adoc:193
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "\t  /*\n"
 "\t   * src/sys/sys/bus.h\n"
@@ -538,3 +575,12 @@ msgid ""
 "\t\tDS_BUSY\t\t\t/* device is open */\n"
 "\t  } device_state_t;\n"
 msgstr ""
+"\t  /*\n"
+"\t   * src/sys/sys/bus.h\n"
+"\t   */\n"
+"\t  typedef enum device_state {\n"
+"\t\tDS_NOTPRESENT,\t/* not probed or probe failed */\n"
+"\t\tDS_ALIVE,\t\t/* probe succeeded */\n"
+"\t\tDS_ATTACHED,\t/* attach method called */\n"
+"\t\tDS_BUSY\t\t\t/* device is open */\n"
+"\t  } device_state_t;\n"
