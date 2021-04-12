@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: 2021-04-05 12:40+0000\n"
+"PO-Revision-Date: 2021-04-12 20:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookbasics_index/zh_CN/>\n"
@@ -32,9 +32,9 @@ msgstr ""
 
 #. type: Title =
 #: documentation/content/en/books/handbook/basics/_index.adoc:9
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "FreeBSD basics"
-msgstr ""
+msgstr "FreeBSD 基础知识"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/basics/_index.adoc:45
@@ -148,12 +148,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:78
+#, fuzzy
 msgid ""
 "Since FreeBSD is a multiuser system, it needs some way to distinguish "
 "between different users. This is accomplished by requiring every user to log "
 "into the system before gaining access to the programs on the system. Every "
 "user has a unique name \"username\" and a personal \"password\"."
 msgstr ""
+"由于 FreeBSD 是一个多用户系统, 它需要某种方法来区分不同的用户。这是通过要求每个用户在访问系统上的程序之前登录系统来实现的。每个用户都有一个唯一"
+"的名称<quote>username</quote>和个人<quote>password</quote>。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:80
@@ -240,14 +243,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:97
+#, fuzzy
 msgid ""
 "In FreeBSD, the number of available virtual consoles is configured in this "
 "section of [.filename]#/etc/ttys#:"
-msgstr ""
+msgstr "在 FreeBSD 中, 可用的虚拟控制台的数量可在<filename>/etc/ttys</filename>文件的这个部分中设置:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:112
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# name    getty                         type  status comments\n"
 "#\n"
@@ -262,6 +266,18 @@ msgid ""
 "ttyv7   \"/usr/libexec/getty Pc\"         xterm   on  secure\n"
 "ttyv8   \"/usr/X11R6/bin/xdm -nodaemon\"  xterm   off secure\n"
 msgstr ""
+"# name    getty                         type  status comments\n"
+"#\n"
+"ttyv0   \"/usr/libexec/getty Pc\"         xterm   on  secure\n"
+"# Virtual terminals\n"
+"ttyv1   \"/usr/libexec/getty Pc\"         xterm   on  secure\n"
+"ttyv2   \"/usr/libexec/getty Pc\"         xterm   on  secure\n"
+"ttyv3   \"/usr/libexec/getty Pc\"         xterm   on  secure\n"
+"ttyv4   \"/usr/libexec/getty Pc\"         xterm   on  secure\n"
+"ttyv5   \"/usr/libexec/getty Pc\"         xterm   on  secure\n"
+"ttyv6   \"/usr/libexec/getty Pc\"         xterm   on  secure\n"
+"ttyv7   \"/usr/libexec/getty Pc\"         xterm   on  secure\n"
+"ttyv8   \"/usr/X11R6/bin/xdm -nodaemon\"  xterm   off secure\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:115
@@ -307,14 +323,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:124
+#, fuzzy
 msgid ""
 "The settings which control single user mode are found in this section of "
 "[.filename]#/etc/ttys#:"
-msgstr ""
+msgstr "单用户模式的控制台可以在 <filename>/etc/ttys</filename> 文件设置："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:132
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# name  getty                           type  status  comments\n"
 "#\n"
@@ -323,6 +340,12 @@ msgid ""
 "# when going to single-user mode.\n"
 "console none                            unknown  off  secure\n"
 msgstr ""
+"# name  getty                           type  status  comments\n"
+"#\n"
+"# If console is marked \"insecure\", then init will ask for the root "
+"password\n"
+"# when going to single-user mode.\n"
+"console none                            unknown  off  secure\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:135
@@ -353,11 +376,14 @@ msgstr "改变控制台的显示模式"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:145
+#, fuzzy
 msgid ""
 "The FreeBSD console default video mode may be adjusted to 1024x768, "
 "1280x1024, or any other size supported by the graphics chip and monitor. To "
 "use a different video mode load the `VESA` module:"
 msgstr ""
+"FreeBSD 控制台默认的显示模式可以被调整为 1024x768， 1280x1024， "
+"或者任何你的显卡芯片和显示器所支持的其他尺寸。若要使用一个不同的显示模式需加载<literal>VESA</literal>模块："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:149
@@ -395,16 +421,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:166
+#, fuzzy
 msgid ""
 "If the new video mode is acceptable, it can be permanently set on boot by "
 "adding it to [.filename]#/etc/rc.conf#:"
 msgstr ""
+"如果你对于新的显示模式满意，那么可以把它加入到 <filename>/etc/rc.conf</filename> 使机器在每次启动的时候都能生效："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:170
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "allscreens_flags=\"MODE_279\"\n"
-msgstr ""
+msgstr "allscreens_flags=\"MODE_279\"\n"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/basics/_index.adoc:173
@@ -493,12 +521,15 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:202
+#, fuzzy
 msgid ""
 "Care must be taken when using the operator group, as unintended "
 "superuser-like access privileges may be granted, including but not limited "
 "to shutdown, reboot, and access to all items in [.filename]#/dev# in the "
 "group."
 msgstr ""
+"在使用操作员组时必须谨慎，因为可能会被授予类似超级用户的访问权限，包括但不限于关机、重启和访问<filename>/dev</filename>中的所有项"
+"目。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:205
@@ -574,12 +605,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:223
+#, fuzzy
 msgid ""
 "The User ID (UID) is a number used to uniquely identify the user to the "
 "FreeBSD system. Commands that allow a user name to be specified will first "
 "convert it to the UID. It is recommended to use a UID less than 65535, since "
 "higher values may cause compatibility issues with some software."
 msgstr ""
+"用户 ID（UID）是一组数字，是 FreeBSD 系统用户的唯一标识。允许指定用户名的命令将首先将其转换为 UID。建议使用小于 65535 "
+"的UID，因为较高的值可能会导致与某些软件的兼容性问题。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/basics/_index.adoc:224
@@ -589,6 +623,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:226
+#, fuzzy
 msgid ""
 "The Group ID (GID) is a number used to uniquely identify the primary group "
 "that the user belongs to. Groups are a mechanism for controlling access to "
@@ -597,6 +632,9 @@ msgid ""
 "to be members of more than one group. It is recommended to use a GID of "
 "65535 or lower as higher GIDs may break some software."
 msgstr ""
+"用户组 ID（GID）是一组数字，是用户组的唯一标识。用户组是一种根据用户的 GID 而不是 UID "
+"来控制对资源的访问的机制。这可以显著减少一些配置文件的大小，并允许用户成为多个组的成员。建议使用小于 65535 的 GID，因为较高的 GID "
+"可能会欲某些软件不兼容。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/basics/_index.adoc:227
@@ -742,12 +780,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:259
+#, fuzzy
 msgid ""
 "In this example, the user only becomes superuser in order to run `make "
 "install` as this step requires superuser privilege. Once the command "
 "completes, the user types `exit` to leave the superuser account and return "
 "to the privilege of their user account."
 msgstr ""
+"在本例中, 用户只成为超级用户才能运行<command>make "
+"install</command>，因为此步骤需要超级用户权限。命令完成后，用户键入<command>exit</command> "
+"离开超级用户帐户并返回到其用户帐户的权限。"
 
 #. type: Block title
 #: documentation/content/en/books/handbook/basics/_index.adoc:260
@@ -859,7 +901,7 @@ msgstr "在 FreeBSD 上添加用户"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:348
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# adduser\n"
 "Username: jru\n"
@@ -892,6 +934,37 @@ msgid ""
 "Goodbye!\n"
 "#\n"
 msgstr ""
+"<prompt>#</prompt> <userinput>adduser</userinput>\n"
+"Username: <userinput>jru</userinput>\n"
+"Full name: <userinput>J. Random User</userinput>\n"
+"Uid (Leave empty for default):\n"
+"Login group [jru]:\n"
+"Login group is jru. Invite jru into other groups? []: "
+"<userinput>wheel</userinput>\n"
+"Login class [default]:\n"
+"Shell (sh csh tcsh zsh nologin) [sh]: <userinput>zsh</userinput>\n"
+"Home directory [/home/jru]:\n"
+"Home directory permissions (Leave empty for default):\n"
+"Use password-based authentication? [yes]:\n"
+"Use an empty password? (yes/no) [no]:\n"
+"Use a random password? (yes/no) [no]:\n"
+"Enter password:\n"
+"Enter password again:\n"
+"Lock out the account after creation? [no]:\n"
+"Username   : jru\n"
+"Password   : ****\n"
+"Full Name  : J. Random User\n"
+"Uid        : 1001\n"
+"Class      :\n"
+"Groups     : jru wheel\n"
+"Home       : /home/jru\n"
+"Shell      : /usr/local/bin/zsh\n"
+"Locked     : no\n"
+"OK? (yes/no): <userinput>yes</userinput>\n"
+"adduser: INFO: Successfully added (jru) to the user database.\n"
+"Add another user? (yes/no): <userinput>no</userinput>\n"
+"Goodbye!\n"
+"<prompt>#</prompt>\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:354
@@ -940,17 +1013,19 @@ msgstr "(可选) 删除用户的主目录（如果该目录为用户所拥有）
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:368
+#, fuzzy
 msgid ""
 "Removes the incoming mail files belonging to the user from "
 "[.filename]#/var/mail#."
-msgstr ""
+msgstr "从<filename>/var/mail</filename>中删除属于用户的传入邮件文件。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:369
+#, fuzzy
 msgid ""
 "Removes all files owned by the user from temporary file storage areas such "
 "as [.filename]#/tmp#."
-msgstr ""
+msgstr "从临时文件存储区域 (如<filename>/tmp</filename>) 中删除用户拥有的所有文件。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:370
@@ -1038,7 +1113,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:425
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "#Changing user database information for jru.\n"
 "Login: jru\n"
@@ -1056,6 +1131,21 @@ msgid ""
 "Home Phone:\n"
 "Other information:\n"
 msgstr ""
+"#Changing user database information for jru.\n"
+"Login: jru\n"
+"Password: *\n"
+"Uid [#]: 1001\n"
+"Gid [# or name]: 1001\n"
+"Change [month day year]:\n"
+"Expire [month day year]:\n"
+"Class:\n"
+"Home directory: /home/jru\n"
+"Shell: /usr/local/bin/zsh\n"
+"Full Name: J. Random User\n"
+"Office Location:\n"
+"Office Phone:\n"
+"Home Phone:\n"
+"Other information:\n"
 
 #. type: Block title
 #: documentation/content/en/books/handbook/basics/_index.adoc:429
@@ -1065,7 +1155,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:441
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "#Changing user database information for jru.\n"
 "Shell: /usr/local/bin/zsh\n"
@@ -1075,6 +1165,13 @@ msgid ""
 "Home Phone:\n"
 "Other information:\n"
 msgstr ""
+"#Changing user database information for jru.\n"
+"Shell: /usr/local/bin/zsh\n"
+"Full Name: J. Random User\n"
+"Office Location:\n"
+"Office Phone:\n"
+"Home Phone:\n"
+"Other information:\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:447
@@ -1177,6 +1274,7 @@ msgstr "管理用户组"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:499
+#, fuzzy
 msgid ""
 "A group is a list of users. A group is identified by its group name and "
 "GID. In FreeBSD, the kernel uses the UID of a process, and the list of "
@@ -1184,6 +1282,9 @@ msgid ""
 "of the time, the GID of a user or process usually means the first group in "
 "the list."
 msgstr ""
+"群组代表一群使用者，群组可以由其群组名称及<acronym>GID</acronym>来辨识。在FreeBSD，核心会使用程序的<acronym>UID<"
+"/acronym>以及其所属的群组清单来决定程序可以做那些事。大多数情况使用者或程序的<acronym>GID</acronym>通常指的是清单中的第一个"
+"群组。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:501
@@ -1271,11 +1372,14 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:542
+#, fuzzy
 msgid ""
 "In this example, the argument to `-m` is a comma-delimited list of users who "
 "are to be added to the group. Unlike the previous example, these users are "
 "appended to the group and do not replace existing users in the group."
 msgstr ""
+"在本例当中，给<option>-m</option>的参数是以逗号分隔的使用者清单，用来加入使用者到群组。不像前面的例子，这些使用者会加入到群组，而非取代"
+"既有群组中的使用者。"
 
 #. type: Block title
 #: documentation/content/en/books/handbook/basics/_index.adoc:543
@@ -1420,6 +1524,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:620
+#, fuzzy
 msgid ""
 "The first (leftmost) character in the first column indicates whether this "
 "file is a regular file, a directory, a special character device, a socket, "
@@ -1434,14 +1539,22 @@ msgid ""
 "table above, the permissions for this file would be `644`, where each digit "
 "represents the three parts of the file's permission."
 msgstr ""
+"第一个（最左边）的字元用来表示这个文件的类型为何，除标准文件以外，尚有目录、特殊字元装置、Socket及其他特殊虚拟文件装置，在此例当中，<literal"
+">-</literal>表示该文件为一个标准的文件。示例中接下来的三个字元中，<literal>rw-</literal>代表所有者对文件拥有的权限。再接"
+"下来的三个字元，<literal>r--</literal>则代表群组对文件拥有的权限，最后三个字元，<literal>r--</literal>则代表其"
+"他人对文件拥有的权限。破折号（-）表示没有权限，示例中的这个文件的权限，只允许所有者读取、写入文件，群组以及其他人仅能读取文件。根据以上的表格，此种权限的"
+"文件可以使用<literal>644</literal>来表示，每组数字分别代表文件的三种权限。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:622
+#, fuzzy
 msgid ""
 "How does the system control permissions on devices? FreeBSD treats most "
 "hardware devices as a file that programs can open, read, and write data "
 "to. These special device files are stored in [.filename]#/dev/#."
 msgstr ""
+"那系统如何控制装置的权限？实际上FreeBSD对大多的硬盘装置就如同文件，程序可以开启、读取以及写入数据如一般文件。这些特殊装置文件都储存于<filena"
+"me>/dev/</filename>目录中。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:624
@@ -1456,12 +1569,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:626
+#, fuzzy
 msgid ""
 "In order to perform a directory listing, the read permission must be set on "
 "the directory. In order to delete a file that one knows the name of, it is "
 "necessary to have write _and_ execute permissions to the directory "
 "containing the file."
 msgstr ""
+"要能够列出目录内容，必须拥有目录的读取权限。要删除已知文件名的文件，必须拥有文件所在目录的写入<emphasis>以及</emphasis>执行的权限。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:628
@@ -1626,9 +1741,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:731
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "-rw-r--r--  1 trhodes  trhodes  sunlnk 0 Mar  1 05:54 file1\n"
-msgstr ""
+msgstr "-rw-r--r--  1 trhodes  trhodes  sunlnk 0 Mar  1 05:54 file1\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:734
@@ -1691,9 +1806,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:755
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "-rwsr-xr-x   1 trhodes  trhodes    63 Aug 29 06:36 suidexample.sh\n"
-msgstr ""
+msgstr "-rwsr-xr-x   1 trhodes  trhodes    63 Aug 29 06:36 suidexample.sh\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:758
@@ -1726,11 +1841,13 @@ msgstr "在终端 A 中："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:772
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Changing local password for trhodes\n"
 "Old Password:\n"
 msgstr ""
+"Changing local password for trhodes\n"
+"Old Password:\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:775
@@ -1745,12 +1862,14 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:785
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "trhodes  5232  0.0  0.2  3420  1608   0  R+    2:10AM   0:00.00 grep "
 "passwd\n"
 "root     5211  0.0  0.2  3620  1724   2  I+    2:09AM   0:00.01 passwd\n"
 msgstr ""
+"trhodes  5232  0.0  0.2  3420  1608   0  R+    2:10AM   0:00.00 grep passwd\n"
+"root     5211  0.0  0.2  3620  1724   2  I+    2:09AM   0:00.01 passwd\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:788
@@ -1761,12 +1880,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:790
+#, fuzzy
 msgid ""
 "The `setgid` permission performs the same function as the `setuid` "
 "permission; except that it alters the group settings. When an application or "
 "utility executes with this setting, it will be granted the permissions based "
 "on the group that owns the file, not the user who started the process."
 msgstr ""
+"<literal>setgid</literal>权限的功能与<literal>setuid</literal>相似，当应用程序或工具使用此设定执行时，将"
+"会以拥有该文件的群组来执行，而非执行行该程序的使用者。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:792
@@ -1790,9 +1912,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:803
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "-rwxr-sr-x   1 trhodes  trhodes    44 Aug 31 01:49 sgidexample.sh\n"
-msgstr ""
+msgstr "-rwxr-sr-x   1 trhodes  trhodes    44 Aug 31 01:49 sgidexample.sh\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:808
@@ -1812,12 +1934,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:813
+#, fuzzy
 msgid ""
 "When the `sticky bit` is set on a directory, it allows file deletion only by "
 "the file owner. This is useful to prevent file deletion in public "
 "directories, such as [.filename]#/tmp#, by users who do not own the file. To "
 "utilize this permission, prefix the permission set with a one (1):"
 msgstr ""
+"当在目录上设定<literal>sticky bit</literal>，将只允许由文件拥有者删除文件。这对避免公开目录，如<filename>/tmp<"
+"/filename>中的文件被不拥有该文件的人删除非常有用。要使用这个权限，可在权限集前加上（1）："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:817
@@ -1840,9 +1965,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:829
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "drwxrwxrwt  10 root  wheel         512 Aug 31 01:49 tmp\n"
-msgstr ""
+msgstr "drwxrwxrwt  10 root  wheel         512 Aug 31 01:49 tmp\n"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/basics/_index.adoc:832
@@ -1852,6 +1977,7 @@ msgstr "目录结构"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:835
+#, fuzzy
 msgid ""
 "The FreeBSD directory hierarchy is fundamental to obtaining an overall "
 "understanding of the system. The most important directory is root or, "
@@ -1860,6 +1986,8 @@ msgid ""
 "operation. The root directory also contains mount points for other file "
 "systems that are mounted during the transition to multi-user operation."
 msgstr ""
+"FreeBSD 目录层次结构是全面了解系统的基础。最重要的目录是根目录或<quote>/</quote>。此目录是在启动时安装的第一个目录，它包含为多用户"
+"操作准备操作系统所需的基本系统。根目录还包含在转换为多用户操作期间装载的其他文件系统的装载点。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:837
@@ -2022,6 +2150,7 @@ msgstr "磁盘组织"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:953
+#, fuzzy
 msgid ""
 "The smallest unit of organization that FreeBSD uses to find files is the "
 "filename. Filenames are case-sensitive, which means that "
@@ -2029,6 +2158,9 @@ msgid ""
 "files. FreeBSD does not use the extension of a file to determine whether the "
 "file is a program, document, or some other form of data."
 msgstr ""
+"FreeBSD 查找文件的最小单位是文件名。 而文件名区分大小写，这就意味着 <filename>readme.txt</filename> 和 "
+"<filename>README.TXT</filename> 是两个不相同的文件。 FreeBSD 不凭文件扩展名 (<filename>."
+"txt</filename>) 去识别这个文件是 程序、 文档， 或是其他格式的数据。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:955
@@ -2244,6 +2376,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1004
+#, fuzzy
 msgid ""
 "FreeBSD also uses disk space for _swap space_ to provide _virtual "
 "memory_. This allows your computer to behave as though it has much more "
@@ -2251,6 +2384,9 @@ msgid ""
 "of the data that is not currently being used to the swap space, and moves it "
 "back in (moving something else out) when it needs it."
 msgstr ""
+"FreeBSD 的 <firstterm>交换分区</firstterm> 也需要使用磁盘空间。 交换分区是给 FreeBSD 作 "
+"<firstterm>虚拟内存</firstterm> 使用的， 这样能令您的计算机有更多的内存可使用， 当FreeBSD在运行而内存不够的时候， "
+"它会把其他一些可转移的数据转移到交换分区， 空出内存的位置以供使用。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1006
@@ -2716,8 +2852,9 @@ msgstr "以可读写方式挂接文件系统。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1184
+#, fuzzy
 msgid "The following options can be passed to `-o` as a comma-separated list:"
-msgstr ""
+msgstr "The <option>-o</option> 选项采用一个逗号分开以下多个选项:"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/basics/_index.adoc:1185
@@ -2790,6 +2927,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1205
+#, fuzzy
 msgid ""
 "Some programs are not designed to be run with continuous user input and "
 "disconnect from the terminal at the first opportunity. For example, a web "
@@ -2800,6 +2938,9 @@ msgid ""
 "performs useful tasks. This is why the BSD mascot is the cheerful-looking "
 "daemon with sneakers and a pitchfork."
 msgstr ""
+"有些程序在运行时，并不是为了让用户连续输入而设计的，它们在启动后将断开与终端的连接。例如，Web 服务器响应 Web 请求，而不是用户输入。另一个例子是邮"
+"件服务器。这些类型的程序被称为守护进程（<firstterm>daemons</firstterm>）。daemon这个词来自于希腊神话，代表着一个既非善"
+"也非恶的实体，它无形中执行着有用的任务。这也是 BSD 的吉祥物是一个穿着运动鞋，拿着干草叉的快乐的守护神的原因。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1207
@@ -2920,6 +3061,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1253
+#, fuzzy
 msgid ""
 "The output is split into two sections. The header (the first five or six "
 "lines) shows the PID of the last process to run, the system load averages "
@@ -2930,6 +3072,10 @@ msgid ""
 "states. If the ZFS file system module has been loaded, an `ARC` line "
 "indicates how much data was read from the memory cache instead of from disk."
 msgstr ""
+"输出被分成两部分。头部（前五六行）显示了最后一个进程运行的<acronym>PID</acronym>、系统负载平均数（衡量系统的繁忙程度）、系统正常运行"
+"时间（上次重启后的时间）和当前时间。标题中的其他数字涉及到有多少个进程在运行，使用了多少内存和交换空间，以及系统在不同的CPU状态下花费了多少时间。如果<"
+"acronym>ZFS</acronym>文件系统模块已经加载，<literal>ARC</literal>行表示从内存缓存中读取了多少数据，而不是从磁盘"
+"中读取了多少数据。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1255
@@ -2981,6 +3127,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1266
+#, fuzzy
 msgid ""
 "Two signals can be used to stop a process: `SIGTERM` and "
 "`SIGKILL`. `SIGTERM` is the polite way to kill a process as the process can "
@@ -2988,6 +3135,9 @@ msgid ""
 "what it is doing before shutting down. In some cases, a process may ignore "
 "`SIGTERM` if it is in the middle of some task that cannot be interrupted."
 msgstr ""
+"<literal>SIGTERM</literal>与<literal>SIGKILL</literal>这两个信号可以拿来终止程序。用<literal>"
+"SIGTERM</literal>结束程序是比较有礼貌的方式，该程序收到信号后可以把自已所使用的日志档关闭及其他要在结束前要做的事完成，然后在关掉程序之前"
+"结束掉手边的工作。在某些情况下程序有可能会忽略<literal>SIGTERM</literal>，如它正在做一些不能中断的工作的话。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1268
@@ -3011,6 +3161,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1272
+#, fuzzy
 msgid ""
 "For example, after changing a web server's configuration file, the web "
 "server needs to be told to re-read its configuration. Restarting `httpd` "
@@ -3019,6 +3170,10 @@ msgid ""
 "different behavior, so refer to the documentation for the daemon to "
 "determine if `SIGHUP` will achieve the desired results."
 msgstr ""
+"假如您改变了web系统的配置文件──并想web系统去重读它的配置， 您可以停止然后再启动<command>httpd</command>。"
+"但这样做web系统会导致一个短暂 的中断周期，那样是不受欢迎的。几乎所有的守护进程在编写时，都会指定对<literal>SIGHUP</literal> "
+"信号进行响应从而重读配置文件。 所以， 最好的方法， 就不是杀死并重启 <command>httpd</command>， 而是发一个 "
+"<literal>SIGHUP</literal> 信号给它。 因为在这方面没有一个标准，不同的守护进程有不同的用法，所以不了解时应读一下守护进程的文档。"
 
 #. type: Block title
 #: documentation/content/en/books/handbook/basics/_index.adoc:1275
@@ -3437,11 +3592,14 @@ msgstr "文本编辑器"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1453
+#, fuzzy
 msgid ""
 "Most FreeBSD configuration is done by editing text files, so it is a good "
 "idea to become familiar with a text editor. FreeBSD comes with a few as part "
 "of the base system, and many more are available in the Ports Collection."
 msgstr ""
+"FreeBSD 的很多配置都可以通过编辑文本文件来完成。 因此， 最好能熟悉某种文本编辑器。 FreeBSD 基本系统中提供了一些， 您也可以从 "
+"Ports Collection 安装其它编辑器。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1455
@@ -3483,26 +3641,34 @@ msgstr "设备和设备节点"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1464
+#, fuzzy
 msgid ""
 "A device is a term used mostly for hardware-related activities in a system, "
 "including disks, printers, graphics cards, and keyboards. When FreeBSD "
 "boots, the majority of the boot messages refer to devices being detected. A "
 "copy of the boot messages are saved to [.filename]#/var/run/dmesg.boot#."
 msgstr ""
+"在一个系统里，硬件描述通常用法就是一个设备对应一个术语，包括磁盘、打印机、显卡和键盘。 当 FreeBSD 启动过程中，大多数的设备都能探测到并显示出来，"
+" 您也可以查阅<filename>/var/run/dmesg.boot</filename>， 引导时所有信息都在里面。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1466
+#, fuzzy
 msgid ""
 "Each device has a device name and number. For example, [.filename]#ada0# is "
 "the first SATA hard drive, while [.filename]#kbd0# represents the keyboard."
 msgstr ""
+"每个设备都有设备名和编号，比如 <filename>ada0</filename> 代表第一个 SATA 硬盘。<filename>kbd0</"
+"filename> 代表键盘。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1468
+#, fuzzy
 msgid ""
 "Most devices in FreeBSD must be accessed through special files called device "
 "nodes, which are located in [.filename]#/dev#."
 msgstr ""
+"在 FreeBSD 操作系统里，大多数设备存在的特殊访问文件就是叫做设备节点， 他们都定位在<filename>/dev</filename>目录里。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/basics/_index.adoc:1470
@@ -3512,12 +3678,15 @@ msgstr "手册页"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1473
+#, fuzzy
 msgid ""
 "The most comprehensive documentation on FreeBSD is in the form of manual "
 "pages. Nearly every program on the system comes with a short reference "
 "manual explaining the basic operation and available arguments. These manuals "
 "can be viewed using `man`:"
 msgstr ""
+"最详细的使用说明文档莫过于 FreeBSD 里的联机手册了。 几乎每一个程序都会附上一份简短说明， 以介绍这个程序的的基本功能以及参数的用法。 "
+"我们能通过 <command>man</command> 命令来阅读这些说明， 而使用 <command>man</command> 命令却是简单的事情:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1477
@@ -3637,10 +3806,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/basics/_index.adoc:1517
+#, fuzzy
 msgid ""
 "To read the descriptions for all of the commands in [.filename]#/usr/bin#, "
 "type:"
-msgstr ""
+msgstr "有时您会看到<filename>/usr/bin</filename> 下有许多命令但不知他们的用途， 您只需这样做:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/basics/_index.adoc:1522
