@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: 2021-04-05 12:39+0000\n"
+"PO-Revision-Date: 2021-04-12 20:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookmac_index/zh_CN/>\n"
@@ -129,6 +129,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:69
+#, fuzzy
 msgid ""
 "Improper MAC configuration may cause loss of system access, aggravation of "
 "users, or inability to access the features provided by Xorg. More "
@@ -137,15 +138,19 @@ msgid ""
 "sound security practices and regular security checks, the system will never "
 "be completely secure."
 msgstr ""
+"错误的<acronym>MAC</acronym>配置可能导致丧失系统访问权，激怒用户，或者无法访问<application>Xorg</applicat"
+"ion>提供的特性。更重要的是， <acronym>MAC</acronym> 不能用于彻底保护一个系统。<acronym>MAC</acronym> "
+"框架仅用于增强现有安全策略。如果没有健全的安全条例以及定期的安全检查，系统将永远不会绝对安全。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:71
+#, fuzzy
 msgid ""
 "The examples contained within this chapter are for demonstration purposes "
 "and the example settings should _not_ be implemented on a production "
 "system. Implementing any security policy takes a good deal of understanding, "
 "proper design, and thorough testing."
-msgstr ""
+msgstr "本章中包含的示例仅用于演示，这些示例设置不应在生产系统中实施。实施任何安全策略都需要大量的理解、正确的设计和彻底的测试。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:74
@@ -172,6 +177,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:81
+#, fuzzy
 msgid ""
 "_compartment_: a set of programs and data to be partitioned or separated, "
 "where users are given explicit access to specific component of a system. A "
@@ -179,6 +185,10 @@ msgid ""
 "project, or topic. Compartments make it possible to implement a "
 "need-to-know-basis security policy."
 msgstr ""
+"<emphasis>区间</emphasis>(compartment)： (译注： <emphasis>区间</emphasis> 这一术语， "
+"在一些文献中也称做类别 (category)。 此外， 在其它一些翻译文献中， 该术语也翻译为 <quote>象限</quote>。) "
+"指一组被划分或隔离的程序和数据， 其中， 用户被明确地赋予了访问特定系统组件的权限。 同时， 区间也能够表达分组， 例如工作组、 部门、 项目， 或话题。"
+" 可以通过使用区间来实施 need-to-know 安全策略。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:82
@@ -196,6 +206,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:84
+#, fuzzy
 msgid ""
 "_label_: a security attribute which can be applied to files, directories, or "
 "other items in the system. It could be considered a confidentiality "
@@ -206,6 +217,9 @@ msgid ""
 "label as representing the integrity or secrecy of an object while other "
 "policies might use labels to hold rules for access."
 msgstr ""
+"<emphasis>标签</emphasis>(label)： 标签是一种可应用于文件、 目录或系统其他客体的安全属性， 它也可以被认为是一种机密性印鉴。"
+" 当一个文件被施以标签时， 其标签会描述这一文件的安全参数， 并只允许拥有相似安全性设置的文件、 用户、 资源等访问该文件。 "
+"标签值的涵义及解释取决于相应的策略配置： 某些策略会将标签当作对某一客体的完整性和保密性的表述， 而其它一些策略则会用标签保存访问规则。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:85
@@ -227,6 +241,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:87
+#, fuzzy
 msgid ""
 "_object_: an entity through which information flows under the direction of a "
 "_subject_. This includes directories, files, fields, screens, keyboards, "
@@ -234,17 +249,25 @@ msgid ""
 "device. An object is a data container or a system resource. Access to an "
 "object effectively means access to its data."
 msgstr ""
+"<emphasis>客体</emphasis>(object)： 客体或系统客体是一种实体， 信息随 <emphasis>主体</emphasis> "
+"的导向在客体内部流动。 客体包括目录、 文件、 区段、 显示器、 键盘、 存储器、 磁存储器、 打印机及其它数据存储/转移设备。 基本上， "
+"客体就是指数据容器或系统资源。 对 <emphasis>客体</emphasis> 的访问实际上意味着对数据的访问。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:88
+#, fuzzy
 msgid ""
 "_subject_: any active entity that causes information to flow between "
 "_objects_ such as a user, user process, or system process. On FreeBSD, this "
 "is almost always a thread acting in a process on behalf of a user."
 msgstr ""
+"<emphasis>主体</emphasis>(subject)： 主体就是引起信息在两个 <emphasis>客体</emphasis> "
+"间流动的任意活动实体， 比如用户， 用户进程(译注：原文为 processor)， 系统进程等。 在 FreeBSD 中， "
+"主体几乎总是代表用户活跃在某一进程中的一个线程。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:89
+#, fuzzy
 msgid ""
 "_policy_: a collection of rules which defines how objectives are to be "
 "achieved. A policy usually documents how certain items are to be "
@@ -252,6 +275,8 @@ msgid ""
 "controls the flow of data and information and defines who has access to that "
 "data and information."
 msgstr ""
+"<emphasis>策略</emphasis>(policy)： 一套用以规定如何达成目标的规则。 策略 一般用以描述如何对特定客体进行操作。 "
+"本章将在安全策略的范畴内讨论策略， 一套用以控制数据和信息流并规定其访问者的规则，就是其中一例。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:90
@@ -289,6 +314,7 @@ msgstr "理解 MAC 标签"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:97
+#, fuzzy
 msgid ""
 "A MAC label is a security attribute which may be applied to subjects and "
 "objects throughout the system. When setting a label, the administrator must "
@@ -297,6 +323,8 @@ msgid ""
 "loaded policy module, as policy modules interpret their attributes in "
 "different ways."
 msgstr ""
+"<acronym>MAC</acronym> 标签是一种安全属性，可以应用于整个系统中的主体和对象。在设置标签时，管理员必须了解其含义，以防止系统出现意外"
+"或不希望出现的行为。对象上可用的属性取决于加载的策略模块，因为策略模块以不同的方式解释其属性。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:99
@@ -427,6 +455,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:136
+#, fuzzy
 msgid ""
 "If the configuration is successful, the prompt will be returned without "
 "error. A common error is `Permission denied` which usually occurs when the "
@@ -440,6 +469,10 @@ msgid ""
 "file, or a user running at low integrity tries to change the label of a low "
 "integrity file to a high integrity label, these operations will fail."
 msgstr ""
+"如果配置成功，将不会返回错误提示。一个常见的错误是<errorname>Permission denied</errorname>，通常在设置或修改受限对"
+"象上的标签时发生。其他条件可能会产生不同的错误提示。例如，该文件可能不是试图重新标注对象的用户所拥有，该对象可能不存在，或者该对象可能只读。强制策略将不允"
+"许进程重新标记文件，可能是因为文件的属性、进程的属性或建议的新标签值的属性。例如，如果以低完整性运行的用户试图改变高完整性文件的标签，或者以低完整性运行的"
+"用户试图将低完整性文件的标签改变为高完整性标签，这些操作将失败。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:138
@@ -521,6 +554,7 @@ msgstr "数字标签"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:163
+#, fuzzy
 msgid ""
 "The Biba and MLS policy modules support a numeric label which may be set to "
 "indicate the precise level of hierarchical control. This numeric level is "
@@ -528,12 +562,14 @@ msgid ""
 "classification, only permitting access to that group or a higher group "
 "level. For example:"
 msgstr ""
+"Biba 和<acronym>MLS</acronym>策略模块支持数字标签，该标签可以设置为指示分层控制的精确级别。此数字级别用于将信息分区或分类到不同"
+"的分类组中，仅允许访问该组或更高的组级别。例如："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:167
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "biba/10:2+3+6(5:2+3-20:2+3+4+5+6)\n"
-msgstr ""
+msgstr "biba/10:2+3+6(5:2+3-20:2+3+4+5+6)\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:170
@@ -581,15 +617,19 @@ msgstr "用户和标签设置"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:180
+#, fuzzy
 msgid ""
 "Users are required to have labels so that their files and processes properly "
 "interact with the security policy defined on the system. This is configured "
 "in [.filename]#/etc/login.conf# using login classes. Every policy module "
 "that uses labels will implement the user class setting."
 msgstr ""
+"用户本身也需要设置标签， 以使其文件和进程能够正确地与系统上定义的安全策略互动， 这是通过使用登录分级在文件 <filename>login.conf</"
+"filename> 中配置的。 每个使用标签的策略模块都会进行用户分级设定。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:182
+#, fuzzy
 msgid ""
 "To set the user class default label which will be enforced by MAC, add a "
 "`label` entry. An example `label` entry containing every policy module is "
@@ -597,10 +637,13 @@ msgid ""
 "never enable every policy module. It is recommended that the rest of this "
 "chapter be reviewed before any configuration is implemented."
 msgstr ""
+"要设置将由<acronym>MAC</acronym>强制执行的用户类默认标签，添加<option>label</option>条目。示例<option>"
+"label</option>包含每个策略模块的标签条目如下所示。请注意，在实际配置中，管理员永远不会启用每个策略模块。建议在实施任何配置之前检查本章的其余"
+"部分。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:208
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "default:\\\n"
 "\t:copyright=/etc/COPYRIGHT:\\\n"
@@ -626,9 +669,34 @@ msgid ""
 "\t:ignoretime@:\\\n"
 "\t:label=partition/13,mls/5,biba/10(5-15),lomac/10[2]:\n"
 msgstr ""
+"default:\\\n"
+"\t:copyright=/etc/COPYRIGHT:\\\n"
+"\t:welcome=/etc/motd:\\\n"
+"\t:setenv=MAIL=/var/mail/$,BLOCKSIZE=K:\\\n"
+"\t:path=~/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:\\"
+"\n"
+"\t:manpath=/usr/share/man /usr/local/man:\\\n"
+"\t:nologin=/usr/sbin/nologin:\\\n"
+"\t:cputime=1h30m:\\\n"
+"\t:datasize=8M:\\\n"
+"\t:vmemoryuse=100M:\\\n"
+"\t:stacksize=2M:\\\n"
+"\t:memorylocked=4M:\\\n"
+"\t:memoryuse=8M:\\\n"
+"\t:filesize=8M:\\\n"
+"\t:coredumpsize=8M:\\\n"
+"\t:openfiles=24:\\\n"
+"\t:maxproc=32:\\\n"
+"\t:priority=0:\\\n"
+"\t:requirehome:\\\n"
+"\t:passwordtime=91d:\\\n"
+"\t:umask=022:\\\n"
+"\t:ignoretime@:\\\n"
+"\t:label=partition/13,mls/5,biba/10(5-15),lomac/10[2]:\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:211
+#, fuzzy
 msgid ""
 "While users can not modify the default value, they may change their label "
 "after they login, subject to the constraints of the policy. The example "
@@ -637,6 +705,10 @@ msgid ""
 "run at `10` until it chooses to change label, perhaps due to the user using "
 "`setpmac`, which will be constrained by Biba to the configured range."
 msgstr ""
+"尽管用户无法修改默认值，但是他们可以在登录后根据策略的限制更改其标签。上面的示例告诉 Biba 策略，进程的最低完整性为<literal>5，</lite"
+"ral>最大值为<literal>15，</literal>默认有效标签为<literal>10</literal>。进程将在<literal>10</l"
+"iteral>处运行，直到它选择更改标签，这种情况可能是由于用户使用<command>setpmac</command>导致，该用户将被 Biba "
+"约束在配置的范围。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:213
@@ -661,6 +733,7 @@ msgstr "设置网口标签"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:219
+#, fuzzy
 msgid ""
 "Labels may be set on network interfaces to help control the flow of data "
 "across the network. Policies using network interface labels function in the "
@@ -668,6 +741,8 @@ msgid ""
 "settings in Biba, for example, will not be permitted to access network "
 "interfaces with a label of `low`."
 msgstr ""
+"可以在网络接口上设置标签，以便控制网络中的数据流。使用网络接口标签的策略的功能与策略对对象的功能相同。例如，Biba "
+"中的高设置的用户将不允许访问带有<literal>low</literal>标签的网络接口。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:221
@@ -708,11 +783,12 @@ msgstr "规划安全配置"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:235
+#, fuzzy
 msgid ""
 "Before implementing any MAC policies, a planning phase is "
 "recommended. During the planning stages, an administrator should consider "
 "the implementation requirements and goals, such as:"
-msgstr ""
+msgstr "建议在<acronym>MAC</acronym>策略之前先进行规划。在规划阶段，管理员应考虑实施要求和目标，例如："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:237
@@ -743,6 +819,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:243
+#, fuzzy
 msgid ""
 "Consider how the MAC framework augments the security of the system as a "
 "whole. The various security policy modules provided by the MAC framework "
@@ -753,6 +830,9 @@ msgid ""
 "which typically hardens elements of a system which are used only for "
 "specific purposes. The downside to MLS is increased administrative overhead."
 msgstr ""
+"考虑<acronym>MAC</acronym>框架如何增强整个系统的安全性。<acronym>MAC</acronym>框架提供的各种安全策略模块可用于"
+"保护网络和文件系统或阻止用户访问某些端口和套接字。策略模块的最佳用途可能是一次加载多个安全策略模块，以便提供<acronym>MLS</acronym>环"
+"境。此方法不同于强化策略，后者通常强化系统仅用于特定目的的元素。<acronym>MLS</acronym>的缺点是管理开销增加。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:245
@@ -771,6 +851,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:247
+#, fuzzy
 msgid ""
 "A system utilizing MAC guarantees that a user will not be permitted to "
 "change security attributes at will. All user utilities, programs, and "
@@ -778,6 +859,8 @@ msgid ""
 "selected security policy modules and control of the MAC access rules is in "
 "the hands of the system administrator."
 msgstr ""
+"使用<acronym>MAC</acronym>的系统保证不允许用户随时更改安全属性。所有用户实用程序、程序和脚本必须在所选安全策略模块提供的访问规则的约"
+"束范围内工作，<acronym>MAC</acronym>访问规则的控制由系统管理员负责。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:249
@@ -808,6 +891,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:253
+#, fuzzy
 msgid ""
 "Each security policy module has a unique way of dealing with the overall "
 "security of a system. Module selection should be based on a well thought out "
@@ -816,6 +900,8 @@ msgid ""
 "offered by the MAC framework will help administrators choose the best "
 "policies for their situations."
 msgstr ""
+"每个安全策略模块都有处理系统整体安全性的独特方法。模块选择应基于经过深思熟虑的安全策略，可能需要修订和重新实施。了解<acronym>MAC</acron"
+"ym>框架提供的不同安全策略模块将有助于管理员选择适合其情况的最佳策略。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:255
@@ -827,6 +913,7 @@ msgstr "本章的其余部分将介绍可用的模块，介绍其使用和配置
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:260
+#, fuzzy
 msgid ""
 "Implementing MAC is much like implementing a firewall since care must be "
 "taken to prevent being completely locked out of the system. The ability to "
@@ -834,6 +921,8 @@ msgid ""
 "implementation of MAC over a remote connection should be done with extreme "
 "caution."
 msgstr ""
+"实现<acronym>MAC</acronym>与实现防火墙非常类似，因为必须小心防止被完全锁定在系统之外。应考虑恢复到以前的配置的能力，并且应极其小心地"
+"通过远程连接实现<acronym>MAC</acronym>。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/mac/_index.adoc:263
@@ -1250,6 +1339,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:410
+#, fuzzy
 msgid ""
 "When this policy is enabled, users will only be permitted to see their "
 "processes, and any others within their partition, but will not be permitted "
@@ -1257,6 +1347,9 @@ msgid ""
 "user in the `insecure` class will not be permitted to access `top` as well "
 "as many other commands that must spawn a process."
 msgstr ""
+"当启用了这个规则时， 用户将只能看到他们自己的， 以及其他与他们同处一个 partition 的进程， 而不能使用能够越过 partition 的工具。 "
+"例如， <literal>insecure</literal> class 中的用户， 就无法使用 <command>top</command> 命令， "
+"以及其他需要产生新进程的工具。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:412
@@ -1344,12 +1437,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:451
+#, fuzzy
 msgid ""
 "Anything labeled with `mls/low` will have a low clearance level and not be "
 "permitted to access information of a higher level. This label also prevents "
 "objects of a higher clearance level from writing or passing information to a "
 "lower level."
 msgstr ""
+"<literal>mls/low</literal> 标签包含了最低配置， 从而允许其他客体支配它。 任何标记为 <literal>mls/low</"
+"literal> 的客体将是地透明度的， 从而不允许访问更高级别的信息。 此外， 这个标签也阻止拥有较高透明度的客体向其写入或传递信息。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:452
@@ -1360,11 +1456,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:453
+#, fuzzy
 msgid ""
 "`mls/high` is the highest level of clearance possible. Objects assigned this "
 "label will hold dominance over all other objects in the system; however, "
 "they will not permit the leaking of information to objects of a lower class."
 msgstr ""
+"<literal>mls/high</literal> 标签是允许的最高级别透明度。 指定了这个标签的客体将支配系统中的其他客体； 但是， "
+"它们将不允许向较低级别的客体泄露信息。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:455
@@ -1378,12 +1477,15 @@ msgstr "提供了一些非层次分类的层次安全模型。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:458
+#, fuzzy
 msgid ""
 "Fixed rules of `no read up, no write down`. This means that a subject can "
 "have read access to objects on its own level or below, but not "
 "above. Similarly, a subject can have write access to objects on its own "
 "level or above, but not beneath."
 msgstr ""
+"固定规则<literal>不允许向上读， 不允许向下写</literal>。这意味着主体可以在其自身级别或以下级别（但不能高于）对对象的读取访问权限。同样"
+"，主体可以具有对对象本身级别或以上对象的写入访问权限，但不能在其下方。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:459
@@ -1472,6 +1574,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:487
+#, fuzzy
 msgid ""
 "Beyond the three basic label options, an administrator may group users and "
 "groups as required to block the information flow between them. It might be "
@@ -1481,14 +1584,20 @@ msgid ""
 "project levels. Regardless of the classification method, a well thought out "
 "plan must exist before implementing a restrictive policy."
 msgstr ""
+"除了前面介绍的三种基本标签选项之外， 管理员还可以根据需要将用户和用户组进行分组， 以阻止它们之间的信息流。 一些人们比较熟悉的信息限界词汇， 如 "
+"<literal>机密</literal>、 <literal>秘密</literal>， 以及 <literal>绝密</literal> "
+"可以方便您理解这一概念。 管理员也可以简单地根据项目级别建不同的分组。 无论采用何种分类方法， 在实施限制性的策略之前， 都必须首先想好如何进行规划。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:489
+#, fuzzy
 msgid ""
 "Some example situations for the MLS policy module include an e-commerce web "
 "server, a file server holding critical company information, and financial "
 "institution environments."
 msgstr ""
+"<acronym>MLS</acronym>策略模块最典型的用例是电子商务的 web 服务器， 其上的文件服务保存公司的重要信息以及金融机构的情况。 "
+"对于只有两三个用户的个人工作站而言， 则可能不甚适用。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/mac/_index.adoc:491
@@ -1523,11 +1632,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:502
+#, fuzzy
 msgid ""
 "In Biba environments, an \"integrity\" label is set on each subject or "
 "object. These labels are made up of hierarchical grades and non-hierarchical "
 "components. As a grade ascends, so does its integrity."
 msgstr ""
+"在 Biba 环境中， <quote>integrity</quote> (完整性) 标签， 将设置在每一个主体或客体上。 这些标签是按照层次级别建立的。"
+" 如果客体或主体的级别被提升， 其完整性也随之提升。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:504
@@ -1536,11 +1648,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:506
+#, fuzzy
 msgid ""
 "`biba/low` is considered the lowest integrity an object or subject may "
 "have. Setting this on objects or subjects blocks their write access to "
 "objects or subjects marked as `biba/high`, but will not prevent read access."
 msgstr ""
+"<literal>biba/low</literal> "
+"标签是客体或主体所能拥有的最低完整性级别。在客体或主体上设置它，将阻止其在更高级别客体或主体对其进行的写操作，虽然读仍被允许。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:507
@@ -1707,6 +1822,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:549
+#, fuzzy
 msgid ""
 "The Low-watermark integrity policy works almost identically to Biba, with "
 "the exception of using floating labels to support subject demotion via an "
@@ -1714,9 +1830,15 @@ msgid ""
 "`[auxgrade]`. When assigning a policy with an auxiliary grade, use the "
 "syntax `lomac/10[2]`, where `2` is the auxiliary grade."
 msgstr ""
+"<acronym>MAC</acronym> 版本的 Low-watermark 完整性策略不应与较早的 "
+"<citerefentry><refentrytitle>lomac</refentrytitle><manvolnum>4</manvolnum></"
+"citerefentry> 实现相混淆， 除了使用浮动的标签来支持主体通过辅助级别区间降级之外， 其工作方式与 Biba 大体相似。 这一次要的区间以 "
+"<literal>[auxgrade]</literal> 的形式出现。 当指定包含辅助级别的 lomac 策略时， 其形式应类似于： <literal>"
+"lomac/10[2]</literal> 这里数字二 (2) 就是辅助级别。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:551
+#, fuzzy
 msgid ""
 "This policy relies on the ubiquitous labeling of all system objects with "
 "integrity labels, permitting subjects to read from low integrity objects and "
@@ -1724,6 +1846,9 @@ msgid ""
 "integrity objects using `[auxgrade]`. The policy may provide greater "
 "compatibility and require less initial configuration than Biba."
 msgstr ""
+"<acronym>MAC</acronym> LOMAC 策略依赖于系统客体上存在普适的标签， 这样就允许主体从较低完整性级别的客体读取， "
+"并对主体的标签降级， 以防止其在之后写高完整性级别的客体。 这就是前面讨论的 <literal>[auxgrade]</literal> 选项， "
+"因此这个策略能够提供更大的兼容性， 而所需要的初始配置也要比 Biba 少。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:553
@@ -1769,14 +1894,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:570
+#, fuzzy
 msgid "Begin by adding the following line to [.filename]#/boot/loader.conf#:"
-msgstr ""
+msgstr "首先将以下行添加到 <filename>/boot/loader.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:574
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "mac_seeotheruids_load=\"YES\"\n"
-msgstr ""
+msgstr "mac_seeotheruids_load=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:577
@@ -1787,12 +1913,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:581
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ugidfw_enable=\"YES\"\n"
-msgstr ""
+msgstr "ugidfw_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:584
+#, fuzzy
 msgid ""
 "Default rules stored in [.filename]#/etc/rc.bsdextended# will be loaded at "
 "system initialization. However, the default entries may need "
@@ -1800,6 +1927,9 @@ msgid ""
 "everything may be left commented out except the last two lines in order to "
 "force the loading of user owned system objects by default."
 msgstr ""
+"默认规则保存在 <filename>/etc/rc.bsdextended</filename> 中， 并在系统初始化时加载； 但是， "
+"其中的默认项可能需要进行一些改动。 因为这台机器只为获得了授权的用户提供服务， 因此除了最后两项之外， 其它内容都应保持注释的状态。 "
+"这两项规则将默认强制加载属于用户的系统客体。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:586
@@ -1858,14 +1988,15 @@ msgstr "创建一个 insecure (不安全) 用户 Class"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:604
+#, fuzzy
 msgid ""
 "Begin the procedure by adding the following user class to "
 "[.filename]#/etc/login.conf#:"
-msgstr ""
+msgstr "首先是在 <filename>/etc/login.conf</filename> 文件中加入一个新的用户 class："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:630
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "insecure:\\\n"
 ":copyright=/etc/COPYRIGHT:\\\n"
@@ -1891,6 +2022,29 @@ msgid ""
 ":ignoretime@:\\\n"
 ":label=biba/10(10-10):\n"
 msgstr ""
+"insecure:\\\n"
+":copyright=/etc/COPYRIGHT:\\\n"
+":welcome=/etc/motd:\\\n"
+":setenv=MAIL=/var/mail/$,BLOCKSIZE=K:\\\n"
+":path=~/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin\n"
+":manpath=/usr/share/man /usr/local/man:\\\n"
+":nologin=/usr/sbin/nologin:\\\n"
+":cputime=1h30m:\\\n"
+":datasize=8M:\\\n"
+":vmemoryuse=100M:\\\n"
+":stacksize=2M:\\\n"
+":memorylocked=4M:\\\n"
+":memoryuse=8M:\\\n"
+":filesize=8M:\\\n"
+":coredumpsize=8M:\\\n"
+":openfiles=24:\\\n"
+":maxproc=32:\\\n"
+":priority=0:\\\n"
+":requirehome:\\\n"
+":passwordtime=91d:\\\n"
+":umask=022:\\\n"
+":ignoretime@:\\\n"
+":label=biba/10(10-10):\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:633
@@ -1899,9 +2053,9 @@ msgstr "并在 default 用户 class 中加入："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:637
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ":label=biba/high:\n"
-msgstr ""
+msgstr ":label=biba/high:\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:640
@@ -1968,8 +2122,10 @@ msgstr "创建上下文文件"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:674
+#, fuzzy
 msgid "A contexts file should now be created as [.filename]#/etc/policy.contexts#:"
 msgstr ""
+"接下来需要创建一个上下文文件。 您可以把下面的实例放到 <filename>/etc/policy.contexts</filename> 中："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:678
@@ -2067,18 +2223,23 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:714
+#, fuzzy
 msgid "Next, add these edits to the main section of [.filename]#/etc/mac.conf#:"
-msgstr ""
+msgstr "在 <filename>/etc/mac.conf</filename> 文件中的 main 小节需要进行下面的修改："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:721
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "default_labels file ?biba\n"
 "default_labels ifnet ?biba\n"
 "default_labels process ?biba\n"
 "default_labels socket ?biba\n"
 msgstr ""
+"default_labels file ?biba\n"
+"default_labels ifnet ?biba\n"
+"default_labels process ?biba\n"
+"default_labels socket ?biba\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/mac/_index.adoc:723
@@ -2088,33 +2249,40 @@ msgstr "载入配置文件"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:726
+#, fuzzy
 msgid ""
 "To finish the configuration, add the following lines to "
 "[.filename]#/boot/loader.conf#:"
-msgstr ""
+msgstr "在 <filename>/boot/loader.conf</filename> 中增加下列内容："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:732
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "mac_biba_load=\"YES\"\n"
 "mac_seeotheruids_load=\"YES\"\n"
 "security.mac.biba.trust_all_interfaces=1\n"
 msgstr ""
+"mac_biba_load=\"YES\"\n"
+"mac_seeotheruids_load=\"YES\"\n"
+"security.mac.biba.trust_all_interfaces=1\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/mac/_index.adoc:735
+#, fuzzy
 msgid ""
 "And the following line to the network card configuration stored in "
 "[.filename]#/etc/rc.conf#. If the primary network configuration is done via "
 "DHCP, this may need to be configured manually after every system boot:"
 msgstr ""
+"将下述内容加入 <filename>rc.conf</filename> 中的网络接口配置。 如果主 Internet 配置是通过 "
+"<acronym>DHCP</acronym> 完成的， 则需要在每次系统启动之后手工执行类似的配置："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/mac/_index.adoc:739
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "maclabel biba/equal\n"
-msgstr ""
+msgstr "maclabel biba/equal\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/mac/_index.adoc:741
