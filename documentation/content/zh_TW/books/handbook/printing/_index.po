@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: 2021-04-05 18:35+0000\n"
+"PO-Revision-Date: 2021-04-12 20:54+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookprinting_index/zh_TW/>\n"
@@ -139,8 +139,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:100
+#, fuzzy
 msgid "  Start the service:"
-msgstr ""
+msgstr "  啟動服務："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:105
@@ -236,10 +237,11 @@ msgstr ""
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:144
+#, fuzzy
 msgid ""
 "The parallel port device is [.filename]#/dev/lpt0#. This device appears "
 "whether a printer is attached or not, it is not autodetected."
-msgstr ""
+msgstr "並列埠裝置使用 <filename>/dev/lpt0</filename>，此裝置不論印表機是否連接上都會存在，它並不會自動偵測。"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:146
@@ -326,6 +328,7 @@ msgstr "摘要"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:167
+#, fuzzy
 msgid ""
 "Wired network connections are usually the easiest to set up and give the "
 "fastest printing. For direct connection to the computer, `USB` is preferred "
@@ -335,6 +338,9 @@ msgid ""
 "like baud rate and parity bits must add to the complexity. Fortunately, "
 "serial printers are rare."
 msgstr ""
+"有線網路連線通常是安裝最簡單的方式，且可以提供快速的列印。若要直接連接到電腦，較建議使用 <acronym>USB</acronym>，由於較快速、簡單。"
+"並列連線仍然可以使用，但有纜線長度與速度上的限制。而序列連線則比較難設定，不同型號的纜線佈線方式不同，且通訊參數如傳輸速率及同位檢查增加了複雜性，所幸序列"
+"印表機並不多。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/printing/_index.adoc:169
@@ -357,6 +363,7 @@ msgstr ""
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:175
+#, fuzzy
 msgid ""
 "Plain `ASCII` text is the simplest way to send data to a printer. Characters "
 "correspond one to one with what will be printed: an `A` in the data prints "
@@ -366,6 +373,9 @@ msgid ""
 "little or no encoding or translation. The printed output corresponds "
 "directly with what was sent."
 msgstr ""
+"純 <acronym>ASCII</acronym> 文字是傳送資料到印表機最簡單的方式，一個字元對應一個要列印的文字：資料中的 <literal>A</"
+"literal> 會列印一個 <literal>A</literal> 在頁面。可以使用的格式非常少，沒有辦法選擇字型或者比例間距。強迫使用簡單的純 "
+"<acronym>ASCII</acronym> 為的是讓文字可以直接從電腦列印只需一點或甚至不需要編碼或轉譯，列印的結果可直接對應傳送的內容。"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:177
@@ -421,6 +431,7 @@ msgstr "以主機為基礎 (Host-Based)"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:189
+#, fuzzy
 msgid ""
 "Manufacturers can reduce the cost of a printer by giving it a simple "
 "processor and very little memory. These printers are not capable of printing "
@@ -428,6 +439,8 @@ msgid ""
 "the host computer and then sent to the printer. These are called "
 "_host-based_ printers."
 msgstr ""
+"製造商可能會使用簡單的處理器和較小的記憶體來降低印表機的成本，這些印表機無法列印純文字，相反的，文字與圖形會先在機器上的驅動程式畫完後傳送到印表機。"
+"這些稱為<emphasis>以主機為基礎 (Host-based)</emphasis> 的印表機。"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/printing/_index.adoc:191
@@ -621,32 +634,37 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:284
+#, fuzzy
 msgid ""
 "<.> The device where the printer is connected. Replace this line with the "
 "appropriate one for the connection type shown here."
-msgstr ""
+msgstr "印表機所連接到裝置。替換此行為正確的連線類型，如此處所示。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:286
+#, fuzzy
 msgid "<.> Suppress the printing of a header page at the start of a print job."
-msgstr ""
+msgstr "在列印工作開始時不列印首頁。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:288
+#, fuzzy
 msgid "<.> Do not limit the maximum size of a print job."
-msgstr ""
+msgstr "不限制列印工作的最大尺寸。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:290
+#, fuzzy
 msgid ""
 "<.> The path to the spooling directory for this printer. Each printer uses "
 "its own spooling directory."
-msgstr ""
+msgstr "此印表機的緩衝 (Spooling) 目錄路徑，每台印表機會自己使用一個獨立的緩衝 (Spooling) 目錄。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:292
+#, fuzzy
 msgid "<.> The log file where errors on this printer will be reported."
-msgstr ""
+msgstr "回報此印表機的錯誤的日誌檔。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/printing/_index.adoc:294
