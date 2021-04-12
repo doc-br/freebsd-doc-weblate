@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:55-0300\n"
-"PO-Revision-Date: 2021-04-05 18:35+0000\n"
+"PO-Revision-Date: 2021-04-12 20:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookdisks_index/zh_TW/>\n"
@@ -222,10 +222,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:116
+#, fuzzy
 msgid ""
 "Finally, an entry is added to [.filename]#/etc/fstab# so the new disk will "
 "be mounted automatically at startup:"
-msgstr ""
+msgstr "最後，將磁碟項目加入到 <filename>/etc/fstab</filename>，讓啟動時會自動掛載新的磁碟："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:120
@@ -367,6 +368,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:198
+#, fuzzy
 msgid ""
 "There is risk of data loss when modifying the partition table of a mounted "
 "file system. It is best to perform the following steps on an unmounted file "
@@ -374,6 +376,9 @@ msgid ""
 "absolutely necessary, a mounted file system can be resized after disabling "
 "GEOM safety features:"
 msgstr ""
+"在掛載的檔案系統上修改分割區表可能會造成資料遺失。最好的方式是在未掛載檔案系統的情況下 (使用 Live <acronym>CD-ROM</"
+"acronym> 或 <acronym>USB</acronym> 裝置) 執行以下步驟。雖然如此，若仍要這樣做的話，在關閉 GEOM "
+"安全性功能之後可以在掛載的檔案系統上修改分割區表："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:202
@@ -383,6 +388,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:207
+#, fuzzy
 msgid ""
 "Resize the partition, leaving room to recreate a swap partition of the "
 "desired size. The partition to resize is specified with `-i`, and the new "
@@ -390,6 +396,9 @@ msgid ""
 "with `-a`. This only modifies the size of the partition. The file system in "
 "the partition will be expanded in a separate step."
 msgstr ""
+"重設分割區大小並保留要用來重建交換分割區的空間，要重設大小的分割區可以用 <option>-i</option> 來指定，而要重設的大小可用 "
+"<option>-s</option> 來指定，若要對齊分割區可以使用 "
+"<option>-a</option>。這個動作只會修改分割區大小，分割區中的檔案系統需在另一個步驟擴增。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:217
@@ -406,10 +415,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:220
+#, fuzzy
 msgid ""
 "Recreate the swap partition and activate it. If no size is specified with "
 "`-s`, all remaining space is used:"
-msgstr ""
+msgstr "重建交換分割區並且啟動，若不使用 <option>-s</option> 指定大小則會使用所有剩餘的空間："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:231
@@ -559,10 +569,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:303
+#, fuzzy
 msgid ""
 "The brand, device node ([.filename]#da0#), speed, and size will differ "
 "according to the device."
-msgstr ""
+msgstr "不同的裝置會有不同的廠牌、裝置節點 (<filename>da0</filename>)、速度與大小。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:305
@@ -607,12 +618,15 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:326
+#, fuzzy
 msgid ""
 "Allowing untrusted users to mount arbitrary media, by enabling "
 "`vfs.usermount` as described below, should not be considered safe from a "
 "security point of view. Most file systems were not built to safeguard "
 "against malicious devices."
 msgstr ""
+"要允許未被信任的使用者掛載任意媒體，可開啟 <varname>vfs."
+"usermount</varname>，詳細說明如下。從安全性的角度來看這並不是安全的，大多的檔案系統並不會防範惡意裝置。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:329
@@ -666,10 +680,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:356
+#, fuzzy
 msgid ""
 "Then, instruct the system to allow regular users to mount file systems by "
 "adding the following line to [.filename]#/etc/sysctl.conf#:"
-msgstr ""
+msgstr "然後，加入以下行到 <filename>/etc/sysctl.conf</filename> 指示系統允許正常使用者掛載檔案系統："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:360
@@ -838,11 +853,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:450
+#, fuzzy
 msgid ""
 "Each file system that can be automatically mounted appears as a directory in "
 "[.filename]#/media/#. The directory is named after the file system label. If "
 "the label is missing, the directory is named after the device node."
 msgstr ""
+"可以被自動掛載的檔案系統會在 <filename>/media/</filename> "
+"中以目錄呈現，會以檔案系統的標籤來命名目錄，若標籤遺失，則會以裝置節點命名。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:452
@@ -2275,10 +2293,11 @@ msgstr "檔案系統快照 (Snapshot)，對於還原已刪除的檔案或先前�
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1105
+#, fuzzy
 msgid ""
 "Copies of whole file systems or disks which are synchronized with another "
 "system on the network using a scheduled package:net/rsync[]."
-msgstr ""
+msgstr "整個檔案系統或磁碟的複本，使用排程的 <package>net/rsync</package> 來與網路上的另一個系統同步。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1106
@@ -2431,11 +2450,14 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1156
+#, fuzzy
 msgid ""
 "This example creates a compressed backup of the current directory and saves "
 "it to [.filename]#/tmp/mybackup.tgz#. When creating a backup file, make sure "
 "that the backup is not saved to the same directory that is being backed up."
 msgstr ""
+"這個例子會建立目前目錄的壓縮備份並儲存至 <filename>/tmp/mybackup."
+"tgz</filename>，在建立備份檔案時，要確認備份檔案不要儲存到與目前備份目錄相同的目錄。"
 
 #. type: Block title
 #: documentation/content/en/books/handbook/disks/_index.adoc:1157
@@ -2451,6 +2473,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1167
+#, fuzzy
 msgid ""
 "To restore the entire backup, `cd` into the directory to restore into and "
 "specify the name of the backup. Note that this will overwrite any newer "
@@ -2458,6 +2481,8 @@ msgid ""
 "temporary directory or specify the name of the file within the backup to "
 "restore."
 msgstr ""
+"要還原整個備份，先 <command>cd</command> 進入要放置還原檔的目錄並指定備份的名稱。注意，這個動作會覆寫任何在該還原目錄中任何較新版的"
+"檔案，當不確定時，可先還原到一個暫時的目錄或指定備份檔中的檔案做還原。"
 
 #. type: Block title
 #: documentation/content/en/books/handbook/disks/_index.adoc:1168
@@ -2565,12 +2590,15 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1213
+#, fuzzy
 msgid ""
 "In FreeBSD, `mt` is used to control operations of the tape drive, such as "
 "seeking through files on a tape or writing tape control marks to the "
 "tape. For example, the first three files on a tape can be preserved by "
 "skipping past them before writing a new file:"
 msgstr ""
+"在 FreeBSD 中會使用 <command>mt</command> "
+"來做磁帶機的控制操作，例如在磁帶中搜尋檔案或寫入磁帶控制記號到磁帶。例如，要保留磁帶上的前三個檔案，可以在寫入新檔案前跳過這些檔案："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1217
@@ -2691,6 +2719,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1267
+#, fuzzy
 msgid ""
 "Store this printout and a copy of the installation media in a secure "
 "location. Should an emergency restore be needed, boot into the installation "
@@ -2698,6 +2727,8 @@ msgid ""
 "used to view the current state of the system, and if needed, to reformat "
 "disks and restore data from backups."
 msgstr ""
+"在安全的地方保存這份列印結果與安裝媒體的複本，在緊急還原時可能會需要，接著開機進入安裝媒體並選擇 <literal>Live CD</literal> "
+"以存取救援 Shell (Rescue shell)，這個救援模式可以用來檢視目前系統的狀態，若有需要，可重新格式化磁碟然後自備份還原資料。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1271
@@ -3178,10 +3209,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/disks/_index.adoc:1476
+#, fuzzy
 msgid ""
 "To enable group quotas, use `groupquota` instead. To enable both user and "
 "group quotas, separate the options with a comma:"
-msgstr ""
+msgstr "要開啟群組配額，則使用 <option>groupquota</option>。要同時開啟使用者及群組配額，可使用逗號隔開選項："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/disks/_index.adoc:1480
