@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-05 18:35+0000\n"
+"PO-Revision-Date: 2021-04-12 20:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookx11_index/zh_TW/>\n"
@@ -44,6 +44,7 @@ msgstr "概述"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:48
+#, fuzzy
 msgid ""
 "An installation of FreeBSD using bsdinstall does not automatically install a "
 "graphical user interface. This chapter describes how to install and "
@@ -51,6 +52,9 @@ msgid ""
 "provide a graphical environment. It then describes how to find and install a "
 "desktop environment or window manager."
 msgstr ""
+"使用 <application>bsdinstall</application> 安裝 FreeBSD 並不會自動安裝圖型化使用者介面。"
+"本章將說明如何安裝並設定 <application>Xorg</application>，該應用程式提供開放源碼的 X Window "
+"系統來提供圖型化環境。接著會說明如何找到並安裝桌面環境或視窗管理程式。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:52
@@ -133,6 +137,7 @@ msgstr "X 伺服器 (X Server)"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:75
+#, fuzzy
 msgid ""
 "X was designed from the beginning to be network-centric, and adopts a "
 "\"client-server\" model. In this model, the \"X server\" runs on the "
@@ -144,6 +149,10 @@ msgid ""
 "\"X server\" to be the big powerful machine down the hall, and the \"X "
 "client\" to be the machine on their desk."
 msgstr ""
+"X 最初設計是以網路為中心，採用 <quote>client-server</quote> 架構。在此架構下 <quote>X 伺服器</quote> "
+"在有鍵盤、螢幕、滑鼠的電腦上運作。該伺服器負責的工作包含管理顯示、處理來自鍵盤、滑鼠的輸入及來自其他設備 (如平板或或影像投影機) "
+"的輸入或輸出。這點可能會讓人感到困惑，因為 X 使用的術語與一般的認知剛好相反。 一般認知會以為 <quote>X 伺服器</quote> "
+"是要在最強悍的主機上執行，而 <quote>X 客戶端</quote> 才是在桌機上面執行，實際上卻是相反。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/x11/_index.adoc:76
@@ -180,6 +189,7 @@ msgstr "視窗管理程式 (Window Manager)"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:83
+#, fuzzy
 msgid ""
 "X does not dictate what windows should look like on-screen, how to move them "
 "around with the mouse, which keystrokes should be used to move between "
@@ -193,6 +203,11 @@ msgid ""
 "desktop's look-and-feel. Window managers are available in the "
 "[.filename]#x11-wm# category of the Ports Collection."
 msgstr ""
+"X 並不規定螢幕上的視窗該長什麼樣、要如何移動滑鼠指標、 要用什麼鍵來在視窗切換、每個視窗的標題列長相，及是否該有關閉按鈕，等等。事實上，X "
+"把這部分交給所謂的視窗管理程式來管理。可用的<link xlink:href=\"http://www.xwinman.org/\""
+">視窗管理程式有很多種</link>，每一種視窗管理程式都提供不同的使用介面風格：有些支援虛擬桌面，有些允許自訂組合鍵來管理桌面，有些有 "
+"<quote>開始</quote> 鈕，有些則是可更換佈景主題，可自行安裝新的佈景主題以更換外觀。 視窗管理程式可在 Port 套件集的 "
+"<filename>x11-wm</filename> 分類找到。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:85
@@ -233,6 +248,7 @@ msgstr "視窗管理程式負責滑鼠指標的聚焦政策。 聚焦政策指�
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:93
+#, fuzzy
 msgid ""
 "One focus policy is called \"click-to-focus\". In this model, a window "
 "becomes active upon receiving a mouse click. In the \"focus-follows-mouse\" "
@@ -247,6 +263,13 @@ msgid ""
 "keystrokes will now be directed to this window, even if the cursor is moved "
 "to another window."
 msgstr ""
+"通常較為人熟悉的聚焦政策叫做 <quote>click-to-focus</quote>，這個模式中，滑鼠點選到的視窗便會處於作用中 (Active) "
+"的狀態。在 <quote>focus-follows-mouse</quote> "
+"模式滑鼠指標所在的視窗便是作用中的視窗，只要把滑鼠移到其他視窗就可以改變作用中的視窗，若滑鼠移到根視窗 (Root Window)，則會聚焦在根視窗。在 "
+"<quote>sloppy-focus</quote> "
+"模式，既使滑鼠移到根視窗，仍然會聚焦在最後聚焦的視窗上，此模式只有當滑鼠進入新的視窗時才會聚焦於該視窗，而非離開目前視窗時。<quote>click-"
+"to-focus</quote> "
+"模式用滑鼠點擊來決定作用中的視窗，且該視窗會被置頂到所有其他視窗之前，即使滑鼠移到其他視窗，所有的鍵盤輸入仍會由該視窗所接收。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:95
@@ -267,6 +290,7 @@ msgstr "視窗元件 (Widget)"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:98
+#, fuzzy
 msgid ""
 "Widget is a term for all of the items in the user interface that can be "
 "clicked or manipulated in some way. This includes buttons, check boxes, "
@@ -276,6 +300,10 @@ msgid ""
 "applications will have a different look and feel, depending upon which "
 "widget toolkit was used to create the application."
 msgstr ""
+"視窗元件指的是在所有在使用者介面上可被點選或操作的項目，這包括按鈕、核選方塊、單選按鈕、圖示及清單。 視窗元件工具包 (Widget toolkit) "
+"是指用來建立圖型化應用程式的一系列的視窗元件。目前有數個有名的視窗元件工具包，包含 <application>KDE</application> "
+"所使用的 Qt、<application>GNOME</application> 所使用的 GTK+。 "
+"因此應用程式會依其開發時所選用的視窗元件工具包而有不同的外觀。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/x11/_index.adoc:100
@@ -323,12 +351,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:122
+#, fuzzy
 msgid ""
 "A smaller version of the X system suitable for experienced users is "
 "available in package:x11/xorg-minimal[]. Most of the documents, libraries, "
 "and applications will not be installed. Some applications require these "
 "additional components to function."
 msgstr ""
+"較精簡版本的 X 系統適合給有經驗的使用者使用，可至 <package>x11/xorg-minimal</package> "
+"取得。這個版本就不會安裝大多數的文件、函數庫以及應用程式，而部份應用程式會需要這些額外的元件才能運作。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/x11/_index.adoc:124
@@ -477,20 +508,26 @@ msgstr "目錄"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:193
+#, fuzzy
 msgid ""
 "Xorg looks in several directories for configuration "
 "files. [.filename]#/usr/local/etc/X11/# is the recommended directory for "
 "these files on FreeBSD. Using this directory helps keep application files "
 "separate from operating system files."
 msgstr ""
+"<application>Xorg</application> 會查看數個目錄來尋找設定檔，在 FreeBSD 較建議使用 <filename>/usr/"
+"local/etc/X11/</filename> 來存放這些設定檔，使用這個目錄可以幫助將應用程式檔案與作業系統檔案分離。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:195
+#, fuzzy
 msgid ""
 "Storing configuration files in the legacy [.filename]#/etc/X11/# still "
 "works. However, this mixes application files with the base FreeBSD files and "
 "is not recommended."
 msgstr ""
+"儲存設定檔在傳統的 <filename>/etc/X11/</filename> 仍可運作，但並不建議將應用程式檔案與基礎 FreeBSD "
+"檔案混合在一起存放。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/x11/_index.adoc:197
@@ -500,6 +537,7 @@ msgstr "單檔或多檔"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:200
+#, fuzzy
 msgid ""
 "It is easier to use multiple files that each configure a specific setting "
 "than the traditional single [.filename]#xorg.conf#. These files are stored "
@@ -507,6 +545,9 @@ msgid ""
 "directory. The full path is typically "
 "[.filename]#/usr/local/etc/X11/xorg.conf.d/#."
 msgstr ""
+"使用多檔，每一個檔案只設定一個指定項目會較傳統使用單一 <filename>xorg.conf</filename> 設定來的簡單。"
+"這些檔案會存放在主設定檔目錄下的 <filename>xorg.conf.d/</filename> 子目錄，完整路徑通常為 <filename>/"
+"usr/local/etc/X11/xorg.conf.d/</filename>。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:202
@@ -515,11 +556,14 @@ msgstr "於本節稍後會有這些檔案的範例。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:204
+#, fuzzy
 msgid ""
 "The traditional single [.filename]#xorg.conf# still works, but is neither as "
 "clear nor as flexible as multiple files in the [.filename]#xorg.conf.d/# "
 "subdirectory."
 msgstr ""
+"傳統單一 <filename>xorg.conf</filename> 的方式仍可運作，但比起在 <filename>xorg.conf.d/</"
+"filename> 子目錄中的多檔設定方式較不明瞭且沒有彈性。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/x11/_index.adoc:206
@@ -529,12 +573,15 @@ msgstr "顯示卡"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:209
+#, fuzzy
 msgid ""
 "Because of changes made in recent versions of FreeBSD, it is now possible to "
 "use graphics drivers provided by the Ports framework or as packages. As "
 "such, users can use one of the following drivers available from "
 "package:graphics/drm-kmod[]."
 msgstr ""
+"由於最近 FreeBSD 版本所做的變更，現在可以使用由 Port 或套件所提供的繪圖驅動程式，所以使用者可以使用下列來自 <package>"
+"graphics/drm-kmod</package> 的驅動程式。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/x11/_index.adoc:211
@@ -646,10 +693,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:245
+#, fuzzy
 msgid ""
 "Several NVIDIA drivers are available in the [.filename]#x11# category of the "
 "Ports Collection. Install the driver that matches the video card."
 msgstr ""
+"有數個 NVIDIA 驅動程式可於 Port 套件集中的 <filename>x11</filename> 分類取得，請安裝其中與顯示卡相符的驅動程式。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:247
@@ -707,10 +756,11 @@ msgstr "其他顯示卡"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:260
+#, fuzzy
 msgid ""
 "Drivers for some less-common video cards can be found in the "
 "[.filename]#x11-drivers# directory of the Ports Collection."
-msgstr ""
+msgstr "較不常見的顯示卡驅動程式可在 Port 套件集的 <filename>x11-drivers</filename> 目錄找到。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:262
@@ -1170,12 +1220,15 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:509
+#, fuzzy
 msgid ""
 "X can be closed with a combination of keys. By default, that key combination "
 "is not set because it conflicts with keyboard commands for some "
 "applications. Enabling this option requires changes to the keyboard "
 "`InputDevice` section:"
 msgstr ""
+"X 可以使用組合鍵來關閉，預設並未設定組合鍵，因為該組合鍵與部份應用程式的鍵盤指令衝突。要開啟這個選項需要更改鍵盤 "
+"<literal>InputDevice</literal> 節："
 
 #. type: Block title
 #: documentation/content/en/books/handbook/x11/_index.adoc:510
@@ -1310,11 +1363,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:582
+#, fuzzy
 msgid ""
 "After the new configuration has been adjusted and tested, it can be split "
 "into smaller files in the normal location, "
 "[.filename]#/usr/local/etc/X11/xorg.conf.d/#."
 msgstr ""
+"在新設定檔調整與測試過後，便可分開成較小的檔案放置到正常的位置 <filename>/usr/local/etc/X11/xorg.conf.d/"
+"</filename>。"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/x11/_index.adoc:584
@@ -1376,11 +1432,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:607
+#, fuzzy
 msgid ""
 "And likewise with the freefont or other collections. To have the X server "
 "detect these fonts, add an appropriate line to the X server configuration "
 "file ([.filename]#/etc/X11/xorg.conf#), which reads:"
 msgstr ""
+"同樣的安裝方式也適用 Freefont 或其他字型集。要讓 X 伺服器偵測到這些新安裝的字型，可加入適當的設定到 X 伺服器設定檔 "
+"(<filename>/etc/X11/xorg.conf</filename>)，內容為："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:611
@@ -1568,12 +1627,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:691
+#, fuzzy
 msgid ""
 "Anti-aliasing makes borders slightly fuzzy, which makes very small text more "
 "readable and removes \"staircases\" from large text, but can cause eyestrain "
 "if applied to normal text. To exclude font sizes smaller than 14 point from "
 "anti-aliasing, include these lines:"
 msgstr ""
+"反鋸齒效果會讓文字的邊緣變模糊，這會讓非常小的文字更能閱讀且去除大型文字的 <quote>鋸齒</quote>，但套用在一般的文字可能會造成眼睛的疲勞。"
+"要排除小於 14 點的字型大小使用反鋸齒效果，可加入這些行："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:710
@@ -1651,12 +1713,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:749
+#, fuzzy
 msgid ""
 "Certain fonts, such as Helvetica, may have a problem when "
 "anti-aliased. Usually this manifests itself as a font that seems cut in half "
 "vertically. At worst, it may cause applications to crash. To avoid this, "
 "consider adding the following to [.filename]#local.conf#:"
 msgstr ""
+"部份字型，如 Helvetica，在使用反鋸齒時可能會發生問題，通常會呈現像垂直切成兩半的字型，最差還可能會導致應用程式當掉。要避免這個問題，"
+"可考慮加入以下設定到 <filename>local.conf</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:760
@@ -1689,12 +1754,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:767
+#, fuzzy
 msgid ""
 "One last point: with an LCD screen, sub-pixel sampling may be desired. This "
 "basically treats the (horizontally separated) red, green and blue components "
 "separately to improve the horizontal resolution; the results can be "
 "dramatic. To enable this, add the line somewhere in [.filename]#local.conf#:"
 msgstr ""
+"最後一點：若有使用 LCD 螢幕，可能會想要使用子像素取樣 (Sub-pixel sampling)，這基本上會分開處理 (水平分隔)  "
+"紅、綠、藍色彩組成來提高垂直解析度，結果可能是無法預料的。要開啟這個功能，加入下行到 <filename>local.conf</filename> "
+"的任一處："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:778
@@ -1883,6 +1952,7 @@ msgstr "桌面環境"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:856
+#, fuzzy
 msgid ""
 "This section describes how to install three popular desktop environments on "
 "a FreeBSD system. A desktop environment can range from a simple window "
@@ -1890,6 +1960,8 @@ msgid ""
 "environments are available in the [.filename]#x11-wm# category of the Ports "
 "Collection."
 msgstr ""
+"本節將介紹如何在 FreeBSD 系統安裝三種熱門的桌面環境。一套桌面環境的範圍可從簡單的視窗管理程式到完整的桌面應用程式集。有上百套的桌面環境可在 "
+"Port 套件集的 <filename>x11-wm</filename> 分類取得。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/x11/_index.adoc:858
@@ -1899,6 +1971,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:861
+#, fuzzy
 msgid ""
 "GNOME is a user-friendly desktop environment. It includes a panel for "
 "starting applications and displaying status, a desktop, a set of tools and "
@@ -1909,6 +1982,11 @@ msgid ""
 "contains additional documentation about installing, configuring, and "
 "managing GNOME on FreeBSD."
 msgstr ""
+"<application>GNOME</application> "
+"是一個擁有友善使用者介面的的桌面環境，它包括用於啟動應用程式和顯示狀態的面板、一系列工具與應用程序及一套可讓應用程式更容易進行合作、相互一致的協定。"
+"更多有關 FreeBSD <application>GNOME</application> 的訊息可在 <link xlink:href=\"https"
+"://www.FreeBSD.org/gnome\">https://www.FreeBSD.org/gnome</link> 取得，該網站包含了有關在 "
+"FreeBSD 安裝、設定和管理 <application>GNOME</application> 的額外文件。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:863
@@ -2039,6 +2117,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:925
+#, fuzzy
 msgid ""
 "KDE is another easy-to-use desktop environment. This desktop provides a "
 "suite of applications with a consistent look and feel, a standardized menu "
@@ -2048,6 +2127,11 @@ msgid ""
 "FreeBSD-specific information, consult "
 "http://freebsd.kde.org/[http://freebsd.kde.org]."
 msgstr ""
+"<application>KDE</application> "
+"是另一套易於使用的桌面環境。這個桌面環境提供了一致外觀的應用程式、標準化的選單和工具列、組合鍵、配色方案、國際化與集中、對話框導向的桌面設定。更多有關 "
+"<application>KDE</application> 可在 <link xlink:href=\"http://www.kde.org/\""
+">http://www.kde.org/</link> 取得。要取得 FreeBSD 特定的資訊，則可參考 <link xlink:href=\"http"
+"://freebsd.kde.org/\">http://freebsd.kde.org</link>。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:927
@@ -2062,12 +2146,16 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:934
+#, fuzzy
 msgid ""
 "To instead build the KDE port, use the following command. Installing the "
 "port will provide a menu for selecting which components to install. KDE is a "
 "large application and will take some time to compile, even on a fast "
 "computer."
 msgstr ""
+"或者要使用 <application>KDE</application> Port 編譯，可使用以下指令，採用 Port "
+"方式安裝會有選單可以選擇要安裝的元件。<application>KDE</application> "
+"是一個大型的應用程式，即使在較快的電腦上仍需要花費一段時間來編譯。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:939
@@ -2159,6 +2247,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:989
+#, fuzzy
 msgid ""
 "Xfce is a desktop environment based on the GTK+ toolkit used by "
 "GNOME. However, it is more lightweight and provides a simple, efficient, "
@@ -2168,6 +2257,11 @@ msgid ""
 "ideal for older or slower machines with memory limitations. More information "
 "on Xfce can be found at http://www.xfce.org/[http://www.xfce.org]."
 msgstr ""
+"<application>Xfce</application> 是以 <application>GNOME</application> 使用的 GTK "
+"+工具包做為基礎所開發的桌面環境，但是它更輕巧且提供了一種簡單、高效、易於使用的桌面。它可完全自訂設定、附有選單、Applet "
+"及應用程式啟動器的主面板、提供檔案管理程式和音效管理程式並且可設定主題。由於它是快速、輕巧、高效的桌面環境，因此它非常適合有記憶體限制的較舊或較慢機器。"
+"更多有關 <application>Xfce</application> 的資訊可至 <link xlink:href=\"http://www.xfce"
+".org/\">http://www.xfce.org</link> 取得。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:991
@@ -2256,12 +2350,15 @@ msgstr "設定 FreeBSD nVidia 驅動程式"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1037
+#, fuzzy
 msgid ""
 "Desktop effects can cause quite a load on the graphics card. For an "
 "nVidia-based graphics card, the proprietary driver is required for good "
 "performance. Users of other graphics cards can skip this section and "
 "continue with the [.filename]#xorg.conf# configuration."
 msgstr ""
+"桌面特效需要使用相當程度的顯示卡，對於以 nVidia 為基礎的顯示卡，需要使用專用的驅動程序來取得較佳的性能。其他顯示卡的使用可以跳過這一節，並繼續 "
+"<filename>xorg.conf</filename> 設定。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1039
@@ -2290,10 +2387,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1050
+#, fuzzy
 msgid ""
 "The driver will create a kernel module, which needs to be loaded at system "
 "startup. Add the following line to [.filename]#/boot/loader.conf#:"
-msgstr ""
+msgstr "驅動程式會建立一個需要在系統啟動時載入的核心模組，加入下行到 <filename>/boot/loader.conf</filename>："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1054
@@ -2312,10 +2410,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1062
+#, fuzzy
 msgid ""
 "With the kernel module loaded, you normally only need to change a single "
 "line in [.filename]#xorg.conf# to enable the proprietary driver:"
-msgstr ""
+msgstr "核心模組載入之後，您只需要更改 <filename>xorg.conf</filename> 的其中一行來開啟專用的驅動程式："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1064
@@ -2404,12 +2503,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1113
+#, fuzzy
 msgid ""
 "Locate the \"Subsection\" that refers to the screen resolution that you wish "
 "to use. For example, if you wish to use 1280x1024, locate the section that "
 "follows. If the desired resolution does not appear in any subsection, you "
 "may add the relevant entry by hand:"
 msgstr ""
+"找到您欲使用的螢幕解析度所在的 <quote>Subsection</quote>，例如，您想要使用 1280x1024，則找到如下所示的 "
+"Section。若想要使用的解析度不在任何 Subsection 之中，您可以手動加入對應的項目："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1120
@@ -2531,10 +2633,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1182
+#, fuzzy
 msgid ""
 "Save this in your home directory as, for example, [.filename]#start-compiz# "
 "and make it executable:"
-msgstr ""
+msgstr "儲存這個 Script 到您的家目錄所在位置，例如 <filename>start-compiz</filename>，然後讓該檔案可以執行："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1186
@@ -2670,10 +2773,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1247
+#, fuzzy
 msgid ""
 "[.filename]#/usr/local/shared/X11/xkb/rules/base.lst# lists the various "
 "keyboard, layouts and options available."
 msgstr ""
+"<filename>/usr/local/share/X11/xkb/rules/base.lst</filename> "
+"中列出了各種可用的鍵盤、配置與設定。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1250
@@ -3004,10 +3110,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/x11/_index.adoc:1386
+#, fuzzy
 msgid ""
 "If you check [.filename]#/var/log/Xorg.0.log#, you will probably find error "
 "messages during the X startup. The most common would be:"
 msgstr ""
+"若您檢查 <filename>/var/log/Xorg.0.log</filename>，您可能可以找到當 X "
+"啟動時所發生的錯誤訊息。最常發生的錯誤會是："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/x11/_index.adoc:1394
