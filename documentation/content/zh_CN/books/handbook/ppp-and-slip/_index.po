@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: 2021-04-05 12:39+0000\n"
+"PO-Revision-Date: 2021-04-12 20:52+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookppp-and-slip_index/zh_CN/>\n"
@@ -44,12 +44,15 @@ msgstr "简介"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:48
+#, fuzzy
 msgid ""
 "FreeBSD supports the Point-to-Point (PPP) protocol which can be used to "
 "establish a network or Internet connection using a dial-up modem. This "
 "chapter describes how to configure modem-based communication services in "
 "FreeBSD."
 msgstr ""
+"FreeBSD支持点对点（Point-to-Point，<acronym>PPP</acronym>）通信协定，可透过拨号调制解调器用来建立网络或网际网络"
+"联机。本章将说明如何设定在FreeBSD中以调制解调器为基础的通信服务。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:50
@@ -163,11 +166,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:82
+#, fuzzy
 msgid ""
 "  If the ISP has assigned a static IP address and hostname, it should be "
 "input into the configuration file. Otherwise, this information will be "
 "automatically provided during connection setup."
 msgstr ""
+"  如果<acronym>ISP</acronym>已分配了静态的<acronym>IP</acronym>地址和主机名，应将其输入到配置文件中。否则，这"
+"些信息将在连接设置过程中自动设置。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:84
@@ -188,11 +194,14 @@ msgstr "在本节中，许多文件实例都显示了行号。添加这些行号
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:90
+#, fuzzy
 msgid ""
 "When editing a configuration file, proper indentation is important. Lines "
 "that end in a `:` start in the first column (beginning of the line) while "
 "all other lines should be indented as shown using spaces or tabs."
 msgstr ""
+"编辑配置文件是，适当的缩进很有必要。如基础配置章节中的配置文件所示，行首无空格，且以<literal>:</literal>结尾的行，"
+"其下一行应使用空格或 tab 缩进。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:93
@@ -210,7 +219,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:116
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "1     default:\n"
 "2       set log Phase Chat LCP IPCP CCP tun command\n"
@@ -231,6 +240,25 @@ msgid ""
 "16      set ifaddr x.x.x.x/0 y.y.y.y/0 255.255.255.255 0.0.0.0\n"
 "17      add default HISADDR\n"
 msgstr ""
+"1     default:\n"
+"2       set log Phase Chat LCP IPCP CCP tun command\n"
+"3       ident user-ppp VERSION\n"
+"4       set device /dev/cuau0\n"
+"5       set speed 115200\n"
+"6       set dial \"ABORT BUSY ABORT NO\\\\sCARRIER TIMEOUT 5 \\\n"
+"7                 \\\"\\\" AT OK-AT-OK ATE1Q0 OK \\\\dATDT\\\\T TIMEOUT 40 "
+"CONNECT\"\n"
+"8       set timeout 180\n"
+"9       enable dns\n"
+"10\n"
+"11    provider:\n"
+"12      set phone \"(123) 456 7890\"\n"
+"13      set authname foo\n"
+"14      set authkey bar\n"
+"15      set timeout 300\n"
+"16      set ifaddr <replaceable>x.x.x.x</replaceable>/0 <replaceable>y.y.y."
+"y</replaceable>/0 255.255.255.255 0.0.0.0\n"
+"17      add default HISADDR\n"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:118
@@ -260,9 +288,9 @@ msgstr "启用详细日志记录参数以测试连接。一旦配置工作令人
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:127
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "set log phase tun\n"
-msgstr ""
+msgstr "set log phase tun\n"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:129
@@ -319,11 +347,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:142
+#, fuzzy
 msgid ""
 "Note that this command continues onto the next line for readability. Any "
 "command in [.filename]#ppp.conf# may do this if the last character on the "
 "line is `\\`."
 msgstr ""
+"注意，为了可读性，这条命令会继续到下一行。在<filename>ppp."
+"conf</filename>中的任何命令都可以这样做，如果该行的最后一个字符是<literal>\\</literal>。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:143
@@ -450,9 +481,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:174
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "set ifaddr 10.0.0.1/0 10.0.0.2/0 255.255.255.255 0.0.0.0\n"
-msgstr ""
+msgstr "set ifaddr 10.0.0.1/0 10.0.0.2/0 255.255.255.255 0.0.0.0\n"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:176
@@ -462,11 +493,14 @@ msgstr "第 17 行："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:178
+#, fuzzy
 msgid ""
 "Keep this line as-is as it adds a default route to the gateway. The "
 "`HISADDR` will automatically be replaced with the gateway address specified "
 "on line 16. It is important that this line appears after line 16."
 msgstr ""
+"保留这一行，因为它为网关添加了一个默认路由。<literal>HISADDR</literal> "
+"将被自动替换为第16行中指定的网关地址。重要的是，这一行出现在第16行之后。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:180
@@ -483,11 +517,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:185
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "provider:\n"
 "      add default HISADDR\n"
 msgstr ""
+"provider:\n"
+"      add default HISADDR\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:188
@@ -551,12 +587,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:211
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "enable msext\n"
 "set ns 203.14.100.1 203.14.100.2\n"
 "set nbns 203.14.100.5\n"
 msgstr ""
+"enable msext\n"
+"set ns 203.14.100.1 203.14.100.2\n"
+"set nbns 203.14.100.5\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:214
@@ -565,12 +604,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:220
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "accept dns\n"
 "set dns 203.14.100.1 203.14.100.2\n"
 "set nbns 203.14.100.5\n"
 msgstr ""
+"accept dns\n"
+"set dns 203.14.100.1 203.14.100.2\n"
+"set nbns 203.14.100.5\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:223
@@ -603,12 +645,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:232
+#, fuzzy
 msgid ""
 "PAP is less secure than CHAP, but security is not normally an issue here as "
 "passwords, although being sent as plain text with PAP, are being transmitted "
 "down a serial line only. There is not much room for crackers to "
 "\"eavesdrop\"."
 msgstr ""
+"PAP 的安全性不如 CHAP，但安全性通常不是问题，因为密码虽然以纯文本形式随 PAP "
+"发送，但仅通过串行线路传输。其他人没有太多空间可以<quote>窃听</quote>。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:234
@@ -652,9 +697,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:251
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "16      accept PAP\n"
-msgstr ""
+msgstr "16      accept PAP\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:254
@@ -663,9 +708,9 @@ msgstr "或"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:258
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "16      accept CHAP\n"
-msgstr ""
+msgstr "16      accept CHAP\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:261
@@ -689,17 +734,20 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:269
+#, fuzzy
 msgid ""
 "PPP has ability to use internal NAT without kernel diverting "
 "capabilities. This functionality may be enabled by the following line in "
 "[.filename]#/etc/ppp/ppp.conf#:"
 msgstr ""
+"PPP有使用内部NAT的能力，不需要内核转移功能。这个功能可以通过向<filename>/etc/ppp/ppp."
+"conf</filename>文件添加以下行启用："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:273
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "nat enable yes\n"
-msgstr ""
+msgstr "nat enable yes\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:276
@@ -711,19 +759,22 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:278
+#, fuzzy
 msgid ""
 "When using this feature, it may be useful to include the following "
 "[.filename]#/etc/ppp/ppp.conf# options to enable incoming connections "
 "forwarding:"
-msgstr ""
+msgstr "使用此功能时，可能需要包含以下<filename>/etc/ppp/ppp.conf</filename>选项来启用传入连接转发："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:283
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "nat port tcp 10.0.0.2:ftp ftp\n"
 "nat port tcp 10.0.0.2:http http\n"
 msgstr ""
+"nat port tcp 10.0.0.2:ftp ftp\n"
+"nat port tcp 10.0.0.2:http http\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:286
@@ -732,9 +783,9 @@ msgstr "或拒绝所有进入流量"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:290
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "nat deny_incoming yes\n"
-msgstr ""
+msgstr "nat deny_incoming yes\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:293
@@ -758,9 +809,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:302
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "hostname=\"foo.example.com\"\n"
-msgstr ""
+msgstr "hostname=\"foo.example.com\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:305
@@ -779,11 +830,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:312
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "network_interfaces=\"lo0 tun0\"\n"
 "ifconfig_tun0=\n"
 msgstr ""
+"network_interfaces=\"lo0 tun0\"\n"
+"ifconfig_tun0=\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:317
@@ -795,17 +848,20 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:321
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ppp -auto mysystem\n"
-msgstr ""
+msgstr "ppp -auto mysystem\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:324
+#, fuzzy
 msgid ""
 "This script is executed at network configuration time, starting the ppp "
 "daemon in automatic mode. If this machine acts as a gateway, consider "
 "including `-alias`. Refer to the manual page for further details."
 msgstr ""
+"这个脚本在配置网络时执行，以自动模式启动 ppp "
+"守护进程。如果这台机器作为网关，请考虑包含<option>-alias</option>。更多详情，请参阅手册页面。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:327
@@ -816,9 +872,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:331
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "router_enable=\"NO\"\n"
-msgstr ""
+msgstr "router_enable=\"NO\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:334
@@ -838,9 +894,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:340
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "sendmail_flags=\"-bd\"\n"
-msgstr ""
+msgstr "sendmail_flags=\"-bd\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:343
@@ -852,13 +908,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:350
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "1     provider:\n"
 "2       delete ALL\n"
 "3       add 0 0 HISADDR\n"
 "4       !bg sendmail -bd -q30m\n"
 msgstr ""
+"1     provider:\n"
+"2       delete ALL\n"
+"3       add 0 0 HISADDR\n"
+"4       !bg sendmail -bd -q30m\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:353
@@ -901,11 +961,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:371
+#, fuzzy
 msgid ""
 "It is possible to talk to the `ppp` program while it is running in the "
 "background, but only if a suitable diagnostic port has been set up. To do "
 "this, add the following line to the configuration:"
 msgstr ""
+"当<command>ppp</command>程序在后台运行时，可以与<command>ppp</command>程序进行对话，但前提是要设置一个合适的诊"
+"断端口。要做到这一点，在配置中添加以下一行："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:375
@@ -984,23 +1047,25 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:397
+#, fuzzy
 msgid ""
 "This section assumes the user has successfully compiled, and installed the "
 "package:comms/mgetty+sendfax[] port on his system."
-msgstr ""
+msgstr "本节假设用户已经在自己的系统中成功从 Port 中安装了 <package>comms/mgetty+sendfax</package>。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:399
+#, fuzzy
 msgid ""
 "Ensure that [.filename]#/usr/local/etc/mgetty+sendfax/login.config# has the "
 "following:"
-msgstr ""
+msgstr "保证<filename>/usr/local/etc/mgetty+sendfax/login.config</filename>有以下内容："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:403
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "/AutoPPP/ -     - /etc/ppp/ppp-pap-dialup\n"
-msgstr ""
+msgstr "/AutoPPP/ -     - /etc/ppp/ppp-pap-dialup\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:406
@@ -1011,18 +1076,21 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:408
+#, fuzzy
 msgid ""
 "Create an executable file called [.filename]#/etc/ppp/ppp-pap-dialup# "
 "containing the following:"
-msgstr ""
+msgstr "创建一个名为<filename>/etc/ppp/ppp-pap-dialup</filename> 的可执行文件，其中包含以下内容："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:413
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "#!/bin/sh\n"
 "exec /usr/sbin/ppp -direct pap$IDENT\n"
 msgstr ""
+"#!/bin/sh\n"
+"exec /usr/sbin/ppp -direct pap$IDENT\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:416
@@ -1034,13 +1102,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:423
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "pap:\n"
 "  enable pap\n"
 "  set ifaddr 203.14.100.1 203.14.100.20-203.14.100.40\n"
 "  enable proxy\n"
 msgstr ""
+"pap:\n"
+"  enable pap\n"
+"  set ifaddr 203.14.100.1 203.14.100.20-203.14.100.40\n"
+"  enable proxy\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:426
@@ -1052,9 +1124,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:430
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "enable passwdauth\n"
-msgstr ""
+msgstr "enable passwdauth\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:433
@@ -1095,9 +1167,9 @@ msgstr "使用自定义内核时，请保证内核配置文件中包含以下行
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:446
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "device   uart\n"
-msgstr ""
+msgstr "device   uart\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:449
@@ -1213,9 +1285,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:512
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "CONNECT\n"
-msgstr ""
+msgstr "CONNECT\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:515
@@ -1307,6 +1379,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:564
+#, fuzzy
 msgid ""
 "Here we add our default route, we need to do this before we can talk to the "
 "outside world as currently the only established connection is with the "
@@ -1314,6 +1387,8 @@ msgid ""
 "front of the `add`. Alternatively, set this before making the actual "
 "connection and it will negotiate a new route accordingly."
 msgstr ""
+"这里我们在这里添加我们的默认路由，在与外界对话之前，我们需要这样做，因为目前唯一建立的连接是与对等机的连接。如果是由于现有路由导致的失败，在<option"
+">add</option>前面加上<literal>!</literal>字，或者，在实际连接之前设置这个，它将相应地协商一个新的路由。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:566
@@ -1346,11 +1421,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:572
+#, fuzzy
 msgid ""
 "An older modem may need `set parity even`. Parity is set at none be default, "
 "but is used for error checking with a large increase in traffic, on older "
 "modems."
 msgstr ""
+"老式调制解调器可能需要<option>set parity "
+"even</option>。奇偶校验默认设置为无，但在流量大量增加的情况下，在老式调制解调器上用于错误检查。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:574
@@ -1430,11 +1508,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:608
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "!ppp\n"
 "*.*     /var/log/ppp.log\n"
 msgstr ""
+"!ppp\n"
+"*.*     /var/log/ppp.log\n"
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:611
@@ -1493,7 +1573,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:647
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "ppp_enable=\"YES\"\n"
 "ppp_mode=\"ddial\"\n"
@@ -1501,6 +1581,11 @@ msgid ""
 "otherwise NO\n"
 "ppp_profile=\"name_of_service_provider\"\n"
 msgstr ""
+"ppp_enable=\"YES\"\n"
+"ppp_mode=\"ddial\"\n"
+"ppp_nat=\"YES\"\t# if you want to enable nat for your local network, "
+"otherwise NO\n"
+"ppp_profile=\"name_of_service_provider\"\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:649
@@ -1581,17 +1666,20 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:676
+#, fuzzy
 msgid ""
 "In order to make FreeBSD capable of communicating with this device, a sysctl "
 "must be set. This can be done automatically at boot time by updating "
 "[.filename]#/etc/sysctl.conf#:"
 msgstr ""
+"为了使 FreeBSD 能够与此设备通信， 必须设置 sysctl。这可以在启动时通过更新 <filename>/etc/sysctl.conf</"
+"filename> 自动完成："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:680
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "net.graph.nonstandard_pppoe=1\n"
-msgstr ""
+msgstr "net.graph.nonstandard_pppoe=1\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:683
@@ -1633,12 +1721,15 @@ msgstr "使用mpd"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:699
+#, fuzzy
 msgid ""
 "The mpd application can be used to connect to a variety of services, in "
 "particular PPTP services. It can be installed using the package:net/mpd5[] "
 "package or port. Many ADSL modems require that a PPTP tunnel is created "
 "between the modem and computer."
 msgstr ""
+"<application>mpd</application>应用程序可用于连接各种服务，尤其是PPTP服务。它可以使用<package>net/"
+"mpd5</package> pkg或 port 安装。许多ADSL调制解调器要求在调制解调器和计算机之间建立一个PPTP隧道。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:701
@@ -1718,11 +1809,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:738
+#, fuzzy
 msgid ""
 "Information about the link, or links, to establish is found in "
 "[.filename]#mpd.links#. An example [.filename]#mpd.links# to accompany the "
 "above example is given beneath:"
 msgstr ""
+"关于要建立的链接信息，可以在<filename>mpd.links</filename>中找到。下面给出了一个<filename>mpd."
+"links</filename>例子，与上述示例配套："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:747
@@ -1783,10 +1877,11 @@ msgstr "使用pptpclient"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:773
+#, fuzzy
 msgid ""
 "It is also possible to use FreeBSD to connect to other PPPoA services using "
 "package:net/pptpclient[]."
-msgstr ""
+msgstr "FreeBSD 也可使用 <package>net/pptpclient</package> 连接到其他 PPPoA 服务端。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:775
@@ -1818,10 +1913,11 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:795
+#, fuzzy
 msgid ""
 "Since the account's password is added to [.filename]#ppp.conf# in plain text "
 "form, make sure nobody can read the contents of this file:"
-msgstr ""
+msgstr "由于用户名和密码在<filename>ppp.conf</filename>中是明文保存，为了安全，请确认他人无法读取此文件："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/ppp-and-slip/_index.adoc:800
