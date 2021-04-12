@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: 2021-04-05 12:39+0000\n"
+"PO-Revision-Date: 2021-04-12 20:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookdtrace_index/zh_CN/>\n"
@@ -44,6 +44,7 @@ msgstr "简介"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/dtrace/_index.adoc:48
+#, fuzzy
 msgid ""
 "DTrace, also known as Dynamic Tracing, was developed by Sun(TM) as a tool "
 "for locating performance bottlenecks in production and pre-production "
@@ -51,6 +52,8 @@ msgid ""
 "to help investigate and debug unexpected behavior in both the FreeBSD kernel "
 "and in userland programs."
 msgstr ""
+"DTrace，也称为动态跟踪，是由 <trademark>Sun</trademark> 开发的一个用来在生产和试验性生产系统上找出系统瓶颈的工具。 "
+"在除了诊断性能问题外，DTrace 还可用于帮助调查和调试 FreeBSD 内核和用户兰程序中的意外行为。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/dtrace/_index.adoc:50
@@ -66,6 +69,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/dtrace/_index.adoc:52
+#, fuzzy
 msgid ""
 "The FreeBSD implementation provides full support for kernel DTrace and "
 "experimental support for userland DTrace. Userland DTrace allows users to "
@@ -74,6 +78,10 @@ msgid ""
 "tracing. Some ports, such as package:databases/postgresql12-server[] and "
 "package:lang/php74[] have a DTrace option to enable static probes."
 msgstr ""
+"FreeBSD 为内核移植了完整的 DTrace 支持，并为 userland DTrace 提供了实验性支持。Userland DTrace "
+"允许用户使用<literal>pid</literal>提供程序为用户地程序执行功能边界跟踪，并将静态探测器插入到用户地程序中以进行后续跟踪。某些 "
+"Port（如<package>databases/postgresql12-server</package>和 <package>lang/"
+"php</package>）具有启用静态探测器的 DTrace 选项。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/dtrace/_index.adoc:54
@@ -131,12 +139,16 @@ msgstr "实现上的差异"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/dtrace/_index.adoc:70
+#, fuzzy
 msgid ""
 "While the DTrace in FreeBSD is similar to that found in Solaris(TM), "
 "differences do exist. The primary difference is that in FreeBSD, DTrace is "
 "implemented as a set of kernel modules and DTrace can not be used until the "
 "modules are loaded. To load all of the necessary modules:"
 msgstr ""
+"虽然 FreeBSD 上的 DTrace 与 <trademark>Solaris</trademark> "
+"上的非常相似，在继续深入之前我们需要说明一下存在的差异。用户首先会注意到的便是 FreeBSD 上的 DTrace 需要明确地被启用。DTrace "
+"相关的内核选项和模块必须开启后才能正常工作。使用以下命令加载所需模块："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/dtrace/_index.adoc:74
@@ -218,13 +230,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/dtrace/_index.adoc:97
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "options         KDTRACE_HOOKS\n"
 "options         DDB_CTF\n"
 "makeoptions\tDEBUG=-g\n"
 "makeoptions\tWITH_CTF=1\n"
 msgstr ""
+"options         KDTRACE_HOOKS\n"
+"options         DDB_CTF\n"
+"makeoptions\tDEBUG=-g\n"
+"makeoptions\tWITH_CTF=1\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/dtrace/_index.adoc:100
@@ -233,9 +249,9 @@ msgstr "AMD64 用户还应添加下面这行："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/dtrace/_index.adoc:104
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "options         KDTRACE_FRAME\n"
-msgstr ""
+msgstr "options         KDTRACE_FRAME\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/dtrace/_index.adoc:107
@@ -257,6 +273,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/dtrace/_index.adoc:111
+#, fuzzy
 msgid ""
 "Finally, install the current DTrace Toolkit, a collection of ready-made "
 "scripts for collecting system information. There are scripts to check open "
@@ -265,15 +282,22 @@ msgid ""
 "versions, or to install the full DTrace Toolkit, use the "
 "package:sysutils/DTraceToolkit[] package or port."
 msgstr ""
+"最后，安装 DTrace "
+"工具包，这是用于收集系统信息的现成脚本的集合。有脚本来检查打开的文件，内存，<acronym>CPU</acronym>使用率，以及更多。FreeBSD "
+"10 将其中一些脚本安装到<filename>/usr/share/dtrace</filename>中。在其他 FreeBSD 版本上，或要安装完整的 "
+"DTrace 工具包，请使用 <package>sysutils/DTraceToolkit</package>或 POrt。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/dtrace/_index.adoc:115
+#, fuzzy
 msgid ""
 "The scripts found in [.filename]#/usr/share/dtrace# have been specifically "
 "ported to FreeBSD. Not all of the scripts found in the DTrace Toolkit will "
 "work as-is on FreeBSD and some scripts may require some effort in order for "
 "them to work on FreeBSD."
 msgstr ""
+"<filename>/usr/share/dtrace</filename>中的脚本都已适配 FreeBSD，并非有所 DTrace Toolkit "
+"中的脚本都能在FreeBSD下运行，并且某些脚本可能需要修改才能在FreeBSD中使用。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/dtrace/_index.adoc:118
@@ -293,6 +317,7 @@ msgstr "使用 DTrace"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/dtrace/_index.adoc:123
+#, fuzzy
 msgid ""
 "DTrace scripts consist of a list of one or more _probes_, or instrumentation "
 "points, where each probe is associated with an action. Whenever the "
@@ -303,6 +328,9 @@ msgid ""
 "allows probes to share information and to cooperatively analyze the "
 "correlation of different events."
 msgstr ""
+"DTrace 脚本由一个或多个<firstterm>探测器</firstterm>或检测点的列表组成，其中每个探测器都与操作相关联。每当满足探测条件时，都"
+"会执行关联的操作。例如，在打开文件、启动进程或执行一行代码时，可能会发生操作。操作可能是记录某些信息或修改上下文变量。上下文变量的读取和写入允许探测器共享"
+"信息并协同分析不同事件的相关性。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/dtrace/_index.adoc:125
@@ -333,10 +361,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/dtrace/_index.adoc:136
+#, fuzzy
 msgid ""
 "The [.filename]#hotkernel# script is designed to identify which function is "
 "using the most kernel time. It will produce output similar to the following:"
-msgstr ""
+msgstr "<filename>hotkernel</filename>脚本旨在识别哪个函数使用内核时间最多。其输出类似："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/dtrace/_index.adoc:142
@@ -358,7 +387,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/dtrace/_index.adoc:174
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "kernel`_thread_lock_flags                                   2   0.0%\n"
 "0xc1097063                                                  2   0.0%\n"
@@ -387,6 +416,32 @@ msgid ""
 "kernel`sched_idletd                                       137   0.3%\n"
 "0xc10981a5                                              42139  99.3%\n"
 msgstr ""
+"kernel`_thread_lock_flags                                   2   0.0%\n"
+"0xc1097063                                                  2   0.0%\n"
+"kernel`sched_userret                                        2   0.0%\n"
+"kernel`kern_select                                          2   0.0%\n"
+"kernel`generic_copyin                                       3   0.0%\n"
+"kernel`_mtx_assert                                          3   0.0%\n"
+"kernel`vm_fault                                             3   0.0%\n"
+"kernel`sopoll_generic                                       3   0.0%\n"
+"kernel`fixup_filename                                       4   0.0%\n"
+"kernel`_isitmyx                                             4   0.0%\n"
+"kernel`find_instance                                        4   0.0%\n"
+"kernel`_mtx_unlock_flags                                    5   0.0%\n"
+"kernel`syscall                                              5   0.0%\n"
+"kernel`DELAY                                                5   0.0%\n"
+"0xc108a253                                                  6   0.0%\n"
+"kernel`witness_lock                                         7   0.0%\n"
+"kernel`read_aux_data_no_wait                                7   0.0%\n"
+"kernel`Xint0x80_syscall                                     7   0.0%\n"
+"kernel`witness_checkorder                                   7   0.0%\n"
+"kernel`sse2_pagezero                                        8   0.0%\n"
+"kernel`strncmp                                              9   0.0%\n"
+"kernel`spinlock_exit                                       10   0.0%\n"
+"kernel`_mtx_lock_flags                                     11   0.0%\n"
+"kernel`witness_unlock                                      15   0.0%\n"
+"kernel`sched_idletd                                       137   0.3%\n"
+"0xc10981a5                                              42139  99.3%\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/dtrace/_index.adoc:177
