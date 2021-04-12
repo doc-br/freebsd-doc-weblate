@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-05 18:35+0000\n"
+"PO-Revision-Date: 2021-04-12 20:54+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookgeom_index/zh_TW/>\n"
@@ -124,6 +124,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/geom/_index.adoc:69
+#, fuzzy
 msgid ""
 "In RAID0, data is split into blocks that are written across all the drives "
 "in the array. As seen in the following illustration, instead of having to "
@@ -132,6 +133,9 @@ msgid ""
 "performance. This performance can be enhanced further by using multiple disk "
 "controllers."
 msgstr ""
+"在 <acronym>RAID0</acronym> 中，資料會被切割成數個資料區塊 (Block) 寫入到磁碟陣列中的每一個磁碟機。如下圖所示，"
+"取代以往等候系統寫入 256k 到一個磁碟的時間， <acronym>RAID0</acronym> 可以同時寫入 64k "
+"到磁碟陣列中四個磁碟的每個磁碟，這可提供優異的 <acronym>I/O</acronym> 效能，若使用多個磁碟控制器可增加更多的效能。"
 
 #. type: Positional ($1) AttributeList argument for macro 'image'
 #: documentation/content/en/books/handbook/geom/_index.adoc:70
@@ -299,6 +303,7 @@ msgstr "RAID1 - 鏡像 (Mirroring)"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/geom/_index.adoc:146
+#, fuzzy
 msgid ""
 "RAID1, or _mirroring_, is the technique of writing the same data to more "
 "than one disk drive. Mirrors are usually used to guard against data loss due "
@@ -308,6 +313,9 @@ msgid ""
 "keeps running, and the administrator has time to replace the failed drive "
 "without user interruption."
 msgstr ""
+"<acronym>RAID1</acronym> 或<emphasis>鏡像</emphasis>是一項寫入相同資料到超過一個磁碟機的技術。鏡像通常用來保"
+"護資料因磁碟機故障導致的損失，每個在鏡像中的磁碟機會擁有完全相同的資料，當各別磁碟機故障時，鏡像會繼續運作，由還可運作的磁碟機提供資料。電腦會繼續執行，等"
+"到管理者有時間更換故障的硬碟，而不會被使用者中斷運作。"
 
 #. type: delimited block * 4
 #: documentation/content/en/books/handbook/geom/_index.adoc:148
