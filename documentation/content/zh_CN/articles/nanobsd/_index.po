@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-04-11 02:08+0000\n"
-"Last-Translator: Hongyou Bai <bhy1924@gmail.com>\n"
+"PO-Revision-Date: 2021-04-12 20:52+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/articlesnanobsd_index/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -53,6 +53,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:40
+#, fuzzy
 msgid ""
 "It can be used to build specialized install images, designed for easy "
 "installation and maintenance of systems commonly called \"computer appliances"
@@ -60,6 +61,9 @@ msgid ""
 "product, which means all applications are pre-installed.  The appliance is "
 "plugged into an existing network and can begin working (almost) immediately."
 msgstr ""
+"这一工具也可以用来构建定制的安装映像， 以简化通常称为 <quote>计算设备 (computer appliances)</quote> "
+"的系统的安装和维护工作。 计算设备通常在产品中将捆绑硬件和软件， 或者换言之， 所有的应用程序都是预先装好的。 这些设备可以直接插到暨存的网络中， 并 "
+"(几乎是) 立即投入使用。"
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:42
@@ -68,10 +72,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:44
+#, fuzzy
 msgid ""
 "Ports and packages work as in FreeBSD - Every single application can be "
 "installed and used in a NanoBSD image, the same way as in FreeBSD."
 msgstr ""
+"可以和 FreeBSD 一样使用 Ports 和预编译包── 所有的应用程序都可以在 <application>NanoBSD</"
+"application> 映像中直接使用， 而方式与 FreeBSD 完全一样。"
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:45
@@ -92,11 +99,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:47
+#, fuzzy
 msgid ""
 "Easy to build and customize - Making use of just one shell script and one "
 "configuration file it is possible to build reduced and customized images "
 "satisfying any arbitrary set of requirements."
-msgstr ""
+msgstr "便于联编和定制 ── 只需使用一个 shell 脚本和一个配置文件， 您可以很容易地裁减和定制适于任意需求的映像。"
 
 #. type: Title ==
 #: documentation/content/en/articles/nanobsd/_index.adoc:49
@@ -124,10 +132,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:59
+#, fuzzy
 msgid ""
 "The configuration file partition, which can be mounted under the [."
 "filename]#/cfg# directory at run time."
-msgstr ""
+msgstr "一个配置文件区， 运行环境中， 可以将其挂接到 <filename>/cfg</filename> 目录下。"
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:61
@@ -170,19 +179,23 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:85
+#, fuzzy
 msgid ""
 "The partition containing [.filename]#/cfg# should be mounted only at boot "
 "time and while overriding the configuration files."
-msgstr ""
+msgstr "只有在系统启动过程中， 以及需要修改配置文件的场合， 才需要挂接包含 <filename>/cfg</filename> 的那个分区。"
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:87
+#, fuzzy
 msgid ""
 "Keeping [.filename]#/cfg# mounted at all times is not a good idea, "
 "especially if the NanoBSD system runs off a mass storage medium that may be "
 "adversely affected by a large number of writes to the partition (like when "
 "the filesystem syncer flushes data to the system disks)."
 msgstr ""
+"在任何时候都保持挂接 <filename>/cfg</filename> 不是一个好主意， 特别是当您把 <application>NanoBSD</"
+"application> 放在不适合进行大量写操作的分区时 (由于文件系统的同步进程会定期向系统盘写一些数据)。"
 
 #. type: Title ===
 #: documentation/content/en/articles/nanobsd/_index.adoc:89
@@ -223,15 +236,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:107
+#, fuzzy
 msgid "<.> Start the build process."
-msgstr ""
+msgstr "开始构建过程。"
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:109
+#, fuzzy
 msgid ""
 "<.> Change the current directory to the place where the built images are "
 "located."
-msgstr ""
+msgstr "进入构建好的映像文件所在的目录。"
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:111
@@ -478,11 +493,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:171
+#, fuzzy
 msgid ""
 "Invocation of the following command will force the [.filename]#nanobsd.sh# "
 "to read its configuration from [.filename]#myconf.nano# located in the "
 "current directory:"
 msgstr ""
+"执行下面的命令将使 <filename>nanobsd.sh</filename> 从当前目录中的 <filename>myconf.nano</"
+"filename> 文件读取配置："
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/nanobsd/_index.adoc:175
@@ -525,10 +543,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:190
+#, fuzzy
 msgid ""
 "The configuration file consists of configuration options, which override the "
 "default values.  The most important directives are:"
-msgstr ""
+msgstr "配置文件中包含用以代替默认值的配置选项。 最重要的语句包括："
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:192
@@ -813,14 +832,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:273
+#, fuzzy
 msgid ""
 "A more useful example of a customization function is the following, which "
 "changes the default size of the [.filename]#/etc# directory from 5MB to 30MB:"
-msgstr ""
+msgstr "下面是一个更贴近实际的例子， 它将默认的 <filename>/etc</filename> 目录尺寸， 从 5MB 调整为 30MB："
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/nanobsd/_index.adoc:281
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "cust_etc_size () (\n"
 "\tcd ${NANO_WORLDDIR}/conf\n"
@@ -828,6 +848,11 @@ msgid ""
 ")\n"
 "customize_cmd cust_etc_size\n"
 msgstr ""
+"cust_etc_size () (\n"
+"\tcd ${NANO_WORLDDIR}/conf\n"
+"\techo 30000 &gt; default/etc/md_size\n"
+")\n"
+"customize_cmd cust_etc_size\n"
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:284
@@ -1054,12 +1079,16 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/nanobsd/_index.adoc:381
+#, fuzzy
 msgid ""
 "  The most important difference of this step from the initial NanoBSD "
 "installation is that now instead of using [.filename]#\\_.disk.full# (which "
 "contains an image of the entire disk), the [.filename]#_.disk.image# image "
 "is installed (which contains an image of a single system partition)."
 msgstr ""
+"  与之前最初安装 <application>NanoBSD</application> 的步骤相比， 这一步骤最重要的区别在于这次不应使用 "
+"<filename>_.disk.full</filename> 文件 (它包含整个盘的映像)， 而应安装 <filename>_.disk."
+"image</filename> 映像 (这个文件中， 只包含一个系统分区)。"
 
 #. type: delimited block = 4
 #: documentation/content/en/articles/nanobsd/_index.adoc:382
@@ -1169,10 +1198,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/nanobsd/_index.adoc:427
+#, fuzzy
 msgid ""
 "Connect to the host serving new image and execute [.filename]#updatep1# "
 "script:"
-msgstr ""
+msgstr "连接到提供新映像服务的主机， 并执行 <filename>updatep1</filename> 脚本："
 
 #. type: delimited block . 4
 #: documentation/content/en/articles/nanobsd/_index.adoc:431
