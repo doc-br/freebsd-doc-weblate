@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:55-0300\n"
-"PO-Revision-Date: 2021-04-05 18:35+0000\n"
+"PO-Revision-Date: 2021-04-12 20:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookdesktop_index/zh_TW/>\n"
@@ -44,6 +44,7 @@ msgstr "概述"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/desktop/_index.adoc:48
+#, fuzzy
 msgid ""
 "While FreeBSD is popular as a server for its performance and stability, it "
 "is also suited for day-to-day use as a desktop. With over {numports} "
@@ -53,6 +54,9 @@ msgid ""
 "web browsers, productivity software, document viewers, and financial "
 "software."
 msgstr ""
+"隨著 FreeBSD 優越的效能及穩定性越來越熱門，它同時適合作為每日使用的桌面系統。FreeBSD 套件或 Port 有超過 24,000 個可用的應用"
+"程式，可以簡單的建立一個自訂的桌面環境來執行各種不同的桌面應用程式。本章將示範如何安裝數個桌面應用程式，包含網頁瀏覽器、辦工軟體、文件閱覽程式以及財務軟體"
+"。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/desktop/_index.adoc:52
@@ -367,10 +371,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/desktop/_index.adoc:211
+#, fuzzy
 msgid ""
 "In FreeBSD, package:editors/calligra[] can be installed as a package or a "
 "port. To install the package:"
 msgstr ""
+"在 FreeBSD 中 <package>editors/calligra</package> 可以使用套件或 Port 的方式安裝，要使用套件安裝："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/desktop/_index.adoc:215
@@ -445,6 +451,7 @@ msgstr "The GIMP"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/desktop/_index.adoc:249
+#, fuzzy
 msgid ""
 "For image authoring or picture retouching, The GIMP provides a sophisticated "
 "image manipulation program. It can be used as a simple paint program or as a "
@@ -452,6 +459,9 @@ msgid ""
 "features a scripting interface. The GIMP can read and write a wide range of "
 "file formats and supports interfaces with scanners and tablets."
 msgstr ""
+"對於影像的編輯及修改來說，<application>The GIMP</application> 是非常精緻的影像處理軟體。 "
+"它可以當作簡單的繪圖軟體或是高品質的相片處理軟體。 它支援為數眾多的外掛程式及指令稿 (script-fu) 介面。 <application>The "
+"GIMP</application> 可以讀寫許多檔案格式。 它也支援掃描器和手寫板。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/desktop/_index.adoc:251
@@ -494,6 +504,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/desktop/_index.adoc:270
+#, fuzzy
 msgid ""
 "Apache OpenOffice is an open source office suite which is developed under "
 "the wing of the Apache Software Foundation's Incubator. It includes all of "
@@ -504,6 +515,9 @@ msgid ""
 "languages and internationalization has been extended to interfaces, spell "
 "checkers, and dictionaries."
 msgstr ""
+"<application>Apache OpenOffice</application> 是開放原始碼的辦工室軟體，由 Apache Software "
+"Foundation's Incubator 底下的團隊所開發。 它包含了所有完整的辦公軟體組合： 文字處理器、試算表、簡報軟體還有繪圖軟體。 "
+"除了它的使用者介面非常類似其他的辦公軟體， 他還能夠輸入和輸出許多熱門的檔案格式。 它也包含了不同語言的使用者介面、拼字檢查和字典。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/desktop/_index.adoc:272
@@ -580,11 +594,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/desktop/_index.adoc:307
+#, fuzzy
 msgid ""
 "Replace _your_language_ with the correct language ISO-code. A list of "
 "supported language codes is available in "
 "[.filename]#files/Makefile.localized#, located in the port's directory."
 msgstr ""
+"替換 <replaceable>your_language</replaceable> 為正確的語言 ISO 編碼。支援的語言編碼清單在 "
+"<filename>files/Makefile.localized</filename>，位於該 Port 的目錄。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/desktop/_index.adoc:309
@@ -594,6 +611,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/desktop/_index.adoc:312
+#, fuzzy
 msgid ""
 "LibreOffice is a free software office suite developed by "
 "http://www.documentfoundation.org/[documentfoundation.org]. It is compatible "
@@ -605,6 +623,11 @@ msgid ""
 "number of different languages and internationalization has been extended to "
 "interfaces, spell checkers, and dictionaries."
 msgstr ""
+"<application>LibreOffice</application> 是一套自由的辦公軟體由 <link xlink:href=\"http"
+"://www.documentfoundation.org/\">documentfoundation.org</link> "
+"所開發。它可相容其他主流的辦公軟體以及可在各種平台上使用。它是 <application>Apache OpenOffice</application> "
+"品牌重塑後的分支，含有可在完整辦公生產力軟體中找到的應用程式：文件處理程式、試算表、簡報管理程式、繪圖程式、資料庫管理程式以及建立與編輯數學公式的工具。它"
+"也支援數種語言與國際化一直延伸到介面、拼字檢查程式與字典。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/desktop/_index.adoc:314
@@ -653,11 +676,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/desktop/_index.adoc:332
+#, fuzzy
 msgid ""
 "During the first launch, some questions will be asked and a "
 "[.filename]#.libreoffice# folder will be created in the user's home "
 "directory."
-msgstr ""
+msgstr "第一次啟動的過程中會詢問一些問題並在使用者的家目錄建立 <filename>.libreoffice</filename> 資料夾。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/desktop/_index.adoc:334
@@ -777,10 +801,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/desktop/_index.adoc:405
+#, fuzzy
 msgid ""
 "Once the installation is complete, launch `xpdf` and use the right mouse "
 "button to activate the menu."
-msgstr ""
+msgstr "完成安裝後，執行 <command>xpdf</command> 並使用滑鼠右鍵開啟選單。"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/desktop/_index.adoc:406
@@ -832,6 +857,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/desktop/_index.adoc:428
+#, fuzzy
 msgid ""
 "Geeqie is a fork from the unmaintained GQView project, in an effort to move "
 "development forward and integrate the existing patches. Geeqie is an image "
@@ -841,6 +867,10 @@ msgid ""
 "and to find duplicate files. Geeqie supports full screen viewing and "
 "internationalization."
 msgstr ""
+"<application>Geeqie</application> 是由已經停止維護的 <application>GQView</"
+"application> 專案所衍伸出來的分支，並致力開發新功能並整合已有的修補。<application>Geeqie</application> "
+"是一套影像管理軟體，支援單鍵閱覽檔案、啟動外部編輯器、縮圖預覽等功能。 它也有幻燈片模式及一些基本的檔案操作的功能，能輕鬆的管理大量影像並找出重複的檔案。"
+" <application>Geeqie</application> 也支援使用全螢幕閱覽以及國際化。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/desktop/_index.adoc:430
