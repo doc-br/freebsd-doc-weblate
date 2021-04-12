@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-27 11:44-0300\n"
-"PO-Revision-Date: 2021-04-05 12:40+0000\n"
+"PO-Revision-Date: 2021-04-12 20:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate-dev.freebsd.org/"
 "projects/documentation/bookshandbookfirewalls_index/zh_CN/>\n"
@@ -44,6 +44,7 @@ msgstr "简介"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:48
+#, fuzzy
 msgid ""
 "Firewalls make it possible to filter the incoming and outgoing traffic that "
 "flows through a system. A firewall can use one or more sets of \"rules\" to "
@@ -52,6 +53,9 @@ msgid ""
 "inspect one or more characteristics of the packets such as the protocol "
 "type, source or destination host address, and source or destination port."
 msgstr ""
+"防火墙的存在， 使得过滤出入系统的数据流成为可能。 防火墙可以使用一组或多组 “<quote>规则（rules）</quote>”， "
+"来检查出入您的网络连接的数据包， 并决定允许或阻止它们通过。 这些规则通常可以检查数据包的某个或某些特征， 这些特征包括， 但不必限于协议类型、 "
+"来源或目的主机地址， 以及来源或目的端口。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:50
@@ -76,12 +80,15 @@ msgstr "限制或禁止从内部网访问公共的 Internet 上的服务。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:54
+#, fuzzy
 msgid ""
 "Support network address translation (NAT), which allows an internal network "
 "to use private IP addresses and share a single connection to the public "
 "Internet using either a single IP address or a shared pool of automatically "
 "assigned public addresses."
 msgstr ""
+"支持网络地址转换 (<acronym>NAT</acronym>)， 它使得您的内部网络能够使用私有的 <acronym>IP</acronym> 地址，"
+" 并分享一条通往公共的 Internet 的连接 (使用一个 <acronym>IP</acronym> 地址， 或者一组公网地址)。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:56
@@ -162,6 +169,7 @@ msgstr "防火墙的概念"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:80
+#, fuzzy
 msgid ""
 "A ruleset contains a group of rules which pass or block packets based on the "
 "values contained in the packet. The bi-directional exchange of packets "
@@ -174,6 +182,9 @@ msgid ""
 "the above parameters can be used as selection criteria to create rules which "
 "will pass or block services."
 msgstr ""
+"一个规则集（Ruleset）中会有一群根据封包内的数据来判断通过或封锁的规则，主机间双向的封包交换构成一个联机阶段的对话，防火墙规则集会同时处理接收自网际"
+"网络的封包以及由系统所产生的响应封包，每一个<acronym>TCP/IP</acronym>服务都会预先定义其通信协定以及要倾听的端口，要送往指定服务的"
+"封包会诞生在来源位址，使用一个不需特殊权限的端口并传送给目标位址上特定服务的端口，所有上述过程中的参数均可用来当做建立规则的筛选条件，来允许或封锁服务。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:82
@@ -204,12 +215,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:88
+#, fuzzy
 msgid ""
 "A firewall ruleset can be either \"exclusive\" or \"inclusive\". An "
 "exclusive firewall allows all traffic through except for the traffic "
 "matching the ruleset. An inclusive firewall does the reverse as it only "
 "allows traffic matching the rules through and blocks everything else."
 msgstr ""
+"防火墙规则集可以为排除式（<quote>exclusive</quote>）或者内含式（<quote>inclusive</quote>），一个排除式的防"
+"火墙会允许所有的联机通过除了符合规则集的联机，内含式的防火墙则会反过来只允许符合规则集的联机并封锁其他任何的联机。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:90
@@ -234,11 +248,14 @@ msgstr "除非另有说明，否则所有在此章节的示例规则集均为内
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:97
+#, fuzzy
 msgid ""
 "Security can be tightened further using a \"stateful firewall\". This type "
 "of firewall keeps track of open connections and only allows traffic which "
 "either matches an existing connection or opens a new, allowed connection."
 msgstr ""
+"使用具状态防火墙（<quote>Stateful "
+"firewall</quote>）可以更进一步加强安全性，这种类型的防火墙可持续追踪联机，只允许与现有联机相符的封包或符合允许条件的新联机通过。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:99
@@ -285,12 +302,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:107
+#, fuzzy
 msgid ""
 "NAT will automatically translate the private LAN IP address for each system "
 "on the LAN to the single public IP address as packets exit the firewall "
 "bound for the public Internet. It also performs the reverse translation for "
 "returning packets."
 msgstr ""
+"<acronym>NAT</acronym>在当封包要外送到防火墙之外的网际网络时，会自动转译每一台电脑在私有LAN的IP位址成为一个公有IP位址，它也同"
+"样会对回传的封包做反向转译。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:109
@@ -407,9 +427,10 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:153
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "pf_flags=\"\"                     # additional flags for pfctl startup\n"
 msgstr ""
+"pf_flags=\"\"                     # additional flags for pfctl startup\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:156
@@ -451,11 +472,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:175
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "pflog_logfile=\"/var/log/pflog\"  # where pflogd should store the logfile\n"
 "pflog_flags=\"\"                  # additional flags for pflogd startup\n"
 msgstr ""
+"pflog_logfile=\"/var/log/pflog\"  # where pflogd should store the logfile\n"
+"pflog_flags=\"\"                  # additional flags for pflogd startup\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:178
@@ -467,9 +490,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:182
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "gateway_enable=\"YES\"            # Enable as LAN gateway\n"
-msgstr ""
+msgstr "gateway_enable=\"YES\"            # Enable as LAN gateway\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:185
@@ -535,10 +558,13 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:222
+#, fuzzy
 msgid ""
 "package:security/sudo[] is useful for running commands like `pfctl` that "
 "require elevated privileges. It can be installed from the Ports Collection."
 msgstr ""
+"<package>security/sudo</package>对于运行像<command>pfctl</command>这样需要高阶权限的命令非常有用。"
+"它可以从 Ports Collection 中安装。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:225
@@ -565,20 +591,25 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:232
+#, fuzzy
 msgid ""
 "The simplest possible ruleset is for a single machine that does not run any "
 "services and which needs access to one network, which may be the "
 "Internet. To create this minimal ruleset, edit [.filename]#/etc/pf.conf# so "
 "it looks like this:"
 msgstr ""
+"最简单的规则集是针对一台不运行任何服务并且需要访问一个网络（可能是Internet）的计算机。要创建此最小规则集，请编辑 <filename> /etc/"
+"pf.conf </filename>，像这样："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:237
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "block in all\n"
 "pass out all keep state\n"
 msgstr ""
+"block in all\n"
+"pass out all keep state\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:240
@@ -609,11 +640,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:252
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "tcp_services = \"{ ssh, smtp, domain, www, pop3, auth, pop3s }\"\n"
 "udp_services = \"{ domain }\"\n"
 msgstr ""
+"tcp_services = \"{ ssh, smtp, domain, www, pop3, auth, pop3s }\"\n"
+"udp_services = \"{ domain }\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:255
@@ -628,7 +661,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:263
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "tcp_services = \"{ ssh, smtp, domain, www, pop3, auth, pop3s }\"\n"
 "udp_services = \"{ domain }\"\n"
@@ -636,6 +669,11 @@ msgid ""
 "pass out proto tcp to any port $tcp_services keep state\n"
 "pass proto udp to any port $udp_services keep state\n"
 msgstr ""
+"tcp_services = \"{ ssh, smtp, domain, www, pop3, auth, pop3s }\"\n"
+"udp_services = \"{ domain }\"\n"
+"block all\n"
+"pass out proto tcp to any port $tcp_services keep state\n"
+"pass proto udp to any port $udp_services keep state\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:266
@@ -698,6 +736,7 @@ msgstr "使用NAT的简单通信闸"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:293
+#, fuzzy
 msgid ""
 "This section demonstrates how to configure a FreeBSD system running PF to "
 "act as a gateway for at least one other machine. The gateway needs at least "
@@ -705,6 +744,9 @@ msgid ""
 "example, [.filename]#xl0# is connected to the Internet and [.filename]#xl1# "
 "is connected to the internal network."
 msgstr ""
+"本节演示了如何在 FreeBSD 上配置运行<application>PF</application> 作为网关。该网关需要至少两个网络接口， "
+"每个接口都连接到一个独立的网络。在这个例子中， <filename>xl0</filename> 连接到 Internet， 而 "
+"<filename>xl1</filename> 连接到内部网络。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:295
@@ -762,9 +804,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:323
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "pass in on xl1 from xl1:network to xl0:network port $ports keep state\n"
-msgstr ""
+msgstr "pass in on xl1 from xl1:network to xl0:network port $ports keep state\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:326
@@ -775,9 +817,10 @@ msgstr "该规则仅允许流量传递到内部接口上的网关。为了让数
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:330
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "pass out on xl0 from xl1:network to xl0:network port $ports keep state\n"
 msgstr ""
+"pass out on xl0 from xl1:network to xl0:network port $ports keep state\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:333
@@ -792,9 +835,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:337
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "pass from xl1:network to any port $ports keep state\n"
-msgstr ""
+msgstr "pass from xl1:network to any port $ports keep state\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:340
@@ -809,17 +852,20 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:342
+#, fuzzy
 msgid ""
 "If required, `$localnet` could even be defined as a list of "
 "networks. Whatever the specific needs, a sensible `$localnet` definition "
 "could be used in a typical pass rule as follows:"
 msgstr ""
+"如果需要，<literal>$localnet</literal>甚至可以定义为网络列表。无论具体需求如何，在典型的通过规则中可以使用合理的<litera"
+"l>$localnet</literal>定义，如下所示："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:346
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "pass from $localnet to any port $ports keep state\n"
-msgstr ""
+msgstr "pass from $localnet to any port $ports keep state\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:349
@@ -840,7 +886,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:364
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "ext_if = \"xl0\"\t# macro for external interface - use tun0 for PPPoE\n"
 "int_if = \"xl1\"\t# macro for internal interface\n"
@@ -850,6 +896,13 @@ msgid ""
 "block all\n"
 "pass from { lo0, $localnet } to any keep state\n"
 msgstr ""
+"ext_if = \"xl0\"\t# macro for external interface - use tun0 for PPPoE\n"
+"int_if = \"xl1\"\t# macro for internal interface\n"
+"localnet = $int_if:network\n"
+"# ext_if IP address could be dynamic, hence ($ext_if)\n"
+"nat on $ext_if from $localnet to any -&gt; ($ext_if)\n"
+"block all\n"
+"pass from { lo0, $localnet } to any keep state\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:367
@@ -872,11 +925,13 @@ msgstr "请注意，这个规则集可能允许更多的流量从网络中传出
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:374
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "client_out = \"{ ftp-data, ftp, ssh, domain, pop3, auth, nntp, http, \\\n"
 "    https, cvspserver, 2628, 5999, 8000, 8080 }\"\n"
 msgstr ""
+"client_out = \"{ ftp-data, ftp, ssh, domain, pop3, auth, nntp, http, \\\n"
+"    https, cvspserver, 2628, 5999, 8000, 8080 }\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:377
@@ -885,11 +940,13 @@ msgstr "在 pass 规则中使用："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:382
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "pass inet proto tcp from $localnet to any port $client_out \\\n"
 "    flags S/SA keep state\n"
 msgstr ""
+"pass inet proto tcp from $localnet to any port $client_out \\\n"
+"    flags S/SA keep state\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:385
@@ -900,9 +957,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:389
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "pass in inet proto tcp to $ext_if port ssh\n"
-msgstr ""
+msgstr "pass in inet proto tcp to $ext_if port ssh\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:392
@@ -911,14 +968,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:397
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "udp_services = \"{ domain, ntp }\"\n"
 "pass quick inet proto { tcp, udp } to any port $udp_services keep state\n"
 msgstr ""
+"udp_services = \"{ domain, ntp }\"\n"
+"pass quick inet proto { tcp, udp } to any port $udp_services keep state\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:400
+#, fuzzy
 msgid ""
 "Note the `quick` keyword in this rule. Since the ruleset consists of several "
 "rules, it is important to understand the relationships between the rules in "
@@ -929,6 +989,10 @@ msgid ""
 "and the packet is treated according to that rule. This is very useful when "
 "an exception to the general rules is needed."
 msgstr ""
+"注意这个规则中的<literal>quick</literal>关键字。由于规则集由多个规则组成，所以理解规则集中规则之间的关系很重要。规则是按照编写规则"
+"的顺序从上到下进行评估的。对于每一个被<application>PF</application>评价的数据包或连接，<emphasis>规则集中最后一个匹"
+"配</emphasis>的规则就是被应用的规则。但是，当一个数据包与包含<literal>quick</literal>关键字的规则相匹配时，规则处理就会"
+"停止，并根据该规则处理该数据包。这在需要对一般规则进行例外处理时非常有用。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:402
@@ -990,9 +1054,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:419
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ftpproxy_enable=\"YES\"\n"
-msgstr ""
+msgstr "ftpproxy_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:422
@@ -1001,19 +1065,24 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:424
+#, fuzzy
 msgid ""
 "For a basic configuration, three elements need to be added to "
 "[.filename]#/etc/pf.conf#. First, the anchors which the proxy will use to "
 "insert the rules it generates for the FTP sessions:"
 msgstr ""
+"对于一个基本配置，需要在<filename>/etc/pf."
+"conf</filename>中添加三个元素。首先，代理将用于插入它为<acronym>FTP</acronym>会话生成的规则锚点："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:429
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "nat-anchor \"ftp-proxy/*\"\n"
 "rdr-anchor \"ftp-proxy/*\"\n"
 msgstr ""
+"nat-anchor \"ftp-proxy/*\"\n"
+"rdr-anchor \"ftp-proxy/*\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:432
@@ -1042,9 +1111,9 @@ msgstr "最后，让重定向的流量通过："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:445
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "pass out proto tcp from $proxy to any port ftp\n"
-msgstr ""
+msgstr "pass out proto tcp from $proxy to any port ftp\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:448
@@ -1087,11 +1156,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:464
+#, fuzzy
 msgid ""
 "Many of the tools used for debugging or troubleshooting a TCP/IP network "
 "rely on the Internet Control Message Protocol (ICMP), which was designed "
 "specifically with debugging in mind."
 msgstr ""
+"许多用于调试或故障排除的工具都依赖于互联网控制信息协议（<acronym>TCP/"
+"IP</acronym>），该协议(<acronym>ICMP</acronym>)是专为调试而设计的。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:466
@@ -1105,6 +1177,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:468
+#, fuzzy
 msgid ""
 "From a firewall perspective, some ICMP control messages are vulnerable to "
 "known attack vectors. Also, letting all diagnostic traffic pass "
@@ -1112,12 +1185,14 @@ msgid ""
 "others to extract information about the network. For these reasons, the "
 "following rule may not be optimal:"
 msgstr ""
+"从防火墙的角度来看，一些<acronym>ICMP</acronym>控制报文容易受到已知攻击载体的攻击。同时，让所有的诊断流量无条件通过，使得调试更容易"
+"，但也使得其他人更容易提取有关网络的信息。基于这些原因，下面的规则可能不是最佳选择："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:472
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "pass inet proto icmp from any to any\n"
-msgstr ""
+msgstr "pass inet proto icmp from any to any\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:475
@@ -1128,11 +1203,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:480
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "pass inet proto icmp from $localnet to any keep state\n"
 "pass inet proto icmp from any to $ext_if keep state\n"
 msgstr ""
+"pass inet proto icmp from $localnet to any keep state\n"
+"pass inet proto icmp from any to $ext_if keep state\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:483
@@ -1145,9 +1222,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:487
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "icmp_types = \"echoreq\"\n"
-msgstr ""
+msgstr "icmp_types = \"echoreq\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:490
@@ -1157,9 +1234,9 @@ msgstr "和使用宏的规则："
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:494
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:525
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "pass inet proto icmp all icmp-type $icmp_types keep state\n"
-msgstr ""
+msgstr "pass inet proto icmp all icmp-type $icmp_types keep state\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:497
@@ -1180,12 +1257,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:504
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# allow out the default range for traceroute(8):\n"
 "pass out on $ext_if inet proto udp from any to any port 33433 >< 33626 keep "
 "state\n"
 msgstr ""
+"# allow out the default range for traceroute(8):\n"
+"pass out on $ext_if inet proto udp from any to any port 33433 &gt;&lt; 33626 "
+"keep state\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:507
@@ -1229,9 +1309,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:518
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "icmp_types = \"{ echoreq, unreach }\"\n"
-msgstr ""
+msgstr "icmp_types = \"{ echoreq, unreach }\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:521
@@ -1281,11 +1361,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:545
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "192.168.2.0/24\n"
 "!192.168.2.5\n"
 msgstr ""
+"192.168.2.0/24\n"
+"!192.168.2.5\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:548
@@ -1305,11 +1387,13 @@ msgstr "表定义完成后，规则可以使用以下方式引用表："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:559
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "pass inet proto tcp from <clients> to any port $client_out flags S/SA keep "
 "state\n"
 msgstr ""
+"pass inet proto tcp from $localnet to any port $client_out \\\n"
+"    flags S/SA keep state\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:562
@@ -1358,7 +1442,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:588
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "Sep 26 03:12:34 skapet sshd[25771]: Failed password for root from "
 "200.72.41.31 port 40992 ssh2\n"
@@ -1372,6 +1456,17 @@ msgid ""
 "Sep 26 03:12:44 skapet sshd[24703]: Failed password for invalid user admin "
 "from 200.72.41.31 port 41484 ssh2\n"
 msgstr ""
+"Sep 26 03:12:34 skapet sshd[25771]: Failed password for root from "
+"200.72.41.31 port 40992 ssh2\n"
+"Sep 26 03:12:34 skapet sshd[5279]: Failed password for root from "
+"200.72.41.31 port 40992 ssh2\n"
+"Sep 26 03:12:35 skapet sshd[5279]: Received disconnect from 200.72.41.31: 11:"
+" Bye Bye\n"
+"Sep 26 03:12:44 skapet sshd[29635]: Invalid user admin from 200.72.41.31\n"
+"Sep 26 03:12:44 skapet sshd[24703]: input_userauth_request: invalid user "
+"admin\n"
+"Sep 26 03:12:44 skapet sshd[24703]: Failed password for invalid user admin "
+"from 200.72.41.31 port 41484 ssh2\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:591
@@ -1466,36 +1561,44 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:628
+#, fuzzy
 msgid ""
 "This example ruleset is intended mainly as an illustration. For example, if "
 "a generous number of connections in general are wanted, but the desire is to "
 "be more restrictive when it comes to ssh, supplement the rule above with "
 "something like the one below, early on in the rule set:"
 msgstr ""
+"这个示例规则集主要是作为一个示例。例如，如果一般情况下希望有大量的连接，但希望在涉及到<application>ssh</application>的时候，"
+"可以在规则集开头，写入类似规则："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:635
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "pass quick proto { tcp, udp } from any to any port ssh \\\n"
 "    flags S/SA keep state \\\n"
 "    (max-src-conn 15, max-src-conn-rate 5/3, \\\n"
 "    overload <bruteforce> flush global)\n"
 msgstr ""
+"pass quick proto { tcp, udp } from any to any port ssh \\\n"
+"    flags S/SA keep state \\\n"
+"    (max-src-conn 15, max-src-conn-rate 5/3, \\\n"
+"    overload &lt;bruteforce&gt; flush global)\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:640
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "*It May Not be Necessary to Block All Overloaders:* +\n"
-msgstr ""
+msgstr "可能不需要阻止所有 Overloader\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:642
+#, fuzzy
 msgid ""
 "It is worth noting that the overload mechanism is a general technique which "
 "does not apply exclusively to SSH, and it is not always optimal to entirely "
 "block all traffic from offenders."
-msgstr ""
+msgstr "值得注意的是，超载机制是一种通用技术，并不完全适用于<acronym>SSH</acronym>，完全阻断所有违规者的流量并不总是最佳实践。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:644
@@ -1508,6 +1611,7 @@ msgstr "例如，过载规则可以用来保护邮件服务或Web服务，而过
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:647
+#, fuzzy
 msgid ""
 "Over time, tables will be filled by overload rules and their size will grow "
 "incrementally, taking up more memory. Sometimes an IP address that is "
@@ -1515,6 +1619,8 @@ msgid ""
 "host who has a legitimate reason to communicate with hosts in the local "
 "network."
 msgstr ""
+"随着时间的推移，表会被超载规则填满，表的大小会逐渐增加，占用更多的内存。有时，被屏蔽的<acronym>IP</acronym>地址是一个动态分配的地址，"
+"此后，该地址被分配给了有合法理由与本地网络中的主机通信的主机。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:649
@@ -1532,11 +1638,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:656
+#, fuzzy
 msgid ""
 "Similar functionality is provided by package:security/expiretable[], which "
 "removes table entries which have not been accessed for a specified period of "
 "time."
-msgstr ""
+msgstr "<package>security/expiretable</package>也提供了类似的功能，它可以删除在指定时间内未被访问的表项。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:658
@@ -1548,9 +1655,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:662
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "/usr/local/sbin/expiretable -v -d -t 24h bruteforce\n"
-msgstr ""
+msgstr "/usr/local/sbin/expiretable -v -d -t 24h bruteforce\n"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:665
@@ -1588,11 +1695,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:674
+#, fuzzy
 msgid ""
 "This example demonstrates the basic procedure for setting up spamd with "
 "automatically updated blacklists. Refer to the man pages which are installed "
 "with package:mail/spamd[] for more information."
 msgstr ""
+"这个例子演示了设置<application>spamd</application>自动更新黑名单的基本步骤。有关更多信息，请参阅与<package>"
+"mail/spamd</package>的手册页。"
 
 #. type: Block title
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:677
@@ -1610,14 +1720,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:683
-#, no-wrap
+#, fuzzy, no-wrap
 msgid " fdescfs /dev/fd fdescfs rw 0 0\n"
-msgstr ""
+msgstr " fdescfs /dev/fd fdescfs rw 0 0\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:686
+#, fuzzy
 msgid "  Then, mount the filesystem:"
-msgstr ""
+msgstr "  然后，挂载文件系统："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:690
@@ -1669,19 +1780,24 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:710
+#, fuzzy
 msgid ""
 "  One of the first lines in the configuration file that does not begin with "
 "a `#` comment sign contains the block which defines the `all` list, which "
 "specifies the lists to use:"
 msgstr ""
+"  配置文件中的第一行之一不以<literal>#</literal>注释符号开头，其中包含定义<literal>all</literal>列表的块，该列"
+"表指定要使用的列表:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:715
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "all:\\\n"
 "    :traplist:whitelist:\n"
 msgstr ""
+"all:\\\n"
+"    :traplist:whitelist:\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:718
@@ -1694,12 +1810,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:720
+#, fuzzy
 msgid "  This is followed by the specified blacklist's definition:"
-msgstr ""
+msgstr "  接下来指定黑名单定义："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:728
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "traplist:\\\n"
 "    :black:\\\n"
@@ -1708,6 +1825,12 @@ msgid ""
 "    :method=http:\\\n"
 "    :file=www.openbsd.org/spamd/traplist.gz\n"
 msgstr ""
+"traplist:\\\n"
+"    :black:\\\n"
+"    :msg=\"SPAM. Your address %A has sent spam within the last 24 hours\":\\"
+"\n"
+"    :method=http:\\\n"
+"    :file=www.openbsd.org/spamd/traplist.gz\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:731
@@ -1730,41 +1853,49 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:740
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "whitelist:\\\n"
 "    :white:\\\n"
 "    :method=file:\\\n"
 "    :file=/var/mail/whitelist.txt\n"
 msgstr ""
+"whitelist:\\\n"
+"    :white:\\\n"
+"    :method=file:\\\n"
+"    :file=/var/mail/whitelist.txt\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:745
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "*Choose Data Sources with Care:* +\n"
-msgstr ""
+msgstr "小心的选择数据源\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:747
+#, fuzzy
 msgid ""
 "Using all the blacklists in the sample [.filename]#spamd.conf# will "
 "blacklist large blocks of the Internet. Administrators need to edit the file "
 "to create an optimal configuration which uses applicable data sources and, "
 "when necessary, uses custom lists."
 msgstr ""
+"使用示例<filename>spamd."
+"conf</filename>中的所有黑名单将屏蔽一大块互联网连接。管理员需要编辑该文件以创建最佳配置，该配置使用合适的数据源，并在必要时使用自定义列表。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:750
+#, fuzzy
 msgid ""
 "  Next, add this entry to [.filename]#/etc/rc.conf#. Additional flags are "
 "described in the man page specified by the comment:"
-msgstr ""
+msgstr "  接下来，将此条目添加到<filename>/etc/rc.conf</filename>中。其他参数将在其手册页中描述："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:754
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "spamd_flags=\"-v\" # use \"\" and see spamd-setup(8) for flags\n"
-msgstr ""
+msgstr "spamd_flags=\"-v\" # use \"\" and see spamd-setup(8) for flags\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:757
@@ -1829,9 +1960,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:775
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "spamd_grey=\"YES\"  # use spamd greylisting if YES\n"
-msgstr ""
+msgstr "spamd_grey=\"YES\"  # use spamd greylisting if YES\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:778
@@ -1895,9 +2026,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:800
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "set block-policy return\n"
-msgstr ""
+msgstr "set block-policy return\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:803
@@ -1912,9 +2043,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:807
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "scrub in all\n"
-msgstr ""
+msgstr "scrub in all\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:810
@@ -1934,9 +2065,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:816
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "scrub in all fragment reassemble no-df max-mss 1440\n"
-msgstr ""
+msgstr "scrub in all fragment reassemble no-df max-mss 1440\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:819
@@ -1955,11 +2086,13 @@ msgstr "这些规则排除了来自世界其他地区和本地的所有欺骗（
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:826
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "antispoof for $ext_if\n"
 "antispoof for $int_if\n"
 msgstr ""
+"antispoof for $ext_if\n"
+"antispoof for $int_if\n"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:829
@@ -1969,6 +2102,7 @@ msgstr "处理不可路由（Non-Routable）的位址"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:832
+#, fuzzy
 msgid ""
 "Even with a properly configured gateway to handle network address "
 "translation, one may have to compensate for other people's "
@@ -1978,6 +2112,8 @@ msgid ""
 "explicitly blocking traffic from non-routeable addresses from entering the "
 "network through the external interface."
 msgstr ""
+"即使有一个正确配置的网关来处理网络地址转换，也可能需要弥补别人的错误配置。一个常见的错误配置是让带有不可路由地址的流量出去到互联网上。由于来自不可路由地址"
+"的流量会在几种<acronym>DoS</acronym>攻击技术中发挥作用，因此考虑明确阻止来自不可路由地址的流量通过外部接口进入网络。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:834
@@ -2038,7 +2174,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:861
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "options         ALTQ\n"
 "options         ALTQ_CBQ        # Class Based Queuing (CBQ)\n"
@@ -2047,6 +2183,12 @@ msgid ""
 "options         ALTQ_HFSC       # Hierarchical Packet Scheduler (HFSC)\n"
 "options         ALTQ_PRIQ       # Priority Queuing (PRIQ)\n"
 msgstr ""
+"options         ALTQ\n"
+"options         ALTQ_CBQ        # Class Based Queuing (CBQ)\n"
+"options         ALTQ_RED        # Random Early Detection (RED)\n"
+"options         ALTQ_RIO        # RED In/Out\n"
+"options         ALTQ_HFSC       # Hierarchical Packet Scheduler (HFSC)\n"
+"options         ALTQ_PRIQ       # Priority Queuing (PRIQ)\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:864
@@ -2074,12 +2216,13 @@ msgstr "RED"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:870
+#, fuzzy
 msgid ""
 "Random Early Detection (RED) is used to avoid network congestion by "
 "measuring the length of the queue and comparing it to the minimum and "
 "maximum thresholds for the queue. When the queue is over the maximum, all "
 "new packets are randomly dropped."
-msgstr ""
+msgstr "随机早期检测（RED）通过测量队列的长度，并与队列的最小和最大阈值进行比较，来避免网络拥塞。当队列超过最大值时，所有新的数据包都会被随机丢弃。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:871
@@ -2294,12 +2437,15 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:944
+#, fuzzy
 msgid ""
 "Only firewall rules with the `log` option will be logged. The default rules "
 "do not include this option and it must be manually added. Therefore it is "
 "advisable that the default ruleset is edited for logging. In addition, log "
 "rotation may be desired if the logs are stored in a separate file."
 msgstr ""
+"只有带有 <option>log</option>选项的防火墙规则才会被记录。默认规则不包括此选项，必须手动添加。因此，建议编辑默认规则集以进行日志记录。"
+"此外，如果日志存储在单独的文件中，则可能需要日志日志轮转。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:947
@@ -2382,6 +2528,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:987
+#, fuzzy
 msgid ""
 "When creating an IPFW rule, keywords must be written in the following "
 "order. Some keywords are mandatory while other keywords are optional. The "
@@ -2390,6 +2537,9 @@ msgid ""
 "to mark the start of a comment and may appear at the end of a rule or on its "
 "own line. Blank lines are ignored."
 msgstr ""
+"创建<application>IPFW</application>规则时，关键字必须按以下顺序编写。某些关键字是强制性的，而其他关键字是可选的。大写的单词"
+"表示变量，以小写显示的单词必须位于它后面的变量之前。<literal>*</literal>符号用于标记注释的开始，并可能出现在规则末尾或其自己的行上。忽"
+"略空白行。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:989
@@ -2533,10 +2683,12 @@ msgstr "PROTO"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1024
+#, fuzzy
 msgid ""
 "This optional value can be used to specify any protocol name or number found "
 "in [.filename]#/etc/protocols#."
 msgstr ""
+"也可以指定在 <filename>/etc/protocols</filename> 中所定义的协议。 这个值定义的是匹配的协议， 在规则中必须指定它。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1025
@@ -2565,10 +2717,14 @@ msgstr "SRC_PORT"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1030
+#, fuzzy
 msgid ""
 "An optional source port can be specified using the port number or name from "
 "[.filename]#/etc/services#."
 msgstr ""
+"这个参数主要用于那些支持端口号的协议 (例如 <acronym>TCP</acronym> 和 <acronym>UDP</acronym>)。 "
+"如果要通过端口号匹配某个协议， 就必须指定这个参数。 此外， 也可以通过服务的名字 (根据 <filename>/etc/"
+"services</filename>) 来指定服务， 这样会比使用数字指定端口号直观一些。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1031
@@ -2593,10 +2749,11 @@ msgstr "DST_PORT"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1036
+#, fuzzy
 msgid ""
 "An optional destination port can be specified using the port number or name "
 "from [.filename]#/etc/services#."
-msgstr ""
+msgstr "可以使用<filename>/etc/services</filename>中的端口号或名称指定可选的目标端口。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1037
@@ -2665,9 +2822,9 @@ msgstr "若您第一次创建防火墙规则，请把下面这个 sysctl 变量�
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1057
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "net.inet.ip.fw.default_to_accept=\"1\"\n"
-msgstr ""
+msgstr "net.inet.ip.fw.default_to_accept=\"1\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1060
@@ -2679,6 +2836,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1063
+#, fuzzy
 msgid ""
 "The firewall script begins by indicating that it is a Bourne shell script "
 "and flushes any existing rules. It then creates the `cmd` variable so that "
@@ -2686,6 +2844,9 @@ msgid ""
 "defines the `pif` variable which represents the name of the interface that "
 "is attached to the Internet."
 msgstr ""
+"防火墙脚本的开头指明了这是一个 Bourne shell 脚本，并在规则载入之前刷新现有规则。它创建了<literal>cmd</literal>变量，"
+"这样就不用在每条规则开头输入<literal>ipfw add</literal>。同时还定义了<literal>pif</literal>变量，"
+"该变量表示连接到 Internet 接口的名称。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1069
@@ -2737,9 +2898,9 @@ msgstr "这条规则表示允许所有符合规则的流量通过："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1091
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "$cmd 00101 check-state\n"
-msgstr ""
+msgstr "$cmd 00101 check-state\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1094
@@ -2823,6 +2984,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1131
+#, fuzzy
 msgid ""
 "The next set of rules controls connections from Internet hosts to the "
 "internal network. It starts by denying packets typically associated with "
@@ -2830,6 +2992,8 @@ msgid ""
 "authorized services that originate from the Internet use `limit` to prevent "
 "flooding."
 msgstr ""
+"下一组规则控制 Internet 到内部网络的连接。它首先拒绝可能发起攻击的数据包，然后显式允许特定类型的连接。源自 Internet "
+"的所有授权服务都使用<literal>limit</literal>来防止洪水攻击。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1144
@@ -2939,11 +3103,13 @@ msgstr "最后一条规则拒绝所有不符合规则的流量："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1183
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# Everything else is denied and logged\n"
 "$cmd 00999 deny log all from any to any\n"
 msgstr ""
+"# Everything else is denied and logged\n"
+"$cmd 00999 deny log all from any to any\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1186
@@ -2982,12 +3148,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1199
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "gateway_enable=\"YES\"\n"
 "firewall_enable=\"YES\"\n"
 "firewall_nat_enable=\"YES\"\n"
 msgstr ""
+"gateway_enable=\"YES\"\n"
+"firewall_enable=\"YES\"\n"
+"firewall_nat_enable=\"YES\"\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1204
@@ -2999,6 +3168,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1207
+#, fuzzy
 msgid ""
 "When the ruleset contains stateful rules, the positioning of the NAT rule is "
 "critical and the `skipto` action is used. The `skipto` action requires a "
@@ -3010,10 +3180,15 @@ msgid ""
 "option, and a list of TCP ports which will be used to reduce the number of "
 "rules."
 msgstr ""
+"当规则集包含有状态的规则时，<acronym>NAT</acronym>规则的定位非常关键，并使用<literal>skipto</literal>动作。"
+"<literal>skipto</literal>动作需要一个规则编号，以便知道要跳转到哪个规则。下面的示例基于上一节中所示的防火墙规则集。它添加了一些条"
+"目并修改了一些现有规则，以便为 in-kernel "
+"<acronym>NAT</acronym>配置防火墙。它首先添加一些表示要跳到的规则编号、<literal>keep-state</literal> "
+"选项和用于减少规则数的<acronym>TCP</acronym>端口列表。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1217
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "#!/bin/sh\n"
 "ipfw -q -f flush\n"
@@ -3023,6 +3198,13 @@ msgid ""
 "ks=\"keep-state\"\n"
 "good_tcpo=\"22,25,37,53,80,443,110\"\n"
 msgstr ""
+"#!/bin/sh\n"
+"ipfw -q -f flush\n"
+"cmd=\"ipfw -q add\"\n"
+"skip=\"skipto 1000\"\n"
+"pif=dc0\n"
+"ks=\"keep-state\"\n"
+"good_tcpo=\"22,25,37,53,80,443,110\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1220
@@ -3037,9 +3219,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1224
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "net.inet.tcp.tso=\"0\"\n"
-msgstr ""
+msgstr "net.inet.tcp.tso=\"0\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1227
@@ -3061,11 +3243,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1232
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "ipfw disable one_pass\n"
 "ipfw -q nat 1 config if $pif same_ports unreg_only reset\n"
 msgstr ""
+"ipfw disable one_pass\n"
+"ipfw -q nat 1 config if $pif same_ports unreg_only reset\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1235
@@ -3103,7 +3287,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1251
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "$cmd 005 allow all from any to any via xl0  # exclude LAN traffic\n"
 "$cmd 010 allow all from any to any via lo0  # exclude loopback traffic\n"
@@ -3113,6 +3297,13 @@ msgid ""
 "table\n"
 "$cmd 101 check-state\n"
 msgstr ""
+"$cmd 005 allow all from any to any via xl0  # exclude LAN traffic\n"
+"$cmd 010 allow all from any to any via lo0  # exclude loopback traffic\n"
+"$cmd 099 reass all from any to any in       # reassemble inbound packets\n"
+"$cmd 100 nat 1 ip from any to any in via $pif # NAT any inbound packets\n"
+"# Allow the packet through if it has an existing entry in the dynamic rules "
+"table\n"
+"$cmd 101 check-state\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1254
@@ -3132,7 +3323,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1267
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# Authorized outbound packets\n"
 "$cmd 120 $skip udp from any to x.x.x.x 53 out via $pif $ks\n"
@@ -3140,6 +3331,11 @@ msgid ""
 "$cmd 125 $skip tcp from any to any $good_tcpo out via $pif setup $ks\n"
 "$cmd 130 $skip icmp from any to any out via $pif $ks\n"
 msgstr ""
+"# Authorized outbound packets\n"
+"$cmd 120 $skip udp from any to x.x.x.x 53 out via $pif $ks\n"
+"$cmd 121 $skip udp from any to x.x.x.x 67 out via $pif $ks\n"
+"$cmd 125 $skip tcp from any to any $good_tcpo out via $pif setup $ks\n"
+"$cmd 130 $skip icmp from any to any out via $pif $ks\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1270
@@ -3155,13 +3351,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1276
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "$cmd 999 deny log all from any to any\n"
 "$cmd 1000 nat 1 ip from any to any out via $pif # skipto location for "
 "outbound stateful rules\n"
 "$cmd 1001 allow ip from any to any\n"
 msgstr ""
+"$cmd 999 deny log all from any to any\n"
+"$cmd 1000 nat 1 ip from any to any out via $pif # skipto location for "
+"outbound stateful rules\n"
+"$cmd 1001 allow ip from any to any\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1279
@@ -3173,6 +3373,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1281
+#, fuzzy
 msgid ""
 "Consider an internal web browser which initializes a new outbound HTTP "
 "session over port 80. When the first outbound packet enters the firewall, it "
@@ -3190,6 +3391,14 @@ msgid ""
 "processed by the `check-state` rule, is found in the table as an existing "
 "session, and is released to the LAN."
 msgstr ""
+"考虑一个内部web浏览器，它通过端口80初始化一个新的出站<acronym>HTTP</acronym>会话。当第一个出站数据包进入防火墙时，它与规则<l"
+"iteral>100</literal>不匹配，因为它是向外而不是向内的。它通过了规则<literal>101</literal>，因为这是第一个数据包，"
+"它还没有被发送到动态状态表。数据包最终与规则<literal>125</literal>匹配，因为它是在允许的端口上出站的，并且具有来自内部<acrony"
+"m>LAN</acronym>的源<acronym>IP</acronym>地址。匹配此规则时，将执行两个操作。首先，<literal>keep-"
+"state</literal>操作向动态状态表添加一个条目，然后执行指定的操作<literal>skipto rule "
+"1000</literal>。接下来，包经过<acronym>NAT</acronym>并发送到 Internet。此数据包将被发送到目标 web 服务器"
+"，在那里生成并发送响应数据包。这个新包进入规则集的顶部。它匹配规则<literal>100</literal>，并将其目标<acronym>IP</acr"
+"onym>地址映射回原始内部地址。然后由检查状态规则处理，在表中被发现为现有会话，并被释放到<acronym>LAN</acronym>。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1283
@@ -3258,12 +3467,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1302
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "redirect_port proto targetIP:targetPORT[-targetPORT]\n"
 "  [aliasIP:]aliasPORT[-aliasPORT]\n"
 "  [remoteIP[:remotePORT[-remotePORT]]]\n"
 msgstr ""
+"redirect_port proto targetIP:targetPORT[-targetPORT]\n"
+"  [aliasIP:]aliasPORT[-aliasPORT]\n"
+"  [remoteIP[:remotePORT[-remotePORT]]]\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1305
@@ -3272,11 +3484,13 @@ msgstr "要配置上述示例设置，参数应为："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1310
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "redirect_port tcp 192.168.0.2:6667 6667\n"
 "redirect_port tcp 192.168.0.3:80 80\n"
 msgstr ""
+"redirect_port tcp 192.168.0.2:6667 6667\n"
+"redirect_port tcp 192.168.0.3:80 80\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1313
@@ -3288,12 +3502,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1319
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "ipfw -q nat 1 config if $pif same_ports unreg_only reset \\\n"
 "  redirect_port tcp 192.168.0.2:6667 6667 \\\n"
 "  redirect_port tcp 192.168.0.3:80 80\n"
 msgstr ""
+"ipfw -q nat 1 config if $pif same_ports unreg_only reset \\\n"
+"  redirect_port tcp 192.168.0.2:6667 6667 \\\n"
+"  redirect_port tcp 192.168.0.3:80 80\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1322
@@ -3334,9 +3551,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1332
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "redirect_address localIP publicIP\n"
-msgstr ""
+msgstr "redirect_address localIP publicIP\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1335
@@ -3345,11 +3562,13 @@ msgstr "在此示例中，参数效果等同于："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1340
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "redirect_address 192.168.0.2 128.1.1.2\n"
 "redirect_address 192.168.0.3 128.1.1.3\n"
 msgstr ""
+"redirect_address 192.168.0.2 128.1.1.2\n"
+"redirect_address 192.168.0.3 128.1.1.3\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1343
@@ -3394,12 +3613,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1357
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "gateway_enable=\"YES\"\n"
 "natd_enable=\"YES\"\n"
 "natd_interface=\"rl0\"\n"
 msgstr ""
+"gateway_enable=\"YES\"\n"
+"natd_enable=\"YES\"\n"
+"natd_interface=\"rl0\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1360
@@ -3414,11 +3636,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1365
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "$cmd 100 divert natd ip from any to any in via $pif\n"
 "$cmd 1000 divert natd ip from any to any out via $pif\n"
 msgstr ""
+"$cmd 100 divert natd ip from any to any in via $pif\n"
+"$cmd 1000 divert natd ip from any to any out via $pif\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1368
@@ -3433,9 +3657,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1372
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "natd_flags=\"-f /etc/natd.conf\"\n"
-msgstr ""
+msgstr "natd_flags=\"-f /etc/natd.conf\"\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1377
@@ -3447,11 +3671,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1382
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "redirect_port tcp 192.168.0.2:6667 6667\n"
 "redirect_address 192.168.0.3 128.1.1.3\n"
 msgstr ""
+"redirect_port tcp 192.168.0.2:6667 6667\n"
+"redirect_address 192.168.0.3 128.1.1.3\n"
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1387
@@ -3461,6 +3687,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1390
+#, fuzzy
 msgid ""
 "`ipfw` can be used to make manual, single rule additions or deletions to the "
 "active firewall while it is running. The problem with using this method is "
@@ -3469,6 +3696,9 @@ msgid ""
 "at boot time and to replace the currently running firewall rules whenever "
 "that file changes."
 msgstr ""
+"<command>ipfw</command> 命令是在防火墙运行时， 用于在其内部规则表中手工逐条添加或删除防火墙规则的标准工具。 这一方法的问题在于，"
+" 一旦您的关闭计算机或停机， 则所有增加或删除或修改的规则也就丢掉了。 把所有的规则都写到一个文件中， 并在启动时使用这个文件来加载规则， "
+"或一次大批量地替换防火墙规则， 那么推荐使用这里介绍的方法。"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1392
@@ -3607,17 +3837,20 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1453
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "last message repeated 45 times\n"
-msgstr ""
+msgstr "last message repeated 45 times\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1456
+#, fuzzy
 msgid ""
 "All logged packets messages are written by default to "
 "[.filename]#/var/log/security#, which is defined in "
 "[.filename]#/etc/syslog.conf#."
 msgstr ""
+"所有日志默认保存在<filename>/var/log/security</filename>，可在<filename>/etc/syslog."
+"conf</filename>中设置日志保存位置。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1458
@@ -3627,6 +3860,7 @@ msgstr "构建规则脚本"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1461
+#, fuzzy
 msgid ""
 "Most experienced IPFW users create a file containing the rules and code them "
 "in a manner compatible with running them as a script. The major benefit of "
@@ -3636,6 +3870,9 @@ msgid ""
 "needed. Being a script, symbolic substitution can be used for frequently "
 "used values to be substituted into multiple rules."
 msgstr ""
+"大部分有经验的 <application>IPFW</application> 用户会创建一个包含规则的文件，并按照与作为脚本运行规则兼容的方式对这些规则"
+"进行编码。这样做的主要好处是防火墙规则可以大规模刷新，而无需重新启动系统来激活它们。此方法在测试新规则时很方便，因为该过程可以根据需要多次执行。作为脚本，"
+"符号替换可用于将常用值替换到多个规则中。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1463
@@ -3654,7 +3891,7 @@ msgstr "像这样启动规则文件："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1483
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "############### start of example ipfw rules script #############\n"
 "#\n"
@@ -3672,6 +3909,21 @@ msgid ""
 "$cmd 00611 allow udp from any to $odns 53 out via $oif $ks\n"
 "################### End of example ipfw rules script ############\n"
 msgstr ""
+"############### start of example ipfw rules script #############\n"
+"#\n"
+"ipfw -q -f flush       # Delete all rules\n"
+"# Set defaults\n"
+"oif=\"tun0\"             # out interface\n"
+"odns=\"192.0.2.11\"      # ISP's DNS server IP address\n"
+"cmd=\"ipfw -q add \"     # build rule prefix\n"
+"ks=\"keep-state\"        # just too lazy to key this each time\n"
+"$cmd 00500 check-state\n"
+"$cmd 00502 deny all from any to any frag\n"
+"$cmd 00501 deny tcp from any to any established\n"
+"$cmd 00600 allow tcp from any to any 80 out via $oif setup $ks\n"
+"$cmd 00610 allow tcp from any to $odns 53 out via $oif setup $ks\n"
+"$cmd 00611 allow udp from any to $odns 53 out via $oif $ks\n"
+"################### End of example ipfw rules script ############\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1486
@@ -3682,10 +3934,11 @@ msgstr "规则并不重要，重点是演示符号替换字段的填充方式。
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1488
+#, fuzzy
 msgid ""
 "If the above example was in [.filename]#/etc/ipfw.rules#, the rules could be "
 "reloaded by the following command:"
-msgstr ""
+msgstr "如果上面的示例位于<filename>/etc/ipfw.rules</filename>，则可以通过以下命令重新加载规则："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1492
@@ -3695,10 +3948,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1495
+#, fuzzy
 msgid ""
 "[.filename]#/etc/ipfw.rules# can be located anywhere and the file can have "
 "any name."
-msgstr ""
+msgstr "<filename>/etc/ipfw.rules</filename>可以位于任何位置，并且文件可以有任何名称。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1497
@@ -3737,7 +3991,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1526
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "options    IPFIREWALL\t\t\t# enables IPFW\n"
 "options    IPFIREWALL_VERBOSE\t\t# enables logging for rules with log "
@@ -3754,6 +4008,20 @@ msgid ""
 "support\n"
 "options    IPDIVERT\t\t\t# enables NAT through natd(8)\n"
 msgstr ""
+"options    IPFIREWALL\t\t\t# enables IPFW\n"
+"options    IPFIREWALL_VERBOSE\t\t# enables logging for rules with log "
+"keyword to syslogd(8)\n"
+"options    IPFIREWALL_VERBOSE_LIMIT=5\t# limits number of logged packets per-"
+"entry\n"
+"options    IPFIREWALL_DEFAULT_TO_ACCEPT # sets default policy to pass what "
+"is not explicitly denied\n"
+"options    IPFIREWALL_NAT\t\t# enables basic in-kernel NAT support\n"
+"options    LIBALIAS\t\t\t# enables full in-kernel NAT support\n"
+"options    IPFIREWALL_NAT64\t\t# enables in-kernel NAT64 support\n"
+"options    IPFIREWALL_NPTV6\t\t# enables in-kernel IPv6 NPT support\n"
+"options    IPFIREWALL_PMOD\t\t# enables protocols modification module "
+"support\n"
+"options    IPDIVERT\t\t\t# enables NAT through natd(8)\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1531
@@ -3834,13 +4102,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1558
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "options IPFILTER\n"
 "options IPFILTER_LOG\n"
 "options IPFILTER_LOOKUP\n"
 "options IPFILTER_DEFAULT_BLOCK\n"
 msgstr ""
+"options IPFILTER\n"
+"options IPFILTER_LOG\n"
+"options IPFILTER_LOOKUP\n"
+"options IPFILTER_DEFAULT_BLOCK\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1561
@@ -3865,7 +4137,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1574
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "ipfilter_enable=\"YES\"             # Start ipf firewall\n"
 "ipfilter_rules=\"/etc/ipf.rules\"   # loads rules definition text file\n"
@@ -3877,6 +4149,15 @@ msgid ""
 "                                  # v = log tcp window, ack, seq\n"
 "                                  # n = map IP & port to names\n"
 msgstr ""
+"ipfilter_enable=\"YES\"             # Start ipf firewall\n"
+"ipfilter_rules=\"/etc/ipf.rules\"   # loads rules definition text file\n"
+"ipv6_ipfilter_rules=\"/etc/ipf6.rules\" # loads rules definition text file "
+"for IPv6\n"
+"ipmon_enable=\"YES\"                # Start IP monitor log\n"
+"ipmon_flags=\"-Ds\"                 # D = start as daemon\n"
+"                                  # s = log to syslog\n"
+"                                  # v = log tcp window, ack, seq\n"
+"                                  # n = map IP &amp; port to names\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1577
@@ -3885,12 +4166,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1583
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "gateway_enable=\"YES\"              # Enable as LAN gateway\n"
 "ipnat_enable=\"YES\"                # Start ipnat function\n"
 "ipnat_rules=\"/etc/ipnat.rules\"    # rules definition file for ipnat\n"
 msgstr ""
+"gateway_enable=\"YES\"              # Enable as LAN gateway\n"
+"ipnat_enable=\"YES\"                # Start ipnat function\n"
+"ipnat_rules=\"/etc/ipnat.rules\"    # rules definition file for ipnat\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1586
@@ -3905,11 +4189,12 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1593
+#, fuzzy
 msgid ""
 "To load the firewall rules, specify the name of the ruleset file using "
 "`ipf`. The following command can be used to replace the currently running "
 "firewall rules:"
-msgstr ""
+msgstr "若要加载防火墙规则, 请使用<command>ipf</command>指定规则集文件的名称。以下命令可用于替换当前运行的防火墙规则:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1597
@@ -3962,11 +4247,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1610
+#, fuzzy
 msgid ""
 "When creating rules, a `#` character is used to mark the start of a comment "
 "and may appear at the end of a rule, to explain that rule's function, or on "
 "its own line. Any blank lines are ignored."
 msgstr ""
+"在创建规则时，<literal>#</literal>字符用于标记注释的开始，可以出现在规则的末尾，解释该规则的功能，也可以出现在规则本身的行中。任何空行"
+"都会被忽略。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1612
@@ -4148,6 +4436,7 @@ msgstr "PROTO_TYPE"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1664
+#, fuzzy
 msgid ""
 "The protocol type is optional. However, it is mandatory if the rule needs to "
 "specify a SRC_PORT or a DST_PORT as it defines the type of protocol. When "
@@ -4157,6 +4446,10 @@ msgid ""
 "SRC_PORT or DST_PORT is specified, all port numbers for that protocol will "
 "match that rule."
 msgstr ""
+"协议类型是可选的。但是，如果规则需要指定 SRC_PORT 或 DST_PORT，它是强制性的，因为它定义了协议类型。当指定协议类型时，请使用<liter"
+"al>proto</literal>关键字，后面是<filename>/etc/protocols</filename>中的协议号或名称。例如协议名称包括"
+"<literal>tcp</literal>、<literal>udp</literal>或<literal>icmp</literal>。如果指定了 "
+"PROTO_TYPE，但没有指定 SRC_PORT 或 DST_PORT，则所有端口的此类型数据包将与该规则相匹配。"
 
 #. type: Labeled list
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1665
@@ -4269,6 +4562,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1692
+#, fuzzy
 msgid ""
 "In IPF, packets destined to go out through the interface connected to the "
 "public Internet are first checked against the dynamic state table. If the "
@@ -4283,6 +4577,10 @@ msgid ""
 "dynamic state table. Packets that do not belong to an already active session "
 "are checked against the inbound ruleset."
 msgstr ""
+"在<application>IPF</application>中，首先根据动态状态表检查打算通过连接到公共互联网的接口出去的数据包。如果数据包与下一个预期"
+"的数据包相匹配，组成一个活动的会话，那么它就会退出防火墙，并在动态状态表中更新会话流的状态。不属于活动会话的数据包会根据出站规则集进行检查。从连接到公共互"
+"联网的接口进来的数据包首先会根据动态状态表进行检查。如果数据包与构成活动会话的下一个预期数据包相匹配，它就会退出防火墙，并在动态状态表中更新会话会话对话流"
+"的状态。不属于已经活动会话的数据包会根据入站规则集进行检查。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1694
@@ -4310,15 +4608,19 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1706
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# no restrictions on loopback interface\n"
 "pass in quick on lo0 all\n"
 "pass out quick on lo0 all\n"
 msgstr ""
+"# no restrictions on loopback interface\n"
+"pass in quick on lo0 all\n"
+"pass out quick on lo0 all\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1709
+#, fuzzy
 msgid ""
 "The public interface connected to the Internet is used to authorize and "
 "control access of all outbound and inbound connections. If one or more "
@@ -4329,6 +4631,9 @@ msgid ""
 "interfaces, outbound connections through the public interface, and inbound "
 "connections through the public interface."
 msgstr ""
+"连接到互联网的公共接口用于授权和控制所有出站和入站连接。如果一个或多个接口与专网相连，那么这些内部接口可能需要规则来允许来自<acronym>LAN</a"
+"cronym>的数据包在内部网络之间或连接到Internet的接口之间流动。规则集应该被组织成三大部分：任何可信的内部接口、通过公共接口的出站连接和通过公"
+"共接口的入站连接。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1711
@@ -4339,12 +4644,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1717
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# no restrictions on inside LAN interface for private network\n"
 "pass out quick on xl0 all\n"
 "pass in quick on xl0 all\n"
 msgstr ""
+"# no restrictions on inside LAN interface for private network\n"
+"pass out quick on xl0 all\n"
+"pass in quick on xl0 all\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1720
@@ -4601,12 +4909,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1833
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "gateway_enable=\"YES\"\n"
 "ipnat_enable=\"YES\"\n"
 "ipnat_rules=\"/etc/ipnat.rules\"\n"
 msgstr ""
+"gateway_enable=\"YES\"\n"
+"ipnat_enable=\"YES\"\n"
+"ipnat_rules=\"/etc/ipnat.rules\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1836
@@ -4660,12 +4971,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1849
+#, fuzzy
 msgid ""
 "For networks that have large numbers of internal systems or multiple "
 "subnets, the process of funneling every private IP address into a single "
 "public IP address becomes a resource problem. Two methods are available to "
 "relieve this issue."
 msgstr ""
+"对于具有大量内部系统或多个子网的网络，将每个专用<acronym>IP</acronym>地址插入单个公共<acronym>IP</acronym>地址的"
+"过程将成为一个资源问题。有两种方法可以缓解此问题。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1851
@@ -4696,6 +5010,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1865
+#, fuzzy
 msgid ""
 "The second method is to use a pool of public addresses. This is useful when "
 "there are too many LAN addresses to fit into a single public address and a "
@@ -4703,6 +5018,9 @@ msgid ""
 "used as a pool from which NAT selects an IP address as a packet's address is "
 "mapped on its way out."
 msgstr ""
+"第二种方法是使用公共地址池。当有太多的 <acronym>LAN</acronym>地址无法放入一个公共地址中，而有一个公共 <acronym>IP</a"
+"cronym>地址块可用时，这种方法很有用。这些公共地址可以作为一个池子来使用，<acronym>NAT</acronym>会从其中选择一个<acrony"
+"m>IP</acronym>地址，因为数据包的地址被映射到它的出路上。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1867
@@ -4894,7 +5212,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1969
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "input packets: blocked 99286 passed 1255609 nomatch 14686 counted 0\n"
 " output packets: blocked 4200 passed 1284345 nomatch 14687 counted 0\n"
@@ -4914,9 +5232,27 @@ msgid ""
 " TCP cksum fails(in): 0 (out): 0\n"
 " Packet log flags set: (0)\n"
 msgstr ""
+"input packets: blocked 99286 passed 1255609 nomatch 14686 counted 0\n"
+" output packets: blocked 4200 passed 1284345 nomatch 14687 counted 0\n"
+" input packets logged: blocked 99286 passed 0\n"
+" output packets logged: blocked 0 passed 0\n"
+" packets logged: input 0 output 0\n"
+" log failures: input 3898 output 0\n"
+" fragment state(in): kept 0 lost 0\n"
+" fragment state(out): kept 0 lost 0\n"
+" packet state(in): kept 169364 lost 0\n"
+" packet state(out): kept 431395 lost 0\n"
+" ICMP replies: 0 TCP RSTs sent: 0\n"
+" Result cache hits(in): 1215208 (out): 1098963\n"
+" IN Pullups succeeded: 2 failed: 0\n"
+" OUT Pullups succeeded: 0 failed: 0\n"
+" Fastroute successes: 0 failures: 0\n"
+" TCP cksum fails(in): 0 (out): 0\n"
+" Packet log flags set: (0)\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1972
+#, fuzzy
 msgid ""
 "Several options are available. When supplied with either `-i` for inbound or "
 "`-o` for outbound, the command will retrieve and display the appropriate "
@@ -4924,15 +5260,21 @@ msgid ""
 "see the rule numbers, include `-n`. For example, `ipfstat -on` displays the "
 "outbound rules table with rule numbers:"
 msgstr ""
+"有几个选项可供选择。当提供<option>-i</option>用于入站，或者<option>-o</option>用于出站时，该命令将检索并显示相应的过"
+"滤规则列表。要查看规则的编号，请包含<option>-n</option>。例如，<command>ipfstat "
+"-on</command>会显示带规则号的出站规则表："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1978
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "@1 pass out on xl0 from any to any\n"
 "@2 block out on dc0 from any to any\n"
 "@3 pass out quick on dc0 proto tcp/udp from any to any keep state\n"
 msgstr ""
+"@1 pass out on xl0 from any to any\n"
+"@2 block out on dc0 from any to any\n"
+"@3 pass out quick on dc0 proto tcp/udp from any to any keep state\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1981
@@ -4944,12 +5286,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1987
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "2451423 pass out on xl0 from any to any\n"
 "354727 block out on dc0 from any to any\n"
 "430918 pass out quick on dc0 proto tcp/udp from any to any keep state\n"
 msgstr ""
+"2451423 pass out on xl0 from any to any\n"
+"354727 block out on dc0 from any to any\n"
+"430918 pass out quick on dc0 proto tcp/udp from any to any keep state\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:1990
@@ -4988,13 +5333,17 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2003
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "ipmon_flags=\"-Ds\" # D = start as daemon\n"
 "                  # s = log to syslog\n"
 "                  # v = log tcp window, ack, seq\n"
 "                  # n = map IP & port to names\n"
 msgstr ""
+"ipmon_flags=\"-Ds\" # D = start as daemon\n"
+"                  # s = log to syslog\n"
+"                  # v = log tcp window, ack, seq\n"
+"                  # n = map IP &amp; port to names\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2006
@@ -5025,7 +5374,7 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2017
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "LOG_INFO - packets logged using the \"log\" keyword as the action rather "
 "than pass or block.\n"
@@ -5034,6 +5383,12 @@ msgid ""
 "LOG_ERR - packets which have been logged and which can be considered short "
 "due to an incomplete header\n"
 msgstr ""
+"LOG_INFO - packets logged using the \"log\" keyword as the action rather "
+"than pass or block.\n"
+"LOG_NOTICE - packets logged which are also passed\n"
+"LOG_WARNING - packets logged which are also blocked\n"
+"LOG_ERR - packets which have been logged and which can be considered short "
+"due to an incomplete header\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2020
@@ -5050,16 +5405,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2027
+#, fuzzy
 msgid ""
 "Then, to write all logged messages to the specified file, add the following "
 "statement to [.filename]#/etc/syslog.conf#:"
-msgstr ""
+msgstr "然后，要将所有记录的消息写入指定的文件，请在<filename>/etc/syslog.conf</filename>中添加以下语句："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2031
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "local0.* /var/log/ipfilter.log\n"
-msgstr ""
+msgstr "local0.* /var/log/ipfilter.log\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2034
@@ -5070,17 +5426,19 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2036
+#, fuzzy
 msgid ""
 "Do not forget to edit [.filename]#/etc/newsyslog.conf# to rotate the new log "
 "file."
-msgstr ""
+msgstr "不要忘记编辑<filename>/etc/newsyslog.conf</filename>轮转新的日志文件。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2038
+#, fuzzy
 msgid ""
 "Messages generated by `ipmon` consist of data fields separated by white "
 "space. Fields common to all messages are:"
-msgstr ""
+msgstr "由<command>ipmon</command>生成的信息由空白分隔的数据字段组成。所有消息共有的字段包括："
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2040
@@ -5156,6 +5514,7 @@ msgstr "Blacklistd"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2056
+#, fuzzy
 msgid ""
 "Blacklistd is a daemon listening to sockets to receive notifications from "
 "other daemons about connection attempts that failed or were successful. It "
@@ -5167,6 +5526,10 @@ msgid ""
 "after a number of tries. Blacklistd was first developed on NetBSD and "
 "appeared there in version 7. FreeBSD 11 imported blacklistd from NetBSD."
 msgstr ""
+"Blacklistd 是一个监听套接字的守护进程，用于接收来自其他守护进程的连接尝试失败或成功的通知。它常用于阻止开放端口上的过多连接尝试。一个最典型的例"
+"子是在互联网上运行的<application>SSH</application>会收到大量来自机器人或脚本的请求，试图猜测密码并获得访问权限。使用<app"
+"lication>blacklistd</application>，守护进程可以通知防火墙创建过滤规则，在多次尝试后，阻止来一来源的过量连接尝试。"
+"Blacklistd 最早是在 NetBSD 上开发的， 并在 7 版中出现。FreeBSD 11 从 NetBSD 中导入了 blacklistd。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2058
@@ -5242,23 +5605,29 @@ msgstr "blacklistd.conf 中的本地规则类似这样："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2087
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "[local]\n"
 "ssh             stream  *       *               *       3       24h\n"
 msgstr ""
+"[local]\n"
+"ssh             stream  *       *               *       3       24h\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2090
+#, fuzzy
 msgid ""
 "All rules that follow the `[local]` section are treated as local rules "
 "(which is the default), applying to the local machine. When a `[remote]` "
 "section is encountered, all rules that follow it are handled as remote "
 "machine rules."
 msgstr ""
+"遵循<literal>[local]</literal>部分的所有规则都被视为本地规则（这是默认的），适用于本地机器。当遇到<literal>[remot"
+"e]</literal>部分时，所有遵循该部分的规则都将作为远程机器规则处理。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2092
+#, fuzzy
 msgid ""
 "Seven fields define a rule separated by either tabs or spaces. The first "
 "four fields identify the traffic that should be blacklisted. The three "
@@ -5267,6 +5636,8 @@ msgid ""
 "the location. In local rules, these are the network ports. The syntax for "
 "the location field is as follows:"
 msgstr ""
+"七个字段定义由制表符或空格分隔的规则。前四个字段标识应列入黑名单的流量。随后的三个字段定义了列入后列表的行为。通配符表示为星号（ <literal> * "
+"</literal> ），匹配此字段中的任何内容。第一个字段定义位置。在本地规则中，这些是网络端口。 location字段的语法如下："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2096
@@ -5300,43 +5671,56 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2105
+#, fuzzy
 msgid ""
 "In the fourth field, the effective user or owner of the daemon process that "
 "is reporting the event is defined. The username or UID can be used here, as "
 "well as a wildcard (see example rule above)."
 msgstr ""
+"在第四个字段中，定义了报告事件的守护进程的有效用户或所有者。这里可以使用用户名或<acronym>UID</acronym>，也可以使用通配符（见上面的示"
+"例规则）。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2107
+#, fuzzy
 msgid ""
 "The packet filter rule name is declared by the fifth field, which starts the "
 "behavior part of the rule. By default, blacklistd puts all blocks under a pf "
 "anchor called `blacklistd` in [.filename]#pf.conf# like this:"
 msgstr ""
+"数据包筛选器规则名称由第五个字段声明，该字段启动规则的行为部分。默认情况下，黑名单将所有块置于 pf 锚点下，名为 "
+"<literal>blacklistd</literal>，位于 <filename>pf.conf</filename>，如下所示："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2113
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "anchor \"blacklistd/*\" in on $ext_if\n"
 "block in\n"
 "pass out\n"
 msgstr ""
+"anchor \"blacklistd/*\" in on $ext_if\n"
+"block in\n"
+"pass out\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2116
+#, fuzzy
 msgid ""
 "For separate blacklists, an anchor name can be used in this field. In other "
 "cases, the wildcard will suffice. When a name starts with a hyphen (`-`) it "
 "means that an anchor with the default rule name prepended should be used. A "
 "modified example from the above using the hyphen would look like this:"
 msgstr ""
+"对于独立黑名单，可以在这个字段中使用一个锚名（anchor name）。在其他情况下，使用通配符就可以了。当一个名称以连字符开头（<literal>-</"
+"literal>）时，意味着应该使用一个带有默认规则名称的锚。在上面的例子中，一个使用连字符的修改后的例子是这样的："
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2120
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ssh             stream  *       *               -ssh       3       24h\n"
 msgstr ""
+"ssh             stream  *       *               -ssh       3       24h\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2123
@@ -5347,18 +5731,21 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2125
+#, fuzzy
 msgid ""
 "To block whole subnets for a single rule violation, a `/` in the rule name "
 "can be used. This causes the remaining portion of the name to be interpreted "
 "as the mask to be applied to the address specified in the rule. For example, "
 "this rule would block every address adjoining `/24`."
 msgstr ""
+"为了阻止整个子网的单个规则违反，可以在规则名称中使用<literal>/</literal>。这将导致名称的剩余部分被解释为要应用到规则中指定的地址的掩码"
+"。例如，该规则将阻止每个与<literal>/24</literal>相邻的地址。"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2129
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "22              stream  tcp       *               */24    3       24h\n"
-msgstr ""
+msgstr "22              stream  tcp       *               */24    3       24h\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2134
@@ -5395,6 +5782,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2143
+#, fuzzy
 msgid ""
 "The example rule in its entirety means that after three times authenticating "
 "to SSH will result in a new PF block rule for that host. Rule matches are "
@@ -5403,6 +5791,9 @@ msgid ""
 "applied and the name, `nfail`, and disable fields are changed by the "
 "`remote` rule that matched."
 msgstr ""
+"该示例规则的全部含义是，在三次验证到<application>SSH</application>后，将导致该主机的PF块规则产生一个新的PF块规则。规则匹"
+"配是通过先对本地规则进行逐一检查，从最具体到最不具体的规则进行匹配。当发生匹配时，<literal>remote</literal>规则被应用，并命名、<"
+"literal>nfail</literal>和disable字段被匹配的<literal>remote</literal>规则更改。"
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2144
@@ -5423,11 +5814,13 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2152
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "[remote]\n"
 "203.0.113.128/25 *      *       *               =/25    =       48h\n"
 msgstr ""
+"[remote]\n"
+"203.0.113.128/25 *      *       *               =/25    =       48h\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2155
@@ -5455,12 +5848,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2159
+#, fuzzy
 msgid ""
 "A custom number of failures in the `nfail` column can be defined for an "
 "address. This is useful for exceptions to a specific rule, to maybe allow "
 "someone a less strict application of rules or a bit more leniency in login "
 "tries. Blocking is disabled when an asterisk is used in this sixth field."
 msgstr ""
+"可以在<literal>nfail</literal>栏中为一个地址定义一个自定义的失败次数。这对于特定规则的例外情况是很有用的，也许可以让某人在登录时对"
+"规则的应用不那么严格，或者在登录尝试时更宽松一些。当在这个第六个字段中使用星号时，阻止是被禁用的。"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2161
@@ -5486,9 +5882,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2169
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "UseBlacklist yes\n"
-msgstr ""
+msgstr "UseBlacklist yes\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2172
@@ -5505,9 +5901,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2178
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "ftpd_flags=\"-B\"\n"
-msgstr ""
+msgstr "ftpd_flags=\"-B\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/firewalls/_index.adoc:2181
