@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-14 11:02-0300\n"
-"PO-Revision-Date: 2021-04-05 20:20+0000\n"
+"PO-Revision-Date: 2021-04-13 11:09+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Norwegian Bokmål <https://translate-dev.freebsd.org/projects/"
 "documentation/booksfaq_index/nb_NO/>\n"
@@ -153,6 +153,7 @@ msgstr "Fjern ikke eller rediger lisensen."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:106
+#, fuzzy
 msgid ""
 "Many of us have a significant investment in the project and would certainly "
 "not mind a little financial compensation now and then, but we definitely do "
@@ -162,9 +163,18 @@ msgid ""
 "This, we believe, is one of the most fundamental goals of Free Software and "
 "one that we enthusiastically support."
 msgstr ""
+"Mange av oss har investert mye tid i FreeBSD Prosjektet og vi sier ikke nei "
+"takk til litt finansiell støtte nå og da, men vi krever ingenting.\n"
+"Vi mener først og fremst at \"oppdraget\" vårt er å gjøre koden vår "
+"tilgjengelig for alle uansett i hvilken retning du måtte ønske å benytte "
+"koden vår.\n"
+"Slik at koden får mest mulig eksponering for alle områder. Dette mener vi er "
+"et av det største og mest fundamentale <quote>målet</quote> til Gratis "
+"Programvare og er en ting som vi støtter fullt ut."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:108
+#, fuzzy
 msgid ""
 "Code in our source tree which falls under the https://www.FreeBSD.org/"
 "copyright/COPYING[GNU General Public License (GPL)] or https://www.FreeBSD."
@@ -176,6 +186,17 @@ msgid ""
 "https://www.FreeBSD.org/copyright/freebsd-license/[FreeBSD license] whenever "
 "possible."
 msgstr ""
+"Kode i kildekode(source tree) som faller under <link xlink:href=\"https://www"
+".FreeBSD.org/copyright/COPYING\">GNU General Public License (GPL)</link> "
+"eller <link xlink:href=\"https://www.FreeBSD.org/copyright/COPYING.LIB\">GNU "
+"Library General Public License (LGPL)</link> kommer med litt flere krav "
+"involvert men heller mer mot riktig en retning fremfor en gal retning.\n"
+"\n"
+"Men på grunn av en mer kompleks struktur som manofte  finner i bruk av GPL "
+"programvare så anbefaler vi helst å benytte/erstatte programvare til den mer "
+"avslappede <link xlink:href=\"https://www.FreeBSD.org/copyright/freebsd-"
+"license.html\">FreeBSD lisensen</link> så ofte som mulig dersom det lar seg "
+"gjøre."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:110
@@ -193,6 +214,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:115
+#, fuzzy
 msgid ""
 "Most people do not actually use an operating system. They use applications. "
 "The applications are what really use the operating system. FreeBSD is "
@@ -202,6 +224,14 @@ msgid ""
 "Most of these applications can be managed through the https://www.FreeBSD."
 "org/ports/[Ports Collection]."
 msgstr ""
+"De fleste folk bruker ikke direkte et operativ system. De bruker "
+"applikasjoner. Applikasjonene er det som benytter seg av operativ systemet.\n"
+"FreeBSD er utviklet for å levere et robust og fullspekket brukermiljø for "
+"applikasjoner. FreeBSD støtter og har stor variasjon av web browsere, kontor "
+"applikasjoner, e-post lesere, grafikkprogram, programmering miljø, nettverk "
+"servere og mye mer.\n"
+"De fleste av disse applikasjonene kan hentes via FreeBSD's eget <link "
+"xlink:href=\"https://www.FreeBSD.org/ports/\">Ports Collection</link>."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:117
@@ -346,12 +376,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:150
+#, fuzzy
 msgid ""
 "Releases are made <<release-freq,every few months>>. While many people stay "
 "more up-to-date with the FreeBSD sources (see the questions on <<current,"
 "FreeBSD-CURRENT>> and <<stable,FreeBSD-STABLE>>) than that, doing so is more "
 "of a commitment, as the sources are a moving target."
 msgstr ""
+"Utgivelser kommer med <link linkend=\"release-freq\">noen få måneders</link> "
+"mellomrom. Selvom mange liker å være \"up-to-date\" med FreeBSD kilder (see "
+"spørsmål på <link linkend=\"current\">FreeBSD-CURRENT</link> og <link "
+"linkend=\"stable\">FreeBSD-STABLE</link>) så  det å gjøre dette er mer en "
+"slags plikt ettersom kilder stadig beveger seg videre."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:152
@@ -486,11 +522,15 @@ msgstr "Teste siste versjon av installerings programvare."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:185
+#, fuzzy
 msgid ""
 "To give people who would like to run _-CURRENT_ or _-STABLE_ but who do not "
 "have the time or bandwidth to follow it on a day-to-day basis an easy way of "
 "bootstrapping it onto their systems."
 msgstr ""
+"Gi folk mulighet til å kjøre <emphasis>-CURRENT</emphasis> eller "
+"<emphasis>-STABLE</emphasis> uten å ha tid el båndbredden til å følge med "
+"dag-til-dag hva som skjer. Som en enkel mulighet å prøve ut systemet."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:186
@@ -555,11 +595,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:200
+#, fuzzy
 msgid ""
 "However, most non-trivial changes are discussed in advance in the <<mailing,"
 "mailing lists>>, and there are no restrictions on who may take part in the "
 "discussion."
 msgstr ""
+"Uansett så er de fleste mindre-viktige endringer diskutert på forhånd via "
+"<link linkend=\"mailing\">mailing listsen</link> og det er ingen "
+"restriksjoner om hvem som kan delta i den diskusjonen."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:202
@@ -681,11 +725,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:238
+#, fuzzy
 msgid ""
 "The document's language and encoding. These are based on the locale names "
 "found under [.filename]#/usr/share/locale# on a FreeBSD system. The current "
 "languages and encodings are as follows:"
 msgstr ""
+"Dokumentets språk og enkodingene. Disse er basert under de lokale navnene "
+"man finner i <filename>/usr/share/locale</filename> i et FreeBSD system."
 
 #. type: Table
 #: documentation/content/en/books/faq/_index.adoc:301
@@ -800,9 +847,9 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:329
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "The compression and packaging scheme.\n"
-msgstr ""
+msgstr "Kompresjon og pakkeskjematikk\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:330
@@ -859,6 +906,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:347
+#, fuzzy
 msgid ""
 "If the file is compressed, tar will automatically detect the appropriate "
 "format and decompress it correctly, resulting in a collection of [."
@@ -866,6 +914,11 @@ msgid ""
 "which will contain the table of contents, introductory material, and links "
 "to the other parts of the document."
 msgstr ""
+"Hvis filen er komprimert så vil <application>tar</application> automatisk "
+"gjenkjenne hvilket format dette er pakket i og vil pakke det ut på korrekt "
+"måte. Dette resulterer i en samling av <filename>.html</filename> filer. "
+"Hovedfilen kalles <filename>index.html</filename>, som vil inneholde Tittel, "
+"Innhold og resten av innholdet til dokumentet."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:349
@@ -903,6 +956,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:360
+#, fuzzy
 msgid ""
 "Channel `#FreeBSD` on http://freenode.net/[Freenode] is a general help "
 "channel with many users at any time. The conversations have been known to "
@@ -914,6 +968,12 @@ msgid ""
 "the question in English first and then relocate to `##freebsd-lang` as "
 "appropriate."
 msgstr ""
+"Kanal <literal>#FreeBSD</literal> på <link xlink:href=\"http://freenode.net/"
+"\">Freenode</link> er en generell FreeBSD kanal med ofte mange brukere "
+"logget på. Det hender det sporer litt av i off-topic men prioritet blir gitt "
+"til FreeBSD brukere. Ikke Engelsk-talende/skrivende brukere burde først "
+"prøve å skrive spørsmålet de lurer på i Engelsk tekst først, før de bør "
+"prøve <literal>##freebsd-lang</literal>."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:361
@@ -1096,6 +1156,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:425
+#, fuzzy
 msgid ""
 "Some FTP clients default their transfer mode to _ascii_ and attempt to "
 "change any end-of-line characters received to match the conventions used by "
@@ -1103,6 +1164,11 @@ msgid ""
 "Check the SHA-256 checksum of the downloaded boot image: if it is not "
 "_exactly_ that on the server, then the download process is suspect."
 msgstr ""
+"Noen FTP klienter setter standard overføring i <emphasis>ascii</emphasis>-"
+"modus og prøver å endre noen bokstaver for å matche systemet til klienten "
+"som laster ned. Dette kan føre til at imaget man laster ned blir korrupt. "
+"Sjekk SHA-256 checksum til imaget som er lastet ned. Hvis det ikke er "
+"<emphasis>likt</emphasis> som på server så tyder det på at noe er suspekt."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:427
@@ -1199,6 +1265,7 @@ msgstr "Trenger jeg å installere kildekoden(source)?"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:466
+#, fuzzy
 msgid ""
 "In general, no. There is nothing in the base system which requires the "
 "presence of the source to operate. Some ports, like package:sysutils/lsof[], "
@@ -1206,6 +1273,12 @@ msgid ""
 "builds a kernel module or directly operates on kernel structures, the source "
 "must be installed."
 msgstr ""
+"Generelt sett, nei. Det er ingenting i standard base systemet som trenger "
+"kildekoden(source) for å fungere.\n"
+"Noen porter, som <package>sysutils/lsof</package> vil ikke la seg bygge med "
+"mindre kildekoden(source) er installert.\n"
+"Generelt sett så kan man si at dersom porten bygger en kernel modul eller "
+"opererer direkte mot kernel strukturen så trenger man kildekoden."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:468
@@ -1404,6 +1477,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:524
+#, fuzzy
 msgid ""
 "The most common way to enable PAE is to build a new kernel with the special "
 "ready-provided kernel configuration file called [.filename]#PAE#, which is "
@@ -1414,12 +1488,21 @@ msgid ""
 "with PAE. When creating a custom kernel configuration file, PAE can be "
 "enabled by adding the following line:"
 msgstr ""
+"Den mest vanlige metoden å benytte seg av PAE er å bygge en ny kernel med "
+"spesial klare-støttet kernel konfigurasjon fil som kalles <filename>PAE</"
+"filename>, som er allerede bygd inn i en safe kernel.\n"
+"Obs, noen av entitetene i denne kernel konfigurasjonen er for konservative "
+"og noen drivere drivere som er markert som ikke klare til å benyttes av PAE, "
+"ofte er klare alikevel. En tommelfingregel er at hvis driveren kan benyttes "
+"på 64-bit arkitektur (som AMD64) så er den også tilgjengelig som PAE. \n"
+"Når man lager en skreddersydd konfigurasjons fil så kan PAE aktiveres ved å "
+"legge til denne linjen med tekst:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:528
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "options       PAE\n"
-msgstr ""
+msgstr "options       PAE\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:531
@@ -1509,9 +1592,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:559
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "microcode_update_enable=\"YES\"\n"
-msgstr ""
+msgstr "microcode_update_enable=\"YES\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:562
@@ -1601,6 +1684,7 @@ msgstr "Hvordan kopierer jeg og limer inn text med mus i tekst konsollen?"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:595
+#, fuzzy
 msgid ""
 "It is not possible to remove data using the mouse. However, it is possible "
 "to copy and paste. Once the mouse daemon is running as described in the "
@@ -1609,6 +1693,13 @@ msgid ""
 "paste it at the text cursor. Pressing button 3 (right button) will \"extend"
 "\" the selected region of text."
 msgstr ""
+"Det er ikke mulig å fjerne data/tekst med musen i seg selv. Men det er mulig "
+"å klippe ut og lime inn. Når mus daemon kjører som beskrevet i <link linkend="
+"\"moused\">det forrige avsnittet</link>,  hold nede museknapp 1 (venstre "
+"knapp) og flytt musen for å markere en del av teksten du vil kopiere eller "
+"klippe ut. Deretter trykk museknapp 2 (midtre knapp) for å lime inn teksten "
+"hvor muse markøren holdes. Trykker man museknapp 3 (høyre knapp) så vil den "
+"markerte teksten bli<quote>utvidet</quote>."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:597
@@ -1627,12 +1718,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:602
+#, fuzzy
 msgid ""
 "The answer is, unfortunately, \"It depends\". These mice with additional "
 "features require specialized driver in most cases. Unless the mouse device "
 "driver or the user program has specific support for the mouse, it will act "
 "just like a standard two, or three button mouse."
 msgstr ""
+"Dessverre så er svaret på dette, <quote>det kommer an på</quote>. De musene "
+"som ofte har flere knapper utenom de 3 vanlige trenger ofte en spesiell "
+"driver for å fungere. Med mindre musen man anvender eller en applikasjon har "
+"spesiell støtte for musen så vil kun de vanlige 3 knappene fungere. "
+"Mus1,mus2 og mus3."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:604
@@ -1821,12 +1918,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:667
+#, fuzzy
 msgid ""
 "If it is a problem with part of the base FreeBSD system, it may also be "
 "buggy code, but more often than not these problems are found and fixed long "
 "before us general FAQ readers get to use these bits of code (that is what -"
 "CURRENT is for)."
 msgstr ""
+"Hvis det er et problem med en del av Base FreeBSD-systemet, kan det også "
+"være buggy-kode, men oftere enn ikke så blir disse problemene funnet og løst "
+"lenge før oss generelle<acronym>OSS (FAQ)</acronym> brukere benytter noen av "
+"disse bits'ene av kode (det er det som er -CURRENT er for)."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:669
@@ -1839,12 +1941,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:671
+#, fuzzy
 msgid ""
 "For example, if `make buildworld` fails while trying to compile [."
 "filename]#ls.c# into [.filename]#ls.o# and, when run again, it fails in the "
 "same place, this is a broken build. Try updating source and try again. If "
 "the compile fails elsewhere, it is almost certainly due to hardware."
 msgstr ""
+"For eksempel, hvis <command>make buildworld</command> mislykker når du "
+"prøver å kompilere <filename>ls.c</filename> til <filename>ls.o</filename> "
+"og, når det kjøres igjen, svikter det ikke på det samme stedet, så er det en "
+"ødelagt build. Prøv å oppdatere kildekoden og prøv igjen. Hvis kompileringen "
+"mislykkes andre steder, er det nesten sikkert på grunn av maskinvare."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:673
@@ -1889,11 +1997,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:682
+#, fuzzy
 msgid ""
 "  Regarding overclocking, it is far cheaper to have a slow system than a "
 "fried system that needs replacing! Also the community is not sympathetic to "
 "problems on overclocked systems."
 msgstr ""
+"  Når det gjelder overklokking, er det langt billigere å ha et tregere "
+"system enn et ødelagt system som må byttes ut! FreeBSD community er ikke "
+"sympatisk for problemer på overklokkede systemer."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:683
@@ -1909,6 +2021,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:684
+#, fuzzy
 msgid ""
 "Over-optimistic motherboard settings: the BIOS settings, and some "
 "motherboard jumpers, provide options to set various timings. The defaults "
@@ -1917,6 +2030,13 @@ msgid ""
 "possible idea is to set to BIOS defaults, after noting the current settings "
 "first."
 msgstr ""
+"Overoptimistiske hovedkortinnstillinger: BIOS-innstillingene, og noen "
+"hovedkort hoppere, gir muligheter til å angi forskjellige innstillinger. "
+"Standardinnstillingene er ofte tilstrekkelig, men noen ganger stilles "
+"ventetilstandene på RAM for lavt, eller alternativet <quote>RAM Speed: "
+"Turbo</quote> vil føre til merkelig oppførsel. En mulig ide er å stille inn "
+"til BIOS-standardinnstillinger, etter å ha først notert ned gjeldende "
+"innstillinger."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:685
@@ -2008,11 +2128,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:708
+#, fuzzy
 msgid ""
 "The remote machine may be setting the terminal type to something other than "
 "`xterm` which is required by the FreeBSD console. Alternatively the kernel "
 "may have the wrong values for the width and height of the terminal."
 msgstr ""
+"Den fjernstyrte maskinen kan ha andre innstillinger i terminalen til noe "
+"annet enn <literal>xterm</literal> som er påkrevet av FreeBSD konsollen. "
+"Alternativt kan kernelen ha feil verdier for bredde og høyde i terminalen."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:710
@@ -2031,11 +2155,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:714
+#, fuzzy
 msgid ""
 "Alternatively, if the client machine has package:x11/xterm[] installed, then "
 "running `resize` will query the terminal for the correct dimensions and set "
 "them."
 msgstr ""
+"Alternativt, hvis klient maskinen har <package>x11/xterm</package> "
+"installert så vil det å kjøre <command>resize</command> spørre terminalen "
+"etter riktig dimensjoner deretter sette riktig innstillinger."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:716
@@ -2171,25 +2299,33 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:760
+#, fuzzy
 msgid ""
 "It may be a broken ACPI timer. The simplest solution is to disable the ACPI "
 "timer in [.filename]#/boot/loader.conf#:"
 msgstr ""
+"Det kan være en ødelagt ACPI timer. Den letteste metoden er å deaktivere "
+"ACPI timeren i <filename>/boot/loader.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:764
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "debug.acpi.disabled=\"timer\"\n"
-msgstr ""
+msgstr "debug.acpi.disabled=\"timer\"\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:767
+#, fuzzy
 msgid ""
 "Or the BIOS may modify the TSC clock-perhaps to change the speed of the "
 "processor when running from batteries, or going into a power saving mode, "
 "but FreeBSD is unaware of these adjustments, and appears to gain or lose "
 "time."
 msgstr ""
+"Eller BIOS kan endre TSC-klokken - kanskje for å endre hastigheten på "
+"prosessoren når du løper fra batterier, eller går i strømsparingsmodus, men "
+"FreeBSD er ikke klar over disse justeringene, og ser ut til å få eller miste "
+"tid."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:769
@@ -2213,16 +2349,19 @@ msgstr "Datamaskinen skal nå begynne å holde mer nøyaktig tid."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:779
+#, fuzzy
 msgid ""
 "To have this change automatically run at boot time, add the following line "
 "to [.filename]#/etc/sysctl.conf#:"
 msgstr ""
+"Hvis du vil endre denne endringen automatisk ved starttidspunktet, legger du "
+"følgende linje til <filename>/etc/sysctl.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:783
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "kern.timecounter.hardware=i8254\n"
-msgstr ""
+msgstr "kern.timecounter.hardware=i8254\n"
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:786
@@ -2451,11 +2590,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:851
+#, fuzzy
 msgid ""
 "First, make sure that the Ports Collection is up-to-date. Errors that affect "
 "building [.filename]#INDEX# from an up-to-date copy of the Ports Collection "
 "are high-visibility and are thus almost always fixed immediately."
 msgstr ""
+"Først, sørg for at Port Kolleksjonen er nylig oppdatert. Feil som påvirker "
+"bygging av <filename>INDEX</filename> fra en up-to-date kopi av Port "
+"Kolleksjonen er høyt synlig og blir derfor alltid fikset fortløpende."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:853
@@ -2610,6 +2753,7 @@ msgstr "Hvorfor er kernelen min så stor?"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:897
+#, fuzzy
 msgid ""
 "`GENERIC` kernels shipped with FreeBSD are compiled in _debug mode_. Kernels "
 "built in debug mode contain debug data in separate files that are used for "
@@ -2620,26 +2764,42 @@ msgid ""
 "a debug kernel, and it is useful to keep one around in case of a system "
 "panic."
 msgstr ""
+"<literal>GENERIC</literal> kjerner som sendes med FreeBSD, blir samlet i "
+"<emphasis> debug mode</emphasis>. Kerner som er innebygd i feilsøkingsmodus "
+"inneholder feilsøkingsdata i separate filer som brukes til feilsøking. "
+"FreeBSD-utgivelser før 11.0 lagrer disse feilsøkingsfilene i samme katalog "
+"som selve kjernen, <filename>/boot/kernel/</filename>. I FreeBSD 11.0 og "
+"senere lagres feilsøkingsfilene i <filename>/usr/lib/debug/boot/kernel/</"
+"filename>. Merk at det vil være lite eller ingen ytelsestap fra å kjøre en "
+"feilsøkingskjerne, og det er nyttig å holde en rundt i tilfelle av system "
+"panikk."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:899
+#, fuzzy
 msgid ""
 "When running low on disk space, there are different options to reduce the "
 "size of [.filename]#/boot/kernel/# and [.filename]#/usr/lib/debug/#."
 msgstr ""
+"Når du har lite diskplass, er det forskjellige alternativer for å redusere "
+"størrelsen på <filename>/boot/kernel/</filename> og <filename>/usr/lib/debug/"
+"</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:901
+#, fuzzy
 msgid ""
 "To not install the symbol files, make sure the following line exists in [."
 "filename]#/etc/src.conf#:"
 msgstr ""
+"r ikke å installere symbolfilene, må du forsikre deg om at følgende linje "
+"finnes i <filename>/etc/src.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:905
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "WITHOUT_KERNEL_SYMBOLS=yes\n"
-msgstr ""
+msgstr "WITHOUT_KERNEL_SYMBOLS=yes\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:908
@@ -2662,9 +2822,9 @@ msgstr "Denne linjen eksisterer ikke i kjernekonfigurasjonsfilen:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:916
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "makeoptions DEBUG=-g\n"
-msgstr ""
+msgstr "makeoptions DEBUG=-g\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:919
@@ -2681,10 +2841,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:923
+#, fuzzy
 msgid ""
 "To build and install only the specified modules, list them in [.filename]#/"
 "etc/make.conf#:"
 msgstr ""
+"For å bygge og installere bare de spesifiserte modulene, list dem opp i "
+"<filename>/etc/make.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:927
@@ -2694,12 +2857,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:930
+#, fuzzy
 msgid ""
 "Replace _accf_httpd ipfw_ with a list of needed modules. Only the listed "
 "modules will be built. This reduces the size of the kernel directory and "
 "decreases the amount of time needed to build the kernel. For more "
 "information, read [.filename]#/usr/share/examples/etc/make.conf#."
 msgstr ""
+"Bytt ut <emphasis>accf_httpd ipfw</emphasis> med en liste over nødvendige "
+"moduler. Bare de listede modulene blir bygget. Dette reduserer størrelsen på "
+"kjernekatalogen og reduserer tiden som trengs for å bygge kjernen. Hvis du "
+"vil ha mer informasjon, kan du lese <filename>/usr/share/examples/etc/make."
+"conf</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:932
@@ -2735,12 +2904,17 @@ msgstr "Det er en rekke mulige årsaker til dette problemet:"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:943
+#, fuzzy
 msgid ""
 "The source tree is different from the one used to build the currently "
 "running system. When attempting an upgrade, read [.filename]#/usr/src/"
 "UPDATING#, paying particular attention to the \"COMMON ITEMS\" section at "
 "the end."
 msgstr ""
+"Kildetreet er forskjellig fra det som ble brukt til å bygge da for det "
+"nåværende kjørende systemet. Når du prøver å oppgradere, kan du lese "
+"<filename>/usr/src/UPDATING</filename>, og være spesielt oppmerksom på delen "
+"<quote>COMMON ITEMS</quote> på slutten."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:944
@@ -2752,6 +2926,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:945
+#, fuzzy
 msgid ""
 "Even when building <<stable,FreeBSD-STABLE>>, it is possible that the source "
 "tree was fetched at a time when it was either being modified or it was "
@@ -2760,6 +2935,12 @@ msgid ""
 "source tree and see if the problem goes away. Try using a different mirror "
 "in case the previous one is having problems."
 msgstr ""
+"Selv når du bygger <link linkend=\"stable\">FreeBSD-STABLE</link>, er det "
+"mulig at kildetreet ble hentet på et tidspunkt da det enten ble endret eller "
+"at det ble ødelagt. Bare utgivelser er garantert byggbare, selv om <link "
+"linkend=\"stable\">FreeBSD-STABLE</link> bygger fint mesteparten av tiden. "
+"Prøv å hente kildetreet på nytt og se om problemet forsvinner. Prøv å bruke "
+"et annet speil i tilfelle det forrige skulle få problemer."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:947
@@ -2769,10 +2950,13 @@ msgstr "Hvilken planlegger er i bruk på et kjørende system?"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:950
+#, fuzzy
 msgid ""
 "The name of the scheduler currently being used is directly available as the "
 "value of the `kern.sched.name` sysctl:"
 msgstr ""
+"Navnet på planleggeren som brukes nå er direkte tilgjengelig som verdien til "
+"<varname>kern.sched.name</varname> sysctl:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:955
@@ -2898,6 +3082,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1000
+#, fuzzy
 msgid ""
 "Rearranging partitions with `dump` takes a bit more work. To merge a "
 "partition like [.filename]#/var# into its parent, create the new partition "
@@ -2905,6 +3090,12 @@ msgid ""
 "move the child partition into the empty directory that the first move "
 "created:"
 msgstr ""
+"Å omorganisere partisjoner med <command>dump</command> krever litt mer "
+"arbeid. Hvis du vil slå sammen en partisjon som <filename>/var</filename> "
+"til sin overordnede, oppretter du den nye partisjonen stor nok for begge, "
+"flytter overordnede partisjoner som beskrevet ovenfor, og flytter deretter "
+"underordnede partisjon i den tomme katalogen som det første trekket "
+"opprettet:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1009
@@ -2920,12 +3111,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1012
+#, fuzzy
 msgid ""
 "To split a directory from its parent, say putting [.filename]#/var# on its "
 "own partition when it was not before, create both partitions, then mount the "
 "child partition on the appropriate directory in the temporary mount point, "
 "then move the old single partition:"
 msgstr ""
+"Hvis du vil dele en katalog fra det overordnede, sier du å sette "
+"<filename>/var</filename> på sin egen partisjon når den ikke var før, "
+"opprette begge partisjonene, monter deretter \"barne\"partisjonen i den "
+"aktuelle katalogen i det midlertidige monteringspunktet, og flytt deretter "
+"den gamle singelpartisjonen:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1022
@@ -3239,11 +3436,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1107
+#, fuzzy
 msgid ""
 "This cannot be accomplished with the standard boot manager without rewriting "
 "it. There are a number of other boot managers in the [.filename]#sysutils# "
 "category of the Ports Collection."
 msgstr ""
+"Dette kan ikke oppnås med standard boot manager uten å skrive den om. Det er "
+"en rekke andre oppstartsadministratorer i kategorien <filename>sysutils</"
+"filename> i Port Kolleksjonen."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:1109
@@ -3265,12 +3466,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1119
+#, fuzzy
 msgid ""
 "If the drive will only be used with FreeBSD systems, partition it with UFS "
 "or ZFS. This will provide long filename support, improvement in performance, "
 "and stability. If the drive will be used by other operating systems, a more "
 "portable choice, such as msdosfs, is better."
 msgstr ""
+"Hvis stasjonen bare skal brukes med FreeBSD-systemer, må du partisjonere den "
+"med <acronym>UFS</acronym> eller <acronym>ZFS</acronym>. Dette vil gi lang "
+"filstøtte, forbedring i ytelse og stabilitet. Hvis stasjonen vil bli brukt "
+"av andre operativsystemer, er et mer bærbart valg, for eksempel msdosfs, "
+"bedre."
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1125
@@ -3312,9 +3519,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1146
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "/dev/da0p1 /mnt ufs rw,noauto 0 0\n"
-msgstr ""
+msgstr "/dev/da0p1 /mnt ufs rw,noauto 0 0\n"
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:1149
@@ -3445,10 +3652,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1196
+#, fuzzy
 msgid ""
 "Users can only mount devices they have read permissions to. To allow users "
 "to mount a device permissions must be set in [.filename]#/etc/devfs.conf#."
 msgstr ""
+"Brukere kan bare montere enheter de har lesetillatelser til. For å tillate "
+"brukere å montere en enhetstillatelser må du angi <filename>/etc/devfs."
+"conf</filename>."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1198
@@ -3459,12 +3670,15 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1204
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "# Allow all users to mount a USB drive.\n"
 "\t    own       /dev/da0       root:operator\n"
 "\t    perm      /dev/da0       0666\n"
 msgstr ""
+"# Allow all users to mount a USB drive.\n"
+"\t    own       /dev/da0       root:operator\n"
+"\t    perm      /dev/da0       0666\n"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1207
@@ -3680,11 +3894,16 @@ msgstr "Hva er L2ARC?"
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1280
+#, fuzzy
 msgid ""
 "The L2ARC is a read cache stored on a fast device such as an SSD. This cache "
 "is not persistent across reboots. Note that RAM is used as the first layer "
 "of cache and the L2ARC is only needed if there is insufficient RAM."
 msgstr ""
+"<acronym>L2ARC</acronym> er en lese-cache som er lagret på en rask enhet, "
+"for eksempel en <acronym>SSD</acronym>. Denne cachen er ikke vedvarende på "
+"tvers av omstarter. Merk at RAM brukes som det første laget av hurtigbuffer "
+"og L2ARC er bare nødvendig hvis det ikke er tilstrekkelig RAM."
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1282
@@ -3800,16 +4019,19 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1315
+#, fuzzy
 msgid ""
 "ZFS TRIM is enabled by default, and can be turned off by adding this line to "
 "[.filename]#/etc/sysctl.conf#:"
 msgstr ""
+"ZFS TRIM er aktivert som standard, og kan slås av ved å legge denne linjen "
+"til <filename>/etc/sysctl.conf</filename>:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/faq/_index.adoc:1319
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "vfs.zfs.trim.enabled=0\n"
-msgstr ""
+msgstr "vfs.zfs.trim.enabled=0\n"
 
 #. type: delimited block = 4
 #: documentation/content/en/books/faq/_index.adoc:1324
@@ -3854,11 +4076,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/faq/_index.adoc:1342
+#, fuzzy
 msgid ""
 "To start up local services, place shell scripts in the [.filename]#/usr/"
 "local/etc/rc.d# directory. These shell scripts should be set executable, the "
 "default file mode is `555`."
 msgstr ""
+"Hvis du vil starte opp lokale tjenester, plasserer du skripts i <filename>/"
+"usr/local/etc/rc.d</filename>-katalogen. Disse skallskriptene skal settes "
+"kjørbare, standard filmodus er <literal>555</literal>."
 
 #. type: Title ===
 #: documentation/content/en/books/faq/_index.adoc:1344
