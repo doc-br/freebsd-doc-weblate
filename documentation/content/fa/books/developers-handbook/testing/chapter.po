@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-06 03:05+0000\n"
+"PO-Revision-Date: 2021-04-13 11:09+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Persian <https://translate-dev.freebsd.org/projects/"
 "documentation/booksdevelopers-handbooktestingchapter/fa/>\n"
@@ -43,10 +43,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:36
+#, fuzzy
 msgid ""
 "The FreeBSD regression testing tools can be found in the FreeBSD source tree "
 "in the directory [.filename]#src/tools/regression#."
 msgstr ""
+"ادوات آزمون پسرفتِ FreeBSD را می‌توان در درخت منبع FreeBSD در مسیر <filename>"
+"src/tools/regression</filename> پیدا کرد."
 
 #. type: Title ==
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:38
@@ -112,11 +115,15 @@ msgstr "سامانه پرونده‌هایی که نیاز نیستند را س�
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:51
+#, fuzzy
 msgid ""
 "Mount [.filename]#/#, [.filename]#/usr#, and any other file system as "
 "read-only if possible. This removes atime updates to disk (etc.) from the "
 "I/O picture."
 msgstr ""
+"سامانهٔ پرونده‌های <filename>/</filename>، <filename>/usr</filename>، و "
+"هرآنچه دیگر را حتی‌المقدور به‌حالت فقط-خواندنی سوار کنید. این امر به‌روز "
+"رسانی‌های atime به دیسک (و غیره) را از تصویز I/O حذف می‌کند."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:52
@@ -174,11 +181,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:59
+#, fuzzy
 msgid ""
 "  If the system must be connected to a public network, watch out for spikes "
 "of broadcast traffic. Even though it is hardly noticeable, it will take up "
 "CPU cycles. Multicast has similar caveats."
 msgstr ""
+"  اگر قرار باشد سامانه به یک شبکهٔ عمومی متصل گردد، مراقب ضربات ترافیک "
+"انتشار باشید. گرچه به‌سختی قابل مشاهده است، چرخه‌های CPU را اشغال می‌کند. "
+"Multicast دارای هشدارهای مشابه است."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:60
@@ -191,12 +202,17 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:61
+#, fuzzy
 msgid ""
 "Minimize output to serial or VGA consoles. Running output into files gives "
 "less jitter. (Serial consoles easily become a bottleneck.) Do not touch "
 "keyboard while the test is running, even kbd:[space] or kbd:[back-space] "
 "shows up in the numbers."
 msgstr ""
+"خروجی به سری یا پیشانه‌های VGA را به حداقل برسانید. اجرای خروجی درون پرونده‌"
+"ها jitter کمتری به‌دست می‌دهد. (پیشانه‌های سری به‌راحتی تبدیل به گلوگاه "
+"می‌شوند.) هنگام اجرای آزمایش به صفحه کلید دست نزنید، حتی <keycap>space</"
+"keycap> یا <keycap>back-space</keycap> در شماره‌ها نمایش داده می‌شوند."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:62
@@ -223,6 +239,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:64
+#, fuzzy
 msgid ""
 "Run the test at least 3 times but it is better to run more than 20 times "
 "both for \"before\" and \"after\" code. Try to interleave if possible (i.e.: "
@@ -230,15 +247,25 @@ msgid ""
 "spot environmental effects. Do not interleave 1:1, but 3:3, this makes it "
 "possible to spot interaction effects."
 msgstr ""
+"این آزمایش را حداقل سه بار انجام دهید اما بهتر آن است تا بیش از ۲۰ بار هم "
+"برای <quote>قبل</quote> و هم <quote>بعد</quote> از کد اجرا شود. سعی کنید تا "
+"اگر مقدور است آن را تقسیم کنید (برای مثال: ۲۰ بار قبل سپس ۲۰ بار بعد اجرا "
+"نکنید)، این باعث می‌شود تا تأثیرات محیطی را ببینید. به جز 3:3، 1:1 را تقسیم "
+"نکنید، این باعث می‌شود تا اثرات متقابل را ببینید."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:66
+#, fuzzy
 msgid ""
 "  A good pattern is: `bababa{bbbaaa}*`. This gives hint after the first 1+1 "
 "runs (so it is possible to stop the test if it goes entirely the wrong way), "
 "a standard deviation after the first 3+3 (gives a good indication if it is "
 "going to be worth a long run) and trending and interaction numbers later on."
 msgstr ""
+"  یک الگوی خوب چنین است: <literal>bababa{bbbaaa}*</literal>. این پس از اجرای "
+"اولین 1+1 راهنما می‌دهد (پس ممکن است آزمایش را متوقف کرد چنانچه به‌طور کل "
+"اشتباه شود)، یک انحراف استاندارد پس از اولین 3+3 (نشانه‌ای خوب از اینکه ارزش "
+"اجرای طولانی را داشته باشد) و رویه و شماره‌های برهم‌کنش در ادامه."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:67
@@ -304,17 +331,24 @@ msgstr "Tinderbox منبع متشکل است از:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:78
+#, fuzzy
 msgid ""
 "A build script, [.filename]#tinderbox#, that automates checking out a "
 "specific version of the FreeBSD source tree and building it."
 msgstr ""
+"یک اجرانامهٔ ساخت (build)، <filename>tinderbox</filename>، که روند بررسی یک "
+"نسخهٔ بخصوص از درخت منبع FreeBSD و ساختن آن را خودکار می‌سازد."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:79
+#, fuzzy
 msgid ""
 "A supervisor script, [.filename]#tbmaster#, that monitors individual "
 "Tinderbox instances, logs their output, and emails failure notices."
 msgstr ""
+"اجرانامهٔ سرپرست، <filename>tbmaster</filename>، که بر نمونه‌های مستقل "
+"Tinderbox نظارت می‌کند، خروجی آنها را ثبت می‌کند، و هشدارهای خرابی را در "
+"قالب نامهٔ الکترونیکی ارسال می‌کند."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:80
@@ -403,9 +437,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:98
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "tinderbox-$config-$branch-$arch-$machine.{brief,full}\n"
-msgstr ""
+msgstr "tinderbox-$config-$branch-$arch-$machine.{brief,full}\n"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:101
@@ -417,10 +451,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:103
+#, fuzzy
 msgid ""
 "Once all of this startup procedure has been successfully completed, "
 "`do_config()` is called for each configuration."
 msgstr ""
+"پس از آنکه تمام این مراحل راه‌اندازی با موفقیت انجام شدند، برای هر پیکربندی "
+"<function>do_config()</function> فراخوانده می‌شود."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:105
@@ -492,11 +529,15 @@ msgstr "خروجی ندارد."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:126
+#, fuzzy
 msgid ""
 "The `success()` function mentioned above scans a brief log file for the "
 "string \"tinderbox run completed\" in order to determine whether the build "
 "was successful."
 msgstr ""
+"تابع <function>success()</function> که بالاتر بدان اشاره شد یک پروندهٔ لاگ "
+"مختصر را برای رشتهٔ <quote>tinderbox run completed</quote> بررسی می‌کند تا "
+"موفقیت‌آمیز بودن build را معین کند."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:128
@@ -524,12 +565,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:134
+#, fuzzy
 msgid ""
 "This means that `HEAD` always ranks highest, and `RELENG` branches are "
 "ranked in numerical order, with each `STABLE` branch ranking higher than the "
 "release branches forked off of it. For instance, for FreeBSD 8, the order "
 "from highest to lowest would be:"
 msgstr ""
+"این بدان معناست که <literal>HEAD</literal> همیشه دارای بالاترین مرتبه است، و "
+"انشعاب‌های <literal>RELENG</literal> به ترتیب شماره رتبه‌بندی می‌شوند، و هر "
+"انشعابِ <literal>STABLE</literal> بالاتر از انشعاب‌های توزیعِ منشعب‌شده از "
+"آن رتبه‌بندی شده‌اند. برای مثال، برای FreeBSD 8، ترتیب از بالاترین به پایین‌"
+"ترین بدین گونه است:"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:136
@@ -558,6 +605,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:142
+#, fuzzy
 msgid ""
 "The colors that Tinderbox uses for each cell in the table are defined by "
 "CSS. Successful builds are displayed with green text; unsuccessful builds "
@@ -565,6 +613,10 @@ msgid ""
 "corresponding build, with every half an hour bringing the color closer to "
 "grey."
 msgstr ""
+"رنگ‌هایی که Tinderbox برای هر خانه در جدول استفاده می‌کند توسط <acronym>CSS</"
+"acronym> تعریف شده‌اند. build های موفق با رنگ سبز نمایش داده می‌شوند؛ build "
+"های ناموفق با رنگ قرمز نمایش داده می‌شوند. رنگ با گذر زمان محو می‌شود از "
+"آنجاکه build مربوطه، هر نیم ساعت رنگ را به خاکستری نزدیک‌تر می‌کند."
 
 #. type: Title ==
 #: documentation/content/en/books/developers-handbook/testing/chapter.adoc:143
