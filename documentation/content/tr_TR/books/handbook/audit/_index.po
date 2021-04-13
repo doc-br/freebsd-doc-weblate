@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-06 03:05+0000\n"
+"PO-Revision-Date: 2021-04-13 11:09+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Turkish <https://translate-dev.freebsd.org/projects/"
 "documentation/bookshandbookaudit_index/tr_TR/>\n"
@@ -116,15 +116,22 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:67
+#, fuzzy
 msgid ""
 "The audit facility has some known limitations. Not all security-relevant "
 "system events are auditable and some login mechanisms, such as Xorg-based "
 "display managers and third-party daemons, do not properly configure auditing "
 "for user login sessions."
 msgstr ""
+"Denetim olanağının bilinen bazı sınırlamaları vardır. Güvenlikle ilgili tüm "
+"sistem olayları denetlenemez ve <application>Xorg</application> tabanlı "
+"ekran yöneticileri ve işletim sisteminde geri planda çalışan üçüncü taraf "
+"programlar gibi bazı oturum açma mekanizmaları, kullanıcı oturumları için "
+"denetimi düzgün yapılandırmaz."
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:69
+#, fuzzy
 msgid ""
 "The security event auditing facility is able to generate very detailed logs "
 "of system activity. On a busy system, trail file data can be very large when "
@@ -135,6 +142,13 @@ msgid ""
 "that other file systems are not affected if the audit file system becomes "
 "full."
 msgstr ""
+"Güvenlik olayı denetim olanağı, çok detaylı sistem etkinliği günlükleri "
+"oluşturabilir. Yoğun bir sistemde, iz dosyası verileri yüksek ayrıntı için "
+"yapılandırıldığında çok büyük olabilir ve bazı yapılandırmalarda haftada 1 "
+"gigabaytı aşabilir. Yöneticiler, yüksek hacimli denetim yapılandırmalarıyla "
+"ilişkili disk alanı gereksinimlerini dikkate almalıdır. Örneğin, bir dosya "
+"sisteminin <filename>/var/audit</filename>'e atanması istenebilir, böylece "
+"denetim dosya sistemi dolarsa diğer dosya sistemleri etkilenmez."
 
 #. type: Title ==
 #: documentation/content/en/books/handbook/audit/_index.adoc:72
@@ -383,10 +397,14 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:204
+#, fuzzy
 msgid ""
 "These audit event classes may be customized by modifying the "
 "[.filename]#audit_class# and [.filename]#audit_event# configuration files."
 msgstr ""
+"Bu denetim etkinliği sınıfları, <filename>audit_class</filename> ve "
+"<filename>audit_event</filename> yapılandırma dosyaları değiştirilerek "
+"özelleştirilebilir."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:206
@@ -504,12 +522,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:256
+#, fuzzy
 msgid ""
 "In most cases, administrators will only need to modify "
 "[.filename]#audit_control# and [.filename]#audit_user#. The first file "
 "controls system-wide audit properties and policies and the second file may "
 "be used to fine-tune auditing by user."
 msgstr ""
+"Çoğu durumda, yöneticilerin yalnızca <filename>audit_control</filename> ve "
+"<filename>audit_user</filename> üzerinde değişiklik yapması gerekir. İlk "
+"dosya sistem genelindeki denetim özelliklerini ve ilkelerini kontrol eder ve "
+"ikinci dosya kullanıcı tarafından denetime ince ayar yapmak için "
+"kullanılabilir."
 
 #. type: Title ====
 #: documentation/content/en/books/handbook/audit/_index.adoc:258
@@ -519,10 +543,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:261
+#, fuzzy
 msgid ""
 "A number of defaults for the audit subsystem are specified in "
 "[.filename]#audit_control#:"
 msgstr ""
+"Denetim alt sistemi için bir dizi varsayılan <filename>audit_control</"
+"filename> içinde belirtilmiştir:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:272
@@ -540,6 +567,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:275
+#, fuzzy
 msgid ""
 "The `dir` entry is used to set one or more directories where audit logs will "
 "be stored. If more than one directory entry appears, they will be used in "
@@ -547,6 +575,12 @@ msgid ""
 "stored on a dedicated file system, in order to prevent interference between "
 "the audit subsystem and other subsystems if the file system fills."
 msgstr ""
+"<option>dir</option> girişi, denetim günlüklerinin depolanacağı bir veya "
+"daha fazla dizini ayarlamak için kullanılır. Birden fazla dizin girişi "
+"görünürse, dolduruldukları sırada kullanılırlar. Denetimi, dosya sistemi "
+"dolarsa denetim alt sistemi ile diğer alt sistemler arasındaki paraziti "
+"önlemek için, denetim günlüklerinin özel bir dosya sisteminde saklanacağı "
+"şekilde yapılandırılması yaygındır."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:277
@@ -573,11 +607,15 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:283
+#, fuzzy
 msgid ""
 "The `naflags` entry specifies audit classes to be audited for non-attributed "
 "events, such as the login/logout process and authentication and "
 "authorization."
 msgstr ""
+"<option>naflags</option> girdisi, oturum açma/oturum kapatma işlemi, kimlik "
+"doğrulama ve yetkilendirme gibi ilişkilendirilmemiş olaylar için "
+"denetlenecek denetim sınıflarını belirtir."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:285
@@ -591,12 +629,18 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:287
+#, fuzzy
 msgid ""
 "The `filesz` entry specifies the maximum size for an audit trail before "
 "automatically terminating and rotating the trail file. A value of `0` "
 "disables automatic log rotation. If the requested file size is below the "
 "minimum of 512k, it will be ignored and a log message will be generated."
 msgstr ""
+"<option>filesz</option> girdisi, izleme dosyasını otomatik olarak "
+"sonlandırmadan ve döndürmeden önce bir denetim izi için maksimum boyutu "
+"belirtir. <literal>0</literal> değeri otomatik günlük döndürmeyi devre dışı "
+"bırakır. İstenen dosya boyutu minimum 512 bin'in altındaysa, yoksayılır ve "
+"bir günlük mesajı oluşturulur."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:289
@@ -647,6 +691,7 @@ msgstr "Denetim İzleriyle Çalışma"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:307
+#, fuzzy
 msgid ""
 "Since audit trails are stored in the BSM binary format, several built-in "
 "tools are available to modify or convert these trails to text. To convert "
@@ -656,6 +701,14 @@ msgid ""
 "including event type, event class, user, date or time of the event, and the "
 "file path or object acted on."
 msgstr ""
+"Denetim izleri <acronym>BSM</acronym> ikili biçiminde saklandığından, bu "
+"izleri değiştirmek veya metne dönüştürmek için çeşitli yerleşik araçlar "
+"mevcuttur. İz dosyalarını basit bir metin biçimine dönüştürmek için "
+"<command>praudit</command> kullanın. Denetim izi dosyasını analiz, arşivleme "
+"veya yazdırma amacıyla azaltmak için <command>auditreduce</command> "
+"kullanın. Bu yardımcı program, olay türü, olay sınıfı, kullanıcı, olayın "
+"tarihi veya saati ve üzerinde işlem yapılan dosya yolu veya nesne gibi "
+"çeşitli seçim parametrelerini destekler."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:309
@@ -780,9 +833,9 @@ msgstr ""
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:357
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "add path 'auditpipe*' mode 0440 group audit\n"
-msgstr ""
+msgstr "add path 'auditpipe*' mode 0440 group audit\n"
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:360
@@ -793,6 +846,7 @@ msgstr ""
 
 #. type: delimited block = 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:365
+#, fuzzy
 msgid ""
 "It is easy to produce audit event feedback cycles, in which the viewing of "
 "each audit event results in the generation of more audit events. For "
@@ -802,6 +856,14 @@ msgid ""
 "reason, it is advisable to run `praudit` on an audit pipe device from "
 "sessions without fine-grained I/O auditing."
 msgstr ""
+"Her bir denetim olayının görüntülenmesinin, daha fazla denetim olayının "
+"oluşturulmasına yol açtığı denetim olayı geri bildirim döngüleri üretmek "
+"kolaydır. Örneğin, tüm ağ <acronym>I/O</acronym> denetlenirse ve "
+"<command>praudit</command> bir <acronym>SSH</acronym> oturumundan "
+"çalıştırılırsa, yazdırılan her olay başka bir olay oluşturacağından, yüksek "
+"hızda sürekli bir denetim olayları akışı oluşturulur . Bu nedenle, hassas "
+"bir <acronym>I/O</acronym> denetimi olmayan oturumlardan bir denetim borusu "
+"cihazında <command>praudit</command> çalıştırılması tavsiye edilir."
 
 #. type: Title ===
 #: documentation/content/en/books/handbook/audit/_index.adoc:367
@@ -837,10 +899,13 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:379
+#, fuzzy
 msgid ""
 "Adding the following line to [.filename]#/etc/crontab# will schedule this "
 "rotation every twelve hours:"
 msgstr ""
+"<filename>/etc/crontab</filename> öğesine aşağıdaki satırı eklemek bu dönüşü "
+"on iki saatte bir planlayacaktır:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:383
@@ -850,8 +915,11 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:386
+#, fuzzy
 msgid "The change will take effect once [.filename]#/etc/crontab# is saved."
 msgstr ""
+"Değişiklik <filename>/etc/crontab</filename> kaydedildiğinde geçerli "
+"olacaktır."
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:388
@@ -863,6 +931,7 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/books/handbook/audit/_index.adoc:390
+#, fuzzy
 msgid ""
 "As audit trail files can become very large, it is often desirable to "
 "compress or otherwise archive trails once they have been closed by the audit "
@@ -872,6 +941,14 @@ msgid ""
 "following may be added to [.filename]#/etc/security/audit_warn# to compress "
 "audit trails on close:"
 msgstr ""
+"Denetim izi dosyaları çok büyük hale gelebildiğinden, denetim daemon "
+"tarafından kapatıldıktan sonra izlerin sıkıştırılması veya başka bir şekilde "
+"arşivlenmesi genellikle istenir. <filename>audit_warn</filename> betiği, "
+"denetim izlerinin döndürüldüğünde temiz bir şekilde sonlandırılması da dahil "
+"olmak üzere denetimle ilgili çeşitli etkinlikler için özelleştirilmiş "
+"işlemler gerçekleştirmek için kullanılabilir. Örneğin, denetim yollarını "
+"kapatıldığında sıkıştırmak için <filename>/etc/security/audit_warn</"
+"filename> öğesine aşağıdakiler eklenebilir:"
 
 #. type: delimited block . 4
 #: documentation/content/en/books/handbook/audit/_index.adoc:399
