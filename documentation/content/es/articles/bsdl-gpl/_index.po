@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-03-20 17:26-0300\n"
-"PO-Revision-Date: 2021-04-15 22:26+0000\n"
+"PO-Revision-Date: 2021-04-19 16:51+0000\n"
 "Last-Translator: Fernando  Apesteguía <fernando.apesteguia@gmail.com>\n"
 "Language-Team: Spanish <https://translate-dev.freebsd.org/projects/"
 "documentation/articlesbsdl-gpl/es/>\n"
@@ -454,7 +454,6 @@ msgstr "Los orígenes de Linux y de la licencia GPL"
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:142
-#, fuzzy
 msgid ""
 "While the commercial Unix wars raged, the Linux kernel was developed as a PC "
 "Unix clone.  Linus Torvalds credits the existence of the GNU C compiler and "
@@ -468,7 +467,6 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:151
-#, fuzzy
 msgid ""
 "Remember that the GPL requires anything that statically links to any code "
 "under the GPL also be placed under the GPL.  The source for this code must "
@@ -483,21 +481,20 @@ msgid ""
 "library."
 msgstr ""
 "Recuerde que la licencia GPL requiere que cualquier cosa que se enlace "
-"estáticamente a cualquier código bajo la licencia GPL también se pondrá bajo "
+"estáticamente a cualquier código bajo la licencia GPL también se ponga bajo "
 "la licencia GPL. El código fuente debe estar disponible para el usuario del "
 "programa. El enlace dinámico, sin embargo, no se considera una violación de "
 "la licencia GPL. La presión para poner aplicaciones propietarias en Linux "
 "llegó a ser abrumadora. Tales aplicaciones deben enlazarse  a menudo con las "
 "bibliotecas del sistema. Esto resultó en una versión modificada de la GPL "
-"denominada <link xlink:href=\"http://www.opensource.org/licenses/lgpl-license"
-".php\">LGPL</link> (\"Library\", rebautizada como menor (\"Lesser\"), GPL). "
-"La licencia LGPL permite al código propietario estar enlazado a la "
-"biblioteca C de GNU, glibc. No hay que liberar el código fuente que ha sido "
-"enlazado dinámicamente a una biblioteca bajo una licencia LGPL."
+"denominada http://www.opensource.org/licenses/lgpl-license.ph[LGPL] ("
+"\"Library\", rebautizada como menor (\"Lesser\"), GPL). La licencia LGPL "
+"permite al código propietario estar enlazado a la biblioteca C de GNU, "
+"glibc. No hay que liberar el código fuente que ha sido enlazado "
+"dinámicamente a una biblioteca bajo una licencia LGPL."
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:155
-#, fuzzy
 msgid ""
 "If you statically link an application with glibc, such as is often required "
 "in embedded systems, you cannot keep your application proprietary, that is, "
@@ -518,7 +515,6 @@ msgstr "Las licencias de Código Abierto y el Problema de la Orfandad"
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:162
-#, fuzzy
 msgid ""
 "One of the serious problems associated with proprietary software is known as "
 "\"orphaning\".  This occurs when a single business failure or change in a "
@@ -529,13 +525,13 @@ msgid ""
 "strategies can change rapidly."
 msgstr ""
 "Uno de los graves problemas asociados con el software privativo se conoce "
-"como <quote>orfandad</quote>. Esto ocurre cuando un solo fallo de negocio o "
-"un cambio en la estrategia del producto hace que una enorme pirámide de "
-"sistemas y empresas dependientes falle por razones que están más allá de su "
-"control. Décadas de experiencia han mostrado que el tamaño o éxito "
-"momentáneos de un proveedor de software no es garantía de que su software "
-"permanecerá disponible, ya que las condiciones y estrategias actuales del "
-"mercado pueden cambiar rápidamente."
+"como \"orfandad\". Esto ocurre cuando un solo fallo de negocio o un cambio "
+"en la estrategia del producto hace que una enorme pirámide de sistemas y "
+"empresas dependientes falle por razones que están más allá de su control. "
+"Décadas de experiencia han mostrado que el tamaño o éxito momentáneos de un "
+"proveedor de software no es garantía de que su software permanecerá "
+"disponible, ya que las condiciones y estrategias actuales del mercado pueden "
+"cambiar rápidamente."
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:164
@@ -544,11 +540,10 @@ msgid ""
 "intellectual property."
 msgstr ""
 "La licencia GPL intenta prevenir la orfandad mediante el corte del vínculo "
-"con la propiedad intelectual privativa."
+"con la propiedad intelectual propietaria."
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:169
-#, fuzzy
 msgid ""
 "A BSD license gives a small company the equivalent of software-in-escrow "
 "without any legal complications or costs.  If a BSD-licensed program becomes "
@@ -563,7 +558,7 @@ msgstr ""
 "Una licencia BSD le da a una pequeña empresa el equivalente al software en "
 "custodia sin complicaciones ni costos legales. Si un programa con licencia "
 "BSD queda huérfano, una empresa puede simplemente hacerse cargo, de manera "
-"patentada, del programa del que depende. Una situación aún mejor ocurre "
+"propietaria, del programa del que depende. Una situación aún mejor ocurre "
 "cuando un pequeño consorcio informal mantiene una base de código BSD, ya que "
 "el proceso de desarrollo no depende de la supervivencia de una sola empresa "
 "o línea de productos. La capacidad de supervivencia del equipo de desarrollo "
@@ -578,7 +573,6 @@ msgstr "Lo que no puede hacer una licencia"
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:175
-#, fuzzy
 msgid ""
 "No license can guarantee future software availability.  Although a copyright "
 "holder can traditionally change the terms of a copyright at anytime, the "
@@ -593,7 +587,6 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:181
-#, fuzzy
 msgid ""
 "The GPL explicitly disallows revoking the license.  It has occurred, "
 "however, that a company (Mattel) purchased a GPL copyright (cphack), revoked "
@@ -608,12 +601,11 @@ msgstr ""
 "todo el copyright, acudió a los tribunales y prevaleció [2]. Es decir, "
 "revocaron legalmente toda la distribución y todos los trabajos derivados "
 "basados en los derechos de autor. Si esto podría suceder con una "
-"distribución más amplia y dispersa es una pregunta abierta; También existe "
+"distribución más amplia y dispersa es una pregunta abierta; también existe "
 "cierta confusión sobre si el software estaba realmente bajo la GPL."
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:186
-#, fuzzy
 msgid ""
 "In another example, Red Hat purchased Cygnus, an engineering company that "
 "had taken over development of the FSF compiler tools.  Cygnus was able to do "
@@ -644,7 +636,6 @@ msgstr "Ventajas y Desventajas de la licencia GPL"
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:192
-#, fuzzy
 msgid ""
 "A common reason to use the GPL is when modifying or extending the gcc "
 "compiler.  This is particularly apt when working with one-off specialty CPUs "
@@ -660,7 +651,6 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:195
-#, fuzzy
 msgid ""
 "The GPL is also attractive to small companies selling CDs in an environment "
 "where \"buy-low, sell-high\" may still give the end-user a very inexpensive "
@@ -676,7 +666,6 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:198
-#, fuzzy
 msgid ""
 "A less publicized and unintended use of the GPL is that it is very favorable "
 "to large companies that want to undercut software companies.  In other "
@@ -691,7 +680,6 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:201
-#, fuzzy
 msgid ""
 "The GPL can present a real problem for those wishing to commercialize and "
 "profit from software.  For example, the GPL adds to the difficulty a "
@@ -709,7 +697,6 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:206
-#, fuzzy
 msgid ""
 "For those who must work with statically-linked implementations of multiple "
 "software standards, the GPL is often a poor license, because it precludes "
@@ -727,11 +714,10 @@ msgstr ""
 "proporcionar un mecanismo para desarrollar un estándar sobre el cual se "
 "diseñan productos patentados. (Esto no se aplica a las aplicaciones de Linux "
 "porque no se enlazan estáticamente, sino que utilizan una API basada en "
-"trampas)."
+"trampas.)"
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:210
-#, fuzzy
 msgid ""
 "The GPL attempts to make programmers contribute to an evolving suite of "
 "programs, then to compete in the distribution and support of this suite.  "
@@ -754,7 +740,6 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:213
-#, fuzzy
 msgid ""
 "The GPL is an attempt to keep efforts, regardless of demand, at the research "
 "and development stages.  This maximizes the benefits to researchers and "
@@ -768,7 +753,6 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:217
-#, fuzzy
 msgid ""
 "The GPL was designed to keep research results from transitioning to "
 "proprietary products.  This step is often assumed to be the last step in the "
@@ -826,7 +810,6 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:232
-#, fuzzy
 msgid ""
 "\"This type of license is ideal for promoting the use of a reference body of "
 "code that implements a protocol for common service.  This is another reason "
@@ -839,7 +822,7 @@ msgid ""
 "participants realize greater value by contributing their code to the "
 "project, even code that would have had value if kept proprietary.\""
 msgstr ""
-"<quote>Este tipo de licencia es ideal para promover el uso de un código de "
+"\"Este tipo de licencia es ideal para promover el uso de un código de "
 "referencia que implemente un protocolo para un servicio común. Esta es otra "
 "razón por la cual la escogimos para el grupo Apache - muchos de nosotros "
 "queríamos ver a HTTP sobrevivir y convertirse en un verdadero estándar "
@@ -850,11 +833,10 @@ msgstr ""
 "estratégicamente hablando, el proyecto necesita mantener el impulso "
 "suficiente, y que los participantes se den cuenta del valor de contribuir "
 "con su código al proyecto, incluso código que hubiera tenido valor si se "
-"mantuviera como propietario.</quote>"
+"mantuviera como propietario.\""
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:236
-#, fuzzy
 msgid ""
 "Developers tend to find the BSD license attractive as it keeps legal issues "
 "out of the way and lets them do whatever they want with the code.  In "
@@ -871,7 +853,7 @@ msgstr ""
 "código. En contraste, aquellos que esperan principalmente usar un sistema en "
 "lugar de programarlo, o esperan que otros desarrollen el código, o que no "
 "esperan ganarse la vida con su trabajo asociado con el sistema (como los "
-"empleados del gobierno), encuentran la GPL atractivo, porque obliga a que se "
+"empleados del gobierno), encuentran la GPL atractiva, porque obliga a que se "
 "les proporcione código desarrollado por otros y evita que su empleador "
 "retenga los derechos de autor y, por lo tanto, potencialmente \"entierre\" o "
 "deje huérfano al software. Si quiere obligar a sus competidores a que le "
@@ -879,7 +861,6 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:243
-#, fuzzy
 msgid ""
 "A BSD license is not simply a gift.  The question \"why should we help our "
 "competitors or let them steal our work?\" comes up often in relation to a "
@@ -910,7 +891,6 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:246
-#, fuzzy
 msgid ""
 "A key effect of the GPL, making a complete and competitive Open Source "
 "system widely available at cost of media, is a reasonable goal.  A BSD style "
@@ -933,7 +913,6 @@ msgstr "Recomendaciones específicas para usar una licencia BSD"
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:253
-#, fuzzy
 msgid ""
 "The BSD license is preferable for transferring research results in a way "
 "that will widely be deployed and most benefit an economy.  As such, research "
@@ -954,7 +933,6 @@ msgstr ""
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:255
-#, fuzzy
 msgid ""
 "Government policy should minimize the costs and difficulties in moving from "
 "research to deployment.  When possible, grants should require results to be "
@@ -963,7 +941,7 @@ msgstr ""
 "La política gubernamental debe minimizar los costos y las dificultades para "
 "pasar de la investigación a la implementación. Cuando sea posible, las "
 "subvenciones deben exigir que los resultados estén disponibles bajo una "
-"licencia de estilo BSD compatible con la comercialización."
+"licencia de tipo BSD compatible con la comercialización."
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:256
@@ -1027,10 +1005,11 @@ msgid ""
 msgstr ""
 "Las empresas interesadas en promover un estándar en evolución, que puede "
 "convertirse en el núcleo de los productos comerciales de otras empresas, "
-"deben tener cuidado con la GPL. Independientemente de la licencia utilizada, "
-"el software resultante generalmente se transferirá a quien realmente realice "
-"la mayoría de los cambios de ingeniería y entienda el estado del sistema. La "
-"GPL simplemente agrega más fricción legal al resultado."
+"deberían tener cuidado con la GPL. Independientemente de la licencia "
+"utilizada, el software resultante generalmente se transferirá a quien "
+"realmente realice la mayoría de los cambios de ingeniería y entienda el "
+"estado del sistema. La GPL simplemente agrega más fricción legal al "
+"resultado."
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:259
@@ -1045,16 +1024,16 @@ msgid ""
 "a cheap portable benefit a company can sometimes provide with near zero "
 "downside."
 msgstr ""
-"Las grandes empresas, en las que se desarrolla código Open Source, deben ser "
-"conscientes de que los programadores aprecian Open Source porque deja el "
-"software disponible para el empleado cuando cambia de empleador. Algunas "
-"empresas fomentan este comportamiento como una ventaja laboral, "
-"especialmente cuando el software involucrado no es directamente estratégico. "
-"En efecto, es un beneficio de jubilación anticipado con posibles costos de "
-"oportunidad perdida pero sin costos directos. Alentar a los empleados a "
-"trabajar para obtener el reconocimiento de sus compañeros fuera de la "
-"empresa es un beneficio portátil económico que una empresa a veces puede "
-"ofrecer con un inconveniente cercano a cero."
+"Las grandes empresas, en las que se desarrolla código abierto (Open Source), "
+"deben ser conscientes de que los programadores aprecian el código abierto "
+"porque deja el software disponible para el empleado cuando cambia de "
+"empleador. Algunas empresas fomentan este comportamiento como una ventaja "
+"laboral, especialmente cuando el software involucrado no es directamente "
+"estratégico. En efecto, es un beneficio de jubilación anticipado con "
+"posibles costos de oportunidad perdida pero sin costos directos. Alentar a "
+"los empleados a trabajar para obtener el reconocimiento de sus compañeros "
+"fuera de la empresa es un beneficio portátil económico que una empresa a "
+"veces puede ofrecer con un inconveniente cercano a cero."
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:260
@@ -1101,7 +1080,6 @@ msgstr "Conclusión"
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:268
-#, fuzzy
 msgid ""
 "In contrast to the GPL, which is designed to prevent the proprietary "
 "commercialization of Open Source code, the BSD license places minimal "
@@ -1128,8 +1106,8 @@ msgid ""
 msgstr ""
 "Además, dado que la licencia BSD no viene con la complejidad legal de las "
 "licencias GPL o LGPL, permite a los desarrolladores y empresas dedicar su "
-"tiempo a crear y promover un buen código en lugar de preocuparse si ese "
-"código viola la licencia."
+"tiempo a crear y promover un buen código en lugar de preocuparse sobre si "
+"ese código viola la licencia."
 
 #. type: Title ==
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:273
@@ -1140,7 +1118,7 @@ msgstr "Referencias bibliográficas"
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:276
 msgid "[[[one,1]]] http://www.gnu.org/licenses/gpl.html"
-msgstr ""
+msgstr "[[[one,1]]] http://www.gnu.org/licenses/gpl.html"
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:278
@@ -1148,6 +1126,8 @@ msgid ""
 "[[[two,2]]] http://archives.cnn.com/2000/TECH/computing/03/28/cyberpatrol."
 "mirrors/"
 msgstr ""
+"[[[two,2]]] http://archives.cnn.com/2000/TECH/computing/03/28/cyberpatrol."
+"mirrors/"
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:280
@@ -1156,6 +1136,9 @@ msgid ""
 "Rosenberg, IDG Books, 2000. Quotes are from page 114, \"Effects of the GNU "
 "GPL\"."
 msgstr ""
+"[[[three,3]]] Open Source: the Unauthorized White Papers, Donald K. "
+"Rosenberg, IDG Books, 2000. Quotes are from page 114, \"Effects of the GNU "
+"GPL\"."
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:282
@@ -1163,6 +1146,8 @@ msgid ""
 "[[[four,4]]] In the \"What License to Use?\" section of http://www.oreilly."
 "com/catalog/opensources/book/brian.html"
 msgstr ""
+"[[[four,4]]] In the \"What License to Use?\" section of http://www.oreilly."
+"com/catalog/opensources/book/brian.html"
 
 #. type: Plain text
 #: documentation/content/en/articles/bsdl-gpl/_index.adoc:283
@@ -1170,3 +1155,5 @@ msgid ""
 "This whitepaper is a condensation of an original work available at http://"
 "alumni.cse.ucsc.edu/~brucem/open_source_license.htm"
 msgstr ""
+"Este informe es un compendio del trabajo original disponible en http://alumni"
+".cse.ucsc.edu/~brucem/open_source_license.htm"
