@@ -1,14 +1,13 @@
 # SOME DESCRIPTIVE TITLE
 # Copyright (C) YEAR The FreeBSD Project
 # This file is distributed under the same license as the FreeBSD Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Faraz Vahedi <kfv@irbug.org>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-04-14 02:53+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2021-04-29 16:30+0000\n"
+"Last-Translator: Faraz Vahedi <kfv@irbug.org>\n"
 "Language-Team: Persian <https://translate-dev.freebsd.org/projects/"
 "documentation/booksdevelopers-handbookx86chapter/fa/>\n"
 "Language: fa\n"
@@ -16,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.5.2\n"
+"X-Generator: Weblate 4.6\n"
 
 #. type: YAML Front Matter: title
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:1
@@ -33,7 +32,7 @@ msgstr "برنامه‌نویسیِ زبان همگذاریِ x86"
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:34
 msgid "_This chapter was written by {stanislav}._"
-msgstr ""
+msgstr "_این فصل توسط {stanislav} نگاشته شده است._"
 
 #. type: Title ==
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:36
@@ -49,6 +48,10 @@ msgid ""
 "UNIX(R) systems run on different microprocessors, so everything should be "
 "written in C for portability."
 msgstr ""
+"برنامه‌نویسیِ زبان همگذاری (Assembly) در UNIX(R) به‌شدت فاقد مستندات است. به‌"
+"طور کلی چنین فرض می‌شود که هیچ کس هرگز نمی‌خواهد از آن استفاده کند زیرا "
+"سامانه‌های گوناگونِ UNIX(R) بر روی ریزپردازنده‌های مختلفی اجرا می‌شوند، "
+"بنابراین همه‌چیز باید به‌منظور انتقال‌پذیری در C نگاشته شود."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:41
@@ -58,6 +61,11 @@ msgid ""
 "processor each runs on. Typically, such a program is full of conditional "
 "statements depending on the system it is compiled for."
 msgstr ""
+"در واقعیت، انتقال‌پذیریِ C تا حد زیادی یک افسانه است. حتی برنامه‌‌های C "
+"زمانی‌که از یک UNIX(R) به دیگری منتقل می‌شوند نیازمند تغییر هستند، صرف نظر "
+"از اینکه هر کدام از آنها بر روی چه پردازنده‌ای اجرا می‌شوند. معمولاً، چنین "
+"برنامه‌ای بسته به سامانه‌ای که برای آن همگردانی شده است، پر از عبارات شرطی "
+"است."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:43
@@ -66,6 +74,9 @@ msgid ""
 "some other high-level language, we still need assembly language programmers: "
 "Who else would write the section of C library that accesses the kernel?"
 msgstr ""
+"حتی اگر باور کنیم که تمام نرم‌افزارِ UNIX(R) باید در C یا برخی زبان‌های سطح "
+"بالای دیگر نوشته شود، هنوز به برنامه‌نویسان زبان اسمبلی نیاز داریم: چه کسی "
+"می‌تواند آن بخش از کتابخانهٔ C را که به هسته دسترسی دارد بنویسد؟"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:45
@@ -73,6 +84,8 @@ msgid ""
 "In this chapter I will attempt to show you how you can use assembly language "
 "writing UNIX(R) programs, specifically under FreeBSD."
 msgstr ""
+"در این فصل من سعی می‌کنم تا به شما نحوهٔ استفاده از زبان اسمبلی برای نوشتن "
+"برنامه‌های UNIX(R) را نشان دهم، به‌طور مشخص تحت FreeBSD."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/x86/chapter.adoc:47
