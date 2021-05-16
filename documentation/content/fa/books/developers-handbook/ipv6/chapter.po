@@ -2,12 +2,13 @@
 # Copyright (C) YEAR The FreeBSD Project
 # This file is distributed under the same license as the FreeBSD Documentation package.
 # Faraz Vahedi <kfv@kfv.io>, 2021.
+# Parsa Samet <qps@irbug.org>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: FreeBSD Documentation VERSION\n"
 "POT-Creation-Date: 2021-02-21 18:54-0300\n"
-"PO-Revision-Date: 2021-05-14 12:40+0000\n"
-"Last-Translator: Faraz Vahedi <kfv@kfv.io>\n"
+"PO-Revision-Date: 2021-05-17 12:40+0000\n"
+"Last-Translator: Parsa Samet <qps@irbug.org>\n"
 "Language-Team: Persian <https://translate-dev.freebsd.org/projects/"
 "documentation/booksdevelopers-handbookipv6chapter/fa/>\n"
 "Language: fa\n"
@@ -21,13 +22,13 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/ipv6/chapter.adoc:1
 #, no-wrap
 msgid "Chapter 8. IPv6 Internals"
-msgstr ""
+msgstr "فصل ۸. اجزای داخلی IPv6"
 
 #. type: Title =
 #: documentation/content/en/books/developers-handbook/ipv6/chapter.adoc:10
 #, no-wrap
 msgid "IPv6 Internals"
-msgstr "داخلی‌های IPv6"
+msgstr "اجزای داخلی IPv6"
 
 #. type: Title ==
 #: documentation/content/en/books/developers-handbook/ipv6/chapter.adoc:35
@@ -42,7 +43,7 @@ msgid ""
 "internals. These functionalities are derived from http://www.kame.net/[KAME "
 "project]"
 msgstr ""
-"این بخش باید داخلی‌های مرتبط با پیاده‌سازی IPv6 و IPsec را توضیح دهد. این "
+"این بخش باید اجزای داخلی مرتبط با پیاده‌سازی IPv6 و IPsec را توضیح دهد. این "
 "کارکردها از http://www.kame.net/[پروژهٔ KAME] مشتق شده‌اند"
 
 #. type: Title ===
@@ -65,6 +66,9 @@ msgid ""
 "documents below (_NOTE_: this is not a complete list - this is too hard to "
 "maintain...)."
 msgstr ""
+"کارکردهای مرتبط با IPv6 منطبق با، یا سعی بر تطابق با آخرین مجموعه از مشخصات "
+"IPv6 را دارند. برای ارجاعات بعدی برخی مستندات مرتبط را در قسمت پایین فهرست "
+"می‌کنیم (توجه: این یک فهرست کامل نیست - حفظ آن بسیار دشوار است...)."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/ipv6/chapter.adoc:47
@@ -85,6 +89,11 @@ msgid ""
 "(http://www.iol.unh.edu/[http://www.iol.unh.edu/]) in the past, with our "
 "past snapshots."
 msgstr ""
+"آزمون‌های انطباق در پروژهٔ TAHI بر روی کیت KAME STABLE اجرا شده‌اند. نتایج "
+"آن در http://www.tahi.org/report/KAME/[http://www.tahi.org/report/KAME/] "
+"قابل مشاهده است. ما همچنین در گذشته، با تصاویر لحظه‌ایِ پیشین خود در آزمون‌"
+"های IOL در دانشگاه نیوهمپشر (http://www.iol.unh.edu/[http://www.iol.unh.edu/"
+"]) شرکت کردیم."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/ipv6/chapter.adoc:51
@@ -128,6 +137,9 @@ msgid ""
 "way, and it covers \"configured tunnel\" described in the spec. See "
 "<<gif,23.5.1.5>> in this document for details."
 msgstr ""
+"رابط man:gif[4] تونل‌های IPv[46]-over-IPv[46] را به روشی عمومی پیاده‌سازی "
+"می‌کند، و \"تونل پیکربندی شده\" را که در مشخصات توصیف شده است پوشش می‌دهد. "
+"برای جزئیات بیشتر بنگرید به <<gif,23.5.1.5>> واقع در همین مستند."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/ipv6/chapter.adoc:62
@@ -151,13 +163,12 @@ msgstr "RFC2292: رابط‌ برنامه‌نویسی کاربردی سوکت�
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/ipv6/chapter.adoc:69
-#, fuzzy
 msgid ""
 "For supported library functions/kernel APIs, see "
 "[.filename]#sys/netinet6/ADVAPI#."
 msgstr ""
-"برای رابط‌‌های برنامه‌نویسی کاربردی کتابخانهٔ توابع/هستهٔ پشتیبانی‌شده، "
-"<filename>sys/netinet6/ADVAPI</filename> را ببینید."
+"برای توابع کتابخانه یا رابط‌‌های برنامه‌نویسی کاربردیِ هستهٔ پشتیبانی‌شده، "
+"بنگرید به [.filename]#sys/netinet6/ADVAPI#."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/ipv6/chapter.adoc:71
@@ -166,13 +177,12 @@ msgstr "RFC2362: Protocol Independent Multicast-Sparse Mode (PIM-SM)"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/ipv6/chapter.adoc:73
-#, fuzzy
 msgid ""
 "RFC2362 defines packet formats for "
 "PIM-SM. [.filename]#draft-ietf-pim-ipv6-01.txt# is written based on this."
 msgstr ""
-"RFC2362 قالب‌های بسته برای PIM-SM را مشخص می‌کند. <filename>draft-ietf-pim-"
-"ipv6-01.txt</filename> بر همین اساس نوشته شده است."
+"RFC2362 قالب‌های بسته برای PIM-SM را تعیین می‌کند. [.filename]#draft-ietf-"
+"pim-ipv6-01.txt# بر همین اساس نوشته شده است."
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/ipv6/chapter.adoc:75
@@ -1342,7 +1352,7 @@ msgstr ""
 #: documentation/content/en/books/developers-handbook/ipv6/chapter.adoc:336
 #, no-wrap
 msgid "Kernel Internals"
-msgstr "داخلی‌های هسته"
+msgstr "اجزای داخلی هسته"
 
 #. type: Plain text
 #: documentation/content/en/books/developers-handbook/ipv6/chapter.adoc:339
